@@ -1,0 +1,23 @@
+# Globals
+*.log
+
+# Libraries
+node_modules
+
+# System
+.DS_Store
+
+# Editors
+.idea
+# .vscode
+
+# Folders
+.cache
+.secrets
+/ts
+/esm
+/commonjs
+/coverage
+/.out
+/docs/public
+/.cache

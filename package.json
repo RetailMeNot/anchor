@@ -1,0 +1,130 @@
+{
+  "name": "retailmenot/fractals",
+  "version": "0.0.1-alpha.1",
+  "description": "A React UI Library by RetailMeNot",
+  "main": "commonjs/index.js",
+  "module": "esm/index.es.js",
+  "repository": "retailmenot/fractals.git",
+  "bugs": {
+    "url": "https://github.com/retailmenot/fractals"
+  },
+  "homepage": "https://github.com/retailmenot/fractals#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "files": [
+    "commonjs",
+    "esm"
+  ],
+  "keywords": [
+    "RetailMeNot",
+    "UI",
+    "React",
+    "Javascript",
+    "styled-components",
+    "ESNext",
+    "NextJS",
+    "Isomorphic",
+    "Component",
+    "Library",
+    "Gatsby"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "test:dev": "jest --watch",
+    "clean": "rm -rf esm commonjs ts .cache && git clean -Xdf",
+    "build": "concurrently --names 'modules,typescript' 'npm run build:modules' 'npm run build:ts'",
+    "build:ts": "tsc",
+    "build:modules": "rollup -c rollup.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -s .storybook/static -o .out",
+    "prepublish": "npm run build",
+    "lint": "concurrently --names 'prettier,tslint' 'npm run pretty' 'npm run tslint'",
+    "pretty": "prettier --config .prettierrc --write \"./src/**/*.{tsx,ts}\"",
+    "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+  },
+  "author": "Kameron (@sharkparty)",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": ">= 3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@storybook/addon-a11y": "^4.1.2",
+    "@storybook/addon-actions": "^4.1.2",
+    "@storybook/addon-info": "^4.1.2",
+    "@storybook/addon-knobs": "^4.1.2",
+    "@storybook/addon-links": "^4.0.4",
+    "@storybook/addon-options": "^4.0.4",
+    "@storybook/addon-storyshots": "^3.4.2",
+    "@storybook/addon-viewport": "^4.1.2",
+    "@storybook/addons": "^4.0.4",
+    "@storybook/react": "^4.0.4",
+    "@types/classnames": "^2.2.6",
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.9",
+    "@types/json-schema": "^7.0.1",
+    "@types/lodash": "^4.14.118",
+    "@types/node": "^10.12.2",
+    "@types/react": "^16.4.18",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-info": "^3.4.2",
+    "@types/storybook__addon-knobs": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.2",
+    "@types/storybook__addon-notes": "^3.3.3",
+    "@types/storybook__addon-options": "^3.2.2",
+    "@types/storybook__react": "^3.0.9",
+    "@types/styled-components": "^4.0.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "concurrently": "^4.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
+    "jsdom": "^13.0.0",
+    "prettier": "^1.14.3",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-test-renderer": "^16.6.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript": "^1.0.0",
+    "storybook-addon-jsx": "^5.4.0",
+    "styled-components": "^4.1.3",
+    "ts-jest": "^23.10.4",
+    "tslib": "^1.9.3",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "@rebass/grid": "^6.0.0-7",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "polished": "^2.3.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "rxjs": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "sideEffects": false
+}
