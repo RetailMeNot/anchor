@@ -1,5 +1,5 @@
 {
-  "name": "retailmenot/fractals",
+  "name": "@retailmenot/fractals",
   "version": "0.0.1-alpha.1",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
