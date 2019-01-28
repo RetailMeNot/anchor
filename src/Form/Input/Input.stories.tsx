@@ -59,6 +59,11 @@ storiesOf('Components/Input', module)
       <Input label="Phone Number" format={formatPhoneNumber} />
     </StyledStory>
   ))
+  .add('with placeholder', () => (
+    <StyledStory>
+      <Input label="Email" placeholder="email@rmn.com" />
+    </StyledStory>
+  ))
   .add('disabled', () => (
     <StyledStory>
       <Input label="Disabled Example" disabled={true} />
