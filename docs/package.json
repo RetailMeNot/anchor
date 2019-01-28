@@ -1,6 +1,6 @@
 {
-  "name": "@jaws/fractals-docs",
-  "description": "Documentation for Fractals",
+  "name": "@retailmenot/fractals-docs",
+  "description": "Documentation site for Fractals",
   "version": "0.0.1",
   "author": "Kameron (@sharkparty)",
   "dependencies": {
@@ -41,6 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/retailmenot/fractals"
   }
 }

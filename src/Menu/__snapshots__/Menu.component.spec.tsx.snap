@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Menu should be defined 1`] = `
+<nav
+  className="sc-bdVaJa jvHnwz"
+  size="large"
+>
+  <a
+    className="sc-bwzfXH bxdGMs"
+  >
+    Derp
+  </a>
+</nav>
+`;

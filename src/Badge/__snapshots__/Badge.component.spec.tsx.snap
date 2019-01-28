@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Badge should be defined 1`] = `
+<div
+  className="sc-bdVaJa ciPVub"
+>
+  <div
+    className="badge"
+  />
+</div>
+`;

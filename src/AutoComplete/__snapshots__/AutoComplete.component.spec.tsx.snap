@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: AutoComplete should be defined 1`] = `
+<div
+  className="sc-htpNat kxYacg"
+>
+  <input
+    className="auto-complete-input"
+    name="auto-complete"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+  />
+</div>
+`;
