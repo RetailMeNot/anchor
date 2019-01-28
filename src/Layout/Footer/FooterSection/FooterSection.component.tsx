@@ -4,7 +4,7 @@ import * as React from 'react';
 // VENDOR
 import styled, { css } from 'styled-components';
 // STYLES
-import { colors } from '../../../theme';
+import { colors, fonts } from '../../../theme';
 
 const reset = css`
   margin: 0;
@@ -13,6 +13,8 @@ const reset = css`
 
 export const StyledFooterSectionElement = styled.section`
   width: 110px;
+  font-family: ${fonts.fontFamily};
+  font-size: .75rem;
 
   h4 {
     ${reset};
@@ -41,6 +43,9 @@ export const StyledFooterSectionElement = styled.section`
   a {
     display: block;
     margin-bottom: 0.75rem;
+    text-decoration: none;
+    color: ${colors.neutrals.charcoal.light};
+    font-weight: 500;
   }
 `;
 

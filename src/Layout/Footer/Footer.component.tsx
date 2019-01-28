@@ -107,6 +107,18 @@ interface FooterState {
   currentBreakpoint: string;
 }
 
+interface ItemChild {
+  key: number;
+  href: string;
+  label: string;
+}
+
+interface ItemsType {
+  title: string;
+  key: number;
+  children?: ItemChild[];
+}
+
 /* tslint:disable max-line-length */
 const FooterLogo = () => (
   <svg className="footer-logo" width="166px" height="52px" viewBox="0 0 166 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -180,26 +192,27 @@ export class Footer extends React.Component<FooterProps> {
     currentBreakpoint: 'small',
   };
 
-  render() {
+  public render(): React.ReactElement<any> {
     const { currentBreakpoint } = this.state;
-    const isDesktop =
+    const isDesktop: boolean =
       currentBreakpoint !== 'xsmall' &&
       currentBreakpoint !== 'small' &&
       currentBreakpoint !== 'large' &&
       currentBreakpoint !== 'medium';
+    const { children } = this.props;
 
     return (
       <StyledFooterElement>
-        {isDesktop ? this.renderDesktopFooter() : this.renderMobileFooter()}
+        {isDesktop ? this.renderDesktopFooter(children) : this.renderMobileFooter(children)}
       </StyledFooterElement>
     );
   }
 
-  private updateBreakpoint(newBreakpoint: string) {
+  private updateBreakpoint(newBreakpoint: string): void {
     this.setState({ ...this.state, currentBreakpoint: newBreakpoint });
   }
 
-  private renderDesktopFooter(): React.ReactElement<any> {
+  private renderDesktopFooter(children: any): React.ReactElement<any> {
     return (
       <Container whenBreakpoint={(breakpoint: string) => this.updateBreakpoint(breakpoint)} py="32px">
         <Flex className="desktop">
@@ -208,7 +221,7 @@ export class Footer extends React.Component<FooterProps> {
             <SocialIcons />
           </Box>
           <Box className="footer-navigation-sections" width={4 / 8}>
-            {this.renderDefaultLinks()}
+            {children ? children : Footer.renderLinks()}
           </Box>
           <Box width={2 / 8}>
             <MobileCTA />
@@ -224,7 +237,7 @@ export class Footer extends React.Component<FooterProps> {
     );
   }
 
-  private renderMobileFooter(): React.ReactElement<any> {
+  private renderMobileFooter(children: any): React.ReactElement<any> {
     return (
       <Container whenBreakpoint={(breakpoint: string) => this.updateBreakpoint(breakpoint)}>
         <Flex className="mobile">
@@ -232,7 +245,7 @@ export class Footer extends React.Component<FooterProps> {
             <MobileCTA className="mobile-cta" />
             <hr />
             <div className="footer-navigation-sections">
-              {this.renderDefaultLinks()}
+              {children ? children : Footer.renderLinks()}
             </div>
             <hr />
             <FooterLogo />
@@ -244,14 +257,14 @@ export class Footer extends React.Component<FooterProps> {
     );
   }
 
-  private renderDefaultLinks(): React.ReactElement<any> {
-    const items = [
+  public static renderLinks(navigationItems?: ItemsType[]): React.ReactElement<any> {
+    const items: ItemsType[] = navigationItems || [
       {
         title: 'Find Deals',
         key: 1,
         children: [
           { label: 'Seasonal/Ideas', href: '#', key: 1 },
-          { label: 'Browse Categories', href: '#', key: 2 },
+          { label: 'Browse Categories', href: '/coupons', key: 2 },
           { label: 'Exclusive Deals', href: '#', key: 3 },
           { label: 'Deal Squad', href: '#', key: 4 },
         ],
@@ -260,29 +273,29 @@ export class Footer extends React.Component<FooterProps> {
         title: 'Connect',
         key: 2,
         children: [
-          { label: 'Help', href: '#', key: 1 },
-          { label: 'Facebook', href: '#', key: 2 },
-          { label: 'Twitter', href: '#', key: 3 },
-          { label: 'Instagram', href: '#', key: 4 },
+          { label: 'Help', href: '/help', key: 1 },
+          { label: 'Facebook', href: 'https://www.facebook.com/RetailMeNot', key: 2 },
+          { label: 'Twitter', href: 'https://twitter.com/retailmenot', key: 3 },
+          { label: 'Instagram', href: 'https://www.instagram.com/retailmenot', key: 4 },
         ],
       },
       {
         title: 'Account',
         key: 3,
         children: [
-          { label: 'My Account', href: '#', key: 1 },
-          { label: 'Community', href: '#', key: 2 },
-          { label: 'Submit a Coupon', href: '#', key: 3 },
+          { label: 'My Account', href: '/profile', key: 1 },
+          { label: 'Community', href: '/community', key: 2 },
+          { label: 'Submit a Coupon', href: '/submit', key: 3 },
         ],
       },
       {
         title: 'Connect',
         key: 4,
         children: [
-          { label: 'About', href: '#', key: 1 },
-          { label: 'Blog', href: '#', key: 2 },
-          { label: 'Careers', href: '#', key: 3 },
-          { label: 'Contact', href: '#', key: 4 },
+          { label: 'About', href: '/corp', key: 1 },
+          { label: 'Blog', href: '/blog', key: 2 },
+          { label: 'Careers', href: '/corp/careers', key: 3 },
+          { label: 'Contact', href: '/help', key: 4 },
         ],
       },
     ];
