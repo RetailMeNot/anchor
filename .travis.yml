@@ -1,16 +1,8 @@
 language: node_js
-node_js:
-  - 10.15.0
+
+services:
+  - docker
 before_install:
-  - yarn
-script:
-  - cd ./docs
-  - yarn
-deploy:
-  provider: s3
-  access_key_id: $AWS_KEY
-  secret_access_key: $AWS_SECRET
-  bucket: "anchor.retailmenot.design"
-  skip_cleanup: true
-  acl: public_read
-  local_dir: public
+  - docker build -t client .
+  - docker ps -a
+  - docker run --env AWS_ACCESS_KEY_ID=$AWS_KEY --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET --env AWS_DEFAULT_REGION=$AWS_REGION client
