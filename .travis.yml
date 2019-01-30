@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - 10.15.0
 before_install:
-  - npm install
+  - yarn
+script:
   - cd ./docs
-install: npm i
-script: npm run build
+  - yarn
 deploy:
   provider: s3
   access_key_id: $AWS_KEY
