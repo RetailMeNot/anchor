@@ -36,7 +36,7 @@ storiesOf('Components/Container', module)
           </Flex>
           <br/>
           <Flex>
-            <Box width={320} css={{ minWidth: '320px' }}>
+            <Box width={320}>
               <Flex justifyContent="center">1</Flex>
             </Box>
             <Box width={[ 1 ]} >
