@@ -41,7 +41,8 @@
     "prepublish": "npm run build",
     "lint": "concurrently --names 'prettier,tslint' 'npm run pretty' 'npm run tslint'",
     "pretty": "prettier --config .prettierrc --write \"./src/**/*.{tsx,ts}\"",
-    "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+    "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "static": ""
   },
   "author": "Kameron (@sharkparty)",
   "license": "UNLICENSED",
