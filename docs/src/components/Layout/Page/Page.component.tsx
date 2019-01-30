@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 // COMPONENTS
-import { NormalizeCSS, GlobalCSS, sizes } from '../../../../../src/theme';
+import { NormalizeCSS, GlobalCSS } from '../../../../../src/theme';
 import { Header, Footer } from '../';
 import { SideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
@@ -39,7 +39,6 @@ const StyledContentBody = styled.div`
     overflow-y: auto;
     max-width: 1200px;
     margin: 0 auto;
-    padding: ${sizes.padding.lg};
   }
 `;
 

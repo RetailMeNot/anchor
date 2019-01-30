@@ -1,3 +1,3 @@
-# Fractals
+# Anchor
 A React design system library.
 

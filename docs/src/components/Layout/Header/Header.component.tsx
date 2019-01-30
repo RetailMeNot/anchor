@@ -45,7 +45,7 @@ interface HeaderProps {
 export const Header = ({ children, className }: HeaderProps): React.ReactElement<any> => (
   <StyledHeaderElement className={classNames(className)}>
     <Link to="/">
-      <h1>Fractals</h1>
+      <h1>Anchor</h1>
     </Link>
     <NavigationBar />
   </StyledHeaderElement>

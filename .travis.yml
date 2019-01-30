@@ -1,15 +1,16 @@
 language: node_js
 node_js:
   - 10.15.0
-install: yarn
-before_script:
+before_install:
+  - cd ./docs
   - npm i -g typescript
-script: gatsby build
+install: yarn
+script: npm run build
 deploy:
   provider: s3
   access_key_id: $AWS_KEY
   secret_access_key: $AWS_SECRET
-  bucket: "fractals.design"
+  bucket: "anchor.retailmenot.design"
   skip_cleanup: true
   acl: public_read
   local_dir: public

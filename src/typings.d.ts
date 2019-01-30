@@ -43,7 +43,7 @@ declare module '@rebass/grid' {
 
     css?: any;
 
-    as?: string;
+    as?: any;
   }
 
   interface FlexProps extends BoxProps {

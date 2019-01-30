@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Fractals Documentation',
+    title: 'Anchor Documentation',
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -25,13 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'fractals-doc-site',
-        short_name: 'fractals',
+        name: 'anchor-doc-site',
+        short_name: 'anchor',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/fractals-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/anchor-icon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

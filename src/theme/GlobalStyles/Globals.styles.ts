@@ -1,7 +1,7 @@
 // VENDOR
 import { createGlobalStyle, css } from 'styled-components';
 // THEME
-import { colors, fonts } from '..';
+import { colors, fonts } from '../';
 
 const headingRules = (hLevel: string): string => `
   ${hLevel} {
@@ -28,17 +28,13 @@ const typography = css`
 `;
 
 export const GlobalCSS = createGlobalStyle`
-  html {
+  html,
+  body {
+    font-family: ${fonts.fontFamily};
     color: ${colors.neutrals.charcoal.base};
     font-size: ${fonts.baseFontSize}px;
     letter-spacing: 0;
     line-height: 1.357142857rem;
   }
-
-  body {
-    font-family: Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif;
-    height: 100vh;
-  }
-
   ${typography}
 `;

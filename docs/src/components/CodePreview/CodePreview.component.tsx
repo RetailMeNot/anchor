@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { LiveEditor, LiveProvider, LivePreview } from 'react-live';
 import Component from '@reach/component-component';
 // COMPONENTS
-import * as Fractals from '../../../../src';
+import * as Anchor from '../../../../src';
 // THEME
 import { colors, sizes } from '../../../../src/theme';
 
@@ -71,7 +71,7 @@ interface CodePreviewProps {
 }
 
 const scope = {
-  ...Fractals,
+  ...Anchor,
   Component,
 };
 

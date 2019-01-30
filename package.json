@@ -1,14 +1,14 @@
 {
-  "name": "@retailmenot/fractals",
+  "name": "@retailmenot/anchor",
   "version": "0.0.1-alpha.1",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.es.js",
-  "repository": "retailmenot/fractals.git",
+  "repository": "retailmenot/anchor.git",
   "bugs": {
-    "url": "https://github.com/retailmenot/fractals"
+    "url": "https://github.com/retailmenot/anchor"
   },
-  "homepage": "https://github.com/retailmenot/fractals#readme",
+  "homepage": "https://github.com/retailmenot/anchor#readme",
   "directories": {
     "doc": "docs"
   },

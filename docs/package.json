@@ -1,6 +1,6 @@
 {
-  "name": "@retailmenot/fractals-docs",
-  "description": "Documentation site for Fractals",
+  "name": "@retailmenot/anchor-docs",
+  "description": "Documentation site for Anchor",
   "version": "0.0.1",
   "author": "Kameron (@sharkparty)",
   "dependencies": {
@@ -19,8 +19,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "react-live": "^1.12.0",
-    "styled-components": "^4.1.2"
+    "react-live": "^1.12.0"
   },
   "keywords": [
     "gatsby"
@@ -41,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/retailmenot/fractals"
+    "url": "https://github.com/retailmenot/anchor"
   }
 }
