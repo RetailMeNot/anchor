@@ -3,20 +3,12 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from 'styled-components';
-import { Box, BoxProps } from '@rebass/grid';
+import { Box } from '@rebass/grid';
 import { fromEvent, Subscription } from 'rxjs';
 // import { debounceTime } from 'rxjs/operators';
 import { get } from 'lodash';
 
 type BreakpointSize = 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
-
-interface ContainerProps extends BoxProps {
-  children?: any;
-  className?: string;
-  breakpoint?: BreakpointSize;
-
-  whenBreakpoint?: (breakpoint: BreakpointSize) => void;
-}
 
 export const StyledContainer = styled(Box)`
   max-width: 1140px;
@@ -26,7 +18,7 @@ interface ContainerState {
   currentBreakpoint: BreakpointSize;
 }
 
-export class Container extends React.Component<ContainerProps> {
+export class Container extends React.Component<any> {
   static defaultProps = {
     breakpoint: 'small',
   };
@@ -64,7 +56,7 @@ export class Container extends React.Component<ContainerProps> {
     }
 
     if (this.state.currentBreakpoint !== currentBreakpoint) {
-      this.setState({ ...this.state, currentBreakpoint });
+      this.setState({ currentBreakpoint });
       if (this.props.whenBreakpoint) {
         this.props.whenBreakpoint(currentBreakpoint);
       }

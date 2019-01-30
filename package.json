@@ -75,6 +75,7 @@
     "@types/node": "^10.12.2",
     "@types/react": "^16.4.18",
     "@types/react-test-renderer": "^16.0.3",
+    "@types/rebass__grid": "^6.0.0",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-info": "^3.4.2",
     "@types/storybook__addon-knobs": "^3.4.1",
