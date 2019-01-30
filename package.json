@@ -38,7 +38,7 @@
     "build:modules": "rollup -c rollup.config.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -s .storybook/static -o .out",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "lint": "concurrently --names 'prettier,tslint' 'npm run pretty' 'npm run tslint'",
     "pretty": "prettier --config .prettierrc --write \"./src/**/*.{tsx,ts}\"",
     "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
