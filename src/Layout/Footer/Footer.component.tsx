@@ -216,15 +216,17 @@ export class Footer extends React.Component<FooterProps> {
     return (
       <Container whenBreakpoint={(breakpoint: string) => this.updateBreakpoint(breakpoint)} py="32px">
         <Flex className="desktop">
-          <Box flex="0 1 220px" width={2 / 8}>
+          <Box m="auto 0" flex="0 1 220px" width={2 / 8}>
             <FooterLogo />
-            <SocialIcons />
+            {/* TODO: uncomment once functional */}
+            {/* <SocialIcons /> */}
           </Box>
           <Box className="footer-navigation-sections" width={4 / 8}>
             {children ? children : Footer.renderLinks()}
           </Box>
           <Box width={2 / 8}>
-            <MobileCTA />
+            {/* TODO: uncomment once functional */}
+            {/* <MobileCTA /> */}
           </Box>
         </Flex>
         <Flex>
@@ -263,10 +265,10 @@ export class Footer extends React.Component<FooterProps> {
         title: 'Find Deals',
         key: 1,
         children: [
-          { label: 'Seasonal/Ideas', href: '#', key: 1 },
-          { label: 'Browse Categories', href: '/coupons', key: 2 },
-          { label: 'Exclusive Deals', href: '#', key: 3 },
-          { label: 'Deal Squad', href: '#', key: 4 },
+          { label: 'Black Friday Deals', href: '/holidays/black-friday', key: 1 },
+          { label: 'Cyber Monday Deals', href: '/holidays/cyber-monday', key: 2 },
+          { label: 'Valentine\'s Day Deals', href: '/holidays/valentines-day', key: 3 },
+          { label: 'Browse Categories', href: '/coupons', key: 4 },
         ],
       },
       {
@@ -286,6 +288,7 @@ export class Footer extends React.Component<FooterProps> {
           { label: 'My Account', href: '/profile', key: 1 },
           { label: 'Community', href: '/community', key: 2 },
           { label: 'Submit a Coupon', href: '/submit', key: 3 },
+          { label: 'RetailMeNot.ca', href: 'https://www.retailmenot.ca/', key: 4 },
         ],
       },
       {
@@ -320,10 +323,10 @@ export class Footer extends React.Component<FooterProps> {
     const currentYear = new Date().getFullYear();
     return (
       <ul className="legal-links">
-        <li><a>Terms of Use</a></li>
-        <li><a>Privacy Policy</a></li>
-        <li><a>Sitemap</a></li>
-        <li><a>Ad Choices</a></li>
+        <li><a href="/static/terms">Terms of Use</a></li>
+        <li><a href="/static/privacy">Privacy Policy</a></li>
+        <li><a href="/sitemap">Sitemap</a></li>
+        <li><a href="/static/privacy/#ad-choices">Ad Choices</a></li>
         <li>&copy; {currentYear} RetailMeNot, Inc.</li>
       </ul>
     );
