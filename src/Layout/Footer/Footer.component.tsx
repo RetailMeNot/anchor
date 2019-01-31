@@ -247,7 +247,7 @@ export class Footer extends React.Component<FooterProps> {
           <Box width={1}>
             {/* TODO: uncomment once functional */}
             {/* <MobileCTA className="mobile-cta" /> */}
-            <hr />
+            {/* <hr /> */}
             <div className="footer-navigation-sections">
               {children ? children : Footer.renderLinks()}
             </div>
