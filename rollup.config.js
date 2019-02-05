@@ -5,7 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 export default {
   input: './src/index.ts',
   output: [
-    { file: 'commonjs/index.ts', format: 'cjs', sourcemap: true },
+    { file: 'commonjs/index.js', format: 'cjs', sourcemap: true },
     { file: 'esm/index.es.js', format: 'es', sourcemap: true }
   ],
   plugins: [
