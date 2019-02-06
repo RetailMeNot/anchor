@@ -4,6 +4,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css, InterpolationValue } from 'styled-components';
 import { darken } from 'polished';
+// COMPONENTS
+// import { commonTextLinkStyle } from '../Anchor/Anchor.component';
 // THEME
 import { colors, fonts, sizes } from '../theme';
 

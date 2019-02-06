@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Button should be defined 1`] = `
+<button
+  className="sc-bdVaJa gwaMFJ"
+>
+  Submit
+</button>
+`;
