@@ -1,8 +1,3 @@
-// VARIABLES
-import variables from './variables.theme';
-
-const { baseFontSize: base } = variables;
-
 interface Sizes {
   xs: string;
   sm: string;
@@ -12,11 +7,11 @@ interface Sizes {
 }
 
 const sizes: Sizes = {
-  xs: `${base / 4}px`,
-  sm: `${base / 2}px`,
-  md: `${base * 1}px`,
-  lg: `${base * 2}px`,
-  xl: `${base * 3}px`,
+  xs: '0.25rem',
+  sm: '0.5rem',
+  md: '1rem',
+  lg: '2rem',
+  xl: '3rem',
 };
 
 export default {
