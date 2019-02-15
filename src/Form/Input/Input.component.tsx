@@ -39,7 +39,7 @@ export const StyledInput = styled.div `
   font-family: ${fonts.fontFamily};
 
   .input {
-    width: calc(100% - 2rem);
+    width: 100%;
     height: 3rem;
     position: relative;
     display: flex;
@@ -194,7 +194,7 @@ export class Input extends React.Component<InputProps> {
       value: this.props.format ? this.props.format(value) : undefined,
       errorMessage,
     });
-    this.props.onChange(value);
+    if (this.props.onChange) { this.props.onChange(value); }
   }
 }
 
