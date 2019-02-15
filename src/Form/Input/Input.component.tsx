@@ -45,16 +45,16 @@ export const StyledInput = styled.div `
     display: flex;
     flex-flow: row wrap;
     border-radius: ${variables.borderRadius};
-    border: solid 1px ${colors.neutrals.ash.light};
+    border: solid 1px ${colors.ash.light};
     opacity: ${({ disabled }: InputProps) => disabled && '0.5'};
 
     &:active,
     &:focus {
-      border-color: ${({ disabled }: InputProps) => disabled ? colors.neutrals.ash.light : colors.neutrals.ash.dark};
+      border-color: ${({ disabled }: InputProps) => disabled ? colors.ash.light : colors.ash.dark};
     }
 
     &.error-border {
-      border-color: ${colors.alert.error.base};
+      border-color: ${colors.error.base};
     }
   }
 
@@ -90,10 +90,10 @@ export const StyledInput = styled.div `
     /* TODO: kam figure out the theme to form*/
     font-size: 0.875rem;
     font-weight: ${baseFontWeight};
-    /* TODO: kam figure outow to standardize transitions within elements! */
+    /* TODO: kam figure out how to standardize transitions within elements! */
     transform-origin: 0 50%;
     transition: all 200ms ease-in-out;
-    color: ${colors.neutrals.ash.dark};
+    color: ${colors.ash.dark};
     cursor: text;
   }
 
@@ -118,7 +118,7 @@ export const StyledInput = styled.div `
     top: 0;
     font-size: 0.875rem;
     font-weight: ${baseFontWeight};
-    color: ${colors.neutrals.ash.dark};
+    color: ${colors.ash.dark};
   }
 
   .placeholder,
@@ -130,7 +130,7 @@ export const StyledInput = styled.div `
     margin-top: .5rem;
     font-size: .75rem;
     font-weight: ${baseFontWeight};
-    color: ${colors.alert.error.base};
+    color: ${colors.error.base};
   }
 `;
 
@@ -165,7 +165,7 @@ export class Input extends React.Component<InputProps> {
           {prefix && React.cloneElement(prefix, {
             height: 16,
             width: 16,
-            color: colors.neutrals.ash.dark,
+            color: colors.ash.dark,
             className: 'input-prefix',
           })}
           <input

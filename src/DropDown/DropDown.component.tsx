@@ -41,10 +41,10 @@ export const StyledDropDown = styled.div`
     top: ${(props: any) => `${get(props, 'forwardedRef.current.clientHeight', 16)}px`};
     padding: ${sizes.padding.xs} 0;
     z-index: 1;
-    background-color: ${colors.neutrals.white.base};
-    box-shadow: 0 .5rem .5rem 0 ${rgba(colors.neutrals.charcoal.dark, 0.12)};
+    background-color: ${colors.white.base};
+    box-shadow: 0 .5rem .5rem 0 ${rgba(colors.charcoal.dark, 0.12)};
     border-radius: ${variables.borderRadius};
-    border: 1px solid ${colors.neutrals.silver.dark};
+    border: 1px solid ${colors.silver.dark};
   }
 
   .arrow-up {

@@ -23,7 +23,7 @@ const typography = css`
 
   a {
     text-decoration: none;
-    color: ${colors.accent.savvyCyan.dark};
+    color: ${colors.savvyCyan.dark};
   }
 `;
 
@@ -31,7 +31,7 @@ export const GlobalCSS = createGlobalStyle`
   html,
   body {
     font-family: ${fonts.fontFamily};
-    color: ${colors.neutrals.charcoal.base};
+    color: ${colors.charcoal.base};
     font-size: ${fonts.baseFontSize}px;
     letter-spacing: 0;
     line-height: 1.357142857rem;

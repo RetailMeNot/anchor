@@ -17,7 +17,7 @@ export const StyledItem = styled.a`
   border-radius: ${variables.borderRadius};
   padding: ${sizes.padding.sm} ${sizes.padding.md};
   cursor: pointer;
-  color: ${colors.neutrals.charcoal.base};
+  color: ${colors.charcoal.base};
   font-family: ${fonts.fontFamily};
   font-weight: normal;
   text-decoration: none;

@@ -21,7 +21,7 @@ export const StyledList = styled.div`
     font-family: ${fonts.fontFamily};
     font-size: .75rem;
     font-weight: 600;
-    color: ${colors.neutrals.ash.dark};
+    color: ${colors.ash.dark};
     line-height: .75rem;
   }
 `;

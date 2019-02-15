@@ -31,7 +31,7 @@ const DefaultAvatar: React.SFC = () => (
 /* tslint:enable max-line-length */
 
 export const StyledAvatar = styled.div`
-  border: solid 0.1875rem ${rgba(colors.neutrals.white.base, .4)};
+  border: solid 0.1875rem ${rgba(colors.white.base, .4)};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,8 +45,8 @@ export const StyledAvatar = styled.div`
     height: 1.625rem;
     font-family: ${fonts.fontFamily};
     font-size: .75rem;
-    background-color: ${colors.neutrals.silver.base};
-    color: ${colors.neutrals.charcoal.light};
+    background-color: ${colors.silver.base};
+    color: ${colors.charcoal.light};
     font-weight: bold;
     display: flex;
     justify-content: center;

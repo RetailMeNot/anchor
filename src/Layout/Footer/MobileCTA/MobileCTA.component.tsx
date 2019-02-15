@@ -14,7 +14,7 @@ export const StyledMobileCTAElement = styled.a`
   font-size: 0.875rem;
   justify-content: center;
   align-content: center;
-  color: ${colors.neutrals.charcoal.base};
+  color: ${colors.charcoal.base};
   cursor: pointer;
 
   .mobile-cta-image {
@@ -39,7 +39,7 @@ export const StyledMobileCTAElement = styled.a`
   }
 
   strong {
-    color: ${colors.accent.savvyCyan.dark};
+    color: ${colors.savvyCyan.dark};
   }
 `;
 
@@ -112,7 +112,7 @@ export const MobileCTA = ({ href, className }: MobileCTAProps): React.ReactEleme
       className="caret"
       width={24}
       height={48}
-      color={colors.accent.savvyCyan.dark}
+      color={colors.savvyCyan.dark}
       type="chevron-right"
     />
   </StyledMobileCTAElement>

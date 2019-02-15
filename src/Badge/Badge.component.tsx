@@ -22,8 +22,8 @@ export const StyledBadge = styled.div`
     position: absolute;
     top: -.5rem;
     right: -.25rem;
-    background-color: ${colors.secondary.flashPink.base};
-    color: ${colors.neutrals.white.base};
+    background-color: ${colors.flashPink.base};
+    color: ${colors.white.base};
     font-weight: 700;
     font-size: 0.75rem;
     padding: 1px ${sizes.padding.xs};

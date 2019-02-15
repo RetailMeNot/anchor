@@ -23,7 +23,7 @@ export interface ItemProps {
 export const StyledItem = styled.a`
   cursor: pointer;
   text-align: center;
-  color: ${colors.neutrals.silver.dark};
+  color: ${colors.silver.dark};
   text-decoration: none;
   transition: color 250ms;
 

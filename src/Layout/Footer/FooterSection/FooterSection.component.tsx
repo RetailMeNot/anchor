@@ -22,7 +22,7 @@ export const StyledFooterSectionElement = styled.section`
     font-weight: 700;
     font-size: 0.75rem;
     line-height: 1rem;
-    color: ${colors.neutrals.charcoal.light};
+    color: ${colors.charcoal.light};
   }
 
   ul {
@@ -44,7 +44,7 @@ export const StyledFooterSectionElement = styled.section`
     display: block;
     margin-bottom: 0.75rem;
     text-decoration: none;
-    color: ${colors.neutrals.charcoal.light};
+    color: ${colors.charcoal.light};
     font-weight: 500;
   }
 `;

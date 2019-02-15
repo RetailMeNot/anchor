@@ -26,30 +26,30 @@ interface ButtonStylesGroup {
 
 const ButtonColorStyles: ButtonStylesGroup = {
   primary: css`
-    border: solid thin ${colors.accent.savvyCyan.base};
-    background-color: ${colors.accent.savvyCyan.base};
-    color: ${colors.neutrals.white.base};
+    border: solid thin ${colors.savvyCyan.base};
+    background-color: ${colors.savvyCyan.base};
+    color: ${colors.white.base};
 
     &:hover {
-      background-color: ${darken(0.05, colors.accent.savvyCyan.base)};
+      background-color: ${darken(0.05, colors.savvyCyan.base)};
     }
   `,
   secondary: css`
-    border: solid thin ${colors.accent.savvyCyan.light};
-    background-color: ${colors.accent.savvyCyan.light};
-    color: ${colors.neutrals.white.base};
+    border: solid thin ${colors.savvyCyan.light};
+    background-color: ${colors.savvyCyan.light};
+    color: ${colors.white.base};
 
     &:hover {
-      background-color: ${darken(0.1, colors.accent.savvyCyan.light)};
+      background-color: ${darken(0.1, colors.savvyCyan.light)};
     }
   `,
   text: css`
-    border: solid thin ${colors.neutrals.white.base};
-    background-color: ${colors.neutrals.white.base};
-    color: ${colors.accent.savvyCyan.base};
+    border: solid thin ${colors.white.base};
+    background-color: ${colors.white.base};
+    color: ${colors.savvyCyan.base};
 
     &:hover {
-      color: ${darken(0.25, colors.accent.savvyCyan.base)};
+      color: ${darken(0.25, colors.savvyCyan.base)};
     }
   `,
 };

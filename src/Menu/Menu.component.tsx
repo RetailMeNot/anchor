@@ -30,7 +30,7 @@ export const StyledMenu = styled.nav`
   //overflow-y: hidden;
   //overflow-x: auto;
 
-  background: ${({ bg = colors.main.grapePurchase.base }: MenuProps) => bg};
+  background: ${({ bg = colors.grapePurchase.base }: MenuProps) => bg};
   font-size: ${fonts.navigation.menu.fontSize};
   font-family: ${fonts.fontFamily};
   border-radius: ${variables.borderRadius};
@@ -40,23 +40,23 @@ export const StyledMenu = styled.nav`
   > a {
     display: inline-block;
     line-height: 1.125rem;
-    color: ${({ color = colors.neutrals.white.base }: MenuProps) => color};
+    color: ${({ color = colors.white.base }: MenuProps) => color};
     transition: background-color 500ms, color: 500ms;
     margin: 0 0.125rem;
 
     &:hover {
-      color: ${({ color = colors.neutrals.white.base }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.white.base }: MenuProps) => lighten(20, color)};
       background-color: rgba(255, 255, 255, .1);
     }
 
     &:active,
     &.active {
-      color: ${({ color = colors.neutrals.white.base }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.white.base }: MenuProps) => lighten(20, color)};
       background-color: rgba(255, 255, 255, .1); // TODO: more or less opacity
     }
 
     &:focus {
-      color: ${({ color = colors.neutrals.silver.dark }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.silver.dark }: MenuProps) => lighten(20, color)};
       background-color: rgba(255, 255, 255, .1);
     }
 

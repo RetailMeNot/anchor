@@ -16,9 +16,9 @@ export const StyledFooterElement = styled.footer`
   font-family: ${fonts.fontFamily};
   font-size: .75rem;
   margin: 0;
-  background-color: ${colors.neutrals.white.base};
-  border-bottom: solid 1rem ${colors.main.grapePurchase.base};
-  color: ${colors.neutrals.ash.dark};
+  background-color: ${colors.white.base};
+  border-bottom: solid 1rem ${colors.grapePurchase.base};
+  color: ${colors.ash.dark};
   font-weight: 500;
   box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.1);
 
@@ -42,7 +42,7 @@ export const StyledFooterElement = styled.footer`
 
   a {
     text-decoration: none;
-    color: ${colors.neutrals.charcoal.light};
+    color: ${colors.charcoal.light};
     font-weight: 500;
   }
 
@@ -83,7 +83,7 @@ export const StyledFooterElement = styled.footer`
 
     hr {
       border: none;
-      border-bottom: solid 1px ${colors.neutrals.silver.base};
+      border-bottom: solid 1px ${colors.silver.base};
       margin: 1.5rem 0;
     }
     .legal-links {

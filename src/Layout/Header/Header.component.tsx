@@ -14,9 +14,9 @@ import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
 export const StyledHeaderElement = styled.header`
-  background-color: ${colors.main.grapePurchase.base};
+  background-color: ${colors.grapePurchase.base};
   margin: 0;
-  color: ${colors.neutrals.white.base};
+  color: ${colors.white.base};
 `;
 
 interface HeaderProps {
@@ -77,7 +77,7 @@ export class Header extends React.Component<HeaderProps> {
     return (
       <StyledHeaderElement className={classNames(className)} {...props}>
         {isDesktop &&
-          <Menu className="secondary-navigation" size="small" bg={colors.main.grapePurchase.dark} justify="flex-end">
+          <Menu className="secondary-navigation" size="small" bg={colors.grapePurchase.dark} justify="flex-end">
             <Item path="/">Rx Saver</Item>
             <Item path="/">Genie</Item>
             <Item path="/">Everyday</Item>

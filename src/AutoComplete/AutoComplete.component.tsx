@@ -32,20 +32,20 @@ interface AutoCompleteState {
 
 export const StyledAutoComplete = styled.div`
   position: relative;
-  border: solid 1px ${colors.neutrals.ash.light};
+  border: solid 1px ${colors.ash.light};
   border-radius: .25rem;
   transition: border-color 500ms;
   display: flex;
-  background: ${colors.neutrals.white.base};
+  background: ${colors.white.base};
   align-items: center;
 
   &:hover {
-    border: solid thin ${colors.neutrals.ash.base};
+    border: solid thin ${colors.ash.base};
   }
 
   &:active,
   &:focus {
-    border: solid thin ${colors.neutrals.ash.dark};
+    border: solid thin ${colors.ash.dark};
   }
 
   .auto-complete-input {
@@ -58,7 +58,7 @@ export const StyledAutoComplete = styled.div`
     line-height: 1rem;
     overflow: hidden;
 
-    color: ${colors.neutrals.charcoal.light};
+    color: ${colors.charcoal.light};
 
     padding: ${({ size = 'small' }: AutoCompleteProps) => size === 'large' ? '0.75rem 1rem' : '0.5rem 0.5rem'};
 
@@ -73,14 +73,14 @@ export const StyledAutoComplete = styled.div`
     position: absolute;
     top: ${({ size = 'small' }: AutoCompleteProps) => size === 'large' ? 'calc(2.5rem - 2px)' : 'calc(2rem - 2px)'};
     width: 100%;
-    background-color: ${colors.neutrals.white.base};
+    background-color: ${colors.white.base};
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.12);
     border-radius: 0 0 .25rem .25rem;
-    border-top: solid 1px ${colors.neutrals.ash.light};
+    border-top: solid 1px ${colors.ash.light};
     transition: border-top-color 500ms;
 
     &:hover {
-      border-top-color: ${colors.neutrals.ash.base};
+      border-top-color: ${colors.ash.base};
     }
   }
 
@@ -115,7 +115,7 @@ export class AutoComplete extends React.Component<AutoCompleteProps> {
           className: 'auto-complete-prefix',
           height: 16,
           width: 16,
-          color: colors.neutrals.ash.dark,
+          color: colors.ash.dark,
         })}
         <input
           onFocus={() => this.setState({ ...this.state, isFocused: true })}
