@@ -32,8 +32,8 @@ export const StyledNavigationBarElement = styled.nav`
         transition: border-bottom-color 250ms, background-color 250ms;
 
         &:hover {
-          border-bottom-color: ${colors.neutrals.silver.dark};
-          background-color: ${rgba(colors.neutrals.silver.light, 0.1)};
+          border-bottom-color: ${colors.silver.dark};
+          background-color: ${rgba(colors.silver.light, 0.1)};
         }
       }
     }

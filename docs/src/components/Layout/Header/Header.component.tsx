@@ -10,7 +10,7 @@ import { colors } from '../../../../../src/theme';
 import { NavigationBar } from '../../Navigation';
 
 export const StyledHeaderElement = styled.header`
-  background-color: ${colors.main.grapePurchase.base};
+  background-color: ${colors.grapePurchase.base};
   color: white;
   display: flex;
   padding: 0;
@@ -19,7 +19,7 @@ export const StyledHeaderElement = styled.header`
 
   a {
       flex: 1;
-      color: ${colors.neutrals.white.base};
+      color: ${colors.white.base};
       text-decoration: none;
   }
 

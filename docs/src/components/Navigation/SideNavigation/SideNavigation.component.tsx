@@ -10,14 +10,14 @@ import { colors, fonts, sizes } from '../../../../../src/theme';
 export const StyledSideNavigationElement = styled.nav`
   min-width: 299px;
   max-width: 299px;
-  background-color: ${colors.neutrals.silver.base};
-  border-right: solid 1px ${colors.neutrals.silver.dark};
+  background-color: ${colors.silver.base};
+  border-right: solid 1px ${colors.silver.dark};
   overflow-y: auto;
   overflow-x: hidden;
 
   > ul {
     > li {
-    border-bottom: solid thin ${colors.neutrals.silver.dark};
+    border-bottom: solid thin ${colors.silver.dark};
       > a {
         font-weight: 500;
       }
@@ -47,18 +47,18 @@ export const StyledSideNavigationElement = styled.nav`
         padding: ${sizes.padding.md};
         cursor: pointer;
         text-decoration: none;
-        color: ${colors.neutrals.charcoal.light};
+        color: ${colors.charcoal.light};
 
         font-size: ${fonts.paragraph.informational.fontSize};
 
         transition: background-color 250ms;
 
         &:hover {
-          background-color: ${colors.neutrals.silver.dark};
+          background-color: ${colors.silver.dark};
         }
 
         &.active {
-          color: ${colors.neutrals.charcoal.dark};
+          color: ${colors.charcoal.dark};
         }
       }
     }

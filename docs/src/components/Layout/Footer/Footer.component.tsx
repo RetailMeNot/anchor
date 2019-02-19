@@ -9,8 +9,8 @@ import { colors, sizes } from '../../../../../src/theme';
 
 export const StyledFooterElement = styled.footer`
   padding: ${sizes.padding.lg};
-  background-color: ${colors.neutrals.silver.light};
-  border-top: solid thin ${colors.neutrals.silver.base};
+  background-color: ${colors.silver.light};
+  border-top: solid thin ${colors.silver.base};
   height: 6rem;
   width: 100%;
 `;

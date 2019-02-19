@@ -13,42 +13,42 @@ import { colors, sizes } from '../../../../src/theme';
 const PrismStyleOverrides = css`
   .prism-code {
     padding: ${sizes.padding.lg};
-    background-color: ${colors.neutrals.silver.light};
-    color: ${colors.neutrals.charcoal.light};
+    background-color: ${colors.silver.light};
+    color: ${colors.charcoal.light};
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     font-family: monospace !important;
 
     .token {
       &.tag {
-        color: ${colors.accent.savvyCyan.dark};
+        color: ${colors.savvyCyan.dark};
       }
       &.attr-name {
-        color: ${colors.accent.tealBreaker.base};
+        color: ${colors.tealBreaker.base};
       }
       &.string {
-        color: ${colors.secondary.fireSale.base};
+        color: ${colors.fireSale.base};
       }
       &.number {
-        color: ${colors.secondary.dealEnvy.base};
+        color: ${colors.dealEnvy.base};
       }
       &.operator {
-        color: ${colors.secondary.cyberMango.base};
+        color: ${colors.cyberMango.base};
       }
       &.punctuation {
-        color: ${colors.secondary.cyberMango.base};
+        color: ${colors.cyberMango.base};
       }
       &.keyword {
-        color: ${colors.accent.savvyCyan.dark};
+        color: ${colors.savvyCyan.dark};
       }
       &.class-name {
-        color: ${colors.accent.tealBreaker.base};
+        color: ${colors.tealBreaker.base};
       }
       &.function {
-        color: ${colors.accent.savvyCyan.light};
+        color: ${colors.savvyCyan.light};
       }
       &.template-string {
-        color: ${colors.secondary.fireSale.base};
+        color: ${colors.fireSale.base};
       }
     }
   }
@@ -57,7 +57,7 @@ const PrismStyleOverrides = css`
 export const StyledCodePreviewElement = styled.pre`
   .react-live-preview {
     padding: ${sizes.padding.lg};
-    border: solid thin ${colors.neutrals.silver.dark};
+    border: solid thin ${colors.silver.dark};
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
   }
