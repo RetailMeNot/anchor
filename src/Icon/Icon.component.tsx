@@ -11,11 +11,12 @@ import {
   ChevronRight,
   Cart,
   Search,
-  TagAdd
+  TagAdd,
+  Checkbox,
 } from './SVGs';
 // THEME
 
-type IconTypes = 'hamburger' | 'chevron-down' | 'chevron-up' | 'chevron-right' | 'cart' | 'search' | 'tag-add';
+type IconTypes = 'hamburger' | 'chevron-down' | 'chevron-up' | 'chevron-right' | 'cart' | 'search' | 'tag-add' | 'checkbox';
 
 export interface IconSVGProps {
   width?: number;
@@ -55,6 +56,7 @@ const Icons = {
   'cart': Cart,
   'search': Search,
   'tag-add': TagAdd,
+  'checkbox': Checkbox,
 };
 
 export const Icon = ({
