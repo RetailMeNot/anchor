@@ -66,6 +66,18 @@ Runs prettier over the entire project to make all the code uniform.
 There's also a pre-commit hook if you're committing from the command line.
 
 
+## Testing
+
+In order to have any PR merged into this project, there must be specs (at least stubs as we're in alpha) and they specs must be passing.
+
+#### Snapshots failing?
+
+If the snapshots are failing and the changes to the snapshots represents desired changes, the following command can update the snapshots.  
+
+```ssh
+npm run test -- -u
+```
+
 ## Supported Browsers
 
 By default, the generated project uses the latest version of React.
