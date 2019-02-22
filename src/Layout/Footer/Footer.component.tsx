@@ -56,9 +56,10 @@ export const StyledFooterElement = styled.footer`
     li {
       display: inline-block;
       margin-right: 2rem;
+      color:${colors.charcoal.light};
 
       &:last-child {
-      margin-right: 0;
+        margin-right: 0;
       }
     }
   }
