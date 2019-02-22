@@ -22,8 +22,8 @@ storiesOf('Components/Icon', module)
       <Icon type="tag-add" />
     </StyledStory>
   ))
-  .add('checkbox', () => (
+  .add('check-circle', () => (
     <StyledStory>
-      <Icon type="checkbox" />
+      <Icon type="check-circle" />
     </StyledStory>
   ));
