@@ -10,11 +10,13 @@ import {
   ChevronUp,
   ChevronRight,
   Cart,
-  Search
+  Search,
+  TagAdd,
+  CheckCircle,
 } from './SVGs';
 // THEME
 
-type IconTypes = 'hamburger' | 'chevron-down' | 'chevron-up' | 'chevron-right' | 'cart' | 'search';
+type IconTypes = 'hamburger' | 'chevron-down' | 'chevron-up' | 'chevron-right' | 'cart' | 'search' | 'tag-add' | 'check-circle';
 
 export interface IconSVGProps {
   width?: number;
@@ -53,6 +55,8 @@ const Icons = {
   'chevron-right': ChevronRight,
   'cart': Cart,
   'search': Search,
+  'tag-add': TagAdd,
+  'check-circle': CheckCircle,
 };
 
 export const Icon = ({

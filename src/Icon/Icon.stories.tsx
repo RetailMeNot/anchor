@@ -8,12 +8,22 @@ import styled from 'styled-components';
 import Icon from './Icon.component';
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
 storiesOf('Components/Icon', module)
-  .add('All', () => (
-      <StyledStory>
-        <Icon type="hamburger" />
-      </StyledStory>
+.add('hamburger', () => (
+    <StyledStory>
+      <Icon type="hamburger" />
+    </StyledStory>
+  ))
+  .add('tag-add', () => (
+    <StyledStory>
+      <Icon type="tag-add" />
+    </StyledStory>
+  ))
+  .add('check-circle', () => (
+    <StyledStory>
+      <Icon type="check-circle" />
+    </StyledStory>
   ));
