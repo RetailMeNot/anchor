@@ -8,10 +8,8 @@ RUN npm i
 WORKDIR /usr/app/docs
 
 RUN npm i
+RUN npm run test
 RUN npm run build
-
-#FROM nginx
-#COPY --from=builder /usr/app/docs/public /usr/share/nginx/html
 
 
 FROM mesosphere/aws-cli
