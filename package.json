@@ -30,8 +30,8 @@
     "Gatsby"
   ],
   "scripts": {
-    "test": "jest --coverage",
-    "test:dev": "jest --watch",
+    "test": "jest --coverage --env=jsdom",
+    "test:dev": "jest --watch --env=jsdom",
     "clean": "rm -rf esm commonjs ts .cache && git clean -Xdf",
     "build": "concurrently --names 'modules,typescript' 'npm run build:modules' 'npm run build:ts'",
     "build:ts": "tsc",

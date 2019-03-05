@@ -4,7 +4,7 @@ WORKDIR /usr/app
 
 COPY . .
 RUN npm ci
-RUN npm run test
+RUN npm test
 
 WORKDIR /usr/app/docs
 
