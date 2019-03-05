@@ -1,4 +1,4 @@
-![Anchor Logo](https://github.com/RetailMeNot/anchor/blob/master/assets/anchor_logo_300px.png)
+![Anchor Logo](https://raw.githubusercontent.com/RetailMeNot/anchor/master/assets/anchor_logo_300px.png)
 
 <h2 align="center">A React Design System from RetailMeNot</h2>
 
