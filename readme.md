@@ -31,3 +31,5 @@ import { Menu } from '@retailmenot/anchor';
 [View our docs site for more usage guidelines](https://retailmenot.design/)
 
 ### Contribute
+
+Check out our [contributing guide](https://github.com/RetailMeNot/anchor/blob/master/CONTRIBUTING.md) until our docs site goes live with that content.

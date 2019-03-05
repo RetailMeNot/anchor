@@ -2,7 +2,7 @@
 
 exports[`Component: Button should be defined 1`] = `
 <div
-  className="sc-bdVaJa sc-htpNat nfmDz"
+  className="sc-bdVaJa sc-htpNat ctJYoQ"
 >
   Test
 </div>

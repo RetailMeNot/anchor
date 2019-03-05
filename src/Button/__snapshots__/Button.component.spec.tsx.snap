@@ -2,7 +2,7 @@
 
 exports[`Component: Button should be defined 1`] = `
 <button
-  className="sc-bdVaJa gQipDP"
+  className="sc-bdVaJa hzFAkC"
 >
   Submit
 </button>
