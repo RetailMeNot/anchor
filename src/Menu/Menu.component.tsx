@@ -10,14 +10,16 @@ import { ItemProps } from './Item/Item.component';
 import { colors, fonts, variables } from '../theme';
 
 interface MenuProps {
-  children?: Array<React.ReactElement<ItemProps>> | React.ReactElement<ItemProps>;
-  className?: string;
-  size?: 'small' | 'large';
-  // Color
-  bg?: string;
-  color?: string;
-  // Configuration
-  justify?: 'flex-start' | 'flex-end';
+    children?:
+        | Array<React.ReactElement<ItemProps>>
+        | React.ReactElement<ItemProps>;
+    className?: string;
+    size?: 'small' | 'large';
+    // Color
+    bg?: string;
+    color?: string;
+    // Configuration
+    justify?: 'flex-start' | 'flex-end';
 }
 
 export const StyledMenu = styled.nav`
@@ -45,18 +47,21 @@ export const StyledMenu = styled.nav`
     margin: 0 0.125rem;
 
     &:hover {
-      color: ${({ color = colors.white.base }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.white.base }: MenuProps) =>
+          lighten(20, color)};
       background-color: rgba(255, 255, 255, .1);
     }
 
     &:active,
     &.active {
-      color: ${({ color = colors.white.base }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.white.base }: MenuProps) =>
+          lighten(20, color)};
       background-color: rgba(255, 255, 255, .1); // TODO: more or less opacity
     }
 
     &:focus {
-      color: ${({ color = colors.silver.dark }: MenuProps) => lighten(20, color)};
+      color: ${({ color = colors.silver.dark }: MenuProps) =>
+          lighten(20, color)};
       background-color: rgba(255, 255, 255, .1);
     }
 
@@ -77,35 +82,39 @@ export const StyledMenu = styled.nav`
 `;
 
 const MenuSizes = {
-  small: css`
-    > * > a,
-    > a {
-      font-size: ${fonts.navigation.menu.small.base.fontSize};
-      line-height: ${fonts.navigation.menu.small.base.fontSize};
-      font-weight: ${fonts.navigation.menu.small.base.fontWeight};
-      padding: .5rem .75rem;
-    }
-  `,
-  large: css`
-    > * > a,
-    > a {
-      border-radius: ${variables.borderRadius};
-      font-weight: ${fonts.navigation.menu.large.base.fontWeight};
-      padding: 1rem .75rem;
-    }
-  `,
+    small: css`
+        > * > a,
+        > a {
+            font-size: ${fonts.navigation.menu.small.base.fontSize};
+            line-height: ${fonts.navigation.menu.small.base.fontSize};
+            font-weight: ${fonts.navigation.menu.small.base.fontWeight};
+            padding: 0.5rem 0.75rem;
+        }
+    `,
+    large: css`
+        > * > a,
+        > a {
+            border-radius: ${variables.borderRadius};
+            font-weight: ${fonts.navigation.menu.large.base.fontWeight};
+            padding: 1rem 0.75rem;
+        }
+    `,
 };
 
 const DefaultProps: MenuProps = {
-  size: 'large',
+    size: 'large',
 };
 
-export const Menu = ({ className, children, ...props }: MenuProps = DefaultProps): React.ReactElement<any> => (
-  <StyledMenu className={classNames(className)} {...props}>
-    {/* TODO: React.cloneElement() to add props from parent to child? */}
-    {/* TODO: Need to solve the container issue */}
-    {children}
-  </StyledMenu>
+export const Menu = ({
+    className,
+    children,
+    ...props
+}: MenuProps = DefaultProps): React.ReactElement<any> => (
+    <StyledMenu className={classNames(className)} {...props}>
+        {/* TODO: React.cloneElement() to add props from parent to child? */}
+        {/* TODO: Need to solve the container issue */}
+        {children}
+    </StyledMenu>
 );
 
 Menu.defaultProps = DefaultProps;

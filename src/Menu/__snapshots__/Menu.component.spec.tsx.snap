@@ -2,11 +2,11 @@
 
 exports[`Component: Menu should be defined 1`] = `
 <nav
-  className="sc-bdVaJa jvHnwz"
+  className="sc-bdVaJa bAhNXE"
   size="large"
 >
   <a
-    className="sc-bwzfXH bxdGMs"
+    className="sc-bwzfXH dOqrMo"
   >
     Derp
   </a>

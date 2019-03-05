@@ -11,38 +11,39 @@ import { List, Item as ListItem } from '../List';
 // THEME
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
 const MockList = () => (
-  <List>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 1</ListItem>
-    <ListItem>Item 1</ListItem>
-  </List>
+    <List>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+    </List>
 );
 
-storiesOf('Components/DropDown', module)
-  .add('Default', () => (
-      <StyledStory>
+storiesOf('Components/DropDown', module).add('Default', () => (
+    <StyledStory>
         <p>DropDown 1</p>
-          <DropDown overlay={<MockList />}>
-            <a>DropDown Link <br/> big</a>
-          </DropDown>
+        <DropDown overlay={<MockList />}>
+            <a>
+                DropDown Link <br /> big
+            </a>
+        </DropDown>
         <p>DropDown 2</p>
         <DropDown overlay={<MockList />}>
-          <a>DropDown Link</a>
+            <a>DropDown Link</a>
         </DropDown>
         <p>Menu</p>
         <Menu>
             <DropDown overlay={<MockList />}>
-              <Item path="/">Categories</Item>
+                <Item path="/">Categories</Item>
             </DropDown>
             <DropDown overlay={<MockList />}>
-              <Item path="/">Stores</Item>
+                <Item path="/">Stores</Item>
             </DropDown>
         </Menu>
-      </StyledStory>
-  ));
+    </StyledStory>
+));

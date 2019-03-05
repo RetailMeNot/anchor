@@ -7,7 +7,7 @@ import Icon from './Icon.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Icon type="hamburger"/>;
+const subject = <Icon type="hamburger" />;
 const wrapper = mount(subject);
 const component = shallow(subject);
 

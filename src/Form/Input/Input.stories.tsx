@@ -6,66 +6,63 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENT
 import Input from './Input.component';
-import {Icon} from '../../Icon';
+import { Icon } from '../../Icon';
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
 const validate = (value: any) => {
-  if (value !== 'test') {
-    return 'You can only input test';
-  }
-  return null;
+    if (value !== 'test') {
+        return 'You can only input test';
+    }
+    return null;
 };
 
 const formatPhoneNumber = (value: any) => {
-  let phoneNumber = '';
-  const input = value.replace(/\D/g, '').substring(0, 10);
-  const zip = input.substring(0, 3);
-  const middle = input.substring(3, 6);
-  const last = input.substring(6, 10);
-  if (input.length > 6) {
-    phoneNumber = `${zip}-${middle}-${last}`;
-  } else if (input.length > 3) {
-    phoneNumber = `${zip}-${middle}`;
-  } else if (input.length >= 0) {
-    phoneNumber = `${zip}`;
-  }
-  return phoneNumber;
+    let phoneNumber = '';
+    const input = value.replace(/\D/g, '').substring(0, 10);
+    const zip = input.substring(0, 3);
+    const middle = input.substring(3, 6);
+    const last = input.substring(6, 10);
+    if (input.length > 6) {
+        phoneNumber = `${zip}-${middle}-${last}`;
+    } else if (input.length > 3) {
+        phoneNumber = `${zip}-${middle}`;
+    } else if (input.length >= 0) {
+        phoneNumber = `${zip}`;
+    }
+    return phoneNumber;
 };
 
 storiesOf('Components/Input', module)
-  .add('with Prefix', () => (
-    <StyledStory>
-      <Input
-        label="Search"
-        prefix={<Icon type="search"/>}
-      />
-    </StyledStory>
-  ))
-  .add('without Prefix', () => (
-    <StyledStory>
-      <Input label="First Name" />
-    </StyledStory>
-  ))
-  .add('with errors', () => (
-    <StyledStory>
-      <Input label="Validated Input" validate={validate} />
-    </StyledStory>
-  ))
-  .add('with format', () => (
-    <StyledStory>
-      <Input label="Phone Number" format={formatPhoneNumber} />
-    </StyledStory>
-  ))
-  .add('with placeholder', () => (
-    <StyledStory>
-      <Input label="Email" placeholder="email@rmn.com" />
-    </StyledStory>
-  ))
-  .add('disabled', () => (
-    <StyledStory>
-      <Input label="Disabled Example" disabled={true} />
-    </StyledStory>
-  ));
+    .add('with Prefix', () => (
+        <StyledStory>
+            <Input label="Search" prefix={<Icon type="search" />} />
+        </StyledStory>
+    ))
+    .add('without Prefix', () => (
+        <StyledStory>
+            <Input label="First Name" />
+        </StyledStory>
+    ))
+    .add('with errors', () => (
+        <StyledStory>
+            <Input label="Validated Input" validate={validate} />
+        </StyledStory>
+    ))
+    .add('with format', () => (
+        <StyledStory>
+            <Input label="Phone Number" format={formatPhoneNumber} />
+        </StyledStory>
+    ))
+    .add('with placeholder', () => (
+        <StyledStory>
+            <Input label="Email" placeholder="email@rmn.com" />
+        </StyledStory>
+    ))
+    .add('disabled', () => (
+        <StyledStory>
+            <Input label="Disabled Example" disabled={true} />
+        </StyledStory>
+    ));

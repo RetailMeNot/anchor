@@ -8,65 +8,65 @@ import { darken } from 'polished';
 import { colors, fonts, sizes } from '../theme';
 
 interface ButtonProps {
-  children?: any;
-  disabled?: boolean;
-  showSpinner?: boolean;
-  className?: string;
+    children?: any;
+    disabled?: boolean;
+    showSpinner?: boolean;
+    className?: string;
 
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'text';
-  size?: 'sm' | 'md' | 'lg';
+    onClick?: () => void;
+    variant?: 'primary' | 'secondary' | 'text';
+    size?: 'sm' | 'md' | 'lg';
 }
 
 interface ButtonStylesGroup {
-  [key: string]: InterpolationValue[];
+    [key: string]: InterpolationValue[];
 }
 
 // TODO: a11y
 
 const ButtonColorStyles: ButtonStylesGroup = {
-  primary: css`
-    border: solid thin ${colors.savvyCyan.base};
-    background-color: ${colors.savvyCyan.base};
-    color: ${colors.white.base};
+    primary: css`
+        border: solid thin ${colors.savvyCyan.base};
+        background-color: ${colors.savvyCyan.base};
+        color: ${colors.white.base};
 
-    &:hover {
-      background-color: ${darken(0.05, colors.savvyCyan.base)};
-    }
-  `,
-  secondary: css`
-    border: solid thin ${colors.savvyCyan.light};
-    background-color: ${colors.savvyCyan.light};
-    color: ${colors.white.base};
+        &:hover {
+            background-color: ${darken(0.05, colors.savvyCyan.base)};
+        }
+    `,
+    secondary: css`
+        border: solid thin ${colors.savvyCyan.light};
+        background-color: ${colors.savvyCyan.light};
+        color: ${colors.white.base};
 
-    &:hover {
-      background-color: ${darken(0.1, colors.savvyCyan.light)};
-    }
-  `,
-  text: css`
-    border: solid thin ${colors.white.base};
-    background-color: ${colors.white.base};
-    color: ${colors.savvyCyan.base};
+        &:hover {
+            background-color: ${darken(0.1, colors.savvyCyan.light)};
+        }
+    `,
+    text: css`
+        border: solid thin ${colors.white.base};
+        background-color: ${colors.white.base};
+        color: ${colors.savvyCyan.base};
 
-    &:hover {
-      color: ${darken(0.25, colors.savvyCyan.base)};
-    }
-  `,
+        &:hover {
+            color: ${darken(0.25, colors.savvyCyan.base)};
+        }
+    `,
 };
 
 const ButtonSizeStyles: ButtonStylesGroup = {
-  sm: css`
-    padding: ${sizes.padding.xs};
-    font-size: ${fonts.baseFontSize * 0.75}px;
-  `,
-  md: css`
-    padding: ${sizes.padding.sm} ${sizes.padding.md};
-    font-size: ${fonts.baseFontSize}px;
-  `,
-  lg: css`
-    padding: ${sizes.padding.md};
-    font-size: ${fonts.baseFontSize * 1.5}px;
-  `,
+    sm: css`
+        padding: ${sizes.padding.xs};
+        font-size: ${fonts.baseFontSize * 0.75}px;
+    `,
+    md: css`
+        padding: ${sizes.padding.sm} ${sizes.padding.md};
+        font-size: ${fonts.baseFontSize}px;
+    `,
+    lg: css`
+        padding: ${sizes.padding.md};
+        font-size: ${fonts.baseFontSize * 1.5}px;
+    `,
 };
 
 export const StyledButton = styled.button`
@@ -96,17 +96,23 @@ export const StyledButton = styled.button`
   ${({ size = 'md' }: ButtonProps) => ButtonSizeStyles[size]}
 
   /* Disabled State */
-  ${({ disabled }: ButtonProps) => disabled && css`
-    opacity: .5;
-    cursor: not-allowed;
-  `}
+  ${({ disabled }: ButtonProps) =>
+      disabled &&
+      css`
+          opacity: 0.5;
+          cursor: not-allowed;
+      `}
 
 `;
 
 const DefaultProps: ButtonProps = {};
 
-export const Button = ({ className, ...props }: ButtonProps = DefaultProps): React.ReactElement<any> =>
-  <StyledButton className={classNames(className)} {...props} />;
+export const Button = ({
+    className,
+    ...props
+}: ButtonProps = DefaultProps): React.ReactElement<any> => (
+    <StyledButton className={classNames(className)} {...props} />
+);
 
 Button.defaultProps = DefaultProps;
 

@@ -11,37 +11,32 @@ import styled from 'styled-components';
 import Button from './Button.component';
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
 storiesOf('Components/Button', module)
-  // .addDecorator(checkA11y) // TODO: wtf doesn't this work?
-  .add('Primary', () => (
-      <StyledStory>
-          <Button
-            disabled={boolean('Disabled', false)}
-            onClick={action('onClick')}
-          >
-            {text('Button Label', 'Story Button')}
-          </Button>
-      </StyledStory>
-  ))
-  .add('Secondary', () => (
-      <StyledStory>
-          <Button
-            disabled={boolean('Disabled', false)}
-            variant="secondary"
-          >{
-            text('Button Label', 'Story Button')}
-          </Button>
-      </StyledStory>
-  ))
-  .add('Text', () => (
-    <StyledStory>
-      <Button
-        variant="text"
-      >
-          {text('Button Label', 'Story Button')}
-      </Button>
-    </StyledStory>
-  ));
+    // .addDecorator(checkA11y) // TODO: wtf doesn't this work?
+    .add('Primary', () => (
+        <StyledStory>
+            <Button
+                disabled={boolean('Disabled', false)}
+                onClick={action('onClick')}
+            >
+                {text('Button Label', 'Story Button')}
+            </Button>
+        </StyledStory>
+    ))
+    .add('Secondary', () => (
+        <StyledStory>
+            <Button disabled={boolean('Disabled', false)} variant="secondary">
+                {text('Button Label', 'Story Button')}
+            </Button>
+        </StyledStory>
+    ))
+    .add('Text', () => (
+        <StyledStory>
+            <Button variant="text">
+                {text('Button Label', 'Story Button')}
+            </Button>
+        </StyledStory>
+    ));

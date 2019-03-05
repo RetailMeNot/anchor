@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { FooterSection } from './FooterSection.component';
 
 const StyledStory = styled.div`
-  padding: 10rem;
+    padding: 10rem;
 `;
 
 storiesOf('Components/Footer/FooterSection', module).add('default', () => (

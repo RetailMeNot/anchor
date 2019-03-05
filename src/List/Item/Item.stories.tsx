@@ -8,13 +8,12 @@ import styled from 'styled-components';
 import Item from './Item.component';
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
-storiesOf('Components/Item', module)
-  .add('Primary', () => (
-      <StyledStory>
-          <p>Item</p>
+storiesOf('Components/Item', module).add('Primary', () => (
+    <StyledStory>
+        <p>Item</p>
         <Item>Item 1</Item>
-      </StyledStory>
-  ));
+    </StyledStory>
+));

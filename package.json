@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.es.js",
@@ -30,8 +30,8 @@
     "Gatsby"
   ],
   "scripts": {
-    "test": "jest --coverage",
-    "test:dev": "jest --watch",
+    "test": "jest --coverage --env=jsdom",
+    "test:dev": "jest --watch --env=jsdom",
     "clean": "rm -rf esm commonjs ts .cache && git clean -Xdf",
     "build": "concurrently --names 'modules,typescript' 'npm run build:modules' 'npm run build:ts'",
     "build:ts": "tsc",
@@ -92,9 +92,9 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "jsdom": "^13.0.0",
-    "prettier": "^1.14.3",
+    "prettier": "^1.16.4",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-test-renderer": "^16.6.0",
     "rollup": "^0.67.0",

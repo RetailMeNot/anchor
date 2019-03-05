@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { MobileCTA } from './MobileCTA.component';
 
 const StyledStory = styled.div`
-  padding: 10rem;
+    padding: 10rem;
 `;
 
 storiesOf('Components/Footer/MobileCTA', module).add('default', () => (
