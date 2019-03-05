@@ -24,7 +24,9 @@ module.exports = {
     "node"
   ],
   snapshotSerializers: ["enzyme-to-json/serializer"],
-  setupTestFrameworkScriptFile: "<rootDir>/utils/test-config.ts",
+  setupFilesAfterEnv: [
+    "<rootDir>/utils/test-config.ts",
+  ],
   coverageDirectory: "./coverage",
   coveragePathIgnorePatterns: [
     "/node_modules/",
@@ -41,8 +43,8 @@ module.exports = {
     global: {
       statements: 89,
       branches: 54,
-      lines: 91,
-      functions: 72,
+      lines: 90,
+      functions: 65,
     }
   }
 };

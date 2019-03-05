@@ -139,17 +139,16 @@ export class AutoComplete extends React.Component<AutoCompleteProps> {
                         className: 'auto-complete-suffix',
                     })}
                 {children}
-                {this.state.isFocused &&
-                    !children && (
-                        <List
-                            title="Recent Searches"
-                            className="auto-complete-results"
-                        >
-                            {this.props.dataSource.map((item: any) => (
-                                <Item key={item}>{item}</Item>
-                            ))}
-                        </List>
-                    )}
+                {this.state.isFocused && !children && (
+                    <List
+                        title="Recent Searches"
+                        className="auto-complete-results"
+                    >
+                        {this.props.dataSource.map((item: any) => (
+                            <Item key={item}>{item}</Item>
+                        ))}
+                    </List>
+                )}
             </StyledAutoComplete>
         );
     }

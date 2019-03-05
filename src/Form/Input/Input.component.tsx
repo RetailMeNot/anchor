@@ -189,8 +189,9 @@ export class Input extends React.Component<InputProps> {
                         <div className="placeholder">{placeholder}</div>
                     )}
                 </div>
-                {!isFocused &&
-                    errorMessage && <div className="error">{errorMessage}</div>}
+                {!isFocused && errorMessage && (
+                    <div className="error">{errorMessage}</div>
+                )}
             </StyledInput>
         );
     }
