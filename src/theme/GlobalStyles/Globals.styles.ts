@@ -12,19 +12,17 @@ const headingRules = (hLevel: string): string => `
 `;
 
 const typography = css`
-  ${[...Object.keys(fonts.heading)].map(headingRules)}
+    ${[...Object.keys(fonts.heading)].map(headingRules)} p {
+        font-family: ${fonts.fontFamily};
+        font-size: ${fonts.paragraph.base.fontSize};
+        line-height: ${fonts.paragraph.base.lineHeight};
+        font-weight: ${fonts.paragraph.base.fontWeight};
+    }
 
-  p {
-    font-family: ${fonts.fontFamily};
-    font-size: ${fonts.paragraph.base.fontSize};
-    line-height: ${fonts.paragraph.base.lineHeight};
-    font-weight: ${fonts.paragraph.base.fontWeight};
-  }
-
-  a {
-    text-decoration: none;
-    color: ${colors.savvyCyan.dark};
-  }
+    a {
+        text-decoration: none;
+        color: ${colors.savvyCyan.dark};
+    }
 `;
 
 export const GlobalCSS = createGlobalStyle`

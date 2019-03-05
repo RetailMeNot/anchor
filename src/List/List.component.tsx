@@ -8,37 +8,36 @@ import styled from 'styled-components';
 import { fonts, colors, sizes } from '../theme';
 
 interface ListProps {
-  className?: string;
-  children?: any;
-  title?: string;
-  hidden?: boolean;
+    className?: string;
+    children?: any;
+    title?: string;
+    hidden?: boolean;
 }
 
 export const StyledList = styled.div`
-  .title {
-    margin: 0;
-    padding: ${sizes.padding.md};
-    font-family: ${fonts.fontFamily};
-    font-size: .75rem;
-    font-weight: 600;
-    color: ${colors.ash.dark};
-    line-height: .75rem;
-  }
+    .title {
+        margin: 0;
+        padding: ${sizes.padding.md};
+        font-family: ${fonts.fontFamily};
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: ${colors.ash.dark};
+        line-height: 0.75rem;
+    }
 `;
 
-const DefaultProps: ListProps = {
-};
+const DefaultProps: ListProps = {};
 
 export const List: React.SFC<ListProps> = ({
-  className,
-  children,
-  title,
-...props
+    className,
+    children,
+    title,
+    ...props
 }: ListProps = DefaultProps): React.ReactElement<any> => (
-  <StyledList className={classNames(className)} {...props}>
-    {title && <p className="title">{title}</p>}
-    {children}
-  </StyledList>
+    <StyledList className={classNames(className)} {...props}>
+        {title && <p className="title">{title}</p>}
+        {children}
+    </StyledList>
 );
 
 List.defaultProps = DefaultProps;

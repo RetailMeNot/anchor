@@ -7,12 +7,11 @@ import styled from 'styled-components';
 import { Header } from './Header.component';
 
 const StyledStory = styled.div`
-  padding: 2rem 3rem;
+    padding: 2rem 3rem;
 `;
 
-storiesOf('Components/Header', module)
-  .add('default', () => (
-      <StyledStory>
-          <Header />
-      </StyledStory>
-  ));
+storiesOf('Components/Header', module).add('default', () => (
+    <StyledStory>
+        <Header />
+    </StyledStory>
+));

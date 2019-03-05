@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Page } from './Page.component';
 
 const StyledStory = styled.div`
-  padding: 10rem;
+    padding: 10rem;
 `;
 
 storiesOf('Components/Page', module).add('default', () => (

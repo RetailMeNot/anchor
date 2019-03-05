@@ -12,18 +12,18 @@ const StyledStory = styled.div`
 `;
 
 storiesOf('Components/Icon', module)
-.add('hamburger', () => (
-    <StyledStory>
-      <Icon type="hamburger" />
-    </StyledStory>
-  ))
-  .add('tag-add', () => (
-    <StyledStory>
-      <Icon type="tag-add" />
-    </StyledStory>
-  ))
-  .add('check-circle', () => (
-    <StyledStory>
-      <Icon type="check-circle" />
-    </StyledStory>
-  ));
+    .add('hamburger', () => (
+        <StyledStory>
+            <Icon type="hamburger" />
+        </StyledStory>
+    ))
+    .add('tag-add', () => (
+        <StyledStory>
+            <Icon type="tag-add" />
+        </StyledStory>
+    ))
+    .add('check-circle', () => (
+        <StyledStory>
+            <Icon type="check-circle" />
+        </StyledStory>
+    ));

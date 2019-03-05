@@ -23,6 +23,7 @@
       "no-trailing-whitespace": true,
       "object-literal-sort-keys": false,
       "object-literal-shorthand": false,
+      "object-literal-key-quotes": [true, "as-needed"],
       "one-variable-per-declaration": [false],
       "only-arrow-functions": [true, "allow-declarations"],
       "ordered-imports": [false],

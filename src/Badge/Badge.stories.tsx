@@ -10,15 +10,14 @@ import { Icon } from '../Icon';
 // THEME
 
 const StyledStory = styled.div`
-  padding: 2rem 5rem;
+    padding: 2rem 5rem;
 `;
 
-storiesOf('Components/Badge', module)
-  .add('Default', () => (
-      <StyledStory>
+storiesOf('Components/Badge', module).add('Default', () => (
+    <StyledStory>
         <p>Badge 1</p>
         <Badge count={1}>
-          <Icon type="cart" />
+            <Icon type="cart" />
         </Badge>
-      </StyledStory>
-  ));
+    </StyledStory>
+));

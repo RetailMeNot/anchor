@@ -7,13 +7,13 @@ import styled from 'styled-components';
 import { Footer } from './Footer.component';
 
 const StyledStory = styled.div`
-  padding: 2rem 0;
+    padding: 2rem 0;
 `;
 
 storiesOf('Components/Footer', module)
     .add('default', () => (
         <StyledStory>
-            <Footer/>
+            <Footer />
         </StyledStory>
     ))
     .add('custom navigation', () => (
@@ -25,11 +25,15 @@ storiesOf('Components/Footer', module)
                         key: 1,
                         children: [
                             { label: 'Seasonal/Ideas', href: '#', key: 1 },
-                            { label: 'Browse Categories', href: '/coupons', key: 2 },
+                            {
+                                label: 'Browse Categories',
+                                href: '/coupons',
+                                key: 2,
+                            },
                             { label: 'Exclusive Deals', href: '#', key: 3 },
                             { label: 'Deal Squad', href: '#', key: 4 },
                         ],
-                    }
+                    },
                 ])}
             </Footer>
         </StyledStory>

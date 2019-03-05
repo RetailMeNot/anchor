@@ -5,9 +5,6 @@
 <a href="https://travis-ci.org/RetailMeNot/anchor">
     <img alt="Build Satus" src="https://api.travis-ci.org/RetailMeNot/anchor.svg?branch=master">
 </a>
-<a href="">
-    <img alt="Code Coverage" src="">
-</a>
 <a href="https://spectrum.chat/retailmenot">
     <img alt="Spectrum" src="https://img.shields.io/badge/spectrum-online-green.svg">
 </a>
@@ -20,13 +17,17 @@
 
 ----
 
-[View Our Docs Site]() 
-
 ### Get Started
 
 ```ssh
 npm i -S @retailmenot/anchor styled-components
 ```
 
+```typescript jsx
+// VENDOR
+import { Menu } from '@retailmenot/anchor';
+```
+
+[View our docs site for more usage guidelines](https://retailmenot.design/)
 
 ### Contribute
