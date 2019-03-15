@@ -1,20 +1,18 @@
+// STORYBOOK
 import { configure, addDecorator } from '@storybook/react';
-import { configureViewport, INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { withInfo } from '@storybook/addon-info';
+// ADDONS
+import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
-const req = require.context('../src', true, /.stories.tsx$/);
+import { withViewport } from '@storybook/addon-viewport';
 
+addDecorator(withA11y);
+addDecorator(withKnobs);
+addDecorator(withViewport);
+
+// automatically import all files ending in *.stories.js
+const req = require.context('../src', true, /.stories.tsx?$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
-
-const viewports = {
-  ...INITIAL_VIEWPORTS,
-};
-
-addDecorator(withInfo());
-addDecorator(withKnobs);
-
-configureViewport({ viewports });
 
 configure(loadStories, module);

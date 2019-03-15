@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css, InterpolationValue } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { darken } from 'polished';
 // THEME
 import { colors, fonts, sizes } from '../theme';
@@ -19,10 +19,8 @@ interface ButtonProps {
 }
 
 interface ButtonStylesGroup {
-    [key: string]: InterpolationValue[];
+    [key: string]: FlattenSimpleInterpolation;
 }
-
-// TODO: a11y
 
 const ButtonColorStyles: ButtonStylesGroup = {
     primary: css`
