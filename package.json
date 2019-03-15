@@ -124,7 +124,7 @@
     "rxjs": "^6.3.3"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "husky": {
     "hooks": {
