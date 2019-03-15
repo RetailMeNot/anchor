@@ -46,7 +46,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 Then install Yarn via Homebrew:
 
 ```sh
-$ brew install yarn --without-node
+$ brew install yarn --ignore-dependencies
 ```
 
 ## Clone the Repo
@@ -72,13 +72,13 @@ $ npm i
 ## Run the app
 
 ```sh
-$ yarn dev
+$ yarn storybook
 ```
 
 or
 
 ```sh
-$ npm run dev
+$ npm run storybook
 ```
 
 This will run the app in development mode.
@@ -89,7 +89,7 @@ This will run the app in development mode.
 $ yarn test:dev
 ```
 
-or 
+or
 
 ```sh
 $ npm run test:dev
@@ -127,7 +127,7 @@ In the project directory, you can run the following:
 If you use homebrew and nvm:
 
 ```bash
-brew install yarn --without-node
+brew install yarn --ignore-dependencies
 ```
 
 ### `yarn storybook`
@@ -169,11 +169,11 @@ There's also a pre-commit hook if you're committing from the command line.
 
 ## Testing
 
-In order to have any PR merged into this project, there must be specs (at least stubs as we're in alpha) and they specs must be passing.
+In order to have any PR merged into this project, there must be specs (at least stubs as we're in alpha) and the specs must be passing.
 
 #### Snapshots failing?
 
-If the snapshots are failing and the changes to the snapshots represents desired changes, the following command can update the snapshots.  
+If the snapshots are failing and the changes to the snapshots represents desired changes, the following command can update the snapshots.
 
 ```ssh
 npm run test -- -u
@@ -221,7 +221,7 @@ code you write automatically to ensure a code style within your project. See the
 [page to see it in action](https://prettier.github.io/prettier/).
 
 Whenever you make a commit from the command line, Prettier will format the changed files automatically. You can also
-run `yarn prettier` to format your entire project.
+run `yarn pretty` to format your entire project.
 
 If you want to integrate Prettier in your favorite editor, read the section on
 [Editor Integration](https://prettier.io/docs/en/editors.html) on the Prettier GitHub page.

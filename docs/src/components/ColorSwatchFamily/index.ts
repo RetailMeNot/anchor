@@ -1,0 +1,1 @@
+export { ColorSwatchFamily } from './ColorSwatchFamily.component';
