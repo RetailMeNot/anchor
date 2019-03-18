@@ -4,7 +4,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
-// import { checkA11y } from '@storybook/addon-a11y';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENT
@@ -15,7 +14,6 @@ const StyledStory = styled.div`
 `;
 
 storiesOf('Components/Button', module)
-    // .addDecorator(checkA11y) // TODO: wtf doesn't this work?
     .add('Primary', () => (
         <StyledStory>
             <Button
