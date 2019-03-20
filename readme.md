@@ -17,6 +17,8 @@
 
 ----
 
+Anchor is a robust yet lightweight series of UI components, utilities, and styles that form the foundation of great user experiences.
+
 ### Get Started
 
 ```ssh
@@ -29,6 +31,14 @@ import { Menu } from '@retailmenot/anchor';
 ```
 
 [View our docs site for more usage guidelines](https://retailmenot.design/)
+
+### Why Anchor?
+
+* Isomorphic - We spent a lot of time trying to write out a library that doesn't require a Webpack expert to render server-side
+* Convention Over Configuration - Out of the box this library solves common challenges faced by UI engineers without a ton of configuration
+* Composability - Rather than writing redundant overrides, we provide consistent attributes to easily change the look and feel of our components
+* Community - We promote people-centric solutions and promote a culture of learners
+* Representational - We try to use native DOM APIs so the better you know the DOM the easier this library is to use  
 
 ### Contribute
 
