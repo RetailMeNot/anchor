@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-alpha.11",
+  "version": "0.0.1-alpha.12",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.es.js",
@@ -54,21 +54,21 @@
     "styled-components": ">= 3"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
-    "@storybook/addon-a11y": "^5.0.1",
-    "@storybook/addon-actions": "^5.0.1",
-    "@storybook/addon-info": "^5.0.1",
-    "@storybook/addon-knobs": "^5.0.1",
-    "@storybook/addon-links": "^5.0.1",
-    "@storybook/addon-options": "^5.0.1",
-    "@storybook/addon-storyshots": "^5.0.1",
-    "@storybook/addon-viewport": "^5.0.1",
-    "@storybook/addons": "^5.0.1",
-    "@storybook/react": "^5.0.1",
+    "@storybook/addon-a11y": "^5.0.3",
+    "@storybook/addon-actions": "^5.0.3",
+    "@storybook/addon-info": "^5.0.3",
+    "@storybook/addon-knobs": "^5.0.3",
+    "@storybook/addon-links": "^5.0.3",
+    "@storybook/addon-options": "^5.0.3",
+    "@storybook/addon-storyshots": "^5.0.3",
+    "@storybook/addon-viewport": "^5.0.3",
+    "@storybook/addons": "^5.0.3",
+    "@storybook/react": "^5.0.3",
     "@types/classnames": "^2.2.6",
     "@types/enzyme": "^3.1.15",
     "@types/enzyme-adapter-react-16": "^1.0.3",
@@ -111,15 +111,16 @@
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.4"
   },
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
     "classnames": "^2.2.6",
-    "polished": "^2.3.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "rxjs": "^6.3.3"
+    "core-js": "^3.0.0",
+    "polished": "^2.3.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "rxjs": "^6.4.0"
   },
   "engines": {
     "node": ">=10"
