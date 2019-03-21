@@ -11,9 +11,7 @@ import { get } from '../../utils/get';
 import { colors, variables, fonts, sizes } from '../theme';
 
 interface DropDownProps {
-    overlay:
-        | React.ReactElement<any>
-        | Array<React.ReactElement<any>>;
+    overlay: React.ReactElement<any> | Array<React.ReactElement<any>>;
     trigger?: 'hover' | 'click'; // TODO: 'contextMenu';
     className?: string;
     children?: any;
