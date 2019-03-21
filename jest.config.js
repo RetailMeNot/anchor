@@ -1,6 +1,7 @@
 module.exports = {
   roots: [
-    "<rootDir>/src"
+    "<rootDir>/src",
+    "<rootDir>/utils",
   ],
   testPathIgnorePatterns: [
     "/node_modules/",
@@ -9,7 +10,6 @@ module.exports = {
     "/ts/",
     "/docs/",
     "/.storybook/",
-    "/utils/"
   ],
   transform: {
     "^.+\\.tsx?$": "ts-jest"
@@ -33,7 +33,6 @@ module.exports = {
     "/commonjs/",
     "/ts/",
     "/esm/",
-    "/utils/"
   ],
   coverageReporters: [
     "json",

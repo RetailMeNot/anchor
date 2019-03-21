@@ -1,24 +1,23 @@
 {
   "name": "@retailmenot/anchor-docs",
   "description": "Documentation site for Anchor",
-  "version": "0.0.1",
   "author": "Kameron (@sharkparty)",
   "dependencies": {
     "@reach/component-component": "^0.1.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.0.19",
-    "gatsby-image": "^2.0.15",
-    "gatsby-mdx": "^0.2.0",
+    "gatsby": "^2.2.5",
+    "gatsby-image": "^2.0.34",
+    "gatsby-mdx": "^0.4.4",
     "gatsby-plugin-google-analytics": "^2.0.17",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.15",
-    "gatsby-plugin-typescript": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-transformer-sharp": "^2.1.4",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-plugin-typescript": "^2.0.11",
+    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-live": "^1.12.0"
   },
@@ -34,10 +33,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^0.16.6",
-    "@mdx-js/mdx": "^0.16.6",
-    "loader-utils": "^1.1.0",
-    "prettier": "^1.14.2"
+    "@mdx-js/loader": "^0.20.3",
+    "@mdx-js/mdx": "^0.20.3",
+    "loader-utils": "^1.2.3",
+    "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",
