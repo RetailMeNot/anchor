@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Box } from '@rebass/grid';
 import { fromEvent, Subscription } from 'rxjs';
 // import { debounceTime } from 'rxjs/operators';
-import { get } from '../../../utils/get';
+import { get } from '../../../utils';
 
 type BreakpointSize =
     | 'xsmall'

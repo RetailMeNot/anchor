@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import { fromEvent, Subscription } from 'rxjs';
 import { rgba } from 'polished';
-import { get } from '../../utils/get';
+import { get } from '../../utils';
 // COMPONENTS
 // THEME
 import { colors, variables, fonts, sizes } from '../theme';

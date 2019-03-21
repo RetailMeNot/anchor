@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from 'styled-components';
-import { get } from '../../../utils/get';
+import { get } from '../../../utils';
 // THEME
 import { fonts, colors, variables } from '../../theme';
 
