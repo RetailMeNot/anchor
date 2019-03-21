@@ -30,7 +30,7 @@ npm i -S @retailmenot/anchor styled-components
 import { Menu } from '@retailmenot/anchor';
 ```
 
-[View our docs site for more usage guidelines](https://anchor.retailmenot.com/)
+[View our docs site for more usage guidelines](https://anchor.retailmenot.design/)
 
 ### Why Anchor?
 
