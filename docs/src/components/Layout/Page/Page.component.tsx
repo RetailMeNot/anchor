@@ -6,8 +6,7 @@ import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 // COMPONENTS
 import { NormalizeCSS, GlobalCSS } from '../../../../../src/theme';
-import { Header, Footer } from '../';
-import { SideNavigation } from '../../Navigation';
+import { Footer } from '../';
 import { CodePreview } from '../../CodePreview';
 
 export const StyledPageElement = styled.div`
@@ -30,14 +29,13 @@ interface PageProps {
 
 const StyledContentBody = styled.div`
   display: flex;
-  height: calc(100vh - 4rem);
+  height: 100vh;
   overflow: hidden;
 
 
   main {
     overflow-x: hidden;
     overflow-y: auto;
-    max-width: 1200px;
     margin: 0 auto;
   }
 `;
@@ -65,9 +63,7 @@ export const Page = ({ children, className, enableFooter }: PageProps): React.Re
   <StyledPageElement className={classNames(className)}>
     <NormalizeCSS />
     <GlobalCSS />
-    <Header/>
     <StyledContentBody>
-      <SideNavigation />
       <main>
         {/* TODO: Add bread-crumbing */}
         <MDXProvider components={Components}>
