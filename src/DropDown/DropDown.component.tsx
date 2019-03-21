@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import { fromEvent, Subscription } from 'rxjs';
 import { rgba } from 'polished';
-import { get } from 'lodash';
+import { get } from '../../utils/get';
 // COMPONENTS
 // THEME
 import { colors, variables, fonts, sizes } from '../theme';
@@ -13,9 +13,7 @@ import { colors, variables, fonts, sizes } from '../theme';
 interface DropDownProps {
     overlay:
         | React.ReactElement<any>
-        | Array<React.ReactElement<any>>
-        | React.SFC
-        | React.SFC[];
+        | Array<React.ReactElement<any>>;
     trigger?: 'hover' | 'click'; // TODO: 'contextMenu';
     className?: string;
     children?: any;

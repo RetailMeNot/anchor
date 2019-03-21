@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from 'styled-components';
-import { get } from 'lodash';
+import { get } from '../../../utils/get';
 // THEME
 import { fonts, colors, variables } from '../../theme';
 
@@ -45,7 +45,7 @@ export const StyledInput = styled.div`
         display: flex;
         flex-flow: row wrap;
         border-radius: ${variables.borderRadius};
-        border: solid 1px ${colors.ash.light};
+        border: solid thin ${colors.ash.light};
         opacity: ${({ disabled }: InputProps) => disabled && '0.5'};
 
         &:active,

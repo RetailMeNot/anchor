@@ -74,7 +74,6 @@
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^24.0.11",
     "@types/json-schema": "^7.0.1",
-    "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.2",
     "@types/react": "^16.4.18",
     "@types/react-test-renderer": "^16.0.3",
@@ -117,7 +116,6 @@
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.11",
     "polished": "^2.3.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
