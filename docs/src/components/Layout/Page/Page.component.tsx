@@ -28,15 +28,15 @@ interface PageProps {
 }
 
 const StyledContentBody = styled.div`
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-
+  //display: flex;
+  //height: 100vh;
+  //overflow: hidden;
 
   main {
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0 auto;
+    width: 100%;
   }
 `;
 

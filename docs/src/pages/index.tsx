@@ -28,11 +28,10 @@ const StyledCaption = styled.p`
 `;
 
 const StyledOcean = styled.div`
-  height: 10%;
+  margin-top: 3rem;
+  height: 250px;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
   z-index: -9;
 `;
 
@@ -58,7 +57,6 @@ const WaveAnimations = css`
 
 const StyledWave = css`
   position: absolute;
-  top: -80px;
   width: 6400px;
   transform: translate3d(0, 0, 0);
   height: 1000px;
@@ -68,14 +66,14 @@ const StyledWaveSix = styled.div`
   ${StyledWave}
   ${WaveAnimations}
   background: url(${ withPrefix('/images/waves/wave-1.svg')}) repeat-x;
-  top: -20px;
+  top: 50px;
   animation: wave 27s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
 
 const StyledWaveFive = styled.div`
   ${StyledWave}
   ${WaveAnimations}
-  top: -120px;
+  top: 40px;
   background: url(${ withPrefix('/images/waves/wave-2.svg')}) repeat-x;
   animation: wave 25s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
@@ -83,7 +81,7 @@ const StyledWaveFive = styled.div`
 const StyledWaveFour = styled.div`
   ${StyledWave}
   ${WaveAnimations}
-  top: -140px;
+  top: 30px;
   background: url(${ withPrefix('/images/waves/wave-3.svg')}) repeat-x;
   animation: wave 22s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
@@ -91,7 +89,7 @@ const StyledWaveFour = styled.div`
 const StyledWaveThree = styled.div`
   ${StyledWave}
   ${WaveAnimations}
-  top: -160px;
+  top: 20px;
   background: url(${ withPrefix('/images/waves/wave-4.svg')}) repeat-x;
   animation: wave 25s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
@@ -99,7 +97,7 @@ const StyledWaveThree = styled.div`
 const StyledWaveTwo = styled.div`
   ${StyledWave}
   ${WaveAnimations}
-  top: -180px;
+  top: 10px;
   background: url(${ withPrefix('/images/waves/wave-5.svg')}) repeat-x;
   animation: wave 28s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
@@ -107,9 +105,15 @@ const StyledWaveTwo = styled.div`
 const StyledWaveOne = styled.div`
   ${StyledWave}
   ${WaveAnimations}
-  top: -200px;
+  top: 0;
   background: url(${ withPrefix('/images/waves/wave-6.svg')}) repeat-x;
   animation: wave 29s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledBody = styled.div`
+  width: 100%;
+  background-color: #9A1246;
+  min-height: 500px;
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
@@ -125,6 +129,9 @@ export const IndexPage = (): React.ReactElement<any> => (
         <StyledWaveFive />
         <StyledWaveSix />
       </StyledOcean>
+      <StyledBody>
+        <p>Derp</p>
+      </StyledBody>
     </StyledIndexPage>
   </Page>
 );
