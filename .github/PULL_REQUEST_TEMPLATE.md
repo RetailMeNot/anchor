@@ -2,7 +2,7 @@
 
 I have done **all** of the following:
 
-- [ ] Used [conventional commits](https://www.conventionalcoamits.org/) for all work.
+- [ ] Used [conventional commits](https://www.conventionalcommits.org) for all work.
 - [ ] Tested my solution on Mobile & Tablet.
 - [ ] Wrote [unit tests](https://jestjs.io/docs/en/getting-started) for states and all behavior (`npm test`) and passed coverage thresholds.
 - [ ] Updated snapshots for all permutations (`npm test -- -u`).
