@@ -33,6 +33,10 @@ export const GlobalCSS = createGlobalStyle`
     font-size: ${fonts.baseFontSize}px;
     letter-spacing: 0;
     line-height: 1.357142857rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: #710a32;
   }
   ${typography}
 `;

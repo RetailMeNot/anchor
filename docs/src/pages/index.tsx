@@ -1,44 +1,127 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { withPrefix } from 'gatsby';
 // COMPONENTS
 import { Page } from '../components/Layout';
-import { Button } from '../../../src/Button';
 // THEME
 
 const StyledIndexPage = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledLogo = styled.img`
+  flex: 1 1 auto;
+  padding: 5rem 2rem 0;
+`;
+
+const StyledCaption = styled.p`
+  flex: 1 1 auto;
+  padding: 1rem 2rem 0;
+  font-family: AvenirNext-Medium, Avenir, sans-serif;
+  font-size: 1.25rem;
+  color: #222222;
+  text-align: center;
+  line-height: 1.5rem;
+`;
+
+const StyledOcean = styled.div`
+  margin-top: 3rem;
+  height: 250px;
+  width: 100%;
+  position: relative;
+`;
+
+const WaveAnimations = css`
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+`;
+
+const StyledWave = css`
+  position: absolute;
+  width: 6400px;
+  transform: translate3d(0, 0, 0);
+  height: 500px;
+`;
+
+const StyledWaveSix = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  background: url(${ withPrefix('/images/waves/wave-1.svg')}) repeat-x;
+  top: 120px;
+  animation: wave 67s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledWaveFive = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  top: 80px;
+  background: url(${ withPrefix('/images/waves/wave-2.svg')}) repeat-x;
+  animation: wave 65s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledWaveFour = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  top: 50px;
+  background: url(${ withPrefix('/images/waves/wave-3.svg')}) repeat-x;
+  animation: wave 62s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledWaveThree = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  top: 20px;
+  background: url(${ withPrefix('/images/waves/wave-4.svg')}) repeat-x;
+  animation: wave 85s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledWaveTwo = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  top: 10px;
+  background: url(${ withPrefix('/images/waves/wave-5.svg')}) repeat-x;
+  animation: wave 88s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+`;
+
+const StyledWaveOne = styled.div`
+  ${StyledWave}
+  ${WaveAnimations}
+  top: 0;
+  background: url(${ withPrefix('/images/waves/wave-6.svg')}) repeat-x;
+  animation: wave 89s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
   <Page>
     <StyledIndexPage>
-      <h1>Home</h1>
-      <Button>Derp</Button>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget turpis scelerisque, euismod turpis eget,
-        pretium tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris
-        hendrerit lorem erat, quis pellentesque leo facilisis et. Nam bibendum eros non lectus efficitur, nec mattis
-        enim molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam et lorem sodales convallis
-        quis in massa. Etiam ut lacus et massa gravida condimentum. Sed sodales pulvinar sem in fringilla. Cras interdum
-        orci non malesuada pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet
-        viverra nulla, in varius nulla sodales eu. Phasellus varius nulla id leo ultricies, vel semper urna ultricies.
-        Integer nisl ante, varius vitae venenatis eu, suscipit in leo. Duis imperdiet posuere elit, a malesuada tortor
-        ullamcorper eu. Nam vestibulum mauris quis mi commodo semper. Praesent volutpat, urna ut blandit aliquet, magna
-        turpis pretium ex, vel eleifend nulla diam ac nibh.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget turpis scelerisque, euismod turpis eget,
-        pretium tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris
-        hendrerit lorem erat, quis pellentesque leo facilisis et. Nam bibendum eros non lectus efficitur, nec mattis
-        enim molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam et lorem sodales convallis
-        quis in massa. Etiam ut lacus et massa gravida condimentum. Sed sodales pulvinar sem in fringilla. Cras interdum
-        orci non malesuada pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet
-        viverra nulla, in varius nulla sodales eu. Phasellus varius nulla id leo ultricies, vel semper urna ultricies.
-        Integer nisl ante, varius vitae venenatis eu, suscipit in leo. Duis imperdiet posuere elit, a malesuada tortor
-        ullamcorper eu. Nam vestibulum mauris quis mi commodo semper. Praesent volutpat, urna ut blandit aliquet, magna
-        turpis pretium ex, vel eleifend nulla diam ac nibh.
-      </p>
+      <StyledLogo src={withPrefix('/images/anchor-logo.svg')} />
+      <StyledCaption>A design system by <strong>RetailMeNot</strong>. Coming soon.</StyledCaption>
+      <StyledOcean>
+        <StyledWaveOne />
+        <StyledWaveTwo />
+        <StyledWaveThree />
+        <StyledWaveFour />
+        <StyledWaveFive />
+        <StyledWaveSix />
+      </StyledOcean>
     </StyledIndexPage>
   </Page>
 );
