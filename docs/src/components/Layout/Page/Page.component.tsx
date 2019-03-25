@@ -10,15 +10,6 @@ import { Footer } from '../';
 import { CodePreview } from '../../CodePreview';
 
 export const StyledPageElement = styled.div`
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
 `;
 
 interface PageProps {
@@ -28,15 +19,9 @@ interface PageProps {
 }
 
 const StyledContentBody = styled.div`
-  //display: flex;
-  //height: 100vh;
-  //overflow: hidden;
-
   main {
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 0 auto;
     width: 100%;
+    background-color: white;
   }
 `;
 
