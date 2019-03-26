@@ -18,6 +18,6 @@ jobs:
         - docker build -t client:latest .
         - docker ps -a
         - docker run --env AWS_ACCESS_KEY_ID=$AWS_KEY --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET --env AWS_DEFAULT_REGION=$AWS_REGION client
-      if: branch = master
+      if: branch = master AND type = push AND fork = false
 
 install: skip
