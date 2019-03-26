@@ -2,16 +2,16 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Container from './Container.component';
+import { CustomAdaptor } from './Adaptor.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Container>Test</Container>;
+const subject = <CustomAdaptor />;
 const wrapper = mount(subject);
 const component = shallow(subject);
 
-describe('Component: Button', () => {
+describe('Component: Adaptor', () => {
     it('should be defined', () => {
         /* tslint:disable */
         console.log(subject);
