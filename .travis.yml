@@ -9,7 +9,7 @@ services:
 jobs:
   include:
     - stage: test
-      name: 'Lint & Test'
+      name: 'Lint & Unit Test'
       script:
         - docker build -t client:latest -f ./Dockerfile.dev .
     - stage: deploy
