@@ -11,7 +11,7 @@ jobs:
     - stage: test
       name: 'Lint & Test'
       script:
-        - docker build -t client:latest ./Dockerfile.dev
+        - docker build -t client:latest -f ./Dockerfile.dev .
     - stage: deploy
       name: 'Deploy to AWS'
       script:
