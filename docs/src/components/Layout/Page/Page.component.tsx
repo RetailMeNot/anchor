@@ -9,20 +9,19 @@ import { NormalizeCSS, GlobalCSS } from '../../../../../src/theme';
 import { Footer } from '../';
 import { CodePreview } from '../../CodePreview';
 
-export const StyledPageElement = styled.div`
-`;
+export const StyledPageElement = styled.div``;
 
 interface PageProps {
-  className?: string;
-  children?: any;
-  enableFooter?: boolean;
+    className?: string;
+    children?: any;
+    enableFooter?: boolean;
 }
 
 const StyledContentBody = styled.div`
-  main {
-    width: 100%;
-    background-color: white;
-  }
+    main {
+        width: 100%;
+        background-color: white;
+    }
 `;
 
 const Components: any = {};
@@ -41,23 +40,25 @@ Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
 Components.li = (props: any) => <li {...props} />;
 Components.a = (props: any) => <a {...props} />;
-Components.blockquote = (props: any) => <blockquote{...props} />;
+Components.blockquote = (props: any) => <blockquote {...props} />;
 Components.strong = (props: any) => <strong {...props} />;
 
-export const Page = ({ children, className, enableFooter }: PageProps): React.ReactElement<any> => (
-  <StyledPageElement className={classNames(className)}>
-    <NormalizeCSS />
-    <GlobalCSS />
-    <StyledContentBody>
-      <main>
-        {/* TODO: Add bread-crumbing */}
-        <MDXProvider components={Components}>
-          {children}
-        </MDXProvider>
-        {enableFooter && <Footer />}
-      </main>
-    </StyledContentBody>
-  </StyledPageElement>
+export const Page = ({
+    children,
+    className,
+    enableFooter,
+}: PageProps): React.ReactElement<any> => (
+    <StyledPageElement className={classNames(className)}>
+        <NormalizeCSS />
+        <GlobalCSS />
+        <StyledContentBody>
+            <main>
+                {/* TODO: Add bread-crumbing */}
+                <MDXProvider components={Components}>{children}</MDXProvider>
+                {enableFooter && <Footer />}
+            </main>
+        </StyledContentBody>
+    </StyledPageElement>
 );
 
 export default Page;
