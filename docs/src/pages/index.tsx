@@ -14,7 +14,7 @@ const StyledIndexPage = styled.div`
 
 const StyledLogo = styled.img`
     flex: 1 1 auto;
-    padding: 5rem 2rem 0;
+    padding: 12.5rem 2rem 0;
 `;
 
 const StyledCaption = styled.p`
