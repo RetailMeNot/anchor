@@ -7,7 +7,7 @@ import { CustomAdaptor } from './Adaptor.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <CustomAdaptor />;
+const subject = <CustomAdaptor minWidth={200} />;
 const wrapper = mount(subject);
 const component = shallow(subject);
 

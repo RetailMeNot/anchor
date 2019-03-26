@@ -359,22 +359,22 @@ export class Footer extends React.Component<FooterProps> {
         return (
             <div>
                 {/*<Flex className="desktop">*/}
-                    {/*<Box m="auto 0" flex="0 1 220px" width={2 / 8}>*/}
-                        {/*<FooterLogo />*/}
-                        {/*/!* TODO: uncomment once functional *!/*/}
-                        {/*/!* <SocialIcons /> *!/*/}
-                    {/*</Box>*/}
-                    {/*<Box className="footer-navigation-sections" width={4 / 8}>*/}
-                        {/*{children ? children : Footer.renderLinks()}*/}
-                    {/*</Box>*/}
-                    {/*<Box width={2 / 8}>*/}
-                        {/*/!* TODO: uncomment once functional *!/*/}
-                        {/*/!* <MobileCTA /> *!/*/}
-                    {/*</Box>*/}
+                {/*<Box m="auto 0" flex="0 1 220px" width={2 / 8}>*/}
+                {/*<FooterLogo />*/}
+                {/*/!* TODO: uncomment once functional *!/*/}
+                {/*/!* <SocialIcons /> *!/*/}
+                {/*</Box>*/}
+                {/*<Box className="footer-navigation-sections" width={4 / 8}>*/}
+                {/*{children ? children : Footer.renderLinks()}*/}
+                {/*</Box>*/}
+                {/*<Box width={2 / 8}>*/}
+                {/*/!* TODO: uncomment once functional *!/*/}
+                {/*/!* <MobileCTA /> *!/*/}
+                {/*</Box>*/}
                 {/*</Flex>*/}
                 {/*<Flex>*/}
-                    {/*<Box flex="0 1 220px" width={2 / 8} />*/}
-                    {/*<Box width={6 / 8}>{this.renderLegalLinks()}</Box>*/}
+                {/*<Box flex="0 1 220px" width={2 / 8} />*/}
+                {/*<Box width={6 / 8}>{this.renderLegalLinks()}</Box>*/}
                 {/*</Flex>*/}
             </div>
         );
@@ -384,19 +384,19 @@ export class Footer extends React.Component<FooterProps> {
         return (
             <div>
                 {/*<Flex className="mobile">*/}
-                    {/*<Box width={1}>*/}
-                        {/*/!* TODO: uncomment once functional *!/*/}
-                        {/*/!* <MobileCTA className="mobile-cta" /> *!/*/}
-                        {/*/!* <hr /> *!/*/}
-                        {/*<div className="footer-navigation-sections">*/}
-                            {/*{children ? children : Footer.renderLinks()}*/}
-                        {/*</div>*/}
-                        {/*<hr />*/}
-                        {/*<FooterLogo />*/}
-                        {/*/!* TODO: uncomment once functional *!/*/}
-                        {/*/!* <SocialIcons /> *!/*/}
-                        {/*{this.renderLegalLinks()}*/}
-                    {/*</Box>*/}
+                {/*<Box width={1}>*/}
+                {/*/!* TODO: uncomment once functional *!/*/}
+                {/*/!* <MobileCTA className="mobile-cta" /> *!/*/}
+                {/*/!* <hr /> *!/*/}
+                {/*<div className="footer-navigation-sections">*/}
+                {/*{children ? children : Footer.renderLinks()}*/}
+                {/*</div>*/}
+                {/*<hr />*/}
+                {/*<FooterLogo />*/}
+                {/*/!* TODO: uncomment once functional *!/*/}
+                {/*/!* <SocialIcons /> *!/*/}
+                {/*{this.renderLegalLinks()}*/}
+                {/*</Box>*/}
                 {/*</Flex>*/}
             </div>
         );

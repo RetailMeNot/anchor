@@ -4,21 +4,21 @@ export { Button } from './Button/Button.component';
 export { Badge } from './Badge';
 export { DropDown } from './DropDown';
 export {
-  Grid,
-  Cell,
-  Adaptor,
-  LegacyDesktop,
-  LegacyTablet,
-  LegacyPhone,
-  CustomAdaptor,
-  XS,
-  SM,
-  MD,
-  LG,
-  XL,
-  XXL,
-  LegacyBreakpoints,
-  StandardBreakpoints,
+    Grid,
+    Cell,
+    Adaptor,
+    LegacyDesktop,
+    LegacyTablet,
+    LegacyPhone,
+    CustomAdaptor,
+    XS,
+    SM,
+    MD,
+    LG,
+    XL,
+    XXL,
+    LegacyBreakpoints,
+    StandardBreakpoints,
 } from './Grid';
 export { Icon } from './Icon';
 export { Page, Footer, Header } from './Layout';

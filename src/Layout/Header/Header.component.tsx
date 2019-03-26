@@ -123,56 +123,56 @@ export class Header extends React.Component<HeaderProps> {
         return (
             <div>
                 {/*<Flex alignItems="center" py={4}>*/}
-                    {/*<Box width={1 / 6}>*/}
-                        {/*<Flex justifyContent="center">*/}
-                            {/*<LargeLogo />*/}
-                        {/*</Flex>*/}
-                    {/*</Box>*/}
-                    {/*<Box width={5 / 12} px={2}>*/}
-                        {/*{!disableSearch && (*/}
-                            {/*<AutoComplete*/}
-                                {/*size="large"*/}
-                                {/*prefix={<Icon type="search" />}*/}
-                                {/*placeholder="Stores, brands, categories, etc…"*/}
-                                {/*dataSource={[1, 2, 3, 4, 5]}*/}
-                            {/*/>*/}
-                        {/*)}*/}
-                    {/*</Box>*/}
-                    {/*<Box width={5 / 12}>*/}
-                        {/*{primary ? (*/}
-                            {/*primary*/}
-                        {/*) : (*/}
-                            {/*<Menu>*/}
-                                {/*<DropDown overlay={<div>1</div>}>*/}
-                                    {/*<Item path="/">*/}
-                                        {/*Categories &nbsp;*/}
-                                        {/*<Icon*/}
-                                            {/*type="chevron-down"*/}
-                                            {/*color="white"*/}
-                                        {/*/>*/}
-                                    {/*</Item>*/}
-                                {/*</DropDown>*/}
-                                {/*<DropDown overlay={<div>1</div>}>*/}
-                                    {/*<Item path="/">*/}
-                                        {/*Stores &nbsp;*/}
-                                        {/*<Icon*/}
-                                            {/*type="chevron-down"*/}
-                                            {/*color="white"*/}
-                                        {/*/>*/}
-                                    {/*</Item>*/}
-                                {/*</DropDown>*/}
-                                {/*<DropDown overlay={<div>1</div>}>*/}
-                                    {/*<Item path="/">*/}
-                                        {/*More &nbsp;*/}
-                                        {/*<Icon*/}
-                                            {/*type="chevron-down"*/}
-                                            {/*color="white"*/}
-                                        {/*/>*/}
-                                    {/*</Item>*/}
-                                {/*</DropDown>*/}
-                            {/*</Menu>*/}
-                        {/*)}*/}
-                    {/*</Box>*/}
+                {/*<Box width={1 / 6}>*/}
+                {/*<Flex justifyContent="center">*/}
+                {/*<LargeLogo />*/}
+                {/*</Flex>*/}
+                {/*</Box>*/}
+                {/*<Box width={5 / 12} px={2}>*/}
+                {/*{!disableSearch && (*/}
+                {/*<AutoComplete*/}
+                {/*size="large"*/}
+                {/*prefix={<Icon type="search" />}*/}
+                {/*placeholder="Stores, brands, categories, etc…"*/}
+                {/*dataSource={[1, 2, 3, 4, 5]}*/}
+                {/*/>*/}
+                {/*)}*/}
+                {/*</Box>*/}
+                {/*<Box width={5 / 12}>*/}
+                {/*{primary ? (*/}
+                {/*primary*/}
+                {/*) : (*/}
+                {/*<Menu>*/}
+                {/*<DropDown overlay={<div>1</div>}>*/}
+                {/*<Item path="/">*/}
+                {/*Categories &nbsp;*/}
+                {/*<Icon*/}
+                {/*type="chevron-down"*/}
+                {/*color="white"*/}
+                {/*/>*/}
+                {/*</Item>*/}
+                {/*</DropDown>*/}
+                {/*<DropDown overlay={<div>1</div>}>*/}
+                {/*<Item path="/">*/}
+                {/*Stores &nbsp;*/}
+                {/*<Icon*/}
+                {/*type="chevron-down"*/}
+                {/*color="white"*/}
+                {/*/>*/}
+                {/*</Item>*/}
+                {/*</DropDown>*/}
+                {/*<DropDown overlay={<div>1</div>}>*/}
+                {/*<Item path="/">*/}
+                {/*More &nbsp;*/}
+                {/*<Icon*/}
+                {/*type="chevron-down"*/}
+                {/*color="white"*/}
+                {/*/>*/}
+                {/*</Item>*/}
+                {/*</DropDown>*/}
+                {/*</Menu>*/}
+                {/*)}*/}
+                {/*</Box>*/}
                 {/*</Flex>*/}
             </div>
         );
@@ -182,34 +182,34 @@ export class Header extends React.Component<HeaderProps> {
         return (
             <div>
                 {/*<Flex alignItems="center" py={2}>*/}
-                    {/*<Box width={1 / 6}>*/}
-                        {/*<Flex justifyContent="center">*/}
-                            {/*<SmallLogo />*/}
-                        {/*</Flex>*/}
-                    {/*</Box>*/}
-                    {/*<Box flex={1} width={3 / 6}>*/}
-                        {/*{!disableSearch && (*/}
-                            {/*<AutoComplete*/}
-                                {/*prefix={<Icon type="search" />}*/}
-                                {/*placeholder="Stores, brands, categories, etc…"*/}
-                                {/*dataSource={[1, 2, 3, 4, 5]}*/}
-                            {/*/>*/}
-                        {/*)}*/}
-                    {/*</Box>*/}
-                    {/*<Box flex="0 0 120px" width={2 / 6}>*/}
-                        {/*<Flex justifyContent="flex-end" alignItems="center">*/}
-                            {/*<Box width={1 / 2}>*/}
-                                {/*<Flex justifyContent="center">*/}
-                                    {/*<Avatar />*/}
-                                {/*</Flex>*/}
-                            {/*</Box>*/}
-                            {/*<Box width={1 / 2}>*/}
-                                {/*<Flex justifyContent="center">*/}
-                                    {/*<Icon type="hamburger" color="white" />*/}
-                                {/*</Flex>*/}
-                            {/*</Box>*/}
-                        {/*</Flex>*/}
-                    {/*</Box>*/}
+                {/*<Box width={1 / 6}>*/}
+                {/*<Flex justifyContent="center">*/}
+                {/*<SmallLogo />*/}
+                {/*</Flex>*/}
+                {/*</Box>*/}
+                {/*<Box flex={1} width={3 / 6}>*/}
+                {/*{!disableSearch && (*/}
+                {/*<AutoComplete*/}
+                {/*prefix={<Icon type="search" />}*/}
+                {/*placeholder="Stores, brands, categories, etc…"*/}
+                {/*dataSource={[1, 2, 3, 4, 5]}*/}
+                {/*/>*/}
+                {/*)}*/}
+                {/*</Box>*/}
+                {/*<Box flex="0 0 120px" width={2 / 6}>*/}
+                {/*<Flex justifyContent="flex-end" alignItems="center">*/}
+                {/*<Box width={1 / 2}>*/}
+                {/*<Flex justifyContent="center">*/}
+                {/*<Avatar />*/}
+                {/*</Flex>*/}
+                {/*</Box>*/}
+                {/*<Box width={1 / 2}>*/}
+                {/*<Flex justifyContent="center">*/}
+                {/*<Icon type="hamburger" color="white" />*/}
+                {/*</Flex>*/}
+                {/*</Box>*/}
+                {/*</Flex>*/}
+                {/*</Box>*/}
                 {/*</Flex>*/}
             </div>
         );
