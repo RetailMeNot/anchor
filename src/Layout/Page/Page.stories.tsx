@@ -10,7 +10,7 @@ const StyledStory = styled.div`
     padding: 10rem;
 `;
 
-storiesOf('Components/Page', module).add('default', () => (
+storiesOf('Components/Layout/Page', module).add('default', () => (
     <StyledStory>
         <Page>Story</Page>
     </StyledStory>

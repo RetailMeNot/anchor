@@ -10,7 +10,7 @@ const StyledStory = styled.div`
     padding: 2rem 3rem;
 `;
 
-storiesOf('Components/Header', module).add('default', () => (
+storiesOf('Components/Layout/Header', module).add('default', () => (
     <StyledStory>
         <Header />
     </StyledStory>

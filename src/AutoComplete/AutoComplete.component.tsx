@@ -31,6 +31,7 @@ interface AutoCompleteState {
 }
 
 export const StyledAutoComplete = styled.div`
+    width: 100%;
     position: relative;
     border: solid 1px ${colors.ash.light};
     border-radius: 0.25rem;

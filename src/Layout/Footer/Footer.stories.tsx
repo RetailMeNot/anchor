@@ -10,7 +10,7 @@ const StyledStory = styled.div`
     padding: 2rem 0;
 `;
 
-storiesOf('Components/Footer', module)
+storiesOf('Components/Layout/Footer', module)
     .add('default', () => (
         <StyledStory>
             <Footer />

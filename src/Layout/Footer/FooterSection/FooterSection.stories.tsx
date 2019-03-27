@@ -10,7 +10,7 @@ const StyledStory = styled.div`
     padding: 10rem;
 `;
 
-storiesOf('Components/Footer/FooterSection', module).add('default', () => (
+storiesOf('Components/Layout/Footer/FooterSection', module).add('default', () => (
     <StyledStory>
         <FooterSection title="Section Title">
             <ul>
