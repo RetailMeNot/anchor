@@ -13,4 +13,5 @@ export {
     XXL,
     LegacyBreakpoints,
     StandardBreakpoints,
+    CenteredCell,
 } from './Adaptor';

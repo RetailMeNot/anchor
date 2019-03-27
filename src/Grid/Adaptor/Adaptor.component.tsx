@@ -2,6 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import Responsive from 'react-responsive';
+import styled from 'styled-components';
+import { Cell } from 'styled-css-grid';
 
 interface CustomAdaptorProps {
     children?: any;
@@ -139,6 +141,12 @@ export const XL = ({ ...props }: FixedAdaptor) => (
 export const XXL = ({ ...props }: FixedAdaptor) => (
     <Responsive {...props} minWidth={StandardBreakpoints.xxl.min} />
 );
+
+export const CenteredCell = styled(Cell)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 /* =========================================== STANDARD END ========================================================= */
 
 export const Adaptor = {
@@ -146,8 +154,9 @@ export const Adaptor = {
     LegacyDesktop,
     LegacyTablet,
     LegacyPhone,
-    // Custom Breakpoint Creator
+    // Custom
     CustomAdaptor,
+    CenteredCell,
     // Standard Breakpoints
     XS,
     SM,
