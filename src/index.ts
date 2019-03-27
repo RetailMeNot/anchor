@@ -19,6 +19,7 @@ export {
     XXL,
     LegacyBreakpoints,
     StandardBreakpoints,
+    CenteredCell
 } from './Grid';
 export { Icon } from './Icon';
 export { Page, Footer, Header } from './Layout';
