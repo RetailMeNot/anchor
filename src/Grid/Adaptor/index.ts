@@ -1,4 +1,3 @@
-export { Grid, Cell } from './Grid';
 export {
     Adaptor,
     LegacyDesktop,
@@ -14,4 +13,4 @@ export {
     LegacyBreakpoints,
     StandardBreakpoints,
     CenteredCell,
-} from './Adaptor';
+} from './Adaptor.component';

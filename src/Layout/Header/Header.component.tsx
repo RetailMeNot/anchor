@@ -7,7 +7,13 @@ import classNames from 'classnames';
 import { colors } from '../../theme';
 // COMPONENTS
 import { Menu, Item } from '../../Menu';
-import { Container, Flex, Box } from '../../Grid';
+import {
+    Grid,
+    Cell,
+    CustomAdaptor,
+    StandardBreakpoints,
+    CenteredCell,
+} from '../../Grid';
 import { DropDown } from '../../DropDown';
 import { Icon } from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
@@ -17,6 +23,22 @@ export const StyledHeaderElement = styled.header`
     background-color: ${colors.grapePurchase.base};
     margin: 0;
     color: ${colors.white.base};
+`;
+
+const SecondaryContainer = styled.div`
+    width: 100%;
+    background-color: ${colors.grapePurchase.dark};
+    > * {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+`;
+const MainContainer = styled.div`
+    width: 100%;
+    > * {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
 `;
 
 interface HeaderProps {
@@ -77,155 +99,95 @@ const SmallLogo = () => (
 );
 /* tslint:enable */
 
-interface HeaderState {
-    breakpoint: string;
-}
+const MobileMenu = () => (
+    <Grid alignContent="center" height="3rem" columns="3rem 1fr 3rem 3rem">
+        <CenteredCell>
+            <SmallLogo />
+        </CenteredCell>
+        <CenteredCell>
+            <AutoComplete
+                prefix={<Icon type="search" />}
+                placeholder="Stores, brands, categories, etc…"
+                dataSource={[1, 2, 3, 4, 5]}
+            />
+        </CenteredCell>
+        <CenteredCell>
+            <Avatar />
+        </CenteredCell>
+        <CenteredCell>
+            <Icon type="hamburger" color="white" />
+        </CenteredCell>
+    </Grid>
+);
 
-export class Header extends React.Component<HeaderProps> {
-    readonly state: HeaderState = {
-        breakpoint: 'small',
-    };
+const DesktopMenu = () => (
+    <Grid
+        height="80px"
+        alignContent="center"
+        justifyContent="center"
+        columns="12.5rem 1fr 16.875rem"
+    >
+        <CenteredCell>
+            <LargeLogo />
+        </CenteredCell>
+        <CenteredCell>
+            <AutoComplete
+                size="large"
+                prefix={<Icon type="search" />}
+                placeholder="Stores, brands, categories, etc…"
+                dataSource={[1, 2, 3, 4, 5]}
+            />
+        </CenteredCell>
+        <Cell>
+            <Menu justify="flex-end">
+                <DropDown overlay={<div>1</div>}>
+                    <Item path="/">
+                        Categories &nbsp;
+                        <Icon type="chevron-down" color="white" />
+                    </Item>
+                </DropDown>
+                <DropDown overlay={<div>1</div>}>
+                    <Item path="/">
+                        Stores &nbsp;
+                        <Icon type="chevron-down" color="white" />
+                    </Item>
+                </DropDown>
+                <DropDown overlay={<div>1</div>}>
+                    <Item path="/">
+                        More &nbsp;
+                        <Icon type="chevron-down" color="white" />
+                    </Item>
+                </DropDown>
+            </Menu>
+        </Cell>
+    </Grid>
+);
 
-    public render(): React.ReactElement<Header> {
-        const { className, disableSearch, ...props } = this.props;
-        const { breakpoint } = this.state;
-        const isDesktop =
-            breakpoint !== 'xsmall' &&
-            breakpoint !== 'small' &&
-            breakpoint !== 'medium';
-
-        return (
-            <StyledHeaderElement className={classNames(className)} {...props}>
-                {isDesktop && (
-                    <Menu
-                        className="secondary-navigation"
-                        size="small"
-                        bg={colors.grapePurchase.dark}
-                        justify="flex-end"
-                    >
-                        <Item path="/">Rx Saver</Item>
-                        <Item path="/">Genie</Item>
-                        <Item path="/">Everyday</Item>
-                        <Item path="/">Get The App</Item>
-                        <Item path="/">Blog</Item>
-                    </Menu>
-                )}
-                {isDesktop
-                    ? this.renderDesktopMenu(disableSearch)
-                    : this.renderMobileMenu(disableSearch)}
-            </StyledHeaderElement>
-        );
-    }
-    private renderDesktopMenu(
-        disableSearch?: boolean
-    ): React.ReactElement<any> {
-        const { primary } = this.props;
-        return (
-            <Container
-                whenBreakpoint={(breakpoint: string) =>
-                    this.updateBreakpoint(breakpoint)
-                }
-            >
-                <Flex alignItems="center" py={4}>
-                    <Box width={1 / 6}>
-                        <Flex justifyContent="center">
-                            <LargeLogo />
-                        </Flex>
-                    </Box>
-                    <Box width={5 / 12} px={2}>
-                        {!disableSearch && (
-                            <AutoComplete
-                                size="large"
-                                prefix={<Icon type="search" />}
-                                placeholder="Stores, brands, categories, etc…"
-                                dataSource={[1, 2, 3, 4, 5]}
-                            />
-                        )}
-                    </Box>
-                    <Box width={5 / 12}>
-                        {primary ? (
-                            primary
-                        ) : (
-                            <Menu>
-                                <DropDown overlay={<div>1</div>}>
-                                    <Item path="/">
-                                        Categories &nbsp;
-                                        <Icon
-                                            type="chevron-down"
-                                            color="white"
-                                        />
-                                    </Item>
-                                </DropDown>
-                                <DropDown overlay={<div>1</div>}>
-                                    <Item path="/">
-                                        Stores &nbsp;
-                                        <Icon
-                                            type="chevron-down"
-                                            color="white"
-                                        />
-                                    </Item>
-                                </DropDown>
-                                <DropDown overlay={<div>1</div>}>
-                                    <Item path="/">
-                                        More &nbsp;
-                                        <Icon
-                                            type="chevron-down"
-                                            color="white"
-                                        />
-                                    </Item>
-                                </DropDown>
-                            </Menu>
-                        )}
-                    </Box>
-                </Flex>
-            </Container>
-        );
-    }
-
-    private renderMobileMenu(disableSearch?: boolean): React.ReactElement<any> {
-        return (
-            <Container
-                whenBreakpoint={(breakpoint: string) =>
-                    this.updateBreakpoint(breakpoint)
-                }
-            >
-                <Flex alignItems="center" py={2}>
-                    <Box width={1 / 6}>
-                        <Flex justifyContent="center">
-                            <SmallLogo />
-                        </Flex>
-                    </Box>
-                    <Box flex={1} width={3 / 6}>
-                        {!disableSearch && (
-                            <AutoComplete
-                                prefix={<Icon type="search" />}
-                                placeholder="Stores, brands, categories, etc…"
-                                dataSource={[1, 2, 3, 4, 5]}
-                            />
-                        )}
-                    </Box>
-                    <Box flex="0 0 120px" width={2 / 6}>
-                        <Flex justifyContent="flex-end" alignItems="center">
-                            <Box width={1 / 2}>
-                                <Flex justifyContent="center">
-                                    <Avatar />
-                                </Flex>
-                            </Box>
-                            <Box width={1 / 2}>
-                                <Flex justifyContent="center">
-                                    <Icon type="hamburger" color="white" />
-                                </Flex>
-                            </Box>
-                        </Flex>
-                    </Box>
-                </Flex>
-            </Container>
-        );
-    }
-
-    private updateBreakpoint(breakpoint: string): void {
-        this.setState({ ...this.state, breakpoint });
-    }
-}
+export const Header = ({ className, ...props }: HeaderProps) => (
+    <StyledHeaderElement className={classNames(className)} {...props}>
+        <CustomAdaptor maxWidth={StandardBreakpoints.md.max}>
+            <MobileMenu />
+        </CustomAdaptor>
+        <CustomAdaptor minWidth={StandardBreakpoints.lg.min}>
+            <SecondaryContainer>
+                <Menu
+                    className="secondary-navigation"
+                    size="small"
+                    bg={colors.grapePurchase.dark}
+                    justify="flex-end"
+                >
+                    <Item path="/">Rx Saver</Item>
+                    <Item path="/">Genie</Item>
+                    <Item path="/">Everyday</Item>
+                    <Item path="/">Get The App</Item>
+                    <Item path="/">Blog</Item>
+                </Menu>
+            </SecondaryContainer>
+            <MainContainer>
+                <DesktopMenu />
+            </MainContainer>
+        </CustomAdaptor>
+    </StyledHeaderElement>
+);
 
 export default Header;

@@ -44,7 +44,8 @@ interface IconProps {
 export const StyledIcon = styled.div`
     display: inline-flex;
     max-width: 1.5rem;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
 
     > svg {
         flex: 0 0 1.25rem;

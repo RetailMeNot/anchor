@@ -3,7 +3,24 @@ export { AutoComplete } from './AutoComplete';
 export { Button } from './Button/Button.component';
 export { Badge } from './Badge';
 export { DropDown } from './DropDown';
-export { Container, Flex, Box } from './Grid';
+export {
+    Grid,
+    Cell,
+    Adaptor,
+    LegacyDesktop,
+    LegacyTablet,
+    LegacyPhone,
+    CustomAdaptor,
+    XS,
+    SM,
+    MD,
+    LG,
+    XL,
+    XXL,
+    LegacyBreakpoints,
+    StandardBreakpoints,
+    CenteredCell
+} from './Grid';
 export { Icon } from './Icon';
 export { Page, Footer, Header } from './Layout';
 export { List, Item as ListItem } from './List';
