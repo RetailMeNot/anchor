@@ -25,7 +25,8 @@ const StyledCard = styled.div`
     box-sizing: border-box;
     position: relative;
     display: block;
-    padding: ${({ gutter = 'medium' }: CardContentProps) => gutterSizes[gutter]};
+    padding: ${({ gutter = 'medium' }: CardContentProps) =>
+        gutterSizes[gutter]};
     font-family: ${fonts.fontFamily};
 `;
 

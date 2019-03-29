@@ -44,8 +44,8 @@ const StyledDropDown = styled.div`
     min-width: 1rem;
     /* Position from Reference */
     .down-down-container {
-        top: ${(props: any) => `${get(props, 'forwardedRef.current.clientHeight', 16)}px`
-    }
+        top: ${(props: any) =>
+            `${get(props, 'forwardedRef.current.clientHeight', 16)}px`}
 `;
 
 interface DropDownContainerProps {
@@ -66,10 +66,14 @@ const StyledDropDownContainer = styled(DropDownContainer)`
     border-radius: ${variables.borderRadius};
     border: thin solid ${colors.silver.dark};
     /* Defined Position */
-    top: ${({ position: { top } = {} }: DropDownContainerProps) => top ? `${top}px !important` : 'inherit'};
-    left: ${({ position: { left } = {} }: DropDownContainerProps) => left ? `${left}px !important` : '0'};
-    right: ${({ position: { right } = {} }: DropDownContainerProps) => right ? `${right}px !important` : 'inherit'};
-    bottom: ${({ position: { bottom } = {} }: DropDownContainerProps) => bottom ? `${bottom}px !important` : 'inherit'};
+    top: ${({ position: { top } = {} }: DropDownContainerProps) =>
+        top ? `${top}px !important` : 'inherit'};
+    left: ${({ position: { left } = {} }: DropDownContainerProps) =>
+        left ? `${left}px !important` : '0'};
+    right: ${({ position: { right } = {} }: DropDownContainerProps) =>
+        right ? `${right}px !important` : 'inherit'};
+    bottom: ${({ position: { bottom } = {} }: DropDownContainerProps) =>
+        bottom ? `${bottom}px !important` : 'inherit'};
 `;
 
 const ArrowUp = styled.div`

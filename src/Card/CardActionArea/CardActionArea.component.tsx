@@ -20,7 +20,8 @@ const StyledCardActionArea = styled.div`
     font-family: ${fonts.fontFamily};
     width: 100%;
     border-top: solid thin ${colors.silver.dark};
-    background-color: ${({ backgroundColor = 'white' }: CardActionAreaProps) => backgroundColor};
+    background-color: ${({ backgroundColor = 'white' }: CardActionAreaProps) =>
+        backgroundColor};
 `;
 
 export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
@@ -28,7 +29,10 @@ export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
     children,
     ...props
 }: CardActionAreaProps): JSX.Element => (
-    <StyledCardActionArea className={classNames('card-action-area', className)} {...props}>
+    <StyledCardActionArea
+        className={classNames('card-action-area', className)}
+        {...props}
+    >
         {children}
     </StyledCardActionArea>
 );

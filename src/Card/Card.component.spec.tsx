@@ -26,11 +26,19 @@ describe('Component: Card', () => {
     it('should render the CardAction component when an action is provided', () => {
         const testAction = 'Test Action';
         const testSubject = <Card action={<p>{testAction}</p>} />;
-        expect(mount(testSubject).find('div.card-action').text()).toBe(testAction);
+        expect(
+            mount(testSubject)
+                .find('div.card-action')
+                .text()
+        ).toBe(testAction);
     });
     it('should render the CardActionArea component when one is provided', () => {
         const testAction = 'Test Action';
         const testSubject = <Card actionArea={<p>{testAction}</p>} />;
-        expect(mount(testSubject).find('div.card-action-area').text()).toBe(testAction);
+        expect(
+            mount(testSubject)
+                .find('div.card-action-area')
+                .text()
+        ).toBe(testAction);
     });
 });

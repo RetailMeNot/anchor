@@ -16,8 +16,11 @@ const StyledStory = styled.div`
 
 storiesOf('Components/Card/CardActionArea', module).add('Default', () => (
     <StyledStory>
-        <CardActionArea backgroundColor={color('Background Color', colors.silver.light)}>
-            The action area is a large section dedicated for card actions. You can specify a backgroundColor
+        <CardActionArea
+            backgroundColor={color('Background Color', colors.silver.light)}
+        >
+            The action area is a large section dedicated for card actions. You
+            can specify a backgroundColor
         </CardActionArea>
     </StyledStory>
 ));
