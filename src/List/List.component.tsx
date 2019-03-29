@@ -14,7 +14,7 @@ interface ListProps {
     hidden?: boolean;
 }
 
-export const StyledList = styled.div`
+const StyledList = styled.div`
     .title {
         margin: 0;
         padding: ${sizes.padding.md};

@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from 'styled-components';
-// COMPONENTS
 // THEME
 import { fonts } from '../../theme';
 
@@ -13,6 +12,7 @@ export interface CardActionProps {
 }
 
 const StyledCard = styled.div`
+    box-sizing: border-box;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ export const CardAction: React.FunctionComponent<CardActionProps> = ({
     children,
     ...props
 }: CardActionProps): JSX.Element => (
-    <StyledCard className={classNames(className)} {...props}>
+    <StyledCard className={classNames('card-action', className)} {...props}>
         {children}
     </StyledCard>
 );

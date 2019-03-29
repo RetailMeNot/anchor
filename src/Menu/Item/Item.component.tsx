@@ -20,7 +20,7 @@ export interface ItemProps {
     type?: any;
 }
 
-export const StyledItem = styled.a`
+const StyledItem = styled.a`
     cursor: pointer;
     text-align: center;
     color: ${colors.silver.dark};

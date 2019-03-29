@@ -33,7 +33,7 @@ interface InputState {
 
 const baseFontWeight = 500;
 
-export const StyledInput = styled.div`
+const StyledInput = styled.div`
     display: flex;
     flex-direction: column;
     font-family: ${fonts.fontFamily};

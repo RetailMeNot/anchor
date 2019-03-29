@@ -14,7 +14,11 @@ const StyledStory = styled.div`
 
 storiesOf('Components/Card/CardContent', module).add('Default', () => (
     <StyledStory>
-        <p>CardContent 1</p>
-        <CardContent>Children</CardContent>
+        <CardContent>
+            <p>
+                This is the container for card content. You can specify it's
+                padding via the <code>Card</code> component.
+            </p>
+        </CardContent>
     </StyledStory>
 ));

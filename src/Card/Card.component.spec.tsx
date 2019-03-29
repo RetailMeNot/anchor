@@ -7,23 +7,30 @@ import Card from './Card.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Card />;
-const wrapper = mount(subject);
+const testContent = 'Test';
+const subject = (
+    <Card>
+        <p>{testContent}</p>
+    </Card>
+);
 const component = shallow(subject);
 
 describe('Component: Card', () => {
-    it('should be defined', () => {
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
-
-        /* tslint:enable */
-        expect(subject).toBeDefined();
-        expect(wrapper).toBeDefined();
-        expect(component).toBeDefined();
+    it('should match its snapshot.', () => {
         const tree = renderer.create(subject).toJSON();
-
         expect(tree).toMatchSnapshot();
+    });
+    it('should render its contents', () => {
+        expect(component.find('p').text()).toBe(testContent);
+    });
+    it('should render the CardAction component when an action is provided', () => {
+        const testAction = 'Test Action';
+        const testSubject = <Card action={<p>{testAction}</p>} />;
+        expect(mount(testSubject).find('div.card-action').text()).toBe(testAction);
+    });
+    it('should render the CardActionArea component when one is provided', () => {
+        const testAction = 'Test Action';
+        const testSubject = <Card actionArea={<p>{testAction}</p>} />;
+        expect(mount(testSubject).find('div.card-action-area').text()).toBe(testAction);
     });
 });

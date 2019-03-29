@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Button should be defined 1`] = `
+exports[`Component: Button should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa fusqmr"
+  className="sc-bdVaJa hVMrQO"
 >
   <svg
     height="20px"

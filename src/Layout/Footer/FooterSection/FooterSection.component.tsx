@@ -11,7 +11,7 @@ const reset = css`
     padding: 0;
 `;
 
-export const StyledFooterSectionElement = styled.section`
+const StyledFooterSectionElement = styled.section`
     width: 110px;
     font-family: ${fonts.fontFamily};
     font-size: 0.75rem;

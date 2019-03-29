@@ -8,7 +8,7 @@ import classNames from 'classnames';
 // STYLES
 import { fonts, colors } from '../../../theme';
 
-export const StyledMobileCTAElement = styled.a`
+const StyledMobileCTAElement = styled.a`
     display: inline-flex;
     font-family: ${fonts.fontFamily};
     font-size: 0.875rem;

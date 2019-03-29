@@ -22,7 +22,7 @@ interface MenuProps {
     justify?: 'flex-start' | 'flex-end';
 }
 
-export const StyledMenu = styled.nav`
+const StyledMenu = styled.nav`
   margin: 0;
   padding: 0;
   display: flex;

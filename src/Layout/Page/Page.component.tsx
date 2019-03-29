@@ -9,7 +9,7 @@ import { colors, sizes } from '../../theme';
 import { Footer, Header } from '../';
 import { NormalizeCSS, GlobalCSS } from '../../theme/GlobalStyles';
 
-export const StyledPageElement = styled.section`
+const StyledPageElement = styled.section`
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -26,7 +26,7 @@ export const StyledPageElement = styled.section`
     }
 `;
 
-export const StyledBodyElement = styled.section`
+const StyledBodyElement = styled.section`
     flex: 1 0 auto;
     background-color: ${colors.silver.base};
     max-width: 100vw;

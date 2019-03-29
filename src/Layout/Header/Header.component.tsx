@@ -19,7 +19,7 @@ import { Icon } from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
-export const StyledHeaderElement = styled.header`
+const StyledHeaderElement = styled.header`
     background-color: ${colors.grapePurchase.base};
     margin: 0;
     color: ${colors.white.base};

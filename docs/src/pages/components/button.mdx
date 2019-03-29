@@ -8,18 +8,18 @@ rule, each page should have one primary button. Any remaining calls-to-action ar
 
 #### Primary Button
 ```tsx
-<Component initialState={{ size: 'lg' }}>
+<Component initialState={{ size: 'large' }}>
   {({ state, setState }) => 
     <div>
       <Button
         className="derp"
         size={state.size}
-        onClick={() => {setState({ size: 'sm' }); }}
+        onClick={() => {setState({ size: 'small' }); }}
       >
         Derp Herp
       </Button>
       <Button disabled={true}>Derp Herp</Button>
-      <Button size="sm">Derp Herp</Button>
+      <Button size="small">Derp Herp</Button>
     </div>
   }
 </Component>

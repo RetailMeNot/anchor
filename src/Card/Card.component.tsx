@@ -7,30 +7,26 @@ import styled from 'styled-components';
 import { CardActionArea } from './CardActionArea';
 import { CardAction } from './CardAction';
 import { CardContent } from './CardContent';
+// UTILS
+// import { get } from '../../utils/get/get';
 // THEME
 import { fonts, colors } from '../theme';
+
+export type Gutters = 'none' | 'small' | 'medium' | 'large';
 
 export interface CardProps {
     className?: string;
     children?: any;
     action?: any;
     actionArea?: any;
-    gutter?: 'none' | 'small' | 'medium' | 'large';
+    gutter?: Gutters;
 }
-
-const gutterSizes = {
-    none: '',
-    small: '0.75rem',
-    medium: '1rem',
-    large: '1.5rem',
-};
 
 const StyledCard = styled.div`
     position: relative;
-    display: inline-block;
+    width: 100%;
     font-family: ${fonts.fontFamily};
     box-sizing: border-box;
-    padding: ${({ gutter = 'medium' }: CardProps) => gutterSizes[gutter]};
     border-radius: 0.125rem;
     border: solid thin ${colors.silver.dark};
 `;
@@ -45,15 +41,16 @@ export const Card: React.FunctionComponent<CardProps> = ({
 }: CardProps): JSX.Element => (
     <StyledCard className={classNames('card', className)} {...props}>
         {action && <CardAction>{action}</CardAction>}
-        <CardContent children={children} />
-        {actionArea && <CardActionArea>{actionArea}</CardActionArea>}
+        <CardContent gutter={gutter} children={children} />
+        {React.Children.map(actionArea, (child: any) => {
+            if (child.type.name === 'ActionArea') {
+                return actionArea;
+            } else {
+                return <CardActionArea>{actionArea}</CardActionArea>;
+            }
+        })}
     </StyledCard>
 );
 
 export default Card;
 
-/*
-Gutter
-Padding
-Actions
-*/

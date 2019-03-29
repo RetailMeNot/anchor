@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CardAction should be defined 1`] = `
+<div
+  className="card-action sc-bdVaJa ObPko"
+/>
+`;

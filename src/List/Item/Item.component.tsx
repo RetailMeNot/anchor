@@ -12,7 +12,7 @@ export interface ItemProps {
     className?: string;
 }
 
-export const StyledItem = styled.a`
+const StyledItem = styled.a`
     display: flex;
     border-radius: ${variables.borderRadius};
     padding: ${sizes.padding.sm} ${sizes.padding.md};

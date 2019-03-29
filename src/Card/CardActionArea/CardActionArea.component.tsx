@@ -5,17 +5,22 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
 // THEME
-import { fonts } from '../../theme';
+import { fonts, colors } from '../../theme';
 
 export interface CardActionAreaProps {
     className?: string;
     children?: any;
+    backgroundColor?: string;
 }
 
-const StyledCard = styled.div`
+const StyledCardActionArea = styled.div`
+    box-sizing: border-box;
     position: relative;
     display: inline-block;
     font-family: ${fonts.fontFamily};
+    width: 100%;
+    border-top: solid thin ${colors.silver.dark};
+    background-color: ${({ backgroundColor = 'white' }: CardActionAreaProps) => backgroundColor};
 `;
 
 export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
@@ -23,10 +28,9 @@ export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
     children,
     ...props
 }: CardActionAreaProps): JSX.Element => (
-    <StyledCard className={classNames(className)} {...props}>
+    <StyledCardActionArea className={classNames('card-action-area', className)} {...props}>
         {children}
-        CardActionArea!
-    </StyledCard>
+    </StyledCardActionArea>
 );
 
 export default CardActionArea;

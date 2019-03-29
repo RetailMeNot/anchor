@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // STYLES
 // import { sizes, colors } from '../../theme';
 
-export const StyledSiderElement = styled.footer``;
+const StyledSiderElement = styled.footer``;
 
 interface SiderProps {
     className?: string;
