@@ -125,11 +125,11 @@ const DesktopMenu = () => (
         height="80px"
         alignContent="center"
         justifyContent="center"
-        columns="12.5rem 1fr 16.875rem"
+        columns="13.75rem 1fr 16.875rem"
     >
-        <CenteredCell>
+        <Cell middle={true}>
             <LargeLogo />
-        </CenteredCell>
+        </Cell>
         <CenteredCell>
             <AutoComplete
                 size="large"

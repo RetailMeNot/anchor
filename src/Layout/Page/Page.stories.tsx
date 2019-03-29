@@ -6,8 +6,7 @@ import styled from 'styled-components';
 // COMPONENT
 import { Page } from './Page.component';
 
-const StyledStory = styled.div`
-`;
+const StyledStory = styled.div``;
 
 storiesOf('Components/Layout/Page', module).add('default', () => (
     <StyledStory>

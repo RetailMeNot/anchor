@@ -13,11 +13,11 @@ interface AvatarProps {
     className?: string;
     // Configuration
     label?: string;
-    src?: string | React.ReactElement<any> | React.SFC;
+    src?: string | React.ReactElement<any> | React.FunctionComponent;
 }
 
 /* tslint:disable max-line-length */
-const DefaultAvatar: React.SFC = () => (
+const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
     <svg
         width="36px"
         height="36px"
@@ -43,7 +43,7 @@ const DefaultAvatar: React.SFC = () => (
 );
 /* tslint:enable max-line-length */
 
-export const StyledAvatar = styled.div`
+const StyledAvatar = styled.div`
     border: solid 0.1875rem ${rgba(colors.white.base, 0.4)};
     display: flex;
     justify-content: center;
@@ -52,27 +52,27 @@ export const StyledAvatar = styled.div`
     width: 2rem;
     border-radius: 50%;
 
-    .inner-border {
-        flex: 0 0 1.625rem;
-        width: 1.625rem;
-        height: 1.625rem;
-        font-family: ${fonts.fontFamily};
-        font-size: 0.75rem;
-        background-color: ${colors.silver.base};
-        color: ${colors.charcoal.light};
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-
     svg {
         justify-self: baseline;
         height: 1.5rem;
         margin-bottom: -0.375rem;
     }
+`;
+
+const InnerBorder = styled.div`
+    flex: 0 0 1.625rem;
+    width: 1.625rem;
+    height: 1.625rem;
+    font-family: ${fonts.fontFamily};
+    font-size: 0.75rem;
+    background-color: ${colors.silver.base};
+    color: ${colors.charcoal.light};
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
 `;
 
 const DefaultProps: AvatarProps = {};
@@ -84,10 +84,10 @@ export const Avatar = ({
     ...props
 }: AvatarProps = DefaultProps): React.ReactElement<any> => (
     <StyledAvatar className={classNames(className)} {...props}>
-        <div className="inner-border">
+        <InnerBorder>
             {/* TODO: handle image src */}
             {label ? label.substr(0, 2).toUpperCase() : <DefaultAvatar />}
-        </div>
+        </InnerBorder>
     </StyledAvatar>
 );
 

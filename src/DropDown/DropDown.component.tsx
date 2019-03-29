@@ -6,9 +6,15 @@ import styled from 'styled-components';
 import { fromEvent, Subscription } from 'rxjs';
 import { rgba } from 'polished';
 import { get } from '../../utils/get/get';
-// COMPONENTS
 // THEME
 import { colors, variables, fonts, sizes } from '../theme';
+
+interface DropDownPosition {
+    top?: number;
+    bottom?: number;
+    right?: number;
+    left?: number;
+}
 
 interface DropDownProps {
     overlay: React.ReactElement<any> | Array<React.ReactElement<any>>;
@@ -17,6 +23,7 @@ interface DropDownProps {
     children?: any;
     // Configuration
     ref?: any;
+    position?: DropDownPosition;
 }
 
 interface DropDownState {
@@ -25,7 +32,7 @@ interface DropDownState {
     width?: number;
 }
 
-export const StyledDropDown = styled.div`
+const StyledDropDown = styled.div`
     font-family: ${fonts.fontFamily};
     position: relative;
     cursor: pointer;
@@ -33,31 +40,47 @@ export const StyledDropDown = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-    .drop-down-container {
-        min-width: 10rem;
-        position: absolute;
-        left: 0;
-        top: ${(props: any) =>
-            `${get(props, 'forwardedRef.current.clientHeight', 16)}px`};
-        padding: ${sizes.padding.xs} 0;
-        z-index: 1;
-        background-color: ${colors.white.base};
-        box-shadow: 0 0.5rem 0.5rem 0 ${rgba(colors.charcoal.dark, 0.12)};
-        border-radius: ${variables.borderRadius};
-        border: 1px solid ${colors.silver.dark};
+    min-height: 1rem;
+    min-width: 1rem;
+    /* Position from Reference */
+    .down-down-container {
+        top: ${(props: any) => `${get(props, 'forwardedRef.current.clientHeight', 16)}px`
     }
+`;
 
-    .arrow-up {
-        position: absolute;
-        top: -0.4rem;
-        left: 1rem;
-        width: 0;
-        height: 0;
-        border-left: 0.75rem solid transparent;
-        border-right: 0.75rem solid transparent;
-        border-bottom: 0.5rem solid white;
-    }
+interface DropDownContainerProps {
+    hidden?: boolean;
+    children?: any;
+    className?: string;
+    position?: DropDownPosition;
+}
+const DropDownContainer = (props: DropDownContainerProps) => <div {...props} />;
+
+const StyledDropDownContainer = styled(DropDownContainer)`
+    min-width: 10rem;
+    position: absolute;
+    padding: ${sizes.padding.xs} 0;
+    z-index: 1;
+    background-color: ${colors.white.base};
+    box-shadow: 0 0.5rem 0.5rem 0 ${rgba(colors.charcoal.dark, 0.12)};
+    border-radius: ${variables.borderRadius};
+    border: thin solid ${colors.silver.dark};
+    /* Defined Position */
+    top: ${({ position: { top } = {} }: DropDownContainerProps) => top ? `${top}px !important` : 'inherit'};
+    left: ${({ position: { left } = {} }: DropDownContainerProps) => left ? `${left}px !important` : '0'};
+    right: ${({ position: { right } = {} }: DropDownContainerProps) => right ? `${right}px !important` : 'inherit'};
+    bottom: ${({ position: { bottom } = {} }: DropDownContainerProps) => bottom ? `${bottom}px !important` : 'inherit'};
+`;
+
+const ArrowUp = styled.div`
+    position: absolute;
+    top: -0.4rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.75rem solid transparent;
+    border-right: 0.75rem solid transparent;
+    border-bottom: 0.5rem solid white;
 `;
 
 export class DropDown extends React.Component<DropDownProps> {
@@ -147,7 +170,7 @@ export class DropDown extends React.Component<DropDownProps> {
     }
 
     render(): React.ReactElement<DropDown> {
-        const { children, className, overlay, ...props } = this.props;
+        const { children, className, overlay, position, ...props } = this.props;
         return (
             <StyledDropDown
                 ref={this.dropDownReference}
@@ -155,13 +178,14 @@ export class DropDown extends React.Component<DropDownProps> {
                 {...props}
             >
                 {children}
-                <div
+                <StyledDropDownContainer
+                    className="down-down-container"
+                    position={position}
                     hidden={this.state.isHidden}
-                    className={classNames('drop-down-container')}
                 >
-                    <div className="arrow-up" />
+                    <ArrowUp />
                     {overlay}
-                </div>
+                </StyledDropDownContainer>
             </StyledDropDown>
         );
     }
