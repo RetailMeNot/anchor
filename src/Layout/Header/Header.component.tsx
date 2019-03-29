@@ -19,7 +19,7 @@ import { Icon } from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
-export const StyledHeaderElement = styled.header`
+const StyledHeaderElement = styled.header`
     background-color: ${colors.grapePurchase.base};
     margin: 0;
     color: ${colors.white.base};
@@ -125,11 +125,11 @@ const DesktopMenu = () => (
         height="80px"
         alignContent="center"
         justifyContent="center"
-        columns="12.5rem 1fr 16.875rem"
+        columns="13.75rem 1fr 16.875rem"
     >
-        <CenteredCell>
+        <Cell middle={true}>
             <LargeLogo />
-        </CenteredCell>
+        </Cell>
         <CenteredCell>
             <AutoComplete
                 size="large"

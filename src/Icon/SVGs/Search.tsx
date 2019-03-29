@@ -26,7 +26,7 @@ export default ({ color = '#222222', width, height }: IconSVGProps) => (
             fill="none"
             fillRule="evenodd"
         >
-            <mask id="mask-2" fill="white">
+            <mask id="search-icon-mask" fill="white">
                 <use xlinkHref="#search-icon-path" />
             </mask>
             <use id="Fill-1" fill={color} xlinkHref="#search-icon-path" />

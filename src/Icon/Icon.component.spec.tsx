@@ -8,22 +8,24 @@ import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
 const subject = <Icon type="hamburger" />;
-const wrapper = mount(subject);
 const component = shallow(subject);
 
 describe('Component: Button', () => {
-    it('should be defined', () => {
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
-
-        /* tslint:enable */
-        expect(subject).toBeDefined();
-        expect(wrapper).toBeDefined();
-        expect(component).toBeDefined();
+    it('should match its snapshot', () => {
         const tree = renderer.create(subject).toJSON();
-
+        expect(component).toBeDefined();
         expect(tree).toMatchSnapshot();
+    });
+    it('should render a default icon', () => {
+        const testSubject = mount(<Icon />);
+        expect(testSubject.find('svg').exists()).toBeTruthy();
+    });
+    it('should render a default icon', () => {
+        const testSubject = mount(<Icon />);
+        expect(testSubject.find('svg').exists()).toBeTruthy();
+    });
+    it('should render a search icon', () => {
+        const testSubject = mount(<Icon type="search" />);
+        expect(testSubject.find('mask#search-icon-mask').exists()).toBeTruthy();
     });
 });

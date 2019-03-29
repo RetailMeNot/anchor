@@ -27,7 +27,7 @@ const MockList = () => (
 storiesOf('Components/DropDown', module).add('Default', () => (
     <StyledStory>
         <p>DropDown 1</p>
-        <DropDown overlay={<MockList />}>
+        <DropDown overlay={<MockList />} position={{ top: 35, left: 50 }}>
             <a>
                 DropDown Link <br /> big
             </a>

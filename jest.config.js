@@ -12,7 +12,7 @@ module.exports = {
     "/.storybook/",
   ],
   transform: {
-    "^.+\\.tsx?$": "ts-jest"
+    "^.+\\.tsx?$": "ts-jest",
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
   moduleFileExtensions: [
@@ -21,7 +21,7 @@ module.exports = {
     "js",
     "jsx",
     "json",
-    "node"
+    "node",
   ],
   snapshotSerializers: ["enzyme-to-json/serializer"],
   setupFilesAfterEnv: [
@@ -33,6 +33,7 @@ module.exports = {
     "/commonjs/",
     "/ts/",
     "/esm/",
+    "/src/Icon/SVGs",
   ],
   coverageReporters: [
     "json",

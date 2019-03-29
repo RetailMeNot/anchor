@@ -30,7 +30,7 @@ interface AutoCompleteState {
     isFocused: boolean;
 }
 
-export const StyledAutoComplete = styled.div`
+const StyledAutoComplete = styled.div`
     width: 100%;
     position: relative;
     border: solid 1px ${colors.ash.light};

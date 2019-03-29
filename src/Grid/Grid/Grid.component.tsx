@@ -29,7 +29,7 @@ interface GridProps {
     rowGap?: string;
     height?: string;
     minRowHeight?: string;
-    flow?: string;
+    flow?: 'column' | 'row';
     rows?: number | string;
     areas?: string[];
     justifyContent?: JustifyContent;
@@ -49,5 +49,9 @@ interface CellProps {
     children: any;
 }
 
-export const Grid = (props: GridProps) => <StyledGrid {...props} />;
-export const Cell = (props: CellProps) => <StyledCell {...props} />;
+export const Grid = (props: GridProps) => (
+    <StyledGrid className="grid" {...props} />
+);
+export const Cell = (props: CellProps) => (
+    <StyledCell className="cell" {...props} />
+);

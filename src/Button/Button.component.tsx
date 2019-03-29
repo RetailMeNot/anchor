@@ -15,7 +15,7 @@ interface ButtonProps {
 
     onClick?: () => void;
     variant?: 'primary' | 'secondary' | 'text';
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'small' | 'medium' | 'large';
 }
 
 interface ButtonStylesGroup {
@@ -42,8 +42,8 @@ const ButtonColorStyles: ButtonStylesGroup = {
         }
     `,
     text: css`
-        border: solid thin ${colors.white.base};
-        background-color: ${colors.white.base};
+        border: solid thin transparent;
+        background-color: transparent;
         color: ${colors.savvyCyan.base};
 
         &:hover {
@@ -53,21 +53,21 @@ const ButtonColorStyles: ButtonStylesGroup = {
 };
 
 const ButtonSizeStyles: ButtonStylesGroup = {
-    sm: css`
+    small: css`
         padding: ${sizes.padding.xs};
         font-size: ${fonts.baseFontSize * 0.75}px;
     `,
-    md: css`
+    medium: css`
         padding: ${sizes.padding.sm} ${sizes.padding.md};
         font-size: ${fonts.baseFontSize}px;
     `,
-    lg: css`
+    large: css`
         padding: ${sizes.padding.md};
         font-size: ${fonts.baseFontSize * 1.5}px;
     `,
 };
 
-export const StyledButton = styled.button`
+const StyledButton = styled.button`
 	position: relative;
 	min-width: 2rem;
 	border-radius: ${sizes.border.radius.base};
@@ -75,12 +75,13 @@ export const StyledButton = styled.button`
 	font-family: ${fonts.fontFamily};
 	text-align: center;
 	cursor: pointer;
-  margin-right: ${sizes.padding.md};
+    margin-right: ${sizes.padding.md};
+    outline: none !important;
 
 	transition: 500ms ease background-color,
 	            500ms ease border-color,
-              500ms ease color,
-              500ms ease fill;
+                500ms ease color,
+                500ms ease fill;
 
 	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
 	// Firefox.
@@ -91,7 +92,7 @@ export const StyledButton = styled.button`
   ${({ variant = 'primary' }: ButtonProps) => ButtonColorStyles[variant]}
 
   /* Sizes */
-  ${({ size = 'md' }: ButtonProps) => ButtonSizeStyles[size]}
+  ${({ size = 'medium' }: ButtonProps) => ButtonSizeStyles[size]}
 
   /* Disabled State */
   ${({ disabled }: ButtonProps) =>

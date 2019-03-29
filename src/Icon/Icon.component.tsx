@@ -13,6 +13,7 @@ import {
     Search,
     TagAdd,
     CheckCircle,
+    Ellipses,
 } from './SVGs';
 // THEME
 
@@ -24,6 +25,7 @@ type IconTypes =
     | 'cart'
     | 'search'
     | 'tag-add'
+    | 'ellipses'
     | 'check-circle';
 
 export interface IconSVGProps {
@@ -41,11 +43,14 @@ interface IconProps {
     height?: number;
 }
 
-export const StyledIcon = styled.div`
+const StyledIcon = styled.div`
     display: inline-flex;
-    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    z-index: 2;
 
     > svg {
         flex: 0 0 1.25rem;
@@ -66,6 +71,7 @@ const Icons = {
     search: Search,
     'tag-add': TagAdd,
     'check-circle': CheckCircle,
+    ellipses: Ellipses,
 };
 
 export const Icon = ({

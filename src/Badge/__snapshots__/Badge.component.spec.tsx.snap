@@ -2,10 +2,10 @@
 
 exports[`Component: Badge should be defined 1`] = `
 <div
-  className="sc-bdVaJa ghrHYp"
+  className="sc-bdVaJa jLNizq"
 >
   <div
-    className="badge"
+    className="sc-bwzfXH bRYyvz"
   />
 </div>
 `;

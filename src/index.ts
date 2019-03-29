@@ -19,7 +19,7 @@ export {
     XXL,
     LegacyBreakpoints,
     StandardBreakpoints,
-    CenteredCell
+    CenteredCell,
 } from './Grid';
 export { Icon } from './Icon';
 export { Page, Footer, Header } from './Layout';
@@ -33,3 +33,4 @@ export {
     GlobalCSS,
     NormalizeCSS,
 } from './theme';
+export { Card } from './Card';
