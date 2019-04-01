@@ -25,7 +25,7 @@ describe('Component: Button', () => {
         expect(testSubject.find('svg').exists()).toBeTruthy();
     });
     it('should render a search icon', () => {
-        const testSubject = mount(<Icon type="search" />);
-        expect(testSubject.find('mask#search-icon-mask').exists()).toBeTruthy();
+        const testSubject = mount(<Icon type="success" />);
+        expect(testSubject.find('path#icon-success').exists()).toBeTruthy();
     });
 });

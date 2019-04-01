@@ -6,8 +6,8 @@ import { IconSVGProps } from '../Icon.component';
 /* tslint:disable max-line-length */
 export default ({
     color = '#222222',
-    height = 10,
-    width = 6,
+    width = 16,
+    height = 16,
 }: IconSVGProps) => (
     <svg
         width={`${width}px`}
@@ -15,7 +15,7 @@ export default ({
         xmlns="http://www.w3.org/2000/svg"
     >
         <path
-            d="M3.478 5L.96 2.047A.77.77 0 0 1 .961.989L.975.974a.721.721 0 0 1 1.052.01L5.04 4.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L3.477 5z"
+            d="M1.925 7.125c0 2.868 2.332 5.2 5.2 5.2 2.868 0 5.2-2.332 5.2-5.2 0-2.868-2.332-5.2-5.2-5.2a5.205 5.205 0 0 0-5.2 5.2zm9.893 4.004l3.09 3.09a.488.488 0 0 1-.69.688l-3.054-3.12a6.136 6.136 0 0 1-4.04 1.513A6.175 6.175 0 1 1 13.3 7.125a6.135 6.135 0 0 1-1.482 4.004z"
             fill={color}
             fillRule="nonzero"
         />

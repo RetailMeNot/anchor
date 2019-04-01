@@ -7,7 +7,7 @@ import { IconSVGProps } from '../Icon.component';
 export default ({
     color = '#222222',
     width = 12,
-    height = 3,
+    height = 16,
 }: IconSVGProps) => (
     <svg
         width={`${width}px`}
@@ -17,13 +17,13 @@ export default ({
     >
         <defs>
             <path
-                d="M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                id="icon-ellipses"
+                d="M8 0C4.691 0 2 2.692 2 6c0 4.913 5.334 9.636 5.562 9.835a.664.664 0 0 0 .877 0C8.666 15.636 14 10.913 14 6c0-3.308-2.691-6-6-6m0 4c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2"
+                id="icon-marker"
             />
         </defs>
-        <g transform="translate(-2 -7)" fill="none" fillRule="evenodd">
+        <g transform="translate(-2)" fill="none" fillRule="evenodd">
             <path d="M0 0h16v16H0z" />
-            <use fill={color} xlinkHref="#icon-ellipses" />
+            <use fill={color} xlinkHref="#icon-marker" />
         </g>
     </svg>
 );
