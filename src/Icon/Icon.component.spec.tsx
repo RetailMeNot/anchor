@@ -24,7 +24,7 @@ describe('Component: Button', () => {
         const testSubject = mount(<Icon />);
         expect(testSubject.find('svg').exists()).toBeTruthy();
     });
-    it('should render a search icon', () => {
+    it('should render a success icon', () => {
         const testSubject = mount(<Icon type="success" />);
         expect(testSubject.find('path#icon-success').exists()).toBeTruthy();
     });
