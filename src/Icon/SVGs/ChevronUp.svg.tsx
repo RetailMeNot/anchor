@@ -6,19 +6,18 @@ import { IconSVGProps } from '../Icon.component';
 /* tslint:disable max-line-length */
 export default ({
     color = '#222222',
-    height = 8,
-    width = 16,
+    height = 6,
+    width = 10,
 }: IconSVGProps) => (
     <svg
-        transform="rotate(270)"
-        height={height}
-        width={width}
-        fill={color}
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 40 40"
+        width={`${width}px`}
+        height={`${height}px`}
+        xmlns="http://www.w3.org/2000/svg"
     >
-        <g>
-            <path d="m23.3 20l-13.1-13.6c-0.3-0.3-0.3-0.9 0-1.2l2.4-2.4c0.3-0.3 0.9-0.4 1.2-0.1l16 16.7c0.1 0.1 0.2 0.4 0.2 0.6s-0.1 0.5-0.2 0.6l-16 16.7c-0.3 0.3-0.9 0.3-1.2 0l-2.4-2.5c-0.3-0.3-0.3-0.9 0-1.2z" />
-        </g>
+        <path
+            d="M5 2.523L7.955 5.04a.77.77 0 0 0 1.058-.001l.014-.014a.721.721 0 0 0-.009-1.052L5.53.96A.767.767 0 0 0 4.481.952L.975 3.982a.719.719 0 0 0-.001 1.043l.015.015a.767.767 0 0 0 1.048.01L5 2.523z"
+            fill={color}
+            fillRule="nonzero"
+        />
     </svg>
 );

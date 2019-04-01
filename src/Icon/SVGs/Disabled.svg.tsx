@@ -6,8 +6,8 @@ import { IconSVGProps } from '../Icon.component';
 /* tslint:disable max-line-length */
 export default ({
     color = '#222222',
-    width = 12,
-    height = 3,
+    width = 14,
+    height = 14,
 }: IconSVGProps) => (
     <svg
         width={`${width}px`}
@@ -17,13 +17,13 @@ export default ({
     >
         <defs>
             <path
-                d="M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                id="icon-ellipses"
+                d="M8 13.667a5.633 5.633 0 0 1-3.503-1.222l7.948-7.948A5.633 5.633 0 0 1 13.667 8 5.674 5.674 0 0 1 8 13.667M2.333 8A5.674 5.674 0 0 1 8 2.333c1.322 0 2.537.459 3.503 1.222l-7.948 7.948A5.633 5.633 0 0 1 2.333 8M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1"
+                id="icon-disabled"
             />
         </defs>
-        <g transform="translate(-2 -7)" fill="none" fillRule="evenodd">
+        <g transform="translate(-1 -1)" fill="none" fillRule="evenodd">
             <path d="M0 0h16v16H0z" />
-            <use fill={color} xlinkHref="#icon-ellipses" />
+            <use fill={color} xlinkHref="#icon-disabled" />
         </g>
     </svg>
 );
