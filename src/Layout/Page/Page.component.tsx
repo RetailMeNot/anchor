@@ -6,7 +6,8 @@ import styled from 'styled-components';
 // STYLES
 import { colors, sizes } from '../../theme';
 // COMPONENTS
-import { Footer, Header } from '../';
+import Header from '../Header/Header.component';
+import Footer from '../Footer/Footer.component';
 import { NormalizeCSS, GlobalCSS } from '../../theme/GlobalStyles';
 
 const StyledPageElement = styled.section`

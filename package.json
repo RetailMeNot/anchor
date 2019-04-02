@@ -1,9 +1,9 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-alpha.13",
+  "version": "0.0.1-alpha.15",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
-  "module": "esm/index.es.js",
+  "module": "esm/index.js",
   "repository": "retailmenot/anchor.git",
   "bugs": {
     "url": "https://github.com/retailmenot/anchor"
@@ -102,7 +102,6 @@
     "rollup": "^0.67.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript": "^1.0.0",
     "storybook-addon-jsx": "^5.4.0",
     "styled-components": "^4.1.3",
