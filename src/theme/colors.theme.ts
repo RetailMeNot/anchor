@@ -21,6 +21,8 @@ export default {
     },
     white: {
         base: '#FFFFFF',
+        light: '#FFFFFF',
+        dark: '#FFFFFF',
     },
     grapePurchase: {
         base: '#602D6C',
@@ -64,8 +66,12 @@ export default {
     },
     error: {
         base: '#CC3B3B',
+        light: '#CC3B3B',
+        dark: '#CC3B3B',
     },
     success: {
         base: '#268068',
+        light: '#268068',
+        dark: '#268068',
     },
 };

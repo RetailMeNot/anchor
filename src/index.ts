@@ -25,6 +25,7 @@ export { Icon } from './Icon';
 export { Page, Footer, Header } from './Layout';
 export { List, Item as ListItem } from './List';
 export { Menu, Item as MenuItem } from './Menu';
+export { Typography } from './Typography';
 export {
     colors,
     fonts,

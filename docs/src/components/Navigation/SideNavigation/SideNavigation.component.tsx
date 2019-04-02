@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 // THEME
-import { colors, fonts, sizes } from '../../../../../src/theme';
+import { colors, sizes } from '../../../../../src/theme';
 
 export const StyledSideNavigationElement = styled.nav`
     min-width: 299px;
@@ -49,7 +49,7 @@ export const StyledSideNavigationElement = styled.nav`
                 text-decoration: none;
                 color: ${colors.charcoal.light};
 
-                font-size: ${fonts.paragraph.informational.fontSize};
+                font-size: 0.875rem;
 
                 transition: background-color 250ms;
 
@@ -118,7 +118,6 @@ const navLink = (
 );
 
 export const SideNavigation = ({
-    children,
     className,
 }: SideNavigationProps): React.ReactElement<any> => (
     <StyledSideNavigationElement className={classNames(className)}>
