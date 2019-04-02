@@ -54,9 +54,9 @@ const InnerBorder = styled.div`
     height: 1.625rem;
     font-family: ${fonts.fontFamily};
     font-size: 0.75rem;
-    background-color: ${colors.silver.base};
-    color: ${colors.charcoal.light};
     font-weight: bold;
+    color: ${colors.charcoal.light};
+    background-color: ${colors.silver.base};
     display: flex;
     justify-content: center;
     align-items: center;

@@ -33,7 +33,7 @@ const StyledMenu = styled.nav`
   //overflow-x: auto;
 
   background: ${({ bg = colors.grapePurchase.base }: MenuProps) => bg};
-  font-size: ${fonts.navigation.menu.fontSize};
+  font-size: 0.875rem;
   font-family: ${fonts.fontFamily};
   border-radius: ${variables.borderRadius};
 
@@ -85,9 +85,9 @@ const MenuSizes = {
     small: css`
         > * > a,
         > a {
-            font-size: ${fonts.navigation.menu.small.base.fontSize};
-            line-height: ${fonts.navigation.menu.small.base.fontSize};
-            font-weight: ${fonts.navigation.menu.small.base.fontWeight};
+            font-size: 0.75rem;
+            line-height: 0.75rem;
+            font-weight: 500;
             padding: 0.5rem 0.75rem;
         }
     `,
@@ -95,7 +95,7 @@ const MenuSizes = {
         > * > a,
         > a {
             border-radius: ${variables.borderRadius};
-            font-weight: ${fonts.navigation.menu.large.base.fontWeight};
+            font-weight: 600;
             padding: 1rem 0.75rem;
         }
     `,
