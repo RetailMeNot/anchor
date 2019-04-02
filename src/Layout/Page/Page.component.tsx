@@ -4,8 +4,16 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 // COMPONENTS
-import { NormalizeCSS } from '../../theme/GlobalStyles';
+import { NormalizeCSS, GlobalCSS } from '../../theme/GlobalStyles';
 import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor';
+
+// ------------------------------------------------------------------------------------------------------------------
+
+const DEFAULT_CONTENT_WIDTH = '71.25rem';
+const DEFAULT_HEADER_HEIGHT = '7.5rem';
+const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
+
+// ------------------------------------------------------------------------------------------------------------------
 
 const StyledPageElement = styled.section`
     display: flex;
@@ -24,13 +32,12 @@ const StyledPageElement = styled.section`
     }
 `;
 
-// const StyledBodyElement = styled.section`
-//     flex: 1 0 auto;
-//     background-color: ${colors.silver.base};
-//     max-width: 100vw;
-//     align-self: stretch;
-//     padding: ${sizes.padding.lg} ${sizes.padding.xl};
-// `;
+const FixedContent = styled.section<FixedContentProps>`
+    max-width: ${props => props.contentWidth || DEFAULT_CONTENT_WIDTH };
+    margin:0 auto;
+`;
+
+// ------------------------------------------------------------------------------------------------------------------
 
 interface PageProps {
     layout?: string;
@@ -38,19 +45,35 @@ interface PageProps {
     footer?: any;
     sidebarWidth?: string | number;
     headerHeight?: string | number;
+    contentWidth?: string | number;
     className?: string;
     children?: any;
 }
-
-// ------------------------------------------------------------------------------------------------------------------
 
 interface DefaultLayoutProps {
     header?: any;
     footer?: any;
     headerHeight?: string | number;
+    contentWidth?: string | number;
     className?: string;
     children?: any;
 }
+
+interface SidebarLayoutProps {
+    header?: any;
+    footer?: any;
+    sidebarWidth?: string | number;
+    headerHeight?: string | number;
+    contentWidth?: string | number;
+    className?: string;
+    children?: any;
+}
+
+interface FixedContentProps {
+    contentWidth?: string | number;
+}
+
+// ------------------------------------------------------------------------------------------------------------------
 
 const DefaultLayout = (props: DefaultLayoutProps): React.ReactElement<any> => (
     <div>
@@ -60,41 +83,36 @@ const DefaultLayout = (props: DefaultLayoutProps): React.ReactElement<any> => (
     </div>
 );
 
-// ------------------------------------------------------------------------------------------------------------------
-
-interface SidebarLayoutProps {
-    header?: any;
-    footer?: any;
-    sidebarWidth?: string | number;
-    headerHeight?: string | number;
-    className?: string;
-    children?: any;
-}
-
 const SidebarLayout = (props: SidebarLayoutProps): React.ReactElement<any> => (
     <Grid
-        columns={props.sidebarWidth ? `${props.sidebarWidth} 1fr` : "13.75rem 1fr"}
-        rows={props.headerHeight ? `minmax(${props.headerHeight},auto) 1fr` : "minmax(7.5rem,auto) 1fr"}
+        columns={1}
+        rows={`minmax(${props.headerHeight || DEFAULT_HEADER_HEIGHT},auto) 1fr`}
         height={"100vh"}
     >
 
         {props.header &&
-            <Cell width={2}>
+            <Cell>
                 {props.header}
             </Cell>
         }
 
-        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-            <Cell width={2}>{props.children}</Cell>
-        </CustomAdaptor>
+        <Cell>
+            <FixedContent contentWidth={props.contentWidth}>
+                <Grid columns={`${props.sidebarWidth || DEFAULT_SIDEBAR_WIDTH} 1fr`}>
+                    <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
+                        <Cell width={2}>{props.children}</Cell>
+                    </CustomAdaptor>
 
-        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-            <Cell>Menu</Cell>
-            <Cell>{props.children}</Cell>
-        </CustomAdaptor>
+                    <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
+                        <Cell>Menu</Cell>
+                        <Cell>{props.children}</Cell>
+                    </CustomAdaptor>
+                </Grid>
+            </FixedContent>
+        </Cell>
 
         {props.footer &&
-            <Cell width={2}>
+            <Cell>
                 {props.footer}
             </Cell>
         }
@@ -106,6 +124,7 @@ const SidebarLayout = (props: SidebarLayoutProps): React.ReactElement<any> => (
 export const Page = (props: PageProps): React.ReactElement<any> => (
     <StyledPageElement>
         <NormalizeCSS />
+        <GlobalCSS />
 
         {(() => {
             switch (props.layout) {

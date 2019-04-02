@@ -36,7 +36,7 @@ export const GlobalCSS = createGlobalStyle`
     overflow-y: hidden;
     overflow-x: hidden;
     height: 100vh;
-    background-color: #710a32;
+    background-color: #fff;
   }
   ${typography}
 `;

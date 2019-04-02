@@ -18,6 +18,7 @@ storiesOf('Components/Layout/Page', module).add('default', () => (
             headerHeight="50px"
             header={<Header />}
             footer={<Footer />}
+            contentWidth={'200px'}
         >
             <h1>Hello!</h1>
         </Page>
