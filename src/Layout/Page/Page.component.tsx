@@ -7,131 +7,155 @@ import { Grid, Cell } from 'styled-css-grid';
 import { NormalizeCSS, GlobalCSS } from '../../theme/GlobalStyles';
 import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor';
 
+// Constants
 // ------------------------------------------------------------------------------------------------------------------
-
-const DEFAULT_CONTENT_WIDTH = '71.25rem';
+export const DEFAULT_LAYOUT_WIDTH = '71.25rem';
+export const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
 const DEFAULT_HEADER_HEIGHT = '7.5rem';
-const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
+const DEFAULT_FOOTER_HEIGHT = '20.375rem';
+const RIGHT = 'right';
 
+// Defaults
 // ------------------------------------------------------------------------------------------------------------------
+const PageDefaultProps = {
+  headerHeight: DEFAULT_HEADER_HEIGHT,
+  footerHeight: DEFAULT_FOOTER_HEIGHT,
+};
 
-const StyledPageElement = styled.section`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    max-width: 100vw;
+const DefaultLayoutDefaultProps = {
+  layoutWidth: DEFAULT_LAYOUT_WIDTH,
+};
 
-    header {
-        flex: 0 0 auto;
-        max-width: 100vw;
-    }
+const SidebarLayoutDefaultProps = {
+  sidebarWidth: DEFAULT_SIDEBAR_WIDTH,
+  layoutWidth: DEFAULT_LAYOUT_WIDTH,
+};
 
-    footer {
-        flex: 0 0 auto;
-        max-width: 100vw;
-    }
+// Types
+// ------------------------------------------------------------------------------------------------------------------
+type SidebarAlignment = 'left' | 'right';
+
+// Styled Components
+// ------------------------------------------------------------------------------------------------------------------
+const StyledPage = styled.section`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width:100%;
 `;
 
-const FixedContent = styled.section<FixedContentProps>`
-    max-width: ${props => props.contentWidth || DEFAULT_CONTENT_WIDTH };
-    margin:0 auto;
+const StyledLayout = styled.section<StyledLayoutProps>`
+  max-width: ${props => props.layoutWidth};
+  margin:0 auto;
 `;
 
+// Interfaces
 // ------------------------------------------------------------------------------------------------------------------
-
 interface PageProps {
-    layout?: string;
-    header?: any;
-    footer?: any;
-    sidebarWidth?: string | number;
-    headerHeight?: string | number;
-    contentWidth?: string | number;
-    className?: string;
-    children?: any;
+  /** The header of the website. This can be a component. */
+  header?: any;
+  /** The footer of the website. This can be a component. */
+  footer?: any;
+  /** The height of the header. It will not hide on overflow. */
+  headerHeight?: string | number;
+  /** The height of the footer. It will not hide on overflow. */
+  footerHeight?: string | number;
+  /** Additional classname. */
+  className?: string;
+  children?: any;
 }
 
 interface DefaultLayoutProps {
-    header?: any;
-    footer?: any;
-    headerHeight?: string | number;
-    contentWidth?: string | number;
-    className?: string;
-    children?: any;
+  /** The width of the layout, edge to edge. Content will be in the center of the screen. */
+  layoutWidth?: string | number;
+  className?: string;
+  children?: any;
 }
 
 interface SidebarLayoutProps {
-    header?: any;
-    footer?: any;
-    sidebarWidth?: string | number;
-    headerHeight?: string | number;
-    contentWidth?: string | number;
-    className?: string;
-    children?: any;
+  /** The width of the area for the sidebar. */
+  sidebarWidth?: string | number;
+  /** If the sidebar is on the left or the right of the layout */
+  sidebarAlign?: SidebarAlignment;
+  /** The width of the layout, edge to edge. Content will be in the center of the screen. */
+  layoutWidth?: string | number;
+  /** The actual sidebar. This can be a component. */
+  sidebar?: any;
+  className?: string;
+  children?: any;
 }
 
-interface FixedContentProps {
-    contentWidth?: string | number;
+interface StyledLayoutProps {
+  layoutWidth?: string | number;
 }
 
+// Components
 // ------------------------------------------------------------------------------------------------------------------
-
-const DefaultLayout = (props: DefaultLayoutProps): React.ReactElement<any> => (
-    <div>
-        {props.header && props.header}
-        {props.children}
-        {props.footer && props.footer}
-    </div>
-);
-
-const SidebarLayout = (props: SidebarLayoutProps): React.ReactElement<any> => (
-    <Grid
-        columns={1}
-        rows={`minmax(${props.headerHeight || DEFAULT_HEADER_HEIGHT},auto) 1fr`}
-        height={"100vh"}
-    >
-
-        {props.header &&
-            <Cell>
-                {props.header}
-            </Cell>
-        }
-
-        <Cell>
-            <FixedContent contentWidth={props.contentWidth}>
-                <Grid columns={`${props.sidebarWidth || DEFAULT_SIDEBAR_WIDTH} 1fr`}>
-                    <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-                        <Cell width={2}>{props.children}</Cell>
-                    </CustomAdaptor>
-
-                    <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-                        <Cell>Menu</Cell>
-                        <Cell>{props.children}</Cell>
-                    </CustomAdaptor>
-                </Grid>
-            </FixedContent>
-        </Cell>
-
-        {props.footer &&
-            <Cell>
-                {props.footer}
-            </Cell>
-        }
-    </Grid>
-);
-
-// ------------------------------------------------------------------------------------------------------------------
-
 export const Page = (props: PageProps): React.ReactElement<any> => (
-    <StyledPageElement>
-        <NormalizeCSS />
-        <GlobalCSS />
+  <StyledPage>
+    <NormalizeCSS />
+    <GlobalCSS />
 
-        {(() => {
-            switch (props.layout) {
-                case 'sidebar': return <SidebarLayout {...props} />;
-                default: return <DefaultLayout {...props} />;
-            }
-        })()}
+    <Grid
+      columns={1}
+      rows={`minmax(${props.headerHeight},auto) 1fr minmax(${props.footerHeight},auto)`}
+      height={"100vh"}
+    >
+      {props.header &&
+        <Cell>
+          {props.header}
+        </Cell>
+      }
 
-    </StyledPageElement>
+      <Cell>
+        {props.children}
+      </Cell>
+
+      {props.footer &&
+        <Cell>
+          {props.footer}
+        </Cell>
+      }
+    </Grid>
+  </StyledPage>
 );
+
+Page.defaultProps = PageDefaultProps;
+
+export const DefaultLayout = (props: DefaultLayoutProps): React.ReactElement<any> => (
+  <StyledLayout {...props}>
+    {props.children}
+  </StyledLayout>
+);
+
+DefaultLayout.defaultProps = DefaultLayoutDefaultProps;
+
+export const SidebarLayout = (props: SidebarLayoutProps): React.ReactElement<any> => (
+  <StyledLayout {...props}>
+    {props.sidebarAlign === RIGHT ?
+      <Grid columns={`1fr ${props.sidebarWidth}`}>
+        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
+          <Cell width={2}>{props.children}</Cell>
+        </CustomAdaptor>
+
+        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
+          <Cell>{props.children}</Cell>
+          <Cell>{props.sidebar}</Cell>
+        </CustomAdaptor>
+      </Grid>
+      :
+      <Grid columns={`${props.sidebarWidth} 1fr `}>
+        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
+          <Cell width={2}>{props.children}</Cell>
+        </CustomAdaptor>
+
+        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
+          <Cell>{props.sidebar}</Cell>
+          <Cell>{props.children}</Cell>
+        </CustomAdaptor>
+      </Grid>
+    }
+  </StyledLayout>
+);
+
+SidebarLayout.defaultProps = SidebarLayoutDefaultProps;
