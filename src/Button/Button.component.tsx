@@ -55,15 +55,15 @@ const ButtonColorStyles: ButtonStylesGroup = {
 const ButtonSizeStyles: ButtonStylesGroup = {
     small: css`
         padding: ${sizes.padding.xs};
-        font-size: ${fonts.baseFontSize * 0.75}px;
+        font-size: 0.75rem;
     `,
     medium: css`
         padding: ${sizes.padding.sm} ${sizes.padding.md};
-        font-size: ${fonts.baseFontSize}px;
+        font-size: 1rem;
     `,
     large: css`
         padding: ${sizes.padding.md};
-        font-size: ${fonts.baseFontSize * 1.5}px;
+        font-size: 1.5rem;
     `,
 };
 
