@@ -56,7 +56,6 @@ const LargeLogo = () => (
         width="176px"
         height="34px"
         viewBox="0 0 176 34"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -75,7 +74,6 @@ const SmallLogo = () => (
         width="24px"
         height="24px"
         viewBox="0 0 24 24"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -125,7 +123,7 @@ const DesktopMenu = () => (
         height="80px"
         alignContent="center"
         justifyContent="center"
-        columns="13.75rem 1fr 16.875rem"
+        columns="13.75rem 1fr 21.875rem"
     >
         <Cell middle={true}>
             <LargeLogo />
