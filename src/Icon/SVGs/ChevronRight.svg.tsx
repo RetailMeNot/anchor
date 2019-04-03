@@ -7,17 +7,17 @@ import { IconSVGProps } from '../Icon.component';
 export default ({
     color = '#222222',
     height = 10,
-    width = 10,
+    width = 6,
 }: IconSVGProps) => (
     <svg
-        height={height}
-        width={width}
-        fill={color}
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 40 40"
+        width={`${width}px`}
+        height={`${height}px`}
+        xmlns="http://www.w3.org/2000/svg"
     >
-        <g>
-            <path d="m23.3 20l-13.1-13.6c-0.3-0.3-0.3-0.9 0-1.2l2.4-2.4c0.3-0.3 0.9-0.4 1.2-0.1l16 16.7c0.1 0.1 0.2 0.4 0.2 0.6s-0.1 0.5-0.2 0.6l-16 16.7c-0.3 0.3-0.9 0.3-1.2 0l-2.4-2.5c-0.3-0.3-0.3-0.9 0-1.2z" />
-        </g>
+        <path
+            d="M3.478 5L.96 2.047A.77.77 0 0 1 .961.989L.975.974a.721.721 0 0 1 1.052.01L5.04 4.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L3.477 5z"
+            fill={color}
+            fillRule="nonzero"
+        />
     </svg>
 );

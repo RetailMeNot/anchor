@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
 import { List, Item } from '../List';
-import { Icon } from '../Icon';
 // THEME
 import { fonts, colors } from '../theme';
 
@@ -22,8 +21,8 @@ interface AutoCompleteProps {
     // onBlur?: () => void;
     children?: any;
 
-    suffix?: React.ReactElement<Icon>; // TODO: consider buttons & other elements
-    prefix?: React.ReactElement<Icon>; // TODO: consider buttons & other elements
+    suffix?: React.ReactElement<any>; // TODO: consider buttons & other elements
+    prefix?: React.ReactElement<any>; // TODO: consider buttons & other elements
 }
 
 interface AutoCompleteState {
