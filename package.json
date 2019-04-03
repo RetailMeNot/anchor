@@ -123,7 +123,7 @@
     "styled-css-grid": "^1.2.1"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=8"
   },
   "husky": {
     "hooks": {
