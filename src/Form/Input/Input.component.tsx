@@ -158,7 +158,7 @@ export class Input extends React.Component<InputProps> {
         return (
             <StyledInput prefix={prefix} disabled={disabled}>
                 <div
-                    className={classNames('input', {
+                    className={classNames('anchor-input', {
                         ['error-border']: !isFocused && errorMessage,
                     })}
                 >

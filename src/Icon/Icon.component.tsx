@@ -437,7 +437,7 @@ export const Icon = ({
     height,
     ...props
 }: IconProps): React.ReactElement<any> => (
-    <StyledIcon className={classNames(className)} {...props}>
+    <StyledIcon className={classNames('icon', className)} {...props}>
         {Icons[type]({ color, width, height })}
     </StyledIcon>
 );

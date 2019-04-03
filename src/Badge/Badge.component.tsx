@@ -36,7 +36,10 @@ export const Badge = ({
     count,
     ...props
 }: BadgeProps): JSX.Element => (
-    <StyledBadgeContainer className={classNames(className)} {...props}>
+    <StyledBadgeContainer
+        className={classNames('anchor-badge', className)}
+        {...props}
+    >
         {children}
         <StyledBadge>{count}</StyledBadge>
     </StyledBadgeContainer>

@@ -178,7 +178,7 @@ export class DropDown extends React.Component<DropDownProps> {
         return (
             <StyledDropDown
                 ref={this.dropDownReference}
-                className={classNames(className)}
+                className={classNames('anchor-drop-down', className)}
                 {...props}
             >
                 {children}

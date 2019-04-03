@@ -162,7 +162,10 @@ const DesktopMenu = () => (
 );
 
 export const Header = ({ className, ...props }: HeaderProps) => (
-    <StyledHeaderElement className={classNames(className)} {...props}>
+    <StyledHeaderElement
+        className={classNames('anchor-header', className)}
+        {...props}
+    >
         <CustomAdaptor maxWidth={StandardBreakpoints.md.max}>
             <MobileMenu />
         </CustomAdaptor>

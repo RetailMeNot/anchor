@@ -110,7 +110,7 @@ export const Menu = ({
     children,
     ...props
 }: MenuProps = DefaultProps): React.ReactElement<any> => (
-    <StyledMenu className={classNames(className)} {...props}>
+    <StyledMenu className={classNames('anchor-menu', className)} {...props}>
         {/* TODO: React.cloneElement() to add props from parent to child? */}
         {/* TODO: Need to solve the container issue */}
         {children}

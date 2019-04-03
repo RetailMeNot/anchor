@@ -72,7 +72,7 @@ export const Avatar = ({
     label,
     ...props
 }: AvatarProps = DefaultProps): React.ReactElement<any> => (
-    <StyledAvatar className={classNames('avatar', className)} {...props}>
+    <StyledAvatar className={classNames('anchor-avatar', className)} {...props}>
         <InnerBorder className="avatar-container">
             {/* TODO: handle image src */}
             {label ? label.substr(0, 2).toUpperCase() : <DefaultAvatar />}

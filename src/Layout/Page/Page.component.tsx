@@ -131,7 +131,6 @@ export const Page = (props: PageProps): React.ReactElement<any> => (
     <StyledPage className={classnames('.anchor-page', props.className)}>
         <NormalizeCSS />
         <GlobalCSS />
-
         <Grid
             columns={1}
             rows={`minmax(${props.headerHeight},auto) 1fr minmax(${

@@ -2,7 +2,7 @@
 
 exports[`Component: Button should match its snapshot 1`] = `
 <div
-  className="sc-bdVaJa gtkMnz"
+  className="icon sc-bdVaJa gtkMnz"
 >
   <svg
     height="12px"

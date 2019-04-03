@@ -34,7 +34,7 @@ export const List: React.SFC<ListProps> = ({
     title,
     ...props
 }: ListProps = DefaultProps): React.ReactElement<any> => (
-    <StyledList className={classNames(className)} {...props}>
+    <StyledList className={classNames('anchor-list', className)} {...props}>
         {title && <p className="title">{title}</p>}
         {children}
     </StyledList>
