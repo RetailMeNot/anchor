@@ -2,7 +2,7 @@
 
 exports[`Component: Button should be defined 1`] = `
 <button
-  className="sc-bdVaJa iIpFkP"
+  className="anchor-button sc-bdVaJa iIpFkP"
 >
   Submit
 </button>

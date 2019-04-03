@@ -265,7 +265,7 @@ export const Typography = ({
 }: TypographyProps): JSX.Element =>
     React.createElement(StyledTypography(as), {
         children,
-        className: classNames('typography', className),
+        className: classNames('anchor-typography', className),
         ...props,
     });
 

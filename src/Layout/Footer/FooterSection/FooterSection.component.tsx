@@ -59,7 +59,7 @@ export const FooterSection = ({
     children,
     title,
 }: FooterSectionProps): React.ReactElement<any> => (
-    <StyledFooterSectionElement>
+    <StyledFooterSectionElement className="anchor-footer-section">
         {title && <h4>{title}</h4>}
         {children}
     </StyledFooterSectionElement>

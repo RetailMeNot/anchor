@@ -115,7 +115,10 @@ export class AutoComplete extends React.Component<AutoCompleteProps> {
         } = this.props;
 
         return (
-            <StyledAutoComplete className={classNames(className)} {...props}>
+            <StyledAutoComplete
+                className={classNames('anchor-auto-complete', className)}
+                {...props}
+            >
                 {prefix &&
                     React.cloneElement(prefix, {
                         className: 'auto-complete-prefix',

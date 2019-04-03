@@ -51,7 +51,10 @@ export const Item = ({
     active,
     ...props
 }: ItemProps = DefaultProps): React.ReactElement<any> => (
-    <StyledItem className={classNames(className, { active })} {...props}>
+    <StyledItem
+        className={classNames('anchor-menu-item', className, { active })}
+        {...props}
+    >
         {label ? label : children}
     </StyledItem>
 );

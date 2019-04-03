@@ -36,7 +36,10 @@ export const Item = ({
     children,
     ...props
 }: ItemProps = DefaultProps): React.ReactElement<any> => (
-    <StyledItem className={classNames(className)} {...props}>
+    <StyledItem
+        className={classNames('anchor-list-item', className)}
+        {...props}
+    >
         {children}
     </StyledItem>
 );

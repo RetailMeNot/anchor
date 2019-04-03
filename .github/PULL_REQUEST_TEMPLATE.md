@@ -2,6 +2,7 @@
 
 I have done **all** of the following:
 
+- [ ] Added a top level class to all my components `'.anchor-[COMPONENT NAME]'`.
 - [ ] Used [conventional commits](https://www.conventionalcommits.org) for all work.
 - [ ] Tested my solution on Mobile & Tablet.
 - [ ] Wrote [unit tests](https://jestjs.io/docs/en/getting-started) for states and all behavior (`npm test`) and passed coverage thresholds.
@@ -16,4 +17,4 @@ I have done **all** of the following:
 ---------
 **Outline your feature or bug-fix below**
 
-My code does...?
+My code does...

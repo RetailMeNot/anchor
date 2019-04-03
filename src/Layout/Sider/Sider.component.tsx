@@ -14,7 +14,7 @@ interface SiderProps {
 }
 
 export const Sider = ({ children }: SiderProps): React.ReactElement<any> => (
-    <StyledSiderElement>
+    <StyledSiderElement className="anchor-sider">
         <p>I'm a sider. Neat.</p>
         {children}
     </StyledSiderElement>

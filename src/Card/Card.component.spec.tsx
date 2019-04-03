@@ -28,7 +28,7 @@ describe('Component: Card', () => {
         const testSubject = <Card action={<p>{testAction}</p>} />;
         expect(
             mount(testSubject)
-                .find('div.card-action')
+                .find('div.anchor-card-action')
                 .text()
         ).toBe(testAction);
     });
@@ -37,7 +37,7 @@ describe('Component: Card', () => {
         const testSubject = <Card actionArea={<p>{testAction}</p>} />;
         expect(
             mount(testSubject)
-                .find('div.card-action-area')
+                .find('div.anchor-card-action-area')
                 .text()
         ).toBe(testAction);
     });
