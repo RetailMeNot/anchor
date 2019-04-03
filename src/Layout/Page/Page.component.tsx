@@ -9,9 +9,11 @@ import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
-export const DEFAULT_LAYOUT_WIDTH = '71.25rem';
+export const DEFAULT_LAYOUT_WIDTH = '100%';
+export const DEFAULT_CONTENT_WIDTH = '71.25rem';
 export const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
-const DEFAULT_HEADER_HEIGHT = '7.5rem';
+export const TRANSPARENT = 'transparent';
+const DEFAULT_HEADER_HEIGHT = '1.5rem';
 const DEFAULT_FOOTER_HEIGHT = '20.375rem';
 const RIGHT = 'right';
 
@@ -24,11 +26,17 @@ const PageDefaultProps = {
 
 const DefaultLayoutDefaultProps = {
   layoutWidth: DEFAULT_LAYOUT_WIDTH,
+  contentWidth: DEFAULT_CONTENT_WIDTH,
+  layoutBackgroundColor: TRANSPARENT,
+  contentBackgroundColor: TRANSPARENT,
 };
 
 const SidebarLayoutDefaultProps = {
   sidebarWidth: DEFAULT_SIDEBAR_WIDTH,
-  layoutWidth: DEFAULT_LAYOUT_WIDTH,
+  layoutWidth: DEFAULT_CONTENT_WIDTH,
+  contentWidth: DEFAULT_CONTENT_WIDTH,
+  layoutBackgroundColor: TRANSPARENT,
+  contentBackgroundColor: TRANSPARENT,
 };
 
 // Types
@@ -46,6 +54,13 @@ const StyledPage = styled.section`
 
 const StyledLayout = styled.section<StyledLayoutProps>`
   max-width: ${props => props.layoutWidth};
+  background-color:${props => props.layoutBackgroundColor};
+  margin:0 auto;
+`;
+
+const StyledContent = styled.div<StyledContentProps>`
+  max-width: ${props => props.contentWidth};
+  background-color:${props => props.contentBackgroundColor};
   margin:0 auto;
 `;
 
@@ -66,27 +81,47 @@ interface PageProps {
 }
 
 interface DefaultLayoutProps {
-  /** The width of the layout, edge to edge. Content will be in the center of the screen. */
+  /** The width of the layout, edge to edge. */
   layoutWidth?: string | number;
+  /** The width of the content within the layout. */
+  contentWidth?: string | number;
+  /** The background color of the layout. Default is transparent. */
+  layoutBackgroundColor?: string;
+  /** The background color of the content within the layout area. Default is transparent. */
+  contentBackgroundColor?: string;
+  /** Additional classname. */
   className?: string;
   children?: any;
 }
 
 interface SidebarLayoutProps {
+  /** The width of the layout, edge to edge. */
+  layoutWidth?: string | number;
+  /** The width of the content within the layout. */
+  contentWidth?: string | number;
   /** The width of the area for the sidebar. */
   sidebarWidth?: string | number;
   /** If the sidebar is on the left or the right of the layout */
   sidebarAlign?: SidebarAlignment;
-  /** The width of the layout, edge to edge. Content will be in the center of the screen. */
-  layoutWidth?: string | number;
   /** The actual sidebar. This can be a component. */
   sidebar?: any;
+  /** The background color of the layout. Default is transparent. */
+  layoutBackgroundColor?: string;
+  /** The background color of the content within the layout area. Default is transparent. */
+  contentBackgroundColor?: string;
+  /** Additional classname. */
   className?: string;
   children?: any;
 }
 
 interface StyledLayoutProps {
   layoutWidth?: string | number;
+  layoutBackgroundColor?: string;
+}
+
+interface StyledContentProps {
+  contentWidth?: string | number;
+  contentBackgroundColor?: string;
 }
 
 // Components
@@ -124,7 +159,9 @@ Page.defaultProps = PageDefaultProps;
 
 export const DefaultLayout = (props: DefaultLayoutProps): React.ReactElement<any> => (
   <StyledLayout {...props}>
-    {props.children}
+    <StyledContent {...props}>
+      {props.children}
+    </StyledContent>
   </StyledLayout>
 );
 
@@ -132,29 +169,31 @@ DefaultLayout.defaultProps = DefaultLayoutDefaultProps;
 
 export const SidebarLayout = (props: SidebarLayoutProps): React.ReactElement<any> => (
   <StyledLayout {...props}>
-    {props.sidebarAlign === RIGHT ?
-      <Grid columns={`1fr ${props.sidebarWidth}`}>
-        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-          <Cell width={2}>{props.children}</Cell>
-        </CustomAdaptor>
+    <StyledContent {...props}>
+      {props.sidebarAlign === RIGHT ?
+        <Grid columns={`1fr ${props.sidebarWidth}`}>
+          <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
+            <Cell width={2}>{props.children}</Cell>
+          </CustomAdaptor>
 
-        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-          <Cell>{props.children}</Cell>
-          <Cell>{props.sidebar}</Cell>
-        </CustomAdaptor>
-      </Grid>
-      :
-      <Grid columns={`${props.sidebarWidth} 1fr `}>
-        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-          <Cell width={2}>{props.children}</Cell>
-        </CustomAdaptor>
+          <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
+            <Cell>{props.children}</Cell>
+            <Cell>{props.sidebar}</Cell>
+          </CustomAdaptor>
+        </Grid>
+        :
+        <Grid columns={`${props.sidebarWidth} 1fr `}>
+          <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
+            <Cell width={2}>{props.children}</Cell>
+          </CustomAdaptor>
 
-        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-          <Cell>{props.sidebar}</Cell>
-          <Cell>{props.children}</Cell>
-        </CustomAdaptor>
-      </Grid>
-    }
+          <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
+            <Cell>{props.sidebar}</Cell>
+            <Cell>{props.children}</Cell>
+          </CustomAdaptor>
+        </Grid>
+      }
+    </StyledContent>
   </StyledLayout>
 );
 
