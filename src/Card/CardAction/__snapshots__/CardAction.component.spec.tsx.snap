@@ -2,6 +2,6 @@
 
 exports[`Component: CardAction should be defined 1`] = `
 <div
-  className="card-action sc-bdVaJa ObPko"
+  className="anchor-card-action sc-bdVaJa ObPko"
 />
 `;

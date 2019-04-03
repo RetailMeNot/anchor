@@ -41,7 +41,7 @@ interface PageProps {
 }
 
 export const Page = ({ children }: PageProps): React.ReactElement<any> => (
-    <StyledPageElement>
+    <StyledPageElement className="anchor-page">
         <NormalizeCSS />
         <GlobalCSS />
         <Header />

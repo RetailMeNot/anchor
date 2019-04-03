@@ -394,7 +394,7 @@ const MobileFooter = () => (
 );
 
 export const Footer = () => (
-    <StyledFooterElement>
+    <StyledFooterElement className="anchor-footer">
         <CustomAdaptor maxWidth={StandardBreakpoints.md.max}>
             <MobileFooter />
         </CustomAdaptor>

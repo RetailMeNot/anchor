@@ -39,7 +39,7 @@ export const Card: React.FunctionComponent<CardProps> = ({
     gutter,
     ...props
 }: CardProps): JSX.Element => (
-    <StyledCard className={classNames('card', className)} {...props}>
+    <StyledCard className={classNames('anchor-card', className)} {...props}>
         {action && <CardAction>{action}</CardAction>}
         <CardContent gutter={gutter} children={children} />
         {React.Children.map(actionArea, (child: any) => {

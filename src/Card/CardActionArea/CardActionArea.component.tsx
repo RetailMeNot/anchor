@@ -30,7 +30,7 @@ export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
     ...props
 }: CardActionAreaProps): JSX.Element => (
     <StyledCardActionArea
-        className={classNames('card-action-area', className)}
+        className={classNames('anchor-card-action-area', className)}
         {...props}
     >
         {children}

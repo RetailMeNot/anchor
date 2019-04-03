@@ -34,7 +34,7 @@ interface BreakpointSchema {
 }
 
 export const CustomAdaptor = ({ ...props }: CustomAdaptorProps) => (
-    <Responsive {...props} />
+    <Responsive className="anchor-adaptor" {...props} />
 );
 
 /* =========================================== LEGACY START ========================================================= */
@@ -58,17 +58,26 @@ export const LegacyBreakpoints: LegacyBreakpointsSchema = {
 };
 
 export const LegacyDesktop = ({ ...props }: FixedAdaptor) => (
-    <Responsive {...props} minWidth={LegacyBreakpoints.desktop.min} />
+    <Responsive
+        className="anchor-adaptor"
+        {...props}
+        minWidth={LegacyBreakpoints.desktop.min}
+    />
 );
 export const LegacyTablet = ({ ...props }: FixedAdaptor) => (
     <Responsive
+        className="anchor-adaptor"
         {...props}
         minWidth={LegacyBreakpoints.tablet.min}
         maxWidth={LegacyBreakpoints.tablet.max}
     />
 );
 export const LegacyPhone = ({ ...props }: FixedAdaptor) => (
-    <Responsive {...props} maxWidth={LegacyBreakpoints.phone.max} />
+    <Responsive
+        className="anchor-adaptor"
+        {...props}
+        maxWidth={LegacyBreakpoints.phone.max}
+    />
 );
 
 /* =========================================== LEGACY END =========================================================== */
@@ -108,10 +117,15 @@ export const StandardBreakpoints: StandardBreakpointsSchema = {
 };
 
 export const XS = ({ ...props }: FixedAdaptor) => (
-    <Responsive {...props} maxWidth={StandardBreakpoints.xs.max} />
+    <Responsive
+        className="anchor-adaptor"
+        {...props}
+        maxWidth={StandardBreakpoints.xs.max}
+    />
 );
 export const SM = ({ ...props }: FixedAdaptor) => (
     <Responsive
+        className="anchor-adaptor"
         {...props}
         minWidth={StandardBreakpoints.sm.min}
         maxWidth={StandardBreakpoints.sm.max}
@@ -119,6 +133,7 @@ export const SM = ({ ...props }: FixedAdaptor) => (
 );
 export const MD = ({ ...props }: FixedAdaptor) => (
     <Responsive
+        className="anchor-adaptor"
         {...props}
         minWidth={StandardBreakpoints.md.min}
         maxWidth={StandardBreakpoints.md.max}
@@ -126,6 +141,7 @@ export const MD = ({ ...props }: FixedAdaptor) => (
 );
 export const LG = ({ ...props }: FixedAdaptor) => (
     <Responsive
+        className="anchor-adaptor"
         {...props}
         minWidth={StandardBreakpoints.lg.min}
         maxWidth={StandardBreakpoints.lg.max}
@@ -133,13 +149,18 @@ export const LG = ({ ...props }: FixedAdaptor) => (
 );
 export const XL = ({ ...props }: FixedAdaptor) => (
     <Responsive
+        className="anchor-adaptor"
         {...props}
         minWidth={StandardBreakpoints.xl.min}
         maxWidth={StandardBreakpoints.xl.max}
     />
 );
 export const XXL = ({ ...props }: FixedAdaptor) => (
-    <Responsive {...props} minWidth={StandardBreakpoints.xxl.min} />
+    <Responsive
+        className="anchor-adaptor"
+        {...props}
+        minWidth={StandardBreakpoints.xxl.min}
+    />
 );
 
 export const CenteredCell = styled(Cell)`

@@ -2,7 +2,7 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="sc-bdVaJa hDIqZg"
+  className="anchor-list-item sc-bdVaJa hDIqZg"
 >
   Item
 </a>

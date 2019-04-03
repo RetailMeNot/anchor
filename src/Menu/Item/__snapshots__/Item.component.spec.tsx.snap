@@ -2,6 +2,6 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="sc-bdVaJa dlTGkF"
+  className="anchor-menu-item sc-bdVaJa dlTGkF"
 />
 `;
