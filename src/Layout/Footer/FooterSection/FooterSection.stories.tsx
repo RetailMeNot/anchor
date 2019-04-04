@@ -5,14 +5,20 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENT
 import { FooterSection } from './FooterSection.component';
+// README
+import * as README from './README.md';
 
 const StyledStory = styled.div`
     padding: 10rem;
 `;
 
-storiesOf('Components/Layout/Footer/FooterSection', module).add(
-    'default',
-    () => (
+storiesOf('Components/Layout/Footer/FooterSection', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
+    .add('default', () => (
         <StyledStory>
             <FooterSection title="Section Title">
                 <ul>
@@ -31,5 +37,4 @@ storiesOf('Components/Layout/Footer/FooterSection', module).add(
                 </ul>
             </FooterSection>
         </StyledStory>
-    )
-);
+    ));

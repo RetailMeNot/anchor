@@ -7,17 +7,25 @@ import styled from 'styled-components';
 // COMPONENTS
 import Badge from './Badge.component';
 import { Icon } from '../Icon';
+// README
+import * as README from './README.md';
 // THEME
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
-storiesOf('Components/Badge', module).add('Default', () => (
-    <StyledStory>
-        <p>Badge 1</p>
-        <Badge count={1}>
-            <Icon type="cart" />
-        </Badge>
-    </StyledStory>
-));
+storiesOf('Components/Badge', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
+    .add('Default', () => (
+        <StyledStory>
+            <p>Badge 1</p>
+            <Badge count={1}>
+                <Icon type="cart" />
+            </Badge>
+        </StyledStory>
+    ));

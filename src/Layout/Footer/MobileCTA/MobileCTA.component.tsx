@@ -1,45 +1,23 @@
 // REACT
 import * as React from 'react';
-// COMPONENTS
-import { Icon } from '../../../Icon';
 // VENDOR
 import styled from 'styled-components';
 import classNames from 'classnames';
+// COMPONENTS
+// import { Icon } from '../../../Icon';
+import { Grid, Cell, CenteredCell } from '../../../Grid';
+import { Typography } from '../../../Typography';
 // STYLES
-import { fonts, colors } from '../../../theme';
+import { colors } from '../../../theme';
 
 const StyledMobileCTAElement = styled.a`
-    display: inline-flex;
-    font-family: ${fonts.fontFamily};
-    font-size: 0.875rem;
-    justify-content: center;
-    align-content: center;
-    color: ${colors.charcoal.base};
+    box-sizing: border-box;
     cursor: pointer;
-
-    .mobile-cta-image {
-        min-width: 4rem;
-    }
-
-    .caret {
-        padding: 0 0 0 0.5rem;
-    }
-
-    > div {
-        flex: 0 0 auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    p {
-        line-height: 1.125rem;
-        padding: 0;
-        margin: 0 0 0 0.375rem;
-    }
-
-    strong {
-        color: ${colors.savvyCyan.dark};
+    min-width: 250px;
+    display: inline-block;
+    .cta-caption {
+        margin: 1rem 0 0.5rem;
+        line-height: 0.5rem;
     }
 `;
 
@@ -54,7 +32,6 @@ const MobileCTAImage = () => (
         width="64px"
         height="64px"
         viewBox="0 0 64 64"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -165,6 +142,15 @@ const MobileCTAImage = () => (
         </g>
     </svg>
 );
+const Chevron = () => (
+    <svg width="8" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M.311 15.707l-.03-.031a1.04 1.04 0 0 1 0-1.423L5.611 8 .282 1.747a1.04 1.04 0 0 1 0-1.422l.03-.032a.94.94 0 0 1 1.365 0L7.72 7.29a1.04 1.04 0 0 1 0 1.422l-6.043 6.996a.94.94 0 0 1-1.365 0"
+            fill={colors.savvyCyan.dark}
+            fillRule="evenodd"
+        />
+    </svg>
+);
 /* tslint:enable max-line-length */
 
 export const MobileCTA = ({
@@ -177,20 +163,30 @@ export const MobileCTA = ({
         target="_blank"
         rel="noreferrer nofollow"
     >
-        <MobileCTAImage />
-        <div>
-            <p>Get Savings on the go!</p>
-            <p>
-                <strong>Download the App</strong>
-            </p>
-        </div>
-        <Icon
-            className="caret"
-            width={24}
-            height={48}
-            color={colors.savvyCyan.dark}
-            type="chevron-right"
-        />
+        <Grid columns="4rem 11.25rem .5rem" gap=".5rem">
+            <Cell>
+                <MobileCTAImage />
+            </Cell>
+            <CenteredCell>
+                <div>
+                    <Typography as="p" className="cta-caption">
+                        Get Savings on the go!
+                    </Typography>
+                    <Typography
+                        as="p"
+                        className="cta-caption"
+                        weight={600}
+                        color="savvyCyan"
+                        hue="dark"
+                    >
+                        Download the App
+                    </Typography>
+                </div>
+            </CenteredCell>
+            <CenteredCell>
+                <Chevron />
+            </CenteredCell>
+        </Grid>
     </StyledMobileCTAElement>
 );
 

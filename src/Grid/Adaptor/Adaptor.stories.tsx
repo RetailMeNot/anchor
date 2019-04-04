@@ -11,6 +11,8 @@ import {
     LegacyBreakpoints,
     StandardBreakpoints,
 } from './Adaptor.component';
+// README
+import * as README from './README.md';
 
 const {
     LegacyDesktop,
@@ -37,6 +39,11 @@ const dimension = ({ min, max }: { min?: number; max?: number }): string => {
 };
 
 storiesOf('Components/Grid/Adaptor', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
     .add('Legacy Breakpoints', () => (
         <StyledStory>
             <h4>Resize this window to view the three breakpoints</h4>

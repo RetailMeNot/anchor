@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import { text } from '@storybook/addon-knobs';
 // COMPONENTS
 import Avatar from './Avatar.component';
+// README
+import * as README from './README.md';
 // THEME
 import { colors } from '../theme';
 
@@ -16,11 +18,17 @@ const StyledStory = styled.div`
     color: ${colors.white.base};
 `;
 
-storiesOf('Components/Avatar', module).add('Default', () => (
-    <StyledStory>
-        <p>Avatar</p>
-        <Avatar />
-        <p>Avatar With Initials</p>
-        <Avatar label={text('Avatar Initials', 'CC')} />
-    </StyledStory>
-));
+storiesOf('Components/Avatar', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
+    .add('Default', () => (
+        <StyledStory>
+            <p>Avatar</p>
+            <Avatar />
+            <p>Avatar With Initials</p>
+            <Avatar label={text('Avatar Initials', 'CC')} />
+        </StyledStory>
+    ));
