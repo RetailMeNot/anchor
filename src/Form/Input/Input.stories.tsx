@@ -7,6 +7,8 @@ import styled from 'styled-components';
 // COMPONENT
 import Input from './Input.component';
 import { Icon } from '../../Icon';
+// README
+import * as README from './README.md';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
@@ -36,6 +38,11 @@ const formatPhoneNumber = (value: any) => {
 };
 
 storiesOf('Components/Input', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
     .add('with Prefix', () => (
         <StyledStory>
             <Input label="Search" prefix={<Icon type="search" />} />

@@ -7,12 +7,19 @@ import { Grid, Cell } from 'styled-css-grid';
 import styled from 'styled-components';
 // COMPONENT
 import { XS, CustomAdaptor, StandardBreakpoints } from '../../Grid';
+// README
+import * as README from './README.md';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
 storiesOf('Components/Grid/Flex & Box', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
     .add('Layout', () => (
         <StyledStory>
             <h4>Three column layout</h4>

@@ -1,3 +1,4 @@
+/* tslint:disable */
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,

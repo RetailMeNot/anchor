@@ -6,6 +6,8 @@ import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
+// README
+import * as README from './README.md';
 // COMPONENT
 import Button from './Button.component';
 
@@ -14,6 +16,11 @@ const StyledStory = styled.div`
 `;
 
 storiesOf('Components/Button', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
     .add('Primary', () => (
         <StyledStory>
             <Button

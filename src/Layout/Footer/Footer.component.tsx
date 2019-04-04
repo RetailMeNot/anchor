@@ -82,7 +82,6 @@ const FooterLogo = () => (
         width="166px"
         height="52px"
         viewBox="0 0 166 52"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -354,7 +353,7 @@ const LegalLinks = () => {
 const DesktopFooter = () => (
     <DesktopContainer>
         <Grid
-            columns="12.5rem 1fr 15.625rem"
+            columns="12.5rem 1fr 18.75rem"
             justifyContent="center"
             alignContent="center"
         >
