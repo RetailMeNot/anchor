@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Button should match its snapshot 1`] = `
+exports[`Component: Icon should match its snapshot 1`] = `
 <div
   className="icon sc-bdVaJa gtkMnz"
 >

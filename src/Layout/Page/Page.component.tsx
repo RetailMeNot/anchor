@@ -14,8 +14,8 @@ export const DEFAULT_LAYOUT_WIDTH = '100%';
 export const DEFAULT_CONTENT_WIDTH = '71.25rem';
 export const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
 export const TRANSPARENT = 'transparent';
-const DEFAULT_HEADER_HEIGHT = '1.5rem';
-const DEFAULT_FOOTER_HEIGHT = '20.375rem';
+export const DEFAULT_HEADER_HEIGHT = '1.5rem';
+export const DEFAULT_FOOTER_HEIGHT = '20.375rem';
 const RIGHT = 'right';
 
 // Defaults
@@ -128,7 +128,7 @@ interface StyledContentProps {
 // Components
 // ------------------------------------------------------------------------------------------------------------------
 export const Page = (props: PageProps): React.ReactElement<any> => (
-    <StyledPage className={classnames('.anchor-page', props.className)}>
+    <StyledPage className={classnames('anchor-page', props.className)}>
         <NormalizeCSS />
         <GlobalCSS />
         <Grid
@@ -149,13 +149,13 @@ export const Page = (props: PageProps): React.ReactElement<any> => (
 
 Page.defaultProps = PageDefaultProps;
 
-export const DefaultLayout = (
+const DefaultLayout = (
     props: DefaultLayoutProps
 ): React.ReactElement<any> => (
     <StyledLayout
         layoutWidth={props.layoutWidth}
         layoutBackgroundColor={props.layoutBackgroundColor}
-        className={classnames('.anchor-default-layout', props.className)}
+        className={classnames('anchor-default-layout', props.className)}
     >
         <StyledContent
             contentWidth={props.contentWidth}
@@ -168,13 +168,13 @@ export const DefaultLayout = (
 
 DefaultLayout.defaultProps = DefaultLayoutDefaultProps;
 
-export const SidebarLayout = (
+const SidebarLayout = (
     props: SidebarLayoutProps
 ): React.ReactElement<any> => (
     <StyledLayout
         layoutWidth={props.layoutWidth}
         layoutBackgroundColor={props.layoutBackgroundColor}
-        className={classnames('.anchor-sidebar-layout', props.className)}
+        className={classnames('anchor-sidebar-layout', props.className)}
     >
         <StyledContent
             contentWidth={props.contentWidth}
@@ -208,3 +208,9 @@ export const SidebarLayout = (
 );
 
 SidebarLayout.defaultProps = SidebarLayoutDefaultProps;
+
+export default {
+  Page,
+  DefaultLayout,
+  SidebarLayout,
+};

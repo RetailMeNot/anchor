@@ -5,10 +5,8 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { select, text, color } from '@storybook/addon-knobs';
 // COMPONENT
-import {
-    Page,
-    SidebarLayout,
-    DefaultLayout,
+import Page, {
+    Page as PageComponent,
     DEFAULT_LAYOUT_WIDTH,
     DEFAULT_CONTENT_WIDTH,
     DEFAULT_SIDEBAR_WIDTH,
@@ -36,8 +34,8 @@ const StyledStory = styled.div`
 // ------------------------------------------------------------------------------------------------------------------
 storiesOf('Components/Layout/Page', module).add('Default Layout', () => (
     <StyledStory>
-        <Page header={<Header />} footer={<Footer />}>
-            <DefaultLayout
+        <PageComponent header={<Header />} footer={<Footer />}>
+            <Page.DefaultLayout
                 layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
                 contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
                 layoutBackgroundColor={color(
@@ -50,15 +48,15 @@ storiesOf('Components/Layout/Page', module).add('Default Layout', () => (
                 )}
             >
                 <h1>Hello!</h1>
-            </DefaultLayout>
-        </Page>
+            </Page.DefaultLayout>
+        </PageComponent>
     </StyledStory>
 ));
 
 storiesOf('Components/Layout/Page', module).add('Sidebar Layout', () => (
     <StyledStory>
-        <Page header={<Header />} footer={<Footer />}>
-            <SidebarLayout
+        <PageComponent header={<Header />} footer={<Footer />}>
+            <Page.SidebarLayout
                 layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
                 contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
                 layoutBackgroundColor={color(
@@ -78,7 +76,7 @@ storiesOf('Components/Layout/Page', module).add('Sidebar Layout', () => (
                 sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
             >
                 <h1>Hello!</h1>
-            </SidebarLayout>
-        </Page>
+            </Page.SidebarLayout>
+        </PageComponent>
     </StyledStory>
 ));
