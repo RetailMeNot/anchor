@@ -31,4 +31,14 @@ storiesOf('Components/Icon', module)
                 ))}
             </Grid>
         </StyledStory>
+    ))
+    .add('Resize', () => (
+        <StyledStory>
+            <Icon scale="xs" type="chevron-right" />
+            <Icon scale="sm" type="chevron-right" />
+            <Icon scale="md" type="chevron-right" />
+            <Icon scale="lg" type="chevron-right" />
+            <Icon scale="xl" type="chevron-right" />
+            <Icon scale="xxl" type="chevron-right" />
+        </StyledStory>
     ));

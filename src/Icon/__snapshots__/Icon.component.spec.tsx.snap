@@ -2,11 +2,12 @@
 
 exports[`Component: Button should match its snapshot 1`] = `
 <div
-  className="icon sc-bdVaJa gtkMnz"
+  className="anchor-icon sc-bdVaJa irKuKD"
 >
   <svg
-    height="12px"
-    width="17px"
+    height={16}
+    viewBox="0 0 17 12"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
