@@ -11,9 +11,9 @@ import Page, {
   DEFAULT_LAYOUT_WIDTH,
   TRANSPARENT,
   DEFAULT_CONTENT_WIDTH,
-  // DEFAULT_CONTENT_WIDTH,
-  // DEFAULT_SIDEBAR_WIDTH,
-  // TRANSPARENT,
+  DEFAULT_SIDEBAR_WIDTH,
+  LEFT,
+  RIGHT
 } from './Page.component';
 
 describe('Component: Page', () => {
@@ -99,6 +99,72 @@ describe('Component: DefaultLayout', () => {
       .toEqual(contentWidth);
     expect(testSubject.find('DefaultLayout').prop('contentBackgroundColor'))
       .toEqual(contentBackgroundColor);
+  });
+});
+
+describe('Component: SidebarLayout', () => {
+  const subject = <Page.SidebarLayout />;
+  const wrapper = mount(subject);
+  const component = shallow(subject);
+
+  it('should be defined.', () => {
+    expect(subject).toBeDefined();
+    expect(component).toBeDefined();
+
+    const tree = renderer.create(subject).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render with default settings.', () => {
+    expect(component.find('.anchor-sidebar-layout').exists()).toBeTruthy();
+
+    // tslint:disable-next-line: no-console
+    console.log(wrapper.debug());
+
+    expect(wrapper.find('SidebarLayout').prop('layoutWidth'))
+      .toEqual(DEFAULT_CONTENT_WIDTH);
+    expect(wrapper.find('SidebarLayout').prop('layoutBackgroundColor'))
+      .toEqual(TRANSPARENT);
+    expect(wrapper.find('SidebarLayout').prop('contentWidth'))
+      .toEqual(DEFAULT_CONTENT_WIDTH);
+    expect(wrapper.find('SidebarLayout').prop('contentBackgroundColor'))
+      .toEqual(TRANSPARENT);
+    expect(wrapper.find('SidebarLayout').prop('sidebarWidth'))
+      .toEqual(DEFAULT_SIDEBAR_WIDTH);
+    expect(wrapper.find('SidebarLayout').prop('sidebarAlign'))
+      .toEqual(LEFT);
+  });
+
+  it('should render with passed props.', () => {
+    const layoutWidth = '80px';
+    const layoutBackgroundColor = '#ffffff';
+    const contentWidth = '2rem';
+    const contentBackgroundColor = 'orange';
+    const sidebarWidth = '5.5rem';
+    const testSubject = mount(
+      <Page.SidebarLayout
+        layoutWidth={layoutWidth}
+        layoutBackgroundColor={layoutBackgroundColor}
+        contentWidth={contentWidth}
+        contentBackgroundColor={contentBackgroundColor}
+        sidebarWidth={sidebarWidth}
+        sidebarAlign={RIGHT}
+      />
+    );
+
+    expect(testSubject.find('SidebarLayout').prop('layoutWidth'))
+      .toEqual(layoutWidth);
+    expect(testSubject.find('SidebarLayout').prop('layoutBackgroundColor'))
+      .toEqual(layoutBackgroundColor);
+    expect(testSubject.find('SidebarLayout').prop('contentWidth'))
+      .toEqual(contentWidth);
+    expect(testSubject.find('SidebarLayout').prop('contentBackgroundColor'))
+      .toEqual(contentBackgroundColor);
+    expect(testSubject.find('SidebarLayout').prop('sidebarWidth'))
+      .toEqual(sidebarWidth);
+    expect(testSubject.find('SidebarLayout').prop('sidebarAlign'))
+      .toEqual(RIGHT);
   });
 });
 

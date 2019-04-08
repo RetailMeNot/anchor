@@ -16,7 +16,8 @@ export const DEFAULT_SIDEBAR_WIDTH = '13.75rem';
 export const TRANSPARENT = 'transparent';
 export const DEFAULT_HEADER_HEIGHT = '1.5rem';
 export const DEFAULT_FOOTER_HEIGHT = '20.375rem';
-const RIGHT = 'right';
+export const RIGHT = 'right';
+export const LEFT = 'left';
 
 // Defaults
 // ------------------------------------------------------------------------------------------------------------------
@@ -33,6 +34,7 @@ const DefaultLayoutDefaultProps = {
 };
 
 const SidebarLayoutDefaultProps = {
+    sidebarAlign: LEFT,
     sidebarWidth: DEFAULT_SIDEBAR_WIDTH,
     layoutWidth: DEFAULT_CONTENT_WIDTH,
     contentWidth: DEFAULT_CONTENT_WIDTH,

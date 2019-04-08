@@ -25,3 +25,17 @@ exports[`Component: Page should be defined. 1`] = `
   </div>
 </section>
 `;
+
+exports[`Component: SidebarLayout should be defined. 1`] = `
+<section
+  className="anchor-sidebar-layout sc-htpNat ezXmfF"
+>
+  <div
+    className="sc-bxivhb fgQnME"
+  >
+    <div
+      className="Grid__Grid-bojwg gzFqED"
+    />
+  </div>
+</section>
+`;

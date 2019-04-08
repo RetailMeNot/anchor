@@ -11,6 +11,8 @@ import Page, {
     DEFAULT_CONTENT_WIDTH,
     DEFAULT_SIDEBAR_WIDTH,
     TRANSPARENT,
+    LEFT,
+    RIGHT,
 } from './Page.component';
 import { Footer } from '../Footer/Footer.component';
 import { Header } from '../Header/Header.component';
@@ -20,8 +22,8 @@ import { colors } from '../../theme';
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
 const alignmentOptions = {
-    left: 'left',
-    right: 'right',
+    left: LEFT,
+    right: RIGHT,
 };
 
 // Styled Components
@@ -71,7 +73,7 @@ storiesOf('Components/Layout/Page', module).add('Sidebar Layout', () => (
                 sidebarAlign={select(
                     'Sidebar Alignment',
                     alignmentOptions,
-                    'left'
+                    LEFT
                 )}
                 sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
             >
