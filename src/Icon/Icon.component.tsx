@@ -268,9 +268,10 @@ type IconTypes =
     // HAMBURGER
     | 'hamburger';
 
+type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+
 export interface IconSVGProps {
-    width?: number;
-    height?: number;
+    scale?: number;
     color?: string;
 }
 
@@ -279,14 +280,13 @@ interface IconProps {
     children?: any;
     className?: string;
     color?: string;
-    width?: number;
-    height?: number;
+    scale?: ScaleFactors;
 }
 
 const StyledIcon = styled.div`
     display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     justify-content: center;
     align-items: center;
     background-color: transparent;
@@ -429,16 +429,24 @@ export const Icons = {
     hamburger: Hamburger,
 };
 
+export const Scale = {
+    xs: 8,
+    sm: 14,
+    md: 16,
+    lg: 24,
+    xl: 32,
+    xxl: 48,
+};
+
 export const Icon = ({
     className,
     type = 'hamburger',
     color = '#222',
-    width,
-    height,
+    scale = 'md',
     ...props
 }: IconProps): React.ReactElement<any> => (
-    <StyledIcon className={classNames('icon', className)} {...props}>
-        {Icons[type]({ color, width, height })}
+    <StyledIcon className={classNames('anchor-icon', className)} {...props}>
+        {Icons[type]({ color, scale: Scale[scale] })}
     </StyledIcon>
 );
 

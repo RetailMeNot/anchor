@@ -18,6 +18,8 @@ import { Footer } from '../Footer/Footer.component';
 import { Header } from '../Header/Header.component';
 import { Sider } from '../Sider/Sider.component';
 import { colors } from '../../theme';
+// README
+// import * as README from './README.md';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
@@ -82,3 +84,15 @@ storiesOf('Components/Layout/Page', module).add('Sidebar Layout', () => (
         </PageComponent>
     </StyledStory>
 ));
+
+// storiesOf('Components/Layout/Page', module)
+//     .addParameters({
+//         readme: {
+//             sidebar: README,
+//         },
+//     })
+//     .add('default', () => (
+//         <StyledStory>
+//             <Page>Story</Page>
+//         </StyledStory>
+//     ));

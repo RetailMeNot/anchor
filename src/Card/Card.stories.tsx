@@ -12,9 +12,9 @@ import { Icon } from '../Icon';
 import { colors, fonts } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
+// README
+import * as README from './README.md';
 // THEME
-
-// const { Fragment } = React;
 
 const StyledStory = styled.div`
     h2 {
@@ -125,6 +125,11 @@ const CardAction = (
 );
 
 storiesOf('Components/Card', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
     .add('Two Row With Action', () => (
         <StyledStory>
             <Grid columns="repeat(auto-fit, 290px)">

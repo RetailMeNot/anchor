@@ -7,6 +7,8 @@ import styled from 'styled-components';
 // COMPONENTS
 import { Typography } from './Typography.component';
 import { Grid, Cell } from '../Grid';
+// README
+import * as README from './README.md';
 // THEME
 
 const StyledStory = styled.div`
@@ -30,25 +32,31 @@ const elements = [
     'pre',
 ];
 
-storiesOf('Components/Typography', module).add('Default', () => (
-    <StyledStory>
-        <Typography as="h1">Scales</Typography>
-        <Grid columns="100%" minRowHeight="50px" gap="16px">
-            {scales.map((scale: any) => (
-                <Cell key={scale}>
-                    <Typography scale={scale}>
-                        Font size is {scale}px | Scale value = {scale}
-                    </Typography>
-                </Cell>
-            ))}
-        </Grid>
-        <Typography as="h1">Elements</Typography>
-        <Grid columns="100%" minRowHeight="50px" gap="16px">
-            {elements.map((element: any) => (
-                <Cell key={element}>
-                    <Typography as={element}>Element: {element}</Typography>
-                </Cell>
-            ))}
-        </Grid>
-    </StyledStory>
-));
+storiesOf('Components/Typography', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
+    .add('Default', () => (
+        <StyledStory>
+            <Typography as="h1">Scales</Typography>
+            <Grid columns="100%" minRowHeight="50px" gap="16px">
+                {scales.map((scale: any) => (
+                    <Cell key={scale}>
+                        <Typography scale={scale}>
+                            Font size is {scale}px | Scale value = {scale}
+                        </Typography>
+                    </Cell>
+                ))}
+            </Grid>
+            <Typography as="h1">Elements</Typography>
+            <Grid columns="100%" minRowHeight="50px" gap="16px">
+                {elements.map((element: any) => (
+                    <Cell key={element}>
+                        <Typography as={element}>Element: {element}</Typography>
+                    </Cell>
+                ))}
+            </Grid>
+        </StyledStory>
+    ));
