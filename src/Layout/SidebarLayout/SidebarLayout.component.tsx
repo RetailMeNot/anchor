@@ -41,11 +41,11 @@ StyledContent.displayName = 'StyledContent';
 // ------------------------------------------------------------------------------------------------------------------
 interface SidebarLayoutProps {
     /** The width of the layout, edge to edge. */
-    layoutWidth?: string | number;
+    layoutWidth?: string;
     /** The width of the content within the layout. */
-    contentWidth?: string | number;
+    contentWidth?: string;
     /** The width of the area for the sidebar. */
-    sidebarWidth?: string | number;
+    sidebarWidth?: string;
     /** If the sidebar is on the left or the right of the layout */
     sidebarAlign?: SidebarAlignment;
     /** The actual sidebar. This can be a component. */
@@ -60,12 +60,12 @@ interface SidebarLayoutProps {
 }
 
 interface StyledLayoutProps {
-    layoutWidth?: string | number;
+    layoutWidth?: string;
     layoutBackgroundColor?: string;
 }
 
 interface StyledContentProps {
-    contentWidth?: string | number;
+    contentWidth?: string;
     contentBackgroundColor?: string;
 }
 

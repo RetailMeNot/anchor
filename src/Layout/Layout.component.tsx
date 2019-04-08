@@ -31,9 +31,9 @@ StyledLayout.displayName = 'StyledLayout';
 // ------------------------------------------------------------------------------------------------------------------
 interface LayoutProps {
     /** The width of the layout, edge to edge. */
-    layoutWidth?: string | number;
+    layoutWidth?: string;
     /** The width of the content within the layout. */
-    contentWidth?: string | number;
+    contentWidth?: string;
     /** The background color of the layout. Default is transparent. */
     layoutBackgroundColor?: string;
     /** The background color of the content within the layout area. Default is transparent. */
@@ -44,12 +44,12 @@ interface LayoutProps {
 }
 
 interface StyledLayoutProps {
-    layoutWidth?: string | number;
+    layoutWidth?: string;
     layoutBackgroundColor?: string;
 }
 
 interface StyledContentProps {
-    contentWidth?: string | number;
+    contentWidth?: string;
     contentBackgroundColor?: string;
 }
 
