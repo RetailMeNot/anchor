@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: SidebarLayout should be defined. 1`] = `
+<section
+  className="anchor-sidebar-layout sc-bwzfXH dMDKer"
+>
+  <div
+    className="sc-htpNat ezXmfF"
+  >
+    <div
+      className="Grid__Grid-bojwg gzFqED"
+    />
+  </div>
+</section>
+`;

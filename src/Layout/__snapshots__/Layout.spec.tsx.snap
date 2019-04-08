@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Layout should match its snapshot. 1`] = `
+<section
+  className="anchor-layout sc-bdVaJa HHpEE"
+>
+  <div
+    className="sc-bwzfXH ehanXF"
+  />
+</section>
+`;

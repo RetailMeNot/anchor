@@ -37,6 +37,7 @@
     "build": "concurrently --names 'modules,typescript' 'npm run build:modules' 'npm run build:ts'",
     "build:ts": "tsc",
     "build:modules": "rollup -c rollup.config.js",
+    "ci": "concurrently --names 'lint,test' 'npm run lint' 'npm run test'",
     "prepublishOnly": "npm run build",
     "lint": "concurrently --names 'prettier,tslint' 'npm run pretty' 'npm run tslint'",
     "pretty": "prettier --config .prettierrc --write \"./src/**/*.{tsx,ts}\"",

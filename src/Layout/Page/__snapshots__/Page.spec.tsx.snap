@@ -1,18 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: DefaultLayout should be defined. 1`] = `
-<section
-  className="anchor-default-layout sc-htpNat dhALOr"
->
-  <div
-    className="sc-bxivhb fgQnME"
-  />
-</section>
-`;
-
 exports[`Component: Page should be defined. 1`] = `
-<section
-  className="anchor-page sc-bwzfXH bQOcYX"
+<main
+  className="anchor-page sc-bdVaJa Arbuc"
 >
   <div
     className="Grid__Grid-bojwg clknHu"
@@ -23,19 +13,5 @@ exports[`Component: Page should be defined. 1`] = `
       className="Cell__Cell-jsYrZv fDguhG"
     />
   </div>
-</section>
-`;
-
-exports[`Component: SidebarLayout should be defined. 1`] = `
-<section
-  className="anchor-sidebar-layout sc-htpNat ezXmfF"
->
-  <div
-    className="sc-bxivhb fgQnME"
-  >
-    <div
-      className="Grid__Grid-bojwg gzFqED"
-    />
-  </div>
-</section>
+</main>
 `;
