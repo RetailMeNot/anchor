@@ -19,7 +19,7 @@ import { Sider } from '../Sider/Sider.component';
 import { colors } from '../../theme/index';
 import { Page } from '../Page/Page.component';
 // README
-// import * as README from './README.md';
+import * as README from './README.md';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
@@ -36,42 +36,36 @@ const StyledStory = styled.div`
 
 // Stories
 // ------------------------------------------------------------------------------------------------------------------
-storiesOf('Components/Layout', module).add('Sidebar Layout', () => (
-    <StyledStory>
-        <Page header={<Header />} footer={<Footer />}>
-            <SidebarLayout
-                layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
-                contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
-                layoutBackgroundColor={color(
-                    'Layout Background Color',
-                    TRANSPARENT
-                )}
-                contentBackgroundColor={color(
-                    'Content Background Color',
-                    TRANSPARENT
-                )}
-                sidebar={<Sider />}
-                sidebarAlign={select(
-                    'Sidebar Alignment',
-                    alignmentOptions,
-                    LEFT
-                )}
-                sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
-            >
-                <h1>Hello!</h1>
-            </SidebarLayout>
-        </Page>
-    </StyledStory>
-));
-
-// storiesOf('Components/Layout/Page', module)
-//     .addParameters({
-//         readme: {
-//             sidebar: README,
-//         },
-//     })
-//     .add('default', () => (
-//         <StyledStory>
-//             <Page>Story</Page>
-//         </StyledStory>
-//     ));
+storiesOf('Components/Layout', module)
+    .addParameters({
+        readme: {
+            sidebar: README,
+        },
+    })
+    .add('Sidebar Layout', () => (
+        <StyledStory>
+            <Page header={<Header />} footer={<Footer />}>
+                <SidebarLayout
+                    layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
+                    contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
+                    layoutBackgroundColor={color(
+                        'Layout Background Color',
+                        TRANSPARENT
+                    )}
+                    contentBackgroundColor={color(
+                        'Content Background Color',
+                        TRANSPARENT
+                    )}
+                    sidebar={<Sider />}
+                    sidebarAlign={select(
+                        'Sidebar Alignment',
+                        alignmentOptions,
+                        LEFT
+                    )}
+                    sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
+                >
+                    <h1>Hello!</h1>
+                </SidebarLayout>
+            </Page>
+        </StyledStory>
+    ));
