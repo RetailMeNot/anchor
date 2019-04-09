@@ -2,7 +2,6 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // VENDOR
-// import { shallow, mount } from 'enzyme';
 import { shallow } from 'enzyme';
 // COMPONENT
 import Layout, {
@@ -13,7 +12,6 @@ import Layout, {
 
 describe('Component: Layout', () => {
     const subject = <Layout />;
-    // const wrapper = mount(subject);
     const component = shallow(subject);
 
     it('should match its snapshot.', () => {
@@ -69,6 +67,3 @@ describe('Component: Layout', () => {
         ).toEqual(contentBackgroundColor);
     });
 });
-
-// tslint:disable-next-line: no-console
-// console.log(wrapper.debug());
