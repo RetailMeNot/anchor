@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Page should be defined. 1`] = `
+<main
+  className="anchor-page sc-bdVaJa cPJwCN"
+>
+  <div
+    className="Grid__Grid-bojwg clknHu"
+    height="100vh"
+    rows="minmax(1.5rem,auto) 1fr minmax(20.375rem,auto)"
+  >
+    <div
+      className="Cell__Cell-jsYrZv fDguhG"
+    />
+  </div>
+</main>
+`;

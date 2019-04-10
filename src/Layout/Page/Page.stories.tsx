@@ -3,21 +3,44 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
+import { text } from '@storybook/addon-knobs';
 // COMPONENT
-import { Page } from './Page.component';
+import {
+    Page,
+    DEFAULT_HEADER_HEIGHT,
+    DEFAULT_FOOTER_HEIGHT,
+} from './Page.component';
+import { Footer } from '../Footer/Footer.component';
+import { Header } from '../Header/Header.component';
+import { colors } from '../../theme';
 // README
 import * as README from './README.md';
 
-const StyledStory = styled.div``;
+// Styled Components
+// ------------------------------------------------------------------------------------------------------------------
+const StyledStory = styled.div`
+    background: ${colors.white.base};
+    width: 100%;
+`;
 
-storiesOf('Components/Layout/Page', module)
+// Stories
+// ------------------------------------------------------------------------------------------------------------------
+storiesOf('Components/Layout', module)
     .addParameters({
         readme: {
             sidebar: README,
         },
     })
-    .add('default', () => (
+    .add('Page', () => (
         <StyledStory>
-            <Page>Story</Page>
+            <Page
+                header={<Header />}
+                footer={<Footer />}
+                headerHeight={text('Header Height', DEFAULT_HEADER_HEIGHT)}
+                footerHeight={text('Footer Height', DEFAULT_FOOTER_HEIGHT)}
+            >
+                <h1>Page</h1>
+                <h2>Main wrapper, includes a header and footer and content</h2>
+            </Page>
         </StyledStory>
     ));
