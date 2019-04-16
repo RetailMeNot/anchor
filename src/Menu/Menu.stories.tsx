@@ -7,7 +7,7 @@ import styled from 'styled-components';
 // COMPONENTS
 import Menu from './Menu.component';
 import { Item } from './Item';
-import { Icon } from '../Icon';
+import Icon from '../Icon';
 // README
 import * as README from './README.md';
 
@@ -26,10 +26,10 @@ storiesOf('Components/Menu', module)
             <p>Large</p>
             <Menu>
                 <Item path="/">
-                    Categories <Icon type="chevron-down" color="white" />
+                    Categories <Icon.ChevronDown color="white" />
                 </Item>
                 <Item path="/">
-                    Stores <Icon type="chevron-down" color="white" />
+                    Stores <Icon.ChevronDown color="white" />
                 </Item>
                 <Item path="/">More</Item>
             </Menu>

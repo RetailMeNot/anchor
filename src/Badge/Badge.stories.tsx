@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENTS
 import Badge from './Badge.component';
-import { Icon } from '../Icon';
+import Icon from '../Icon';
 // README
 import * as README from './README.md';
 // THEME
@@ -25,7 +25,7 @@ storiesOf('Components/Badge', module)
         <StyledStory>
             <p>Badge 1</p>
             <Badge count={1}>
-                <Icon type="cart" />
+                <Icon.Cart />
             </Badge>
         </StyledStory>
     ));
