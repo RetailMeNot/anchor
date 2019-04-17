@@ -21,7 +21,7 @@ describe('Component: Card', () => {
         expect(tree).toMatchSnapshot();
     });
     it('should render its contents', () => {
-        expect(component.find('p').text()).toBe(testContent);
+        expect(component.find('p').text()).toEqual(testContent);
     });
     it('should render the CardAction component when an action is provided', () => {
         const testAction = 'Test Action';

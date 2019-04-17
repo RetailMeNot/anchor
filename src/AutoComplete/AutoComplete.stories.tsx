@@ -7,6 +7,9 @@ import styled from 'styled-components';
 // COMPONENTS
 import AutoComplete from './AutoComplete.component';
 import { Icon } from '../Icon';
+import { Grid, Cell } from '../Grid';
+import { Typography } from '../Typography';
+import { colors } from '../theme';
 // README
 import * as README from './README.md';
 // THEME
@@ -24,17 +27,21 @@ storiesOf('Components/AutoComplete', module)
     })
     .add('Default', () => (
         <StyledStory>
-            <p>AutoComplete 1</p>
-            <AutoComplete
-                prefix={<Icon type="search" />}
-                dataSource={[1, 2, 3, 4]}
-            />
-            <p>AutoComplete 2</p>
-            <AutoComplete
-                size="large"
-                placeholder="Stores, brands, categories, etc."
-                dataSource={[1, 2, 3, 4]}
-                prefix={<Icon type="search" />}
-            />
+            <Grid columns={1}>
+                <Cell width={1}>
+                    <Typography as="h1">AutoComplete 1</Typography>
+                    <AutoComplete
+                        placeholder="Search here..."
+                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        dataSource={[
+                            { value: 'Result Item 1', label: 'Result Item 1' },
+                            { value: 'Result Item 2', label: 'Result Item 2' },
+                            { value: 'Result Item 3', label: 'Result Item 3' },
+                            { value: 'Result Item 4', label: 'Result Item 4' },
+                            { value: 'Result Item 5', label: 'Result Item 5' },
+                        ]}
+                    />
+                </Cell>
+            </Grid>
         </StyledStory>
     ));

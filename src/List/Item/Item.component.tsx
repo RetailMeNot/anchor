@@ -4,10 +4,14 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
+import { Typography } from '../../Typography';
 // THEME
-import { colors, fonts, sizes, variables } from '../../theme';
+import { colors, sizes, variables } from '../../theme';
 
 export interface ItemProps {
+    onSelect?: (...props: any) => any;
+    active?: boolean;
+    value?: string | number;
     children?: any;
     className?: string;
 }
@@ -17,15 +21,11 @@ const StyledItem = styled.a`
     border-radius: ${variables.borderRadius};
     padding: ${sizes.padding.sm} ${sizes.padding.md};
     cursor: pointer;
-    color: ${colors.charcoal.base};
-    font-family: ${fonts.fontFamily};
-    font-weight: normal;
-    text-decoration: none;
-    line-height: 1.5rem;
     transition: background-color 500ms;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+    background-color: ${colors.white.base};
+    &:hover,
+    &.active {
+        background-color: ${colors.silver.base};
     }
 `;
 
@@ -34,13 +34,17 @@ const DefaultProps: ItemProps = {};
 export const Item = ({
     className,
     children,
+    onSelect = () => null,
+    active,
+    value,
     ...props
 }: ItemProps = DefaultProps): React.ReactElement<any> => (
     <StyledItem
-        className={classNames('anchor-list-item', className)}
+        onMouseDown={() => onSelect(value ? value : children)}
+        className={classNames('anchor-list-item', className, { active })}
         {...props}
     >
-        {children}
+        <Typography color="charcoal">{children ? children : value}</Typography>
     </StyledItem>
 );
 

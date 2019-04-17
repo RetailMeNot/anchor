@@ -18,6 +18,7 @@ type Elements =
     | 'blockquote'
     | 'address'
     | 'code'
+    | 'label'
     | 'pre';
 
 type Colors =
@@ -92,6 +93,7 @@ type DisplayValues =
 export interface TypographyProps {
     className?: string;
     as?: Elements;
+    htmlFor?: string;
     children?: any;
     weight?: FontWeights;
     color?: Colors;
@@ -159,6 +161,11 @@ const DefaultCSS = {
     pre: css`
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
             'Courier New', monospace;
+    `,
+    label: css`
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
     `,
 };
 

@@ -2,8 +2,14 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="anchor-list-item sc-bdVaJa hDIqZg"
+  className="anchor-list-item sc-bdVaJa bqQbgH"
+  onMouseDown={[Function]}
 >
-  Item
+  <span
+    className="anchor-typography sc-htpNat bMXwNw"
+    color="charcoal"
+  >
+    Item
+  </span>
 </a>
 `;

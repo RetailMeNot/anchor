@@ -4,8 +4,9 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
+import { Typography } from '../Typography';
 // THEME
-import { fonts, colors, sizes } from '../theme';
+import { sizes } from '../theme';
 
 interface ListProps {
     className?: string;
@@ -15,27 +16,35 @@ interface ListProps {
 }
 
 const StyledList = styled.div`
+    box-sizing: border-box;
     .title {
+        box-sizing: border-box;
         margin: 0;
         padding: ${sizes.padding.md};
-        font-family: ${fonts.fontFamily};
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: ${colors.ash.dark};
-        line-height: 0.75rem;
     }
 `;
 
 const DefaultProps: ListProps = {};
 
-export const List: React.SFC<ListProps> = ({
+export const List: React.FunctionComponent<ListProps> = ({
     className,
     children,
     title,
     ...props
 }: ListProps = DefaultProps): React.ReactElement<any> => (
     <StyledList className={classNames('anchor-list', className)} {...props}>
-        {title && <p className="title">{title}</p>}
+        {title && (
+            <Typography
+                as="p"
+                weight={600}
+                scale={12}
+                color="ash"
+                hue="dark"
+                className="title"
+            >
+                {title}
+            </Typography>
+        )}
         {children}
     </StyledList>
 );

@@ -6,6 +6,8 @@ exports[`Component: Badge should be defined 1`] = `
 >
   <div
     className="sc-bwzfXH bRYyvz"
-  />
+  >
+    •
+  </div>
 </div>
 `;

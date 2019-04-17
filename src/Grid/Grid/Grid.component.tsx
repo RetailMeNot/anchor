@@ -1,6 +1,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import classNames from 'classnames';
 import { Grid as StyledGrid, Cell as StyledCell } from 'styled-css-grid';
 
 type JustifyContent =
@@ -49,9 +50,9 @@ interface CellProps {
     children: any;
 }
 
-export const Grid = (props: GridProps) => (
-    <StyledGrid className="grid" {...props} />
+export const Grid = ({ className, ...props }: GridProps) => (
+    <StyledGrid className={classNames('anchor-grid', className)} {...props} />
 );
-export const Cell = (props: CellProps) => (
-    <StyledCell className="cell" {...props} />
+export const Cell = ({ className, ...props }: CellProps) => (
+    <StyledCell className={classNames('anchor-cell', className)} {...props} />
 );

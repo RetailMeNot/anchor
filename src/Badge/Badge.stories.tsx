@@ -2,6 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
+import { text } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
@@ -24,7 +25,7 @@ storiesOf('Components/Badge', module)
     .add('Default', () => (
         <StyledStory>
             <p>Badge 1</p>
-            <Badge count={1}>
+            <Badge count={text('Badge QTY', '0')}>
                 <Icon type="cart" />
             </Badge>
         </StyledStory>

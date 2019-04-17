@@ -7,7 +7,9 @@ import AutoComplete from './AutoComplete.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <AutoComplete dataSource={[1, 2, 3, 4]} />;
+const subject = (
+    <AutoComplete dataSource={[{ value: 1, label: 'Result Item 1' }]} />
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 

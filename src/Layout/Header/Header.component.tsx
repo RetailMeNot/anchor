@@ -106,7 +106,7 @@ const MobileMenu = () => (
             <AutoComplete
                 prefix={<Icon type="search" />}
                 placeholder="Stores, brands, categories, etc…"
-                dataSource={[1, 2, 3, 4, 5]}
+                dataSource={[{ value: 1, label: 'Result Item 1' }]}
             />
         </CenteredCell>
         <CenteredCell>
@@ -133,7 +133,7 @@ const DesktopMenu = () => (
                 size="large"
                 prefix={<Icon type="search" />}
                 placeholder="Stores, brands, categories, etc…"
-                dataSource={[1, 2, 3, 4, 5]}
+                dataSource={[{ value: 1, label: 'Result Item 1' }]}
             />
         </CenteredCell>
         <Cell>
