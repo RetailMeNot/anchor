@@ -15,7 +15,7 @@ export interface ItemProps {
     active?: boolean;
     // TODO: do I need this?
     size?: 'small' | 'large';
-    // TODO: as to allow element overrides
+    // TODO: tag to allow element overrides
     as?: any;
     type?: any;
 }

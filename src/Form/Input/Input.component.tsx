@@ -68,6 +68,7 @@ interface InputProps {
     onChange?: InputEventHandler;
     onBlur?: InputEventHandler;
     onKeyDown?: InputEventHandler;
+    onKeyUp?: InputEventHandler;
     onFocus?: InputEventHandler;
 }
 
@@ -146,7 +147,7 @@ const LabelPresent = css`
     }
 `;
 
-interface StyledLabelProps {
+interface StyledInputProps {
     hasLabel?: boolean;
     name: string;
     onBlur?: InputEventHandler;
@@ -157,7 +158,7 @@ interface StyledLabelProps {
     placeholder: InputContentType;
 }
 
-const StyledInput = styled.input<StyledLabelProps>`
+const StyledInput = styled.input<StyledInputProps>`
     box-sizing: border-box;
     border: none;
     padding: 0;
@@ -222,6 +223,7 @@ export const Input = forwardRef(
             className,
             onBlur = () => null,
             onKeyDown = () => null,
+            onKeyUp = () => null,
             onChange = () => null,
             onFocus = () => null,
             type = 'text',
@@ -241,7 +243,7 @@ export const Input = forwardRef(
         const [focus, setFocus] = useState<boolean>(false);
 
         useImperativeHandle(ref, () => ({
-            update: (a: InputContentType) => setInputValue(a),
+            update: (newValue: InputContentType) => setInputValue(newValue),
             blur: () => (inputRef.current ? inputRef.current.blur() : null),
         }));
 
@@ -292,6 +294,9 @@ export const Input = forwardRef(
                             onKeyDown={(event: React.KeyboardEvent) => {
                                 onKeyDown(event);
                             }}
+                            onKeyUp={(event: React.KeyboardEvent) => {
+                                onKeyUp(event);
+                            }}
                             onFocus={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => {
@@ -313,7 +318,7 @@ export const Input = forwardRef(
                                         : 14
                                 }
                                 htmlFor={name}
-                                as="label"
+                                tag="label"
                                 className={classNames({
                                     lift:
                                         focus ||

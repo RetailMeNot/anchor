@@ -9,6 +9,8 @@ import { Typography } from '../../Typography';
 import { colors, sizes, variables } from '../../theme';
 
 export interface ItemProps {
+    onMouseOver?: (event: React.MouseEvent) => any;
+    onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
     active?: boolean;
     value?: string | number;
@@ -35,11 +37,15 @@ export const Item = ({
     className,
     children,
     onSelect = () => null,
+    onMouseOver = () => null,
+    onMouseOut = () => null,
     active,
     value,
     ...props
 }: ItemProps = DefaultProps): React.ReactElement<any> => (
     <StyledItem
+        onMouseOver={onMouseOver}
+        onMouseOut={onMouseOut}
         onMouseDown={() => onSelect(value ? value : children)}
         className={classNames('anchor-list-item', className, { active })}
         {...props}

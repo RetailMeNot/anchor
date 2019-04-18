@@ -1,6 +1,6 @@
 // REACT
-// import * as React from 'react';
-// import * as renderer from 'react-test-renderer';
+// import * tag React from 'react';
+// import * tag renderer from 'react-test-renderer';
 // COMPONENT
 // import DropDown from './DropDown.component';
 // ENZYME

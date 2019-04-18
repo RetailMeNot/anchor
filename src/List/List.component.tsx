@@ -35,7 +35,7 @@ export const List: React.FunctionComponent<ListProps> = ({
     <StyledList className={classNames('anchor-list', className)} {...props}>
         {title && (
             <Typography
-                as="p"
+                tag="p"
                 weight={600}
                 scale={12}
                 color="ash"

@@ -130,7 +130,7 @@ const DesktopMenu = () => (
         </Cell>
         <CenteredCell>
             <AutoComplete
-                size="large"
+                size="lg"
                 prefix={<Icon type="search" />}
                 placeholder="Stores, brands, categories, etc…"
                 dataSource={[{ value: 1, label: 'Result Item 1' }]}

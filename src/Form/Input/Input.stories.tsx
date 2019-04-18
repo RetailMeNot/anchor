@@ -56,28 +56,3 @@ storiesOf('Components/Form/Input', module)
             </Grid>
         </StyledStory>
     ));
-// .add('without Prefix', () => (
-//     <StyledStory>
-//         <Input label="First Name" />
-//     </StyledStory>
-// ))
-// .add('with errors', () => (
-//     <StyledStory>
-//         <Input label="Validated Input" validate={validate} />
-//     </StyledStory>
-// ))
-// .add('with format', () => (
-//     <StyledStory>
-//         <Input label="Phone Number" format={formatPhoneNumber} />
-//     </StyledStory>
-// ))
-// .add('with placeholder', () => (
-//     <StyledStory>
-//         <Input label="Email" placeholder="email@rmn.com" />
-//     </StyledStory>
-// ))
-// .add('disabled', () => (
-//     <StyledStory>
-//         <Input label="Disabled Example" disabled={true} />
-//     </StyledStory>
-// ));
