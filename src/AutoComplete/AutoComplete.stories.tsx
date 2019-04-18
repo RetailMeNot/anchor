@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENTS
 import AutoComplete from './AutoComplete.component';
-import { Icon } from '../Icon';
+import Icon from '../Icon';
 // README
 import * as README from './README.md';
 // THEME
@@ -25,16 +25,13 @@ storiesOf('Components/AutoComplete', module)
     .add('Default', () => (
         <StyledStory>
             <p>AutoComplete 1</p>
-            <AutoComplete
-                prefix={<Icon type="search" />}
-                dataSource={[1, 2, 3, 4]}
-            />
+            <AutoComplete prefix={<Icon.Search />} dataSource={[1, 2, 3, 4]} />
             <p>AutoComplete 2</p>
             <AutoComplete
                 size="large"
                 placeholder="Stores, brands, categories, etc."
                 dataSource={[1, 2, 3, 4]}
-                prefix={<Icon type="search" />}
+                prefix={<Icon.Search />}
             />
         </StyledStory>
     ));

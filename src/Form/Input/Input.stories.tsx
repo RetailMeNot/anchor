@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENT
 import Input from './Input.component';
-import { Icon } from '../../Icon';
+import Icon from '../../Icon';
 // README
 import * as README from './README.md';
 
@@ -45,7 +45,7 @@ storiesOf('Components/Input', module)
     })
     .add('with Prefix', () => (
         <StyledStory>
-            <Input label="Search" prefix={<Icon type="search" />} />
+            <Input label="Search" prefix={<Icon.Search />} />
         </StyledStory>
     ))
     .add('without Prefix', () => (

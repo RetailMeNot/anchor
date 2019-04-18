@@ -15,7 +15,7 @@ import {
     CenteredCell,
 } from '../../Grid';
 import { DropDown } from '../../DropDown';
-import { Icon } from '../../Icon';
+import Icon from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
@@ -104,7 +104,7 @@ const MobileMenu = () => (
         </CenteredCell>
         <CenteredCell>
             <AutoComplete
-                prefix={<Icon type="search" />}
+                prefix={<Icon.Search />}
                 placeholder="Stores, brands, categories, etc…"
                 dataSource={[1, 2, 3, 4, 5]}
             />
@@ -113,7 +113,7 @@ const MobileMenu = () => (
             <Avatar />
         </CenteredCell>
         <CenteredCell>
-            <Icon type="hamburger" color="white" />
+            <Icon.Hamburger color="white" />
         </CenteredCell>
     </Grid>
 );
@@ -131,7 +131,7 @@ const DesktopMenu = () => (
         <CenteredCell>
             <AutoComplete
                 size="large"
-                prefix={<Icon type="search" />}
+                prefix={<Icon.Search />}
                 placeholder="Stores, brands, categories, etc…"
                 dataSource={[1, 2, 3, 4, 5]}
             />
@@ -141,19 +141,19 @@ const DesktopMenu = () => (
                 <DropDown overlay={<div>1</div>}>
                     <Item path="/">
                         Categories &nbsp;
-                        <Icon type="chevron-down" color="white" />
+                        <Icon.ChevronDown color="white" />
                     </Item>
                 </DropDown>
                 <DropDown overlay={<div>1</div>}>
                     <Item path="/">
                         Stores &nbsp;
-                        <Icon type="chevron-down" color="white" />
+                        <Icon.ChevronDown color="white" />
                     </Item>
                 </DropDown>
                 <DropDown overlay={<div>1</div>}>
                     <Item path="/">
                         More &nbsp;
-                        <Icon type="chevron-down" color="white" />
+                        <Icon.ChevronDown color="white" />
                     </Item>
                 </DropDown>
             </Menu>
