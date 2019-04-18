@@ -117,7 +117,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.0.0",
-    "polished": "^2.3.3",
+    "polished": "^3.2.0",
     "react-responsive": "^6.1.1",
     "rxjs": "^6.4.0",
     "styled-css-grid": "^1.2.1"
