@@ -115,3 +115,4 @@ export {
     NormalizeCSS,
 } from './theme';
 export { Card } from './Card';
+export { Input } from './Form';
