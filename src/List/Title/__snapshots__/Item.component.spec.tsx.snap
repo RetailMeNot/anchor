@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Item should be defined 1`] = `
+<a
+  className="anchor-list-item sc-bdVaJa bqQbgH"
+  onMouseDown={[Function]}
+>
+  <span
+    className="anchor-typography sc-htpNat bMXwNw"
+    color="charcoal"
+  >
+    Item
+  </span>
+</a>
+`;

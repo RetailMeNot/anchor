@@ -8,17 +8,17 @@ import { Typography } from '../../Typography';
 // THEME
 import { colors, sizes, variables } from '../../theme';
 
-export interface ItemProps {
+export interface DividerProps {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
     active?: boolean;
-    value?: any;
+    value?: string | number;
     children?: any;
     className?: string;
 }
 
-const StyledItem = styled.a`
+const StyledDivider = styled.a`
     display: flex;
     border-radius: ${variables.borderRadius};
     padding: ${sizes.padding.sm} ${sizes.padding.md};
@@ -31,29 +31,29 @@ const StyledItem = styled.a`
     }
 `;
 
-const DefaultProps: ItemProps = {};
+const DefaultProps: DividerProps = {};
 
-export const Item = ({
+export const Divider = ({
     className,
     children,
     onSelect = () => null,
     onMouseOver = () => null,
     onMouseOut = () => null,
-    value,
     active,
+    value,
     ...props
-}: ItemProps = DefaultProps): React.ReactElement<any> => (
-    <StyledItem
+}: DividerProps = DefaultProps): React.ReactElement<any> => (
+    <StyledDivider
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
-        onMouseDown={() => onSelect(value)}
+        onMouseDown={() => onSelect(value ? value : children)}
         className={classNames('anchor-list-item', className, { active })}
         {...props}
     >
-        <Typography color="charcoal">{children}</Typography>
-    </StyledItem>
+        <Typography color="charcoal">{children ? children : value}</Typography>
+    </StyledDivider>
 );
 
-Item.defaultProps = DefaultProps;
+Divider.defaultProps = DefaultProps;
 
-export default Item;
+export default Divider;

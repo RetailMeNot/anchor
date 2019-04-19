@@ -12,20 +12,21 @@ import { colors } from '../theme';
 const { useState, useRef } = React;
 
 interface AutoCompleteProps {
-    dataSource: any[];
+    dataSource?: any[];
     className?: string;
     size?: 'sm' | 'md' | 'lg';
     placeholder?: string;
     value?: string | number;
-    resultsTitle?: string;
+    // TODO: resultTemplate
     // TODO: allowClear
     allowClear?: boolean;
     // Visual
     border?: boolean;
     background?: string;
     color?: string;
+    // TODO: Allow children
     // Children Components
-    children?: any;
+    // children?: any;
     suffix?: React.ReactElement<any>;
     prefix?: React.ReactElement<any>;
     // Event Handlers
@@ -76,16 +77,15 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
 export const AutoComplete = ({
     className,
     placeholder,
-    children,
+    // children,
     suffix,
     prefix,
-    dataSource,
+    dataSource = [],
     value = '',
     onFilter = () => null,
     onSelect = () => null,
     onChange = () => null,
     size = 'lg',
-    resultsTitle,
     border = true,
     background = colors.white.base,
     color = colors.charcoal.light,
@@ -97,20 +97,20 @@ export const AutoComplete = ({
     const [activeResultIndex, setActiveResultIndex] = useState<number>(-1);
     // TODO: the autocomplete itself doesn't have a value
     // The current search term
-    const [term, setTerm] = useState<string | number>(value);
+    const [term, setTerm] = useState<string>(value ? `${value}` : '');
     // Instance of the nested input
     const inputRef = useRef<any>();
     const resultsRef = useRef<any>();
 
     // Handle updating the search term
-    const changeSearchTerm = (newTerm: string | number) => {
+    const changeSearchTerm = (newTerm: string) => {
         // Fire external filter event
         onFilter(newTerm);
         // Update new term
         setTerm(newTerm);
     };
     // Handle updating the search term
-    const updateInputAndTerm = (newTerm: string | number) => {
+    const updateInputAndTerm = (newTerm: string) => {
         // Update the filter
         setTerm(newTerm);
         // Update the input
@@ -124,16 +124,17 @@ export const AutoComplete = ({
 
     // Handle updating the autocomplete value
     const changeActiveValue = (newValue: DataItem) => {
-        changeSearchTerm(newValue.value);
+        changeSearchTerm(newValue.label);
         // Fire External Select/Change Event
-        onSelect(newValue.value, newValue);
-        onChange(newValue.value, newValue);
+        onSelect(newValue.label, newValue);
+        onChange(newValue.label, newValue);
         // Update the input value
-        inputRef.current.update(newValue.value);
+        inputRef.current.update(newValue.label);
         inputRef.current.blur();
         // Reset the index
         setActiveResultIndex(0);
     };
+
     return (
         <StyledAutoComplete
             border={border}
@@ -151,7 +152,7 @@ export const AutoComplete = ({
                 placeholder={placeholder}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                onChange={(newValue: string | number) => {
+                onChange={(newValue: string) => {
                     changeSearchTerm(newValue);
                 }}
                 onKeyDown={(event: React.KeyboardEvent) => {
@@ -160,10 +161,12 @@ export const AutoComplete = ({
                         case EventKeyCodes.ENTER:
                             event.preventDefault();
                             event.stopPropagation();
-                            // Unset initialTerm
-                            resultsRef.current.clearInitialTerm();
-                            // Set the active value of the autocomplete
-                            changeActiveValue(dataSource[activeResultIndex]);
+                            if (isFocused) {
+                                // Unset initialTerm
+                                resultsRef.current.clearInitialTerm();
+                                // Set the active value of the autocomplete
+                                resultsRef.current.selectActive();
+                            }
                             break;
                         case EventKeyCodes.ARROW_DOWN:
                             event.preventDefault();
@@ -187,8 +190,8 @@ export const AutoComplete = ({
                 <ResultsContainer
                     ref={resultsRef}
                     initialIndex={activeResultIndex}
-                    emitSelectedItem={(a: DataItem) => {
-                        changeActiveValue(a);
+                    emitSelectedItem={(item: DataItem) => {
+                        changeActiveValue(item);
                     }}
                     emitActiveIndex={(i: number) => {
                         setActiveResultIndex(i);
@@ -196,7 +199,8 @@ export const AutoComplete = ({
                     emitActiveTerm={(newTerm: string) => {
                         updateInputAndTerm(newTerm);
                     }}
-                    dataSource={children || dataSource}
+                    dataSource={dataSource}
+                    term={term}
                 />
             )}
         </StyledAutoComplete>

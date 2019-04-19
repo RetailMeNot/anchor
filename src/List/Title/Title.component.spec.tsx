@@ -2,24 +2,16 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import ResultsContainer from './ResultsContainer.component';
+import Title from './Title.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = (
-    <ResultsContainer
-        term="a"
-        emitSelectedItem={() => true}
-        emitActiveIndex={() => true}
-        emitActiveTerm={() => true}
-        dataSource={[]}
-    />
-);
+const subject = <Title>Title</Title>;
 const wrapper = mount(subject);
 const component = shallow(subject);
 
-describe('Component: ResultsContainer', () => {
+describe('Component: Title', () => {
     it('should be defined', () => {
         /* tslint:disable */
         console.log(subject);

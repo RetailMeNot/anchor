@@ -9,7 +9,6 @@ import { AutoComplete } from './AutoComplete.component';
 import { Icon } from '../Icon';
 import { Grid, Cell } from '../Grid';
 import { Typography } from '../Typography';
-import { List, Item } from '../List';
 import { colors } from '../theme';
 // README
 import * as README from './README.md';
@@ -22,7 +21,7 @@ const StyledStory = styled.div`
 
 const { useState } = React;
 
-const tempDataSource = (newTerm: string | number) => {
+const tempDataStringSource = (newTerm: string | number) => {
     const newTermString = `${newTerm}`;
     return newTerm && newTermString.length
         ? [
@@ -37,7 +36,9 @@ const tempDataSource = (newTerm: string | number) => {
 };
 
 const StateBasedAutoCompleteStory = () => {
-    const [tempData, setTempData] = useState<string[]>(tempDataSource(''));
+    const [tempData, setTempData] = useState<string[]>(
+        tempDataStringSource('')
+    );
     return (
         <StyledStory>
             <Grid columns={1}>
@@ -46,7 +47,7 @@ const StateBasedAutoCompleteStory = () => {
                     <AutoComplete
                         placeholder="Search here..."
                         onFilter={(newTerm: any) => {
-                            setTempData(tempDataSource(newTerm));
+                            setTempData(tempDataStringSource(newTerm));
                         }}
                         prefix={<Icon color={colors.ash.base} type="search" />}
                         dataSource={tempData}
@@ -58,7 +59,9 @@ const StateBasedAutoCompleteStory = () => {
 };
 
 const StateBasedAutoCompleteStoryWithCustomResults = () => {
-    const [tempData, setTempData] = useState<string[]>(tempDataSource(''));
+    const [tempData, setTempData] = useState<string[]>(
+        tempDataStringSource('')
+    );
     return (
         <StyledStory>
             <Grid columns={1}>
@@ -67,15 +70,11 @@ const StateBasedAutoCompleteStoryWithCustomResults = () => {
                     <AutoComplete
                         placeholder="Search here..."
                         onFilter={(newTerm: any) => {
-                            setTempData(tempDataSource(newTerm));
+                            setTempData(tempDataStringSource(newTerm));
                         }}
                         prefix={<Icon color={colors.ash.base} type="search" />}
                         dataSource={tempData}
-                    >
-                        <List>
-                            <Item>1</Item>
-                        </List>
-                    </AutoComplete>
+                    />
                 </Cell>
             </Grid>
         </StyledStory>
@@ -88,7 +87,33 @@ storiesOf('Components/AutoComplete', module)
             sidebar: README,
         },
     })
-    .add('Default', () => <StateBasedAutoCompleteStory />)
+    .add('String Array Results', () => <StateBasedAutoCompleteStory />)
+    .add('Object Array Results', () => (
+        <StyledStory>
+            <Grid columns={1}>
+                <Cell width={1}>
+                    <Typography tag="h1">AutoComplete 1</Typography>
+                    <AutoComplete
+                        placeholder="Search here..."
+                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        dataSource={[
+                            { label: 'a', id: 1, isAdmin: true },
+                            { label: 'b', id: 2, isAdmin: false, listItemType: 'title' },
+                            { label: 'c', id: 3, isAdmin: true },
+                            { label: 'd', id: 3, isAdmin: true },
+                            { label: 'e', id: 3, isAdmin: true },
+                            { label: 'f', id: 3, isAdmin: true },
+                            { label: 'd', id: 3, isAdmin: true },
+                            { label: 'e', id: 3, isAdmin: true },
+                            { label: 'f', id: 3, isAdmin: true },
+                            { label: 'd', id: 3, isAdmin: true },
+                            { label: 'e', id: 3, isAdmin: true },
+                        ]}
+                    />
+                </Cell>
+            </Grid>
+        </StyledStory>
+    ))
     .add('Custom Results List', () => (
         <StateBasedAutoCompleteStoryWithCustomResults />
     ));

@@ -25,6 +25,7 @@ storiesOf('Components/AutoComplete/ResultsContainer', module)
         <StyledStory>
             <p>ResultsContainer 1</p>
             <ResultsContainer
+                term="a"
                 emitSelectedItem={() => true}
                 emitActiveIndex={() => true}
                 emitActiveTerm={() => true}
