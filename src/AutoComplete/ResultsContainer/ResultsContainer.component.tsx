@@ -215,7 +215,7 @@ export const ResultsContainer = forwardRef(
 
         useImperativeHandle(resultsContainerRef, () => ({
             setActiveIndex: (itemIndex: number) => {
-                setCurrentIndex(0);
+                setCurrentIndex(itemIndex);
             },
             clearInitialTerm: () => {
                 setInitialTerm('');
