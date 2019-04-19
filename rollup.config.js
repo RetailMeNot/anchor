@@ -34,6 +34,7 @@ const componentList = {
     dropdown: './src/DropDown/index.ts',
     form: './src/Form/index.ts',
     grid: './src/Grid/index.ts',
+    hero: './src/Hero/index.ts',
     layout: './src/Layout/index.ts',
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
@@ -121,8 +122,8 @@ const componentList = {
     tagadd: './src/Icon/Icons/TagAdd.component.tsx',
 };
 
-    
-    
+
+
 export default {
     input: componentList,
     output: [

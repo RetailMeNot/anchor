@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Hero should be defined 1`] = `
+<div
+  className="sc-bdVaJa hpYbHo"
+>
+  This is a hero!
+</div>
+`;

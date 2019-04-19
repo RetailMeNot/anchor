@@ -242,23 +242,27 @@ const ScaleTreatments = {
     `,
 };
 
-const StyledTypography = (as: Elements) => styled[as]`
+const StyledTypography = (element: Elements) => styled[element]`
     font-family: ${fonts.fontFamily};
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: ${({ color = 'inherit', hue = 'base' }: any) =>
         color === 'inherit' ? 'inherit' : colors[color][hue]};
+
     // Apply default styles for element
-    ${DefaultCSS[as]};
+    ${DefaultCSS[element]};
+
     // CSS Overrides
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
+
     // Override Size & Line Height
     font-weight: ${({ weight }: any) => (weight ? weight : null)};
+
     // Throw a warning that says you really shouldn't do this
     font-size: ${({ size }: any) => {
         if (size) {
