@@ -13,7 +13,7 @@ import Layout, {
 import { colors } from '../theme';
 import { Header } from './Header/Header.component';
 import { Footer } from './Footer/Footer.component';
-import { Page } from './Page/Page.component';
+import { Page } from './Page';
 // README
 import * as README from './README.md';
 

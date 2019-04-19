@@ -1,1 +1,6 @@
-export { default as AutoComplete } from './AutoComplete.component';
+export { AutoComplete } from './AutoComplete.component';
+export {
+    ResultsContainerProps,
+    DataItem,
+    ResultItemProps,
+} from './ResultsContainer/ResultsContainer.component';

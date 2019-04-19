@@ -2,12 +2,11 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { text } from '@storybook/addon-knobs';
+// import { text } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import Badge from './Badge.component';
-import Icon from '../Icon';
+import ResultsContainer from './ResultsContainer.component';
 // README
 import * as README from './README.md';
 // THEME
@@ -16,7 +15,7 @@ const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
-storiesOf('Components/Badge', module)
+storiesOf('Components/AutoComplete/ResultsContainer', module)
     .addParameters({
         readme: {
             sidebar: README,
@@ -24,9 +23,12 @@ storiesOf('Components/Badge', module)
     })
     .add('Default', () => (
         <StyledStory>
-            <p>Badge</p>
-            <Badge count={text('Badge QTY', '0')}>
-                <Icon.Cart />
-            </Badge>
+            <p>ResultsContainer 1</p>
+            <ResultsContainer
+                term="a"
+                emitSelectedItem={() => true}
+                emitActiveTerm={() => true}
+                dataSource={[]}
+            />
         </StyledStory>
     ));

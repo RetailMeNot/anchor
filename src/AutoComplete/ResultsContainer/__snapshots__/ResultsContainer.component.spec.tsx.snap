@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ResultsContainer should be defined 1`] = `
+<div
+  className="anchor-auto-complete-results-container sc-ifAKCX OaKqT"
+>
+  <div
+    className="anchor-list auto-complete-results sc-bxivhb cgDDEg"
+  />
+</div>
+`;

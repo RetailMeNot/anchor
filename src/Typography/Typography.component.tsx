@@ -18,6 +18,7 @@ type Elements =
     | 'blockquote'
     | 'address'
     | 'code'
+    | 'label'
     | 'pre';
 
 type Colors =
@@ -91,10 +92,11 @@ type DisplayValues =
 
 export interface TypographyProps {
     className?: string;
-    as?: Elements;
+    tag?: Elements;
+    htmlFor?: string;
     children?: any;
     weight?: FontWeights;
-    color?: Colors;
+    color?: 'inherit' | Colors;
     hue?: 'light' | 'base' | 'dark';
     size?: number;
     lineHeight?: number;
@@ -160,6 +162,11 @@ const DefaultCSS = {
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
             'Courier New', monospace;
     `,
+    label: css`
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    `,
 };
 
 const ScaleTreatments = {
@@ -223,7 +230,8 @@ const StyledTypography = (as: Elements) => styled[as]`
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
-    color: ${({ color = 'charcoal', hue = 'base' }: any) => colors[color][hue]};
+    color: ${({ color = 'inherit', hue = 'base' }: any) =>
+        color === 'inherit' ? 'inherit' : colors[color][hue]};
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
     // Override Size & Line Height
@@ -251,6 +259,8 @@ const StyledTypography = (as: Elements) => styled[as]`
             return null;
         }
     }};
+    margin: 0;
+    padding: 0;
 
     small {
         font-size: 87.5%;
@@ -260,10 +270,10 @@ const StyledTypography = (as: Elements) => styled[as]`
 export const Typography = ({
     className,
     children,
-    as = 'span',
+    tag = 'span',
     ...props
 }: TypographyProps): JSX.Element =>
-    React.createElement(StyledTypography(as), {
+    React.createElement(StyledTypography(tag), {
         children,
         className: classNames('anchor-typography', className),
         ...props,

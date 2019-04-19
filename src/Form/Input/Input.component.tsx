@@ -2,214 +2,337 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
-import { get } from '../../../utils';
+import styled, { css } from 'styled-components';
+// COMPONENTS
+import { Typography } from '../../Typography';
+import { Grid, Cell, CenteredCell } from '../../Grid';
+// UTILS
+import { get } from '../../../utils/get/get';
 // THEME
-import { fonts, colors, variables } from '../../theme';
+import { colors, fonts } from '../../theme';
+
+const { useState, forwardRef, useImperativeHandle } = React;
+
+type InputTypes =
+    // | 'button'
+    // | 'checkbox'
+    // | 'color'
+    // | 'date'
+    // | 'datetime-local'
+    | 'email'
+    // | 'file'
+    // | 'hidden'
+    // | 'image'
+    // | 'month'
+    | 'number'
+    // | 'password'
+    // | 'radio'
+    // | 'range'
+    // | 'reset'
+    // | 'search'
+    // | 'submit'
+    | 'tel'
+    | 'text';
+// | 'time'
+// | 'url'
+// | 'week'
+
+type InputContentType = string | number | any;
+type InputEventHandler = (
+    value?: InputContentType,
+    event?: KeyboardEvent
+) => any;
 
 interface InputProps {
+    // Identifiers
+    id?: string;
     className?: string;
-    inputType?: any;
-    label?: string;
-    placeholder?: string;
+    name?: string;
+    // Value Assignment
+    value?: InputContentType;
+    // Presentation
+    autoFocus?: boolean;
     disabled?: boolean;
-    defaultValue?: any;
-    value?: any;
-    onChange?: any;
-    // onFocus?: () => void;
-    // onBlur?: () => void;
-    validate?: (e: any) => void;
-    format?: (e: any) => void;
-
-    prefix?: any;
-    suffix?: any;
+    // fullWidth?: boolean;
+    readOnly?: boolean;
+    placeholder?: string;
+    label?: string;
+    // TODO: buttons?
+    prefix?: React.FunctionComponent<any> | JSX.Element;
+    suffix?: React.FunctionComponent<any> | JSX.Element;
+    size?: 'sm' | 'md' | 'lg';
+    type?: InputTypes;
+    // Overrides
+    inputProps?: any;
+    // Event Handlers
+    onChange?: InputEventHandler;
+    onBlur?: InputEventHandler;
+    onKeyDown?: InputEventHandler;
+    onKeyUp?: InputEventHandler;
+    onFocus?: InputEventHandler;
 }
 
-interface InputState {
-    isFocused?: boolean;
-    value: string;
-    errorMessage?: string;
-}
+const InputSizeDimensions = {
+    sm: css``,
+    md: css`
+        height: 3.125rem;
+        padding: 0.25rem;
 
-const baseFontWeight = 500;
-
-const StyledInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    font-family: ${fonts.fontFamily};
-
-    .input {
-        width: 100%;
-        height: 3rem;
-        position: relative;
-        display: flex;
-        flex-flow: row wrap;
-        border-radius: ${variables.borderRadius};
-        border: solid thin ${colors.ash.light};
-        opacity: ${({ disabled }: InputProps) => disabled && '0.5'};
-
-        &:active,
-        &:focus {
-            border-color: ${({ disabled }: InputProps) =>
-                disabled ? colors.ash.light : colors.ash.dark};
+        input {
+            height: 1rem;
+            font-size: 0.875rem;
         }
+    `,
+    lg: css`
+        height: 3.125rem;
+        padding: 0.25rem;
 
-        &.error-border {
-            border-color: ${colors.error.base};
+        input {
+            height: 1rem;
+            font-size: 1rem;
         }
-    }
+    `,
+};
 
-    .field-input {
-        flex: 1;
-        overflow: hidden;
-        width: 100%;
-        padding: ${({ prefix }: InputProps) =>
-            !prefix
-                ? '1.5rem 0 0.375rem .75rem'
-                : '1.5rem 0 0.375rem calc(1rem - 3px)'};
-        font-size: 0.875rem;
-        font-weight: ${baseFontWeight};
-        background: none;
-        z-index: 1;
-        border: none;
+const StyledInputWrapper = styled.div`
+    // Input Display Size
+    display: block;
+    position: relative;
+    border: solid thin ${colors.ash.light};
+    border-radius: 0.25rem;
+    cursor: text;
+    box-sizing: border-box;
+    min-width: 5rem;
+    width: 100%;
+    margin: 0;
+    // TODO: delete
+    overflow: hidden;
 
-        &:active,
-        &:focus {
-            outline: none;
-        }
-    }
+    ${({ size = 'md' }: InputProps) => InputSizeDimensions[size]};
 
-    .input-prefix {
-        padding-top: 1rem;
-        padding-left: 1rem;
-        z-index: 2;
-        flex: 0 0 1rem;
-    }
-
-    .field-label {
-        position: absolute;
-        margin-left: ${({ prefix }: InputProps) =>
-            !prefix ? '.75rem' : 'calc(3rem - 3px)'};
-        margin-top: calc(1rem - 1px);
-        top: 0;
-        /* TODO: kam figure out the theme to form*/
-        font-size: 0.875rem;
-        font-weight: ${baseFontWeight};
-        /* TODO: kam figure out how to standardize transitions within elements! */
-        transform-origin: 0 50%;
-        transition: all 200ms ease-in-out;
-        color: ${colors.ash.dark};
-        cursor: text;
-    }
-
-    .field-input:focus + .field-input:not([value='']) {
-        z-index: 2;
-        opacity: 1;
-    }
-
-    .field-input:focus + .field-label,
-    .field-input:not([value='']) + .field-label {
-        z-index: 2;
-        transform: scale(0.8) translateY(-0.75rem);
-        opacity: 0.75;
-        cursor: default;
-    }
-
-    .field-input:focus + .field-label + .placeholder {
-        display: block;
-        position: absolute;
-        margin-left: ${({ prefix }: InputProps) =>
-            !prefix ? '.75rem' : 'calc(3rem - 3px)'};
-        margin-top: 1.5rem;
-        top: 0;
-        font-size: 0.875rem;
-        font-weight: ${baseFontWeight};
+    ::placeholder {
+        font-family: ${fonts.fontFamily};
         color: ${colors.ash.dark};
     }
 
-    .placeholder,
-    .field-input:not([value='']) + .field-label + .placeholder {
-        display: none;
+    &.focus {
+        border-color: ${colors.ash.dark};
     }
 
-    .error {
-        margin-top: 0.5rem;
-        font-size: 0.75rem;
-        font-weight: ${baseFontWeight};
-        color: ${colors.error.base};
+    label {
+        transform-origin: left bottom;
+        height: 1.4rem;
+        transform: translate(0, 0.6rem) scale(1);
+        &.lift {
+            transform: translate(0, 0) scale(1);
+        }
     }
 `;
 
-export class Input extends React.Component<InputProps> {
-    static defaultProps: InputProps = {
-        inputType: 'text',
-        format: (input?: any) => input,
-    };
+const StyledReversedCell = styled(Cell)`
+    display: flex;
+    flex-flow: column-reverse;
+    padding: 0 0.25rem;
+    justify-content: center;
+`;
 
-    readonly state: InputState = {
-        value: '',
-    };
+const LabelPresent = css`
+    &:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
 
-    render(): React.ReactElement<Input> {
-        const { label, inputType, prefix, placeholder, disabled } = this.props;
+    ::-webkit-input-placeholder {
+        opacity: 0;
+        transition: inherit;
+    }
+`;
 
-        const { value, isFocused, errorMessage } = this.state;
+interface StyledInputProps {
+    hasLabel?: boolean;
+    name: string;
+    onBlur?: InputEventHandler;
+    onChange: InputEventHandler;
+    onFocus: InputEventHandler;
+    value: InputContentType;
+    type: InputTypes;
+    placeholder: InputContentType;
+}
 
+const StyledInput = styled.input<StyledInputProps>`
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    outline: none !important;
+    touch-action: manipulation;
+    -webkit-appearance: none;
+    background-color: transparent;
+    z-index: 1;
+    color: ${colors.charcoal.light};
+    // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
+    //transition: all 250ms;
+    font-family: ${fonts.fontFamily};
+    // Disable Number Spinners
+    &[type='number']::-webkit-inner-spin-button,
+    &[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &:placeholder-shown + label {
+        cursor: text;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    ${({ hasLabel = false }: any) => (hasLabel ? LabelPresent : null)};
+`;
+
+const eventTypeResolver = (
+    handler: (...args: any) => any,
+    event: React.FocusEvent<Element> | React.ChangeEvent<HTMLInputElement>,
+    type: InputTypes
+) => {
+    const inputValue = get(event, 'target.value');
+    switch (type) {
+        case 'number':
+            handler(inputValue ? parseFloat(inputValue) : null, event);
+            break;
+        case 'text':
+            handler(inputValue, event);
+            break;
+        default:
+            handler(inputValue, event);
+            break;
+    }
+};
+
+const prefixAndSuffixDimensions = '1.5rem';
+
+const InputLayouts = {
+    prefix: `${prefixAndSuffixDimensions} 1fr`,
+    suffix: `1fr ${prefixAndSuffixDimensions}`,
+    both: `${prefixAndSuffixDimensions} 1fr ${prefixAndSuffixDimensions}`,
+    neither: `1fr`,
+};
+
+export const Input = forwardRef(
+    (
+        {
+            className,
+            onBlur = () => null,
+            onKeyDown = () => null,
+            onKeyUp = () => null,
+            onChange = () => null,
+            onFocus = () => null,
+            type = 'text',
+            placeholder,
+            name = 'input',
+            label,
+            prefix,
+            suffix,
+            value,
+            size,
+            id,
+        }: InputProps,
+        ref: React.RefObject<any>
+    ) => {
+        const inputRef = React.createRef<HTMLInputElement>();
+        const [inputValue, setInputValue] = useState<string | number>(value);
+        const [focus, setFocus] = useState<boolean>(false);
+
+        useImperativeHandle(ref, () => ({
+            update: (newValue: InputContentType) => setInputValue(newValue),
+            blur: () => (inputRef.current ? inputRef.current.blur() : null),
+        }));
+
+        // TODO: Doc this
+        let inputLayout = InputLayouts.neither;
+        if (prefix && suffix) {
+            inputLayout = InputLayouts.both;
+        } else if (prefix) {
+            inputLayout = InputLayouts.prefix;
+        } else if (suffix) {
+            inputLayout = InputLayouts.suffix;
+        }
         return (
-            <StyledInput prefix={prefix} disabled={disabled}>
-                <div
-                    className={classNames('anchor-input', {
-                        ['error-border']: !isFocused && errorMessage,
-                    })}
-                >
-                    {prefix &&
-                        React.cloneElement(prefix, {
-                            height: 16,
-                            width: 16,
-                            color: colors.ash.dark,
-                            className: 'input-prefix',
-                        })}
-                    <input
-                        type={inputType}
-                        disabled={disabled}
-                        onFocus={() =>
-                            this.setState({ ...this.state, isFocused: true })
-                        }
-                        onBlur={() =>
-                            this.setState({ ...this.state, isFocused: false })
-                        }
-                        onChange={(
-                            event: React.ChangeEvent<HTMLInputElement>
-                        ) => this.handleChange(event)}
-                        value={value}
-                        className="field-input"
-                    />
-                    <label className="field-label">{label}</label>
-                    {placeholder && (
-                        <div className="placeholder">{placeholder}</div>
-                    )}
-                </div>
-                {!isFocused && errorMessage && (
-                    <div className="error">{errorMessage}</div>
-                )}
-            </StyledInput>
+            <StyledInputWrapper
+                size={size}
+                onClick={() => {
+                    const { current } = inputRef;
+                    if (current) {
+                        current.focus();
+                    }
+                }}
+                className={classNames('anchor-input', className, {
+                    focus,
+                })}
+            >
+                <Grid columns={inputLayout} gap="0" minRowHeight="2.5rem">
+                    {prefix && <CenteredCell>{prefix}</CenteredCell>}
+                    <StyledReversedCell>
+                        <StyledInput
+                            ref={inputRef}
+                            id={id}
+                            hasLabel={!!label}
+                            name={name}
+                            onBlur={(event: React.FocusEvent) => {
+                                eventTypeResolver(onBlur, event, type);
+                                setFocus(false);
+                            }}
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => {
+                                const {
+                                    target: { value: currentValue },
+                                } = event;
+                                setInputValue(currentValue);
+                                eventTypeResolver(onChange, event, type);
+                            }}
+                            onKeyDown={(event: React.KeyboardEvent) => {
+                                onKeyDown(event);
+                            }}
+                            onKeyUp={(event: React.KeyboardEvent) => {
+                                onKeyUp(event);
+                            }}
+                            onFocus={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => {
+                                eventTypeResolver(onFocus, event, type);
+                                setFocus(true);
+                            }}
+                            value={inputValue}
+                            type={type}
+                            placeholder={placeholder}
+                        />
+                        {label && (
+                            <Typography
+                                color="ash"
+                                hue="dark"
+                                scale={
+                                    focus ||
+                                    (inputValue && `${inputValue}`.length)
+                                        ? 12
+                                        : 14
+                                }
+                                htmlFor={name}
+                                tag="label"
+                                className={classNames({
+                                    lift:
+                                        focus ||
+                                        (inputValue && `${inputValue}`.length),
+                                })}
+                            >
+                                {label}
+                            </Typography>
+                        )}
+                    </StyledReversedCell>
+                    {suffix && <CenteredCell>{suffix}</CenteredCell>}
+                </Grid>
+            </StyledInputWrapper>
         );
     }
-
-    private handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
-        const value = get(event, 'target.value', '');
-
-        const errorMessage =
-            this.props.validate && value && this.props.validate(value);
-        // TODO: consider removing strictNullChecks to enable defaultProps of functions
-        this.setState({
-            value: this.props.format ? this.props.format(value) : undefined,
-            errorMessage,
-        });
-        if (this.props.onChange) {
-            this.props.onChange(value);
-        }
-    }
-}
+);
 
 export default Input;

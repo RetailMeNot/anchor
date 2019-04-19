@@ -5,15 +5,15 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import Item from './Item.component';
+import Title from './Title.component';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
-storiesOf('Components/List/Item', module).add('Primary', () => (
+storiesOf('Components/List/Title', module).add('Primary', () => (
     <StyledStory>
-        <p>Item</p>
-        <Item>Item 1</Item>
+        <p>Title</p>
+        <Title>Title 1</Title>
     </StyledStory>
 ));

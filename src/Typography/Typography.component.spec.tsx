@@ -30,7 +30,7 @@ describe('Component: Typography', () => {
             'pre',
         ].forEach((element: any) => {
             expect(
-                mount(<Typography as={element}>Test text</Typography>).exists(
+                mount(<Typography tag={element}>Test text</Typography>).exists(
                     element
                 )
             ).toBeTruthy();

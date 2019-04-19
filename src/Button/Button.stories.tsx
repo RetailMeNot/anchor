@@ -25,7 +25,7 @@ storiesOf('Components/Button', module)
         <StyledStory>
             <Button
                 disabled={boolean('Disabled', false)}
-                onClick={action('onClick')}
+                onClick={action('onSelect')}
             >
                 {text('Button Label', 'Story Button')}
             </Button>

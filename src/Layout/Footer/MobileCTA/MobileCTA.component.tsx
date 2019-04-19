@@ -169,11 +169,11 @@ export const MobileCTA = ({
             </Cell>
             <CenteredCell>
                 <div>
-                    <Typography as="p" className="cta-caption">
+                    <Typography tag="p" className="cta-caption">
                         Get Savings on the go!
                     </Typography>
                     <Typography
-                        as="p"
+                        tag="p"
                         className="cta-caption"
                         weight={600}
                         color="savvyCyan"

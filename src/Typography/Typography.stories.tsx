@@ -40,21 +40,23 @@ storiesOf('Components/Typography', module)
     })
     .add('Default', () => (
         <StyledStory>
-            <Typography as="h1">Scales</Typography>
+            <Typography tag="h1">Scales</Typography>
             <Grid columns="100%" minRowHeight="50px" gap="16px">
                 {scales.map((scale: any) => (
                     <Cell key={scale}>
-                        <Typography scale={scale}>
+                        <Typography color="ash" scale={scale}>
                             Font size is {scale}px | Scale value = {scale}
                         </Typography>
                     </Cell>
                 ))}
             </Grid>
-            <Typography as="h1">Elements</Typography>
+            <Typography tag="h1">Elements</Typography>
             <Grid columns="100%" minRowHeight="50px" gap="16px">
                 {elements.map((element: any) => (
                     <Cell key={element}>
-                        <Typography as={element}>Element: {element}</Typography>
+                        <Typography hue="dark" tag={element}>
+                            Element: {element}
+                        </Typography>
                     </Cell>
                 ))}
             </Grid>

@@ -30,7 +30,7 @@ export const StyledIcon = styled.div`
     background-color: transparent;
     z-index: 2;
 
-    > svg {
+    svg {
         flex: 0 0 auto;
     }
 `;

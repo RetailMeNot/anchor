@@ -41,7 +41,7 @@ export const Badge = ({
         {...props}
     >
         {children}
-        <StyledBadge>{count}</StyledBadge>
+        <StyledBadge>{count || '•'}</StyledBadge>
     </StyledBadgeContainer>
 );
 

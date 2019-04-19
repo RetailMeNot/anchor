@@ -5,9 +5,9 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import Menu from './Menu.component';
+import { Menu } from './Menu.component';
 import { Item } from './Item';
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 // README
 import * as README from './README.md';
 

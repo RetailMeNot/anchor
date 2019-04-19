@@ -2,18 +2,16 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import AutoComplete from './AutoComplete.component';
+import Divider from './Divider.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = (
-    <AutoComplete dataSource={[{ value: 1, label: 'Result Item 1' }]} />
-);
+const subject = <Divider />;
 const wrapper = mount(subject);
 const component = shallow(subject);
 
-describe('Component: AutoComplete', () => {
+describe('Component: Divider', () => {
     it('should be defined', () => {
         /* tslint:disable */
         console.log(subject);

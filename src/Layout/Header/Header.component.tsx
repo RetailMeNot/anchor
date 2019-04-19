@@ -15,7 +15,7 @@ import {
     CenteredCell,
 } from '../../Grid';
 import { DropDown } from '../../DropDown';
-import Icon from '../../Icon';
+import { Icon } from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
@@ -106,7 +106,7 @@ const MobileMenu = () => (
             <AutoComplete
                 prefix={<Icon.Search />}
                 placeholder="Stores, brands, categories, etc…"
-                dataSource={[1, 2, 3, 4, 5]}
+                dataSource={[{ value: 1, label: 'Result Item 1' }]}
             />
         </CenteredCell>
         <CenteredCell>
@@ -130,10 +130,10 @@ const DesktopMenu = () => (
         </Cell>
         <CenteredCell>
             <AutoComplete
-                size="large"
+                size="lg"
                 prefix={<Icon.Search />}
                 placeholder="Stores, brands, categories, etc…"
-                dataSource={[1, 2, 3, 4, 5]}
+                dataSource={[{ value: 1, label: 'Result Item 1' }]}
             />
         </CenteredCell>
         <Cell>

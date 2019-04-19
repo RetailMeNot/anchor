@@ -4,42 +4,65 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
-// THEME
-import { fonts, colors, sizes } from '../theme';
+import { Item } from './Item';
+import { Title } from './Title';
+import { Divider } from './Divider';
+// UTILS
+import { filterChildrenByType } from '../../utils/filterChildrenByType/filterChildrenByType';
+// import { get } from '../../utils/get/get';
+
+export type ListItemType = 'item' | 'title' | 'divider';
+
+type ListItem = {
+    label: string;
+    value: {
+        listItemType?: ListItemType;
+        [key: string]: any;
+    };
+};
 
 interface ListProps {
     className?: string;
     children?: any;
-    title?: string;
     hidden?: boolean;
+    items?: ListItem[];
 }
 
+const itemComponent = {
+    item: Item,
+    title: Title,
+    divider: Divider,
+};
+
 const StyledList = styled.div`
-    .title {
-        margin: 0;
-        padding: ${sizes.padding.md};
-        font-family: ${fonts.fontFamily};
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: ${colors.ash.dark};
-        line-height: 0.75rem;
-    }
+    box-sizing: border-box;
 `;
 
-const DefaultProps: ListProps = {};
-
-export const List: React.SFC<ListProps> = ({
+export const List: React.FunctionComponent<ListProps> = ({
     className,
-    children,
-    title,
+    children = [],
+    items,
     ...props
-}: ListProps = DefaultProps): React.ReactElement<any> => (
+}: ListProps): React.ReactElement<any> => (
     <StyledList className={classNames('anchor-list', className)} {...props}>
-        {title && <p className="title">{title}</p>}
-        {children}
+        {items
+            ? items.map(
+                  (
+                      {
+                          label,
+                          value: { listItemType = 'item', key, ...r },
+                      }: ListItem,
+                      index: number
+                  ) => {
+                      return React.createElement<any>(
+                          itemComponent[listItemType],
+                          { label, key, ...r },
+                          label
+                      );
+                  }
+              )
+            : filterChildrenByType(children, ['Item', 'Title', 'Divider'])}
     </StyledList>
 );
-
-List.defaultProps = DefaultProps;
 
 export default List;

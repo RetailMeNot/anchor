@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { Card } from './Card.component';
 import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 import { colors, fonts } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
