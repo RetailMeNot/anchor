@@ -4,7 +4,7 @@ import * as renderer from 'react-test-renderer';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 // COMPONENT
-import {Hero} from './Hero.component';
+import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
 // TEST SETUP
