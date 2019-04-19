@@ -1,21 +1,2390 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Icon should match its snapshot 1`] = `
+exports[`Component: Icon should render out a AddEvent 1`] = `
 <div
-  className="anchor-icon sc-bdVaJa irKuKD"
+  className="anchor-icon add-event sc-bdVaJa jmGsuc"
 >
   <svg
     height={16}
-    viewBox="0 0 17 12"
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.333 12.667H14v-1.333c0-.367-.3-.667-.667-.667-.366 0-.666.3-.666.667v1.333h-1.334c-.366 0-.666.3-.666.667 0 .366.3.666.666.666h1.334v1.334c0 .366.3.666.666.666.367 0 .667-.3.667-.666V14h1.333c.367 0 .667-.3.667-.666 0-.367-.3-.667-.667-.667m-.666-7.333H1.333v-2c0-.368.299-.667.668-.667h1.332v.667c0 .366.3.666.667.666a.67.67 0 0 0 .667-.666v-.667h7.212v.667c0 .366.3.666.666.666.367 0 .667-.3.667-.666v-.667h.787c.369 0 .668.299.668.667v2zm0 3.333c0 .367.3.667.666.667.367 0 .667-.3.667-.667V2a.667.667 0 0 0-.667-.666h-2.121V.667A.67.67 0 0 0 12.545 0a.67.67 0 0 0-.666.667v.667H4.667V.667A.67.67 0 0 0 4 0a.67.67 0 0 0-.667.667v.667H.667A.666.666 0 0 0 0 2v13.334c0 .368.298.666.667.666h8c.366 0 .666-.3.666-.666 0-.367-.3-.667-.666-.667H2.001A.668.668 0 0 1 1.333 14V6.667h13.334v2z"
+      fill="#222"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ArrowBack 1`] = `
+<div
+  className="anchor-icon arrow-forward sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M13.666 8.25H2.333a.585.585 0 0 1-.583-.583c0-.322.262-.584.583-.584h11.333a.584.584 0 0 1 0 1.167z"
+        />
+        <path
+          d="M7.412 3.062a.25.25 0 0 1 0 .353L2.748 8.08a.587.587 0 0 1-.828 0 .587.587 0 0 1 0-.827l4.664-4.664a.585.585 0 0 1 .828.827.25.25 0 1 1 0-.353z"
+        />
+        <path
+          d="M1.923 8.08a.586.586 0 0 1 0-.826.586.586 0 0 1 .827 0l4.665 4.665a.585.585 0 0 1-.826.827L1.922 8.081z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ArrowForward 1`] = `
+<div
+  className="anchor-icon arrow-forward sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M16 0H0v16h16z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M2.334 8.25h11.333c.32 0 .583-.262.583-.583a.585.585 0 0 0-.583-.584H2.334a.584.584 0 0 0 0 1.167z"
+        />
+        <path
+          d="M8.588 3.062a.25.25 0 0 0 0 .353l4.664 4.664c.227.228.6.228.828 0a.587.587 0 0 0 0-.827L9.415 2.588a.585.585 0 0 0-.828.827.25.25 0 1 0 0-.353z"
+        />
+        <path
+          d="M14.077 8.08a.586.586 0 0 0 0-.826.586.586 0 0 0-.827 0L8.585 11.92a.585.585 0 0 0 .826.827l4.666-4.665z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Avatar 1`] = `
+<div
+  className="anchor-icon avatar sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M8 14.333A6.333 6.333 0 1 0 8 1.667a6.333 6.333 0 0 0 0 12.666zm0 1A7.333 7.333 0 1 1 8 .667a7.333 7.333 0 0 1 0 14.666z"
+        />
+        <path
+          d="M5.25 14.8a7.359 7.359 0 0 1-3.313-2.673c.306-1.504 1.579-2.665 3.173-2.888.223.335.505.632.837.877.595.44 1.306.684 2.053.684.729 0 1.424-.23 2.01-.649.353-.252.651-.563.885-.916 1.583.214 2.86 1.383 3.168 2.892A7.359 7.359 0 0 1 10.75 14.8H5.249z"
+        />
+        <path
+          d="M8 4.667a2.667 2.667 0 0 0-2.667 2.667c0 .88.432 1.654 1.09 2.139C6.864 9.8 7.406 10 8 10a2.65 2.65 0 0 0 1.546-.5 2.66 2.66 0 0 0 1.12-2.166A2.667 2.667 0 0 0 8 4.667z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a AvatarOutline 1`] = `
+<div
+  className="anchor-icon avatar-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M8 14.333A6.333 6.333 0 1 0 8 1.667a6.333 6.333 0 0 0 0 12.666zm0 1A7.333 7.333 0 1 1 8 .667a7.333 7.333 0 0 1 0 14.666z"
+        />
+        <path
+          d="M2.667 13.033a7.364 7.364 0 0 1-.882-1.138C2.22 10.223 3.797 9 5.671 9h.82l.238.143a2.451 2.451 0 0 0 2.548 0L9.515 9h.855c1.846 0 3.411 1.227 3.845 2.895-.257.408-.552.79-.882 1.138v-.204c0-1.56-1.329-2.829-2.963-2.829h-.578a3.451 3.451 0 0 1-3.579 0h-.542c-1.675 0-3.004 1.27-3.004 2.829v.204zM5.807 15h4.385A7.33 7.33 0 0 1 8 15.333 7.33 7.33 0 0 1 5.808 15z"
+        />
+        <path
+          d="M8 4.5A2.5 2.5 0 0 0 5.5 7c0 .8.383 1.533 1.022 2.005.434.32.943.495 1.478.495a2.48 2.48 0 0 0 1.448-.47A2.492 2.492 0 0 0 10.5 7 2.5 2.5 0 0 0 8 4.5zm0-1A3.5 3.5 0 0 1 11.5 7a3.492 3.492 0 0 1-1.47 2.844A3.48 3.48 0 0 1 8 10.5c-.753 0-1.47-.246-2.072-.69A3.486 3.486 0 0 1 4.5 7 3.5 3.5 0 0 1 8 3.5z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a BarCode 1`] = `
+<div
+  className="anchor-icon bar-code sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M2.881 10h-.097A.786.786 0 0 1 2 9.215V2.796c0-.433.352-.784.785-.784h.097c.434 0 .785.351.785.784v6.42a.785.785 0 0 1-.785.784zm2.536 0A.417.417 0 0 1 5 9.583V2.428a.417.417 0 0 1 .833 0v7.155c0 .23-.187.417-.417.417zm2.63 0h-.096a.786.786 0 0 1-.785-.785V2.796c0-.433.352-.784.785-.784h.097c.434 0 .785.351.785.784v6.42a.785.785 0 0 1-.785.784zm2.536 0a.417.417 0 0 1-.417-.417V2.428a.417.417 0 0 1 .834 0v7.155c0 .23-.187.417-.417.417zm2.632 0h-.097a.785.785 0 0 1-.785-.785V2.796c0-.433.35-.784.785-.784h.097c.434 0 .785.351.785.784v6.42a.785.785 0 0 1-.785.784zm1.723.673a.267.267 0 0 1-.266.266H1.327a.266.266 0 0 1-.265-.266V1.327c0-.146.118-.265.265-.265h13.345c.147 0 .266.119.266.265v9.346zM14.672 0H1.327C.595 0 0 .596 0 1.327v9.346C0 11.404.595 12 1.327 12h13.345A1.33 1.33 0 0 0 16 10.673V1.327A1.33 1.33 0 0 0 14.672 0z"
+        id="bar-code-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        transform="translate(0 2)"
+        xlinkHref="#bar-code-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a BulletList 1`] = `
+<div
+  className="anchor-icon bullet-list sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0-1h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M1 2v1h1V2H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5.5 12h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1zM5.5 7h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM5.5 2h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM1 7v1h1V7H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM1 12v1h1v-1H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Calendar 1`] = `
+<div
+  className="anchor-icon calendar sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M13.069 11.586h1.598V9.84h-1.598v1.747zm0 3.086h1.598V12.92h-1.598v1.753zm-2.932 0h1.593V12.92h-1.593v1.753zm-2.932 0h1.593V12.92H7.205v1.753zm-2.933 0h1.593V12.92H4.272v1.753zm-2.272 0a.668.668 0 0 1-.66-.667V12.92h1.592v1.753H2zm-.66-3.086h1.593V9.84H1.34v1.747zm0-3.08h1.593v-1.79H1.34v1.79zm0-5.113A.67.67 0 0 1 2 2.737h1.34v.667a.666.666 0 0 0 .583.742.669.669 0 0 0 .746-.742v-.667h7.199v.667c0 .367.3.666.67.666.37 0 .67-.299.67-.666v-.667h.8a.67.67 0 0 1 .67.667l-.011 1.978H1.34V3.393zm11.729 5.113h1.598v-1.79h-1.598v1.79zm-2.932 0h1.593v-1.79h-1.593v1.79zm0 3.08h1.593V9.84h-1.593v1.747zm-2.932 0h1.593V9.84H7.205v1.747zm-2.933 0h1.593V9.84H4.272v1.747zm2.933-3.08h1.593v-1.79H7.205v1.79zm-2.933 0h1.593v-1.79H4.272v1.79zm11.725-6.435c0-.368-.3-.667-.67-.667h-2.1V.748a.667.667 0 0 0-.67-.666.666.666 0 0 0-.669.666v.667H4.659V.748a.67.67 0 0 0-1.33-.163c-.006.054 0 .83 0 .83H.67a.668.668 0 0 0-.67.656V15.33c0 .368.3.666.67.666h14.581a.669.669 0 0 0 .746-.58c.007-.054 0-13.344 0-13.344z"
+        id="calendar-a"
+      />
+    </defs>
+    <use
+      fill="#222"
+      fillRule="evenodd"
+      xlinkHref="#calendar-a"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Camera 1`] = `
+<div
+  className="anchor-icon camera sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M4.366 3.14a1.267 1.267 0 0 1-1.259 1.127H1.333A.733.733 0 0 0 .6 5v8.667c0 .405.328.733.733.733h13.334a.733.733 0 0 0 .733-.733V5a.733.733 0 0 0-.733-.733h-1.774a1.267 1.267 0 0 1-1.259-1.127l-.099-.888a.733.733 0 0 0-.728-.652H5.193a.733.733 0 0 0-.728.652l-.1.888z"
+        stroke="#222"
+        strokeWidth="1.2"
+      />
+      <path
+        d="M10.133 9A2.137 2.137 0 0 0 8 6.867 2.137 2.137 0 0 0 5.867 9c0 1.175.958 2.133 2.133 2.133A2.137 2.137 0 0 0 10.133 9zm1.2 0A3.337 3.337 0 0 1 8 12.333 3.337 3.337 0 0 1 4.667 9 3.337 3.337 0 0 1 8 5.667 3.337 3.337 0 0 1 11.333 9z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Cart 1`] = `
+<div
+  className="anchor-icon cart sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CashBack 1`] = `
+<div
+  className="anchor-icon cash-back sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 4.038c.352 0 .636.273.636.61v.673c.533.096 1.01.308 1.356.619.257.232.27.619.029.865a.654.654 0 0 1-.9.027c-.24-.215-.668-.35-1.121-.35-.777 0-1.272.363-1.272.612 0 .199 0 .61 1.272.61 1.877 0 2.545.948 2.545 1.835 0 .868-.801 1.57-1.91 1.77v.674a.624.624 0 0 1-.635.612.624.624 0 0 1-.636-.612v-.672c-.533-.095-1.01-.307-1.356-.62a.594.594 0 0 1-.03-.863.652.652 0 0 1 .9-.027c.24.215.67.349 1.122.349.777 0 1.273-.362 1.273-.611 0-.506-.692-.611-1.273-.611-2.215 0-2.545-1.15-2.545-1.834 0-.868.8-1.572 1.909-1.771v-.674c0-.338.284-.611.636-.611zm7.897 3.029c.862 5.226-3.803 9.688-9.25 8.825C3.374 15.375.73 12.869.135 9.733a7.39 7.39 0 0 1 .329-3.986c.17-.453.538-.71 1.014-.557.7.227.396.92.396.92a6.042 6.042 0 0 0-.314 3.341c.495 2.663 2.804 4.764 5.598 5.1 4.202.507 7.76-2.84 7.356-6.856-.216-2.152-1.66-4.045-3.675-5.007a6.496 6.496 0 0 0-4.088-.54 6.64 6.64 0 0 0-2.283.884l1.433.285a.7.7 0 0 1 .565.826.7.7 0 0 1-.313.443.772.772 0 0 1-.231.09c-.024.005-.048.007-.073.01-.032.004-.062.014-.094.014a.76.76 0 0 1-.15-.015l-2.524-.503-.324-.064a.699.699 0 0 1-.564-.822v-.003l.046-.213.545-2.524a.652.652 0 0 1 .107-.24c.016-.023.038-.041.057-.062a.75.75 0 0 1 .126-.119C3.1.117 3.13.104 3.16.089a.803.803 0 0 1 .15-.058.595.595 0 0 1 .104-.018C3.44.01 3.467 0 3.494 0a.731.731 0 0 1 .609.315.671.671 0 0 1 .105.524l-.176.815A8.172 8.172 0 0 1 5.649.972 8.338 8.338 0 0 1 9.058.699c3.457.433 6.293 3.061 6.839 6.368z"
+        id="cashback-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#cashback-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Chat 1`] = `
+<div
+  className="anchor-icon chat sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.092 14.41a2.781 2.781 0 0 1-.738-.416.672.672 0 0 0-.77-.048 4.99 4.99 0 0 1-2.607.721c-1.992 0-3.715-1.133-4.384-2.757.352.054.707.09 1.068.09 2.968 0 5.482-1.841 6.341-4.375 1.035.75 1.659 1.857 1.659 3.042 0 .714-.222 1.416-.645 2.029a.67.67 0 0 0-.117.378c0 .164.014.717.193 1.336M3.354 9.731a.67.67 0 0 0-.424.151 3.34 3.34 0 0 1-1.001.544 5.763 5.763 0 0 0 .266-1.675.661.661 0 0 0-.115-.372A4.248 4.248 0 0 1 1.339 6c0-2.573 2.388-4.666 5.322-4.666 2.884 0 5.239 2.019 5.321 4.53-.082 2.662-2.437 4.803-5.321 4.803a5.526 5.526 0 0 1-2.95-.833.671.671 0 0 0-.357-.103m11.889 3.532A4.874 4.874 0 0 0 16 10.667c0-1.803-1.029-3.459-2.703-4.437.003-.03.009-.059.011-.09a.646.646 0 0 0 .014-.14l-.001-.137.001-.143a.67.67 0 0 0-.016-.15C13.06 2.462 10.174 0 6.661 0 2.988 0 0 2.692 0 6c0 1.033.293 2.045.851 2.939-.03.557-.195 1.436-.669 1.938A.664.664 0 0 0 .67 12c.067 0 1.477-.01 2.723-.808.22.118.448.218.679.311C4.62 14.094 7.08 16 9.977 16c1.028 0 2.028-.24 2.919-.699 1.12.691 2.376.699 2.435.699a.668.668 0 0 0 .483-1.128c-.398-.412-.54-1.136-.571-1.609"
+        id="chat-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#chat-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Check 1`] = `
+<div
+  className="anchor-icon check sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M14.627 5.133l-7.637 7.5a1.282 1.282 0 0 1-1.8 0l-3.817-3.75a1.235 1.235 0 0 1 0-1.768 1.288 1.288 0 0 1 1.799 0L6.09 9.982l6.737-6.617a1.291 1.291 0 0 1 1.8 0c.496.488.496 1.28 0 1.768"
+        fill="#222"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CheckSmall 1`] = `
+<div
+  className="anchor-icon check-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M2 2h12v12H2z"
+      />
+      <path
+        d="M11.966 6.454l-4.364 4.5a.965.965 0 0 1-.693.296.97.97 0 0 1-.694-.297l-2.182-2.25a1.017 1.017 0 0 1 0-1.408.961.961 0 0 1 1.387 0L6.91 8.83l3.67-3.785a.963.963 0 0 1 1.387 0c.379.39.379 1.02 0 1.41l-.179-.175.18.174z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronDown 1`] = `
+<div
+  className="anchor-icon chevron-down sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 8.478l2.954-2.517a.77.77 0 0 1 1.058 0l.014.015a.721.721 0 0 1-.009 1.052L8.53 10.04a.767.767 0 0 1-1.048.008L3.975 7.02a.719.719 0 0 1-.001-1.042l.015-.015a.767.767 0 0 1 1.048-.01L8 8.477z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
+<div
+  className="anchor-icon chevron-down-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 8.276l2.172-1.852a.64.64 0 0 1 .88.001l.011.01c.25.24.25.634-.01.882L8.44 9.575a.637.637 0 0 1-.87.008L4.938 7.308a.602.602 0 0 1-.001-.872l.012-.01a.637.637 0 0 1 .87-.011L8 8.275z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronLeft 1`] = `
+<div
+  className="anchor-icon chevron-left sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
+<div
+  className="anchor-icon chevron-left-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M2 14h12V2H2z"
+      />
+      <path
+        d="M9.575 5.828a.64.64 0 0 0 0-.88l-.011-.01a.604.604 0 0 0-.881.009L6.425 7.56a.637.637 0 0 0-.009.87l2.275 2.633c.24.25.634.25.872 0l.012-.012a.637.637 0 0 0 .01-.869L7.724 8l1.851-2.172z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronRight 1`] = `
+<div
+  className="anchor-icon chevron-right sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
+<div
+  className="anchor-icon chevron-right-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M2 14h12V2H2z"
+      />
+      <path
+        d="M8.276 8l-1.851 2.172a.64.64 0 0 0 0 .88l.011.01c.24.25.634.25.881-.009L9.575 8.44a.637.637 0 0 0 .009-.87L7.309 4.937a.602.602 0 0 0-.872 0l-.011.011a.637.637 0 0 0-.01.87L8.275 8z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronUp 1`] = `
+<div
+  className="anchor-icon chevron-up sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 7.523l2.954 2.518a.77.77 0 0 0 1.058-.001l.014-.014a.721.721 0 0 0-.009-1.052L8.53 5.96a.767.767 0 0 0-1.048-.009l-3.506 3.03a.719.719 0 0 0-.001 1.043l.015.015a.767.767 0 0 0 1.048.01L8 7.523z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
+<div
+  className="anchor-icon chevron-up-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M2 2h12v12H2z"
+      />
+      <path
+        d="M8 7.724L5.827 9.576a.64.64 0 0 1-.88-.001l-.011-.01a.604.604 0 0 1 .01-.882L7.56 6.425a.637.637 0 0 1 .87-.008l2.632 2.275c.25.239.25.633.001.872l-.012.01a.637.637 0 0 1-.87.011L8 7.725z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Clock 1`] = `
+<div
+  className="anchor-icon clock sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 13.667A5.673 5.673 0 0 1 2.333 8 5.673 5.673 0 0 1 8 2.334 5.673 5.673 0 0 1 13.667 8 5.673 5.673 0 0 1 8 13.667M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8z"
+        id="clock-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#clock-a"
+      />
+      <path
+        d="M10.328 8.667h-2v-3c0-.367-.3-.667-.667-.667-.366 0-.666.3-.666.667v3.667c0 .366.3.666.666.666h2.667c.367 0 .667-.3.667-.666 0-.367-.3-.667-.667-.667z"
+        fill="#222"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Close 1`] = `
+<div
+  className="anchor-icon close sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z"
+        />
+        <path
+          d="M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CloseSmall 1`] = `
+<div
+  className="anchor-icon close-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M9.501 9.734L6.075 6.309c-.083-.084-.1-.205-.036-.269l.001-.001c.064-.064.185-.047.269.036l3.425 3.426c.084.084.1.205.037.268l-.001.002c-.064.064-.185.047-.269-.037"
+        fill="#FFF"
+        stroke="#222"
+        strokeWidth=".8"
+      />
+      <path
+        d="M10.017 6.591L6.59 10.017c-.225.226-.594.276-.81.057l-.025-.022c-.24-.24-.189-.608.037-.834l3.425-3.425c.225-.226.595-.277.811-.058l.025.023c.24.24.188.607-.037.833l-.283-.282.05.05-3.426 3.425c.058-.058.076-.185-.06-.319l.025.023c-.112-.112-.24-.095-.297-.037L9.45 6.026l.283.283-.283-.283c-.058.058-.075.185.06.318l-.025-.023c.112.113.24.095.298.037l.233.233z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CommentMore 1`] = `
+<div
+  className="anchor-icon comment-more sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M4.618 6.952a1.048 1.048 0 1 1 0 2.096 1.048 1.048 0 0 1 0-2.096zm3.46 0a1.048 1.048 0 1 1 0 2.096 1.048 1.048 0 0 1 0-2.096zm3.526 0a1.048 1.048 0 1 1 0 2.096 1.048 1.048 0 0 1 0-2.096zM8.11 13.658a6.997 6.997 0 0 1-3.658-1.006.731.731 0 0 0-.824.049c-.468.37-1.005.597-1.484.736a6.46 6.46 0 0 0 .4-2.179.65.65 0 0 0-.116-.368 5.07 5.07 0 0 1-.928-2.899c0-3.124 2.965-5.666 6.61-5.666 3.581 0 6.507 2.454 6.607 5.505-.1 3.229-3.026 5.828-6.607 5.828M8.111 1c-4.419 0-8 3.13-8 6.991 0 1.26.387 2.44 1.054 3.461 0 .053-.024 1.543-.853 2.413 0 0-.448.413 0 .901.448.489 1.781.06 1.781.06s1.413-.466 2.002-.795a8.832 8.832 0 0 0 4.016.952c4.418 0 8-3.13 8-6.992 0-3.861-3.582-6.991-8-6.991"
+        id="comment-more-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#comment-more-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CreditCard 1`] = `
+<div
+  className="anchor-icon credit-card sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M12.923 9.223a.503.503 0 0 1-.499.503H3.576a.503.503 0 0 1 0-1.006h8.848c.274 0 .499.226.499.503zM5.267 5.231a1.877 1.877 0 0 1 .006-2.629 1.842 1.842 0 0 1 1.324-.554c.501 0 .972.196 1.325.554L8 2.697l.05-.063a1.877 1.877 0 0 1 1.354-.586c.502 0 .971.196 1.324.554a1.88 1.88 0 0 1 0 2.635L8.58 7.49c-.118.123-.314.33-.58.33-.265 0-.454-.199-.58-.33L5.267 5.23zm9.438 4.705a.752.752 0 0 1-.749.755H2.043a.752.752 0 0 1-.748-.755V2.063c0-.416.336-.754.748-.754h11.913c.413 0 .75.338.75.754v7.873zM13.956 0H2.043A2.055 2.055 0 0 0 0 2.063v7.873C0 11.074.916 12 2.043 12h11.913A2.056 2.056 0 0 0 16 9.936V2.063A2.056 2.056 0 0 0 13.956 0z"
+        id="credit-card-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        transform="translate(0 2)"
+        xlinkHref="#credit-card-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a CrossHairs 1`] = `
+<div
+  className="anchor-icon cross-hairs sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M2.284 7.617c.025-2.826 2.234-5.15 5-5.273v-1.01a.383.383 0 0 1 .766 0l-.047.96c2.705.166 4.87 2.331 4.987 4.99H14a.383.383 0 1 1 0 .766l-.96-.047c-.167 2.705-2.332 4.87-4.99 4.987V14a.383.383 0 1 1-.767 0l.047-.96c-2.581-.16-4.686-2.144-4.955-4.657H1.333a.383.383 0 0 1 0-.766h.95zm1.716 0a.383.383 0 0 1 0 .766l-.903-.057c.306 2.14 2.074 3.793 4.186 3.996v-.989a.383.383 0 0 1 .767 0l-.054.939c2.287-.162 4.114-1.989 4.326-4.222h-.989a.383.383 0 0 1 0-.767l.939.054C12.11 5.05 10.283 3.223 8.05 3.012V4a.383.383 0 0 1-.767 0l.054-.938A4.617 4.617 0 0 0 3.05 7.617H4zm3.667 2.1a2.05 2.05 0 1 1 0-4.1 2.05 2.05 0 0 1 0 4.1z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Cut 1`] = `
+<div
+  className="anchor-icon cut sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M13.524 13.604a1.886 1.886 0 0 1-1.706 1.087c-.434 0-.82-.15-1.197-.433-.433-.327-.72-.838-.72-1.387-.019-1.232.866-2.103 1.923-2.103.293 0 .58.072.847.21.453.235.796.635.956 1.133a1.991 1.991 0 0 1-.103 1.493m-4.56-3.877l-.273-.636 3.23-7.59c.215.177.438.499.508 1.1.204 1.736-1.038 4.854-3.465 7.126m-1.928.006c-2.42-2.272-3.675-5.39-3.47-7.131.075-.602.292-.924.515-1.101l3.222 7.597.58 1.362a10.042 10.042 0 0 1-.847-.727M5.03 14.48c-.268.138-.555.21-.848.21a1.88 1.88 0 0 1-1.706-1.087c-.472-.963-.09-2.142.853-2.626.267-.138.548-.21.847-.21.726 0 1.382.419 1.706 1.087.472.97.083 2.148-.852 2.626m9.806-2.783a3.236 3.236 0 0 0-1.598-1.893 3.084 3.084 0 0 0-2.4-.19c1.986-2.33 3.094-5.173 2.86-7.17-.154-1.297-.874-2.181-1.976-2.43a.632.632 0 0 0-.719.38l-3 7.066L4.998.395a.632.632 0 0 0-.72-.38c-1.102.249-1.82 1.133-1.974 2.43-.236 1.997.872 4.84 2.86 7.17a3.127 3.127 0 0 0-2.356.163C1.4 10.474.66 12.204 1.15 13.729 1.591 15.11 2.807 16 4.182 16c.49 0 .968-.118 1.414-.346a3.125 3.125 0 0 0 1.395-1.415l.096-.197.91-1.925.911 1.919.101.21A3.16 3.16 0 0 0 11.82 16c1.21 0 2.304-.694 2.846-1.807.375-.786.44-1.67.171-2.495"
+        id="cut-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#cut-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Disabled 1`] = `
+<div
+  className="anchor-icon disabled sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 13.667a5.633 5.633 0 0 1-3.503-1.222l7.948-7.948A5.633 5.633 0 0 1 13.667 8 5.674 5.674 0 0 1 8 13.667M2.333 8A5.674 5.674 0 0 1 8 2.333c1.322 0 2.537.459 3.503 1.222l-7.948 7.948A5.633 5.633 0 0 1 2.333 8M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1"
+        id="disabled-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#disabled-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Dislike 1`] = `
+<div
+  className="anchor-icon dislike sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.667 8.148c0 .587-.486 1.185-.963 1.185h-2.577c-.748 0-1.127.378-1.127 1.127v3.197a.966.966 0 0 1-.959 1.01l-1.042-.007c-.041-2.378-.512-5.265-2.501-5.69-.61-.13-.789-.323-.831-.382V2.25c.293-.285 1.148-.917 2.957-.917h6.08c.531 0 .963.432.963.962v5.853zm-13.333.519h2V2h-2v6.667zM13.704 0h-6.08c-1.686 0-2.77.479-3.412.918a1.152 1.152 0 0 0-.717-.251H1.172C.525.667 0 1.192 0 1.837v6.991C0 9.474.525 10 1.172 10h2.323c.218 0 .419-.064.593-.167.27.176.634.336 1.132.442.857.183 1.412 1.897 1.447 4.475C6.677 15.462 7.25 16 8 16h1.041a2.295 2.295 0 0 0 2.293-2.343v-2.99h2.37c1.354 0 2.296-1.329 2.296-2.519V2.295A2.298 2.298 0 0 0 13.704 0z"
+        id="dislike-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#dislike-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Download 1`] = `
+<div
+  className="anchor-icon download sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M10.395 11.85a.727.727 0 1 1 1.028 1.028l-2.908 2.91A.724.724 0 0 1 8 16a.724.724 0 0 1-.514-.212l-2.91-2.91a.727.727 0 1 1 1.029-1.028l1.668 1.668v-7.7a.726.726 0 1 1 1.455 0v7.7l1.667-1.668zM12.182 0A1.82 1.82 0 0 1 14 1.818v6.573a1.82 1.82 0 0 1-1.818 1.818h-2.121V8.754h2.121c.2 0 .363-.163.363-.363V1.818c0-.2-.163-.363-.363-.363H3.818c-.2 0-.364.163-.364.363v6.573c0 .2.164.363.364.363H5.94v1.455H3.818A1.82 1.82 0 0 1 2 8.391V1.818A1.82 1.82 0 0 1 3.818 0h8.364z"
+        id="download-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#download-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Ellipses 1`] = `
+<div
+  className="anchor-icon ellipses sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+        id="ellipsis-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#ellipsis-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a EllipsesVertical 1`] = `
+<div
+  className="anchor-icon ellipses-vertical sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M1.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM6 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+        id="ellipses-vertical-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        transform="rotate(90 3.5 5.5)"
+        xlinkHref="#ellipses-vertical-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Envelope 1`] = `
+<div
+  className="anchor-icon envelope sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M3.333 3.933a.733.733 0 0 0-.733.734v6.666c0 .405.328.734.733.734h9.334a.733.733 0 0 0 .733-.734V4.667a.733.733 0 0 0-.733-.734H3.333zm0-1.2h9.334c1.067 0 1.933.866 1.933 1.934v6.666a1.933 1.933 0 0 1-1.933 1.934H3.333A1.933 1.933 0 0 1 1.4 11.333V4.667c0-1.068.866-1.934 1.933-1.934z"
+        />
+        <path
+          d="M2.242 5.09a.6.6 0 1 1 .849-.848l4.39 4.39a.733.733 0 0 0 1.038 0l4.39-4.39a.6.6 0 1 1 .849.849l-4.39 4.39a1.933 1.933 0 0 1-2.735 0l-4.39-4.39z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
+<div
+  className="anchor-icon envelope-open sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M8.414 2.715a.73.73 0 0 0-.828 0L2.6 6.149v7.184c0 .405.328.734.733.734h9.334a.733.733 0 0 0 .733-.734V6.15L8.414 2.715zM14.6 6.096v7.237a1.933 1.933 0 0 1-1.933 1.934H3.333A1.933 1.933 0 0 1 1.4 13.333V6.096c0-.362.178-.7.476-.906l5.03-3.463a1.93 1.93 0 0 1 2.189 0l5.029 3.463a1.1 1.1 0 0 1 .476.906z"
+        />
+        <path
+          d="M6.295 10.4h3.048a.733.733 0 0 0 .582-.286L12.858 6.3a.6.6 0 0 1 .95.731l-2.932 3.813a1.933 1.933 0 0 1-1.533.755H6a.6.6 0 0 1-.476-.234L2.191 7.032a.6.6 0 0 1 .951-.731L6.295 10.4z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Error 1`] = `
+<div
+  className="anchor-icon error sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M15.797 12.757c.133.23.203.49.203.756 0 .821-.652 1.487-1.457 1.487H1.457c-.271 0-.537-.077-.768-.223a1.504 1.504 0 0 1-.47-2.047L6.921 1.703a1.44 1.44 0 0 1 2.493.027l6.383 11.027z"
+        fill="#222"
+      />
+      <path
+        d="M7.133 9.377V5.5a.5.5 0 0 1 .5-.5h.723a.5.5 0 0 1 .5.5v3.877a.5.5 0 0 1-.5.5h-.723a.5.5 0 0 1-.5-.5zM9 11.451a.983.983 0 0 1-.077.388.902.902 0 0 1-.215.311c-.093.086-.2.155-.323.207a.995.995 0 0 1-.39.078c-.137 0-.265-.024-.385-.073a.92.92 0 0 1-.313-.207 1.095 1.095 0 0 1-.215-.31.958.958 0 0 1-.005-.761.973.973 0 0 1 .528-.528.995.995 0 0 1 .39-.078c.137 0 .267.026.39.077.123.052.23.121.323.208a.958.958 0 0 1 .292.689z"
+        fill="#FFF"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Expand 1`] = `
+<div
+  className="anchor-icon expand sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M7.139 8.861c.26.26.26.684 0 .943l-2.862 2.863h.64a.667.667 0 0 1 0 1.333H2.666a.666.666 0 0 1-.256-.052c-.017-.007-.03-.022-.045-.029-.06-.032-.121-.063-.17-.114a.609.609 0 0 1-.114-.17c-.007-.016-.021-.028-.028-.044A.675.675 0 0 1 2 13.334v-2.25a.667.667 0 0 1 1.333 0v.64l2.864-2.863a.668.668 0 0 1 .942 0zm6.809-6.452a.68.68 0 0 1 .053.258v2.25c0 .367-.3.667-.667.667a.669.669 0 0 1-.666-.667v-.641L9.804 7.139a.668.668 0 0 1-.942-.943l2.862-2.862h-.64a.669.669 0 0 1-.666-.667c0-.366.3-.667.666-.667h2.25v.001a.635.635 0 0 1 .258.052c.016.006.027.02.043.028.06.031.12.063.17.114.05.05.083.11.114.17.008.016.022.027.029.044z"
+        id="expand-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#expand-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Gear 1`] = `
+<div
+  className="anchor-icon gear sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M13.685 10.91l-.437.78a.313.313 0 0 1-.386.14l-1.24-.511a.605.605 0 0 0-.654.129 4.42 4.42 0 0 1-1.552.968.662.662 0 0 0-.418.522l-.227 1.451a.321.321 0 0 1-.312.278H7.54a.32.32 0 0 1-.31-.278L7 12.938a.656.656 0 0 0-.42-.523 4.357 4.357 0 0 1-1.49-.91.61.61 0 0 0-.415-.165.582.582 0 0 0-.22.043l-1.307.516a.314.314 0 0 1-.384-.145l-.459-.841a.345.345 0 0 1 .072-.424l1.073-.934a.692.692 0 0 0 .217-.643 5.006 5.006 0 0 1 0-1.823.69.69 0 0 0-.217-.643l-1.073-.935a.344.344 0 0 1-.072-.423l.46-.841a.315.315 0 0 1 .383-.146l1.307.517c.215.085.46.039.635-.122a4.341 4.341 0 0 1 1.49-.91.657.657 0 0 0 .42-.523l.23-1.451a.32.32 0 0 1 .31-.278h.92c.154 0 .285.117.311.278l.227 1.451a.662.662 0 0 0 .421.523 4.345 4.345 0 0 1 1.491.91.607.607 0 0 0 .635.122l1.306-.517a.313.313 0 0 1 .384.146l.46.84a.347.347 0 0 1-.073.425l-1.072.934a.69.69 0 0 0-.218.643c.055.296.082.602.082.911 0 .309-.027.616-.082.912-.044.24.04.487.218.643l1.065.928c.121.105.15.285.07.427m.732-1.456l-.786-.685a6.546 6.546 0 0 0 0-1.537l.793-.692c.597-.52.75-1.411.363-2.12l-.46-.841c-.375-.687-1.213-1.006-1.918-.727l-.967.383a5.559 5.559 0 0 0-1.259-.769l-.168-1.072C9.888.586 9.235 0 8.46 0H7.54c-.774 0-1.429.586-1.555 1.394l-.169 1.072a5.553 5.553 0 0 0-1.258.769l-.968-.383c-.706-.279-1.542.04-1.918.727l-.46.842c-.386.708-.234 1.599.363 2.119l.794.692a6.321 6.321 0 0 0 0 1.537l-.794.691c-.597.52-.749 1.412-.363 2.12l.46.841c.376.687 1.213 1.007 1.918.727l.968-.383c.391.316.812.574 1.258.77l.17 1.072C6.11 15.414 6.765 16 7.54 16h.92c.774 0 1.428-.586 1.555-1.393l.17-1.074a5.69 5.69 0 0 0 1.33-.827l.888.367c.702.29 1.547-.02 1.93-.702l.437-.78a1.725 1.725 0 0 0-.353-2.137M8 9.25c-.69 0-1.25-.56-1.25-1.25 0-.689.56-1.25 1.25-1.25.689 0 1.25.561 1.25 1.25 0 .69-.561 1.25-1.25 1.25M8 5.5A2.503 2.503 0 0 0 5.5 8c0 1.378 1.122 2.5 2.5 2.5 1.379 0 2.5-1.122 2.5-2.5S9.379 5.5 8 5.5"
+        id="gear-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#gear-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a GiftCard 1`] = `
+<div
+  className="anchor-icon gift-card sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M4.649 5.2H1.6a.4.4 0 0 0-.4.4v7.8c0 .22.18.4.4.4h12.8a.4.4 0 0 0 .4-.4V5.6a.4.4 0 0 0-.4-.4h-3.105c.402-.317.718-.727.909-1.2H14.4A1.6 1.6 0 0 1 16 5.6v7.8a1.6 1.6 0 0 1-1.6 1.6H1.6A1.6 1.6 0 0 1 0 13.4V5.6A1.6 1.6 0 0 1 1.6 4h2.189c.182.473.482.884.86 1.2z"
+        />
+        <path
+          d="M10.406 10.85h2.988a.556.556 0 1 1 0 1.113h-2.988a.556.556 0 1 1 0-1.113zM15.25 7.25v1.313H.75V7.25zM9.276 4.688c.962 0 1.758-.629 1.904-1.447l.009-.05c.077-.437-.263-.88-.815-.964a1.16 1.16 0 0 0-.177-.014c-.79 0-1.397.566-1.397 1.22v1.255h.476zm.921-3.675c.12 0 .24.01.36.028 1.2.185 2.012 1.241 1.813 2.36l-.009.05c-.25 1.406-1.555 2.437-3.085 2.437H7.6V3.433c0-1.336 1.163-2.42 2.597-2.42z"
+        />
+        <path
+          d="M7.2 3.612c0-.772-.626-1.399-1.399-1.399h-.123a.875.875 0 0 0-.861 1.028 1.754 1.754 0 0 0 1.727 1.447H7.2V3.612zM5.678 1.013h.123a2.599 2.599 0 0 1 2.599 2.6v2.275H6.544a2.954 2.954 0 0 1-2.908-2.437 2.075 2.075 0 0 1 2.042-2.438z"
+        />
+        <path
+          d="M8.65 4.813v9.5h-1.3v-9.5z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Grid 1`] = `
+<div
+  className="anchor-icon grid sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M1.455 2.909V1.454H2.91l.001 1.455H1.455zM2.91 0H1.455C.653 0 0 .652 0 1.454v1.455c0 .802.653 1.455 1.455 1.455H2.91c.802 0 1.454-.653 1.454-1.455V1.454C4.364.652 3.712 0 2.91 0zm4.363 2.909V1.454h1.455l.001 1.455H7.273zM8.728 0H7.273c-.802 0-1.455.652-1.455 1.454v1.455c0 .802.653 1.455 1.455 1.455h1.455c.802 0 1.454-.653 1.454-1.455V1.454C10.182.652 9.53 0 8.728 0zm4.364 2.909V1.454h1.454l.002 1.455h-1.456zM14.546 0h-1.454c-.802 0-1.455.652-1.455 1.454v1.455c0 .802.653 1.455 1.455 1.455h1.454c.802 0 1.455-.653 1.455-1.455V1.454C16 .652 15.348 0 14.546 0zM1.455 8.727V7.272H2.91l.001 1.455H1.455zm1.455-2.91H1.455C.653 5.818 0 6.472 0 7.273v1.455c0 .802.653 1.455 1.455 1.455H2.91c.802 0 1.454-.653 1.454-1.455V7.272c0-.801-.652-1.454-1.454-1.454zm4.363 2.91V7.272h1.455l.001 1.455H7.273zm1.455-2.91H7.273c-.802 0-1.455.654-1.455 1.455v1.455c0 .802.653 1.455 1.455 1.455h1.455c.802 0 1.454-.653 1.454-1.455V7.272c0-.801-.652-1.454-1.454-1.454zm4.364 2.91V7.272h1.454l.002 1.455h-1.456zm1.454-2.91h-1.454c-.802 0-1.455.654-1.455 1.455v1.455c0 .802.653 1.455 1.455 1.455h1.454c.802 0 1.455-.653 1.455-1.455V7.272c0-.801-.653-1.454-1.455-1.454zM1.455 14.546V13.09H2.91l.001 1.455H1.455zm1.455-2.909H1.455C.653 11.636 0 12.288 0 13.09v1.455C0 15.347.653 16 1.455 16H2.91c.802 0 1.454-.653 1.454-1.455V13.09c0-.802-.652-1.454-1.454-1.454zm4.363 2.91V13.09h1.455l.001 1.455H7.273zm1.455-2.91H7.273c-.802 0-1.455.652-1.455 1.454v1.455c0 .802.653 1.455 1.455 1.455h1.455c.802 0 1.454-.653 1.454-1.455V13.09c0-.802-.652-1.454-1.454-1.454zm4.364 2.91V13.09h1.454l.002 1.455h-1.456zm1.454-2.91h-1.454c-.802 0-1.455.652-1.455 1.454v1.455c0 .802.653 1.455 1.455 1.455h1.454c.802 0 1.455-.653 1.455-1.455V13.09c0-.802-.653-1.454-1.455-1.454z"
+        id="grid-a"
+      />
+    </defs>
+    <use
+      fill="#222"
+      fillRule="evenodd"
+      xlinkHref="#grid-a"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Hamburger 1`] = `
+<div
+  className="anchor-icon hamburger sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        stroke="#222"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.333"
+      >
+        <path
+          d="M2 3.667h12M2 7.667h12M2 11.667h12"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Heart 1`] = `
+<div
+  className="anchor-icon heart sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.68 2.343A4.55 4.55 0 0 0 11.439 1c-1.23 0-2.393.489-3.317 1.422l-.123.15-.19-.229A4.55 4.55 0 0 0 4.564 1 4.55 4.55 0 0 0 1.32 2.343c-1.758 1.762-1.76 4.628-.014 6.381l5.275 5.475c.306.319.767.801 1.415.801.652 0 1.134-.5 1.422-.799l5.262-5.463a4.535 4.535 0 0 0 0-6.395"
+        id="heart-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#heart-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a HeartOutline 1`] = `
+<div
+  className="anchor-icon heart-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M13.737 7.796l-5.28 5.479c-.094.099-.34.354-.46.39-.112-.035-.35-.282-.453-.39L2.267 7.798a3.195 3.195 0 0 1-.002-4.513 3.224 3.224 0 0 1 2.3-.952c.852 0 1.65.323 2.258.911l1.174 1.42L9.109 3.32c.657-.646 1.46-.987 2.329-.987.87 0 1.687.338 2.299.952a3.198 3.198 0 0 1 0 4.511m.944-5.454A4.551 4.551 0 0 0 11.438 1c-1.23 0-2.392.488-3.316 1.421l-.124.15-.19-.229A4.55 4.55 0 0 0 4.565 1c-1.228 0-2.38.477-3.244 1.342-1.758 1.763-1.76 4.628-.014 6.382l5.275 5.474c.305.319.767.802 1.415.802.652 0 1.134-.501 1.422-.8l5.262-5.463a4.535 4.535 0 0 0 0-6.395"
+        id="heart-outline-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#heart-outline-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Home 1`] = `
+<div
+  className="anchor-icon home sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
     width={16}
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
       fill="#222"
+      fillRule="nonzero"
+    >
+      <path
+        d="M3 14.333h10v-4.55L8 5.337 3 9.782v4.551zm-1-5L8 4l6 5.333v5.334a.667.667 0 0 1-.667.666H2.667A.667.667 0 0 1 2 14.667V9.333z"
+      />
+      <path
+        d="M7 11v3.333h2V11H7zm2.333-1c.369 0 .667.298.667.667v4a.667.667 0 0 1-.667.666H6.667A.667.667 0 0 1 6 14.667v-4c0-.369.298-.667.667-.667h2.666zM12.875 8.333h1.438L8 2.426 1.687 8.333h1.438L8 4l4.875 4.333zm-.38 1L8 5.338 3.505 9.333H.843A.667.667 0 0 1 .387 8.18l7.157-6.697a.667.667 0 0 1 .911 0l7.158 6.697a.667.667 0 0 1-.456 1.153h-2.662z"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Info 1`] = `
+<div
+  className="anchor-icon info sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <circle
+        cx="8"
+        cy="8"
+        fill="#222"
+        r="8"
+      />
+      <path
+        d="M7.292 7.5h1.416a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5H7.292a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5zM6.75 5.255a1.259 1.259 0 0 1 .371-.883c.115-.113.25-.204.403-.27a1.21 1.21 0 0 1 .962 0c.147.066.278.157.393.27.115.114.205.247.272.4.066.152.099.313.099.483a1.228 1.228 0 0 1-.764 1.15 1.267 1.267 0 0 1-.962 0 1.3 1.3 0 0 1-.403-.261 1.228 1.228 0 0 1-.371-.888z"
+        fill="#FFF"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a InfoOutline 1`] = `
+<div
+  className="anchor-icon info-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="#222"
+      fillRule="nonzero"
+    >
+      <path
+        d="M8 14.7A6.7 6.7 0 1 0 8 1.3a6.7 6.7 0 0 0 0 13.4zM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+      />
+      <path
+        d="M9 4.964a.913.913 0 0 1-.08.38.98.98 0 0 1-.213.305A1.03 1.03 0 0 1 8 5.927a.974.974 0 0 1-.713-.283.922.922 0 0 1-.287-.68c0-.129.025-.252.074-.37.05-.117.121-.22.213-.305a1.15 1.15 0 0 1 .32-.209 1.03 1.03 0 0 1 1.101.198.98.98 0 0 1 .212.306c.053.117.08.244.08.38zM7.128 11.5V7.167a.5.5 0 0 1 .5-.5h.744a.5.5 0 0 1 .5.5V11.5a.5.5 0 0 1-.5.5h-.744a.5.5 0 0 1-.5-.5z"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Laptop 1`] = `
+<div
+  className="anchor-icon laptop sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.667 13.203a.671.671 0 0 1-.671.67H2.005a.67.67 0 0 1-.671-.67v-1.324c0-.371.3-.671.67-.671h4.267v.666c0 .367.3.667.667.667h2.667c.366 0 .666-.3.666-.667v-.666h3.725c.37 0 .67.3.67.67v1.325zm-12-9.993c0-.37.299-.67.669-.67h9.329c.369 0 .669.3.669.67v5.995c0 .18-.073.34-.188.46a.664.664 0 0 1-.481.209H3.336a.667.667 0 0 1-.482-.208.667.667 0 0 1-.187-.461V3.21zm12 6.456h-.121V2.333c0-.734-.6-1.334-1.334-1.334H2.546c-.734 0-1.334.6-1.334 1.334v7.333l.002.012A1.334 1.334 0 0 0 0 10.998v2.668c0 .733.6 1.333 1.334 1.333h13.333c.733 0 1.333-.6 1.333-1.333v-2.667c0-.733-.6-1.333-1.333-1.333zM4.785 4.534l6.43-.002v3.333h-6.43v-3.33zM4.145 9.2h7.71c.357 0 .645-.3.645-.669V3.868a.657.657 0 0 0-.645-.669l-7.71.002a.656.656 0 0 0-.645.668l.001 4.661c0 .37.288.67.644.67z"
+        id="laptop-a"
+      />
+    </defs>
+    <g
+      fill="none"
       fillRule="evenodd"
     >
       <path
-        d="M1.345 2.402h14.2c.496 0 .9-.537.9-1.2 0-.663-.404-1.2-.9-1.2h-14.2c-.497 0-.9.537-.9 1.2 0 .663.403 1.2.9 1.2M1.345 7.202h14.2c.496 0 .9-.537.9-1.2 0-.663-.404-1.2-.9-1.2h-14.2c-.497 0-.9.537-.9 1.2 0 .663.403 1.2.9 1.2M1.345 12.002h14.2c.496 0 .9-.537.9-1.2 0-.663-.404-1.2-.9-1.2h-14.2c-.497 0-.9.537-.9 1.2 0 .663.403 1.2.9 1.2"
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#laptop-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Lightning 1`] = `
+<div
+  className="anchor-icon lightning sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M11.719 8.33a.357.357 0 0 0 .105-.255c0-.19-.142-.344-.317-.344H8.918c-.402 0-.686-.43-.556-.844L9.8 2.292 4.28 7.67a.357.357 0 0 0-.105.255c0 .19.142.344.317.344h2.589c.402 0 .686.43.556.844L6.2 13.708 11.72 8.33zm-.212-1.876c.825 0 1.493.726 1.493 1.62 0 .46-.18.899-.495 1.206l-6.677 6.506a.727.727 0 0 1-1.086-.063.889.889 0 0 1-.156-.826l1.675-5.351H4.493C3.668 9.546 3 8.82 3 7.926c0-.46.18-.899.495-1.206L10.172.214a.727.727 0 0 1 1.086.063c.185.225.245.54.156.826L9.739 6.454h1.768z"
+        id="lightning-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        fillRule="nonzero"
+        xlinkHref="#lightning-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Like 1`] = `
+<div
+  className="anchor-icon like sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.667 13.704c0 .53-.432.963-.963.963h-6.08c-1.817 0-2.672-.639-2.957-.915v-6.34c.039-.056.213-.251.831-.383 1.99-.425 2.461-3.315 2.501-5.696H9.041c.371 0 .959.274.959 1.01V5.54c0 .748.379 1.127 1.126 1.127h2.578c.477 0 .963.598.963 1.184v5.853zM1.334 14h2V7.333h-2V14zm12.37-8.667h-2.37v-2.99A2.295 2.295 0 0 0 9.041 0H8c-.75 0-1.324.537-1.333 1.25-.035 2.577-.59 4.292-1.447 4.475-.499.106-.862.265-1.132.442A1.153 1.153 0 0 0 3.495 6H1.172C.525 6 0 6.525 0 7.172v6.99c0 .646.525 1.171 1.172 1.171h2.323c.272 0 .518-.096.717-.251.641.438 1.726.918 3.412.918h6.08A2.299 2.299 0 0 0 16 13.704V7.851c0-1.19-.943-2.518-2.296-2.518z"
+        id="like-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#like-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a List 1`] = `
+<div
+  className="anchor-icon list sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        stroke="#222"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.333"
+      >
+        <path
+          d="M2 3.667h12M2 7.667h12M2 11.667h12"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Lock 1`] = `
+<div
+  className="anchor-icon lock sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        transform="translate(1 .333)"
+      >
+        <path
+          d="M10.4 6.367V4A2.4 2.4 0 0 0 8 1.6H6A2.4 2.4 0 0 0 3.6 4v2.367h6.8zM6 .4h2A3.6 3.6 0 0 1 11.6 4v3.567H2.4V4A3.6 3.6 0 0 1 6 .4z"
+          fillRule="nonzero"
+        />
+        <path
+          d="M2.333 7.6a.733.733 0 0 0-.733.733v5.334c0 .405.328.733.733.733h9.334a.733.733 0 0 0 .733-.733V8.333a.733.733 0 0 0-.733-.733H2.333zm0-1.2h9.334c1.067 0 1.933.866 1.933 1.933v5.334a1.933 1.933 0 0 1-1.933 1.933H2.333A1.933 1.933 0 0 1 .4 13.667V8.333C.4 7.266 1.266 6.4 2.333 6.4z"
+          fillRule="nonzero"
+        />
+        <circle
+          cx="7"
+          cy="10.333"
+          r="1.333"
+        />
+        <rect
+          height="2"
+          rx=".667"
+          width="1.333"
+          x="6.333"
+          y="11"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Map 1`] = `
+<div
+  className="anchor-icon map sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="#222"
+      fillRule="nonzero"
+    >
+      <path
+        d="M1 1.353V12.67l4.785 2.316 4.255-2.374a1.898 1.898 0 0 1 1.66-.093l3.3 1.385V2.717L10.685 1.01l-4.14 1.803c-.445.194-.948.21-1.405.044L1 1.353zm-1-.145A.898.898 0 0 1 1.205.364l4.277 1.552a.898.898 0 0 0 .665-.021l4.177-1.82a.898.898 0 0 1 .69-.011l4.418 1.75a.898.898 0 0 1 .568.834v11.41a.898.898 0 0 1-1.246.828l-3.442-1.445a.898.898 0 0 0-.785.044l-4.3 2.4a.898.898 0 0 1-.83.024l-4.89-2.366A.898.898 0 0 1 0 12.734V1.208z"
+      />
+      <path
+        d="M5 3a.5.5 0 0 1 1 0v12a.5.5 0 1 1-1 0V3zM10 1a.5.5 0 1 1 1 0v11.5a.5.5 0 1 1-1 0V1z"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Marker 1`] = `
+<div
+  className="anchor-icon marker sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 0C4.691 0 2 2.692 2 6c0 4.913 5.334 9.636 5.562 9.835a.664.664 0 0 0 .877 0C8.666 15.636 14 10.913 14 6c0-3.308-2.691-6-6-6m0 4c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2"
+        id="marker-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#marker-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a MarkerOutline 1`] = `
+<div
+  className="anchor-icon marker-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 14.419C6.762 13.211 3.334 9.546 3.334 6A4.672 4.672 0 0 1 8 1.334 4.672 4.672 0 0 1 12.667 6c0 3.546-3.429 7.211-4.667 8.419M8 0C4.691 0 2 2.692 2 6c0 4.913 5.334 9.636 5.562 9.835a.664.664 0 0 0 .877 0C8.666 15.636 14 10.913 14 6c0-3.308-2.691-6-6-6m0 7.333A1.335 1.335 0 0 1 6.667 6c0-.736.599-1.333 1.333-1.333.735 0 1.334.598 1.334 1.333 0 .736-.599 1.333-1.334 1.333m0-4A2.669 2.669 0 0 0 5.334 6 2.668 2.668 0 0 0 8 8.666 2.67 2.67 0 0 0 10.667 6 2.67 2.67 0 0 0 8 3.333"
+        id="marker-outline-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#marker-outline-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Mobile 1`] = `
+<div
+  className="anchor-icon mobile sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M7.974 12a1 1 0 1 0 .052 2 1 1 0 0 0-.052-2m3.359 2.667H4.666a.333.333 0 0 1-.333-.333v-3h7.333v3a.333.333 0 0 1-.333.333zm-7-13c0-.184.149-.333.333-.333h6.667c.184 0 .333.149.333.333v1H4.333v-1zm0 8.333h7.333V4H4.333v6zm7-10H4.666C3.748 0 3 .748 3 1.667v12.667C3 15.253 3.748 16 4.666 16h6.667c.919 0 1.667-.747 1.667-1.666V1.667A1.67 1.67 0 0 0 11.333 0z"
+        id="mobile-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#mobile-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a News 1`] = `
+<div
+  className="anchor-icon news sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M5.334 12.333h-2a.669.669 0 0 1-.667-.667c0-.366.3-.666.667-.666h2c.366 0 .666.3.666.666 0 .367-.3.667-.666.667zm0-2h-2a.669.669 0 0 1-.667-.667c0-.366.3-.666.667-.666h2C5.7 9 6 9.3 6 9.666c0 .367-.3.667-.666.667zm4.666 2H8a.669.669 0 0 1-.666-.667c0-.366.3-.666.666-.666h2c.367 0 .667.3.667.666 0 .367-.3.667-.667.667zm0-2H8a.669.669 0 0 1-.666-.667C7.334 9.3 7.634 9 8 9h2c.367 0 .667.3.667.666 0 .367-.3.667-.667.667zm0-2.668H8A.668.668 0 0 1 7.334 7c0-.367.3-.667.666-.667h2c.367 0 .667.3.667.667 0 .366-.3.666-.667.666zM10 5H8a.669.669 0 0 1-.666-.667c0-.366.3-.667.666-.667h2a.67.67 0 0 1 .667.667c0 .367-.3.667-.667.667zM4.834 6.131a.2.2 0 0 1-.2.2h-.601a.2.2 0 0 1-.199-.2v-.933a.2.2 0 0 1 .199-.2h.601a.2.2 0 0 1 .2.2v.933zm.5-2.465h-2a.667.667 0 0 0-.667.667V7c0 .368.299.666.667.666h2A.666.666 0 0 0 6 7V4.333a.667.667 0 0 0-.666-.667zm9.333 9.337a.664.664 0 0 1-.664.664h-.669V5.665h.669c.367 0 .664.298.664.664v6.674zm-5.17.664h-7.5a.664.664 0 0 1-.663-.664V2.997c0-.366.297-.664.663-.664h9.339c.367 0 .664.298.664.664v10.006a.664.664 0 0 1-.664.664H9.497zm5.17-9.335h-1.333V2.333C13.334 1.6 12.733 1 12 1H1.334C.601 1 0 1.6 0 2.333v11.334C0 14.4.601 15 1.334 15h13.333C15.4 15 16 14.4 16 13.667V5.665c0-.733-.6-1.333-1.333-1.333z"
+        id="news-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#news-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Pencil 1`] = `
+<div
+  className="anchor-icon pencil sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M11.224 6.792L9.208 4.785l1.14-1.134 1.995 2.02-1.119 1.121zM5.37 12.667H3.333v-2.083l4.893-4.853 2.032 2.025-4.888 4.911zm8.43-7.492l-2.987-2.974a.67.67 0 0 0-.957 0L2.192 9.818a.678.678 0 0 0-.192.484v2.973c0 .376.283.725.667.725h2.988a.713.713 0 0 0 .485-.222l7.66-7.63a.69.69 0 0 0 0-.973z"
+        id="pencil-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#pencil-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Play 1`] = `
+<div
+  className="anchor-icon play sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M14.954 9.302c1.395-.716 1.395-1.889 0-2.604L2.497.3C1.124-.407 0 .18 0 1.601v12.797c0 1.422 1.124 2.008 2.497 1.302l12.457-6.398z"
+        id="play-a"
+      />
+    </defs>
+    <use
+      fill="#222"
+      fillRule="evenodd"
+      xlinkHref="#play-a"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Plus 1`] = `
+<div
+  className="anchor-icon plus sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M13.035 7.13c.413 0 .781.28.781.677 0 .402-.368.682-.781.683H3.346c-.412 0-.781-.28-.776-.62l-.006-.062c0-.398.37-.678.782-.678h9.689z"
+        />
+        <path
+          d="M7.51 12.654V2.965c0-.413.28-.78.651-.78l.032-.001c.397 0 .677.369.677.781v9.688c0 .413-.28.783-.65.78l-.032.002c-.398 0-.676-.368-.677-.78z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a PlusSmall 1`] = `
+<div
+  className="anchor-icon plus-small sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M7.835 10.288h-.4V5.443c0-.32.225-.615.564-.615.34-.001.566.295.566.615v4.845c0 .319-.225.615-.498.61l-.068.005c-.339 0-.564-.296-.564-.615h.4z"
+        />
+        <path
+          d="M10.422 8.43H5.578c-.32 0-.616-.225-.615-.533v-.033c0-.338.296-.564.615-.564h4.844c.32 0 .616.226.615.534v.033c0 .338-.295.563-.614.563v-.4.07H5.577c.082 0 .184-.077.183-.267l.001.033c0-.158-.102-.236-.184-.236h4.844v.4-.4c-.082 0-.184.078-.183.267l-.001-.034c0 .16.102.238.184.237v.33z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Print 1`] = `
+<div
+  className="anchor-icon print sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 6a1 1 0 1 0 0 2.001 1 1 0 0 0 0-2m11.667 5.666c0 .184-.15.333-.333.333h-1.667v-2h.667a.666.666 0 1 0 0-1.333H2.667a.667.667 0 1 0 0 1.333h.667v2H1.667a.333.333 0 0 1-.333-.333v-6c0-.184.149-.333.333-.333h12.667c.183 0 .333.149.333.333v6zm-10 3h6.667V10H4.667v4.667zm0-10.666h6.667V1.334H4.667v2.667zM14.334 4h-1.667V.667A.667.667 0 0 0 12 0H4a.667.667 0 0 0-.666.667V4H1.667A1.67 1.67 0 0 0 0 5.667v6a1.67 1.67 0 0 0 1.667 1.667h1.667v2c0 .368.298.666.666.666h8a.666.666 0 0 0 .667-.666v-2h1.667c.919 0 1.666-.748 1.666-1.667v-6C16 4.748 15.253 4 14.334 4z"
+      fill="#222"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Question 1`] = `
+<div
+  className="anchor-icon question sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <circle
+        cx="8"
+        cy="8"
+        fill="#222"
+        r="8"
+      />
+      <path
+        d="M8.022 12c-.19 0-.366-.034-.53-.102a1.442 1.442 0 0 1-.43-.274 1.217 1.217 0 0 1-.29-.409 1.272 1.272 0 0 1-.103-.516 1.275 1.275 0 0 1 .393-.92 1.389 1.389 0 0 1 1.92 0 1.275 1.275 0 0 1 0 1.845 1.442 1.442 0 0 1-.431.274c-.164.068-.34.102-.53.102zM9.57 8.301c-.153.093-.256.183-.311.269a.495.495 0 0 0-.082.269.28.28 0 0 1-.28.28H7.253a.398.398 0 0 1-.397-.399c0-.215.027-.403.081-.564.055-.161.13-.307.224-.436.095-.129.207-.249.338-.36.131-.11.273-.22.426-.328l.185-.129c.116-.079.206-.156.267-.231a.375.375 0 0 0 .093-.242c0-.15-.045-.256-.136-.317a.564.564 0 0 0-.322-.091c-.24 0-.411.084-.513.252a1.11 1.11 0 0 0-.153.586L5 6.56c.044-.46.158-.852.344-1.178.185-.326.418-.592.698-.796.28-.204.593-.353.938-.446.345-.093.704-.14 1.075-.14.334 0 .676.038 1.025.113.35.075.665.2.95.376.283.176.515.409.697.7.182.29.273.646.273 1.07 0 .25-.033.472-.098.666-.066.193-.16.37-.284.532-.123.161-.274.31-.453.446a6.048 6.048 0 0 1-.594.398z"
+        fill="#FFF"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a QuestionOutline 1`] = `
+<div
+  className="anchor-icon question-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="#222"
+      fillRule="nonzero"
+    >
+      <path
+        d="M8 14.7A6.7 6.7 0 1 0 8 1.3a6.7 6.7 0 0 0 0 13.4zM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+      />
+      <path
+        d="M10.5 6.171c0 .239-.027.449-.082.63a1.93 1.93 0 0 1-.231.499c-.1.152-.22.295-.36.429-.14.134-.299.273-.477.418-.11.094-.2.177-.272.25a.867.867 0 0 0-.257.461 1.503 1.503 0 0 0-.025.298.282.282 0 0 1-.283.282h-.906a.412.412 0 0 1-.413-.412c0-.188.017-.357.051-.505.035-.148.086-.284.154-.407a2.18 2.18 0 0 1 .252-.358c.1-.116.217-.235.354-.358l.339-.337c.116-.108.216-.222.298-.342a.738.738 0 0 0 .123-.429c0-.231-.067-.416-.2-.553-.134-.138-.317-.206-.55-.206-.287 0-.503.103-.646.309a1.32 1.32 0 0 0-.237.7L5.5 6.355c.041-.39.135-.734.282-1.03.148-.297.337-.543.57-.739.233-.195.496-.342.79-.44.295-.097.606-.146.935-.146.308 0 .607.042.898.125.291.083.55.213.776.39.225.178.407.404.544.679.137.275.205.6.205.977zm-1.499 4.798c0 .29-.096.533-.287.732a.945.945 0 0 1-.709.299.978.978 0 0 1-.703-.293 1.097 1.097 0 0 1-.22-.326 1.045 1.045 0 0 1 .21-1.129c.092-.094.2-.168.323-.222a.957.957 0 0 1 .775 0 1.1 1.1 0 0 1 .318.217c.093.09.165.199.216.326.051.126.077.258.077.396z"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Refresh 1`] = `
+<div
+  className="anchor-icon refresh sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M15.127 6.698a.733.733 0 0 1-.907-.51c-.786-2.772-3.347-4.67-6.22-4.67-2.294 0-4.36 1.149-5.52 3.149h1.78c.407 0 .733.257.733.667 0 .402-.326.666-.733.666H.786C.38 6 0 5.725 0 5.322V1.819c0-.403.26-.738.667-.738.406 0 .666.335.666.738v1.544C2.667 1.276 5.273 0 7.906 0c3.528 0 6.714 2.376 7.681 5.785.106.39-.067.799-.46.913zM16 10.792v3.497c0 .41-.26.737-.667.737-.406 0-.666-.328-.666-.737V12.63C13.333 14.718 10.713 16 8.093 16c-3.527 0-6.713-2.376-7.68-5.786-.106-.389.09-.798.483-.912a.72.72 0 0 1 .895.51c.787 2.772 3.342 4.613 6.215 4.613 2.233 0 4.267-1.092 5.44-3.09H11.74c-.407 0-.733-.266-.733-.668 0-.41.326-.667.733-.667h3.473c.407 0 .787.383.787.792z"
+        id="refresh-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#refresh-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
+<div
+  className="anchor-icon retail-me-not-logo sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8.851 6.84c.811-2.172 1.55-4.254 1.975-5.465 1.761-.198 2.665.336 2.665 1.633 0 1.264-1.098 2.515-3.425 3.388-.437.163-.847.313-1.215.445m-4.157 4.505c-1.028 2.08-1.662 2.956-2.47 3.079-.366.056-.65-.111-.65-.64 0-.576.624-2.714 3.97-4.43-.339.852-.637 1.56-.85 1.99m9.873 1.495c-.416.126-1.149.23-1.703-.004-.524-.22-.85-.753-1.253-1.76-.346-.863-.867-2.345-1.226-3.44C14.207 6.287 16 4.57 16 2.646 16 .852 14.51-.33 11.204.082 9.741.264 8.67.462 7.537.679c-4.236.808-5.824 2.604-5.824 4.452 0 1.25 1.117 2.117 2.412 2.117.882 0 .967-.481.705-.674-.548-.403-.877-.807-.877-1.501 0-1.086.832-2.476 3.891-3.143l.517-.113a339.104 339.104 0 0 1-2.227 6.027C1.462 9.682 0 12.197 0 13.944 0 15.25 1.046 16 2.282 16c1.882 0 3.363-1.238 4.548-4.022.459-1.077.963-2.351 1.462-3.656.351 1.126.823 2.559 1.159 3.429.339.883.648 1.517 1.11 1.97.56.548 1.244.82 2.135.82 1.147 0 1.936-.556 2.282-1.163.222-.388-.05-.648-.411-.538"
+        id="retail-me-not-logo-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#retail-me-not-logo-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a SadFace 1`] = `
+<div
+  className="anchor-icon sad-face sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <g
+        fill="#222"
+        transform="translate(2 3)"
+      >
+        <circle
+          cx="2.75"
+          cy="1.25"
+          opacity=".9"
+          r="1.25"
+        />
+        <circle
+          cx="9.25"
+          cy="1.25"
+          opacity=".9"
+          r="1.25"
+        />
+        <path
+          d="M11.5 9.264c0 .407-.344.736-.769.736-.424 0-.769-.33-.769-.736C9.962 7.17 8.188 5.472 6 5.472S2.038 7.17 2.038 9.264c0 .407-.345.736-.77.736C.845 10 .5 9.67.5 9.264.5 6.357 2.962 4 6 4s5.5 2.357 5.5 5.264z"
+          fillRule="nonzero"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Search 1`] = `
+<div
+  className="anchor-icon search sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.925 7.125c0 2.868 2.332 5.2 5.2 5.2 2.868 0 5.2-2.332 5.2-5.2 0-2.868-2.332-5.2-5.2-5.2a5.205 5.205 0 0 0-5.2 5.2zm9.893 4.004l3.09 3.09a.488.488 0 0 1-.69.688l-3.054-3.12a6.136 6.136 0 0 1-4.04 1.513A6.175 6.175 0 1 1 13.3 7.125a6.135 6.135 0 0 1-1.482 4.004z"
+      fill="#222"
+      fillRule="nonzero"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Share 1`] = `
+<div
+  className="anchor-icon share sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M12.502 14.667a1.16 1.16 0 0 1-1.16-1.156 1.16 1.16 0 0 1 2.32 0 1.16 1.16 0 0 1-1.16 1.156m0-13.333c.64 0 1.16.519 1.16 1.156 0 .638-.52 1.156-1.16 1.156-.64 0-1.16-.518-1.16-1.156 0-.637.52-1.156 1.16-1.156m0 9.687c-.697 0-1.327.287-1.78.746L5.91 8.612A2.47 2.47 0 0 0 5.995 8c0-.188-.025-.371-.065-.549l4.841-3.171A2.495 2.495 0 0 0 15 2.49 2.495 2.495 0 0 0 12.502 0a2.495 2.495 0 0 0-2.498 2.49c0 .222.039.434.093.638L5.294 6.277A2.493 2.493 0 0 0 1 8a2.493 2.493 0 0 0 2.497 2.49 2.49 2.49 0 0 0 1.753-.718l4.828 3.164a2.474 2.474 0 0 0-.074.575A2.494 2.494 0 0 0 12.502 16 2.494 2.494 0 0 0 15 13.511a2.495 2.495 0 0 0-2.498-2.49"
+        id="share-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#share-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Sliders 1`] = `
+<div
+  className="anchor-icon sliders sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0-1h16v16H0z"
+      />
+      <g
+        fill="#222"
+        fillRule="nonzero"
+      >
+        <path
+          d="M6.95 2h8.416c.35 0 .634.224.634.5s-.284.5-.634.5H6.95A2.504 2.504 0 0 1 4.5 5a2.504 2.504 0 0 1-2.45-2H.634C.284 3 0 2.776 0 2.5S.284 2 .634 2H2.05C2.283.86 3.293 0 4.5 0s2.217.86 2.45 2zM3 2.5C3 3.327 3.673 4 4.5 4S6 3.327 6 2.5 5.327 1 4.5 1 3 1.673 3 2.5zM6.95 12h8.416c.35 0 .634.224.634.5s-.284.5-.634.5H6.95a2.504 2.504 0 0 1-2.45 2 2.504 2.504 0 0 1-2.45-2H.634C.284 13 0 12.776 0 12.5s.284-.5.634-.5H2.05c.233-1.14 1.243-2 2.45-2s2.217.86 2.45 2zM3 12.5c0 .827.673 1.5 1.5 1.5S6 13.327 6 12.5 5.327 11 4.5 11 3 11.673 3 12.5zM9.05 7H.634C.284 7 0 7.224 0 7.5s.284.5.634.5H9.05c.232 1.14 1.243 2 2.45 2s2.218-.86 2.45-2h1.416c.35 0 .634-.224.634-.5s-.284-.5-.634-.5H13.95a2.504 2.504 0 0 0-2.45-2c-1.207 0-2.217.86-2.45 2zm3.95.5c0 .827-.673 1.5-1.5 1.5S10 8.327 10 7.5 10.673 6 11.5 6s1.5.673 1.5 1.5z"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Star 1`] = `
+<div
+  className="anchor-icon star sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a StarHalf 1`] = `
+<div
+  className="anchor-icon star-half sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M7.494 12.536a1.15 1.15 0 0 1 1.01-.003l3.465 1.683-.59-3.773a1.15 1.15 0 0 1 .277-.942l2.518-2.83-3.56-.573a1.15 1.15 0 0 1-.849-.628L8 1.886 6.235 5.47a1.15 1.15 0 0 1-.85.628l-3.56.573 2.522 2.833c.225.253.327.593.279.929l-.546 3.783 3.414-1.68zm-3.096 2.972a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+      <path
+        d="M5.103 4.827l1.365-2.774a1.15 1.15 0 0 1 2.182.508V12.7c0 .438-.25.838-.642 1.032l-3.61 1.776a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a StarOutline 1`] = `
+<div
+  className="anchor-icon star-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <path
+        d="M7.494 12.536a1.15 1.15 0 0 1 1.01-.003l3.465 1.683-.59-3.773a1.15 1.15 0 0 1 .277-.942l2.518-2.83-3.56-.573a1.15 1.15 0 0 1-.849-.628L8 1.886 6.235 5.47a1.15 1.15 0 0 1-.85.628l-3.56.573 2.522 2.833c.225.253.327.593.279.929l-.546 3.783 3.414-1.68zm-3.096 2.972a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+        fill="#222"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Success 1`] = `
+<div
+  className="anchor-icon success sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0"
+        id="success-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <use
+        fill="#222"
+        xlinkHref="#success-a"
+      />
+      <path
+        d="M11.928 6.383l-4.364 4.363a.926.926 0 0 1-1.311 0L4.07 8.564a.928.928 0 0 1 1.311-1.311L6.91 8.779l3.709-3.708a.928.928 0 0 1 1.31 1.312l-.141-.142.141.142z"
+        fill="#FFF"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a SuccessOutline 1`] = `
+<div
+  className="anchor-icon success-outline sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M12.15 6.332l-4.364 4.364a.725.725 0 0 1-1.027 0L4.575 8.514a.728.728 0 0 1 1.03-1.029l1.667 1.668 3.85-3.849a.727.727 0 1 1 1.027 1.028M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 14.667A6.675 6.675 0 0 1 1.333 8 6.675 6.675 0 0 1 8 1.333 6.675 6.675 0 0 1 14.667 8 6.675 6.675 0 0 1 8 14.667"
+        id="success-outline-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#success-outline-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Tag 1`] = `
+<div
+  className="anchor-icon tag sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M11.333 3.334a1.333 1.333 0 1 0 0 2.666 1.333 1.333 0 0 0 0-2.666M14.667 7.1a.368.368 0 0 1-.106.256L7.357 14.56a.37.37 0 0 1-.513 0L1.438 9.156a.366.366 0 0 1 0-.513L8.642 1.44a.36.36 0 0 1 .257-.107h5.406c.199 0 .362.163.362.363v5.405zm-.362-7.1H8.899c-.453 0-.878.175-1.2.496L.496 7.701a1.698 1.698 0 0 0 0 2.397L5.9 15.503c.32.322.746.497 1.2.497.452 0 .879-.175 1.199-.496L15.504 8.3c.32-.32.496-.747.496-1.199V1.697C16 .76 15.239 0 14.305 0z"
+        id="tag-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#tag-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a TagAdd 1`] = `
+<div
+  className="anchor-icon tag-add sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M15.375 12.875a.625.625 0 1 1 0 1.25h-1.25v1.25a.625.625 0 1 1-1.25 0v-1.25h-1.25a.625.625 0 1 1 0-1.25h1.25v-1.25a.625.625 0 1 1 1.25 0v1.25h1.25zM11.5 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm2.25 3.657a.344.344 0 0 1-.1.24L6.896 13.65a.347.347 0 0 1-.48 0L1.349 8.584a.34.34 0 0 1 0-.481L8.102 1.35c.064-.064.15-.1.24-.1h5.068a.34.34 0 0 1 .34.34v5.067zm1.25 0V1.59C15 .714 14.287 0 13.41 0H8.343c-.425 0-.824.165-1.124.466L.464 7.219a1.594 1.594 0 0 0 0 2.248l5.068 5.067c.3.301.7.466 1.124.466a1.58 1.58 0 0 0 1.125-.466l6.755-6.754c.299-.3.464-.699.464-1.123z"
+        id="tag-add-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#tag-add-a"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Component: Icon should render out a Upload 1`] = `
+<div
+  className="anchor-icon upload sc-bdVaJa jmGsuc"
+>
+  <svg
+    height={16}
+    viewBox="0 0 16 16"
+    width={16}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <path
+        d="M12.333 5.334C13.252 5.334 14 6.081 14 7v7.334c0 .92-.748 1.666-1.667 1.666H3.666A1.667 1.667 0 0 1 2 14.334V7c0-.919.747-1.666 1.666-1.666h1.667a.667.667 0 1 1 0 1.333H3.666A.333.333 0 0 0 3.333 7v7.334c0 .184.149.333.333.333h8.667a.333.333 0 0 0 .333-.333V7a.333.333 0 0 0-.333-.333h-1.667a.667.667 0 0 1 0-1.333h1.667zM5.804 3.805a.666.666 0 1 1-.943-.942L7.528.196a.666.666 0 0 1 .943 0l2.666 2.667a.665.665 0 0 1 0 .942.665.665 0 0 1-.942 0L8.666 2.277v7.057a.666.666 0 1 1-1.333 0V2.277L5.804 3.805z"
+        id="upload-a"
+      />
+    </defs>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M0 0h16v16H0z"
+      />
+      <use
+        fill="#222"
+        xlinkHref="#upload-a"
       />
     </g>
   </svg>

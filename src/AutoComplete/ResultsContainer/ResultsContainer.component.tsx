@@ -249,14 +249,18 @@ export const ResultsContainer = forwardRef(
             >
                 {resultTemplate ? (
                     <div className="auto-complete-results">
-                        {results.map(({ label, value }: ResultItemProps, index: number) =>
-                            React.createElement(resultTemplate, {
-                                label,
-                                value,
-                                term,
-                                currentIndex,
-                                index: relativeIndex(index),
-                            })
+                        {results.map(
+                            (
+                                { label, value }: ResultItemProps,
+                                index: number
+                            ) =>
+                                React.createElement(resultTemplate, {
+                                    label,
+                                    value,
+                                    term,
+                                    currentIndex,
+                                    index: relativeIndex(index),
+                                })
                         )}
                     </div>
                 ) : (

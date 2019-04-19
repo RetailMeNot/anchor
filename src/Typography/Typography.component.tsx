@@ -230,7 +230,8 @@ const StyledTypography = (as: Elements) => styled[as]`
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
-    color: ${({ color = 'inherit', hue = 'base' }: any) => color === 'inherit' ? 'inherit' : colors[color][hue]};
+    color: ${({ color = 'inherit', hue = 'base' }: any) =>
+        color === 'inherit' ? 'inherit' : colors[color][hue]};
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
     // Override Size & Line Height

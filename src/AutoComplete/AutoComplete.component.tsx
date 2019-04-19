@@ -5,7 +5,11 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
 import { Input } from '../Form';
-import { ResultsContainer, DataItem, ResultItemProps } from './ResultsContainer';
+import {
+    ResultsContainer,
+    DataItem,
+    ResultItemProps,
+} from './ResultsContainer';
 // THEME
 import { colors } from '../theme';
 

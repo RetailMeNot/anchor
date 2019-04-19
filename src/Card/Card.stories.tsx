@@ -120,7 +120,7 @@ const ActionArea = () => (
 
 const CardAction = (
     <DropDown overlay={<div>123</div>}>
-        <Icon color={colors.ash.light} type="ellipses" />
+        <Icon.Ellipses color={colors.ash.light} />
     </DropDown>
 );
 

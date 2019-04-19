@@ -22,7 +22,7 @@ storiesOf('Components/Form/Input', module)
             sidebar: README,
         },
     })
-    .add('default', () => (
+    .add('Default', () => (
         <StyledStory>
             <Grid columns="200px">
                 <Cell>
@@ -36,20 +36,20 @@ storiesOf('Components/Form/Input', module)
                     <Input
                         placeholder="Enter a number here"
                         type="number"
-                        suffix={<Icon color={colors.ash.dark} type="search" />}
+                        suffix={<Icon.Search color={colors.ash.dark} />}
                     />
                 </Cell>
                 <Cell>
                     <Input
                         placeholder="(512) 666-6666"
                         label="Enter a phone number here"
-                        prefix={<Icon color={colors.ash.dark} type="mobile" />}
+                        prefix={<Icon.Mobile color={colors.ash.dark} />}
                         type="tel"
                     />
                 </Cell>
                 <Cell>
                     <Input
-                        prefix={<Icon color={colors.ash.dark} type="search" />}
+                        prefix={<Icon.Search color={colors.ash.dark} />}
                         type="number"
                     />
                 </Cell>

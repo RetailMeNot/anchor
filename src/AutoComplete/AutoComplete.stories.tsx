@@ -52,7 +52,7 @@ const StateBasedAutoCompleteStory = () => {
                         onFilter={(newTerm: any) => {
                             setTempData(tempDataStringSource(newTerm));
                         }}
-                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        prefix={<Icon.Search color={colors.ash.base} />}
                         dataSource={tempData}
                     />
                 </Cell>
@@ -61,11 +61,7 @@ const StateBasedAutoCompleteStory = () => {
     );
 };
 
-const CustomResult = ({
-    index,
-    currentIndex,
-    label,
-}: ResultItemProps) => {
+const CustomResult = ({ index, currentIndex, label }: ResultItemProps) => {
     const isLink = index === 2;
     return isLink ? (
         <Item
@@ -97,7 +93,7 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
                         onFilter={(newTerm: any) => {
                             setTempData(tempDataStringSource(newTerm));
                         }}
-                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        prefix={<Icon.Search color={colors.ash.base} />}
                         dataSource={tempData}
                         resultTemplate={CustomResult}
                     />
@@ -126,7 +122,7 @@ storiesOf('Components/AutoComplete', module)
                     <AutoComplete
                         allowClear={true}
                         placeholder="Search here..."
-                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        prefix={<Icon.Search color={colors.ash.base} />}
                         dataSource={[
                             {
                                 label: 'Title of a section 1',

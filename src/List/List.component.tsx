@@ -54,7 +54,11 @@ export const List: React.FunctionComponent<ListProps> = ({
                       }: ListItem,
                       index: number
                   ) => {
-                      return React.createElement<any>(itemComponent[listItemType], { label, key, ...r }, label);
+                      return React.createElement<any>(
+                          itemComponent[listItemType],
+                          { label, key, ...r },
+                          label
+                      );
                   }
               )
             : filterChildrenByType(children, ['Item', 'Title', 'Divider'])}

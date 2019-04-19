@@ -14,7 +14,7 @@ export interface TitleProps {
 
 const StyledTitle = styled.div`
     box-sizing: border-box;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
 `;
 
 const DefaultProps: TitleProps = {};
@@ -23,10 +23,10 @@ export const Title = ({
     className,
     children,
 }: TitleProps = DefaultProps): React.ReactElement<any> => (
-    <StyledTitle
-        className={classNames('anchor-list-title', className)}
-    >
-        <Typography weight={600} scale={12} color="ash" hue="dark">{children}</Typography>
+    <StyledTitle className={classNames('anchor-list-title', className)}>
+        <Typography weight={600} scale={12} color="ash" hue="dark">
+            {children}
+        </Typography>
     </StyledTitle>
 );
 

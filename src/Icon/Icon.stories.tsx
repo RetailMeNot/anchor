@@ -2,19 +2,26 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
+import { color, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
-import { color } from '@storybook/addon-knobs';
-// COMPONENT
-import { Icon, Icons } from './Icon.component';
+// COMPONENTS
 import { Grid, CenteredCell } from '../Grid';
+import { Typography } from '../Typography';
+import { Icon } from './';
+import { DefaultColor } from './utils';
+
 // README
 import * as README from './README.md';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
-`;
 
+    div {
+        text-align: center;
+    }
+`;
+// TODO: use Cell
 storiesOf('Components/Icon', module)
     .addParameters({
         readme: {
@@ -23,22 +30,29 @@ storiesOf('Components/Icon', module)
     })
     .add('All Icons', () => (
         <StyledStory>
-            <Grid columns={10} minRowHeight="24px" gap="15px">
-                {Object.keys(Icons).map((key: any) => (
-                    <CenteredCell key={key} width={1}>
-                        <Icon color={color('Icon Color', '#222')} type={key} />
+            <Grid columns={5} minRowHeight="1.5rem" gap="1rem">
+                {Object.keys(Icon).map((iconKey: string) => (
+                    <CenteredCell>
+                        <div>
+                            <Typography tag="p" scale={12}>
+                                {iconKey}
+                            </Typography>
+                            {React.createElement(Icon[iconKey])}
+                        </div>
                     </CenteredCell>
                 ))}
             </Grid>
         </StyledStory>
     ))
-    .add('Resize', () => (
+    .add('Size & Color', () => (
         <StyledStory>
-            <Icon scale="xs" type="chevron-right" />
-            <Icon scale="sm" type="chevron-right" />
-            <Icon scale="md" type="chevron-right" />
-            <Icon scale="lg" type="chevron-right" />
-            <Icon scale="xl" type="chevron-right" />
-            <Icon scale="xxl" type="chevron-right" />
+            <Icon.AddEvent
+                color={color('color', DefaultColor)}
+                scale={select(
+                    'scale',
+                    ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
+                    'md'
+                )}
+            />
         </StyledStory>
     ));

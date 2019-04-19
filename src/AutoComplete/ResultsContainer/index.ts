@@ -1,1 +1,6 @@
-export { ResultsContainer, DataItem, ResultItemProps, ResultsContainerProps } from './ResultsContainer.component';
+export {
+    ResultsContainer,
+    DataItem,
+    ResultItemProps,
+    ResultsContainerProps,
+} from './ResultsContainer.component';

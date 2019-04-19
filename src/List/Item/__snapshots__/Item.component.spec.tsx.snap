@@ -2,7 +2,7 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="anchor-list-item sc-bdVaJa bqQbgH"
+  className="anchor-list-item sc-bdVaJa kbqFBH"
   onMouseDown={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
