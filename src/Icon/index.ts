@@ -9,6 +9,7 @@ export { Calendar } from './Icons/Calendar.component';
 export { Camera } from './Icons/Camera.component';
 export { Cart } from './Icons/Cart.component';
 export { CashBack } from './Icons/CashBack.component';
+export { Cells } from './Icons/Cells.component';
 export { Chat } from './Icons/Chat.component';
 export { Check } from './Icons/Check.component';
 export { CheckSmall } from './Icons/CheckSmall.component';
@@ -38,7 +39,6 @@ export { Error } from './Icons/Error.component';
 export { Expand } from './Icons/Expand.component';
 export { Gear } from './Icons/Gear.component';
 export { GiftCard } from './Icons/GiftCard.component';
-export { Grid } from './Icons/Grid.component';
 export { Hamburger } from './Icons/Hamburger.component';
 export { Heart } from './Icons/Heart.component';
 export { HeartOutline } from './Icons/HeartOutline.component';
@@ -88,6 +88,7 @@ import { Calendar } from './Icons/Calendar.component';
 import { Camera } from './Icons/Camera.component';
 import { Cart } from './Icons/Cart.component';
 import { CashBack } from './Icons/CashBack.component';
+import { Cells } from './Icons/Cells.component';
 import { Chat } from './Icons/Chat.component';
 import { Check } from './Icons/Check.component';
 import { CheckSmall } from './Icons/CheckSmall.component';
@@ -117,7 +118,6 @@ import { Error } from './Icons/Error.component';
 import { Expand } from './Icons/Expand.component';
 import { Gear } from './Icons/Gear.component';
 import { GiftCard } from './Icons/GiftCard.component';
-import { Grid } from './Icons/Grid.component';
 import { Hamburger } from './Icons/Hamburger.component';
 import { Heart } from './Icons/Heart.component';
 import { HeartOutline } from './Icons/HeartOutline.component';
@@ -168,6 +168,7 @@ export const Icon = {
     Camera,
     Cart,
     CashBack,
+    Cells,
     Chat,
     Check,
     CheckSmall,
@@ -197,7 +198,6 @@ export const Icon = {
     Expand,
     Gear,
     GiftCard,
-    Grid,
     Hamburger,
     Heart,
     HeartOutline,
