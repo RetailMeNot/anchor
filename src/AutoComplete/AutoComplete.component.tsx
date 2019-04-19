@@ -5,17 +5,17 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
 import { Input } from '../Form';
-import { ResultsContainer, DataItem } from './ResultsContainer';
+import { ResultsContainer, DataItem, ResultItemProps } from './ResultsContainer';
 // THEME
 import { colors } from '../theme';
 
 const { useState, useRef } = React;
 
-type AutoCompleteDataSource = {
+type AutoCompleteDataSource = Array<{
     label?: string;
     listItemType?: 'item' | 'title' | 'divider';
     [key: string]: any;
-}[];
+}>;
 
 interface AutoCompleteProps {
     dataSource?: AutoCompleteDataSource | string[] | number[];
@@ -28,10 +28,11 @@ interface AutoCompleteProps {
     allowClear?: boolean;
     // Visual
     border?: boolean;
+    shadow?: boolean;
     background?: string;
     color?: string;
     // TODO: Allow children
-    // children?: any;
+    resultTemplate?: (props: ResultItemProps) => any;
     suffix?: React.ReactElement<any>;
     prefix?: React.ReactElement<any>;
     // Event Handlers
@@ -43,6 +44,7 @@ interface AutoCompleteProps {
 }
 
 interface StyledAutoCompleteProps {
+    shadow?: boolean;
     border?: boolean;
     background?: string;
     color?: string;
@@ -64,7 +66,10 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
     transition: border-color 250ms;
     background: ${({ background }: StyledAutoCompleteProps) => background};
     color: ${({ color }: StyledAutoCompleteProps) => color};
-    box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);
+    ${({ shadow }: StyledAutoCompleteProps) =>
+        shadow
+            ? 'box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);'
+            : null};
 
     &:hover {
         border: solid thin ${colors.ash.base};
@@ -92,9 +97,12 @@ export const AutoComplete = ({
     onSelect = () => null,
     onChange = () => null,
     size = 'lg',
+    shadow = false,
     border = true,
     background = colors.white.base,
     color = colors.charcoal.light,
+    resultTemplate,
+    allowClear,
     ...props
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
@@ -135,6 +143,7 @@ export const AutoComplete = ({
 
     return (
         <StyledAutoComplete
+            shadow={shadow}
             border={border}
             background={background}
             color={color}
@@ -196,6 +205,7 @@ export const AutoComplete = ({
                     emitActiveTerm={(newTerm: string) => {
                         updateInputAndTerm(newTerm);
                     }}
+                    resultTemplate={resultTemplate}
                     dataSource={dataSource}
                     term={term}
                 />

@@ -6,8 +6,10 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
+import { ResultItemProps } from './ResultsContainer';
 import { Icon } from '../Icon';
 import { Grid, Cell } from '../Grid';
+import { Item } from '../List';
 import { Typography } from '../Typography';
 import { colors } from '../theme';
 // README
@@ -44,7 +46,7 @@ const StateBasedAutoCompleteStory = () => {
             <Grid columns={1}>
                 <Cell width={1}>
                     <Typography tag="h1">AutoComplete 1</Typography>
-                    <br/>
+                    <br />
                     <AutoComplete
                         placeholder="Search here..."
                         onFilter={(newTerm: any) => {
@@ -59,6 +61,52 @@ const StateBasedAutoCompleteStory = () => {
     );
 };
 
+const CustomResult = ({
+    index,
+    currentIndex,
+    label,
+}: ResultItemProps) => {
+    const isLink = index === 2;
+    return isLink ? (
+        <Item
+            key={index}
+            active={index === currentIndex}
+            onSelect={() => {
+                window.open('http://www.google.com', '_blank');
+            }}
+        >
+            Link: {label}
+        </Item>
+    ) : (
+        <Item active={index === currentIndex}>{label}</Item>
+    );
+};
+
+const StateBasedAutoCompleteStoryCustomResult = () => {
+    const [tempData, setTempData] = useState<string[]>(
+        tempDataStringSource('')
+    );
+    return (
+        <StyledStory>
+            <Grid columns={1}>
+                <Cell width={1}>
+                    <Typography tag="h1">AutoComplete 1</Typography>
+                    <br />
+                    <AutoComplete
+                        placeholder="Search here..."
+                        onFilter={(newTerm: any) => {
+                            setTempData(tempDataStringSource(newTerm));
+                        }}
+                        prefix={<Icon color={colors.ash.base} type="search" />}
+                        dataSource={tempData}
+                        resultTemplate={CustomResult}
+                    />
+                </Cell>
+            </Grid>
+        </StyledStory>
+    );
+};
+
 storiesOf('Components/AutoComplete', module)
     .addParameters({
         readme: {
@@ -66,6 +114,9 @@ storiesOf('Components/AutoComplete', module)
         },
     })
     .add('String Array Results', () => <StateBasedAutoCompleteStory />)
+    .add('Custom Results Template', () => (
+        <StateBasedAutoCompleteStoryCustomResult />
+    ))
     .add('Object Array Results', () => (
         <StyledStory>
             <Grid columns={1}>
@@ -73,6 +124,7 @@ storiesOf('Components/AutoComplete', module)
                     <Typography tag="h1">AutoComplete 1</Typography>
                     <br />
                     <AutoComplete
+                        allowClear={true}
                         placeholder="Search here..."
                         prefix={<Icon color={colors.ash.base} type="search" />}
                         dataSource={[

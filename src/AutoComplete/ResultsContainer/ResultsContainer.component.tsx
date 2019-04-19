@@ -23,10 +23,18 @@ export interface ResultsContainerProps {
     dataSource: any[];
     emitSelectedItem: EmitSelectedItem;
     emitActiveTerm: EmitActiveTerm;
-    childComponent?: React.ReactChild[];
+    resultTemplate?: (props: ResultItemProps) => any;
 }
-export interface StyledResultsContainerProps {
+interface StyledResultsContainerProps {
     children?: any;
+}
+
+export interface ResultItemProps {
+    term: string;
+    currentIndex: number;
+    index: number;
+    label: string;
+    value: any;
 }
 
 const StyledResultsContainerContainer = styled.div<StyledResultsContainerProps>`
@@ -72,10 +80,11 @@ const generateResults = (
                             setCurrentIndex(itemIndex);
                             setTerm(term);
                         },
-                        onSelect: () => emitSelectedItem({
-                            label: result,
-                            value: { label: result, value: result },
-                        }),
+                        onSelect: () =>
+                            emitSelectedItem({
+                                label: result,
+                                value: { label: result, value: result },
+                            }),
                     })
                 );
             });
@@ -140,7 +149,7 @@ export const ResultsContainer = forwardRef(
             emitSelectedItem,
             emitActiveTerm,
             term,
-            childComponent,
+            resultTemplate,
             ...props
         }: ResultsContainerProps,
         resultsContainerRef: React.Ref<any>
@@ -207,9 +216,7 @@ export const ResultsContainer = forwardRef(
                 setInitialTerm('');
             } else {
                 // Emit the active term, but subtract one bc the input is not part of the original data set
-                emitActiveTerm(
-                    results[iterativeIndexes[nextIndex] - 1].label
-                );
+                emitActiveTerm(results[iterativeIndexes[nextIndex] - 1].label);
             }
         };
 
@@ -240,7 +247,21 @@ export const ResultsContainer = forwardRef(
                 )}
                 {...props}
             >
-                <List items={results} className="auto-complete-results" />
+                {resultTemplate ? (
+                    <div className="auto-complete-results">
+                        {results.map(({ label, value }: ResultItemProps, index: number) =>
+                            React.createElement(resultTemplate, {
+                                label,
+                                value,
+                                term,
+                                currentIndex,
+                                index: relativeIndex(index),
+                            })
+                        )}
+                    </div>
+                ) : (
+                    <List items={results} className="auto-complete-results" />
+                )}
             </StyledResultsContainerContainer>
         );
     }
