@@ -31,7 +31,6 @@ interface AutoCompleteProps {
     background?: string;
     color?: string;
     // TODO: Allow children
-    // Children Components
     // children?: any;
     suffix?: React.ReactElement<any>;
     prefix?: React.ReactElement<any>;
@@ -100,10 +99,6 @@ export const AutoComplete = ({
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
     const [isFocused, setIsFocused] = useState<boolean>(false);
-    // The index of the active result item
-    const setActiveResultIndex = useState<number>(0)[1];
-    // console.log(activeResultIndex);
-    // TODO: the autocomplete itself doesn't have a value
     // The current search term
     const [term, setTerm] = useState<string>(value ? `${value}` : '');
     // Instance of the nested input
@@ -126,8 +121,9 @@ export const AutoComplete = ({
     };
 
     const setIndex = (newIndex: number) => {
-        setActiveResultIndex(newIndex);
-        resultsRef.current.setActiveIndex(newIndex);
+        if (newIndex && resultsRef.current) {
+            resultsRef.current.setActiveIndex(newIndex);
+        }
     };
 
     // Handle updating the autocomplete value
@@ -140,7 +136,7 @@ export const AutoComplete = ({
         inputRef.current.update(newValue.label);
         inputRef.current.blur();
         // Reset the index
-        setActiveResultIndex(0);
+        resultsRef.current.setActiveIndex(0);
     };
 
     return (
@@ -188,21 +184,17 @@ export const AutoComplete = ({
                             break;
                         default:
                             setIndex(0);
-                            resultsRef.current.clearInitialTerm();
                             break;
                     }
                 }}
                 name="auto-complete"
                 className="auto-complete-input"
             />
-            {isFocused && (
+            {isFocused && dataSource.length > 0 && (
                 <ResultsContainer
                     ref={resultsRef}
                     emitSelectedItem={(item: DataItem) => {
                         changeActiveValue(item);
-                    }}
-                    emitActiveIndex={(i: number) => {
-                        setActiveResultIndex(i);
                     }}
                     emitActiveTerm={(newTerm: string) => {
                         updateInputAndTerm(newTerm);

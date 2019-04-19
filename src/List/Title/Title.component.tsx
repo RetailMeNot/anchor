@@ -22,11 +22,9 @@ const DefaultProps: TitleProps = {};
 export const Title = ({
     className,
     children,
-    ...props
 }: TitleProps = DefaultProps): React.ReactElement<any> => (
     <StyledTitle
         className={classNames('anchor-list-title', className)}
-        {...props}
     >
         <Typography weight={600} scale={12} color="ash" hue="dark">{children}</Typography>
     </StyledTitle>

@@ -11,7 +11,6 @@ const subject = (
     <ResultsContainer
         term="a"
         emitSelectedItem={() => true}
-        emitActiveIndex={() => true}
         emitActiveTerm={() => true}
         dataSource={[]}
     />

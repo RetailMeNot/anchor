@@ -25,7 +25,10 @@ const StyledItem = styled.a`
     cursor: pointer;
     transition: background-color 500ms;
     background-color: ${colors.white.base};
-    &:hover,
+    &:hover {
+        background-color: ${colors.silver.light};
+    }
+
     &.active {
         background-color: ${colors.silver.base};
     }

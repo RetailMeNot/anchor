@@ -13,7 +13,6 @@ export type DataItem = {
     [key: string]: any;
 };
 
-type EmitActiveIndex = (index: number) => void;
 type EmitSelectedItem = (newItem: DataItem) => void;
 type EmitActiveTerm = (newTerm: string) => void;
 
@@ -22,7 +21,6 @@ export interface ResultsContainerProps {
     className?: string;
     term: string;
     dataSource: any[];
-    emitActiveIndex: EmitActiveIndex;
     emitSelectedItem: EmitSelectedItem;
     emitActiveTerm: EmitActiveTerm;
     childComponent?: React.ReactChild[];
@@ -53,40 +51,49 @@ type ObjectItem = { label: string; [key: string]: any };
 const generateResults = (
     results: any[],
     currentIndex: number,
-    emitActiveIndex: EmitActiveIndex,
-    emitSelectedItem: EmitSelectedItem
+    setCurrentIndex: any,
+    emitSelectedItem: EmitSelectedItem,
+    term: string,
+    setTerm: any
 ): any => {
     const cleanResults: DataItem[] = [];
     if (Array.isArray(results) && results.length) {
         // Generic arrays are converted to DataItems
         if (typeof results[0] === 'string') {
             results.forEach((result: string, index: number) => {
+                const itemIndex = relativeIndex(index);
                 cleanResults.push(
                     createResult(result, {
                         label: result || '',
                         // Add one to index so that the input is an index
-                        active: relativeIndex(index) === currentIndex,
-                        key: `anchor-result-${index}`,
-                        onMouseOver: () => emitActiveIndex(index),
-                        onSelect: () =>
-                            emitSelectedItem({
-                                label: result,
-                                value: { label: result, value: result },
-                            }),
+                        active: itemIndex === currentIndex,
+                        key: `anchor-result-${itemIndex}`,
+                        onMouseOver: () => {
+                            setCurrentIndex(itemIndex);
+                            setTerm(term);
+                        },
+                        onSelect: () => emitSelectedItem({
+                            label: result,
+                            value: { label: result, value: result },
+                        }),
                     })
                 );
             });
         } else if (typeof results[0] === 'object') {
             results.forEach(
                 ({ label = '', ...props }: ObjectItem, index: number) => {
+                    const itemIndex = relativeIndex(index);
                     cleanResults.push(
                         createResult(label, {
                             label,
                             ...props,
                             // Add one to index so that the input is an index
-                            active: relativeIndex(index) === currentIndex,
-                            key: `anchor-result-${index}`,
-                            onMouseOver: () => emitActiveIndex(index),
+                            active: itemIndex === currentIndex,
+                            key: `anchor-result-${itemIndex}`,
+                            onMouseOver: () => {
+                                setCurrentIndex(itemIndex);
+                                setTerm(term);
+                            },
                             onSelect: () =>
                                 emitSelectedItem({
                                     label,
@@ -94,16 +101,8 @@ const generateResults = (
                                 }),
                         })
                     );
-                    if (!label) {
-                        /* tslint:disable no-console */
-                        console.warn(
-                            'Autocomplete objects should contain a label property for sorting & display.'
-                        );
-                    }
                 }
             );
-        } else {
-            console.log(3, typeof results);
         }
     }
     return cleanResults;
@@ -138,7 +137,6 @@ export const ResultsContainer = forwardRef(
         {
             className,
             dataSource = [],
-            emitActiveIndex,
             emitSelectedItem,
             emitActiveTerm,
             term,
@@ -149,13 +147,18 @@ export const ResultsContainer = forwardRef(
     ): JSX.Element => {
         const [currentIndex, setCurrentIndex] = useState<number>(0);
         const [initialTerm, setInitialTerm] = useState<string>('');
+
         const results = generateResults(
             dataSource,
             currentIndex,
-            emitActiveIndex,
-            emitSelectedItem
+            setCurrentIndex,
+            emitSelectedItem,
+            term,
+            setInitialTerm
         );
+
         const iterativeIndexes: number[] = [0];
+
         results.forEach(({ value: { listItemType } }: any, index: number) => {
             if (!listItemType || listItemType === 'item') {
                 // Add one to index to allow input to be item 0
@@ -185,7 +188,10 @@ export const ResultsContainer = forwardRef(
             return nextIndex;
         };
 
-        const handleTraversal = (currentTerm: string, forward: boolean) => {
+        const handleTraversal = (
+            currentTerm: string = '',
+            forward: boolean
+        ) => {
             // Check if there's a initialTerm
             if (!initialTerm || initialTerm === '') {
                 // If there's no initialTerm, assign the current input value
@@ -208,8 +214,11 @@ export const ResultsContainer = forwardRef(
         };
 
         useImperativeHandle(resultsContainerRef, () => ({
-            setActiveIndex: (newIndex: number) => setCurrentIndex(newIndex),
-            clearInitialTerm: () => setInitialTerm(''),
+            setActiveIndex: (itemIndex: number) => {
+            },
+            clearInitialTerm: () => {
+                setInitialTerm('');
+            },
             handleNext: (currentTerm: string) => {
                 handleTraversal(currentTerm, true);
             },
@@ -218,7 +227,7 @@ export const ResultsContainer = forwardRef(
             },
             selectActive: () => {
                 if (currentIndex >= 0 && currentIndex <= results.length) {
-                    emitSelectedItem(results[currentIndex]);
+                    emitSelectedItem(results[currentIndex - 1]);
                 }
             },
         }));

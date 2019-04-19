@@ -44,29 +44,7 @@ const StateBasedAutoCompleteStory = () => {
             <Grid columns={1}>
                 <Cell width={1}>
                     <Typography tag="h1">AutoComplete 1</Typography>
-                    <AutoComplete
-                        placeholder="Search here..."
-                        onFilter={(newTerm: any) => {
-                            setTempData(tempDataStringSource(newTerm));
-                        }}
-                        prefix={<Icon color={colors.ash.base} type="search" />}
-                        dataSource={tempData}
-                    />
-                </Cell>
-            </Grid>
-        </StyledStory>
-    );
-};
-
-const StateBasedAutoCompleteStoryWithCustomResults = () => {
-    const [tempData, setTempData] = useState<string[]>(
-        tempDataStringSource('')
-    );
-    return (
-        <StyledStory>
-            <Grid columns={1}>
-                <Cell width={1}>
-                    <Typography tag="h1">AutoComplete 1</Typography>
+                    <br/>
                     <AutoComplete
                         placeholder="Search here..."
                         onFilter={(newTerm: any) => {
@@ -93,6 +71,7 @@ storiesOf('Components/AutoComplete', module)
             <Grid columns={1}>
                 <Cell width={1}>
                     <Typography tag="h1">AutoComplete 1</Typography>
+                    <br />
                     <AutoComplete
                         placeholder="Search here..."
                         prefix={<Icon color={colors.ash.base} type="search" />}
@@ -130,7 +109,4 @@ storiesOf('Components/AutoComplete', module)
                 </Cell>
             </Grid>
         </StyledStory>
-    ))
-    .add('Custom Results List', () => (
-        <StateBasedAutoCompleteStoryWithCustomResults />
     ));

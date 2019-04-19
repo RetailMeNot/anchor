@@ -27,7 +27,6 @@ storiesOf('Components/AutoComplete/ResultsContainer', module)
             <ResultsContainer
                 term="a"
                 emitSelectedItem={() => true}
-                emitActiveIndex={() => true}
                 emitActiveTerm={() => true}
                 dataSource={[]}
             />
