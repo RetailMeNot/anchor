@@ -57,7 +57,7 @@ storiesOf('Components/Hero', module)
                     color={color('Hero Color', colors.white.base)}
                 >
                     <BreadCrumbs scale={14} weight={500}>
-                        Westeros / House Tyrell
+                        {text('Subtitle', 'Westeros / House Tyrell')}
                     </BreadCrumbs>
                     <Title>{text('Title', 'Olenna Tyrell')}</Title>
                 </Hero>
@@ -107,7 +107,7 @@ storiesOf('Components/Hero', module)
                             variant="text"
                             onClick={() => alert('Paid!')}
                         >
-                            Pay Debts Today
+                            {text('Button Text', 'Pay Debts Today')}
                         </NeatButton>
                     </Grid>
                 </Hero>

@@ -1,9 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Hero should be defined 1`] = `
-<div
-  className="sc-bdVaJa hpYbHo"
+<section
+  className="anchor-hero sc-jlyJG cGKLmU"
+  color="#FFFFFF"
 >
-  This is a hero!
-</div>
+  <h1
+    className="anchor-typography anchor-hero-title sc-gipzik djvWWx sc-jhAzac kizYpY"
+    color="inherit"
+    size={2}
+  >
+    Hero Title
+  </h1>
+  <span
+    className="anchor-typography anchor-hero-subtitle sc-csuQGl bUJMDi sc-fBuWsC izUdTL"
+    color="inherit"
+    scale={16}
+  >
+    Hero Subtitle
+  </span>
+</section>
 `;

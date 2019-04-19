@@ -8,7 +8,7 @@ exports[`Component: Item should be defined 1`] = `
   onMouseOver={[Function]}
 >
   <p
-    className="anchor-typography sc-htpNat hqwYaK"
+    className="anchor-typography sc-htpNat gchldv"
     color="charcoal"
   >
     Item

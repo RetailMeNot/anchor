@@ -1,13 +1,19 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// COMPONENT
-import Hero from './Hero.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
+// COMPONENT
+import {Hero} from './Hero.component';
+const { Title, Subtitle } = Hero;
 
 // TEST SETUP
-const subject = <Hero />;
+const subject = (
+    <Hero>
+        <Title>Hero Title</Title>
+        <Subtitle>Hero Subtitle</Subtitle>
+    </Hero>
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 
