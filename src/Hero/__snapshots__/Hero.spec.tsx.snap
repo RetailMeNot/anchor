@@ -2,19 +2,17 @@
 
 exports[`Component: Hero should be defined 1`] = `
 <section
-  className="anchor-hero sc-jlyJG cGKLmU"
+  className="anchor-hero sc-bdVaJa fPBYhB"
   color="#FFFFFF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik djvWWx sc-jhAzac kizYpY"
-    color="inherit"
+    className="anchor-typography anchor-hero-title sc-bwzfXH kqDGTi sc-EHOje hKGOhJ"
     size={2}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-csuQGl bUJMDi sc-fBuWsC izUdTL"
-    color="inherit"
+    className="anchor-typography anchor-hero-subtitle sc-htpNat fzCpSd sc-bZQynM gPLXjX"
     scale={16}
   >
     Hero Subtitle

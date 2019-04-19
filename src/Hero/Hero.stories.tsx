@@ -57,7 +57,7 @@ storiesOf('Components/Hero', module)
                     color={color('Hero Color', colors.white.base)}
                 >
                     <BreadCrumbs scale={14} weight={500}>
-                        {text('Subtitle', 'Westeros / House Tyrell')}
+                        {text('Subtext', 'Westeros / House Tyrell')}
                     </BreadCrumbs>
                     <Title>{text('Title', 'Olenna Tyrell')}</Title>
                 </Hero>

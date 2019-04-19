@@ -91,6 +91,8 @@ type DisplayValues =
     | 'initial'
     | 'inherit';
 
+export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
+
 export interface TypographyProps {
     className?: string;
     tag?: Elements;
@@ -98,11 +100,11 @@ export interface TypographyProps {
     href?: string;
     children?: any;
     weight?: FontWeights;
-    color?: 'inherit' | Colors;
+    color?: 'inherit' | 'initital' | Colors;
     hue?: 'light' | 'base' | 'dark';
     size?: number;
     lineHeight?: number;
-    align?: 'inherit' | 'left' | 'center' | 'right' | 'justify';
+    align?: TextAlign;
     transform?: TextTransforms;
     scale?: Scale;
     display?: DisplayValues;
@@ -242,7 +244,7 @@ const ScaleTreatments = {
     `,
 };
 
-const StyledTypography = (element: Elements) => styled[element]`
+const StyledTypography = (tag: Elements) => styled[tag]`
     font-family: ${fonts.fontFamily};
     box-sizing: border-box;
     margin: 0;
@@ -251,12 +253,18 @@ const StyledTypography = (element: Elements) => styled[element]`
         color === 'inherit' ? 'inherit' : colors[color][hue]};
 
     // Apply default styles for element
-    ${DefaultCSS[element]};
+    ${DefaultCSS[tag]};
 
     // CSS Overrides
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
+<<<<<<< HEAD
+=======
+    color: ${({ color = 'inherit', hue = 'base' }: any) =>
+        colors[color] ? colors[color][hue] : color};
+
+>>>>>>> chore(Hero): code cleanup
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
 

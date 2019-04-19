@@ -8,17 +8,17 @@ import classnames from 'classnames';
 import {
     Typography,
     TypographyProps,
+    TextAlign,
 } from '../Typography/Typography.component';
-import { Grid } from '..';
 import { colors } from '../theme';
 
 // Hero
 // ------------------------------------------------------------------------------------------------------------------
 
 interface StyledHeroProps {
+    align?: TextAlign;
     background?: string;
     color?: string;
-    align?: string;
     minHeight?: string;
 }
 
@@ -38,7 +38,7 @@ const StyledHero = styled.section<StyledHeroProps>`
 
 interface HeroProps {
     background?: string;
-    align?: string;
+    align?: TextAlign;
     color?: string;
     className?: string;
     children?: any;
@@ -86,17 +86,13 @@ export const HeroTitle = ({
     children,
     tag = 'h1',
     weight = 600,
-    color = 'inherit',
-    align = 'inherit',
     size = 2,
     ...props
 }: TypographyProps): React.ReactElement<any> => (
     <StyledTitle
         className={classnames('anchor-hero-title', className)}
         tag={tag}
-        color={color}
         weight={weight}
-        align={align}
         size={size}
         {...props}
     >
@@ -123,16 +119,12 @@ export const HeroSubtitle = ({
     children,
     scale = 16,
     weight = 600,
-    color = 'inherit',
-    align = 'inherit',
     ...props
 }: TypographyProps): React.ReactElement<any> => (
     <StyledSubtitle
         className={classnames('anchor-hero-subtitle', className)}
         scale={scale}
-        color={color}
         weight={weight}
-        align={align}
         {...props}
     >
         {children}
@@ -140,37 +132,3 @@ export const HeroSubtitle = ({
 );
 
 Hero.Subtitle = HeroSubtitle;
-
-// Hero.Body
-// ------------------------------------------------------------------------------------------------------------------
-
-const StyledBody = styled(Grid)`
-    // strip child margin
-    > * {
-        margin: 0;
-    }
-`;
-
-interface HeroBodyProps {
-    className?: string;
-    children?: any;
-    gap?: string;
-}
-
-export const HeroBody = ({
-    className,
-    children,
-    gap = '0.375rem',
-    ...props
-}: HeroBodyProps): React.ReactElement<any> => (
-    <StyledBody
-        className={classnames('anchor-hero-body', className)}
-        columns={1}
-        gap={gap}
-        {...props}
-    >
-        {children}
-    </StyledBody>
-);
-
-Hero.Body = HeroBody;
