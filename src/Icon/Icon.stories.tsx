@@ -99,6 +99,12 @@ storiesOf('Components/Icon', module)
                 </div>
                 <div>
                     <Typography as="p" scale={12}>
+                        Cells
+                    </Typography>
+                    <Icon.Cells />
+                </div>
+                <div>
+                    <Typography as="p" scale={12}>
                         Chat
                     </Typography>
                     <Icon.Chat />
@@ -270,12 +276,6 @@ storiesOf('Components/Icon', module)
                         GiftCard
                     </Typography>
                     <Icon.GiftCard />
-                </div>
-                <div>
-                    <Typography as="p" scale={12}>
-                        Grid
-                    </Typography>
-                    <Icon.Grid />
                 </div>
                 <div>
                     <Typography as="p" scale={12}>
