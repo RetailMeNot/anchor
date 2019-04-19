@@ -258,7 +258,6 @@ export const Input = forwardRef(
         }
         return (
             <StyledInputWrapper
-                value={inputValue}
                 size={size}
                 onClick={() => {
                     const { current } = inputRef;

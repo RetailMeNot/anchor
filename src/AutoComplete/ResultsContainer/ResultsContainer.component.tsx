@@ -208,13 +208,14 @@ export const ResultsContainer = forwardRef(
             } else {
                 // Emit the active term, but subtract one bc the input is not part of the original data set
                 emitActiveTerm(
-                    dataSource[iterativeIndexes[nextIndex] - 1].label
+                    results[iterativeIndexes[nextIndex] - 1].label
                 );
             }
         };
 
         useImperativeHandle(resultsContainerRef, () => ({
             setActiveIndex: (itemIndex: number) => {
+                setCurrentIndex(0);
             },
             clearInitialTerm: () => {
                 setInitialTerm('');

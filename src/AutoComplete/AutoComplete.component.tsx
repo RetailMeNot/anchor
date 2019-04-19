@@ -120,12 +120,6 @@ export const AutoComplete = ({
         inputRef.current.update(newTerm);
     };
 
-    const setIndex = (newIndex: number) => {
-        if (newIndex && resultsRef.current) {
-            resultsRef.current.setActiveIndex(newIndex);
-        }
-    };
-
     // Handle updating the autocomplete value
     const changeActiveValue = (newValue: DataItem) => {
         changeSearchTerm(newValue.label);
@@ -183,7 +177,10 @@ export const AutoComplete = ({
                             resultsRef.current.handlePrevious(term);
                             break;
                         default:
-                            setIndex(0);
+                            if (resultsRef.current) {
+                                resultsRef.current.clearInitialTerm();
+                                resultsRef.current.setActiveIndex(0);
+                            }
                             break;
                     }
                 }}
