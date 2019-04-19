@@ -36,10 +36,11 @@ const StyledResultsContainerContainer = styled.div<StyledResultsContainerProps>`
     position: absolute;
     width: inherit;
     z-index: 3;
-    box-sizing: content-box;
-    top: 3.5rem;
+    box-sizing: border-box;
+    top: 3.25rem;
     box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);
     border-radius: 0 0 4px 4px;
+    padding: 1rem;
 `;
 
 const createResult = (label: string, value?: any): DataItem => ({
@@ -62,7 +63,7 @@ const generateResults = (
             results.forEach((result: string, index: number) => {
                 cleanResults.push(
                     createResult(result, {
-                        label: result,
+                        label: result || '',
                         // Add one to index so that the input is an index
                         active: relativeIndex(index) === currentIndex,
                         key: `anchor-result-${index}`,
@@ -77,27 +78,26 @@ const generateResults = (
             });
         } else if (typeof results[0] === 'object') {
             results.forEach(
-                ({ label, ...props }: ObjectItem, index: number) => {
-                    if (label) {
-                        cleanResults.push(
-                            createResult(label, {
-                                label,
-                                ...props,
-                                // Add one to index so that the input is an index
-                                active: relativeIndex(index) === currentIndex,
-                                key: `anchor-result-${index}`,
-                                onMouseOver: () => emitActiveIndex(index),
-                                onSelect: () =>
-                                    emitSelectedItem({
-                                        label,
-                                        value: { label, ...props },
-                                    }),
-                            })
-                        );
-                    } else {
+                ({ label = '', ...props }: ObjectItem, index: number) => {
+                    cleanResults.push(
+                        createResult(label, {
+                            label,
+                            ...props,
+                            // Add one to index so that the input is an index
+                            active: relativeIndex(index) === currentIndex,
+                            key: `anchor-result-${index}`,
+                            onMouseOver: () => emitActiveIndex(index),
+                            onSelect: () =>
+                                emitSelectedItem({
+                                    label,
+                                    value: { label, ...props },
+                                }),
+                        })
+                    );
+                    if (!label) {
                         /* tslint:disable no-console */
                         console.warn(
-                            'Autocomplete objects MUST contain a label property.'
+                            'Autocomplete objects should contain a label property for sorting & display.'
                         );
                     }
                 }

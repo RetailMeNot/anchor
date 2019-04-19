@@ -11,8 +11,14 @@ import { colors } from '../theme';
 
 const { useState, useRef } = React;
 
+type AutoCompleteDataSource = {
+    label?: string;
+    listItemType?: 'item' | 'title' | 'divider';
+    [key: string]: any;
+}[];
+
 interface AutoCompleteProps {
-    dataSource?: any[];
+    dataSource?: AutoCompleteDataSource | string[] | number[];
     className?: string;
     size?: 'sm' | 'md' | 'lg';
     placeholder?: string;
@@ -59,6 +65,7 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
     transition: border-color 250ms;
     background: ${({ background }: StyledAutoCompleteProps) => background};
     color: ${({ color }: StyledAutoCompleteProps) => color};
+    box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);
 
     &:hover {
         border: solid thin ${colors.ash.base};

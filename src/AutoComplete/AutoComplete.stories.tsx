@@ -97,17 +97,34 @@ storiesOf('Components/AutoComplete', module)
                         placeholder="Search here..."
                         prefix={<Icon color={colors.ash.base} type="search" />}
                         dataSource={[
-                            { label: 'a', id: 1, isAdmin: true },
-                            { label: 'b', id: 2, isAdmin: false, listItemType: 'title' },
-                            { label: 'c', id: 3, isAdmin: true },
-                            { label: 'd', id: 3, isAdmin: true },
-                            { label: 'e', id: 3, isAdmin: true },
-                            { label: 'f', id: 3, isAdmin: true },
-                            { label: 'd', id: 3, isAdmin: true },
-                            { label: 'e', id: 3, isAdmin: true },
-                            { label: 'f', id: 3, isAdmin: true },
-                            { label: 'd', id: 3, isAdmin: true },
-                            { label: 'e', id: 3, isAdmin: true },
+                            {
+                                label: 'Title of a section 1',
+                                id: 1,
+                                someBoolean: false,
+                                listItemType: 'title',
+                            },
+                            { label: 'Item 1', id: 2, someBoolean: true },
+                            { label: 'Item 3', id: 3, someBoolean: true },
+                            { label: 'Item 4', id: 4, someBoolean: true },
+                            { label: 'Item 5', id: 5, someBoolean: true },
+                            {
+                                label: 'Title of a section 2',
+                                id: 6,
+                                someBoolean: true,
+                                listItemType: 'title',
+                            },
+                            { label: 'Item 7', id: 7, someBoolean: true },
+                            { label: 'Item 8', id: 8, someBoolean: true },
+                            {
+                                label: 'Title of a section 3',
+                                id: 9,
+                                someBoolean: true,
+                                listItemType: 'title',
+                            },
+                            {
+                                listItemType: 'divider',
+                            },
+                            { label: 'Item 11', id: 11, someBoolean: true },
                         ]}
                     />
                 </Cell>

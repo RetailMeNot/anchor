@@ -7,7 +7,7 @@ import Divider from './Divider.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Divider>Divider</Divider>;
+const subject = <Divider />;
 const wrapper = mount(subject);
 const component = shallow(subject);
 

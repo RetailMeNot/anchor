@@ -12,21 +12,23 @@ export interface TitleProps {
     label?: string;
 }
 
-const StyledTitle = styled.a``;
+const StyledTitle = styled.div`
+    box-sizing: border-box;
+    padding: .75rem 1rem;
+`;
 
 const DefaultProps: TitleProps = {};
 
 export const Title = ({
     className,
     children,
-    label,
     ...props
 }: TitleProps = DefaultProps): React.ReactElement<any> => (
     <StyledTitle
         className={classNames('anchor-list-title', className)}
         {...props}
     >
-        <Typography weight={600} scale={12} color="charcoal">{children ? children : label}</Typography>
+        <Typography weight={600} scale={12} color="ash" hue="dark">{children}</Typography>
     </StyledTitle>
 );
 

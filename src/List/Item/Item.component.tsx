@@ -50,7 +50,7 @@ export const Item = ({
         className={classNames('anchor-list-item', className, { active })}
         {...props}
     >
-        <Typography color="charcoal">{children}</Typography>
+        <Typography tag="p" color="charcoal" hue="light">{children}</Typography>
     </StyledItem>
 );
 

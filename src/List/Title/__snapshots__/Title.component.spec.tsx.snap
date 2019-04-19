@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Title should be defined 1`] = `
+<div
+  className="anchor-list-title sc-bdVaJa gjQiRf"
+>
+  <span
+    className="anchor-typography sc-htpNat dhyFAZ"
+    color="ash"
+    scale={12}
+  >
+    Title
+  </span>
+</div>
+`;
