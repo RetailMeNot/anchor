@@ -93,8 +93,9 @@ export const AutoComplete = ({
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
     const [isFocused, setIsFocused] = useState<boolean>(false);
-    // The index of the active result item; starts at -1 because the first active result is the value of the input
-    const [activeResultIndex, setActiveResultIndex] = useState<number>(-1);
+    // The index of the active result item
+    const setActiveResultIndex = useState<number>(0)[1];
+    // console.log(activeResultIndex);
     // TODO: the autocomplete itself doesn't have a value
     // The current search term
     const [term, setTerm] = useState<string>(value ? `${value}` : '');
@@ -179,7 +180,8 @@ export const AutoComplete = ({
                             resultsRef.current.handlePrevious(term);
                             break;
                         default:
-                            setIndex(-1);
+                            setIndex(0);
+                            resultsRef.current.clearInitialTerm();
                             break;
                     }
                 }}
@@ -189,7 +191,6 @@ export const AutoComplete = ({
             {isFocused && (
                 <ResultsContainer
                     ref={resultsRef}
-                    initialIndex={activeResultIndex}
                     emitSelectedItem={(item: DataItem) => {
                         changeActiveValue(item);
                     }}

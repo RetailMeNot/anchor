@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import { List } from '../../List';
 // UTILS
-// import { get } from '../../../utils/get/get';
 const { useState, forwardRef, useImperativeHandle } = React;
 
 export type DataItem = {
@@ -64,7 +63,8 @@ const generateResults = (
                 cleanResults.push(
                     createResult(result, {
                         label: result,
-                        active: index === currentIndex,
+                        // Add one to index so that the input is an index
+                        active: relativeIndex(index) === currentIndex,
                         key: `anchor-result-${index}`,
                         onMouseOver: () => emitActiveIndex(index),
                         onSelect: () =>
@@ -83,7 +83,8 @@ const generateResults = (
                             createResult(label, {
                                 label,
                                 ...props,
-                                active: index === currentIndex,
+                                // Add one to index so that the input is an index
+                                active: relativeIndex(index) === currentIndex,
                                 key: `anchor-result-${index}`,
                                 onMouseOver: () => emitActiveIndex(index),
                                 onSelect: () =>
@@ -108,12 +109,33 @@ const generateResults = (
     return cleanResults;
 };
 
-// const handleNext = () => {};
+/*
+    Entire List:    [ 0, 1, 2, 3, 4 ]
+    Iterable List:  [ 1, 3, 4 ]
+
+    forward:
+        - go to next iterable index
+        - unless at max; go to 0 (assign initialTerm)
+    backward:
+        - go to previous iterable index
+        - unless at 0; go to max (assign initialTerm)
+    both
+        - store initialTerm
+        - Emit initialTerm or currentLabel
+        - Update currentIndex
+    ===================================================
+
+    getNext(currentTerm: string, max = iterableList.length - 1, min = 0, currentIndex, direction): number
+    emitTermAndUpdateIndex(newIndex, values): void
+        • updateIndex(emitActiveIndex, setCurrentIndex): void
+        • updateTerm(emitActiveIndex, setCurrentIndex): void
+*/
+
+const relativeIndex = (index: number) => index + 1;
 
 export const ResultsContainer = forwardRef(
     (
         {
-            initialIndex = -1,
             className,
             dataSource = [],
             emitActiveIndex,
@@ -125,7 +147,7 @@ export const ResultsContainer = forwardRef(
         }: ResultsContainerProps,
         resultsContainerRef: React.Ref<any>
     ): JSX.Element => {
-        const [currentIndex, setCurrentIndex] = useState<number>(initialIndex);
+        const [currentIndex, setCurrentIndex] = useState<number>(0);
         const [initialTerm, setInitialTerm] = useState<string>('');
         const results = generateResults(
             dataSource,
@@ -133,66 +155,66 @@ export const ResultsContainer = forwardRef(
             emitActiveIndex,
             emitSelectedItem
         );
-        const iterativeIndexes: number[] = [-1];
+        const iterativeIndexes: number[] = [0];
         results.forEach(({ value: { listItemType } }: any, index: number) => {
             if (!listItemType || listItemType === 'item') {
-                iterativeIndexes.push(index);
+                // Add one to index to allow input to be item 0
+                iterativeIndexes.push(relativeIndex(index));
             }
         });
+
+        const traverse = (
+            range: any[],
+            index: number,
+            forward: boolean
+        ): number => {
+            // Get the max range; the minimum index of any array is 0
+            const max = range.length - 1;
+            // Determine the actual index relative to all iterable values
+            const indexRelative: number = range.indexOf(index);
+            // Increment/decrement accordingly
+            let nextIndex = forward ? indexRelative + 1 : indexRelative - 1;
+            // For 'next' iteration, reset to 0 if at max
+            if (forward && nextIndex > max) {
+                nextIndex = 0;
+            }
+            // For 'prev' iteration, reset to max if at 0
+            if (!forward && nextIndex < 0) {
+                nextIndex = max;
+            }
+            return nextIndex;
+        };
+
+        const handleTraversal = (currentTerm: string, forward: boolean) => {
+            // Check if there's a initialTerm
+            if (!initialTerm || initialTerm === '') {
+                // If there's no initialTerm, assign the current input value
+                setInitialTerm(currentTerm);
+            }
+            // Determine the next index
+            const nextIndex = traverse(iterativeIndexes, currentIndex, forward);
+            // Assign that index locally
+            setCurrentIndex(iterativeIndexes[nextIndex]);
+            if (nextIndex === 0) {
+                // Emit the user's initial term
+                emitActiveTerm(initialTerm);
+                setInitialTerm('');
+            } else {
+                // Emit the active term, but subtract one bc the input is not part of the original data set
+                emitActiveTerm(
+                    dataSource[iterativeIndexes[nextIndex] - 1].label
+                );
+            }
+        };
 
         useImperativeHandle(resultsContainerRef, () => ({
             setActiveIndex: (newIndex: number) => setCurrentIndex(newIndex),
             clearInitialTerm: () => setInitialTerm(''),
             handleNext: (currentTerm: string) => {
-                // Check if there's a initialTerm
-                if (!initialTerm || initialTerm === '') {
-                    // If there's no initialTerm, assign the current input value
-                    setInitialTerm(currentTerm);
-                }
-                // Get the current index
-                const newIndex = iterativeIndexes.indexOf(currentIndex);
-                // If the currentIndex is -1, display the initial term and iterate to the next value
-                if (currentIndex === -1) {
-                    console.log(1);
-                    setCurrentIndex(0);
-                    emitActiveTerm(results[0].label);
-                } else if (
-                    newIndex >= iterativeIndexes[iterativeIndexes.length - 1]
-                ) {
-                    console.log(2);
-                    emitActiveTerm(initialTerm);
-                    setInitialTerm('');
-                    setCurrentIndex(-1);
-                } else {
-                    console.log(3, newIndex + 1);
-                    emitActiveTerm(results[newIndex + 1].label);
-                    setCurrentIndex(newIndex + 1);
-                }
+                handleTraversal(currentTerm, true);
             },
             handlePrevious: (currentTerm: string) => {
-                // Check if there's a initialTerm
-                if (!initialTerm || initialTerm === '') {
-                    // If there's no initialTerm, assign the current input value
-                    setInitialTerm(currentTerm);
-                }
-
-                // Get the current index
-                const newIndex = iterativeIndexes.indexOf(currentIndex);
-                if (currentIndex === -1) {
-                    const lastItem =
-                        iterativeIndexes[iterativeIndexes.length - 1];
-                    setCurrentIndex(lastItem);
-                    emitActiveTerm(results[lastItem].label);
-                } else if (newIndex === 1) {
-                    emitActiveTerm(initialTerm);
-                    setInitialTerm('');
-                    setCurrentIndex(-1);
-                } else {
-                    emitActiveTerm(
-                        results[iterativeIndexes[newIndex - 1]].label
-                    );
-                    setCurrentIndex(iterativeIndexes[newIndex - 1]);
-                }
+                handleTraversal(currentTerm, false);
             },
             selectActive: () => {
                 if (currentIndex >= 0 && currentIndex <= results.length) {
@@ -208,22 +230,6 @@ export const ResultsContainer = forwardRef(
                 )}
                 {...props}
             >
-                {/*<List className="auto-complete-results">*/}
-                {/*    {results*/}
-                {/*        // TODO: this should be better*/}
-                {/*        // .filter(({ label }: DataItem) => term && term.length ? label.includes(term) : true)*/}
-                {/*        .map((item: DataItem, index: number) => (*/}
-                {/*            <Item*/}
-                {/*                onMouseOver={() => emitActiveIndex(index)}*/}
-                {/*                onSelect={() => emitSelectedItem(item)}*/}
-                {/*                key={`anchor-result-${index}`}*/}
-                {/*                active={index === currentIndex}*/}
-                {/*                value={item.value}*/}
-                {/*            >*/}
-                {/*                {item.label}*/}
-                {/*            </Item>*/}
-                {/*        ))}*/}
-                {/*</List>*/}
                 <List items={results} className="auto-complete-results" />
             </StyledResultsContainerContainer>
         );
