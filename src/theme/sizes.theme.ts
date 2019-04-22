@@ -6,7 +6,7 @@ interface Sizes {
     xl: string;
 }
 
-const sizes: Sizes = {
+const standardSizes: Sizes = {
     xs: '0.25rem',
     sm: '0.5rem',
     md: '1rem',
@@ -14,9 +14,9 @@ const sizes: Sizes = {
     xl: '3rem',
 };
 
-export default {
-    padding: { ...sizes },
-    margin: { ...sizes },
+export const sizes = {
+    padding: { ...standardSizes },
+    margin: { ...standardSizes },
     border: {
         radius: {
             base: '3px',

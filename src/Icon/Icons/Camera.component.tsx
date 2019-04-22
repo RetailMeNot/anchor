@@ -38,5 +38,3 @@ export const Camera = ({
         </svg>
     </StyledIcon>
 );
-
-export default Camera;

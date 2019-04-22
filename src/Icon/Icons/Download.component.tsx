@@ -37,5 +37,3 @@ export const Download = ({
         </svg>
     </StyledIcon>
 );
-
-export default Download;

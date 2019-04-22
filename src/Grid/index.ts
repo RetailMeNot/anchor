@@ -1,6 +1,5 @@
-export { Grid, Cell } from './Grid';
+export { Grid, Cell } from './Grid/Grid.component';
 export {
-    Adaptor,
     LegacyDesktop,
     LegacyTablet,
     LegacyPhone,
@@ -14,4 +13,4 @@ export {
     LegacyBreakpoints,
     StandardBreakpoints,
     CenteredCell,
-} from './Adaptor';
+} from './Adaptor/Adaptor.component';

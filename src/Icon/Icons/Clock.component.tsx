@@ -41,5 +41,3 @@ export const Clock = ({
         </svg>
     </StyledIcon>
 );
-
-export default Clock;

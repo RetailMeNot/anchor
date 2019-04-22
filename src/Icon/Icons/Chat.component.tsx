@@ -37,5 +37,3 @@ export const Chat = ({
         </svg>
     </StyledIcon>
 );
-
-export default Chat;

@@ -41,5 +41,3 @@ export const BarCode = ({
         </svg>
     </StyledIcon>
 );
-
-export default BarCode;

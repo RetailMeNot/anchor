@@ -36,5 +36,3 @@ export const Dislike = ({
         </svg>
     </StyledIcon>
 );
-
-export default Dislike;

@@ -36,5 +36,3 @@ export const Refresh = ({
         </svg>
     </StyledIcon>
 );
-
-export default Refresh;

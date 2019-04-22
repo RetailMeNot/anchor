@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { text } from '@storybook/addon-knobs';
 // COMPONENTS
-import Avatar from './Avatar.component';
+import { Avatar } from './Avatar.component';
 // README
 import * as README from './README.md';
 // THEME

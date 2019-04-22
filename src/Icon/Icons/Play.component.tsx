@@ -33,5 +33,3 @@ export const Play = ({
         </svg>
     </StyledIcon>
 );
-
-export default Play;

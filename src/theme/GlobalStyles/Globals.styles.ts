@@ -1,8 +1,8 @@
 // VENDOR
 import { createGlobalStyle, css } from 'styled-components';
 // THEME
-import fonts from '../fonts.theme';
-import colors from '../colors.theme';
+import { fonts } from '../fonts.theme';
+import { colors } from '../colors.theme';
 
 const typography = css`
     a {

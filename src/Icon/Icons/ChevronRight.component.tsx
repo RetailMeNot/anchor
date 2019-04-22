@@ -30,5 +30,3 @@ export const ChevronRight = ({
         </svg>
     </StyledIcon>
 );
-
-export default ChevronRight;

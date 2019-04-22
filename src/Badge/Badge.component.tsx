@@ -44,5 +44,3 @@ export const Badge = ({
         <StyledBadge>{count || '•'}</StyledBadge>
     </StyledBadgeContainer>
 );
-
-export default Badge;

@@ -36,5 +36,3 @@ export const SadFace = ({
         </svg>
     </StyledIcon>
 );
-
-export default SadFace;

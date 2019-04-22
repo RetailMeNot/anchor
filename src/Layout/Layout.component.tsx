@@ -76,5 +76,3 @@ export const Layout = ({
         </StyledContent>
     </StyledLayout>
 );
-
-export default Layout;

@@ -32,5 +32,3 @@ export const Envelope = ({
         </svg>
     </StyledIcon>
 );
-
-export default Envelope;

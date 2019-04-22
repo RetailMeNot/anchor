@@ -30,5 +30,3 @@ export const AddEvent = ({
         </svg>
     </StyledIcon>
 );
-
-export default AddEvent;

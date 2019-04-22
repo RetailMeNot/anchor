@@ -63,5 +63,3 @@ export const FooterSection = ({
         {children}
     </StyledFooterSectionElement>
 );
-
-export default FooterSection;

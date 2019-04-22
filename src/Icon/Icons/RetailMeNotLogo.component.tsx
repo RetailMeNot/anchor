@@ -38,5 +38,3 @@ export const RetailMeNotLogo = ({
         </svg>
     </StyledIcon>
 );
-
-export default RetailMeNotLogo;

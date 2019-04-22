@@ -32,5 +32,3 @@ export const EnvelopeOpen = ({
         </svg>
     </StyledIcon>
 );
-
-export default EnvelopeOpen;

@@ -37,5 +37,3 @@ export const CommentMore = ({
         </svg>
     </StyledIcon>
 );
-
-export default CommentMore;

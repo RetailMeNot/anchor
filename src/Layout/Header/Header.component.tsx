@@ -190,5 +190,3 @@ export const Header = ({ className, ...props }: HeaderProps) => (
         </CustomAdaptor>
     </StyledHeaderElement>
 );
-
-export default Header;

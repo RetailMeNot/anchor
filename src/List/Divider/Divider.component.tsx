@@ -32,5 +32,3 @@ export const Divider = ({
 );
 
 Divider.defaultProps = DefaultProps;
-
-export default Divider;

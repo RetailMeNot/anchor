@@ -36,5 +36,3 @@ export const Lightning = ({
         </svg>
     </StyledIcon>
 );
-
-export default Lightning;

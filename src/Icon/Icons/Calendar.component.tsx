@@ -33,5 +33,3 @@ export const Calendar = ({
         </svg>
     </StyledIcon>
 );
-
-export default Calendar;

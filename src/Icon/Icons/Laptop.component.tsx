@@ -36,5 +36,3 @@ export const Laptop = ({
         </svg>
     </StyledIcon>
 );
-
-export default Laptop;

@@ -32,5 +32,3 @@ export const Check = ({
         </svg>
     </StyledIcon>
 );
-
-export default Check;

@@ -36,5 +36,3 @@ export const Expand = ({
         </svg>
     </StyledIcon>
 );
-
-export default Expand;

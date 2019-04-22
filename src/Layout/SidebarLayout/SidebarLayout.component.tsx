@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 // COMPONENTS
 import { Grid, Cell } from '../../Grid';
-import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor';
+import { CustomAdaptor, StandardBreakpoints } from '../../Grid';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
@@ -117,5 +117,3 @@ export const SidebarLayout = ({
         </StyledContent>
     </StyledLayout>
 );
-
-export default SidebarLayout;

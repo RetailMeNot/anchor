@@ -42,5 +42,3 @@ export const CardContent: React.FunctionComponent<CardContentProps> = ({
         {children}
     </StyledCard>
 );
-
-export default CardContent;

@@ -189,5 +189,3 @@ export const MobileCTA = ({
         </Grid>
     </StyledMobileCTAElement>
 );
-
-export default MobileCTA;

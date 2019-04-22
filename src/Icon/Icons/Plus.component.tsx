@@ -32,5 +32,3 @@ export const Plus = ({
         </svg>
     </StyledIcon>
 );
-
-export default Plus;

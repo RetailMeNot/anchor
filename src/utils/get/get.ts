@@ -4,5 +4,7 @@
  * @param defaultValue - a value to return if the path doesn't resolve in the object
  * @description Our version of lodash's get() method, just less bloated.
  */
-export const get = (obj: any, path: string, defaultValue?: any) => path.split('.')
-  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj);
+export const get = (obj: any, path: string, defaultValue?: any) =>
+    path
+        .split('.')
+        .reduce((a, c) => (a && a[c] ? a[c] : defaultValue || null), obj);

@@ -8,7 +8,7 @@ import { Item } from './Item';
 import { Title } from './Title';
 import { Divider } from './Divider';
 // UTILS
-import { filterChildrenByType } from '../../utils/filterChildrenByType/filterChildrenByType';
+import { filterChildrenByType } from '../utils/filterChildrenByType/filterChildrenByType';
 
 type ListItemType = 'item' | 'title' | 'divider';
 
@@ -63,5 +63,3 @@ export const List: React.FunctionComponent<ListProps> = ({
             : filterChildrenByType(children, ['Item', 'Title', 'Divider'])}
     </StyledList>
 );
-
-export default List;

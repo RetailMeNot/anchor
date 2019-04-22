@@ -30,5 +30,3 @@ export const Print = ({
         </svg>
     </StyledIcon>
 );
-
-export default Print;

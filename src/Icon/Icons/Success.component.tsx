@@ -37,5 +37,3 @@ export const Success = ({
         </svg>
     </StyledIcon>
 );
-
-export default Success;

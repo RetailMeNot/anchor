@@ -35,5 +35,3 @@ export const ChevronUpSmall = ({
         </svg>
     </StyledIcon>
 );
-
-export default ChevronUpSmall;

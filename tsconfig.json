@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "outDir": "./ts",
-    "module": "commonjs",
     "target": "es6",
     "lib": [
       "es2015",
@@ -36,7 +35,7 @@
   },
   "include": [
     "src/**/*",
-    "utils/**/*"
+      "src/utils/**/*"
   ],
   "exclude": [
     "node_modules",

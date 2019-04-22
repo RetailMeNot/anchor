@@ -37,5 +37,3 @@ export const Disabled = ({
         </svg>
     </StyledIcon>
 );
-
-export default Disabled;

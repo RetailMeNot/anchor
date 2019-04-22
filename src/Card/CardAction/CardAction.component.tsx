@@ -37,5 +37,3 @@ export const CardAction: React.FunctionComponent<CardActionProps> = ({
         {children}
     </StyledCard>
 );
-
-export default CardAction;

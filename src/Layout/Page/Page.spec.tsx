@@ -4,7 +4,8 @@ import * as renderer from 'react-test-renderer';
 // VENDOR
 import { shallow, mount } from 'enzyme';
 // COMPONENT
-import Page, {
+import {
+    Page,
     DEFAULT_HEADER_HEIGHT,
     DEFAULT_FOOTER_HEIGHT,
 } from './Page.component';

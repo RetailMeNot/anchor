@@ -30,5 +30,3 @@ export const Search = ({
         </svg>
     </StyledIcon>
 );
-
-export default Search;

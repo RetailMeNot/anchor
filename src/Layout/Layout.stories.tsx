@@ -5,7 +5,8 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { text, color } from '@storybook/addon-knobs';
 // COMPONENT
-import Layout, {
+import {
+    Layout,
     DEFAULT_LAYOUT_WIDTH,
     DEFAULT_CONTENT_WIDTH,
     TRANSPARENT,

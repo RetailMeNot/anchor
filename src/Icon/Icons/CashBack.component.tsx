@@ -36,5 +36,3 @@ export const CashBack = ({
         </svg>
     </StyledIcon>
 );
-
-export default CashBack;

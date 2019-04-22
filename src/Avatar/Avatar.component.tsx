@@ -81,5 +81,3 @@ export const Avatar = ({
 );
 
 Avatar.defaultProps = DefaultProps;
-
-export default Avatar;

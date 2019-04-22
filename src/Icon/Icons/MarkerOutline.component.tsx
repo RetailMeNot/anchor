@@ -36,5 +36,3 @@ export const MarkerOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default MarkerOutline;

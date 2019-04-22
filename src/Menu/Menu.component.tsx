@@ -101,22 +101,14 @@ const MenuSizes = {
     `,
 };
 
-const DefaultProps: MenuProps = {
-    size: 'large',
-};
-
 export const Menu = ({
     className,
     children,
     ...props
-}: MenuProps = DefaultProps): React.ReactElement<any> => (
+}: MenuProps): React.ReactElement<any> => (
     <StyledMenu className={classNames('anchor-menu', className)} {...props}>
         {/* TODO: React.cloneElement() to add props from parent to child? */}
         {/* TODO: Need to solve the container issue */}
         {children}
     </StyledMenu>
 );
-
-Menu.defaultProps = DefaultProps;
-
-export default Menu;

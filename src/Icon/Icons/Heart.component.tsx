@@ -36,5 +36,3 @@ export const Heart = ({
         </svg>
     </StyledIcon>
 );
-
-export default Heart;

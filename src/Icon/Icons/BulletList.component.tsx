@@ -31,5 +31,3 @@ export const BulletList = ({
         </svg>
     </StyledIcon>
 );
-
-export default BulletList;

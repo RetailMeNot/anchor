@@ -319,5 +319,3 @@ export const Footer = () => (
         </CustomAdaptor>
     </StyledFooterElement>
 );
-
-export default Footer;

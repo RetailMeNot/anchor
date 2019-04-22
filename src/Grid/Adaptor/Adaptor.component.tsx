@@ -169,20 +169,3 @@ export const CenteredCell = styled(Cell)`
     justify-content: center;
 `;
 /* =========================================== STANDARD END ========================================================= */
-
-export const Adaptor = {
-    // Legacy Breakpoints
-    LegacyDesktop,
-    LegacyTablet,
-    LegacyPhone,
-    // Custom
-    CustomAdaptor,
-    CenteredCell,
-    // Standard Breakpoints
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
-};

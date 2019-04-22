@@ -39,5 +39,3 @@ export const CloseSmall = ({
         </svg>
     </StyledIcon>
 );
-
-export default CloseSmall;

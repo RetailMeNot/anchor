@@ -36,5 +36,3 @@ export const Share = ({
         </svg>
     </StyledIcon>
 );
-
-export default Share;

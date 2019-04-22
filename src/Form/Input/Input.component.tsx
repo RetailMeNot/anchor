@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components';
 import { Typography } from '../../Typography';
 import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
-import { get } from '../../../utils/get/get';
+import { get } from '../../utils/get/get';
 // THEME
 import { colors, fonts } from '../../theme';
 
@@ -334,5 +334,3 @@ export const Input = forwardRef(
         );
     }
 );
-
-export default Input;

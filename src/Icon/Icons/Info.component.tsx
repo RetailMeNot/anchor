@@ -33,5 +33,3 @@ export const Info = ({
         </svg>
     </StyledIcon>
 );
-
-export default Info;

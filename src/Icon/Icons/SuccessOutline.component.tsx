@@ -38,5 +38,3 @@ export const SuccessOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default SuccessOutline;

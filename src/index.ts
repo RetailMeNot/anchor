@@ -6,7 +6,6 @@ export { DropDown } from './DropDown';
 export {
     Grid,
     Cell,
-    Adaptor,
     LegacyDesktop,
     LegacyTablet,
     LegacyPhone,

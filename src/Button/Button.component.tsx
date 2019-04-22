@@ -104,18 +104,12 @@ const StyledButton = styled.button`
 
 `;
 
-const DefaultProps: ButtonProps = {};
-
 export const Button = ({
     className,
     ...props
-}: ButtonProps = DefaultProps): React.ReactElement<any> => (
+}: ButtonProps): React.ReactElement<any> => (
     <StyledButton
         className={classNames('anchor-button', className)}
         {...props}
     />
 );
-
-Button.defaultProps = DefaultProps;
-
-export default Button;

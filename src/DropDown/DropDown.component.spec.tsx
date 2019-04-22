@@ -2,7 +2,7 @@
 // import * tag React from 'react';
 // import * tag renderer from 'react-test-renderer';
 // COMPONENT
-// import DropDown from './DropDown.component';
+// import { DropDown } from './DropDown.component';
 // ENZYME
 // import { shallow, mount } from 'enzyme';
 

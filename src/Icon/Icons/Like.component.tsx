@@ -36,5 +36,3 @@ export const Like = ({
         </svg>
     </StyledIcon>
 );
-
-export default Like;

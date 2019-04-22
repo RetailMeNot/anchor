@@ -64,5 +64,3 @@ export const Page = ({
         </Grid>
     </StyledPage>
 );
-
-export default Page;

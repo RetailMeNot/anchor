@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import CardContent from './CardContent.component';
+import { CardContent } from './CardContent.component';
 // README
 import * as README from './README.md';
 // THEME

@@ -36,5 +36,3 @@ export const Mobile = ({
         </svg>
     </StyledIcon>
 );
-
-export default Mobile;

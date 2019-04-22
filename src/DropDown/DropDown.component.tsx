@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import { fromEvent, Subscription } from 'rxjs';
 import { rgba } from 'polished';
-import { get } from '../../utils/get/get';
+import { get } from '../utils/get/get';
 // THEME
 import { colors, variables, fonts, sizes } from '../theme';
 
@@ -194,5 +194,3 @@ export class DropDown extends React.Component<DropDownProps> {
         );
     }
 }
-
-export default DropDown;

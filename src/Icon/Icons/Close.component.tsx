@@ -32,5 +32,3 @@ export const Close = ({
         </svg>
     </StyledIcon>
 );
-
-export default Close;

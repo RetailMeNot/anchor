@@ -33,5 +33,3 @@ export const ArrowForward = ({
         </svg>
     </StyledIcon>
 );
-
-export default ArrowForward;

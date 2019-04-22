@@ -6,7 +6,7 @@ import { color } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import CardActionArea from './CardActionArea.component';
+import { CardActionArea } from './CardActionArea.component';
 // THEME
 import { colors } from '../../theme';
 // README

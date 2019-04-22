@@ -36,5 +36,3 @@ export const HeartOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default HeartOutline;

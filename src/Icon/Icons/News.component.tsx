@@ -36,5 +36,3 @@ export const News = ({
         </svg>
     </StyledIcon>
 );
-
-export default News;

@@ -34,8 +34,6 @@ const StyledItem = styled.a`
     }
 `;
 
-const DefaultProps: ItemProps = {};
-
 export const Item = ({
     className,
     children,
@@ -45,7 +43,7 @@ export const Item = ({
     value,
     active,
     ...props
-}: ItemProps = DefaultProps): React.ReactElement<any> => (
+}: ItemProps): React.ReactElement<any> => (
     <StyledItem
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
@@ -58,7 +56,3 @@ export const Item = ({
         </Typography>
     </StyledItem>
 );
-
-Item.defaultProps = DefaultProps;
-
-export default Item;

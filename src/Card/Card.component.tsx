@@ -51,5 +51,3 @@ export const Card: React.FunctionComponent<CardProps> = ({
         })}
     </StyledCard>
 );
-
-export default Card;

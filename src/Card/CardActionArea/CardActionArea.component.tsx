@@ -36,5 +36,3 @@ export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
         {children}
     </StyledCardActionArea>
 );
-
-export default CardActionArea;

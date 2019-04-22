@@ -38,5 +38,3 @@ export const StarHalf = ({
         </svg>
     </StyledIcon>
 );
-
-export default StarHalf;

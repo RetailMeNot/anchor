@@ -40,5 +40,3 @@ export const Lock = ({
         </svg>
     </StyledIcon>
 );
-
-export default Lock;

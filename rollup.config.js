@@ -2,8 +2,19 @@
 // PLUGINS
 import typescript from 'rollup-plugin-typescript';
 import commonjs from 'rollup-plugin-commonjs';
+import sourceMaps from 'rollup-plugin-sourcemaps';
+import { terser } from 'rollup-plugin-terser';
 
 import * as packageJSON from './package.json';
+
+const commonPlugins = [
+    typescript({ tsconfig: './tsconfig.json' }),
+    commonjs({
+        include: 'node_modules/**'
+    }),
+    sourceMaps(),
+    terser()
+];
 
 export default {
     input: {
@@ -28,25 +39,21 @@ export default {
             dir: './commonjs',
             format: 'cjs',
             sourcemap: true,
-            named: true
+            named: true,
+            chunkFileNames: 'anchor-[name]-[hash].js'
         },
         {
             dir: './esm',
             format: 'es',
             sourcemap: true,
-            named: true
+            named: true,
+            chunkFileNames: 'anchor-[name]-[hash].js'
         }
     ],
-    plugins: [
-        typescript({ tsconfig: './tsconfig.json' }),
-        commonjs({
-            include: 'node_modules/**'
-        }),
-    ],
+    plugins: commonPlugins,
     external: [
         ...Object.keys(packageJSON.dependencies || {}),
         ...Object.keys(packageJSON.peerDependencies || {}),
     ],
     experimentalCodeSplitting: true
 }
-

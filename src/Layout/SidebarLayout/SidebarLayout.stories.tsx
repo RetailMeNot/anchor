@@ -5,7 +5,8 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { select, text, color } from '@storybook/addon-knobs';
 // COMPONENT
-import SidebarLayout, {
+import {
+    SidebarLayout,
     DEFAULT_LAYOUT_WIDTH,
     DEFAULT_CONTENT_WIDTH,
     DEFAULT_SIDEBAR_WIDTH,

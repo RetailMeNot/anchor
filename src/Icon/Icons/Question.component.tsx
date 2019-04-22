@@ -33,5 +33,3 @@ export const Question = ({
         </svg>
     </StyledIcon>
 );
-
-export default Question;

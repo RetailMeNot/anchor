@@ -33,5 +33,3 @@ export const ArrowBack = ({
         </svg>
     </StyledIcon>
 );
-
-export default ArrowBack;

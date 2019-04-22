@@ -45,7 +45,9 @@ describe('Component: SidebarLayout', () => {
             component.find('StyledContent').prop('contentBackgroundColor')
         ).toEqual(TRANSPARENT);
 
-        expect(component.find(`[columns="${DEFAULT_SIDEBAR_WIDTH} 1fr "]`).exists()).toBeTruthy();
+        expect(
+            component.find(`[columns="${DEFAULT_SIDEBAR_WIDTH} 1fr "]`).exists()
+        ).toBeTruthy();
     });
 
     it('should render with passed props.', () => {

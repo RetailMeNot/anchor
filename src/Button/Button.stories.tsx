@@ -9,7 +9,7 @@ import styled from 'styled-components';
 // README
 import * as README from './README.md';
 // COMPONENT
-import Button from './Button.component';
+import { Button } from './Button.component';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;

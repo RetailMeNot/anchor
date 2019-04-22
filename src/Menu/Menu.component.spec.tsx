@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Menu from './Menu.component';
+import { Menu } from './Menu.component';
 import { Item } from './Item';
 // ENZYME
 import { shallow, mount } from 'enzyme';

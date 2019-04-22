@@ -31,5 +31,3 @@ export const QuestionOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default QuestionOutline;

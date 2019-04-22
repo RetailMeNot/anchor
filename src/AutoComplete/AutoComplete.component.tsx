@@ -213,5 +213,3 @@ export const AutoComplete = ({
         </StyledAutoComplete>
     );
 };
-
-export default AutoComplete;

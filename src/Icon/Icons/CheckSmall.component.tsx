@@ -33,5 +33,3 @@ export const CheckSmall = ({
         </svg>
     </StyledIcon>
 );
-
-export default CheckSmall;

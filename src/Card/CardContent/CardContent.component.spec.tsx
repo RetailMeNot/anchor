@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import CardContent from './CardContent.component';
+import { CardContent } from './CardContent.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 

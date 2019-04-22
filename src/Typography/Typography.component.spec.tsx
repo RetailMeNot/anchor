@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Typography from './Typography.component';
+import { Typography } from './Typography.component';
 // ENZYME
 import { mount } from 'enzyme';
 

@@ -29,5 +29,3 @@ export const InfoOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default InfoOutline;

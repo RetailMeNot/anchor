@@ -33,5 +33,3 @@ export const StarOutline = ({
         </svg>
     </StyledIcon>
 );
-
-export default StarOutline;

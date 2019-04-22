@@ -33,5 +33,3 @@ export const Cells = ({
         </svg>
     </StyledIcon>
 );
-
-export default Cells;

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import Title from './Title.component';
+import { Title } from './Title.component';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;

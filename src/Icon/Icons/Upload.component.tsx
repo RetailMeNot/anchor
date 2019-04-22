@@ -36,5 +36,3 @@ export const Upload = ({
         </svg>
     </StyledIcon>
 );
-
-export default Upload;

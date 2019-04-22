@@ -36,5 +36,3 @@ export const TagAdd = ({
         </svg>
     </StyledIcon>
 );
-
-export default TagAdd;

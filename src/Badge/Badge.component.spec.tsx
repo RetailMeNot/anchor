@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Badge from './Badge.component';
+import { Badge } from './Badge.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 

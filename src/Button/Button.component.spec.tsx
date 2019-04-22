@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Button, { Button as Styles } from './Button.component';
+import { Button } from './Button.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
@@ -17,7 +17,6 @@ describe('Component: Button', () => {
         console.log(subject);
         console.log(wrapper.debug());
         console.log(component.debug());
-        console.log(Styles);
 
         /* tslint:enable */
         expect(subject).toBeDefined();

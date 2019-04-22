@@ -31,5 +31,3 @@ export const Sliders = ({
         </svg>
     </StyledIcon>
 );
-
-export default Sliders;

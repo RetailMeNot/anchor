@@ -31,5 +31,3 @@ export const Cart = ({
         </svg>
     </StyledIcon>
 );
-
-export default Cart;

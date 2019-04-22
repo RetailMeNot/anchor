@@ -270,5 +270,3 @@ export const ResultsContainer = forwardRef(
         );
     }
 );
-
-export default ResultsContainer;

@@ -38,11 +38,6 @@ const StyledItem = styled.a`
     }
 `;
 
-const DefaultProps: ItemProps = {
-    path: '/',
-    as: 'a',
-};
-
 export const Item = ({
     className,
     children,
@@ -50,7 +45,7 @@ export const Item = ({
     size,
     active,
     ...props
-}: ItemProps = DefaultProps): React.ReactElement<any> => (
+}: ItemProps): React.ReactElement<any> => (
     <StyledItem
         className={classNames('anchor-menu-item', className, { active })}
         {...props}
@@ -58,7 +53,3 @@ export const Item = ({
         {label ? label : children}
     </StyledItem>
 );
-
-Item.defaultProps = DefaultProps;
-
-export default Item;

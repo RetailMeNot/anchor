@@ -1,4 +1,4 @@
-export default {
+export const colors = {
     charcoal: {
         base: '#323232',
         light: '#595959',

@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import DropDown from './DropDown.component';
+import { DropDown } from './DropDown.component';
 import { Menu, Item } from '../Menu';
 import { List, Item as ListItem } from '../List';
 // README

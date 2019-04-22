@@ -36,5 +36,3 @@ export const Hamburger = ({
         </svg>
     </StyledIcon>
 );
-
-export default Hamburger;

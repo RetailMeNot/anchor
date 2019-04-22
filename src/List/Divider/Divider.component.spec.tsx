@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Divider from './Divider.component';
+import { Divider } from './Divider.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 

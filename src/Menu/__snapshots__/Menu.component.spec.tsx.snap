@@ -3,7 +3,6 @@
 exports[`Component: Menu should be defined 1`] = `
 <nav
   className="anchor-menu sc-bdVaJa bAhNXE"
-  size="large"
 >
   <a
     className="anchor-menu-item sc-bwzfXH dOqrMo"

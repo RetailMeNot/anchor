@@ -42,5 +42,3 @@ export const EllipsesVertical = ({
         </svg>
     </StyledIcon>
 );
-
-export default EllipsesVertical;

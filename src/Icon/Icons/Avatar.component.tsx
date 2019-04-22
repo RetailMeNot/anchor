@@ -33,5 +33,3 @@ export const Avatar = ({
         </svg>
     </StyledIcon>
 );
-
-export default Avatar;

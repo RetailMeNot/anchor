@@ -36,5 +36,3 @@ export const Tag = ({
         </svg>
     </StyledIcon>
 );
-
-export default Tag;

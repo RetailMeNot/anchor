@@ -34,5 +34,3 @@ export const GiftCard = ({
         </svg>
     </StyledIcon>
 );
-
-export default GiftCard;

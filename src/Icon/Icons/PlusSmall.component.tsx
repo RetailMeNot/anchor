@@ -32,5 +32,3 @@ export const PlusSmall = ({
         </svg>
     </StyledIcon>
 );
-
-export default PlusSmall;

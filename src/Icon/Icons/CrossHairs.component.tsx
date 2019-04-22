@@ -33,5 +33,3 @@ export const CrossHairs = ({
         </svg>
     </StyledIcon>
 );
-
-export default CrossHairs;

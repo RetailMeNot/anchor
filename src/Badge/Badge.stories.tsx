@@ -6,8 +6,8 @@ import { text } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import Badge from './Badge.component';
-import Icon from '../Icon';
+import { Badge } from './Badge.component';
+import { Icon } from '../Icon';
 // README
 import * as README from './README.md';
 // THEME

@@ -36,5 +36,3 @@ export const Gear = ({
         </svg>
     </StyledIcon>
 );
-
-export default Gear;

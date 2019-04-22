@@ -29,5 +29,3 @@ export const Home = ({
         </svg>
     </StyledIcon>
 );
-
-export default Home;

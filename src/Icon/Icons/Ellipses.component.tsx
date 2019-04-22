@@ -37,5 +37,3 @@ export const Ellipses = ({
         </svg>
     </StyledIcon>
 );
-
-export default Ellipses;

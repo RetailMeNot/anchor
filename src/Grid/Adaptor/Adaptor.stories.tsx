@@ -7,14 +7,6 @@ import { number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // COMPONENT
 import {
-    Adaptor,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-} from './Adaptor.component';
-// README
-import * as README from './README.md';
-
-const {
     LegacyDesktop,
     LegacyPhone,
     LegacyTablet,
@@ -25,7 +17,11 @@ const {
     XL,
     XXL,
     CustomAdaptor,
-} = Adaptor;
+    LegacyBreakpoints,
+    StandardBreakpoints,
+} from './Adaptor.component';
+// README
+import * as README from './README.md';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;

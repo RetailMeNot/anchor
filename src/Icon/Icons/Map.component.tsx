@@ -29,5 +29,3 @@ export const Map = ({
         </svg>
     </StyledIcon>
 );
-
-export default Map;

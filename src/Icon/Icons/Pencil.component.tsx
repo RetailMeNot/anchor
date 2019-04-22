@@ -36,5 +36,3 @@ export const Pencil = ({
         </svg>
     </StyledIcon>
 );
-
-export default Pencil;

@@ -236,5 +236,3 @@ export const Icon = {
     Upload,
     TagAdd,
 };
-
-export default Icon;

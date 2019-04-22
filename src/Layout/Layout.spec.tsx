@@ -4,7 +4,8 @@ import * as renderer from 'react-test-renderer';
 // VENDOR
 import { shallow } from 'enzyme';
 // COMPONENT
-import Layout, {
+import {
+    Layout,
     DEFAULT_LAYOUT_WIDTH,
     DEFAULT_CONTENT_WIDTH,
     TRANSPARENT,

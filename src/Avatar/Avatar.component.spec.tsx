@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import Avatar from './Avatar.component';
+import { Avatar } from './Avatar.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 

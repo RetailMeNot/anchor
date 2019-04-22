@@ -36,5 +36,3 @@ export const List = ({
         </svg>
     </StyledIcon>
 );
-
-export default List;

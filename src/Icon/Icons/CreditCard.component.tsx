@@ -41,5 +41,3 @@ export const CreditCard = ({
         </svg>
     </StyledIcon>
 );
-
-export default CreditCard;

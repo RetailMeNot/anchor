@@ -278,5 +278,3 @@ export const Typography = ({
         className: classNames('anchor-typography', className),
         ...props,
     });
-
-export default Typography;
