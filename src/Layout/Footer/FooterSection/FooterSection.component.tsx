@@ -1,6 +1,5 @@
 // REACT
 import * as React from 'react';
-// COMPONENTS
 // VENDOR
 import styled, { css } from 'styled-components';
 // STYLES
@@ -12,7 +11,7 @@ const reset = css`
 `;
 
 const StyledFooterSectionElement = styled.section`
-    width: 110px;
+    width: 6.875rem;
     font-family: ${fonts.fontFamily};
     font-size: 0.75rem;
 

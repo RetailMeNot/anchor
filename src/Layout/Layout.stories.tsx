@@ -11,8 +11,8 @@ import Layout, {
     TRANSPARENT,
 } from './Layout.component';
 import { colors } from '../theme';
-import { Header } from './Header/Header.component';
-import { Footer } from './Footer/Footer.component';
+import { Header } from './Header';
+import { Footer } from './Footer';
 import { Page } from './Page';
 // README
 import * as README from './README.md';

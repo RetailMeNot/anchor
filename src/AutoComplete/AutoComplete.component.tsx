@@ -5,11 +5,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 // COMPONENTS
 import { Input } from '../Form';
-import {
-    ResultsContainer,
-    DataItem,
-    ResultItemProps,
-} from './ResultsContainer';
+import { ResultsContainer } from './ResultsContainer';
 // THEME
 import { colors } from '../theme';
 
@@ -36,13 +32,13 @@ interface AutoCompleteProps {
     background?: string;
     color?: string;
     // TODO: Allow children
-    resultTemplate?: (props: ResultItemProps) => any;
+    resultTemplate?: (props: any) => any;
     suffix?: React.ReactElement<any>;
     prefix?: React.ReactElement<any>;
     // Event Handlers
     onFilter?: (term: string | number) => void;
-    onSelect?: (value?: string | number, item?: DataItem) => void;
-    onChange?: (value?: string | number, item?: DataItem) => void;
+    onSelect?: (value?: string | number, item?: any) => void;
+    onChange?: (value?: string | number, item?: any) => void;
     onFocus?: (event?: React.FocusEvent) => void;
     onBlur?: (event?: React.FocusEvent) => void;
 }
@@ -133,7 +129,7 @@ export const AutoComplete = ({
     };
 
     // Handle updating the autocomplete value
-    const changeActiveValue = (newValue: DataItem) => {
+    const changeActiveValue = (newValue: any) => {
         changeSearchTerm(newValue.label);
         // Fire External Select/Change Event
         onSelect(newValue.label, newValue);
@@ -203,7 +199,7 @@ export const AutoComplete = ({
             {isFocused && dataSource.length > 0 && (
                 <ResultsContainer
                     ref={resultsRef}
-                    emitSelectedItem={(item: DataItem) => {
+                    emitSelectedItem={(item: any) => {
                         changeActiveValue(item);
                     }}
                     emitActiveTerm={(newTerm: string) => {

@@ -6,7 +6,6 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
-import { ResultItemProps } from './ResultsContainer';
 import { Icon } from '../Icon';
 import { Grid, Cell } from '../Grid';
 import { Item } from '../List';
@@ -61,7 +60,7 @@ const StateBasedAutoCompleteStory = () => {
     );
 };
 
-const CustomResult = ({ index, currentIndex, label }: ResultItemProps) => {
+const CustomResult = ({ index, currentIndex, label }: any) => {
     const isLink = index === 2;
     return isLink ? (
         <Item

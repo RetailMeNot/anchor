@@ -1,6 +1,7 @@
-export { Footer } from './Footer/Footer.component';
-export { Header } from './Header/Header.component';
+export { Footer } from './Footer';
+export { Header } from './Header';
+export { Sider } from './Sider';
+export { Page } from './Page';
+export { SidebarLayout } from './SidebarLayout';
 
-export { Page } from './Page/Page.component';
 export { Layout } from './Layout.component';
-export { SidebarLayout } from './SidebarLayout/SidebarLayout.component';

@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
-import ResultsContainer from './ResultsContainer.component';
+import { ResultsContainer } from './ResultsContainer.component';
 // README
 import * as README from './README.md';
 // THEME

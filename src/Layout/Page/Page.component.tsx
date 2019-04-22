@@ -2,9 +2,9 @@
 import * as React from 'react';
 // VENDOR
 import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
 import classnames from 'classnames';
 // COMPONENTS
+import { Grid, Cell } from '../../Grid';
 import { NormalizeCSS } from '../../theme/GlobalStyles';
 
 // Constants

@@ -9,9 +9,8 @@ import { Title } from './Title';
 import { Divider } from './Divider';
 // UTILS
 import { filterChildrenByType } from '../../utils/filterChildrenByType/filterChildrenByType';
-// import { get } from '../../utils/get/get';
 
-export type ListItemType = 'item' | 'title' | 'divider';
+type ListItemType = 'item' | 'title' | 'divider';
 
 type ListItem = {
     label: string;

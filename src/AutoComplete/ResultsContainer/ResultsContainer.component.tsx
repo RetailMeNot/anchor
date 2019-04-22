@@ -7,7 +7,7 @@ import { List } from '../../List';
 // UTILS
 const { useState, forwardRef, useImperativeHandle } = React;
 
-export type DataItem = {
+type DataItem = {
     value: any;
     label: string;
     [key: string]: any;
@@ -16,7 +16,7 @@ export type DataItem = {
 type EmitSelectedItem = (newItem: DataItem) => void;
 type EmitActiveTerm = (newTerm: string) => void;
 
-export interface ResultsContainerProps {
+interface ResultsContainerProps {
     initialIndex?: number;
     className?: string;
     term: string;

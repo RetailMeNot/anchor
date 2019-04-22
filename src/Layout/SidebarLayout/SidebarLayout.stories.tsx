@@ -13,11 +13,11 @@ import SidebarLayout, {
     RIGHT,
     LEFT,
 } from './SidebarLayout.component';
-import { Footer } from '../Footer/Footer.component';
-import { Header } from '../Header/Header.component';
-import { Sider } from '../Sider/Sider.component';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
+import { Sider } from '../Sider';
 import { colors } from '../../theme/index';
-import { Page } from '../Page/Page.component';
+import { Page } from '../Page';
 // README
 import * as README from './README.md';
 

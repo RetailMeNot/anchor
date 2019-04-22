@@ -46,8 +46,5 @@ describe('Component: Page', () => {
 
         expect(testSubject.find('header').exists()).toBeTruthy();
         expect(testSubject.find('footer').exists()).toBeTruthy();
-        expect(testSubject.find('Grid__Grid').prop('rows')).toEqual(
-            `minmax(${headerHeight},auto) 1fr minmax(${footerHeight},auto)`
-        );
     });
 });

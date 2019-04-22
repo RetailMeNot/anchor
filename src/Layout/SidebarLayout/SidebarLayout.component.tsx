@@ -2,10 +2,10 @@
 import * as React from 'react';
 // VENDOR
 import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
 import classnames from 'classnames';
 // COMPONENTS
-import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor/index';
+import { Grid, Cell } from '../../Grid';
+import { CustomAdaptor, StandardBreakpoints } from '../../Grid/Adaptor';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
