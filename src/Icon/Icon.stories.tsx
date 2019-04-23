@@ -7,7 +7,7 @@ import styled from 'styled-components';
 // COMPONENTS
 import { Grid, CenteredCell } from '../Grid';
 import { Typography } from '../Typography';
-import { Icon } from './';
+import * as Icon from './';
 
 // README
 import * as README from './README.md';

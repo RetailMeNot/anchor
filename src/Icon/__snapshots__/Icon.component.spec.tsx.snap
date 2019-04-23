@@ -94,7 +94,7 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
 </span>
 `;
 
-exports[`Component: Icon should render out a Avatar 1`] = `
+exports[`Component: Icon should render out a AvatarIcon 1`] = `
 <span
   className="anchor-icon avatar sc-bdVaJa gENAGr"
   scale="md"
@@ -1557,7 +1557,7 @@ exports[`Component: Icon should render out a Like 1`] = `
 </span>
 `;
 
-exports[`Component: Icon should render out a List 1`] = `
+exports[`Component: Icon should render out a ListIcon 1`] = `
 <span
   className="anchor-icon list sc-bdVaJa gENAGr"
   scale="md"

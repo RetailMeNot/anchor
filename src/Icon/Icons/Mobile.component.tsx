@@ -15,7 +15,10 @@ export const Mobile = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon mobile', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon mobile', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

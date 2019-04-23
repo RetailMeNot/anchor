@@ -15,7 +15,10 @@ export const GiftCard = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon gift-card', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon gift-card', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

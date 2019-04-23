@@ -15,7 +15,10 @@ export const AvatarOutline = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon avatar-outline', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon avatar-outline', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

@@ -10,12 +10,15 @@ import {
 } from '../utils';
 
 /* tslint:disable max-line-length */
-export const Avatar = ({
+export const AvatarIcon = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon avatar', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon avatar', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

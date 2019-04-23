@@ -15,7 +15,10 @@ export const Lightning = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon lightning', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon lightning', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

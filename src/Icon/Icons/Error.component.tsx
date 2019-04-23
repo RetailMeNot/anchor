@@ -15,7 +15,10 @@ export const Error = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon error', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon error', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

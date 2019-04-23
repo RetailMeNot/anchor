@@ -10,12 +10,15 @@ import {
 } from '../utils';
 
 /* tslint:disable max-line-length */
-export const List = ({
+export const ListIcon = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon list', className)} scale={scale}>
+    <StyledIcon
+        className={classNames('anchor-icon list', className)}
+        scale={scale}
+    >
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

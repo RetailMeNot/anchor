@@ -16,7 +16,7 @@ const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
-const Derp = () => (
+const InputStories = () => (
     <StyledStory>
         <Grid columns="200px">
             <Cell>
@@ -57,4 +57,4 @@ storiesOf('Components/Form/Input', module)
             sidebar: README,
         },
     })
-    .add('Default', () => (<Derp />));
+    .add('Default', () => <InputStories />);

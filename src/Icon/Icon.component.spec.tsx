@@ -1,7 +1,7 @@
 // REACT
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import { Icon } from './';
+import * as Icon from './';
 
 describe('Component: Icon', () => {
     Object.keys(Icon).forEach((key: string) => {
