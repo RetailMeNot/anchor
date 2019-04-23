@@ -19,7 +19,7 @@ export const Scale = {
     xxl: 48,
 };
 
-export const DefaultColor = '#222';
+export const DefaultColor = 'currentColor';
 export const DefaultScale = 'md';
 
 export const StyledIcon = styled.span<IconSVGProps>`

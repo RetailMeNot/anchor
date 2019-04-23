@@ -1,21 +1,13 @@
 # Icon
 
-The Icon component is actually an object which holds all Icon components. 
-Trying to render `<Icon />` will result in an error, but for example, `<Icon.ArrowBack />` would not.
+All icons are rendered individually by their name, i.e. **`ArrowBack`** or**`Expand`**. 
 
 ## Usage
-    import { Icon } from '@retailmenot/anchor';
+   
+    import { ArrowBack } from '@retailmenot/anchor';
     
     const example = props => (
-        <Icon.ArrowBack />
-    );
-    
-Alternatively, each icon can be imported individually.
-    
-    import { IconArrowBack } from '@retailmenot/anchor';
-    
-    const example = props => (
-        <IconArrowBack />
+        <ArrowBack />
     );    
     
 ## Settings/Props
