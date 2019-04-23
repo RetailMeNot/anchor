@@ -15,7 +15,7 @@ export const Print = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon print', className)}>
+    <StyledIcon className={classNames('anchor-icon print', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

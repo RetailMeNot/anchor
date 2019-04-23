@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
-import { Icon } from '../Icon';
+import { Search } from '../Icon';
 import { Grid, Cell } from '../Grid';
 import { Item } from '../List';
 import { Typography } from '../Typography';
@@ -51,7 +51,7 @@ const StateBasedAutoCompleteStory = () => {
                         onFilter={(newTerm: any) => {
                             setTempData(tempDataStringSource(newTerm));
                         }}
-                        prefix={<Icon.Search color={colors.ash.base} />}
+                        prefix={<Search color={colors.ash.base} />}
                         dataSource={tempData}
                     />
                 </Cell>
@@ -92,7 +92,7 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
                         onFilter={(newTerm: any) => {
                             setTempData(tempDataStringSource(newTerm));
                         }}
-                        prefix={<Icon.Search color={colors.ash.base} />}
+                        prefix={<Search color={colors.ash.base} />}
                         dataSource={tempData}
                         resultTemplate={CustomResult}
                     />
@@ -121,7 +121,7 @@ storiesOf('Components/AutoComplete', module)
                     <AutoComplete
                         allowClear={true}
                         placeholder="Search here..."
-                        prefix={<Icon.Search color={colors.ash.base} />}
+                        prefix={<Search color={colors.ash.base} />}
                         dataSource={[
                             {
                                 label: 'Title of a section 1',

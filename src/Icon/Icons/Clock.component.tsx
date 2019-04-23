@@ -15,7 +15,7 @@ export const Clock = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon clock', className)}>
+    <StyledIcon className={classNames('anchor-icon clock', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

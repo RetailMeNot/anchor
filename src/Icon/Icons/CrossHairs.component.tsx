@@ -15,7 +15,7 @@ export const CrossHairs = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon cross-hairs', className)}>
+    <StyledIcon className={classNames('anchor-icon cross-hairs', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

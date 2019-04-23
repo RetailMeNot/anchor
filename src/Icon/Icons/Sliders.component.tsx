@@ -15,7 +15,7 @@ export const Sliders = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon sliders', className)}>
+    <StyledIcon className={classNames('anchor-icon sliders', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

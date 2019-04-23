@@ -21,7 +21,6 @@ export {
     CenteredCell,
 } from './Grid';
 export {
-    Icon,
     AddEvent as IconAddEvent,
     ArrowBack as IconArrowBack,
     ArrowForward as IconArrowForward,

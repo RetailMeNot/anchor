@@ -15,7 +15,7 @@ export const StarOutline = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon star-outline', className)}>
+    <StyledIcon className={classNames('anchor-icon star-outline', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

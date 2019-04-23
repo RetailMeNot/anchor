@@ -15,7 +15,7 @@ export const AddEvent = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon add-event', className)}>
+    <StyledIcon className={classNames('anchor-icon add-event', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

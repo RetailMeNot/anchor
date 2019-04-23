@@ -29,13 +29,13 @@ storiesOf('Components/Icon', module)
         <StyledStory>
             <Grid columns={5} minRowHeight="1.5rem" gap="1rem">
                 {Object.keys(Icon).map((iconKey: string) => (
-                    <CenteredCell>
-                        <CenteredCell>
+                    <CenteredCell key={iconKey}>
+                        <div>
                             <Typography tag="p" scale={12}>
                                 {iconKey}
                             </Typography>
                             {React.createElement(Icon[iconKey])}
-                        </CenteredCell>
+                        </div>
                     </CenteredCell>
                 ))}
             </Grid>

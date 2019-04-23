@@ -15,7 +15,7 @@ export const Expand = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon expand', className)}>
+    <StyledIcon className={classNames('anchor-icon expand', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

@@ -23,6 +23,7 @@ const StyledCard = styled.div`
     width: 2.5rem;
     height: 2.5rem;
     background-color: white;
+    z-index: 1;
 `;
 
 export const CardAction: React.FunctionComponent<CardActionProps> = ({

@@ -15,7 +15,7 @@ export const Disabled = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon disabled', className)}>
+    <StyledIcon className={classNames('anchor-icon disabled', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

@@ -15,7 +15,7 @@ export const Calendar = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon calendar', className)}>
+    <StyledIcon className={classNames('anchor-icon calendar', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

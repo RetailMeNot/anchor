@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { Card } from './Card.component';
 import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
-import { Icon } from '../Icon';
+import { Ellipses } from '../Icon';
 import { colors, fonts } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
@@ -120,7 +120,7 @@ const ActionArea = () => (
 
 const CardAction = (
     <DropDown overlay={<div>123</div>}>
-        <Icon.Ellipses color={colors.ash.light} />
+        <Ellipses color={colors.ash.light} />
     </DropDown>
 );
 

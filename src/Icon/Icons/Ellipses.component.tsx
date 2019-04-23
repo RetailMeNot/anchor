@@ -15,7 +15,7 @@ export const Ellipses = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon ellipses', className)}>
+    <StyledIcon className={classNames('anchor-icon ellipses', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

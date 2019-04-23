@@ -15,7 +15,7 @@ export const CreditCard = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon credit-card', className)}>
+    <StyledIcon className={classNames('anchor-icon credit-card', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

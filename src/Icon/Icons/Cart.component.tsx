@@ -15,7 +15,7 @@ export const Cart = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon cart', className)}>
+    <StyledIcon className={classNames('anchor-icon cart', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

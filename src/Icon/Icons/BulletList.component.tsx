@@ -15,7 +15,7 @@ export const BulletList = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon bullet-list', className)}>
+    <StyledIcon className={classNames('anchor-icon bullet-list', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

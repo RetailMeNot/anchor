@@ -7,7 +7,7 @@ import { text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // COMPONENTS
 import { Badge } from './Badge.component';
-import { Icon } from '../Icon';
+import { Cart } from '../Icon';
 // README
 import * as README from './README.md';
 // THEME
@@ -26,7 +26,7 @@ storiesOf('Components/Badge', module)
         <StyledStory>
             <p>Badge</p>
             <Badge count={text('Badge QTY', '0')}>
-                <Icon.Cart />
+                <Cart />
             </Badge>
         </StyledStory>
     ));

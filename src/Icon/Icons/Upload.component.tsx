@@ -15,7 +15,7 @@ export const Upload = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon upload', className)}>
+    <StyledIcon className={classNames('anchor-icon upload', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

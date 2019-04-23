@@ -15,7 +15,7 @@ export const HeartOutline = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon heart-outline', className)}>
+    <StyledIcon className={classNames('anchor-icon heart-outline', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

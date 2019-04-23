@@ -15,7 +15,7 @@ export const ArrowBack = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon arrow-forward', className)}>
+    <StyledIcon className={classNames('anchor-icon arrow-forward', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

@@ -15,7 +15,7 @@ export const Refresh = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon refresh', className)}>
+    <StyledIcon className={classNames('anchor-icon refresh', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

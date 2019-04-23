@@ -1,3 +1,4 @@
+// VENDOR
 import styled from 'styled-components';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -21,17 +22,11 @@ export const Scale = {
 export const DefaultColor = '#222';
 export const DefaultScale = 'md';
 
-export const StyledIcon = styled.div`
-    display: inline-flex;
-    min-width: 1.5rem;
-    min-height: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    z-index: 2;
-
-    svg {
-        flex: 0 0 auto;
-    }
+export const StyledIcon = styled.span<IconSVGProps>`
+    display: inline-block;
+    height: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};
+    width: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};
+    line-height: 0;
 `;
+
 StyledIcon.displayName = 'AnchorIcon';

@@ -15,7 +15,7 @@ export const Chat = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon chat', className)}>
+    <StyledIcon className={classNames('anchor-icon chat', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

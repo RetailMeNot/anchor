@@ -15,7 +15,7 @@ export const Camera = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon camera', className)}>
+    <StyledIcon className={classNames('anchor-icon camera', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}

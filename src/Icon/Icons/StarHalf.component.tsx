@@ -15,7 +15,7 @@ export const StarHalf = ({
     scale = DefaultScale,
     className,
 }: IconSVGProps) => (
-    <StyledIcon className={classNames('anchor-icon star-half', className)}>
+    <StyledIcon className={classNames('anchor-icon star-half', className)} scale={scale}>
         <svg
             width={Scale[scale]}
             height={Scale[scale]}
