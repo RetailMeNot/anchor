@@ -2,12 +2,14 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
+import { color, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
 // COMPONENTS
 import { Grid, CenteredCell } from '../Grid';
 import { Typography } from '../Typography';
 import * as Icon from './';
+import { DefaultColor } from './utils';
 
 // README
 import * as README from './README.md';
@@ -19,6 +21,7 @@ const StyledStory = styled.div`
         text-align: center;
     }
 `;
+
 storiesOf('Components/Icon', module)
     .addParameters({
         readme: {
@@ -39,5 +42,17 @@ storiesOf('Components/Icon', module)
                     </CenteredCell>
                 ))}
             </Grid>
+        </StyledStory>
+    ))
+    .add('Size & Color', () => (
+        <StyledStory>
+            <Icon.AddEvent
+                color={color('color', DefaultColor)}
+                scale={select(
+                    'scale',
+                    ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
+                    'md'
+                )}
+            />
         </StyledStory>
     ));

@@ -13,7 +13,7 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
   >
     <path
       d="M15.333 12.667H14v-1.333c0-.367-.3-.667-.667-.667-.366 0-.666.3-.666.667v1.333h-1.334c-.366 0-.666.3-.666.667 0 .366.3.666.666.666h1.334v1.334c0 .366.3.666.666.666.367 0 .667-.3.667-.666V14h1.333c.367 0 .667-.3.667-.666 0-.367-.3-.667-.667-.667m-.666-7.333H1.333v-2c0-.368.299-.667.668-.667h1.332v.667c0 .366.3.666.667.666a.67.67 0 0 0 .667-.666v-.667h7.212v.667c0 .366.3.666.666.666.367 0 .667-.3.667-.666v-.667h.787c.369 0 .668.299.668.667v2zm0 3.333c0 .367.3.667.666.667.367 0 .667-.3.667-.667V2a.667.667 0 0 0-.667-.666h-2.121V.667A.67.67 0 0 0 12.545 0a.67.67 0 0 0-.666.667v.667H4.667V.667A.67.67 0 0 0 4 0a.67.67 0 0 0-.667.667v.667H.667A.666.666 0 0 0 0 2v13.334c0 .368.298.666.667.666h8c.366 0 .666-.3.666-.666 0-.367-.3-.667-.666-.667H2.001A.668.668 0 0 1 1.333 14V6.667h13.334v2z"
-      fill="#222"
+      fill="currentColor"
       fillRule="evenodd"
     />
   </svg>
@@ -39,7 +39,7 @@ exports[`Component: Icon should render out a ArrowBack 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -76,7 +76,7 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
         d="M16 0H0v16h16z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -113,7 +113,7 @@ exports[`Component: Icon should render out a AvatarIcon 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -150,7 +150,7 @@ exports[`Component: Icon should render out a AvatarOutline 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -194,7 +194,7 @@ exports[`Component: Icon should render out a BarCode 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         transform="translate(0 2)"
         xlinkHref="#bar-code-a"
       />
@@ -222,7 +222,7 @@ exports[`Component: Icon should render out a BulletList 1`] = `
         d="M0-1h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -253,7 +253,7 @@ exports[`Component: Icon should render out a Calendar 1`] = `
       />
     </defs>
     <use
-      fill="#222"
+      fill="currentColor"
       fillRule="evenodd"
       xlinkHref="#calendar-a"
     />
@@ -281,12 +281,12 @@ exports[`Component: Icon should render out a Camera 1`] = `
       />
       <path
         d="M4.366 3.14a1.267 1.267 0 0 1-1.259 1.127H1.333A.733.733 0 0 0 .6 5v8.667c0 .405.328.733.733.733h13.334a.733.733 0 0 0 .733-.733V5a.733.733 0 0 0-.733-.733h-1.774a1.267 1.267 0 0 1-1.259-1.127l-.099-.888a.733.733 0 0 0-.728-.652H5.193a.733.733 0 0 0-.728.652l-.1.888z"
-        stroke="#222"
+        stroke="currentColor"
         strokeWidth="1.2"
       />
       <path
         d="M10.133 9A2.137 2.137 0 0 0 8 6.867 2.137 2.137 0 0 0 5.867 9c0 1.175.958 2.133 2.133 2.133A2.137 2.137 0 0 0 10.133 9zm1.2 0A3.337 3.337 0 0 1 8 12.333 3.337 3.337 0 0 1 4.667 9 3.337 3.337 0 0 1 8 5.667 3.337 3.337 0 0 1 11.333 9z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -313,7 +313,7 @@ exports[`Component: Icon should render out a Cart 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -351,7 +351,7 @@ exports[`Component: Icon should render out a CashBack 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#cashback-a"
       />
     </g>
@@ -378,7 +378,7 @@ exports[`Component: Icon should render out a Cells 1`] = `
       />
     </defs>
     <use
-      fill="#222"
+      fill="currentColor"
       fillRule="evenodd"
       xlinkHref="#cells-a"
     />
@@ -412,7 +412,7 @@ exports[`Component: Icon should render out a Chat 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#chat-a"
       />
     </g>
@@ -440,7 +440,7 @@ exports[`Component: Icon should render out a Check 1`] = `
       />
       <path
         d="M14.627 5.133l-7.637 7.5a1.282 1.282 0 0 1-1.8 0l-3.817-3.75a1.235 1.235 0 0 1 0-1.768 1.288 1.288 0 0 1 1.799 0L6.09 9.982l6.737-6.617a1.291 1.291 0 0 1 1.8 0c.496.488.496 1.28 0 1.768"
-        fill="#222"
+        fill="currentColor"
       />
     </g>
   </svg>
@@ -467,7 +467,7 @@ exports[`Component: Icon should render out a CheckSmall 1`] = `
       />
       <path
         d="M11.966 6.454l-4.364 4.5a.965.965 0 0 1-.693.296.97.97 0 0 1-.694-.297l-2.182-2.25a1.017 1.017 0 0 1 0-1.408.961.961 0 0 1 1.387 0L6.91 8.83l3.67-3.785a.963.963 0 0 1 1.387 0c.379.39.379 1.02 0 1.41l-.179-.175.18.174z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -488,7 +488,7 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
   >
     <path
       d="M8 8.478l2.954-2.517a.77.77 0 0 1 1.058 0l.014.015a.721.721 0 0 1-.009 1.052L8.53 10.04a.767.767 0 0 1-1.048.008L3.975 7.02a.719.719 0 0 1-.001-1.042l.015-.015a.767.767 0 0 1 1.048-.01L8 8.477z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -507,7 +507,7 @@ exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
   >
     <path
       d="M8 8.276l2.172-1.852a.64.64 0 0 1 .88.001l.011.01c.25.24.25.634-.01.882L8.44 9.575a.637.637 0 0 1-.87.008L4.938 7.308a.602.602 0 0 1-.001-.872l.012-.01a.637.637 0 0 1 .87-.011L8 8.275z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -527,7 +527,7 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
   >
     <path
       d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -553,7 +553,7 @@ exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
       />
       <path
         d="M9.575 5.828a.64.64 0 0 0 0-.88l-.011-.01a.604.604 0 0 0-.881.009L6.425 7.56a.637.637 0 0 0-.009.87l2.275 2.633c.24.25.634.25.872 0l.012-.012a.637.637 0 0 0 .01-.869L7.724 8l1.851-2.172z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -574,7 +574,7 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
   >
     <path
       d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -600,7 +600,7 @@ exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
       />
       <path
         d="M8.276 8l-1.851 2.172a.64.64 0 0 0 0 .88l.011.01c.24.25.634.25.881-.009L9.575 8.44a.637.637 0 0 0 .009-.87L7.309 4.937a.602.602 0 0 0-.872 0l-.011.011a.637.637 0 0 0-.01.87L8.275 8z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -621,7 +621,7 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
   >
     <path
       d="M8 7.523l2.954 2.518a.77.77 0 0 0 1.058-.001l.014-.014a.721.721 0 0 0-.009-1.052L8.53 5.96a.767.767 0 0 0-1.048-.009l-3.506 3.03a.719.719 0 0 0-.001 1.043l.015.015a.767.767 0 0 0 1.048.01L8 7.523z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -647,7 +647,7 @@ exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
       />
       <path
         d="M8 7.724L5.827 9.576a.64.64 0 0 1-.88-.001l-.011-.01a.604.604 0 0 1 .01-.882L7.56 6.425a.637.637 0 0 1 .87-.008l2.632 2.275c.25.239.25.633.001.872l-.012.01a.637.637 0 0 1-.87.011L8 7.725z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -681,12 +681,12 @@ exports[`Component: Icon should render out a Clock 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#clock-a"
       />
       <path
         d="M10.328 8.667h-2v-3c0-.367-.3-.667-.667-.667-.366 0-.666.3-.666.667v3.667c0 .366.3.666.666.666h2.667c.367 0 .667-.3.667-.666 0-.367-.3-.667-.667-.667z"
-        fill="#222"
+        fill="currentColor"
       />
     </g>
   </svg>
@@ -712,7 +712,7 @@ exports[`Component: Icon should render out a Close 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -748,12 +748,12 @@ exports[`Component: Icon should render out a CloseSmall 1`] = `
       <path
         d="M9.501 9.734L6.075 6.309c-.083-.084-.1-.205-.036-.269l.001-.001c.064-.064.185-.047.269.036l3.425 3.426c.084.084.1.205.037.268l-.001.002c-.064.064-.185.047-.269-.037"
         fill="#FFF"
-        stroke="#222"
+        stroke="currentColor"
         strokeWidth=".8"
       />
       <path
         d="M10.017 6.591L6.59 10.017c-.225.226-.594.276-.81.057l-.025-.022c-.24-.24-.189-.608.037-.834l3.425-3.425c.225-.226.595-.277.811-.058l.025.023c.24.24.188.607-.037.833l-.283-.282.05.05-3.426 3.425c.058-.058.076-.185-.06-.319l.025.023c-.112-.112-.24-.095-.297-.037L9.45 6.026l.283.283-.283-.283c-.058.058-.075.185.06.318l-.025-.023c.112.113.24.095.298.037l.233.233z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -787,7 +787,7 @@ exports[`Component: Icon should render out a CommentMore 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#comment-more-a"
       />
     </g>
@@ -821,7 +821,7 @@ exports[`Component: Icon should render out a CreditCard 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         transform="translate(0 2)"
         xlinkHref="#credit-card-a"
       />
@@ -850,7 +850,7 @@ exports[`Component: Icon should render out a CrossHairs 1`] = `
       />
       <path
         d="M2.284 7.617c.025-2.826 2.234-5.15 5-5.273v-1.01a.383.383 0 0 1 .766 0l-.047.96c2.705.166 4.87 2.331 4.987 4.99H14a.383.383 0 1 1 0 .766l-.96-.047c-.167 2.705-2.332 4.87-4.99 4.987V14a.383.383 0 1 1-.767 0l.047-.96c-2.581-.16-4.686-2.144-4.955-4.657H1.333a.383.383 0 0 1 0-.766h.95zm1.716 0a.383.383 0 0 1 0 .766l-.903-.057c.306 2.14 2.074 3.793 4.186 3.996v-.989a.383.383 0 0 1 .767 0l-.054.939c2.287-.162 4.114-1.989 4.326-4.222h-.989a.383.383 0 0 1 0-.767l.939.054C12.11 5.05 10.283 3.223 8.05 3.012V4a.383.383 0 0 1-.767 0l.054-.938A4.617 4.617 0 0 0 3.05 7.617H4zm3.667 2.1a2.05 2.05 0 1 1 0-4.1 2.05 2.05 0 0 1 0 4.1z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -884,7 +884,7 @@ exports[`Component: Icon should render out a Cut 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#cut-a"
       />
     </g>
@@ -918,7 +918,7 @@ exports[`Component: Icon should render out a Disabled 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#disabled-a"
       />
     </g>
@@ -952,7 +952,7 @@ exports[`Component: Icon should render out a Dislike 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#dislike-a"
       />
     </g>
@@ -986,7 +986,7 @@ exports[`Component: Icon should render out a Download 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#download-a"
       />
     </g>
@@ -1020,7 +1020,7 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#ellipsis-a"
       />
     </g>
@@ -1053,7 +1053,7 @@ exports[`Component: Icon should render out a EllipsesVertical 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         transform="rotate(90 3.5 5.5)"
         xlinkHref="#ellipses-vertical-a"
       />
@@ -1081,7 +1081,7 @@ exports[`Component: Icon should render out a Envelope 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -1115,7 +1115,7 @@ exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -1150,7 +1150,7 @@ exports[`Component: Icon should render out a Error 1`] = `
       />
       <path
         d="M15.797 12.757c.133.23.203.49.203.756 0 .821-.652 1.487-1.457 1.487H1.457c-.271 0-.537-.077-.768-.223a1.504 1.504 0 0 1-.47-2.047L6.921 1.703a1.44 1.44 0 0 1 2.493.027l6.383 11.027z"
-        fill="#222"
+        fill="currentColor"
       />
       <path
         d="M7.133 9.377V5.5a.5.5 0 0 1 .5-.5h.723a.5.5 0 0 1 .5.5v3.877a.5.5 0 0 1-.5.5h-.723a.5.5 0 0 1-.5-.5zM9 11.451a.983.983 0 0 1-.077.388.902.902 0 0 1-.215.311c-.093.086-.2.155-.323.207a.995.995 0 0 1-.39.078c-.137 0-.265-.024-.385-.073a.92.92 0 0 1-.313-.207 1.095 1.095 0 0 1-.215-.31.958.958 0 0 1-.005-.761.973.973 0 0 1 .528-.528.995.995 0 0 1 .39-.078c.137 0 .267.026.39.077.123.052.23.121.323.208a.958.958 0 0 1 .292.689z"
@@ -1188,7 +1188,7 @@ exports[`Component: Icon should render out a Expand 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#expand-a"
       />
     </g>
@@ -1222,7 +1222,7 @@ exports[`Component: Icon should render out a Gear 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#gear-a"
       />
     </g>
@@ -1249,7 +1249,7 @@ exports[`Component: Icon should render out a GiftCard 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -1289,7 +1289,7 @@ exports[`Component: Icon should render out a Hamburger 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        stroke="#222"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.333"
@@ -1329,7 +1329,7 @@ exports[`Component: Icon should render out a Heart 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#heart-a"
       />
     </g>
@@ -1363,7 +1363,7 @@ exports[`Component: Icon should render out a HeartOutline 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#heart-outline-a"
       />
     </g>
@@ -1383,7 +1383,7 @@ exports[`Component: Icon should render out a Home 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     >
       <path
@@ -1415,7 +1415,7 @@ exports[`Component: Icon should render out a Info 1`] = `
       <circle
         cx="8"
         cy="8"
-        fill="#222"
+        fill="currentColor"
         r="8"
       />
       <path
@@ -1440,7 +1440,7 @@ exports[`Component: Icon should render out a InfoOutline 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     >
       <path
@@ -1480,7 +1480,7 @@ exports[`Component: Icon should render out a Laptop 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#laptop-a"
       />
     </g>
@@ -1514,7 +1514,7 @@ exports[`Component: Icon should render out a Lightning 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
         xlinkHref="#lightning-a"
       />
@@ -1549,7 +1549,7 @@ exports[`Component: Icon should render out a Like 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#like-a"
       />
     </g>
@@ -1576,7 +1576,7 @@ exports[`Component: Icon should render out a ListIcon 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        stroke="#222"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.333"
@@ -1609,7 +1609,7 @@ exports[`Component: Icon should render out a Lock 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         transform="translate(1 .333)"
       >
         <path
@@ -1650,7 +1650,7 @@ exports[`Component: Icon should render out a Map 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     >
       <path
@@ -1690,7 +1690,7 @@ exports[`Component: Icon should render out a Marker 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#marker-a"
       />
     </g>
@@ -1724,7 +1724,7 @@ exports[`Component: Icon should render out a MarkerOutline 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#marker-outline-a"
       />
     </g>
@@ -1758,7 +1758,7 @@ exports[`Component: Icon should render out a Mobile 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#mobile-a"
       />
     </g>
@@ -1792,7 +1792,7 @@ exports[`Component: Icon should render out a News 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#news-a"
       />
     </g>
@@ -1826,7 +1826,7 @@ exports[`Component: Icon should render out a Pencil 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#pencil-a"
       />
     </g>
@@ -1853,7 +1853,7 @@ exports[`Component: Icon should render out a Play 1`] = `
       />
     </defs>
     <use
-      fill="#222"
+      fill="currentColor"
       fillRule="evenodd"
       xlinkHref="#play-a"
     />
@@ -1880,7 +1880,7 @@ exports[`Component: Icon should render out a Plus 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -1914,7 +1914,7 @@ exports[`Component: Icon should render out a PlusSmall 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -1942,7 +1942,7 @@ exports[`Component: Icon should render out a Print 1`] = `
   >
     <path
       d="M3 6a1 1 0 1 0 0 2.001 1 1 0 0 0 0-2m11.667 5.666c0 .184-.15.333-.333.333h-1.667v-2h.667a.666.666 0 1 0 0-1.333H2.667a.667.667 0 1 0 0 1.333h.667v2H1.667a.333.333 0 0 1-.333-.333v-6c0-.184.149-.333.333-.333h12.667c.183 0 .333.149.333.333v6zm-10 3h6.667V10H4.667v4.667zm0-10.666h6.667V1.334H4.667v2.667zM14.334 4h-1.667V.667A.667.667 0 0 0 12 0H4a.667.667 0 0 0-.666.667V4H1.667A1.67 1.67 0 0 0 0 5.667v6a1.67 1.67 0 0 0 1.667 1.667h1.667v2c0 .368.298.666.666.666h8a.666.666 0 0 0 .667-.666v-2h1.667c.919 0 1.666-.748 1.666-1.667v-6C16 4.748 15.253 4 14.334 4z"
-      fill="#222"
+      fill="currentColor"
       fillRule="evenodd"
     />
   </svg>
@@ -1967,7 +1967,7 @@ exports[`Component: Icon should render out a Question 1`] = `
       <circle
         cx="8"
         cy="8"
-        fill="#222"
+        fill="currentColor"
         r="8"
       />
       <path
@@ -1991,7 +1991,7 @@ exports[`Component: Icon should render out a QuestionOutline 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     >
       <path
@@ -2031,7 +2031,7 @@ exports[`Component: Icon should render out a Refresh 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#refresh-a"
       />
     </g>
@@ -2064,7 +2064,7 @@ exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#retail-me-not-logo-a"
       />
     </g>
@@ -2091,7 +2091,7 @@ exports[`Component: Icon should render out a SadFace 1`] = `
         d="M0 0h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         transform="translate(2 3)"
       >
         <circle
@@ -2129,7 +2129,7 @@ exports[`Component: Icon should render out a Search 1`] = `
   >
     <path
       d="M1.925 7.125c0 2.868 2.332 5.2 5.2 5.2 2.868 0 5.2-2.332 5.2-5.2 0-2.868-2.332-5.2-5.2-5.2a5.205 5.205 0 0 0-5.2 5.2zm9.893 4.004l3.09 3.09a.488.488 0 0 1-.69.688l-3.054-3.12a6.136 6.136 0 0 1-4.04 1.513A6.175 6.175 0 1 1 13.3 7.125a6.135 6.135 0 0 1-1.482 4.004z"
-      fill="#222"
+      fill="currentColor"
       fillRule="nonzero"
     />
   </svg>
@@ -2162,7 +2162,7 @@ exports[`Component: Icon should render out a Share 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#share-a"
       />
     </g>
@@ -2189,7 +2189,7 @@ exports[`Component: Icon should render out a Sliders 1`] = `
         d="M0-1h16v16H0z"
       />
       <g
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       >
         <path
@@ -2221,7 +2221,7 @@ exports[`Component: Icon should render out a Star 1`] = `
       />
       <path
         d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -2249,12 +2249,12 @@ exports[`Component: Icon should render out a StarHalf 1`] = `
       />
       <path
         d="M7.494 12.536a1.15 1.15 0 0 1 1.01-.003l3.465 1.683-.59-3.773a1.15 1.15 0 0 1 .277-.942l2.518-2.83-3.56-.573a1.15 1.15 0 0 1-.849-.628L8 1.886 6.235 5.47a1.15 1.15 0 0 1-.85.628l-3.56.573 2.522 2.833c.225.253.327.593.279.929l-.546 3.783 3.414-1.68zm-3.096 2.972a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
       <path
         d="M5.103 4.827l1.365-2.774a1.15 1.15 0 0 1 2.182.508V12.7c0 .438-.25.838-.642 1.032l-3.61 1.776a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -2282,7 +2282,7 @@ exports[`Component: Icon should render out a StarOutline 1`] = `
       />
       <path
         d="M7.494 12.536a1.15 1.15 0 0 1 1.01-.003l3.465 1.683-.59-3.773a1.15 1.15 0 0 1 .277-.942l2.518-2.83-3.56-.573a1.15 1.15 0 0 1-.849-.628L8 1.886 6.235 5.47a1.15 1.15 0 0 1-.85.628l-3.56.573 2.522 2.833c.225.253.327.593.279.929l-.546 3.783 3.414-1.68zm-3.096 2.972a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
-        fill="#222"
+        fill="currentColor"
         fillRule="nonzero"
       />
     </g>
@@ -2313,7 +2313,7 @@ exports[`Component: Icon should render out a Success 1`] = `
       fillRule="evenodd"
     >
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#success-a"
       />
       <path
@@ -2351,7 +2351,7 @@ exports[`Component: Icon should render out a SuccessOutline 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#success-outline-a"
       />
     </g>
@@ -2385,7 +2385,7 @@ exports[`Component: Icon should render out a Tag 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#tag-a"
       />
     </g>
@@ -2419,7 +2419,7 @@ exports[`Component: Icon should render out a TagAdd 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#tag-add-a"
       />
     </g>
@@ -2453,7 +2453,7 @@ exports[`Component: Icon should render out a Upload 1`] = `
         d="M0 0h16v16H0z"
       />
       <use
-        fill="#222"
+        fill="currentColor"
         xlinkHref="#upload-a"
       />
     </g>
