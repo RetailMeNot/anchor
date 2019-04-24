@@ -3,7 +3,6 @@
 exports[`Component: Hero should be defined 1`] = `
 <section
   className="anchor-hero sc-bdVaJa fPBYhB"
-  color="#FFFFFF"
 >
   <h1
     className="anchor-typography anchor-hero-title sc-bwzfXH kqDGTi sc-EHOje hKGOhJ"

@@ -11,20 +11,16 @@ import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
 import { Grid, CustomAdaptor, StandardBreakpoints } from '../Grid';
 import { Button } from '../Button';
-
+// SUBJECT
 import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
-// Styled Components
-// ------------------------------------------------------------------------------------------------------------------
 const StyledStory = styled.div`
     background: ${colors.white.base};
     width: 100vw;
 `;
 
-// Stories
-// ------------------------------------------------------------------------------------------------------------------
-const tealGradient = 'linear-gradient(224deg,#00cccd,#2de2b3)';
+const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
 
 storiesOf('Components/Hero', module)
     .addParameters({
@@ -38,7 +34,7 @@ storiesOf('Components/Hero', module)
                 background={color('Hero Background', tealGradient)}
                 minHeight="9.375rem"
             >
-                <Title scale={44}>{text('Title', 'Baratheon')}</Title>
+                <Title>{text('Title', 'Baratheon')}</Title>
                 <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
                     <Subtitle>{text('Subtitle', 'Ours is the Fury')}</Subtitle>
                 </CustomAdaptor>
@@ -47,7 +43,8 @@ storiesOf('Components/Hero', module)
     ))
     .add('Simple', () => {
         const BreadCrumbs = styled(Typography)`
-            &&{ margin-bottom: 6px; }}
+            // https://github.com/styled-components/styled-components/issues/1816
+            &&{ margin-bottom: 6px; }
         `;
 
         return (
@@ -94,7 +91,7 @@ storiesOf('Components/Hero', module)
                         <StyledImageWrapper>
                             <SomeImage />
                         </StyledImageWrapper>
-                        <Title>{text('Title', 'House Lannister')}</Title>
+                        <Title scale={44}>{text('Title', 'House Lannister')}</Title>
                         <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
                             <Subtitle>
                                 {text(

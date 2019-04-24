@@ -28,7 +28,7 @@ const StyledHero = styled.section<StyledHeroProps>`
     width: 100%;
     margin: 0 auto;
     display: block;
-    color: ${props => props.color};
+    color: ${({ color = colors.white.base }) => color};
     text-align: ${props => props.align};
     min-height: ${props => props.minHeight};
     display: flex;
@@ -49,7 +49,6 @@ interface HeroProps {
 export const Hero = ({
     background = 'transparent',
     align = 'center',
-    color = colors.white.base,
     minHeight = '7.5rem',
     className,
     children,
@@ -59,7 +58,6 @@ export const Hero = ({
         className={classnames('anchor-hero', className)}
         background={background}
         align={align}
-        color={color}
         minHeight={minHeight}
         {...props}
     >
@@ -67,18 +65,12 @@ export const Hero = ({
     </StyledHero>
 );
 
-export default Hero;
-
 // Hero.Title
 // ------------------------------------------------------------------------------------------------------------------
 
 const StyledTitle = styled(Typography)`
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
     position: relative;
-    // https://github.com/styled-components/styled-components/issues/1816
-    && {
-        // margin: 0.375rem 0;
-    }
 `;
 
 export const HeroTitle = ({
@@ -86,14 +78,14 @@ export const HeroTitle = ({
     children,
     tag = 'h1',
     weight = 600,
-    size = 2,
+    scale = 32,
     ...props
 }: TypographyProps): React.ReactElement<any> => (
     <StyledTitle
         className={classnames('anchor-hero-title', className)}
         tag={tag}
         weight={weight}
-        size={size}
+        scale={scale}
         {...props}
     >
         {children}
@@ -109,15 +101,12 @@ const StyledSubtitle = styled(Typography)`
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     position: relative;
     display: block;
-    && {
-        // margin: 0.375rem 0;
-    }
 `;
 
 export const HeroSubtitle = ({
     className,
     children,
-    scale = 16,
+    scale = 18,
     weight = 600,
     ...props
 }: TypographyProps): React.ReactElement<any> => (
