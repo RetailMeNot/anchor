@@ -17,7 +17,8 @@ const commonPlugins = [
     sourceMaps(),
     terser(),
     babel({
-        exclude: 'node_modules/**'
+        exclude: 'node_modules/**',
+        extensions: ['ts', 'tsx'],
     }),
 ];
 
@@ -123,6 +124,7 @@ const componentList = {
     
     
 export default {
+    format: "iife",
     input: componentList,
     output: [
         {
