@@ -1,5 +1,6 @@
 /* tslint:disable */
 // PLUGINS
+import babel from 'rollup-plugin-babel';
 import typescript from 'rollup-plugin-typescript';
 import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
@@ -15,6 +16,20 @@ const commonPlugins = [
     }),
     sourceMaps(),
     terser(),
+    babel({
+        exclude: 'node_modules/**',
+        babelrc: false,
+        presets: [
+            [
+                '@babel/env',
+                {
+                    modules: false,
+                    useBuiltIns: "usage",
+                    targets: 'maintained node versions'
+                }
+            ]
+        ]
+    }),
 ];
 
 // Needed for tree-shaking. Static list for now.
