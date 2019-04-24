@@ -17,18 +17,7 @@ const commonPlugins = [
     sourceMaps(),
     terser(),
     babel({
-        exclude: 'node_modules/**',
-        babelrc: false,
-        presets: [
-            [
-                '@babel/env',
-                {
-                    modules: false,
-                    useBuiltIns: "usage",
-                    targets: 'maintained node versions'
-                }
-            ]
-        ]
+        exclude: 'node_modules/**'
     }),
 ];
 
