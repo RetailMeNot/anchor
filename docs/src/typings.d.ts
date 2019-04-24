@@ -5,3 +5,7 @@ declare module '@mdx-js/tag' {
 declare module '@reach/component-component' {
   const Component: any;
 }
+declare module '@retailmenot/anchor' {
+  const AutoComplete: any;
+  const Search: any;
+}

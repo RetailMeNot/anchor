@@ -50,8 +50,8 @@
   "author": "Kameron (@sharkparty)",
   "license": "UNLICENSED",
   "peerDependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "styled-components": ">= 3"
   },
   "devDependencies": {
@@ -95,6 +95,7 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "jest": "^24.5.0",
     "jsdom": "^13.0.0",
     "prettier": "^1.16.4",
