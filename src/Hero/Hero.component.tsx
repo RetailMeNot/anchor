@@ -24,6 +24,7 @@ interface StyledHeroProps {
 
 const StyledHero = styled.section<StyledHeroProps>`
     background: ${props => props.background};
+    box-sizing: border-box;
     position: relative;
     width: 100%;
     margin: 0 auto;

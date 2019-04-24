@@ -20,7 +20,9 @@ const StyledStory = styled.div`
     width: 100vw;
 `;
 
-const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
+const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${
+    colors.dealEnvy.light
+})`;
 
 storiesOf('Components/Hero', module)
     .addParameters({
@@ -44,7 +46,9 @@ storiesOf('Components/Hero', module)
     .add('Simple', () => {
         const BreadCrumbs = styled(Typography)`
             // https://github.com/styled-components/styled-components/issues/1816
-            &&{ margin-bottom: 6px; }
+            && {
+                margin-bottom: 6px;
+            }
         `;
 
         return (
@@ -91,7 +95,9 @@ storiesOf('Components/Hero', module)
                         <StyledImageWrapper>
                             <SomeImage />
                         </StyledImageWrapper>
-                        <Title scale={44}>{text('Title', 'House Lannister')}</Title>
+                        <Title scale={44}>
+                            {text('Title', 'House Lannister')}
+                        </Title>
                         <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
                             <Subtitle>
                                 {text(
