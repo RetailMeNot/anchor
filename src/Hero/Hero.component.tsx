@@ -70,7 +70,7 @@ export const Hero = ({
 // ------------------------------------------------------------------------------------------------------------------
 
 const StyledTitle = styled(Typography)`
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.09);
     position: relative;
 `;
 
@@ -99,7 +99,7 @@ Hero.Title = HeroTitle;
 // ------------------------------------------------------------------------------------------------------------------
 
 const StyledSubtitle = styled(Typography)`
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.04);
     position: relative;
     display: block;
 `;
