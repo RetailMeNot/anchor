@@ -122,8 +122,6 @@ const componentList = {
     tagadd: './src/Icon/Icons/TagAdd.component.tsx',
 };
 
-
-
 export default {
     input: componentList,
     output: [
