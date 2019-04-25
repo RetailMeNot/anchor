@@ -44,7 +44,6 @@ interface HeroProps {
     className?: string;
     children?: any;
     minHeight?: string;
-    height?: string;
 }
 
 export const Hero = ({
