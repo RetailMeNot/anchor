@@ -5,7 +5,7 @@ import typescript from 'rollup-plugin-typescript';
 import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 // TODO: Use this plugin on the production bundle, not on the module (check if intellisense breaks)
-import { terser } from 'rollup-plugin-terser';
+// import { terser } from 'rollup-plugin-terser';
 
 import * as packageJSON from './package.json';
 
@@ -15,7 +15,7 @@ const commonPlugins = [
         include: 'node_modules/**',
     }),
     sourceMaps(),
-    terser(),
+    // terser(),
     babel({
         exclude: 'node_modules/**',
         extensions: ['ts', 'tsx'],
@@ -124,7 +124,6 @@ const componentList = {
     
     
 export default {
-    format: "iife",
     input: componentList,
     output: [
         {
