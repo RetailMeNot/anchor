@@ -17,6 +17,7 @@ export const ChevronLeftSmall = ({
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon chevron-left-small', className)}
+        scale={scale}
     >
         <svg
             width={Scale[scale]}

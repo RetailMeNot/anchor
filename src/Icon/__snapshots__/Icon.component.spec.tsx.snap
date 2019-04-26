@@ -498,6 +498,7 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
 exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
 <span
   className="anchor-icon chevron-down-small sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -537,6 +538,7 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
 exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
 <span
   className="anchor-icon chevron-left-small sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -584,6 +586,7 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
 exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
 <span
   className="anchor-icon chevron-right-small sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -631,6 +634,7 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
 exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
 <span
   className="anchor-icon chevron-up-small sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -1031,6 +1035,7 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
 exports[`Component: Icon should render out a EllipsesVertical 1`] = `
 <span
   className="anchor-icon ellipses-vertical sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -1983,6 +1988,7 @@ exports[`Component: Icon should render out a Question 1`] = `
 exports[`Component: Icon should render out a QuestionOutline 1`] = `
 <span
   className="anchor-icon question-outline sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -2042,6 +2048,7 @@ exports[`Component: Icon should render out a Refresh 1`] = `
 exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
 <span
   className="anchor-icon retail-me-not-logo sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}
@@ -2329,6 +2336,7 @@ exports[`Component: Icon should render out a Success 1`] = `
 exports[`Component: Icon should render out a SuccessOutline 1`] = `
 <span
   className="anchor-icon success-outline sc-bdVaJa gENAGr"
+  scale="md"
 >
   <svg
     height={16}

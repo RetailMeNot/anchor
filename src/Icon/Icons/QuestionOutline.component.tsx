@@ -17,6 +17,7 @@ export const QuestionOutline = ({
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon question-outline', className)}
+        scale={scale}
     >
         <svg
             width={Scale[scale]}

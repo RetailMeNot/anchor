@@ -10,7 +10,7 @@ export const filterChildrenByType = (
 ): React.ReactChild[] => {
     const goodChildren: React.ReactChild[] = [];
     const acceptedTypes: string[] = Array.isArray(type) ? [...type] : [type];
-    React.Children.map(children, (child: any) => {
+    React.Children.forEach(children, (child: any) => {
         const childType: string = get(child, 'type.displayName', 'unknown');
         if (acceptedTypes.includes(childType)) {
             goodChildren.push(child);

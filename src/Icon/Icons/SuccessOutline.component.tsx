@@ -17,6 +17,7 @@ export const SuccessOutline = ({
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon success-outline', className)}
+        scale={scale}
     >
         <svg
             width={Scale[scale]}
