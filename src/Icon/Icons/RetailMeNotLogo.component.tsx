@@ -17,6 +17,7 @@ export const RetailMeNotLogo = ({
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon retail-me-not-logo', className)}
+        scale={scale}
     >
         <svg
             width={Scale[scale]}
