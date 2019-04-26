@@ -38,7 +38,7 @@ import { Menu } from '@retailmenot/anchor';
 * **Convention** Over Configuration - Out of the box this library solves common challenges faced by UI engineers without a ton of configuration
 * **Composability** - Rather than writing redundant overrides, we provide consistent attributes to easily change the look and feel of our components
 * **Community** - We promote people-centric solutions and promote a culture of learners
-* **Representational** - We try to use native DOM APIs so the better you know the DOM the easier this library is to use  
+* **Representational** - We try to use native DOM APIs so the better you know the DOM the easier this library is to use
 
 ### Contribute
 

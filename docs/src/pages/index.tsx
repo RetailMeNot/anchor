@@ -7,7 +7,11 @@ import { withPrefix } from 'gatsby';
 import { Page } from '../components/Layout';
 // THEME
 
+
 const StyledIndexPage = styled.div`
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 `;
@@ -29,7 +33,7 @@ const StyledCaption = styled.p`
 
 const StyledOcean = styled.div`
     margin-top: 3rem;
-    height: 250px;
+    height: 28rem;
     width: 100%;
     position: relative;
 `;
