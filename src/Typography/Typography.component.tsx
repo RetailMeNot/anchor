@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components';
 import { fonts, colors } from '../theme';
 
 type Elements =
+    | 'a'
     | 'p'
     | 'span'
     | 'h1'
@@ -94,6 +95,7 @@ export interface TypographyProps {
     className?: string;
     tag?: Elements;
     htmlFor?: string;
+    href?: string;
     children?: any;
     weight?: FontWeights;
     color?: 'inherit' | Colors;
@@ -107,10 +109,18 @@ export interface TypographyProps {
 }
 
 const DefaultCSS = {
+    a: css`
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-decoration: none;
+        transition: color 250ms;
+    `,
     p: css`
         font-weight: normal;
         font-size: 1rem;
         line-height: 1.5rem;
+        margin-bottom: 1rem;
     `,
     span: css`
         // TODO
@@ -119,8 +129,10 @@ const DefaultCSS = {
         font-weight: normal;
         font-size: 1.75rem;
         line-height: 2rem;
+        margin: 1rem 0;
     `,
     h2: css`
+        margin: 1rem 0;
         font-weight: normal;
         font-size: 1.5rem;
         line-height: 2rem;
@@ -146,9 +158,11 @@ const DefaultCSS = {
         line-height: 1.125rem;
     `,
     blockquote: css`
-        margin: 0;
-        padding: 0;
-        font-style: italic;
+        margin: 1rem 0;
+        padding: 0.5rem 0 0.5rem 1rem;
+        border-left: 0.5rem solid ${colors.silver.base};
+        color: ${colors.ash.dark};
+        line-height: 1.5rem;
     `,
     address: css`
         margin: 0;
@@ -157,6 +171,13 @@ const DefaultCSS = {
     code: css`
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
             'Courier New', monospace;
+        background: ${colors.charcoal.base};
+        display: block;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin: 2rem 0;
+        color: ${colors.white.base};
+        font-size: 0.875rem;
     `,
     pre: css`
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
@@ -224,14 +245,16 @@ const ScaleTreatments = {
 const StyledTypography = (as: Elements) => styled[as]`
     font-family: ${fonts.fontFamily};
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: ${({ color = 'inherit', hue = 'base' }: any) =>
+        color === 'inherit' ? 'inherit' : colors[color][hue]};
     // Apply default styles for element
     ${DefaultCSS[as]};
     // CSS Overrides
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
-    color: ${({ color = 'inherit', hue = 'base' }: any) =>
-        color === 'inherit' ? 'inherit' : colors[color][hue]};
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
     // Override Size & Line Height
@@ -259,8 +282,6 @@ const StyledTypography = (as: Elements) => styled[as]`
             return null;
         }
     }};
-    margin: 0;
-    padding: 0;
 
     small {
         font-size: 87.5%;

@@ -1,12 +1,16 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled, { css, createGlobalStyle } from 'styled-components';
 import { withPrefix } from 'gatsby';
-// COMPONENTS
-import { Page } from '../components/Layout';
-// THEME
 
+// TODO: Delete this override when migrated over to Page
+const TempOverride = createGlobalStyle`
+    body {
+        margin: 0;
+        padding: 0;
+    }
+`;
 
 const StyledIndexPage = styled.div`
     overflow-y: hidden;
@@ -115,8 +119,8 @@ const StyledWaveOne = styled.div`
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
-    <Page>
         <StyledIndexPage>
+            <TempOverride />
             <StyledLogo src={withPrefix('/images/anchor-logo.svg')} />
             <StyledCaption>
                 A design system by <strong>RetailMeNot</strong>. Coming soon.
@@ -130,7 +134,6 @@ export const IndexPage = (): React.ReactElement<any> => (
                 <StyledWaveSix />
             </StyledOcean>
         </StyledIndexPage>
-    </Page>
 );
 
 export default IndexPage;

@@ -72,12 +72,14 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
             : null};
 
     &:hover {
-        border: solid thin ${colors.ash.base};
+        border: ${({ border }: StyledAutoCompleteProps) =>
+            border ? `solid thin ${colors.ash.base}` : null};
     }
 
     &:active,
     &:focus {
-        border: solid thin ${colors.ash.dark};
+        border: ${({ border }: StyledAutoCompleteProps) =>
+            border ? `solid thin ${colors.ash.dark}` : null};
     }
 
     .auto-complete-input {
