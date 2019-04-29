@@ -1,8 +1,686 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Button should be defined 1`] = `
+exports[`Component: Button Icon Only should render a circular icon 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  width: 3rem;
+  min-width: initial;
+  padding: 0;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 <button
-  className="anchor-button sc-bdVaJa iIpFkP"
+  className="anchor-button c0"
+  size="large"
+>
+  <span
+    className="anchor-icon star c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <path
+          d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Component: Button Icon Only should render an icon only 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  width: 3rem;
+  min-width: initial;
+  padding: 0;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  <span
+    className="anchor-icon star c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <path
+          d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Component: Button Variant: Minimal should be disableable 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #D3D3D3;
+  background-color: #D3D3D3;
+  color: #808080;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Minimal should render an minimal button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0998D6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(128,128,128,0.1);
+  color: #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Outline should be disableable 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #808080;
+  background-color: transparent;
+  color: #808080;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Outline should render an outline button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: transparent;
+  color: #0998D6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #D3D3D3;
+  background-color: #D3D3D3;
+  color: #808080;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should have a revealed state when flipped 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #F1F1F1;
+  border: solid thin #F1F1F1;
+  color: #595959;
+  font-weight: bold;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should render a primary button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should render properly when flipped 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+.c0:after,
+.c0:before {
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
+
+.c0:after {
+  -webkit-transition: 500ms ease opacity;
+  transition: 500ms ease opacity;
+  z-index: 2;
+  background: linear-gradient(45deg,#66CCFF,#66CCFF 50%,#F1F1F1 0);
+}
+
+.c0:before {
+  z-index: 1;
+  background: linear-gradient(45deg,#0998D6,#0998D6 50%,#F1F1F1 0);
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button should be defined 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
 >
   Submit
 </button>

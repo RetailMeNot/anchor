@@ -114,6 +114,7 @@ const ButtonColorStyles = ({ themeColor, inverseColor }: { themeColor: Colors, i
     },
 });
 
+// rem based
 const dimensions = {
     xsmall: {
         width: 4,
