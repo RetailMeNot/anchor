@@ -67,14 +67,14 @@ storiesOf('Components/Hero', module)
     })
     .add('CTA', () => {
         // Replace when proper button exists
-        const NeatButton = styled(Button)`
-            color: white;
-            border: thin solid white;
-            width: 9.5rem;
-            text-align: center;
-            margin: 0.1835rem auto;
-            font-size: 15px;
-        `;
+        // const NeatButton = styled(Button)`
+        //     color: white;
+        //     border: thin solid white;
+        //     width: 9.5rem;
+        //     text-align: center;
+        //     margin: 0.1835rem auto;
+        //     font-size: 15px;
+        // `;
 
         const StyledImageWrapper = styled.div`
             position: absolute;
@@ -106,12 +106,9 @@ storiesOf('Components/Hero', module)
                                 )}
                             </Subtitle>
                         </CustomAdaptor>
-                        <NeatButton
-                            variant="text"
-                            onClick={() => alert('Paid!')}
-                        >
+                        <Button reverse onClick={() => alert('Paid!')}>
                             {text('Button Text', 'Pay Debts Today')}
-                        </NeatButton>
+                        </Button>
                     </Grid>
                 </Hero>
             </StyledStory>

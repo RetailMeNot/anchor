@@ -48,7 +48,7 @@ storiesOf('Components/Modal', module)
                         <Footer>
                             <Button
                                 onClick={() => setIsOpen(false)}
-                                variant="text"
+                                variant="outline"
                             >
                                 Decline
                             </Button>
@@ -195,7 +195,7 @@ storiesOf('Components/Modal', module)
                             </Typography>
                         </Content>
                         <Footer>
-                            <Button variant="text">Decline</Button>
+                            <Button variant="outline">Decline</Button>
                             <Button>Accept</Button>
                         </Footer>
                     </Modal>

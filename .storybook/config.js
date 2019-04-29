@@ -11,10 +11,10 @@ import { addReadme } from 'storybook-readme';
 addDecorator(withInfo({
   source:false,
 }));
-addDecorator(addReadme);
+// addDecorator(addReadme);
 addDecorator(withA11y);
 addDecorator(withKnobs);
-addDecorator(withViewport);
+// addDecorator(withViewport);
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.tsx?$/);

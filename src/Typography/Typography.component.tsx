@@ -22,7 +22,7 @@ type Elements =
     | 'label'
     | 'pre';
 
-type Colors =
+export type Colors =
     | 'charcoal'
     | 'ash'
     | 'silver'

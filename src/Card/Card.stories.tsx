@@ -109,7 +109,7 @@ const ActionArea = () => (
     <CardActionArea backgroundColor={colors.silver.light}>
         <Grid columns={1}>
             <Cell width={1}>
-                <Button variant="text" size="small">
+                <Button variant="minimal" size="small">
                     Some Action
                 </Button>
             </Cell>
