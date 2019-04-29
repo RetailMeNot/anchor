@@ -178,6 +178,238 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
 </button>
 `;
 
+exports[`Component: Button Sizes should render a large button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Sizes should render a small button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  min-width: 5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="small"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Sizes should render an xlarge button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 2rem;
+  font-size: 1rem;
+  height: 3.5rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="xlarge"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Sizes should render an xsmall button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  height: 2rem;
+  min-width: 4rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+.c1 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  margin: -0.5rem 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="xsmall"
+>
+  Text
+  <div
+    className="c1"
+  />
+</button>
+`;
+
 exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 .c0 {
   position: relative;
@@ -627,6 +859,97 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   className="anchor-button c0"
   size="large"
 >
+  Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should render with an icon 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover:after,
+.c0:focus:after,
+.c0:active:after {
+  opacity: 0;
+}
+
+.c0 > .anchor-icon {
+  margin-right: 0.5rem;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+<button
+  className="anchor-button c0"
+  size="large"
+>
+  <span
+    className="anchor-icon star c1"
+    scale="md"
+  >
+    <svg
+      height={16}
+      viewBox="0 0 16 16"
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <path
+          d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  </span>
   Text
 </button>
 `;

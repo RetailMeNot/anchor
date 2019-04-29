@@ -281,13 +281,20 @@ const StyledButton = styled.button<StyledButtonProps>`
         font-weight: bold;
     `}
 
-    /* Icon Only */
-    // todo, handle icon= + text
-    ${({ icon, size }: StyledButtonProps) => icon && css`
-        // todo hitbox for small/xsmall icon-only
-        width: ${dimensions[size].height}rem;
-        min-width: initial;
-        padding: 0;
+    /* Icon */
+    ${({ icon, iconOnly, size }: StyledButtonProps) => icon && css`
+        // todo: hitbox for small/xsmall icon-only
+        ${iconOnly ? css`
+            // Make it a square
+            width: ${dimensions[size].height}rem;
+            min-width: initial;
+            padding: 0;
+        ` : css`
+            // Space icon from text
+            & > .anchor-icon {
+                margin-right: ${size === 'xlarge' || size === 'large' ? 0.5 : 0.25}rem;
+            }
+        `}
     `}
 `;
 
@@ -313,6 +320,12 @@ export const Button = ({
     icon: Icon,
     ...props
 }: ButtonProps): React.ReactElement<any> => {
+    const iconOnly = Icon && React.Children.count(children) === 0;
+
+    let iconScale = iconOnly ?
+        (size === 'xsmall' || (size === 'small' && (circular || variant === 'minimal')) ? 'md' : 'lg') :
+        'md';
+
     return (
         <React.Fragment>
             <StyledButton
@@ -323,11 +336,12 @@ export const Button = ({
                 themeColor={themeColor}
                 inverseColor={inverseColor}
                 icon={Icon}
+                iconOnly={iconOnly}
                 circular={circular}
                 variant={variant}
                 {...props}
             >
-                {Icon && <Icon scale={size === 'xsmall' || (size === 'small' && (circular || variant === 'minimal')) ? 'md' : 'lg'}/>}
+                {Icon && <Icon scale={iconScale}/>}
                 {children}
                 {size === 'xsmall' && <StyledHitbox></StyledHitbox>}
             </StyledButton>

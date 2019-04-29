@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import * as README from './README.md';
 // COMPONENT
 import { Button } from './Button.component';
-import { Typography, Cell, Grid, Cut as IconCut, SuccessOutline as IconSuccessOutline, colors } from '..';
+import { Typography, Cell, Grid, Cut, SuccessOutline, colors } from '..';
 
 const StyledStory = styled.div`
     padding: 2rem 3rem;
@@ -67,7 +67,7 @@ storiesOf('Components/Button', module)
                     <Cell> <Button size="xlarge">I'm a very long CTA Text</Button> </Cell>
 
                     <Cell> <Label>button with icon</Label> </Cell>
-                    <Cell> <Button size="xlarge"><IconCut /> CTA Text</Button> </Cell>
+                    <Cell> <Button size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
                 </Grid>
 
                 <Heading>
@@ -87,7 +87,7 @@ storiesOf('Components/Button', module)
                     <Cell> <Button size="large" minWidth="7rem">CTA</Button> </Cell>
 
                     <Cell> <Label>button with icon</Label> </Cell>
-                    <Cell> <Button size="large"><IconCut /> CTA Text</Button> </Cell>
+                    <Cell> <Button size="large" icon={Cut}> CTA Text</Button> </Cell>
                 </Grid>
 
                 <Heading>
@@ -101,7 +101,7 @@ storiesOf('Components/Button', module)
                     <Cell> <Button size="small">I'm a very long CTA Text</Button> </Cell>
 
                     <Cell> <Label>button with icon</Label> </Cell>
-                    <Cell> <Button size="small"><IconCut /> CTA Text</Button> </Cell>
+                    <Cell> <Button size="small" icon={Cut}> CTA Text</Button> </Cell>
                 </Grid>
 
                 <Heading>
@@ -115,7 +115,7 @@ storiesOf('Components/Button', module)
                     <Cell> <Button size="xsmall">I'm a very long CTA Text</Button> </Cell>
 
                     <Cell> <Label>button with icon</Label> </Cell>
-                    <Cell> <Button size="xsmall"><IconCut /> CTA Text</Button> </Cell>
+                    <Cell> <Button size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
                     <Cell> <Label>hit box</Label> </Cell>
                     <Cell> <ShowHitbox><Button size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
@@ -205,7 +205,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="outline" size="xlarge">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="outline" size="xlarge"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="outline" size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -222,7 +222,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="outline" size="large" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="outline" size="large"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="outline" size="large" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -236,7 +236,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="outline" size="small">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="outline" size="small"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="outline" size="small" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -250,7 +250,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="outline" size="xsmall">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="outline" size="xsmall"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="outline" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
                 <Cell> <Label>hit box</Label> </Cell>
                 <Cell> <ShowHitbox><Button variant="outline" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
@@ -329,7 +329,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="minimal" size="xlarge">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" size="xlarge"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -346,7 +346,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="minimal" size="large" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" size="large"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" size="large" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -360,7 +360,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="minimal" size="small">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" size="small"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" size="small" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -374,7 +374,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="minimal" size="xsmall">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" size="xsmall"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
                 <Cell> <Label>hit box</Label> </Cell>
                 <Cell> <ShowHitbox><Button variant="minimal" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
@@ -414,7 +414,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button variant="minimal" themeColor="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" themeColor="dealEnvy"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" themeColor="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -443,7 +443,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button reverse size="xlarge">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="xlarge"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button reverse size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -460,7 +460,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button reverse size="large" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="large"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button reverse size="large" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -474,7 +474,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button reverse size="small">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="small"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button reverse size="small" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -488,7 +488,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button reverse size="xsmall">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="xsmall"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button reverse size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
                 <Cell> <Label>hit box</Label> </Cell>
                 <Cell> <ShowHitbox><Button reverse size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
@@ -528,7 +528,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Button reverse themeColor="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse themeColor="dealEnvy"><IconCut /> CTA Text</Button> </Cell>
+                <Cell> <Button reverse themeColor="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -549,40 +549,40 @@ storiesOf('Components/Button', module)
             <Grid columns="120px 120px 120px 120px 120px 120px 120px" flow="column" rows="auto auto auto auto auto" gap="2rem">
                 <Cell> <Heading>Primary</Heading> </Cell>
 
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline}></Button> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline}></Button> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline}></Button> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline}></Button> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline}></Button> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline}></Button> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline}></Button> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline}></Button> </Cell>
 
                 <Cell> <Heading>Outline</Heading> </Cell>
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline} variant="outline" /> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline} variant="outline" /> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline} variant="outline" /> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline} variant="outline" /> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline} variant="outline" /> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline} variant="outline" /> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline} variant="outline" /> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} variant="outline" /> </Cell>
 
                 <Cell> <Heading>Minimal</Heading> </Cell>
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline} variant="minimal" /> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline} variant="minimal" /> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline} variant="minimal" /> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline} variant="minimal" /> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline} variant="minimal" /> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline} variant="minimal" /> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline} variant="minimal" /> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} variant="minimal" /> </Cell>
 
                 <Cell> <Heading>Primary + Circular</Heading> </Cell>
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline} circular/> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline} circular/> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline} circular/> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline} circular/> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline} circular/> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline} circular/> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline} circular/> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} circular/> </Cell>
 
                 <Cell> <Heading>Outline + Circular</Heading> </Cell>
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline} circular variant="outline"/> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline} circular variant="outline"/> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline} circular variant="outline"/> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline} circular variant="outline"/> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline} circular variant="outline"/> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline} circular variant="outline"/> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline} circular variant="outline"/> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} circular variant="outline"/> </Cell>
 
                 <Cell> <Heading>Minimal + Circular</Heading> </Cell>
-                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={IconSuccessOutline} circular variant="minimal"/> </Cell>
-                <Cell> <Label>large</Label> <Button size="large" icon={IconSuccessOutline} circular variant="minimal"/> </Cell>
-                <Cell> <Label>small</Label> <Button size="small" icon={IconSuccessOutline} circular variant="minimal"/> </Cell>
-                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={IconSuccessOutline} circular variant="minimal"/> </Cell>
+                <Cell> <Label>x-large</Label> <Button size="xlarge" icon={SuccessOutline} circular variant="minimal"/> </Cell>
+                <Cell> <Label>large</Label> <Button size="large" icon={SuccessOutline} circular variant="minimal"/> </Cell>
+                <Cell> <Label>small</Label> <Button size="small" icon={SuccessOutline} circular variant="minimal"/> </Cell>
+                <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} circular variant="minimal"/> </Cell>
             </Grid>
         </StyledStoryPrime>
     ))
