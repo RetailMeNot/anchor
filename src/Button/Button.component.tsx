@@ -81,9 +81,9 @@ const ButtonColorStyles = ({ themeColor, inverseColor }: { themeColor: Colors, i
     },
     outline: {
         base: css`
-            border: solid thin ${colors[themeColor].base};
+            border: solid thin ${colors[themeColor].dark};
             background-color: transparent;
-            color: ${colors[themeColor].base};
+            color: ${colors[themeColor].dark};
         `,
         disabled: css`
             border: solid thin ${colors.ash.dark};
@@ -298,13 +298,21 @@ const StyledButton = styled.button<StyledButtonProps>`
     `}
 `;
 
-const StyledHitbox = styled.div`
+interface StyledHitboxProps {
+    buttonHeight: number;
+}
+
+const StyledHitbox = styled.div<StyledHitboxProps>`
     position: absolute;
+
+    // account for border
     top: -1px;
     left: -1px;
     right: -1px;
     bottom: -1px;
-    margin: -0.5rem 0;
+
+    // expand using margin to get to 48px tall
+    margin: -${({ buttonHeight }) => (3 - buttonHeight) / 2}rem 0;
 `;
 
 export const Button = ({
@@ -326,6 +334,8 @@ export const Button = ({
         (size === 'xsmall' || (size === 'small' && (circular || variant === 'minimal')) ? 'md' : 'lg') :
         'md';
 
+    const height = dimensions[size].height;
+
     return (
         <React.Fragment>
             <StyledButton
@@ -343,7 +353,7 @@ export const Button = ({
             >
                 {Icon && <Icon scale={iconScale}/>}
                 {children}
-                {size === 'xsmall' && <StyledHitbox></StyledHitbox>}
+                {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
             </StyledButton>
         </React.Fragment>
     );
