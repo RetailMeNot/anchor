@@ -91,6 +91,8 @@ type DisplayValues =
     | 'initial'
     | 'inherit';
 
+export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
+
 export interface TypographyProps {
     className?: string;
     tag?: Elements;
@@ -98,11 +100,11 @@ export interface TypographyProps {
     href?: string;
     children?: any;
     weight?: FontWeights;
-    color?: 'inherit' | Colors;
+    color?: 'inherit' | 'initital' | Colors;
     hue?: 'light' | 'base' | 'dark';
     size?: number;
     lineHeight?: number;
-    align?: 'inherit' | 'left' | 'center' | 'right' | 'justify';
+    align?: TextAlign;
     transform?: TextTransforms;
     scale?: Scale;
     display?: DisplayValues;
@@ -242,23 +244,28 @@ const ScaleTreatments = {
     `,
 };
 
-const StyledTypography = (as: Elements) => styled[as]`
+const StyledTypography = (tag: Elements) => styled[tag]`
     font-family: ${fonts.fontFamily};
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: ${({ color = 'inherit', hue = 'base' }: any) =>
-        color === 'inherit' ? 'inherit' : colors[color][hue]};
+        colors[color] ? colors[color][hue] : color};
+
     // Apply default styles for element
-    ${DefaultCSS[as]};
+    ${DefaultCSS[tag]};
+
     // CSS Overrides
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
+
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
+
     // Override Size & Line Height
     font-weight: ${({ weight }: any) => (weight ? weight : null)};
+
     // Throw a warning that says you really shouldn't do this
     font-size: ${({ size }: any) => {
         if (size) {

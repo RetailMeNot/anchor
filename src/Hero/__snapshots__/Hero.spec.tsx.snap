@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Hero should be defined 1`] = `
+<section
+  className="anchor-hero sc-jlyJG AeRNs"
+/>
+`;
+
+exports[`Component: Hero should render with custom content 1`] = `
+<section
+  className="anchor-hero sc-jlyJG AeRNs"
+>
+  <h1
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-jhAzac fPAiMF"
+    scale={32}
+  >
+    Good Ole Title
+  </h1>
+  <span
+    className="anchor-typography sc-fBuWsC eYerYp"
+  >
+    Some Typography text
+  </span>
+  <button
+    className="anchor-button sc-gqjmRU csOwvP"
+  >
+    CTA
+  </button>
+</section>
+`;
+
+exports[`Component: Hero should render with title 1`] = `
+<section
+  className="anchor-hero sc-jlyJG AeRNs"
+>
+  <h1
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-Rmtcm gGPFn"
+    scale={32}
+  >
+    Hero Title
+  </h1>
+</section>
+`;
+
+exports[`Component: Hero should render with title and subtitle 1`] = `
+<section
+  className="anchor-hero sc-jlyJG AeRNs"
+>
+  <h1
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-bRBYWo dZpDpm"
+    scale={32}
+  >
+    Hero Title
+  </h1>
+  <span
+    className="anchor-typography anchor-hero-subtitle sc-csuQGl cpNBFN sc-hzDkRC bdwMZL"
+    scale={18}
+  >
+    Hero Subtitle
+  </span>
+</section>
+`;
