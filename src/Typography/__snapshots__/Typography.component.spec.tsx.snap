@@ -2,7 +2,7 @@
 
 exports[`Component: Typography match its snapshot 1`] = `
 <span
-  className="anchor-typography sc-bdVaJa lofSpu"
+  className="anchor-typography sc-bdVaJa kAKGQX"
 >
   Test text
 </span>

@@ -250,7 +250,7 @@ const StyledTypography = (tag: Elements) => styled[tag]`
     margin: 0;
     padding: 0;
     color: ${({ color = 'inherit', hue = 'base' }: any) =>
-        color === 'inherit' ? 'inherit' : colors[color][hue]};
+        colors[color] ? colors[color][hue] : color};
 
     // Apply default styles for element
     ${DefaultCSS[tag]};
@@ -259,12 +259,7 @@ const StyledTypography = (tag: Elements) => styled[tag]`
     text-align: ${({ align = 'inherit' }: any) => align};
     display: ${({ display }: any) => (display ? display : null)};
     text-transform: ${({ transform = 'none' }: any) => transform};
-<<<<<<< HEAD
-=======
-    color: ${({ color = 'inherit', hue = 'base' }: any) =>
-        colors[color] ? colors[color][hue] : color};
 
->>>>>>> chore(Hero): code cleanup
     // Use a scale to set size & line-height
     ${({ scale }: any) => (scale ? ScaleTreatments[scale] : null)};
 
