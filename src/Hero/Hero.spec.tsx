@@ -9,13 +9,12 @@ import { Button, Typography } from '..';
 import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
-// TEST SETUP
-const subject = <Hero />;
-const wrapper = mount(subject);
-const component = shallow(subject);
-
 describe('Component: Hero', () => {
     it('should be defined', () => {
+        const subject = <Hero />;
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();
