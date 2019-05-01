@@ -22,7 +22,8 @@ exports[`Component: Hero should render with custom content 1`] = `
     Some Typography text
   </span>
   <button
-    className="anchor-button sc-gqjmRU csOwvP"
+    className="anchor-button sc-gqjmRU jfRbTD"
+    size="large"
   >
     CTA
   </button>

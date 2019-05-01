@@ -10,19 +10,12 @@ import { shallow, mount } from 'enzyme';
 // STYLED COMPONENTS
 import 'jest-styled-components'
 
-// TEST SETUP
-const subject = <Button>Test</Button>;
-const wrapper = mount(subject);
-const component = shallow(subject);
-
 describe('Component: Button', () => {
     it('should be defined', () => {
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
+        const subject = <Button>Test</Button>;
+        const wrapper = mount(subject);
+        const component = shallow(subject);
 
-        /* tslint:enable */
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();

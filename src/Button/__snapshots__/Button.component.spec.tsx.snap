@@ -499,7 +499,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   -moz-osx-font-smoothing: grayscale;
   border: solid thin transparent;
   background-color: transparent;
-  color: #0998D6;
+  color: #0074A6;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -509,7 +509,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 .c0:hover,
 .c0:focus,
 .c0:active {
-  background: rgba(128,128,128,0.1);
+  background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 

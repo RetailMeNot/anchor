@@ -20,12 +20,22 @@ const StyledStoryPrime = styled(StyledStory)`
 width: 1200px;
 `;
 
+const StyledReverseStory = styled(StyledStory)`
+    width: 1200px;
+    background-color: ${colors.grapePurchase.base};
+    color: ${colors.white.base};
+`;
+
 const Label = styled(Typography)`
 text-transform: uppercase !important;
 color: ${colors.charcoal.light} !important;
 font-size: 12px;
 font-weight: bold;
 display: block;
+`;
+
+const ReverseLabel = styled(Label)`
+    color: ${colors.white.base} !important;
 `;
 
 const Heading = styled(Typography)`
@@ -117,7 +127,7 @@ storiesOf('Components/Button', module)
                     <Cell> <Label>button with icon</Label> </Cell>
                     <Cell> <Button size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
-                    <Cell> <Label>hit box</Label> </Cell>
+                    <Cell> <Label>hit area</Label> </Cell>
                     <Cell> <ShowHitbox><Button size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
                 </Grid>
 
@@ -162,19 +172,19 @@ storiesOf('Components/Button', module)
                 </Heading>
                 <Grid columns="200px minmax(200px, max-content) 200px max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                     <Cell> <Label>default</Label> </Cell>
-                    <Cell> <Button themeColor="dealEnvy">CTA</Button> </Cell>
+                    <Cell> <Button theme="dealEnvy">CTA</Button> </Cell>
 
                     <Cell> <Label>button with flip</Label> </Cell>
-                    <Cell> <Button themeColor="dealEnvy" flip>CTA</Button> </Cell>
+                    <Cell> <Button theme="dealEnvy" flip>CTA</Button> </Cell>
 
                     <Cell> <Label>hover</Label> </Cell>
-                    <Cell> <Button themeColor="dealEnvy" forceHover>CTA</Button> </Cell>
+                    <Cell> <Button theme="dealEnvy" forceHover>CTA</Button> </Cell>
 
                     <Cell> <Label>hover with flip</Label> </Cell>
-                    <Cell> <Button themeColor="dealEnvy" flip forceHover>CTA</Button> </Cell>
+                    <Cell> <Button theme="dealEnvy" flip forceHover>CTA</Button> </Cell>
 
                     <Cell> <Label>disabled</Label> </Cell>
-                    <Cell> <Button themeColor="dealEnvy" disabled>CTA</Button> </Cell>
+                    <Cell> <Button theme="dealEnvy" disabled>CTA</Button> </Cell>
                 </Grid>
 
                 <Heading>
@@ -252,7 +262,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Label>button with icon</Label> </Cell>
                 <Cell> <Button variant="outline" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
-                <Cell> <Label>hit box</Label> </Cell>
+                <Cell> <Label>hit area</Label> </Cell>
                 <Cell> <ShowHitbox><Button variant="outline" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
             </Grid>
 
@@ -281,27 +291,14 @@ storiesOf('Components/Button', module)
             </Heading>
             <Grid columns="200px minmax(200px, max-content) 200px max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                 <Cell> <Label>default</Label> </Cell>
-                <Cell> <Button variant="outline" themeColor="dealEnvy">CTA</Button> </Cell>
+                <Cell> <Button variant="outline" theme="dealEnvy">CTA</Button> </Cell>
 
                 <Cell> <Label>hover</Label> </Cell>
-                <Cell> <Button variant="outline" themeColor="dealEnvy" forceHover>CTA</Button> </Cell>
+                <Cell> <Button variant="outline" theme="dealEnvy" forceHover>CTA</Button> </Cell>
 
                 <Cell> <Label>disabled</Label> </Cell>
-                <Cell> <Button variant="outline" themeColor="dealEnvy" disabled>CTA</Button> </Cell>
+                <Cell> <Button variant="outline" theme="dealEnvy" disabled>CTA</Button> </Cell>
             </Grid>
-
-            <Heading>
-                On Background
-            </Heading>
-            <div style={{ border: `2px solid ${colors.silver.base}`, width: 'auto', padding: '1rem', background: colors.dealEnvy.light}}>
-                <Grid columns="200px minmax(200px, max-content) 200px max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                    <Cell> <Label>default</Label> </Cell>
-                    <Cell> <Button variant="outline" themeColor="white" inverseColor="dealEnvy">CTA</Button> </Cell>
-
-                    <Cell> <Label>hover</Label> </Cell>
-                    <Cell> <Button variant="outline" themeColor="white" inverseColor="savvyCyan">CTA</Button> </Cell>
-                </Grid>
-            </div>
 
             <Heading>
                 Block Buttons
@@ -376,7 +373,7 @@ storiesOf('Components/Button', module)
                 <Cell> <Label>button with icon</Label> </Cell>
                 <Cell> <Button variant="minimal" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
 
-                <Cell> <Label>hit box</Label> </Cell>
+                <Cell> <Label>hit area</Label> </Cell>
                 <Cell> <ShowHitbox><Button variant="minimal" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
             </Grid>
 
@@ -405,16 +402,16 @@ storiesOf('Components/Button', module)
             </Heading>
             <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                 <Cell> <Label>min width - 200 px</Label> </Cell>
-                <Cell> <Button variant="minimal" themeColor="dealEnvy">CTA</Button> </Cell>
+                <Cell> <Button variant="minimal" theme="dealEnvy">CTA</Button> </Cell>
 
                 <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button variant="minimal" themeColor="dealEnvy">I'm a very long CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" theme="dealEnvy">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>min width - 112px</Label> </Cell>
-                <Cell> <Button variant="minimal" themeColor="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
+                <Cell> <Button variant="minimal" theme="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" themeColor="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" theme="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -423,120 +420,6 @@ storiesOf('Components/Button', module)
             <div style={{ border: `2px solid ${colors.silver.base}`, width: '375px', padding: '1rem' }}>
                 <Button variant="minimal" size="large" block>CTA</Button>
                 <Button variant="minimal" size="large" block disabled>CTA</Button>
-            </div>
-        </StyledStoryPrime>
-    ))
-    .add('Reverse | Primary', () => (
-        <StyledStoryPrime>
-            <Typography tag="h2" weight={'bold'}>
-                Primary Buttons
-            </Typography>
-
-            <Heading>
-                x-Large Button
-            </Heading>
-            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>min width - 200 px</Label> </Cell>
-                <Cell> <Button reverse size="xlarge">CTA</Button> </Cell>
-
-                <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button reverse size="xlarge">I'm a very long CTA Text</Button> </Cell>
-
-                <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
-            </Grid>
-
-            <Heading>
-                Large Button
-            </Heading>
-            <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>min width - 200 px</Label> </Cell>
-                <Cell> <Button reverse size="large">CTA</Button> </Cell>
-
-                <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button reverse size="large">I'm a very long CTA Text</Button> </Cell>
-
-                <Cell> <Label>min width - 112px</Label> </Cell>
-                <Cell> <Button reverse size="large" minWidth="7rem">CTA</Button> </Cell>
-
-                <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="large" icon={Cut}> CTA Text</Button> </Cell>
-            </Grid>
-
-            <Heading>
-                Small Button
-            </Heading>
-            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>min width - 80 px</Label> </Cell>
-                <Cell> <Button reverse size="small">CTA</Button> </Cell>
-
-                <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button reverse size="small">I'm a very long CTA Text</Button> </Cell>
-
-                <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="small" icon={Cut}> CTA Text</Button> </Cell>
-            </Grid>
-
-            <Heading>
-                x-Small Button
-            </Heading>
-            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>min width - 64 px</Label> </Cell>
-                <Cell> <Button reverse size="xsmall">CTA</Button> </Cell>
-
-                <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button reverse size="xsmall">I'm a very long CTA Text</Button> </Cell>
-
-                <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
-
-                <Cell> <Label>hit box</Label> </Cell>
-                <Cell> <ShowHitbox><Button reverse size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
-            </Grid>
-
-            <Heading>
-                Button States
-            </Heading>
-            <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>default</Label> </Cell>
-                <Cell> <Button reverse>CTA</Button> </Cell>
-
-                <Cell> <Label>hover</Label> </Cell>
-                <Cell> <Button reverse forceHover>CTA</Button> </Cell>
-
-                <Cell> <Label>pressed</Label> </Cell>
-                <Cell> <Button reverse forceActive>CTA</Button> </Cell>
-
-                <Cell> <Label>focused</Label> </Cell>
-                <Cell> <Button reverse forceFocus>CTA</Button> </Cell>
-
-                <Cell> <Label>disabled</Label> </Cell>
-                <Cell> <Button reverse disabled>CTA</Button> </Cell>
-            </Grid>
-
-            <Heading>
-                Alternate Theme Color
-            </Heading>
-            <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
-                <Cell> <Label>min width - 200 px</Label> </Cell>
-                <Cell> <Button reverse themeColor="dealEnvy">CTA</Button> </Cell>
-
-                <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button reverse themeColor="dealEnvy">I'm a very long CTA Text</Button> </Cell>
-
-                <Cell> <Label>min width - 112px</Label> </Cell>
-                <Cell> <Button reverse themeColor="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
-
-                <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button reverse themeColor="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
-            </Grid>
-
-            <Heading>
-                Block Buttons
-            </Heading>
-            <div style={{ border: `2px solid ${colors.silver.base}`, width: '375px', padding: '1rem' }}>
-                <Button reverse size="large" block>CTA</Button>
-                <Button reverse size="large" block disabled>CTA</Button>
             </div>
         </StyledStoryPrime>
     ))
@@ -585,4 +468,341 @@ storiesOf('Components/Button', module)
                 <Cell> <Label>xsmall</Label> <Button size="xsmall" icon={SuccessOutline} circular variant="minimal"/> </Cell>
             </Grid>
         </StyledStoryPrime>
+    ))
+    .add('Reverse | Primary', () => (
+        <StyledReverseStory>
+            <Typography tag="h2" weight={'bold'}>
+                Primary Buttons
+            </Typography>
+
+            <Heading>
+                x-Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xlarge">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xlarge">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="large">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="large">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>min width - 112px</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="large" minWidth="7rem">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="large" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 80 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="small">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="small">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="small" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                x-Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 64 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xsmall">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xsmall">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>hit area</ReverseLabel> </Cell>
+                <Cell> <ShowHitbox><Button reverse size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
+            </Grid>
+
+            <Heading>
+                Button States
+            </Heading>
+            <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>default</ReverseLabel> </Cell>
+                <Cell> <Button reverse>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>hover</ReverseLabel> </Cell>
+                <Cell> <Button reverse forceHover>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>pressed</ReverseLabel> </Cell>
+                <Cell> <Button reverse forceActive>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>focused</ReverseLabel> </Cell>
+                <Cell> <Button reverse forceFocus>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>disabled</ReverseLabel> </Cell>
+                <Cell> <Button reverse disabled>CTA</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Block Buttons
+            </Heading>
+            <div style={{ border: `2px solid ${colors.silver.base}`, width: '375px', padding: '1rem' }}>
+                <Button reverse size="large" block>CTA</Button>
+                <Button reverse size="large" block disabled>CTA</Button>
+            </div>
+        </StyledReverseStory>
+    ))
+    .add('Reverse | Outline', () => (
+        <StyledReverseStory>
+            <Typography tag="h2" weight={'bold'}>
+                Primary Buttons
+            </Typography>
+
+            <Heading>
+                x-Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xlarge">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xlarge">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="large">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="large">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>min width - 112px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="large" minWidth="7rem">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="large" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 80 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="small">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="small">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="small" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                x-Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 64 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xsmall">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xsmall">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>hit area</ReverseLabel> </Cell>
+                <Cell> <ShowHitbox><Button reverse variant="outline" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
+            </Grid>
+
+            <Heading>
+                Button States
+            </Heading>
+            <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>default</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>hover</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" forceHover>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>pressed</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" forceActive>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>focused</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" forceFocus>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>disabled</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="outline" disabled>CTA</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Block Buttons
+            </Heading>
+            <div style={{ border: `2px solid ${colors.silver.base}`, width: '375px', padding: '1rem' }}>
+                <Button reverse variant="outline" size="large" block>CTA</Button>
+                <Button reverse variant="outline" size="large" block disabled>CTA</Button>
+            </div>
+        </StyledReverseStory>
+    ))
+    .add('Reverse | Minimal', () => (
+        <StyledReverseStory>
+            <Typography tag="h2" weight={'bold'}>
+                Primary Buttons
+            </Typography>
+
+            <Heading>
+                x-Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xlarge">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xlarge">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xlarge" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Large Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 200 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="large">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="large">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>min width - 112px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="large" minWidth="7rem">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="large" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 80 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="small">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="small">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="small" icon={Cut}> CTA Text</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                x-Small Button
+            </Heading>
+            <Grid columns="200px minmax(200px, max-content) 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>min width - 64 px</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xsmall">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>flex width</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xsmall">I'm a very long CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>button with icon</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" size="xsmall" icon={Cut}> CTA Text</Button> </Cell>
+
+                <Cell> <ReverseLabel>hit area</ReverseLabel> </Cell>
+                <Cell> <ShowHitbox><Button reverse variant="minimal" size="xsmall" onClick={action('onClick!')}>CTA</Button></ShowHitbox> </Cell>
+            </Grid>
+
+            <Heading>
+                Button States
+            </Heading>
+            <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Cell> <ReverseLabel>default</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal">CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>hover</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" forceHover>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>pressed</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" forceActive>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>focused</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" forceFocus>CTA</Button> </Cell>
+
+                <Cell> <ReverseLabel>disabled</ReverseLabel> </Cell>
+                <Cell> <Button reverse variant="minimal" disabled>CTA</Button> </Cell>
+            </Grid>
+
+            <Heading>
+                Block Buttons
+            </Heading>
+            <div style={{ border: `2px solid ${colors.silver.base}`, width: '375px', padding: '1rem' }}>
+                <Button reverse variant="minimal" size="large" block>CTA</Button>
+                <Button reverse variant="minimal" size="large" block disabled>CTA</Button>
+            </div>
+        </StyledReverseStory>
+    ))
+    .add('Reverse | Icons', () => (
+        <StyledReverseStory>
+            <Typography tag="h2" weight={'bold'}>
+                Reverse Buttons
+            </Typography>
+
+            <Grid columns="120px 120px 120px 120px 120px 120px 120px" flow="column" rows="auto auto auto auto auto" gap="2rem">
+                <Cell> <Heading>Primary</Heading> </Cell>
+
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} reverse/> </Cell>
+
+                <Cell> <Heading>Outline</Heading> </Cell>
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} variant="outline" reverse/> </Cell>
+
+                <Cell> <Heading>Minimal</Heading> </Cell>
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} variant="minimal" reverse/> </Cell>
+
+                <Cell> <Heading>Primary + Circular</Heading> </Cell>
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} circular reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} circular reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} circular reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} circular reverse/> </Cell>
+
+                <Cell> <Heading>Outline + Circular</Heading> </Cell>
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} circular variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} circular variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} circular variant="outline" reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} circular variant="outline" reverse/> </Cell>
+
+                <Cell> <Heading>Minimal + Circular</Heading> </Cell>
+                <Cell> <ReverseLabel>x-large</ReverseLabel> <Button size="xlarge" icon={SuccessOutline} circular variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>large</ReverseLabel> <Button size="large" icon={SuccessOutline} circular variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>small</ReverseLabel> <Button size="small" icon={SuccessOutline} circular variant="minimal" reverse/> </Cell>
+                <Cell> <ReverseLabel>xsmall</ReverseLabel> <Button size="xsmall" icon={SuccessOutline} circular variant="minimal" reverse/> </Cell>
+            </Grid>
+        </StyledReverseStory>
     ))

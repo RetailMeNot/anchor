@@ -19,6 +19,12 @@ type ButtonSize =
     | 'small'
     | 'xsmall'
 
+interface Theme {
+    base: string;
+    light: string;
+    dark: string;
+}
+
 interface ButtonProps {
     children?: any;
     disabled?: boolean;
@@ -27,8 +33,7 @@ interface ButtonProps {
     className?: string;
 
     flip?: boolean;
-    themeColor?: Colors;
-    inverseColor?: string;
+    theme?: Theme | Colors;
     minWidth?: string;
     block?: boolean;
     icon?: any;
@@ -48,9 +53,8 @@ interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
 
     // make nonnullable
-    themeColor: Colors;
+    theme: Theme;
     variant: Variant;
-    inverseColor: string;
     size: ButtonSize;
 }
 
@@ -59,60 +63,128 @@ interface ButtonStylesGroup {
         base: FlattenSimpleInterpolation;
         disabled: FlattenSimpleInterpolation;
         hover: FlattenSimpleInterpolation;
+        pressed?: FlattenSimpleInterpolation;
     }
 }
 
-const ButtonColorStyles = ({ themeColor, inverseColor }: { themeColor: Colors, inverseColor: string }): ButtonStylesGroup => ({
-    primary: {
-        base: css`
-            border: solid thin ${colors[themeColor].base};
-            background-color: ${colors[themeColor].base};
-            color: ${colors.white.base};
-        `,
-        disabled: css`
-            border: solid thin ${colors.ash.light};
-            background-color: ${colors.ash.light};
-            color: ${colors.ash.dark};
-        `,
-        hover: css`
-            background-color: ${colors[themeColor].dark};
-            border: solid thin ${colors[themeColor].dark};
-        `,
-    },
-    outline: {
-        base: css`
-            border: solid thin ${colors[themeColor].dark};
-            background-color: transparent;
-            color: ${colors[themeColor].dark};
-        `,
-        disabled: css`
-            border: solid thin ${colors.ash.dark};
-            background-color: transparent;
-            color: ${colors.ash.dark};
+const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean }): ButtonStylesGroup => {
+    const { base, dark } = theme;
+
+    if (reverse) {
+        return {
+            primary: {
+                base: css`
+                    border: solid thin ${colors.white.base};
+                    background-color: ${colors.white.base};
+                    color: ${base};
+                `,
+                disabled: css`
+                    border: solid thin ${colors.white.base};
+                    background-color: ${colors.white.base};
+                    color: ${base};
+                    opacity: 0.5;
+                `,
+                hover: css`
+                    border: solid thin ${transparentize(0.15, colors.white.base)};
+                    background-color: ${transparentize(0.15, colors.white.base)};
+                    color: ${base};
+                `,
+                // todo: use
+                pressed: css`
+                    border: solid thin ${colors.white.base};
+                    background-color: ${colors.white.base};
+                    color: ${base};
+                `,
+            },
+            outline: {
+                base: css`
+                    border: solid thin ${base};
+                    background-color: transparent;
+                    color: ${base};
+                `,
+                disabled: css`
+                    opacity: 0.5;
+                    border: solid thin ${base};
+                    background-color: transparent;
+                    color: ${base};
+                `,
+                hover: css`
+                    border: solid thin ${base};
+                    background-color: ${base};
+                    color: ${colors.charcoal.light};
+                `,
+            },
+            minimal: {
+                base: css`
+                    border: solid thin transparent;
+                    background-color: transparent;
+                    color: ${base};
+                `,
+                disabled: css`
+                    border: solid thin transparent;
+                    background-color: transparent;
+                    color: ${colors.ash.dark};
+                `,
+                hover: css`
+                    background: ${transparentize(0.84, base)};
+                    color: ${base};
+                `,
+            },
+        }
+    }
+
+    return {
+        primary: {
+            base: css`
+                border: solid thin ${base};
+                background-color: ${base};
+                color: ${colors.white.base};
+            `,
+            disabled: css`
+                border: solid thin ${colors.ash.light};
+                background-color: ${colors.ash.light};
+                color: ${colors.ash.dark};
             `,
             hover: css`
-            background-color: ${colors[themeColor].dark};
-            border: solid thin ${colors[themeColor].dark};
-            color: ${colors[inverseColor].base}
-        `,
-    },
-    minimal: {
-        base: css`
-            border: solid thin transparent;
-            background-color: transparent;
-            color: ${colors[themeColor].base};
-        `,
-        disabled: css`
-            border: solid thin ${colors.ash.light};
-            background-color: ${colors.ash.light};
-            color: ${colors.ash.dark};
-        `,
-        hover: css`
-            background: ${transparentize(0.9, colors.ash.dark)};
-            color: ${colors[themeColor].dark};
-        `,
-    },
-});
+                background-color: ${dark};
+                border: solid thin ${dark};
+            `,
+        },
+        outline: {
+            base: css`
+                border: solid thin ${base};
+                background-color: transparent;
+                color: ${base};
+            `,
+            disabled: css`
+                border: solid thin ${colors.ash.dark};
+                background-color: transparent;
+                color: ${colors.ash.dark};
+                `,
+            hover: css`
+                background-color: ${dark};
+                border: solid thin ${dark};
+                color: ${colors.white.base};
+            `,
+        },
+        minimal: {
+            base: css`
+                border: solid thin transparent;
+                background-color: transparent;
+                color: ${base};
+            `,
+            disabled: css`
+                border: solid thin ${colors.ash.light};
+                background-color: ${colors.ash.light};
+                color: ${colors.ash.dark};
+            `,
+            hover: css`
+                background: ${transparentize(0.84, colors.ash.dark)};
+                color: ${dark};
+            `,
+        },
+    }
+};
 
 // rem based
 const dimensions = {
@@ -193,10 +265,10 @@ const StyledButton = styled.button<StyledButtonProps>`
 	-moz-osx-font-smoothing: grayscale;
 
     /* Variants are color schemes */
-    ${({ variant, themeColor, inverseColor, disabled }: StyledButtonProps) => (
+    ${({ variant, theme, disabled, reverse }: StyledButtonProps) => (
         disabled
-            ? ButtonColorStyles({ themeColor, inverseColor })[variant].disabled
-            : ButtonColorStyles({ themeColor, inverseColor })[variant].base
+            ? ButtonColorStyles({ theme, reverse })[variant].disabled
+            : ButtonColorStyles({ theme, reverse })[variant].base
     )}
 
     /* Sizes */
@@ -210,20 +282,20 @@ const StyledButton = styled.button<StyledButtonProps>`
         `}
 
     &:hover, &:focus, &:active {
-        ${({ themeColor, variant, inverseColor, disabled, revealed }: StyledButtonProps) =>
-            !disabled && !revealed && ButtonColorStyles({ themeColor, inverseColor })[variant].hover
-        }
+        ${({ disabled, revealed, variant, theme, reverse }: StyledButtonProps) => (
+            !disabled && !revealed && ButtonColorStyles({ theme, reverse })[variant].hover
+        )}
         &:after {
             opacity: 0;
         }
     }
 
-    ${({ themeColor, variant, inverseColor, forceHover, forceFocus, forceActive }: StyledButtonProps) => (
-        (forceHover || forceFocus || forceActive) && ButtonColorStyles({ themeColor, inverseColor })[variant].hover
+    ${({ theme, variant, forceHover, forceFocus, forceActive, reverse }: StyledButtonProps) => (
+        (forceHover || forceFocus || forceActive) && ButtonColorStyles({ theme, reverse })[variant].hover
     )}
 
     /* Flip */
-    ${({ flip, themeColor, forceHover, forceFocus, forceActive, revealed }: StyledButtonProps) => flip && !revealed && css`
+    ${({ flip, theme, forceHover, forceFocus, forceActive, revealed }: StyledButtonProps) => flip && !revealed && css`
         &:after, &:before {
             border-top-right-radius: ${sizes.border.radius.base};
             border-bottom-left-radius: ${sizes.border.radius.base};
@@ -239,11 +311,11 @@ const StyledButton = styled.button<StyledButtonProps>`
         &:after {
             transition: ${transitionSpeed} ease opacity;
             z-index: 2;
-            background: linear-gradient(45deg, ${colors[themeColor].light},${colors[themeColor].light} 50%,${colors.silver.base} 0);
+            background: linear-gradient(45deg, ${theme.light},${theme.light} 50%,${colors.silver.base} 0);
         }
         &:before {
             z-index: 1;
-            background: linear-gradient(45deg, ${colors[themeColor].base},${colors[themeColor].base} 50%,${colors.silver.base} 0);
+            background: linear-gradient(45deg, ${theme.base},${theme.base} 50%,${colors.silver.base} 0);
         }
 
         &:hover, &:focus, &:active {
@@ -292,7 +364,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         ` : css`
             // Space icon from text
             & > .anchor-icon {
-                margin-right: ${size === 'xlarge' || size === 'large' ? 0.5 : 0.25}rem;
+                margin-right: ${size === 'xlarge' || size === 'large' ? 0.5 : 0.375}rem;
             }
         `}
     `}
@@ -305,24 +377,51 @@ interface StyledHitboxProps {
 const StyledHitbox = styled.div<StyledHitboxProps>`
     position: absolute;
 
-    // account for border
+    // overlap border
     top: -1px;
     left: -1px;
     right: -1px;
     bottom: -1px;
 
-    // expand using margin to get to 48px tall
+    // expand using margin to get to 3 rem tall
     margin: -${({ buttonHeight }) => (3 - buttonHeight) / 2}rem 0;
 `;
+
+const themeDefaults = {
+    primary: colors.savvyCyan,
+    outline: {
+        base: colors.savvyCyan.dark,
+        light: colors.savvyCyan.base,
+        dark: colors.savvyCyan.dark,
+    },
+    minimal: {
+        base: colors.savvyCyan.dark,
+        light: colors.savvyCyan.base,
+        dark: colors.savvyCyan.dark,
+    },
+};
+
+const reverseDefaults = {
+    primary: {
+        base: colors.charcoal.light,
+        light: colors.charcoal.light,
+        dark: colors.charcoal.dark,
+    },
+    outline: {
+        base: colors.white.base,
+        light: colors.white.base,
+        dark: colors.charcoal.light,
+    },
+    minimal: colors.white,
+};
 
 export const Button = ({
     className,
     flip = false,
     variant = 'primary',
-    themeColor = 'savvyCyan',
-    inverseColor = 'white',
     size = 'large',
-    block = false,
+    theme,
+    reverse,
     circular,
     children,
     icon: Icon,
@@ -336,25 +435,30 @@ export const Button = ({
 
     const height = dimensions[size].height;
 
+    if (typeof theme === 'string') {
+        theme = colors[theme];
+    }
+
+    if (!theme) {
+        theme = reverse ? reverseDefaults[variant] : themeDefaults[variant];
+    }
+
     return (
-        <React.Fragment>
-            <StyledButton
-                className={classNames('anchor-button', className)}
-                flip={flip}
-                size={size}
-                block={block}
-                themeColor={themeColor}
-                inverseColor={inverseColor}
-                icon={Icon}
-                iconOnly={iconOnly}
-                circular={circular}
-                variant={variant}
-                {...props}
-            >
-                {Icon && <Icon scale={iconScale}/>}
-                {children}
-                {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
-            </StyledButton>
-        </React.Fragment>
+        <StyledButton
+            className={classNames('anchor-button', className)}
+            flip={flip}
+            size={size}
+            theme={theme}
+            reverse={reverse}
+            icon={Icon}
+            iconOnly={iconOnly}
+            circular={circular}
+            variant={variant}
+            {...props}
+        >
+            {Icon && <Icon scale={iconScale}/>}
+            {children}
+            {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
+        </StyledButton>
     );
 };
