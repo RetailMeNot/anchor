@@ -456,7 +456,6 @@ const StyledButton = styled.button<StyledButtonProps>`
 
     /* Icon */
     ${({ icon, iconOnly, size }: StyledButtonProps) => icon && css`
-        // todo: hitbox for small/xsmall icon-only
         ${iconOnly ? css`
             // Make it a square
             width: ${dimensions[size].height}rem;
@@ -473,6 +472,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 
 interface StyledHitboxProps {
     buttonHeight: number;
+    buttonWidth?: number;
 }
 
 const StyledHitbox = styled.div<StyledHitboxProps>`
@@ -484,8 +484,9 @@ const StyledHitbox = styled.div<StyledHitboxProps>`
     right: -1px;
     bottom: -1px;
 
-    // expand using margin to get to 3 rem tall
-    margin: -${({ buttonHeight }) => (3 - buttonHeight) / 2}rem 0;
+    // expand using margin to get to 3 rem tall and wide
+    margin: ${({ buttonHeight, buttonWidth }: StyledHitboxProps) =>
+        `-${(3 - buttonHeight) / 2}rem ${buttonWidth && buttonWidth < 3 ? `-${(3 - buttonWidth) / 2}rem` : '0'}`}
 `;
 
 export const Button = ({
@@ -508,6 +509,7 @@ export const Button = ({
 
     const height = dimensions[size].height;
     const borderRadius = circular ? `${height / 2}rem` : sizes.border.radius.base;
+    const width = iconOnly ? dimensions[size].height : dimensions[size].width;
 
     // find theme from string, otherwise use defaults
     if (typeof colorTheme === 'string') {
@@ -519,6 +521,7 @@ export const Button = ({
 
     const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
 
+
     return (
         <StyledButton
             className={classNames('anchor-button', className)}
@@ -526,8 +529,8 @@ export const Button = ({
             size={size}
             colorTheme={colorTheme}
             reverse={reverse}
-            icon={Icon}
             height={height}
+            icon={Icon}
             iconOnly={iconOnly}
             circular={circular}
             variant={variant}
@@ -535,7 +538,8 @@ export const Button = ({
             buttonStyles={buttonStyles}
             {...props}
         >
-            {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
+            {(height < 3 || width < 3) &&
+                <StyledHitbox buttonHeight={height} buttonWidth={width}/>}
             {Icon && <Icon scale={iconScale}/>}
             {children}
             {flip && (
