@@ -96,7 +96,11 @@ storiesOf('Components/Hero', module)
                                 )}
                             </Subtitle>
                         </CustomAdaptor>
-                        <Button variant="outline" reverse onClick={() => alert('Paid!')}>
+                        <Button
+                            variant="outline"
+                            reverse
+                            onClick={() => alert('Paid!')}
+                        >
                             {text('Button Text', 'Pay Debts Today')}
                         </Button>
                     </Grid>

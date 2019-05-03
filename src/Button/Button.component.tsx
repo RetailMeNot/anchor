@@ -8,16 +8,9 @@ import { transparentize } from 'polished';
 import { colors, fonts, sizes } from '../theme';
 import { Colors } from '../Typography/Typography.component';
 
-type Variant =
-    | 'primary'
-    | 'outline'
-    | 'minimal'
+type Variant = 'primary' | 'outline' | 'minimal';
 
-type ButtonSize =
-    | 'xlarge'
-    | 'large'
-    | 'small'
-    | 'xsmall'
+type ButtonSize = 'xlarge' | 'large' | 'small' | 'xsmall';
 
 interface Theme {
     base: string;
@@ -121,10 +114,16 @@ interface ButtonStyles {
 }
 
 interface ButtonStylesGroup {
-    [key: string]: ButtonStyles
+    [key: string]: ButtonStyles;
 }
 
-const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse?: boolean }): ButtonStylesGroup => {
+const ButtonColorStyles = ({
+    colorTheme,
+    reverse,
+}: {
+    colorTheme: Theme;
+    reverse?: boolean;
+}): ButtonStylesGroup => {
     const { base, dark, light } = colorTheme;
 
     if (reverse) {
@@ -142,8 +141,12 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                     opacity: 0.5;
                 `,
                 hover: css`
-                    border: solid thin ${transparentize(0.15, colors.white.base)};
-                    background-color: ${transparentize(0.15, colors.white.base)};
+                    border: solid thin
+                        ${transparentize(0.15, colors.white.base)};
+                    background-color: ${transparentize(
+                        0.15,
+                        colors.white.base
+                    )};
                     color: ${base};
                 `,
                 active: css`
@@ -176,7 +179,8 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                     color: ${colors.charcoal.light};
                 `,
                 focusOutline: css`
-                    box-shadow: 0 0 0 2px ${transparentize(0.6, colors.white.base)};
+                    box-shadow: 0 0 0 2px
+                        ${transparentize(0.6, colors.white.base)};
                 `,
             },
             minimal: {
@@ -195,13 +199,14 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                     color: ${base};
                 `,
                 active: css`
-                    background: ${transparentize(0.80, base)};
+                    background: ${transparentize(0.8, base)};
                 `,
                 focusOutline: css`
-                    box-shadow: 0 0 0 2px ${transparentize(0.6, colors.white.base)};
+                    box-shadow: 0 0 0 2px
+                        ${transparentize(0.6, colors.white.base)};
                 `,
             },
-        }
+        };
     }
 
     return {
@@ -234,7 +239,7 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                 border: solid thin ${colors.ash.dark};
                 background-color: transparent;
                 color: ${colors.ash.dark};
-                `,
+            `,
             hover: css`
                 background-color: ${dark};
                 border: solid thin ${dark};
@@ -263,7 +268,7 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                 box-shadow: 0 0 0 2px ${transparentize(0.6, colors.ash.dark)};
             `,
         },
-    }
+    };
 };
 
 interface ButtonSizesGroup {
@@ -298,11 +303,16 @@ const ButtonSizeStyles: ButtonSizesGroup = {
     `,
 };
 
-const OutlineStyles = ({ colorTheme, variant, reverse, borderRadius }: StyledButtonProps) => (
+const OutlineStyles = ({
+    colorTheme,
+    variant,
+    reverse,
+    borderRadius,
+}: StyledButtonProps) =>
     css`
         &:after {
             position: absolute;
-            content: "";
+            content: '';
 
             // overlap border and extend 2px past
             top: calc(-${sizes.border.width.base} - 2px);
@@ -315,8 +325,7 @@ const OutlineStyles = ({ colorTheme, variant, reverse, borderRadius }: StyledBut
             // shadow instead of border so that it doesn't contribute to clickable area
             ${ButtonColorStyles({ colorTheme, reverse })[variant].focusOutline}
         }
-    `
-);
+    `;
 
 const StyledButton = styled.button<StyledButtonProps>`
 	position: relative;
@@ -342,18 +351,23 @@ const StyledButton = styled.button<StyledButtonProps>`
     -moz-osx-font-smoothing: grayscale;
 
     /* Block sizing */
-    ${({ block }: StyledButtonProps) => block && css`
-        display: block;
-        width: 100%;
-    `}
+    ${({ block }: StyledButtonProps) =>
+        block &&
+        css`
+            display: block;
+            width: 100%;
+        `}
 
     /* Specified min width */
-    ${({ minWidth }: StyledButtonProps) => minWidth && css`min-width: ${minWidth};`}
+    ${({ minWidth }: StyledButtonProps) =>
+        minWidth &&
+        css`
+            min-width: ${minWidth};
+        `}
 
     /* Variants are color schemes */
-    ${({ disabled, buttonStyles }: StyledButtonProps) => (
-        disabled ? buttonStyles.disabled : buttonStyles.base
-    )}
+    ${({ disabled, buttonStyles }: StyledButtonProps) =>
+        disabled ? buttonStyles.disabled : buttonStyles.base}
 
     /* Sizes */
     ${({ size }: StyledButtonProps) => ButtonSizeStyles[size]}
@@ -366,108 +380,151 @@ const StyledButton = styled.button<StyledButtonProps>`
         `}
 
     /* Hover styles */
-    ${({ forceHover, forceFocus, forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) => (
-        !disabled && !revealed && css`
-            &:hover, &:focus, &:active {
+    ${({
+        forceHover,
+        forceFocus,
+        forceActive,
+        disabled,
+        revealed,
+        buttonStyles,
+    }: StyledButtonProps) =>
+        !disabled &&
+        !revealed &&
+        css`
+            &:hover,
+            &:focus,
+            &:active {
                 ${buttonStyles.hover}
             }
 
             ${(forceHover || forceFocus || forceActive) && buttonStyles.hover}
-        `
-    )}
+        `}
 
     /* Active styles */
-    ${({ forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) => (
-        !disabled && !revealed && buttonStyles.active && css`
+    ${({ forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) =>
+        !disabled &&
+        !revealed &&
+        buttonStyles.active &&
+        css`
             &:active {
                 ${buttonStyles.active}
             }
             ${forceActive && buttonStyles.active}
-        `
-    )}
+        `}
 
     /* Focus styles */
-    ${({ forceFocus, disabled, revealed, buttonStyles }: StyledButtonProps) => (
-        !disabled && !revealed && buttonStyles.focus && css`
+    ${({ forceFocus, disabled, revealed, buttonStyles }: StyledButtonProps) =>
+        !disabled &&
+        !revealed &&
+        buttonStyles.focus &&
+        css`
             &:focus {
                 ${buttonStyles.focus}
             }
             ${forceFocus && buttonStyles.focus}
-        `
-    )}
+        `}
 
     /* Outline */
     &:focus {
         ${OutlineStyles}
     }
-    ${({ forceFocus, ...props }: StyledButtonProps) => (
-        forceFocus && OutlineStyles(props)
-    )}
+    ${({ forceFocus, ...props }: StyledButtonProps) =>
+        forceFocus && OutlineStyles(props)}
 
     /* Flip */
-    ${({ flip, colorTheme, forceHover, forceFocus, forceActive, revealed }: StyledButtonProps) => flip && !revealed && css`
-        & > .flip-base, & > .flip-hover {
-            border-top-right-radius: ${sizes.border.radius.base};
-            border-bottom-left-radius: ${sizes.border.radius.base};
+    ${({
+        flip,
+        colorTheme,
+        forceHover,
+        forceFocus,
+        forceActive,
+        revealed,
+    }: StyledButtonProps) =>
+        flip &&
+        !revealed &&
+        css`
+            & > .flip-base,
+            & > .flip-hover {
+                border-top-right-radius: ${sizes.border.radius.base};
+                border-bottom-left-radius: ${sizes.border.radius.base};
 
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            width: 20px;
-            height: 20px;
-            content: "";
-        }
-
-        & > .flip-base {
-            transition: ${transitionSpeed} ease opacity;
-            z-index: 2;
-            background: linear-gradient(45deg, ${colorTheme.light},${colorTheme.light} 50%,${colors.silver.base} 0);
-        }
-        & > .flip-hover {
-            z-index: 1;
-            background: linear-gradient(45deg, ${colorTheme.base},${colorTheme.base} 50%,${colors.silver.base} 0);
-        }
-
-        &:hover, &:focus, &:active {
-            & > .flip-base {
-                opacity: 0;
+                position: absolute;
+                top: -1px;
+                right: -1px;
+                width: 20px;
+                height: 20px;
+                content: '';
             }
-        }
 
-        ${(forceHover || forceFocus || forceActive) && css`
             & > .flip-base {
-                opacity: 0;
+                transition: ${transitionSpeed} ease opacity;
+                z-index: 2;
+                background: linear-gradient(
+                    45deg,
+                    ${colorTheme.light},
+                    ${colorTheme.light} 50%,
+                    ${colors.silver.base} 0
+                );
             }
-        `}
+            & > .flip-hover {
+                z-index: 1;
+                background: linear-gradient(
+                    45deg,
+                    ${colorTheme.base},
+                    ${colorTheme.base} 50%,
+                    ${colors.silver.base} 0
+                );
+            }
 
-        /* make sure button doesn't peek behind the flap */
+            &:hover,
+            &:focus,
+            &:active {
+                & > .flip-base {
+                    opacity: 0;
+                }
+            }
+
+            ${(forceHover || forceFocus || forceActive) &&
+                css`
+                    & > .flip-base {
+                        opacity: 0;
+                    }
+                `} /* make sure button doesn't peek behind the flap */
         /* but maybe nvm because it seems to be causing some artifacting issues in chrome */
         // border-top-right-radius: 5px;
-        `
-    }
+        `}
 
     /* Revealed State */
-    ${({ variant, revealed }: StyledButtonProps) => variant === 'primary' && revealed && css`
-        background-color: ${colors.silver.base};
-        border: solid thin ${colors.silver.base};
-        color: ${colors.charcoal.light};
-        font-weight: bold;
-    `}
+    ${({ variant, revealed }: StyledButtonProps) =>
+        variant === 'primary' &&
+        revealed &&
+        css`
+            background-color: ${colors.silver.base};
+            border: solid thin ${colors.silver.base};
+            color: ${colors.charcoal.light};
+            font-weight: bold;
+        `}
 
     /* Icon */
-    ${({ icon, iconOnly, size }: StyledButtonProps) => icon && css`
-        ${iconOnly ? css`
-            // Make it a square
-            width: ${dimensions[size].height}rem;
-            min-width: initial;
-            padding: 0;
-        ` : css`
-            // Space icon from text
-            & > .anchor-icon {
-                margin-right: ${size === 'xlarge' || size === 'large' ? 0.5 : 0.375}rem;
-            }
+    ${({ icon, iconOnly, size }: StyledButtonProps) =>
+        icon &&
+        css`
+            ${iconOnly
+                ? css`
+                      // Make it a square
+                      width: ${dimensions[size].height}rem;
+                      min-width: initial;
+                      padding: 0;
+                  `
+                : css`
+                      // Space icon from text
+                      & > .anchor-icon {
+                          margin-right: ${size === 'xlarge' || size === 'large'
+                              ? 0.5
+                              : 0.375}rem;
+                      }
+                  `}
         `}
-    `}
 `;
 
 interface StyledHitboxProps {
@@ -486,7 +543,11 @@ const StyledHitbox = styled.div<StyledHitboxProps>`
 
     // expand using margin to get to 3 rem tall and wide
     margin: ${({ buttonHeight, buttonWidth }: StyledHitboxProps) =>
-        `-${(3 - buttonHeight) / 2}rem ${buttonWidth && buttonWidth < 3 ? `-${(3 - buttonWidth) / 2}rem` : '0'}`}
+        `-${(3 - buttonHeight) / 2}rem ${
+            buttonWidth && buttonWidth < 3
+                ? `-${(3 - buttonWidth) / 2}rem`
+                : '0'
+        }`};
 `;
 
 export const Button = ({
@@ -503,12 +564,17 @@ export const Button = ({
 }: ButtonProps): React.ReactElement<any> => {
     const iconOnly = Icon && React.Children.count(children) === 0;
 
-    let iconScale = iconOnly ?
-        (size === 'xsmall' || (size === 'small' && (circular || variant === 'minimal')) ? 'md' : 'lg') :
-        'md';
+    let iconScale = iconOnly
+        ? size === 'xsmall' ||
+          (size === 'small' && (circular || variant === 'minimal'))
+            ? 'md'
+            : 'lg'
+        : 'md';
 
     const height = dimensions[size].height;
-    const borderRadius = circular ? `${height / 2}rem` : sizes.border.radius.base;
+    const borderRadius = circular
+        ? `${height / 2}rem`
+        : sizes.border.radius.base;
     const width = iconOnly ? dimensions[size].height : dimensions[size].width;
 
     // find theme from string, otherwise use defaults
@@ -516,11 +582,12 @@ export const Button = ({
         colorTheme = colors[colorTheme];
     }
     if (!colorTheme) {
-        colorTheme = reverse ? reverseDefaults[variant] : themeDefaults[variant];
+        colorTheme = reverse
+            ? reverseDefaults[variant]
+            : themeDefaults[variant];
     }
 
     const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
-
 
     return (
         <StyledButton
@@ -538,14 +605,15 @@ export const Button = ({
             buttonStyles={buttonStyles}
             {...props}
         >
-            {(height < 3 || width < 3) &&
-                <StyledHitbox buttonHeight={height} buttonWidth={width}/>}
-            {Icon && <Icon scale={iconScale}/>}
+            {(height < 3 || width < 3) && (
+                <StyledHitbox buttonHeight={height} buttonWidth={width} />
+            )}
+            {Icon && <Icon scale={iconScale} />}
             {children}
             {flip && (
                 <React.Fragment>
-                    <div className="flip-base"/>
-                    <div className="flip-hover"/>
+                    <div className="flip-base" />
+                    <div className="flip-hover" />
                 </React.Fragment>
             )}
         </StyledButton>
