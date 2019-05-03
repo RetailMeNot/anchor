@@ -32,6 +32,7 @@ color: ${colors.charcoal.light} !important;
 font-size: 12px;
 font-weight: bold;
 display: block;
+&& { margin-bottom: 1rem; }
 `;
 
 const ReverseLabel = styled(Label)`
@@ -134,35 +135,29 @@ storiesOf('Components/Button', module)
                 <Heading>
                     Button States
                 </Heading>
-                <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
+                <Grid columns="200px 200px 200px 200px" flow="column" rows="1rem auto 1rem auto" gap="1rem" columnGap="1.5rem">
                     <Cell> <Label>default</Label> </Cell>
                     <Cell> <Button>CTA</Button> </Cell>
-
-                    <Cell> <Label>hover</Label> </Cell>
-                    <Cell> <Button forceHover>CTA</Button> </Cell>
-
-                    <Cell> <Label>pressed</Label> </Cell>
-                    <Cell> <Button forceActive>CTA</Button> </Cell>
-
-                    <Cell> <Label>focused</Label> </Cell>
-                    <Cell> <Button forceFocus>CTA</Button> </Cell>
-
-                    <Cell> <Label>disabled</Label> </Cell>
-                    <Cell> <Button disabled>CTA</Button> </Cell>
-                </Grid>
-                <Grid columns="200px 200px 200px 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                     <Cell> <Label>default</Label> </Cell>
                     <Cell> <Button flip>CTA</Button> </Cell>
 
                     <Cell> <Label>hover</Label> </Cell>
+                    <Cell> <Button forceHover>CTA</Button> </Cell>
+                    <Cell> <Label>hover</Label> </Cell>
                     <Cell> <Button flip forceHover>CTA</Button> </Cell>
 
+                    <Cell> <Label>pressed</Label> </Cell>
+                    <Cell> <Button forceActive>CTA</Button> </Cell>
                     <Cell> <Label>pressed</Label> </Cell>
                     <Cell> <Button flip forceActive>CTA</Button> </Cell>
 
                     <Cell> <Label>focused</Label> </Cell>
+                    <Cell> <Button forceFocus>CTA</Button> </Cell>
+                    <Cell> <Label>focused</Label> </Cell>
                     <Cell> <Button flip forceFocus>CTA</Button> </Cell>
 
+                    <Cell> <Label>disabled</Label> </Cell>
+                    <Cell> <Button disabled>CTA</Button> </Cell>
                     <Cell> <Label>revealed</Label> </Cell>
                     <Cell> <Button flip revealed>Code Revealed</Button> </Cell>
                 </Grid>
