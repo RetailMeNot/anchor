@@ -115,7 +115,7 @@ interface ButtonStyles {
     base: FlattenSimpleInterpolation;
     disabled: FlattenSimpleInterpolation;
     hover: FlattenSimpleInterpolation;
-    pressed?: FlattenSimpleInterpolation;
+    active?: FlattenSimpleInterpolation;
     focus?: FlattenSimpleInterpolation;
     focusOutline?: FlattenSimpleInterpolation;
 }
@@ -146,11 +146,13 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                     background-color: ${transparentize(0.15, colors.white.base)};
                     color: ${base};
                 `,
-                // todo: use
-                pressed: css`
+                active: css`
                     border: solid thin ${colors.white.base};
                     background-color: ${colors.white.base};
-                    color: ${base};
+                `,
+                focus: css`
+                    border: solid thin ${colors.white.base};
+                    background-color: ${colors.white.base};
                 `,
                 focusOutline: css`
                     box-shadow: 0 0 0 3px ${colors.white.base};
@@ -191,6 +193,9 @@ const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse
                 hover: css`
                     background: ${transparentize(0.84, base)};
                     color: ${base};
+                `,
+                active: css`
+                    background: ${transparentize(0.80, base)};
                 `,
                 focusOutline: css`
                     box-shadow: 0 0 0 2px ${transparentize(0.6, colors.white.base)};
@@ -334,7 +339,16 @@ const StyledButton = styled.button<StyledButtonProps>`
 	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
 	// Firefox.
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Block sizing */
+    ${({ block }: StyledButtonProps) => block && css`
+        display: block;
+        width: 100%;
+    `}
+
+    /* Specified min width */
+    ${({ minWidth }: StyledButtonProps) => minWidth && css`min-width: ${minWidth};`}
 
     /* Variants are color schemes */
     ${({ disabled, buttonStyles }: StyledButtonProps) => (
@@ -351,14 +365,35 @@ const StyledButton = styled.button<StyledButtonProps>`
             cursor: not-allowed;
         `}
 
-    &:hover, &:focus, &:active {
-        ${({ disabled, revealed, buttonStyles }: StyledButtonProps) => (
-            !disabled && !revealed && buttonStyles.hover
-        )}
-    }
+    /* Hover styles */
+    ${({ forceHover, forceFocus, forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) => (
+        !disabled && !revealed && css`
+            &:hover, &:focus, &:active {
+                ${buttonStyles.hover}
+            }
 
-    ${({ forceHover, forceFocus, forceActive, buttonStyles }: StyledButtonProps) => (
-        (forceHover || forceFocus || forceActive) && buttonStyles.hover
+            ${(forceHover || forceFocus || forceActive) && buttonStyles.hover}
+        `
+    )}
+
+    /* Active styles */
+    ${({ forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) => (
+        !disabled && !revealed && buttonStyles.active && css`
+            &:active {
+                ${buttonStyles.active}
+            }
+            ${forceActive && buttonStyles.active}
+        `
+    )}
+
+    /* Focus styles */
+    ${({ forceFocus, disabled, revealed, buttonStyles }: StyledButtonProps) => (
+        !disabled && !revealed && buttonStyles.focus && css`
+            &:focus {
+                ${buttonStyles.focus}
+            }
+            ${forceFocus && buttonStyles.focus}
+        `
     )}
 
     /* Outline */
@@ -410,15 +445,6 @@ const StyledButton = styled.button<StyledButtonProps>`
         // border-top-right-radius: 5px;
         `
     }
-
-    /* Block sizing */
-    ${({ block }: StyledButtonProps) => block && css`
-        display: block;
-        width: 100%;
-    `}
-
-    /* Specified min width */
-    ${({ minWidth }: StyledButtonProps) => minWidth && css`min-width: ${minWidth};`}
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) => variant === 'primary' && revealed && css`
