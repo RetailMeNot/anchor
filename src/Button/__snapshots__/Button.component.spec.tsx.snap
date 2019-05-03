@@ -192,6 +192,1037 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
 </button>
 `;
 
+exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #808080;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Minimal should render an minimal button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:active {
+  background: rgba(255,255,255,0.2);
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+  className="anchor-button c0"
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Minimal should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:active {
+  background: rgba(255,255,255,0.2);
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.2);
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:active {
+  background: rgba(255,255,255,0.2);
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c0:active {
+  background: rgba(255,255,255,0.2);
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
+`;
+
+exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0.5;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Outline should render an outline button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+  className="anchor-button c0"
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Outline should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
+`;
+
+exports[`Component: Button Reverse Variant: Primary should have a disabled state 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  opacity: 0.5;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  cursor: not-allowed;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+<button
+  className="anchor-button c0"
+  disabled={true}
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Primary should render a primary button 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+<button
+  className="anchor-button c0"
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Reverse Variant: Primary should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c0:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
+`;
+
 exports[`Component: Button Sizes should render a large button 1`] = `
 .c0 {
   position: relative;
@@ -583,6 +1614,205 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 </button>
 `;
 
+exports[`Component: Button Variant: Minimal should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
+`;
+
 exports[`Component: Button Variant: Outline should be disableable 1`] = `
 .c0 {
   position: relative;
@@ -701,6 +1931,211 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 >
   Text
 </button>
+`;
+
+exports[`Component: Button Variant: Outline should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0074A6;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0074A6;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0074A6;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
 `;
 
 exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
@@ -885,6 +2320,205 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
 >
   Text
 </button>
+`;
+
+exports[`Component: Button Variant: Primary should render hovered, active and focused states 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+  .c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+.c0:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+    className="anchor-button c0"
+    height={3}
+    size="large"
+  >
+    Text
+  </button>,
+]
 `;
 
 exports[`Component: Button Variant: Primary should render properly when flipped 1`] = `
