@@ -54,6 +54,8 @@ interface StyledButtonProps extends ButtonProps {
     height: number;
     borderRadius: string;
 
+    buttonStyles: ButtonStyles;
+
     // make nonnullable
     colorTheme: Theme;
     variant: Variant;
@@ -335,10 +337,8 @@ const StyledButton = styled.button<StyledButtonProps>`
 	-moz-osx-font-smoothing: grayscale;
 
     /* Variants are color schemes */
-    ${({ variant, colorTheme, disabled, reverse }: StyledButtonProps) => (
-        disabled
-            ? ButtonColorStyles({ colorTheme, reverse })[variant].disabled
-            : ButtonColorStyles({ colorTheme, reverse })[variant].base
+    ${({ disabled, buttonStyles }: StyledButtonProps) => (
+        disabled ? buttonStyles.disabled : buttonStyles.base
     )}
 
     /* Sizes */
@@ -352,13 +352,13 @@ const StyledButton = styled.button<StyledButtonProps>`
         `}
 
     &:hover, &:focus, &:active {
-        ${({ disabled, revealed, variant, colorTheme, reverse }: StyledButtonProps) => (
-            !disabled && !revealed && ButtonColorStyles({ colorTheme, reverse })[variant].hover
+        ${({ disabled, revealed, buttonStyles }: StyledButtonProps) => (
+            !disabled && !revealed && buttonStyles.hover
         )}
     }
 
-    ${({ colorTheme, variant, forceHover, forceFocus, forceActive, reverse }: StyledButtonProps) => (
-        (forceHover || forceFocus || forceActive) && ButtonColorStyles({ colorTheme, reverse })[variant].hover
+    ${({ forceHover, forceFocus, forceActive, buttonStyles }: StyledButtonProps) => (
+        (forceHover || forceFocus || forceActive) && buttonStyles.hover
     )}
 
     /* Outline */
@@ -491,6 +491,8 @@ export const Button = ({
         colorTheme = reverse ? reverseDefaults[variant] : themeDefaults[variant];
     }
 
+    const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
+
     return (
         <StyledButton
             className={classNames('anchor-button', className)}
@@ -504,6 +506,7 @@ export const Button = ({
             circular={circular}
             variant={variant}
             borderRadius={borderRadius}
+            buttonStyles={buttonStyles}
             {...props}
         >
             {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
