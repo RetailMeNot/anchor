@@ -172,19 +172,19 @@ storiesOf('Components/Button', module)
                 </Heading>
                 <Grid columns="200px minmax(200px, max-content) 200px max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                     <Cell> <Label>default</Label> </Cell>
-                    <Cell> <Button theme="dealEnvy">CTA</Button> </Cell>
+                    <Cell> <Button colorTheme="dealEnvy">CTA</Button> </Cell>
 
                     <Cell> <Label>button with flip</Label> </Cell>
-                    <Cell> <Button theme="dealEnvy" flip>CTA</Button> </Cell>
+                    <Cell> <Button colorTheme="dealEnvy" flip>CTA</Button> </Cell>
 
                     <Cell> <Label>hover</Label> </Cell>
-                    <Cell> <Button theme="dealEnvy" forceHover>CTA</Button> </Cell>
+                    <Cell> <Button colorTheme="dealEnvy" forceHover>CTA</Button> </Cell>
 
                     <Cell> <Label>hover with flip</Label> </Cell>
-                    <Cell> <Button theme="dealEnvy" flip forceHover>CTA</Button> </Cell>
+                    <Cell> <Button colorTheme="dealEnvy" flip forceHover>CTA</Button> </Cell>
 
                     <Cell> <Label>disabled</Label> </Cell>
-                    <Cell> <Button theme="dealEnvy" disabled>CTA</Button> </Cell>
+                    <Cell> <Button colorTheme="dealEnvy" disabled>CTA</Button> </Cell>
                 </Grid>
 
                 <Heading>
@@ -291,13 +291,13 @@ storiesOf('Components/Button', module)
             </Heading>
             <Grid columns="200px minmax(200px, max-content) 200px max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                 <Cell> <Label>default</Label> </Cell>
-                <Cell> <Button variant="outline" theme="dealEnvy">CTA</Button> </Cell>
+                <Cell> <Button variant="outline" colorTheme="dealEnvy">CTA</Button> </Cell>
 
                 <Cell> <Label>hover</Label> </Cell>
-                <Cell> <Button variant="outline" theme="dealEnvy" forceHover>CTA</Button> </Cell>
+                <Cell> <Button variant="outline" colorTheme="dealEnvy" forceHover>CTA</Button> </Cell>
 
                 <Cell> <Label>disabled</Label> </Cell>
-                <Cell> <Button variant="outline" theme="dealEnvy" disabled>CTA</Button> </Cell>
+                <Cell> <Button variant="outline" colorTheme="dealEnvy" disabled>CTA</Button> </Cell>
             </Grid>
 
             <Heading>
@@ -402,16 +402,16 @@ storiesOf('Components/Button', module)
             </Heading>
             <Grid columns="200px minmax(200px, max-content) max-content 200px" flow="column" rows="2rem auto" gap="0" columnGap="1.5rem">
                 <Cell> <Label>min width - 200 px</Label> </Cell>
-                <Cell> <Button variant="minimal" theme="dealEnvy">CTA</Button> </Cell>
+                <Cell> <Button variant="minimal" colorTheme="dealEnvy">CTA</Button> </Cell>
 
                 <Cell> <Label>flex width</Label> </Cell>
-                <Cell> <Button variant="minimal" theme="dealEnvy">I'm a very long CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" colorTheme="dealEnvy">I'm a very long CTA Text</Button> </Cell>
 
                 <Cell> <Label>min width - 112px</Label> </Cell>
-                <Cell> <Button variant="minimal" theme="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
+                <Cell> <Button variant="minimal" colorTheme="dealEnvy" minWidth="7rem">CTA</Button> </Cell>
 
                 <Cell> <Label>button with icon</Label> </Cell>
-                <Cell> <Button variant="minimal" theme="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
+                <Cell> <Button variant="minimal" colorTheme="dealEnvy" icon={Cut}> CTA Text</Button> </Cell>
             </Grid>
 
             <Heading>

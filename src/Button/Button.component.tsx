@@ -33,7 +33,7 @@ interface ButtonProps {
     className?: string;
 
     flip?: boolean;
-    theme?: Theme | Colors;
+    colorTheme?: Theme | Colors;
     minWidth?: string;
     block?: boolean;
     icon?: any;
@@ -51,24 +51,79 @@ interface ButtonProps {
 
 interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
+    height: number;
+    borderRadius: string;
 
     // make nonnullable
-    theme: Theme;
+    colorTheme: Theme;
     variant: Variant;
     size: ButtonSize;
 }
 
-interface ButtonStylesGroup {
-    [key: string]: {
-        base: FlattenSimpleInterpolation;
-        disabled: FlattenSimpleInterpolation;
-        hover: FlattenSimpleInterpolation;
-        pressed?: FlattenSimpleInterpolation;
-    }
+const themeDefaults = {
+    primary: colors.savvyCyan,
+    outline: {
+        base: colors.savvyCyan.dark,
+        light: colors.savvyCyan.base,
+        dark: colors.savvyCyan.dark,
+    },
+    minimal: {
+        base: colors.savvyCyan.dark,
+        light: colors.savvyCyan.base,
+        dark: colors.savvyCyan.dark,
+    },
+};
+
+const reverseDefaults = {
+    primary: {
+        base: colors.charcoal.light,
+        light: colors.charcoal.light,
+        dark: colors.charcoal.dark,
+    },
+    outline: {
+        base: colors.white.base,
+        light: colors.white.base,
+        dark: colors.charcoal.light,
+    },
+    minimal: colors.white,
+};
+
+const dimensions = {
+    xsmall: {
+        width: 4,
+        height: 2,
+    },
+    small: {
+        width: 5,
+        height: 2.5,
+    },
+    large: {
+        width: 12.5,
+        height: 3,
+    },
+    xlarge: {
+        width: 12.5,
+        height: 3.5,
+    },
+};
+
+const transitionSpeed = `500ms`;
+
+interface ButtonStyles {
+    base: FlattenSimpleInterpolation;
+    disabled: FlattenSimpleInterpolation;
+    hover: FlattenSimpleInterpolation;
+    pressed?: FlattenSimpleInterpolation;
+    focus?: FlattenSimpleInterpolation;
+    focusOutline?: FlattenSimpleInterpolation;
 }
 
-const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean }): ButtonStylesGroup => {
-    const { base, dark } = theme;
+interface ButtonStylesGroup {
+    [key: string]: ButtonStyles
+}
+
+const ButtonColorStyles = ({ colorTheme, reverse }: { colorTheme: Theme, reverse?: boolean }): ButtonStylesGroup => {
+    const { base, dark, light } = colorTheme;
 
     if (reverse) {
         return {
@@ -95,6 +150,9 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                     background-color: ${colors.white.base};
                     color: ${base};
                 `,
+                focusOutline: css`
+                    box-shadow: 0 0 0 3px ${colors.white.base};
+                `,
             },
             outline: {
                 base: css`
@@ -113,6 +171,9 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                     background-color: ${base};
                     color: ${colors.charcoal.light};
                 `,
+                focusOutline: css`
+                    box-shadow: 0 0 0 2px ${transparentize(0.6, colors.white.base)};
+                `,
             },
             minimal: {
                 base: css`
@@ -128,6 +189,9 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                 hover: css`
                     background: ${transparentize(0.84, base)};
                     color: ${base};
+                `,
+                focusOutline: css`
+                    box-shadow: 0 0 0 2px ${transparentize(0.6, colors.white.base)};
                 `,
             },
         }
@@ -149,6 +213,9 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                 background-color: ${dark};
                 border: solid thin ${dark};
             `,
+            focusOutline: css`
+                box-shadow: 0 0 0 2px ${transparentize(0.6, base)};
+            `,
         },
         outline: {
             base: css`
@@ -166,6 +233,9 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                 border: solid thin ${dark};
                 color: ${colors.white.base};
             `,
+            focusOutline: css`
+                box-shadow: 0 0 0 2px ${transparentize(0.6, light)};
+            `,
         },
         minimal: {
             base: css`
@@ -182,31 +252,12 @@ const ButtonColorStyles = ({ theme, reverse }: { theme: Theme, reverse?: boolean
                 background: ${transparentize(0.84, colors.ash.dark)};
                 color: ${dark};
             `,
+            focusOutline: css`
+                box-shadow: 0 0 0 2px ${transparentize(0.6, colors.ash.dark)};
+            `,
         },
     }
 };
-
-// rem based
-const dimensions = {
-    xsmall: {
-        width: 4,
-        height: 2,
-    },
-    small: {
-        width: 5,
-        height: 2.5,
-    },
-    large: {
-        width: 12.5,
-        height: 3,
-    },
-    xlarge: {
-        width: 12.5,
-        height: 3.5,
-    },
-};
-
-const transitionSpeed = `500ms`;
 
 interface ButtonSizesGroup {
     [key: string]: FlattenSimpleInterpolation;
@@ -240,10 +291,29 @@ const ButtonSizeStyles: ButtonSizesGroup = {
     `,
 };
 
+const OutlineStyles = ({ colorTheme, variant, reverse, borderRadius }: StyledButtonProps) => (
+    css`
+        &:after {
+            position: absolute;
+            content: "";
+
+            // overlap border and extend 2px past
+            top: calc(-${sizes.border.width.base} - 2px);
+            left: calc(-${sizes.border.width.base} - 2px);
+            right: calc(-${sizes.border.width.base} - 2px);
+            bottom: calc(-${sizes.border.width.base} - 2px);
+
+            border-radius: calc(${borderRadius} + 2px);
+
+            // shadow instead of border so that it doesn't contribute to clickable area
+            ${ButtonColorStyles({ colorTheme, reverse })[variant].focusOutline}
+        }
+    `
+);
+
 const StyledButton = styled.button<StyledButtonProps>`
 	position: relative;
-    border-radius: ${({ circular, size }: StyledButtonProps) =>
-        circular ? `${dimensions[size].height / 2}rem` : sizes.border.radius.base};
+    border-radius: ${(props: StyledButtonProps) => props.borderRadius};
 	font-weight: 600;
 	font-family: ${fonts.fontFamily};
 	text-align: center;
@@ -252,7 +322,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     display: flex;
     justify-content: center;
     align-items: center;
-    // outline: none !important;
+    outline: none !important;
 
 	transition: ${transitionSpeed} ease background-color,
                 ${transitionSpeed} ease border-color,
@@ -265,10 +335,10 @@ const StyledButton = styled.button<StyledButtonProps>`
 	-moz-osx-font-smoothing: grayscale;
 
     /* Variants are color schemes */
-    ${({ variant, theme, disabled, reverse }: StyledButtonProps) => (
+    ${({ variant, colorTheme, disabled, reverse }: StyledButtonProps) => (
         disabled
-            ? ButtonColorStyles({ theme, reverse })[variant].disabled
-            : ButtonColorStyles({ theme, reverse })[variant].base
+            ? ButtonColorStyles({ colorTheme, reverse })[variant].disabled
+            : ButtonColorStyles({ colorTheme, reverse })[variant].base
     )}
 
     /* Sizes */
@@ -282,21 +352,26 @@ const StyledButton = styled.button<StyledButtonProps>`
         `}
 
     &:hover, &:focus, &:active {
-        ${({ disabled, revealed, variant, theme, reverse }: StyledButtonProps) => (
-            !disabled && !revealed && ButtonColorStyles({ theme, reverse })[variant].hover
+        ${({ disabled, revealed, variant, colorTheme, reverse }: StyledButtonProps) => (
+            !disabled && !revealed && ButtonColorStyles({ colorTheme, reverse })[variant].hover
         )}
-        &:after {
-            opacity: 0;
-        }
     }
 
-    ${({ theme, variant, forceHover, forceFocus, forceActive, reverse }: StyledButtonProps) => (
-        (forceHover || forceFocus || forceActive) && ButtonColorStyles({ theme, reverse })[variant].hover
+    ${({ colorTheme, variant, forceHover, forceFocus, forceActive, reverse }: StyledButtonProps) => (
+        (forceHover || forceFocus || forceActive) && ButtonColorStyles({ colorTheme, reverse })[variant].hover
+    )}
+
+    /* Outline */
+    &:focus {
+        ${OutlineStyles}
+    }
+    ${({ forceFocus, ...props }: StyledButtonProps) => (
+        forceFocus && OutlineStyles(props)
     )}
 
     /* Flip */
-    ${({ flip, theme, forceHover, forceFocus, forceActive, revealed }: StyledButtonProps) => flip && !revealed && css`
-        &:after, &:before {
+    ${({ flip, colorTheme, forceHover, forceFocus, forceActive, revealed }: StyledButtonProps) => flip && !revealed && css`
+        & > .flip-base, & > .flip-hover {
             border-top-right-radius: ${sizes.border.radius.base};
             border-bottom-left-radius: ${sizes.border.radius.base};
 
@@ -308,24 +383,24 @@ const StyledButton = styled.button<StyledButtonProps>`
             content: "";
         }
 
-        &:after {
+        & > .flip-base {
             transition: ${transitionSpeed} ease opacity;
             z-index: 2;
-            background: linear-gradient(45deg, ${theme.light},${theme.light} 50%,${colors.silver.base} 0);
+            background: linear-gradient(45deg, ${colorTheme.light},${colorTheme.light} 50%,${colors.silver.base} 0);
         }
-        &:before {
+        & > .flip-hover {
             z-index: 1;
-            background: linear-gradient(45deg, ${theme.base},${theme.base} 50%,${colors.silver.base} 0);
+            background: linear-gradient(45deg, ${colorTheme.base},${colorTheme.base} 50%,${colors.silver.base} 0);
         }
 
         &:hover, &:focus, &:active {
-            &:after {
+            & > .flip-base {
                 opacity: 0;
             }
         }
 
         ${(forceHover || forceFocus || forceActive) && css`
-            &:after {
+            & > .flip-base {
                 opacity: 0;
             }
         `}
@@ -343,7 +418,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     `}
 
     /* Specified min width */
-    ${({ minWidth }: StyledButtonProps) => minWidth && css`min-width: ${minWidth}`}
+    ${({ minWidth }: StyledButtonProps) => minWidth && css`min-width: ${minWidth};`}
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) => variant === 'primary' && revealed && css`
@@ -387,40 +462,12 @@ const StyledHitbox = styled.div<StyledHitboxProps>`
     margin: -${({ buttonHeight }) => (3 - buttonHeight) / 2}rem 0;
 `;
 
-const themeDefaults = {
-    primary: colors.savvyCyan,
-    outline: {
-        base: colors.savvyCyan.dark,
-        light: colors.savvyCyan.base,
-        dark: colors.savvyCyan.dark,
-    },
-    minimal: {
-        base: colors.savvyCyan.dark,
-        light: colors.savvyCyan.base,
-        dark: colors.savvyCyan.dark,
-    },
-};
-
-const reverseDefaults = {
-    primary: {
-        base: colors.charcoal.light,
-        light: colors.charcoal.light,
-        dark: colors.charcoal.dark,
-    },
-    outline: {
-        base: colors.white.base,
-        light: colors.white.base,
-        dark: colors.charcoal.light,
-    },
-    minimal: colors.white,
-};
-
 export const Button = ({
     className,
     flip = false,
     variant = 'primary',
     size = 'large',
-    theme,
+    colorTheme,
     reverse,
     circular,
     children,
@@ -434,13 +481,14 @@ export const Button = ({
         'md';
 
     const height = dimensions[size].height;
+    const borderRadius = circular ? `${height / 2}rem` : sizes.border.radius.base;
 
-    if (typeof theme === 'string') {
-        theme = colors[theme];
+    // find theme from string, otherwise use defaults
+    if (typeof colorTheme === 'string') {
+        colorTheme = colors[colorTheme];
     }
-
-    if (!theme) {
-        theme = reverse ? reverseDefaults[variant] : themeDefaults[variant];
+    if (!colorTheme) {
+        colorTheme = reverse ? reverseDefaults[variant] : themeDefaults[variant];
     }
 
     return (
@@ -448,17 +496,25 @@ export const Button = ({
             className={classNames('anchor-button', className)}
             flip={flip}
             size={size}
-            theme={theme}
+            colorTheme={colorTheme}
             reverse={reverse}
             icon={Icon}
+            height={height}
             iconOnly={iconOnly}
             circular={circular}
             variant={variant}
+            borderRadius={borderRadius}
             {...props}
         >
+            {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
             {Icon && <Icon scale={iconScale}/>}
             {children}
-            {height < (48 / 16) && <StyledHitbox buttonHeight={height} />}
+            {flip && (
+                <React.Fragment>
+                    <div className="flip-base"/>
+                    <div className="flip-hover"/>
+                </React.Fragment>
+            )}
         </StyledButton>
     );
 };

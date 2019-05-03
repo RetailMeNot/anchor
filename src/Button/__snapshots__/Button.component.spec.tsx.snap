@@ -21,6 +21,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -44,10 +45,15 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(1.5rem + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 .c1 {
@@ -59,6 +65,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   <span
@@ -110,6 +117,7 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -133,10 +141,15 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 .c1 {
@@ -148,6 +161,7 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   <span
@@ -199,6 +213,7 @@ exports[`Component: Button Sizes should render a large button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -219,14 +234,20 @@ exports[`Component: Button Sizes should render a large button 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
@@ -254,6 +275,7 @@ exports[`Component: Button Sizes should render a small button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -274,10 +296,15 @@ exports[`Component: Button Sizes should render a small button 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 .c1 {
@@ -291,12 +318,13 @@ exports[`Component: Button Sizes should render a small button 1`] = `
 
 <button
   className="anchor-button c0"
+  height={2.5}
   size="small"
 >
-  Text
   <div
     className="c1"
   />
+  Text
 </button>
 `;
 
@@ -321,6 +349,7 @@ exports[`Component: Button Sizes should render an xlarge button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -341,14 +370,20 @@ exports[`Component: Button Sizes should render an xlarge button 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3.5}
   size="xlarge"
 >
   Text
@@ -376,6 +411,7 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -396,10 +432,15 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 .c1 {
@@ -413,12 +454,13 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
 
 <button
   className="anchor-button c0"
+  height={2}
   size="xsmall"
 >
-  Text
   <div
     className="c1"
   />
+  Text
 </button>
 `;
 
@@ -443,6 +485,7 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -457,15 +500,21 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
 <button
   className="anchor-button c0"
   disabled={true}
+  height={3}
   size="large"
 >
   Text
@@ -493,6 +542,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -513,14 +563,20 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   color: #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
@@ -548,6 +604,7 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -562,15 +619,21 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
   disabled={true}
+  height={3}
   size="large"
 >
   Text
@@ -598,6 +661,7 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -619,14 +683,20 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   color: #FFFFFF;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
@@ -654,6 +724,7 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -668,15 +739,21 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
   disabled={true}
+  height={3}
   size="large"
 >
   Text
@@ -704,6 +781,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -721,17 +799,29 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   font-weight: bold;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
+  <div
+    className="flip-base"
+  />
+  <div
+    className="flip-hover"
+  />
 </button>
 `;
 
@@ -756,6 +846,7 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -776,14 +867,20 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
@@ -811,6 +908,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -831,14 +929,19 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c0:after,
-.c0:before {
+.c0 > .flip-base,
+.c0 > .flip-hover {
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   position: absolute;
@@ -849,29 +952,36 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   content: "";
 }
 
-.c0:after {
+.c0 > .flip-base {
   -webkit-transition: 500ms ease opacity;
   transition: 500ms ease opacity;
   z-index: 2;
   background: linear-gradient(45deg,#66CCFF,#66CCFF 50%,#F1F1F1 0);
 }
 
-.c0:before {
+.c0 > .flip-hover {
   z-index: 1;
   background: linear-gradient(45deg,#0998D6,#0998D6 50%,#F1F1F1 0);
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
+.c0:hover > .flip-base,
+.c0:focus > .flip-base,
+.c0:active > .flip-base {
   opacity: 0;
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Text
+  <div
+    className="flip-base"
+  />
+  <div
+    className="flip-hover"
+  />
 </button>
 `;
 
@@ -896,6 +1006,7 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -916,10 +1027,15 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 .c0 > .anchor-icon {
@@ -935,6 +1051,7 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   <span
@@ -987,6 +1104,7 @@ exports[`Component: Button should be defined 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  outline: none !important;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -1007,14 +1125,20 @@ exports[`Component: Button should be defined 1`] = `
   border: solid thin #0074A6;
 }
 
-.c0:hover:after,
-.c0:focus:after,
-.c0:active:after {
-  opacity: 0;
+.c0:focus:after {
+  position: absolute;
+  content: "";
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
   className="anchor-button c0"
+  height={3}
   size="large"
 >
   Submit
