@@ -500,11 +500,11 @@ const StyledHitbox = styled.div<StyledHitboxProps>`
         }`};
 `;
 
-interface StyledFlapProps {
+interface StyledFlipProps {
     flipColor: string;
 }
 
-const StyledFlip = styled.div<StyledFlapProps>`
+const StyledFlip = styled.div<StyledFlipProps>`
     border-top-right-radius: ${sizes.border.radius.base};
     border-bottom-left-radius: ${sizes.border.radius.base};
 
