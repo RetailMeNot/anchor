@@ -386,6 +386,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         forceActive,
         disabled,
         revealed,
+        flip,
         buttonStyles,
     }: StyledButtonProps) =>
         !disabled &&
@@ -395,9 +396,21 @@ const StyledButton = styled.button<StyledButtonProps>`
             &:focus,
             &:active {
                 ${buttonStyles.hover}
+                ${flip && css`
+                    & > .flip-base {
+                        opacity: 0;
+                    }
+                `}
             }
 
-            ${(forceHover || forceFocus || forceActive) && buttonStyles.hover}
+            ${(forceHover || forceFocus || forceActive) && css`
+                ${buttonStyles.hover}
+                ${flip && css`
+                    & > .flip-base {
+                        opacity: 0;
+                    }
+                `}
+            `}
         `}
 
     /* Active styles */
@@ -430,69 +443,6 @@ const StyledButton = styled.button<StyledButtonProps>`
     }
     ${({ forceFocus, ...props }: StyledButtonProps) =>
         forceFocus && OutlineStyles(props)}
-
-    /* Flip */
-    ${({
-        flip,
-        colorTheme,
-        forceHover,
-        forceFocus,
-        forceActive,
-        revealed,
-    }: StyledButtonProps) =>
-        flip &&
-        !revealed &&
-        css`
-            & > .flip-base,
-            & > .flip-hover {
-                border-top-right-radius: ${sizes.border.radius.base};
-                border-bottom-left-radius: ${sizes.border.radius.base};
-
-                position: absolute;
-                top: -1px;
-                right: -1px;
-                width: 20px;
-                height: 20px;
-                content: '';
-            }
-
-            & > .flip-base {
-                transition: ${transitionSpeed} ease opacity;
-                z-index: 2;
-                background: linear-gradient(
-                    45deg,
-                    ${colorTheme.light},
-                    ${colorTheme.light} 50%,
-                    ${colors.silver.base} 0
-                );
-            }
-            & > .flip-hover {
-                z-index: 1;
-                background: linear-gradient(
-                    45deg,
-                    ${colorTheme.base},
-                    ${colorTheme.base} 50%,
-                    ${colors.silver.base} 0
-                );
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                & > .flip-base {
-                    opacity: 0;
-                }
-            }
-
-            ${(forceHover || forceFocus || forceActive) &&
-                css`
-                    & > .flip-base {
-                        opacity: 0;
-                    }
-                `} /* make sure button doesn't peek behind the flap */
-        /* but maybe nvm because it seems to be causing some artifacting issues in chrome */
-        // border-top-right-radius: 5px;
-        `}
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) =>
@@ -550,11 +500,44 @@ const StyledHitbox = styled.div<StyledHitboxProps>`
         }`};
 `;
 
+interface StyledFlapProps {
+    flipColor: string;
+}
+
+const StyledFlip = styled.div<StyledFlapProps>`
+    border-top-right-radius: ${sizes.border.radius.base};
+    border-bottom-left-radius: ${sizes.border.radius.base};
+
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 1.25rem;
+    height: 1.25rem;
+    content: '';
+
+    transition: ${transitionSpeed} ease opacity;
+    background: linear-gradient(
+        45deg,
+        ${({flipColor}) => flipColor},
+        ${({flipColor}) => flipColor} 50%,
+        ${colors.silver.base} 0
+    );
+`;
+
+const Flip = ({ colorTheme }: { colorTheme: Theme }) => (
+    <React.Fragment>
+        <StyledFlip flipColor={colorTheme.base} />
+        <StyledFlip className="flip-base" flipColor={colorTheme.light} />
+    </React.Fragment>
+);
+
 export const Button = ({
     className,
     flip = false,
     variant = 'primary',
     size = 'large',
+    disabled,
+    revealed,
     colorTheme,
     reverse,
     circular,
@@ -601,6 +584,8 @@ export const Button = ({
             iconOnly={iconOnly}
             circular={circular}
             variant={variant}
+            disabled={disabled}
+            revealed={revealed}
             borderRadius={borderRadius}
             buttonStyles={buttonStyles}
             {...props}
@@ -610,12 +595,7 @@ export const Button = ({
             )}
             {Icon && <Icon scale={iconScale} />}
             {children}
-            {flip && (
-                <React.Fragment>
-                    <div className="flip-base" />
-                    <div className="flip-hover" />
-                </React.Fragment>
-            )}
+            {flip && !disabled && !revealed && <Flip colorTheme={colorTheme} />}
         </StyledButton>
     );
 };
