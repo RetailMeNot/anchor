@@ -350,6 +350,13 @@ const StyledButton = styled.button<StyledButtonProps>`
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    /* Variants are color schemes */
+    ${({ disabled, buttonStyles }: StyledButtonProps) =>
+        disabled ? buttonStyles.disabled : buttonStyles.base}
+
+    /* Sizes */
+    ${({ size }: StyledButtonProps) => ButtonSizeStyles[size]}
+
     /* Block sizing */
     ${({ block }: StyledButtonProps) =>
         block &&
@@ -364,13 +371,6 @@ const StyledButton = styled.button<StyledButtonProps>`
         css`
             min-width: ${minWidth};
         `}
-
-    /* Variants are color schemes */
-    ${({ disabled, buttonStyles }: StyledButtonProps) =>
-        disabled ? buttonStyles.disabled : buttonStyles.base}
-
-    /* Sizes */
-    ${({ size }: StyledButtonProps) => ButtonSizeStyles[size]}
 
     /* Disabled State */
     ${({ disabled }: StyledButtonProps) =>
