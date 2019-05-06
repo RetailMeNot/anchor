@@ -564,7 +564,7 @@ export const Button = ({
 }: ButtonProps): React.ReactElement<any> => {
     const iconOnly = Icon && React.Children.count(children) === 0;
 
-    let iconScale = iconOnly
+    const iconScale = iconOnly
         ? size === 'xsmall' ||
           (size === 'small' && (circular || variant === 'minimal'))
             ? 'md'

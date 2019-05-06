@@ -47,7 +47,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -143,7 +143,7 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -230,7 +230,7 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -297,7 +297,7 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -366,7 +366,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -432,7 +432,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -497,7 +497,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -508,7 +508,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -566,7 +566,7 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -630,7 +630,7 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -697,7 +697,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -760,7 +760,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -823,7 +823,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -834,7 +834,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -892,7 +892,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -966,7 +966,7 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1043,7 +1043,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1118,7 +1118,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1193,7 +1193,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1204,7 +1204,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1267,7 +1267,7 @@ exports[`Component: Button Sizes should render a large button 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1329,7 +1329,7 @@ exports[`Component: Button Sizes should render a small button 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1403,7 +1403,7 @@ exports[`Component: Button Sizes should render an xlarge button 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1465,7 +1465,7 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1533,7 +1533,7 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1596,7 +1596,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1661,7 +1661,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1722,7 +1722,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1783,7 +1783,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1794,7 +1794,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1851,7 +1851,7 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1915,7 +1915,7 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -1982,7 +1982,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2045,7 +2045,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2108,7 +2108,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2119,7 +2119,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2176,7 +2176,7 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2236,7 +2236,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2304,7 +2304,7 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2369,7 +2369,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2430,7 +2430,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2491,7 +2491,7 @@ Array [
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2502,7 +2502,7 @@ Array [
 
 .c0:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2565,7 +2565,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2583,19 +2583,19 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   right: -1px;
   width: 20px;
   height: 20px;
-  content: "";
+  content: '';
 }
 
 .c0 > .flip-base {
   -webkit-transition: 500ms ease opacity;
   transition: 500ms ease opacity;
   z-index: 2;
-  background: linear-gradient(45deg,#66CCFF,#66CCFF 50%,#F1F1F1 0);
+  background: linear-gradient( 45deg, #66CCFF, #66CCFF 50%, #F1F1F1 0 );
 }
 
 .c0 > .flip-hover {
   z-index: 1;
-  background: linear-gradient(45deg,#0998D6,#0998D6 50%,#F1F1F1 0);
+  background: linear-gradient( 45deg, #0998D6, #0998D6 50%, #F1F1F1 0 );
 }
 
 .c0:hover > .flip-base,
@@ -2663,7 +2663,7 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
@@ -2761,7 +2761,7 @@ exports[`Component: Button should be defined 1`] = `
 
 .c0:focus:after {
   position: absolute;
-  content: "";
+  content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
