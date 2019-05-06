@@ -11,7 +11,7 @@ import { addReadme } from 'storybook-readme';
 addDecorator(withInfo({
   source:false,
 }));
-// addDecorator(addReadme);
+addDecorator(addReadme);
 addDecorator(withA11y);
 addDecorator(withKnobs);
 // addDecorator(withViewport);
