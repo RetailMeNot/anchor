@@ -128,7 +128,8 @@
     "polished": "^3.2.0",
     "react-responsive": "^6.1.1",
     "rxjs": "^6.5.1",
-    "styled-css-grid": "^1.2.1"
+    "styled-css-grid": "^1.2.1",
+    "styled-react-modal": "^1.2.1"
   },
   "engines": {
     "node": ">=8"
