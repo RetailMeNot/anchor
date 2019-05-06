@@ -979,27 +979,31 @@ storiesOf('Components/Button', module)
                 </Cell>
 
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button size="xlarge" icon={SuccessOutline} />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button size="large" icon={SuccessOutline} />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button size="small" icon={SuccessOutline} />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button size="small" icon={SuccessOutline} />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button size="xsmall" icon={SuccessOutline} />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button size="xsmall" icon={SuccessOutline} />
+                    </ShowHitbox>
                 </Cell>
 
                 <Cell>
                     <Heading>Outline</Heading>
                 </Cell>
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button
                         size="xlarge"
                         icon={SuccessOutline}
@@ -1007,7 +1011,7 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button
                         size="large"
                         icon={SuccessOutline}
@@ -1015,27 +1019,31 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button
-                        size="small"
-                        icon={SuccessOutline}
-                        variant="outline"
-                    />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="small"
+                            icon={SuccessOutline}
+                            variant="outline"
+                        />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button
-                        size="xsmall"
-                        icon={SuccessOutline}
-                        variant="outline"
-                    />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="xsmall"
+                            icon={SuccessOutline}
+                            variant="outline"
+                        />
+                    </ShowHitbox>
                 </Cell>
 
                 <Cell>
                     <Heading>Minimal</Heading>
                 </Cell>
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button
                         size="xlarge"
                         icon={SuccessOutline}
@@ -1043,7 +1051,7 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button
                         size="large"
                         icon={SuccessOutline}
@@ -1051,47 +1059,55 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button
-                        size="small"
-                        icon={SuccessOutline}
-                        variant="minimal"
-                    />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="small"
+                            icon={SuccessOutline}
+                            variant="minimal"
+                        />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button
-                        size="xsmall"
-                        icon={SuccessOutline}
-                        variant="minimal"
-                    />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="xsmall"
+                            icon={SuccessOutline}
+                            variant="minimal"
+                        />
+                    </ShowHitbox>
                 </Cell>
 
                 <Cell>
                     <Heading>Primary + Circular</Heading>
                 </Cell>
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button size="xlarge" icon={SuccessOutline} circular />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button size="large" icon={SuccessOutline} circular />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button size="small" icon={SuccessOutline} circular />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button size="small" icon={SuccessOutline} circular />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button size="xsmall" icon={SuccessOutline} circular />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button size="xsmall" icon={SuccessOutline} circular />
+                    </ShowHitbox>
                 </Cell>
 
                 <Cell>
                     <Heading>Outline + Circular</Heading>
                 </Cell>
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button
                         size="xlarge"
                         icon={SuccessOutline}
@@ -1100,7 +1116,7 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button
                         size="large"
                         icon={SuccessOutline}
@@ -1109,29 +1125,33 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button
-                        size="small"
-                        icon={SuccessOutline}
-                        circular
-                        variant="outline"
-                    />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="small"
+                            icon={SuccessOutline}
+                            circular
+                            variant="outline"
+                        />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button
-                        size="xsmall"
-                        icon={SuccessOutline}
-                        circular
-                        variant="outline"
-                    />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="xsmall"
+                            icon={SuccessOutline}
+                            circular
+                            variant="outline"
+                        />
+                    </ShowHitbox>
                 </Cell>
 
                 <Cell>
                     <Heading>Minimal + Circular</Heading>
                 </Cell>
                 <Cell>
-                    <Label>x-large</Label>{' '}
+                    <Label>x-large</Label>
                     <Button
                         size="xlarge"
                         icon={SuccessOutline}
@@ -1140,7 +1160,7 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>large</Label>{' '}
+                    <Label>large</Label>
                     <Button
                         size="large"
                         icon={SuccessOutline}
@@ -1149,22 +1169,26 @@ storiesOf('Components/Button', module)
                     />
                 </Cell>
                 <Cell>
-                    <Label>small</Label>{' '}
-                    <Button
-                        size="small"
-                        icon={SuccessOutline}
-                        circular
-                        variant="minimal"
-                    />
+                    <Label>small</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="small"
+                            icon={SuccessOutline}
+                            circular
+                            variant="minimal"
+                        />
+                    </ShowHitbox>
                 </Cell>
                 <Cell>
-                    <Label>xsmall</Label>{' '}
-                    <Button
-                        size="xsmall"
-                        icon={SuccessOutline}
-                        circular
-                        variant="minimal"
-                    />
+                    <Label>xsmall</Label>
+                    <ShowHitbox>
+                        <Button
+                            size="xsmall"
+                            icon={SuccessOutline}
+                            circular
+                            variant="minimal"
+                        />
+                    </ShowHitbox>
                 </Cell>
             </Grid>
         </StyledStoryPrime>
