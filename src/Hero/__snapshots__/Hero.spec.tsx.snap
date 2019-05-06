@@ -2,27 +2,27 @@
 
 exports[`Component: Hero should be defined 1`] = `
 <section
-  className="anchor-hero sc-gipzik fqnMqj"
+  className="anchor-hero sc-csuQGl cSfJBF"
 />
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
 <section
-  className="anchor-hero sc-gipzik fqnMqj"
+  className="anchor-hero sc-csuQGl cSfJBF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-caSCKo jgTECj"
+    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-gisBJw bPSpRH"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-gisBJw bGdbKe"
+    className="anchor-typography sc-kjoXOD iIctxt"
   >
     Some Typography text
   </span>
   <button
-    className="anchor-button sc-gqjmRU esNtSN"
+    className="anchor-button sc-gqjmRU juZvfP"
     height={3}
     size="large"
   >
@@ -33,10 +33,10 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 exports[`Component: Hero should render with title 1`] = `
 <section
-  className="anchor-hero sc-gipzik fqnMqj"
+  className="anchor-hero sc-csuQGl cSfJBF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-dVhcbM jMfNJo"
+    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-eqIVtm eeazzE"
     scale={32}
   >
     Hero Title
@@ -46,16 +46,16 @@ exports[`Component: Hero should render with title 1`] = `
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
 <section
-  className="anchor-hero sc-gipzik fqnMqj"
+  className="anchor-hero sc-csuQGl cSfJBF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-eqIVtm eeazzE"
+    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-fAjcbJ dbHCSs"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-Rmtcm KPeEa sc-fAjcbJ dBoqIT"
+    className="anchor-typography anchor-hero-subtitle sc-bRBYWo kgkhic sc-caSCKo dScIep"
     scale={18}
   >
     Hero Subtitle

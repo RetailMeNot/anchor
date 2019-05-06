@@ -396,21 +396,24 @@ const StyledButton = styled.button<StyledButtonProps>`
             &:focus,
             &:active {
                 ${buttonStyles.hover}
-                ${flip && css`
-                    & > .flip-base {
-                        opacity: 0;
-                    }
-                `}
+                ${flip &&
+                    css`
+                        & > .flip-base {
+                            opacity: 0;
+                        }
+                    `}
             }
 
-            ${(forceHover || forceFocus || forceActive) && css`
-                ${buttonStyles.hover}
-                ${flip && css`
-                    & > .flip-base {
-                        opacity: 0;
-                    }
+            ${(forceHover || forceFocus || forceActive) &&
+                css`
+                    ${buttonStyles.hover}
+                    ${flip &&
+                        css`
+                            & > .flip-base {
+                                opacity: 0;
+                            }
+                        `}
                 `}
-            `}
         `}
 
     /* Active styles */
@@ -518,8 +521,8 @@ const StyledFlip = styled.div<StyledFlipProps>`
     transition: ${transitionSpeed} ease opacity;
     background: linear-gradient(
         45deg,
-        ${({flipColor}) => flipColor},
-        ${({flipColor}) => flipColor} 50%,
+        ${({ flipColor }) => flipColor},
+        ${({ flipColor }) => flipColor} 50%,
         ${colors.silver.base} 0
     );
 `;

@@ -2251,12 +2251,6 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   size="large"
 >
   Text
-  <div
-    className="flip-base"
-  />
-  <div
-    className="flip-hover"
-  />
 </button>
 `;
 
@@ -2563,6 +2557,12 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   border: solid thin #0074A6;
 }
 
+.c0:hover > .flip-base,
+.c0:focus > .flip-base,
+.c0:active > .flip-base {
+  opacity: 0;
+}
+
 .c0:focus:after {
   position: absolute;
   content: '';
@@ -2574,34 +2574,32 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c0 > .flip-base,
-.c0 > .flip-hover {
+.c1 {
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   position: absolute;
   top: -1px;
   right: -1px;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   content: '';
-}
-
-.c0 > .flip-base {
   -webkit-transition: 500ms ease opacity;
   transition: 500ms ease opacity;
-  z-index: 2;
-  background: linear-gradient( 45deg, #66CCFF, #66CCFF 50%, #F1F1F1 0 );
-}
-
-.c0 > .flip-hover {
-  z-index: 1;
   background: linear-gradient( 45deg, #0998D6, #0998D6 50%, #F1F1F1 0 );
 }
 
-.c0:hover > .flip-base,
-.c0:focus > .flip-base,
-.c0:active > .flip-base {
-  opacity: 0;
+.c2 {
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 1.25rem;
+  height: 1.25rem;
+  content: '';
+  -webkit-transition: 500ms ease opacity;
+  transition: 500ms ease opacity;
+  background: linear-gradient( 45deg, #66CCFF, #66CCFF 50%, #F1F1F1 0 );
 }
 
 <button
@@ -2611,10 +2609,10 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 >
   Text
   <div
-    className="flip-base"
+    className="c1"
   />
   <div
-    className="flip-hover"
+    className="flip-base c2"
   />
 </button>
 `;
