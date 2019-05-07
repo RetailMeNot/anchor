@@ -158,7 +158,8 @@ const ButtonColorStyles = ({
                     background-color: ${colors.white.base};
                 `,
                 focusOutline: css`
-                    box-shadow: 0 0 0 3px ${colors.white.base};
+                    box-shadow: 0 0 0 2px
+                        ${transparentize(0.6, colors.white.base)};
                 `,
             },
             outline: {

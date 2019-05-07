@@ -898,7 +898,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
@@ -972,7 +972,7 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
@@ -1049,7 +1049,7 @@ Array [
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
@@ -1124,7 +1124,7 @@ Array [
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
@@ -1199,7 +1199,7 @@ Array [
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 .c0:after {
@@ -1210,7 +1210,7 @@ Array [
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
