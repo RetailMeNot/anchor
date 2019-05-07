@@ -90,6 +90,16 @@ describe('Component: Button', () => {
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
+
+        it('should accept a color theme name', () => {
+            const subject = (
+                <Button variant="primary" colorTheme="dealEnvy">
+                    Text
+                </Button>
+            );
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
     });
 
     describe('Variant: Outline', () => {

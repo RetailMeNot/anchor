@@ -2132,6 +2132,68 @@ Array [
 ]
 `;
 
+exports[`Component: Button Variant: Primary should accept a color theme name 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #14A382;
+  background-color: #14A382;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #268068;
+  border: solid thin #268068;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(20,163,130,0.4);
+}
+
+<button
+  className="anchor-button c0"
+  height={3}
+  size="large"
+>
+  Text
+</button>
+`;
+
 exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 .c0 {
   position: relative;
