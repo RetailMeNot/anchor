@@ -87,18 +87,30 @@ const dimensions = {
     xsmall: {
         width: 4,
         height: 2,
+        padding: 0.5,
+        circularPadding: 1,
+        fontSize: 0.75,
     },
     small: {
         width: 5,
         height: 2.5,
+        padding: 1,
+        circularPadding: 1.5,
+        fontSize: 0.875,
     },
     large: {
         width: 12.5,
         height: 3,
+        padding: 1.5,
+        circularPadding: 2,
+        fontSize: 1,
     },
     xlarge: {
         width: 12.5,
         height: 3.5,
+        padding: 2,
+        circularPadding: 2.5,
+        fontSize: 1,
     },
 };
 
@@ -272,44 +284,7 @@ const ButtonColorStyles = ({
     };
 };
 
-interface ButtonSizesGroup {
-    [key: string]: FlattenSimpleInterpolation;
-}
-
-const ButtonSizeStyles: ButtonSizesGroup = {
-    xsmall: css`
-        padding: 0 ${sizes.padding.sm};
-        font-size: 0.75rem;
-        height: ${dimensions.xsmall.height}rem;
-        min-width: ${dimensions.xsmall.width}rem;
-    `,
-    small: css`
-        padding: 0 ${sizes.padding.md};
-        font-size: 0.875rem;
-        height: ${dimensions.small.height}rem;
-        min-width: ${dimensions.small.width}rem;
-    `,
-    large: css`
-        // todo: size doesn't appear to exist for this
-        padding: 0 1.5rem;
-        font-size: 1rem;
-        height: ${dimensions.large.height}rem;
-        min-width: ${dimensions.large.width}rem;
-    `,
-    xlarge: css`
-        padding: 0 ${sizes.padding.lg};
-        font-size: 1rem;
-        height: ${dimensions.xlarge.height}rem;
-        min-width: ${dimensions.xlarge.width}rem;
-    `,
-};
-
-const OutlineStyles = ({
-    colorTheme,
-    variant,
-    reverse,
-    borderRadius,
-}: StyledButtonProps) =>
+const OutlineStyles = ({ buttonStyles, borderRadius }: StyledButtonProps) =>
     css`
         &:after {
             position: absolute;
@@ -324,7 +299,7 @@ const OutlineStyles = ({
             border-radius: calc(${borderRadius} + 2px);
 
             // shadow instead of border so that it doesn't contribute to clickable area
-            ${ButtonColorStyles({ colorTheme, reverse })[variant].focusOutline}
+            ${buttonStyles.focusOutline}
         }
     `;
 
@@ -355,8 +330,38 @@ const StyledButton = styled.button<StyledButtonProps>`
     ${({ disabled, buttonStyles }: StyledButtonProps) =>
         disabled ? buttonStyles.disabled : buttonStyles.base}
 
-    /* Sizes */
-    ${({ size }: StyledButtonProps) => ButtonSizeStyles[size]}
+    /* Sizing */
+    padding: ${({ size, circular, iconOnly }: StyledButtonProps) =>
+        iconOnly
+            ? '0'
+            : `0 ${
+                  circular
+                      ? dimensions[size].circularPadding
+                      : dimensions[size].padding
+              }rem`};
+    font-size: ${({ size }) => dimensions[size].fontSize}rem;
+    height: ${({ height }) => height}rem;
+    ${({ size, minWidth, iconOnly, height }: StyledButtonProps) =>
+        iconOnly
+            ? css`
+                  // Make it a square
+                  width: ${height}rem;
+              `
+            : css`
+                  min-width: ${minWidth || `${dimensions[size].width}rem`};
+              `}
+
+    ${({ icon, iconOnly, size }: StyledButtonProps) =>
+        icon &&
+        !iconOnly &&
+        css`
+            // Space icon from text
+            & > .anchor-icon {
+                margin-right: ${size === 'xlarge' || size === 'large'
+                    ? 0.5
+                    : 0.375}rem;
+            }
+        `}
 
     /* Block sizing */
     ${({ block }: StyledButtonProps) =>
@@ -364,13 +369,6 @@ const StyledButton = styled.button<StyledButtonProps>`
         css`
             display: block;
             width: 100%;
-        `}
-
-    /* Specified min width */
-    ${({ minWidth }: StyledButtonProps) =>
-        minWidth &&
-        css`
-            min-width: ${minWidth};
         `}
 
     /* Disabled State */
@@ -457,27 +455,6 @@ const StyledButton = styled.button<StyledButtonProps>`
             border: solid thin ${colors.silver.base};
             color: ${colors.charcoal.light};
             font-weight: bold;
-        `}
-
-    /* Icon */
-    ${({ icon, iconOnly, size }: StyledButtonProps) =>
-        icon &&
-        css`
-            ${iconOnly
-                ? css`
-                      // Make it a square
-                      width: ${dimensions[size].height}rem;
-                      min-width: initial;
-                      padding: 0;
-                  `
-                : css`
-                      // Space icon from text
-                      & > .anchor-icon {
-                          margin-right: ${size === 'xlarge' || size === 'large'
-                              ? 0.5
-                              : 0.375}rem;
-                      }
-                  `}
         `}
 `;
 
