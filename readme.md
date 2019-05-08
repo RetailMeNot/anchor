@@ -1,5 +1,8 @@
-![Anchor Logo](https://raw.githubusercontent.com/RetailMeNot/anchor/master/assets/anchor_logo_300px.png)
-
+<p align="center">
+    <a href="https://anchor.retailmenot.design/">
+        <img alt="Anchor Logo" src="https://raw.githubusercontent.com/RetailMeNot/anchor/master/assets/anchor_logo_300px.png" height="140">
+    </a>
+</p>
 <h2 align="center">A React Design System from RetailMeNot</h2>
 
 <a href="https://travis-ci.org/RetailMeNot/anchor">
