@@ -525,7 +525,7 @@ export const Button = ({
     children,
     icon: Icon,
     ...props
-}: ButtonProps): React.ReactElement<any> => {
+}: ButtonProps): React.ReactElement<ButtonProps> => {
     const iconOnly = Icon && React.Children.count(children) === 0;
 
     const iconScale = iconOnly
