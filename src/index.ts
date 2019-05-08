@@ -35,4 +35,5 @@ export {
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Input } from './Form';
+export { Modal } from './Modal';
 export * from './Icon';
