@@ -22,7 +22,7 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
 
 exports[`Component: Icon should render out a ArrowBack 1`] = `
 <span
-  className="anchor-icon arrow-forward sc-bdVaJa gENAGr"
+  className="anchor-icon arrow-back sc-bdVaJa gENAGr"
   scale="md"
 >
   <svg
