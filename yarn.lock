@@ -2014,7 +2014,7 @@
     "@types/react" "*"
     "@types/webpack-env" "*"
 
-"@types/styled-components@^4.1.12":
+"@types/styled-components@*", "@types/styled-components@^4.1.12":
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.15.tgz#532b6738ec633b2911e0470522c23e3c658952f2"
   integrity sha512-DMr4Kq3i5Em2K1ThlqZlC8nrsiO3VaiQS2M+7cOPnseHLtfDUrDjHx6Jv11V6uVIoK8ERYhmfn42RvSIg47rnA==
@@ -2022,6 +2022,14 @@
     "@types/react" "*"
     "@types/react-native" "*"
     csstype "^2.2.0"
+
+"@types/styled-react-modal@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/styled-react-modal/-/styled-react-modal-1.2.0.tgz#82be290f1ee9a2cfcf0b7d4eb830ce7cb3a8c027"
+  integrity sha512-g+mtpYcekjAgnyKRN+xQ4bo5GQmiNdoXZ+XGb374uIgxSXx3+Wnb643o49MprYYcTTupzHf8scK3SDTzcf42Gw==
+  dependencies:
+    "@types/react" "*"
+    "@types/styled-components" "*"
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.3"
