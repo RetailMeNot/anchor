@@ -4,11 +4,18 @@ import * as renderer from 'react-test-renderer';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 // COMPONENT
-import { Modal } from './Modal.component';
+import { Modal, ModalProvider } from './Modal.component';
 
 describe('Component: Modal', () => {
     it('should be defined', () => {
-        const subject = <Modal />;
+        const subject = (
+            <ModalProvider>
+                <div>
+                    <button />
+                    <Modal isOpen={true}>Contents</Modal>
+                </div>
+            </ModalProvider>
+        );
         const wrapper = mount(subject);
         const component = shallow(subject);
 

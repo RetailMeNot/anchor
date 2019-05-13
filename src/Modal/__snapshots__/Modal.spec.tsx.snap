@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Modal should be defined 1`] = `
-<div
-  className="anchor-modal"
-/>
-`;
+exports[`Component: Modal should be defined 1`] = `<div />`;
