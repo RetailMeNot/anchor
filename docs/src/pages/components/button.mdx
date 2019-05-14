@@ -8,36 +8,36 @@ rule, each page should have one primary button. Any remaining calls-to-action ar
 
 #### Primary Button
 ```tsx
-<Component initialState={{ size: 'large' }}>
+<Component initialState={{ size: 'medium' }}>
   {({ state, setState }) => 
     <div>
-      <Button
-        className="derp"
-        size={state.size}
-        onClick={() => {setState({ size: 'small' }); }}
-      >
-        Derp Herp
-      </Button>
-      <Button disabled={true}>Derp Herp</Button>
-      <Button size="small">Derp Herp</Button>
+      <Button size={state.size} onClick={() => { setState({ size: 'small' }) }}>Button Text</Button>
     </div>
   }
 </Component>
 ```
 
-#### Secondary Button
+#### Primary Button
 ```tsx
-<Component initialState={{ count: 10 }}>
-  {() => (
-    <Button variant="secondary">Derp Herp</Button>
-  )}
-</Component>
+class Derp extends React.Component {
+    constructor(props) {
+        console.log(1);
+    }
+    
+    someFunc() {
+        const h = 1 === 1;
+        const g = true;
+        const t = [ { id:1, name: 'Test', value: true } ];
+        
+        return h;
+    }
 
-```
-
-#### Text Button
-```tsx
-<React.Fragment>
-  <Button variant="text">Derp Herp</Button>
-</React.Fragment>
+    render () {
+        return (
+            <div>
+                1
+            </div>
+        );
+    }
+}
 ```
