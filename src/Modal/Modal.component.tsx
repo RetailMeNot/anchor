@@ -10,13 +10,14 @@ import { colors } from '../theme/colors.theme';
 
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+export type ModalSize = 'lg' | 'sm';
 
 const Sizes = {
-    lg: { width: 50 },
-    sm: { width: 25 },
+    lg: { width: 50, contentPadding: 2.5, footerHeight: 6.5 },
+    sm: { width: 25, contentPadding: 2, footerHeight: 5.5 },
 };
-const contentPadding = '2rem';
 const borderRadius = sizes.border.radius.modal;
 
 // Modal.Content
@@ -25,17 +26,6 @@ const borderRadius = sizes.border.radius.modal;
 const StyledContent = styled.div<ModalContentProps>`
     box-sizing: border-box;
     width: 100%;
-
-    // This component only gets its bottom padding if its the
-    // last-child of the modal (see Modal styles). Furthermore,
-    // if the Modal Header comes before it, then this component
-    // loses its top padding (see Modal Header styles). The goal
-    // is that we have full padding in isolation, but lose the
-    // top or bottom padding if the Header or Footer (respectively)
-    // are also used.
-    padding: ${contentPadding} ${contentPadding} 0 ${contentPadding};
-
-    display: flex;
 
     order: 0;
     flex-grow: 1;
@@ -48,50 +38,6 @@ interface ModalContentProps {
 const ModalContent = ({ children }: ModalContentProps) => (
     <StyledContent>{children}</StyledContent>
 );
-
-// Modal
-// ------------------------------------------------------------------------------------------------------------------
-
-const StyledModal = StyledReactModal.default.styled`
-    position: relative;
-    width: ${({ width, size = 'lg' }: ModalProps) =>
-        width || `${Sizes[size].width}rem`};
-    height: 42.375rem;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border-radius: ${borderRadius};
-    background: ${({ background = colors.white.base }: ModalProps) =>
-        background};
-    box-shadow: 0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13);
-
-    overflow: hidden;
-
-    // if the Content component is the last-child of the modal, give it some bottom padding
-    ${StyledContent}:last-child {
-        padding-bottom: ${contentPadding};
-    }
-`;
-
-interface ModalProps extends StyledReactModal.ModalProps {
-    closeButton?: boolean;
-    size?: 'lg' | 'sm';
-    background?: string;
-    width?: string;
-    children?: any;
-}
-
-export const Modal = ({
-    children,
-    ...props
-}: ModalProps): React.ReactElement<ModalProps> => (
-    <StyledModal {...props}>{children}</StyledModal>
-);
-
-Modal.Content = ModalContent;
 
 // Modal.Header
 // ------------------------------------------------------------------------------------------------------------------
@@ -112,8 +58,9 @@ const StyledHeader = styled.div<ModalHeaderProps>`
 
     // If the header exists, remove the Content's padding.
     // We're preferring this selector to using Modal :first-child
-    // in case there is a close button placed before it.
-    & ~ ${StyledContent} {
+    // in case there is a close button placed before it, and using a
+    // double selector to ensure it takes precedence.
+    & ~ ${StyledContent}${StyledContent} {
         padding-top: 0;
     }
 `;
@@ -136,14 +83,11 @@ const ModalHeader = ({ children, title, ...props }: ModalHeaderProps) => (
     </StyledHeader>
 );
 
-Modal.Header = ModalHeader;
-
 // Modal.Footer
 // ------------------------------------------------------------------------------------------------------------------
 
 const StyledFooter = styled.div<ModalFooterProps>`
     box-sizing: border-box;
-    min-height: 6.5rem;
     width: 100%;
     border-radius: 0 0 ${borderRadius} ${borderRadius};
     margin-top: auto;
@@ -155,13 +99,7 @@ const StyledFooter = styled.div<ModalFooterProps>`
     order: 1;
     justify-self: flex-end;
 
-    // color: ${({ color = colors.charcoal.light }) => color};
-    background: ${({ background = colors.silver.base }) => background};
-
-    & ~ ${StyledContent} {
-        padding-bottom: 0;
-        background: rgba(255,0,0,0.5);
-    }
+    background: ${({ background = 'transparent' }) => background};
 `;
 
 interface ModalFooterProps {
@@ -169,11 +107,9 @@ interface ModalFooterProps {
     background?: string;
 }
 
-const ModalFooter = ({ children }: ModalFooterProps) => (
-    <StyledFooter>{children}</StyledFooter>
+const ModalFooter = ({ children, ...props }: ModalFooterProps) => (
+    <StyledFooter {...props}>{children}</StyledFooter>
 );
-
-Modal.Footer = ModalFooter;
 
 // Modal.Close
 // ------------------------------------------------------------------------------------------------------------------
@@ -209,6 +145,76 @@ const ModalClose = ({
     </StyledClose>
 );
 
+// Modal
+// ------------------------------------------------------------------------------------------------------------------
+
+const StyledModal = StyledReactModal.default.styled`
+    position: relative;
+    width: ${({ width, size = 'lg' }: ModalProps) =>
+        width || `${Sizes[size].width}rem`};
+    height: ${({ height = '42.375rem' }: ModalProps) => height};
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: ${borderRadius};
+    background: ${({ background = colors.white.base }: ModalProps) =>
+        background};
+    ${({ color }: ModalProps) =>
+        css`
+            color: ${color};
+        `}
+    box-shadow: 0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13);
+
+    overflow: hidden;
+
+    // The Modal Content component only gets its bottom padding if
+    // its the last-child of the modal. Furthermore, if the Modal Header
+    // comes before it, then the Content loses its top padding
+    // (see Modal Header styles). The goal is that we have full padding
+    // in isolation, but lose the top or bottom padding if the Header or
+    // Footer (respectively) are also used.
+    ${StyledContent} {
+        padding: ${({ size = 'lg' }: ModalProps) =>
+            `${Sizes[size].contentPadding}rem ${
+                Sizes[size].contentPadding
+            }rem 0 ${Sizes[size].contentPadding}rem`};
+        &:last-child {
+            padding-bottom: ${({ size = 'lg' }: ModalProps) =>
+                `${Sizes[size].contentPadding}rem`};
+        }
+    }
+    ${StyledHeader} {
+        padding-left: ${({ size = 'lg' }: ModalProps) =>
+            Sizes[size].contentPadding}rem;
+    }
+    ${StyledFooter} {
+        min-height: ${({ size = 'lg' }: ModalProps) =>
+            Sizes[size].footerHeight}rem;
+    }
+`;
+
+interface ModalProps extends StyledReactModal.ModalProps {
+    size?: ModalSize;
+    background?: string;
+    color?: string;
+    width?: string;
+    height?: string;
+    children?: any;
+}
+
+export const Modal = ({
+    children,
+    ...props
+}: ModalProps): React.ReactElement<ModalProps> => (
+    <StyledModal {...props}>{children}</StyledModal>
+);
+
+Modal.Content = ModalContent;
+Modal.Header = ModalHeader;
+Modal.Footer = ModalFooter;
 Modal.Close = ModalClose;
 
 // BaseModalBackground

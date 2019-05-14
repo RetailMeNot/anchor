@@ -2,7 +2,8 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // ENZYME
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
+
 // COMPONENT
 import { Modal, ModalProvider } from './Modal.component';
 
@@ -12,18 +13,16 @@ describe('Component: Modal', () => {
             <ModalProvider>
                 <div>
                     <button />
-                    <Modal isOpen={true}>Contents</Modal>
+                    <Modal isOpen>Contents</Modal>
                 </div>
             </ModalProvider>
         );
+
         const wrapper = mount(subject);
-        const component = shallow(subject);
 
-        expect(subject).toBeDefined();
-        expect(wrapper).toBeDefined();
-        expect(component).toBeDefined();
+        expect(wrapper.html()).toMatchSnapshot();
+
         const tree = renderer.create(subject).toJSON();
-
         expect(tree).toMatchSnapshot();
     });
 });
