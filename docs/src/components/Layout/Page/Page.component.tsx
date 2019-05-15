@@ -29,7 +29,14 @@ interface PageProps {
     enableFooter?: boolean;
 }
 
-const StyledContentBody = styled.div``;
+const StyledContentBody = styled.div`
+    box-sizing: border-box;
+    width: 90%;
+`;
+const StyledContentMain = styled.main`
+    box-sizing: border-box;
+    padding-left: 1rem;
+`;
 
 const StyledLogoContainer = styled.a`
     border-right: solid thin ${colors.silver.base};
@@ -39,6 +46,7 @@ const StyledLogoContainer = styled.a`
 `;
 
 const StyledHeader = styled.header`
+    z-index: 90; // Set high because of the code editor
     position: sticky;
     top: 0;
     display: block;
@@ -73,21 +81,22 @@ const StyledPrimaryNav = styled.nav`
 const Components: any = {};
 
 Components.code = (props: any) => <CodePreview {...props} />;
-Components.inlineCode = (props: any) => <code {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
+Components.inlineCode = (props: any) => <Typography tag="code" {...props} />;
+Components.pre = (props: any) => <Typography tag="pre" {...props} />;
 Components.h1 = (props: any) => <Typography weight={600} tag="h1" {...props} />;
-Components.h2 = (props: any) => <h2 {...props} />;
-Components.h3 = (props: any) => <h3 {...props} />;
-Components.h4 = (props: any) => <h4 {...props} />;
-Components.h5 = (props: any) => <h5 {...props} />;
-Components.h6 = (props: any) => <h6 {...props} />;
-Components.p = (props: any) => <p {...props} />;
+Components.h2 = (props: any) => <Typography weight={600} tag="h2" {...props} />;
+Components.h3 = (props: any) => <Typography weight={600} tag="h3" {...props} />;
+Components.h4 = (props: any) => <Typography weight={600} tag="h4" {...props} />;
+Components.h5 = (props: any) => <Typography weight={600} tag="h5" {...props} />;
+Components.h6 = (props: any) => <Typography weight={600} tag="h6" {...props} />;
+Components.p = (props: any) => <Typography tag="p" {...props} />;
+Components.a = (props: any) => <Typography tag="a" {...props} />;
+Components.blockquote = (props: any) => <Typography tag="blockquote" {...props} />;
+Components.strong = (props: any) => <Typography weight={600} tag="p" {...props} />;
 Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
 Components.li = (props: any) => <li {...props} />;
-Components.a = (props: any) => <a {...props} />;
-Components.blockquote = (props: any) => <blockquote {...props} />;
-Components.strong = (props: any) => <strong {...props} />;
 
 export const Page = ({
     children,
@@ -144,12 +153,12 @@ export const Page = ({
                     <Typography tag="p">TODO: when we have accordions</Typography>
                 </StyledSideNav>
                 <Cell>
-                    <main>
+                    <StyledContentMain>
                         <MDXProvider components={Components}>
                             {children}
                         </MDXProvider>
                         {enableFooter && <Footer />}
-                    </main>
+                    </StyledContentMain>
                 </Cell>
             </Grid>
         </StyledContentBody>

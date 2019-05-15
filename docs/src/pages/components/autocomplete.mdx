@@ -1,0 +1,63 @@
+# Autocomplete
+
+#### Usage
+
+The autocomplete is a normal text input enhanced by a panel of suggested options.
+
+#### Autocomplete default usage
+```tsx
+<div style={{ padding: '2rem 1rem' }}>
+    <AutoComplete
+        allowClear={true}
+        placeholder="Search here..."
+        prefix={<Search color={colors.ash.base} />}
+        dataSource={[
+            'Result 1',
+            'Result 2',
+            'Result 3',
+            'Result 4',
+        ]}
+    />
+</div>
+```
+#### Autocomplete usage with custom nodes
+Note that the data source conforms to the List API's schema for generating breaks and title sections. 
+```tsx
+<div style={{ padding: '2rem 1rem' }}>
+    <AutoComplete
+        allowClear={true}
+        placeholder="Search here..."
+        prefix={<Search color={colors.ash.base} />}
+        dataSource={[
+            {
+                label: 'Title of a section 1',
+                id: 1,
+                someBoolean: false,
+                listItemType: 'title',
+            },
+            { label: 'Item 1', id: 2, someBoolean: true },
+            { label: 'Item 3', id: 3, someBoolean: true },
+            { label: 'Item 4', id: 4, someBoolean: true },
+            { label: 'Item 5', id: 5, someBoolean: true },
+            {
+                label: 'Title of a section 2',
+                id: 6,
+                someBoolean: true,
+                listItemType: 'title',
+            },
+            { label: 'Item 7', id: 7, someBoolean: true },
+            { label: 'Item 8', id: 8, someBoolean: true },
+            {
+                label: 'Title of a section 3',
+                id: 9,
+                someBoolean: true,
+                listItemType: 'title',
+            },
+            {
+                listItemType: 'divider',
+            },
+            { label: 'Item 11', id: 11, someBoolean: true },
+        ]}
+    />
+</div>
+```

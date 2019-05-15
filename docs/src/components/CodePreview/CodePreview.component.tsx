@@ -2,88 +2,110 @@
 import * as React from 'react';
 // VENDOR
 import styled, { css } from 'styled-components';
-import classNames from 'classnames';
-import { LiveEditor, LiveProvider, LivePreview } from 'react-live';
+import {
+    LiveEditor,
+    LiveProvider,
+    LivePreview,
+    LiveEditorProps,
+    PreProps,
+    LiveError
+} from 'react-live';
 import Component from '@reach/component-component';
+import { AutoComplete } from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
 // THEME
-import { colors, sizes } from '../../../../src/theme';
+import { colors } from '../../../../src/theme';
 
-const PrismStyleOverrides = css`
-    .prism-code {
-        padding: ${sizes.padding.lg};
-        background-color: ${colors.silver.light};
-        color: ${colors.charcoal.light};
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        font-family: monospace !important;
+// TODO: add CDN Inconsolata font
 
+const CodePreviewForcedStyles = css`
+    font-family: Inconsolata, monospace !important;
+    font-size: 0.875rem !important;
+`;
+
+const StyledErrorElement = styled(LiveError)`
+    ${CodePreviewForcedStyles};
+`;
+
+const StyledContainerElement = styled.div`
+    margin: 1rem 0;
+    display: block;
+`;
+
+const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
+    background-color: ${colors.charcoal.base};
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    ${CodePreviewForcedStyles};
+    // This library uses element-based colors to set some of its colors, which necessitates the '!important' below
+    .token-line {
         .token {
-            &.tag {
-                color: ${colors.savvyCyan.dark};
-            }
-            &.attr-name {
-                color: ${colors.tealBreaker.base};
-            }
-            &.string {
-                color: ${colors.fireSale.base};
-            }
-            &.number {
-                color: ${colors.dealEnvy.base};
-            }
-            &.operator {
-                color: ${colors.cyberMango.base};
-            }
-            &.punctuation {
-                color: ${colors.cyberMango.base};
+            &.plain {
+                color: #d3d0c8;
             }
             &.keyword {
-                color: ${colors.savvyCyan.dark};
-            }
-            &.class-name {
-                color: ${colors.tealBreaker.base};
+                color: #99cc99 !important;
             }
             &.function {
-                color: ${colors.savvyCyan.light};
+                color: #f2777a;
             }
-            &.template-string {
-                color: ${colors.fireSale.base};
+            &.punctuation {
+                color: #ffcc66;
+            }
+            &.operator {
+                color: #f99157 !important;
+            }
+            &.tag {
+                color: #6699cc !important;
+            }
+            &.tag.script {
+                color: #f2777a !important;
+            }
+            &.tag.script.punctuation {
+                color: orange !important;
+            }
+            &.tag.script.string {
+                color: #99cc99 !important;
+            }
+            &.number {
+                color: #cc99cc !important;
+            }
+            &.boolean {
+                color: inherit;
             }
         }
     }
+}
 `;
 
-export const StyledCodePreviewElement = styled.pre`
-    .react-live-preview {
-        padding: ${sizes.padding.lg};
-        border: solid thin ${colors.silver.dark};
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    ${PrismStyleOverrides}
+const StyledLivePreview = styled(LivePreview)<PreProps>`
+    ${CodePreviewForcedStyles};
+    padding: 1rem;
+    border: solid thin ${colors.silver.base};
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
 `;
 
 interface CodePreviewProps {
-    className?: string;
     children?: any;
 }
 
 const scope = {
     ...Anchor,
     Component,
+    // Overrides
+    AutoComplete,
 };
 
 export const CodePreview = ({
     children,
-    className,
 }: CodePreviewProps): React.ReactElement<any> => (
-    <StyledCodePreviewElement className={classNames(className)}>
+    <StyledContainerElement>
         <LiveProvider code={children} scope={scope}>
-            <LivePreview />
-            <LiveEditor wrap="true" />
-            {/*<LiveError />*/}
+            <StyledLivePreview />
+            <StyledLiveEditor wrap="true" />
+            <StyledErrorElement />
         </LiveProvider>
-    </StyledCodePreviewElement>
+    </StyledContainerElement>
 );
