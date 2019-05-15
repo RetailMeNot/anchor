@@ -6,9 +6,6 @@ import { shallow, mount } from 'enzyme';
 // COMPONENT
 import { Collapse } from './';
 import { ArrowBack } from '../Icon';
-// STYLED COMPONENTS
-/* tslint:disable no-import-side-effect*/
-import 'jest-styled-components';
 
 describe('Component: Collapse', () => {
     it('should match its snapshot.', () => {

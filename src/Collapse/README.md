@@ -1,14 +1,12 @@
-# Icon
+TODO: write this
 
-All icons are rendered individually by their name, i.e. **`ArrowBack`** or**`Expand`**. 
+# Collapse
+
+...
 
 ## Usage
    
-    import { ArrowBack } from '@retailmenot/anchor';
-    
-    const example = props => (
-        <ArrowBack />
-    );    
+    import { Collapse } from '@retailmenot/collapse';   
     
 ## Settings/Props
 
