@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select, number, text } from '@storybook/addon-knobs';
+import { select, number, text, boolean } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
@@ -46,14 +46,14 @@ storiesOf('Components/Modal', module)
                         </Header>
                         <Content>Stuff in the middle</Content>
                         <Footer>
-                            <Button onClick={() => setIsOpen(false)}>
-                                Accept
-                            </Button>
                             <Button
                                 onClick={() => setIsOpen(false)}
                                 variant="text"
                             >
                                 Decline
+                            </Button>
+                            <Button onClick={() => setIsOpen(false)}>
+                                Accept
                             </Button>
                         </Footer>
                     </Modal>
@@ -110,8 +110,34 @@ storiesOf('Components/Modal', module)
             <ModalProvider>
                 <StyledStory>
                     <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                        <Close />
                         <Content>Content Area</Content>
                         <Footer>Footer Area</Footer>
+                    </Modal>
+                </StyledStory>
+            </ModalProvider>
+        );
+    })
+    .add('Oversized', () => {
+        return (
+            <ModalProvider>
+                <StyledStory>
+                    <Modal
+                        isOpen
+                        oversized={boolean('oversized', true)}
+                        height={text('height', '100rem')}
+                        size={select('size', sizeOptions, 'lg')}
+                        margin={text('margin', '2rem')}
+                    >
+                        <Header title="Oversized Modal">
+                            <Close />
+                        </Header>
+                        <Content>
+                            <Typography>Psst... down below!</Typography>
+                        </Content>
+                        <Footer>
+                            <Typography>Psst... up above!</Typography>
+                        </Footer>
                     </Modal>
                 </StyledStory>
             </ModalProvider>
@@ -167,8 +193,8 @@ storiesOf('Components/Modal', module)
                             </Typography>
                         </Content>
                         <Footer>
-                            <Button>Accept</Button>
                             <Button variant="text">Decline</Button>
+                            <Button>Accept</Button>
                         </Footer>
                     </Modal>
                 </StyledStory>

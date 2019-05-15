@@ -173,12 +173,15 @@ const ModalClose = ({
 // Modal
 // ------------------------------------------------------------------------------------------------------------------
 
+const defaultSize: ModalSize = 'lg';
+
 const StyledModal = StyledReactModal.default.styled`
     position: relative;
-    width: ${({ width, size = 'lg' }: ModalProps) =>
+    width: ${({ width, size = defaultSize }: ModalProps) =>
         width || `${Sizes[size].width}rem`};
     height: ${({ height = '42.375rem' }: ModalProps) => height};
-    margin: ${({ margin = '0' }: ModalProps) => margin};
+    margin: ${({ oversized, margin }: ModalProps) =>
+        margin || (oversized ? '2rem' : '0')};
 
     display: flex;
     align-items: center;
@@ -205,21 +208,21 @@ const StyledModal = StyledReactModal.default.styled`
     // in isolation, but lose the top or bottom padding if the Header or
     // Footer (respectively) are also used.
     ${StyledContent} {
-        padding: ${({ size = 'lg' }: ModalProps) =>
-            `${Sizes[size].contentPadding}rem ${
+        padding: ${({ size = defaultSize }: ModalProps) =>
+            `4rem ${Sizes[size].contentPadding}rem 0 ${
                 Sizes[size].contentPadding
-            }rem 0 ${Sizes[size].contentPadding}rem`};
+            }rem`};
         &:last-child {
-            padding-bottom: ${({ size = 'lg' }: ModalProps) =>
+            padding-bottom: ${({ size = defaultSize }: ModalProps) =>
                 `${Sizes[size].contentPadding}rem`};
         }
     }
     ${StyledHeader} {
-        padding-left: ${({ size = 'lg' }: ModalProps) =>
+        padding-left: ${({ size = defaultSize }: ModalProps) =>
             Sizes[size].contentPadding}rem;
     }
     ${StyledFooter} {
-        min-height: ${({ size = 'lg' }: ModalProps) =>
+        min-height: ${({ size = defaultSize }: ModalProps) =>
             Sizes[size].footerHeight}rem;
     }
 `;
@@ -227,6 +230,7 @@ const StyledModal = StyledReactModal.default.styled`
 interface ModalProps extends StyledReactModal.ModalProps {
     size?: ModalSize;
     background?: string;
+    oversized?: boolean;
     color?: string;
     width?: string;
     height?: string;
@@ -239,14 +243,23 @@ interface ModalProps extends StyledReactModal.ModalProps {
 export const Modal = ({
     children,
     className,
+    oversized,
+    backgroundProps,
     ...props
-}: ModalProps): React.ReactElement<ModalProps> => (
-    <StyledModal
-        {...{ className: classnames('anchor-modal', className), ...props }}
-    >
-        {children}
-    </StyledModal>
-);
+}: ModalProps): React.ReactElement<ModalProps> => {
+    return (
+        <StyledModal
+            {...{
+                className: classnames('anchor-modal', className),
+                oversized,
+                backgroundProps: { ...backgroundProps, oversized },
+                ...props,
+            }}
+        >
+            {children}
+        </StyledModal>
+    );
+};
 
 Modal.Content = ModalContent;
 Modal.Header = ModalHeader;
@@ -257,10 +270,17 @@ Modal.Close = ModalClose;
 // ------------------------------------------------------------------------------------------------------------------
 
 interface BaseModalBackgroundProps {
-    opacity: number;
+    opacity?: number;
+    oversized?: boolean;
 }
 
 const CustomModalBackground = styled(StyledReactModal.BaseModalBackground)`
+    ${({ oversized }: BaseModalBackgroundProps) =>
+        oversized &&
+        css`
+            align-items: initial;
+            overflow-y: scroll;
+        `}
     background-color: ${({ opacity = 0.6 }: BaseModalBackgroundProps) =>
         opacify(opacity, 'rgba(0,0,0,0)')};
 `;
