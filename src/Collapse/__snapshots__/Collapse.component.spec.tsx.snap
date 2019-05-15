@@ -1,53 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Collapse should match its snapshot. 1`] = `
-.c1 {
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  line-height: 0;
-}
-
-.c0 {
-  display: block;
-  box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  padding: 1rem 2rem;
-  border-top: solid #E7E7E7 1px;
-  border-bottom: solid #E7E7E7 1px;
-}
-
-.c0 .anchor-collapse-button {
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  text-align: left;
-  border-style: none;
-  font-weight: 500;
-  font-size: 0.875rem;
-  padding: 0.5rem 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c0 .anchor-collapse-button:focus {
-  outline: none;
-}
-
-.c0 .anchor-collapse-button span:last-child {
-  float: right;
-}
-
-.c0 .anchor-collapse-content {
-  font-size: 1rem;
-  text-align: left;
-  padding: 0.5rem 0;
-}
-
 <div
-  className="anchor-collapse c0"
+  className="anchor-collapse sc-bwzfXH jEqAkc"
 >
   <button
     className="anchor-collapse-button"
@@ -56,7 +11,7 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
     Open
      
     <span
-      className="anchor-icon chevron-down c1"
+      className="anchor-icon chevron-down sc-bdVaJa gENAGr"
       scale="md"
     >
       <svg
