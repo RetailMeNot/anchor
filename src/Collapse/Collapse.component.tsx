@@ -59,9 +59,9 @@ export const Collapse = ({
     className,
     children,
 }: CollapseProps) => {
-    const [open, toggleOpen] = React.useState(isOpen);
-    const IconOpen = openIcon ? openIcon : <ChevronDown />;
-    const IconClosed = closeIcon ? closeIcon : <ChevronUp />;
+    const [open, toggleOpen] = React.useState<boolean>(isOpen);
+    const IconOpen = openIcon || <ChevronDown />;
+    const IconClosed = closeIcon || <ChevronUp />;
     // If the user provides custom openText but not custom closeText, then use openText for closeText as well
     const textClosed =
         openText !== DEFAULT_OPEN_TEXT && closeText === DEFAULT_CLOSE_TEXT
