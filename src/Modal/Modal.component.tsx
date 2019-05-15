@@ -34,7 +34,7 @@ const StyledContent = styled.div<ModalContentProps>`
 `;
 
 interface ModalContentProps {
-    children: any;
+    children?: any;
     className?: string;
 }
 
