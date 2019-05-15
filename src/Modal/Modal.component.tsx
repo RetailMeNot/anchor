@@ -11,6 +11,7 @@ import { colors } from '../theme/colors.theme';
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from 'styled-components';
+import classnames from 'classnames';
 import { opacify } from 'polished';
 
 export type ModalSize = 'lg' | 'sm';
@@ -34,10 +35,13 @@ const StyledContent = styled.div<ModalContentProps>`
 
 interface ModalContentProps {
     children: any;
+    className?: string;
 }
 
-const ModalContent = ({ children }: ModalContentProps) => (
-    <StyledContent>{children}</StyledContent>
+const ModalContent = ({ children, className }: ModalContentProps) => (
+    <StyledContent className={classnames('anchor-modal-content', className)}>
+        {children}
+    </StyledContent>
 );
 
 // Modal.Header
@@ -68,13 +72,22 @@ const StyledHeader = styled.div<ModalHeaderProps>`
 
 interface ModalHeaderProps {
     children?: any;
+    className?: string;
     title?: string;
     color?: string;
     background?: string;
 }
 
-const ModalHeader = ({ children, title, ...props }: ModalHeaderProps) => (
-    <StyledHeader {...props}>
+const ModalHeader = ({
+    children,
+    className,
+    title,
+    ...props
+}: ModalHeaderProps) => (
+    <StyledHeader
+        className={classnames('anchor-modal-header', className)}
+        {...props}
+    >
         {title && (
             <Typography scale={20} weight="bold">
                 {title}
@@ -105,11 +118,17 @@ const StyledFooter = styled.div<ModalFooterProps>`
 
 interface ModalFooterProps {
     children: any;
+    className?: string;
     background?: string;
 }
 
-const ModalFooter = ({ children, ...props }: ModalFooterProps) => (
-    <StyledFooter {...props}>{children}</StyledFooter>
+const ModalFooter = ({ children, className, ...props }: ModalFooterProps) => (
+    <StyledFooter
+        className={classnames('anchor-modal-footer', className)}
+        {...props}
+    >
+        {children}
+    </StyledFooter>
 );
 
 // Modal.Close
@@ -132,15 +151,20 @@ const StyledClose = styled.div`
 
 interface ModalCloseProps extends IconSVGProps {
     onClick?: any;
+    className?: string;
 }
 
 const ModalClose = ({
     onClick,
+    className,
     color = colors.savvyCyan.base,
     scale = 'lg',
     ...props
 }: ModalCloseProps) => (
-    <StyledClose onClick={onClick}>
+    <StyledClose
+        className={classnames('anchor-modal-close', className)}
+        onClick={onClick}
+    >
         {/* This may change to an icon-only button, once that component is done */}
         <Close color={color} scale={scale} {...props} />
     </StyledClose>
@@ -168,7 +192,9 @@ const StyledModal = StyledReactModal.default.styled`
         css`
             color: ${color};
         `}
-    box-shadow: ${({ shadow = '0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)' }: ModalProps) => shadow};
+    box-shadow: ${({
+        shadow = '0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)',
+    }: ModalProps) => shadow};
 
     overflow: hidden;
 
@@ -207,13 +233,19 @@ interface ModalProps extends StyledReactModal.ModalProps {
     margin?: string;
     shadow?: string;
     children?: any;
+    className?: string;
 }
 
 export const Modal = ({
     children,
+    className,
     ...props
 }: ModalProps): React.ReactElement<ModalProps> => (
-    <StyledModal {...props}>{children}</StyledModal>
+    <StyledModal
+        {...{ className: classnames('anchor-modal', className), ...props }}
+    >
+        {children}
+    </StyledModal>
 );
 
 Modal.Content = ModalContent;
@@ -229,10 +261,11 @@ interface BaseModalBackgroundProps {
 }
 
 const CustomModalBackground = styled(StyledReactModal.BaseModalBackground)`
-    background-color: ${({ opacity = 0.6 }: BaseModalBackgroundProps) => opacify(opacity, 'rgba(0,0,0,0)')};
+    background-color: ${({ opacity = 0.6 }: BaseModalBackgroundProps) =>
+        opacify(opacity, 'rgba(0,0,0,0)')};
 `;
 export const BaseModalBackground = CustomModalBackground;
 
 export class ModalProvider extends StyledReactModal.ModalProvider {
-    static defaultProps = { backgroundComponent: BaseModalBackground }
+    static defaultProps = { backgroundComponent: BaseModalBackground };
 }

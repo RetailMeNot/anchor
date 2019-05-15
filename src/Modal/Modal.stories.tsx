@@ -9,7 +9,12 @@ import { Button, Typography } from '..';
 import { colors } from '../theme/index';
 // SUBJECT
 import * as README from './README.md';
-import { Modal, BaseModalBackground, ModalProvider, ModalSize } from './Modal.component';
+import {
+    Modal,
+    BaseModalBackground,
+    ModalProvider,
+    ModalSize,
+} from './Modal.component';
 
 const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
@@ -41,8 +46,15 @@ storiesOf('Components/Modal', module)
                         </Header>
                         <Content>Stuff in the middle</Content>
                         <Footer>
-                            <Button onClick={() => setIsOpen(false)}>Accept</Button>
-                            <Button onClick={() => setIsOpen(false)} variant="text">Decline</Button>
+                            <Button onClick={() => setIsOpen(false)}>
+                                Accept
+                            </Button>
+                            <Button
+                                onClick={() => setIsOpen(false)}
+                                variant="text"
+                            >
+                                Decline
+                            </Button>
                         </Footer>
                     </Modal>
                 </div>
@@ -136,7 +148,9 @@ storiesOf('Components/Modal', module)
                             colors.white.base
                         } 50.25%)`}
                         color={text('color', colors.white.base)}
-                        backgroundProps={{ opacity: number('background opacity', 0.2) }}
+                        backgroundProps={{
+                            opacity: number('background opacity', 0.2),
+                        }}
                     >
                         <Close color="white" />
                         <Content>
@@ -148,10 +162,7 @@ storiesOf('Components/Modal', module)
                             >
                                 Customized Example
                             </Typography>
-                            <Typography
-                                tag="p"
-                                align="center"
-                            >
+                            <Typography tag="p" align="center">
                                 With some other text
                             </Typography>
                         </Content>
