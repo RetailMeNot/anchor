@@ -100,6 +100,7 @@
     "enzyme-to-json": "^3.3.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "jest": "^24.5.0",
+    "jest-styled-components": "^6.3.1",
     "jsdom": "^13.0.0",
     "prettier": "^1.16.4",
     "react-docgen-typescript-loader": "^3.0.1",
