@@ -36,7 +36,7 @@ storiesOf('Components/Modal', module)
                 <div>
                     <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
                     <Modal
-                        size={select('size', sizeOptions, 'sm')}
+                        size={select('size', sizeOptions, 'lg')}
                         isOpen={isOpen}
                         onBackgroundClick={() => setIsOpen(false)}
                         onEscapeKeydown={() => setIsOpen(false)}
@@ -146,7 +146,7 @@ storiesOf('Components/Modal', module)
                             colors.flashPink.base
                         } 0%, ${colors.fireSale.light} 50%, ${
                             colors.white.base
-                        } 50.25%)`}
+                        } calc(50% + 1.25px))`}
                         color={text('color', colors.white.base)}
                         backgroundProps={{
                             opacity: number('background opacity', 0.2),
