@@ -11,6 +11,7 @@ import { colors } from '../theme/colors.theme';
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from 'styled-components';
+import { opacify } from 'polished';
 
 export type ModalSize = 'lg' | 'sm';
 
@@ -66,7 +67,7 @@ const StyledHeader = styled.div<ModalHeaderProps>`
 `;
 
 interface ModalHeaderProps {
-    children: any;
+    children?: any;
     title?: string;
     color?: string;
     background?: string;
@@ -153,6 +154,7 @@ const StyledModal = StyledReactModal.default.styled`
     width: ${({ width, size = 'lg' }: ModalProps) =>
         width || `${Sizes[size].width}rem`};
     height: ${({ height = '42.375rem' }: ModalProps) => height};
+    margin: ${({ margin = '0' }: ModalProps) => margin};
 
     display: flex;
     align-items: center;
@@ -166,7 +168,7 @@ const StyledModal = StyledReactModal.default.styled`
         css`
             color: ${color};
         `}
-    box-shadow: 0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13);
+    box-shadow: ${({ shadow = '0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)' }: ModalProps) => shadow};
 
     overflow: hidden;
 
@@ -202,6 +204,8 @@ interface ModalProps extends StyledReactModal.ModalProps {
     color?: string;
     width?: string;
     height?: string;
+    margin?: string;
+    shadow?: string;
     children?: any;
 }
 
@@ -220,8 +224,15 @@ Modal.Close = ModalClose;
 // BaseModalBackground
 // ------------------------------------------------------------------------------------------------------------------
 
+interface BaseModalBackgroundProps {
+    opacity: number;
+}
+
 const CustomModalBackground = styled(StyledReactModal.BaseModalBackground)`
-    background-color: rgba(255, 0, 0, 0.6);
+    background-color: ${({ opacity = 0.6 }: BaseModalBackgroundProps) => opacify(opacity, 'rgba(0,0,0,0)')};
 `;
 export const BaseModalBackground = CustomModalBackground;
-export const ModalProvider = StyledReactModal.ModalProvider;
+
+export class ModalProvider extends StyledReactModal.ModalProvider {
+    static defaultProps = { backgroundComponent: BaseModalBackground }
+}

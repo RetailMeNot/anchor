@@ -2,14 +2,14 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select } from '@storybook/addon-knobs';
+import { select, number, text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
 import { colors } from '../theme/index';
 // SUBJECT
 import * as README from './README.md';
-import { Modal, ModalProvider, ModalSize } from './Modal.component';
+import { Modal, BaseModalBackground, ModalProvider, ModalSize } from './Modal.component';
 
 const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
@@ -41,8 +41,8 @@ storiesOf('Components/Modal', module)
                         </Header>
                         <Content>Stuff in the middle</Content>
                         <Footer>
-                            <Button>Accept</Button>
-                            <Button variant="text">Decline</Button>
+                            <Button onClick={() => setIsOpen(false)}>Accept</Button>
+                            <Button onClick={() => setIsOpen(false)} variant="text">Decline</Button>
                         </Footer>
                     </Modal>
                 </div>
@@ -52,8 +52,17 @@ storiesOf('Components/Modal', module)
         return (
             <ModalProvider>
                 <StyledStory>
-                    <span>Hi there, there's a thing</span>
+                    <Typography>Click this button!</Typography>
                     <OpenModalButton />
+                </StyledStory>
+            </ModalProvider>
+        );
+    })
+    .add('Blank', () => {
+        return (
+            <ModalProvider>
+                <StyledStory>
+                    <Modal size={select('size', sizeOptions, 'sm')} isOpen />
                 </StyledStory>
             </ModalProvider>
         );
@@ -96,11 +105,17 @@ storiesOf('Components/Modal', module)
             </ModalProvider>
         );
     })
-    .add('Blank', () => {
+    .add('Custom Background', () => {
+        const CustomBackground = styled(BaseModalBackground)`
+            background-color: rgba(255, 0, 0, 0.6);
+        `;
+
         return (
-            <ModalProvider>
+            <ModalProvider backgroundComponent={CustomBackground}>
                 <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen />
+                    <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                        <Header title="Modal with Custom Background" />
+                    </Modal>
                 </StyledStory>
             </ModalProvider>
         );
@@ -110,16 +125,18 @@ storiesOf('Components/Modal', module)
             <ModalProvider>
                 <StyledStory>
                     <Modal
-                        size={select('size', sizeOptions, 'sm')}
                         isOpen
-                        height="25rem"
-                        width="30rem"
+                        size={select('size', sizeOptions, 'sm')}
+                        height={text('height', '25rem')}
+                        width={text('width', '30rem')}
+                        margin={text('margin', '1rem')}
                         background={`linear-gradient(170deg, ${
                             colors.flashPink.base
                         } 0%, ${colors.fireSale.light} 50%, ${
                             colors.white.base
                         } 50.25%)`}
-                        color="white"
+                        color={text('color', colors.white.base)}
+                        backgroundProps={{ opacity: number('background opacity', 0.2) }}
                     >
                         <Close color="white" />
                         <Content>
@@ -127,16 +144,12 @@ storiesOf('Components/Modal', module)
                                 tag="p"
                                 scale={24}
                                 weight={600}
-                                color="white"
-                                hue="light"
                                 align="center"
                             >
                                 Customized Example
                             </Typography>
                             <Typography
                                 tag="p"
-                                color="white"
-                                hue="light"
                                 align="center"
                             >
                                 With some other text
