@@ -152,6 +152,7 @@ storiesOf('Components/Modal', module)
             <ModalProvider backgroundComponent={CustomBackground}>
                 <StyledStory>
                     <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                        <Close />
                         <Header title="Modal with Custom Background" />
                     </Modal>
                 </StyledStory>
