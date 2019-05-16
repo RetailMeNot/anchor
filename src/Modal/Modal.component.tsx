@@ -5,7 +5,6 @@ import * as React from 'react';
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from 'styled-components';
 import classnames from 'classnames';
-import { opacify } from 'polished';
 
 // ANCHOR
 import { sizes } from '../theme/sizes.theme';
@@ -31,8 +30,7 @@ const StyledModal = StyledReactModal.default.styled`
     width: ${({ width, size = defaultSize }: ModalProps) =>
         width || `${Sizes[size].width}rem`};
     height: ${({ height = '42.375rem' }: ModalProps) => height};
-    margin: ${({ oversized, margin }: ModalProps) =>
-        margin || (oversized ? '2rem' : 'auto')};
+    margin: ${({ margin = 'auto' }: ModalProps) => margin};
 
     display: flex;
     align-items: center;
@@ -81,7 +79,6 @@ const StyledModal = StyledReactModal.default.styled`
 interface ModalProps extends StyledReactModal.ModalProps {
     size?: ModalSize;
     background?: string;
-    oversized?: boolean;
     color?: string;
     width?: string;
     height?: string;
@@ -94,15 +91,11 @@ interface ModalProps extends StyledReactModal.ModalProps {
 export const Modal = ({
     children,
     className,
-    oversized,
-    backgroundProps,
     ...props
 }: ModalProps): React.ReactElement<ModalProps> => (
     <StyledModal
         {...{
             className: classnames('anchor-modal', className),
-            oversized,
-            backgroundProps: { ...backgroundProps, oversized },
             ...props,
         }}
     >
@@ -118,17 +111,16 @@ Modal.Close = ModalClose;
 interface BaseModalBackgroundProps {
     opacity?: number;
     oversized?: boolean;
+    padding?: string;
 }
 
 const CustomModalBackground = styled(StyledReactModal.BaseModalBackground)`
-    ${({ oversized }: BaseModalBackgroundProps) =>
-        oversized &&
-        css`
-            align-items: initial;
-        `}
+    box-sizing: border-box;
     overflow-y: auto;
+    padding: ${({ padding = '2rem 1rem' }: BaseModalBackgroundProps) =>
+        padding};
     background-color: ${({ opacity = 0.6 }: BaseModalBackgroundProps) =>
-        opacify(opacity, 'rgba(0,0,0,0)')};
+        `rgba(0,0,0,${opacity})`};
 `;
 export const BaseModalBackground = CustomModalBackground;
 

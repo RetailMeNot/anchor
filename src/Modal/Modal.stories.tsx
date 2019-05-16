@@ -124,10 +124,11 @@ storiesOf('Components/Modal', module)
                 <StyledStory>
                     <Modal
                         isOpen
-                        oversized={boolean('oversized', true)}
                         height={text('height', '100rem')}
                         size={select('size', sizeOptions, 'lg')}
-                        margin={text('margin', '2rem')}
+                        backgroundProps={{
+                            padding: text('background padding', '2rem 1rem'),
+                        }}
                     >
                         <Header title="Oversized Modal">
                             <Close />
