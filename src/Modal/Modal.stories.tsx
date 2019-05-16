@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select, number, text, boolean } from '@storybook/addon-knobs';
+import { select, number, text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
