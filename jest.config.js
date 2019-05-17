@@ -36,6 +36,8 @@ module.exports = {
     "/ts/",
     "/esm/",
     "/src/Icon/SVGs",
+    "/src/Layout/Footer",
+    "/src/Layout/Header",
   ],
   coverageReporters: [
     "json",
@@ -44,7 +46,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       statements: 85,
-      branches: 74, // shh, should be 75
+      branches: 75,
       functions: 62,
       lines: 86
     }
