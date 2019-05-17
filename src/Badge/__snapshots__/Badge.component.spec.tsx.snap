@@ -1,13 +1,834 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Badge should be defined 1`] = `
+exports[`Component: Badge should be able to render with an icon 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c2:hover {
+  border: 0.125rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 <div
-  className="anchor-badge sc-bdVaJa jLNizq"
+  className="anchor-badge c0"
+>
+  <span
+    className="anchor-icon cart c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <g
+          fill="currentColor"
+          fillRule="nonzero"
+        >
+          <path
+            d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+          />
+        </g>
+      </g>
+    </svg>
+  </span>
+  <div
+    className="anchor-badge-count c2"
+    size="dot"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should be defined and match its snapshot 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
 >
   <div
-    className="sc-bwzfXH bRYyvz"
+    className="anchor-badge-count c1"
+    size="dot"
   >
-    •
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should hide the count by default if \`count\` is 0 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.4rem;
+  display: none;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  font-size: 0.625rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="small"
+  >
+    0
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render \`count\` if \`count\` is less than \`overflowCount\` 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  min-width: 1.75rem;
+  padding: 0 0.5rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="large"
+  >
+    3
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render \`overflowCount\`+ if \`count\` is more than \`overflowCount\` 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  min-width: 1.75rem;
+  padding: 0 0.5rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="large"
+  >
+    6+
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render a count with the border color of \`borderColorHover\` if \`isParentHovered\` is true. 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid palevioletred;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid palevioletred;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="dot"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render a dot as the default \`size\` 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="dot"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render a double-digit count in a small badge with fully rounded border-radius 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 1.1rem;
+  left: 0.6rem;
+  font-size: 0.625rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.c2:hover {
+  border: 0.125rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <span
+    className="anchor-icon cart c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <g
+          fill="currentColor"
+          fillRule="nonzero"
+        >
+          <path
+            d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+          />
+        </g>
+      </g>
+    </svg>
+  </span>
+  <div
+    className="anchor-badge-count c2"
+    size="small"
+  >
+    9+
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render a single-digit count in a large badge with fully rounded border-radius 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 1.1rem;
+  left: 0.6rem;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  min-width: 1.75rem;
+  padding: 0 0.5rem;
+}
+
+.c2:hover {
+  border: 0.125rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <span
+    className="anchor-icon cart c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <g
+          fill="currentColor"
+          fillRule="nonzero"
+        >
+          <path
+            d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+          />
+        </g>
+      </g>
+    </svg>
+  </span>
+  <div
+    className="anchor-badge-count c2"
+    size="large"
+  >
+    2
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render a single-digit count in a small badge with only partially rounded border-radius 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 1.1rem;
+  left: 0.6rem;
+  font-size: 0.625rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.c2:hover {
+  border: 0.125rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <span
+    className="anchor-icon cart c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <g
+          fill="currentColor"
+          fillRule="nonzero"
+        >
+          <path
+            d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+          />
+        </g>
+      </g>
+    </svg>
+  </span>
+  <div
+    className="anchor-badge-count c2"
+    size="small"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render the count with absolute positioning if \`standalone\` is false 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0.9rem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c2:hover {
+  border: 0.125rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <span
+    className="anchor-icon cart c1"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <g
+          fill="currentColor"
+          fillRule="nonzero"
+        >
+          <path
+            d="M6.889 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM11.161 13.976a.42.42 0 1 0 0-.84.42.42 0 0 0 0 .84zm0 .74a1.161 1.161 0 1 1 0-2.322 1.161 1.161 0 0 1 0 2.323zM4.144 2.765h9.782a.79.79 0 0 1 .772.962l-1.154 5.185a.79.79 0 0 1-.772.62l-7.596-.058.179 1.439h7.46a.42.42 0 0 1 0 .84H5.037a.42.42 0 0 1-.415-.356L3.238 2.124H1.704a.42.42 0 1 1 0-.84h1.852a.42.42 0 0 1 .415.356l.173 1.125zm8.58 5.965l1.202-5.124-9.66-.058.791 5.143 7.667.039z"
+          />
+        </g>
+      </g>
+    </svg>
+  </span>
+  <div
+    className="anchor-badge-count c2"
+    size="dot"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should render the count without absolute positioning if \`standalone\` is true 1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="dot"
+  >
+    
+  </div>
+</div>
+`;
+
+exports[`Component: Badge should show the count if \`showZero\` is true, even if \`count\` is 0  1`] = `
+.c0 {
+  position: relative;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  display: inline-block;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #DF206C;
+  border: 0.125rem solid;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: undefinedrem;
+  left: undefinedrem;
+  font-size: 0.625rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.c1:hover {
+  border: 0.125rem solid;
+}
+
+<div
+  className="anchor-badge c0"
+>
+  <div
+    className="anchor-badge-count c1"
+    size="small"
+  >
+    0
   </div>
 </div>
 `;

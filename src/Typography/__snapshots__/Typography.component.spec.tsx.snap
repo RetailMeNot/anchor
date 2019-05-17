@@ -1,9 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Typography match its snapshot 1`] = `
+.c0 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
 <span
-  className="anchor-typography sc-bdVaJa kAKGQX"
+  className="anchor-typography c0"
 >
   Test text
+</span>
+`;
+
+exports[`Component: Typography should accept a custom display 1`] = `
+.c0 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  display: block;
+  text-transform: none;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="anchor-typography c0"
+  display="block"
+>
+  Text
+</span>
+`;
+
+exports[`Component: Typography should accept a custom lineHeight 1`] = `
+.c0 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+  line-height: 3rem;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="anchor-typography c0"
+>
+  Text
+</span>
+`;
+
+exports[`Component: Typography should accept a custom size 1`] = `
+.c0 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 2rem;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="anchor-typography c0"
+  size={2}
+>
+  Text
 </span>
 `;
