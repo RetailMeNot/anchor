@@ -26,8 +26,7 @@ const DefaultProps: DividerProps = {};
 
 export const Divider = ({
     className,
-    children,
-}: DividerProps = DefaultProps): React.ReactElement<any> => (
+}: DividerProps): React.ReactElement<any> => (
     <StyledDivider className={classNames('anchor-list-divider', className)} />
 );
 

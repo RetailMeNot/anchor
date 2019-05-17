@@ -6,13 +6,12 @@ import { Divider } from './Divider.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
-// TEST SETUP
-const subject = <Divider />;
-const wrapper = mount(subject);
-const component = shallow(subject);
-
 describe('Component: Divider', () => {
     it('should be defined', () => {
+        const subject = <Divider />;
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
         /* tslint:disable */
         console.log(subject);
         console.log(wrapper.debug());

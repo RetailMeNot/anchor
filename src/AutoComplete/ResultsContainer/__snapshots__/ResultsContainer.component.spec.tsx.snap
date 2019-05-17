@@ -1,11 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
+<div
+  className="anchor-auto-complete-results-container sc-ifAKCX OaKqT"
+>
+  <div
+    className="auto-complete-results"
+  >
+    <a
+      className="anchor-list-item sc-bdVaJa kbqFBH"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <p
+        className="anchor-typography sc-dnqmqq jieFXo"
+        color="charcoal"
+      >
+        Result Item 1
+      </p>
+    </a>
+    <a
+      className="anchor-list-item sc-bdVaJa kbqFBH"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <p
+        className="anchor-typography sc-iwsKbI eHJPYG"
+        color="charcoal"
+      >
+        Result Item 2
+      </p>
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Component: ResultsContainer should be defined 1`] = `
 <div
   className="anchor-auto-complete-results-container sc-ifAKCX OaKqT"
 >
   <div
     className="anchor-list auto-complete-results sc-bxivhb cgDDEg"
-  />
+  >
+    <a
+      className="anchor-list-item sc-bdVaJa kbqFBH"
+      label="Result Item 1"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <p
+        className="anchor-typography sc-gzVnrw kEzkJo"
+        color="charcoal"
+      >
+        Result Item 1
+      </p>
+    </a>
+    <a
+      className="anchor-list-item sc-bdVaJa kbqFBH"
+      label="Result Item 2"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <p
+        className="anchor-typography sc-htoDjs bogUXD"
+        color="charcoal"
+      >
+        Result Item 2
+      </p>
+    </a>
+  </div>
 </div>
 `;
