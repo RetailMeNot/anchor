@@ -202,8 +202,6 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   <span
     className="anchor-icon star c2"
@@ -431,8 +429,6 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   <span
     className="anchor-icon star c2"
@@ -632,8 +628,6 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -802,8 +796,6 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -987,8 +979,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -1169,8 +1159,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -1361,8 +1349,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -1520,8 +1506,6 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -1671,8 +1655,6 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -1834,8 +1816,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -1993,8 +1973,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -2163,8 +2141,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -2306,8 +2282,6 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -2447,8 +2421,6 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -2604,8 +2576,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -2759,8 +2729,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -2925,8 +2893,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -3112,8 +3078,6 @@ exports[`Component: Button Sizes should render a large button 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -3311,8 +3275,6 @@ exports[`Component: Button Sizes should render a small button 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={2.5}
-  size="small"
 >
   <div
     className="c2"
@@ -3500,8 +3462,6 @@ exports[`Component: Button Sizes should render an xlarge button 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3.5}
-  size="xlarge"
 >
   Text
 </button>
@@ -3703,8 +3663,6 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={2}
-  size="xsmall"
 >
   <div
     className="c2"
@@ -3827,8 +3785,6 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -3941,8 +3897,6 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -4066,8 +4020,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4187,8 +4139,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4319,8 +4269,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4425,8 +4373,6 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -4524,8 +4470,6 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -4635,8 +4579,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4742,8 +4684,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4860,8 +4800,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -4955,8 +4893,6 @@ exports[`Component: Button Variant: Primary should accept a color theme name 1`]
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -5020,8 +4956,6 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 <button
   className="anchor-button c0 c1"
   disabled={true}
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -5095,8 +5029,6 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -5161,8 +5093,6 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
 </button>
@@ -5250,8 +5180,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -5335,8 +5263,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -5431,8 +5357,6 @@ Array [
 
 <button
     className="anchor-button c0 c1"
-    height={3}
-    size="large"
   >
     Text
   </button>,
@@ -5540,8 +5464,6 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Text
   <div
@@ -5647,8 +5569,6 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   <span
     className="anchor-icon star c2"
@@ -5738,8 +5658,6 @@ exports[`Component: Button should be defined 1`] = `
 
 <button
   className="anchor-button c0 c1"
-  height={3}
-  size="large"
 >
   Submit
 </button>

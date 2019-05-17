@@ -42,15 +42,16 @@ interface ButtonProps {
 
 interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
-    height: number;
     borderRadius: string;
-
     buttonStyles: ButtonStyles;
+
+    // named this way to avoid applying html attributes
+    $height: number;
+    $size: ButtonSize;
 
     // make nonnullable
     colorTheme: Theme;
     variant: Variant;
-    size: ButtonSize;
 }
 
 const themeDefaults = {
@@ -340,37 +341,37 @@ const StyledButton = styled.button<StyledButtonProps>`
             : buttonStyles.base}
 
     /* Sizing */
-    padding: ${({ size, circular, iconOnly }: StyledButtonProps) =>
+    padding: ${({ $size, circular, iconOnly }: StyledButtonProps) =>
         iconOnly
             ? '0'
             : `0 ${
                   circular
-                      ? dimensions[size].circularPadding
-                      : dimensions[size].padding
+                      ? dimensions[$size].circularPadding
+                      : dimensions[$size].padding
               }rem`};
-    font-size: ${({ size }) => dimensions[size].fontSize}rem;
-    height: ${({ height }) => height}rem;
-    ${({ size, minWidth, iconOnly, height, block }: StyledButtonProps) =>
+    font-size: ${({ $size }) => dimensions[$size].fontSize}rem;
+    height: ${({ $height }) => $height}rem;
+    ${({ $size, minWidth, iconOnly, $height, block }: StyledButtonProps) =>
         iconOnly
             ? css`
                   // Make it a square
-                  width: ${height}rem;
+                  width: ${$height}rem;
               `
             : block
             ? css`
                   width: 100%;
               `
             : css`
-                  min-width: ${minWidth || `${dimensions[size].width}rem`};
+                  min-width: ${minWidth || `${dimensions[$size].width}rem`};
               `}
 
-    ${({ icon, iconOnly, size }: StyledButtonProps) =>
+    ${({ icon, iconOnly, $size }: StyledButtonProps) =>
         icon &&
         !iconOnly &&
         css`
             // Space icon from text
             & > .anchor-icon {
-                margin-right: ${size === 'xlarge' || size === 'large'
+                margin-right: ${$size === 'xlarge' || $size === 'large'
                     ? 0.5
                     : 0.375}rem;
             }
@@ -501,10 +502,10 @@ export const Button = ({
         <StyledButton
             className={classNames('anchor-button', className)}
             flip={flip}
-            size={size}
             colorTheme={colorTheme}
             reverse={reverse}
-            height={height}
+            $height={height}
+            $size={size}
             icon={Icon}
             iconOnly={iconOnly}
             circular={circular}
