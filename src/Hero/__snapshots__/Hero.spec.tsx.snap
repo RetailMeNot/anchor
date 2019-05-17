@@ -2,22 +2,22 @@
 
 exports[`Component: Hero should be defined 1`] = `
 <section
-  className="anchor-hero sc-jlyJG AeRNs"
+  className="anchor-hero sc-gipzik fqnMqj"
 />
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
 <section
-  className="anchor-hero sc-jlyJG AeRNs"
+  className="anchor-hero sc-gipzik fqnMqj"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-fAjcbJ dbHCSs"
+    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-caSCKo jgTECj"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-caSCKo dgKdnK"
+    className="anchor-typography sc-gisBJw bGdbKe"
   >
     Some Typography text
   </span>
@@ -31,10 +31,10 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 exports[`Component: Hero should render with title 1`] = `
 <section
-  className="anchor-hero sc-jlyJG AeRNs"
+  className="anchor-hero sc-gipzik fqnMqj"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-fMiknA gjdtJO"
+    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-dVhcbM jMfNJo"
     scale={32}
   >
     Hero Title
@@ -44,16 +44,16 @@ exports[`Component: Hero should render with title 1`] = `
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
 <section
-  className="anchor-hero sc-jlyJG AeRNs"
+  className="anchor-hero sc-gipzik fqnMqj"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-dVhcbM jMfNJo"
+    className="anchor-typography anchor-hero-title sc-csuQGl jAXjpX sc-eqIVtm eeazzE"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-csuQGl cpNBFN sc-eqIVtm gyDLrA"
+    className="anchor-typography anchor-hero-subtitle sc-Rmtcm KPeEa sc-fAjcbJ dBoqIT"
     scale={18}
   >
     Hero Subtitle
