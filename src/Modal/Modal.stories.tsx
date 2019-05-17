@@ -200,11 +200,11 @@ storiesOf('Components/Modal', module)
                                 block
                                 circular
                                 variant="minimal"
-                                colorTheme="flashPink"
+                                colorTheme={colors.flashPink}
                             >
                                 Decline
                             </Button>
-                            <Button block circular colorTheme="flashPink">
+                            <Button block circular colorTheme={colors.flashPink}>
                                 Accept
                             </Button>
                         </Footer>

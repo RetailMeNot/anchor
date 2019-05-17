@@ -324,14 +324,14 @@ storiesOf('Components/Button', module)
                         <Label>default</Label>
                     </Cell>
                     <Cell>
-                        <Button colorTheme="dealEnvy">CTA</Button>
+                        <Button colorTheme={colors.dealEnvy}>CTA</Button>
                     </Cell>
 
                     <Cell>
                         <Label>button with flip</Label>
                     </Cell>
                     <Cell>
-                        <Button colorTheme="dealEnvy" flip>
+                        <Button colorTheme={colors.dealEnvy} flip>
                             CTA
                         </Button>
                     </Cell>
@@ -340,7 +340,7 @@ storiesOf('Components/Button', module)
                         <Label>hover</Label>
                     </Cell>
                     <Cell>
-                        <Button colorTheme="dealEnvy" forceHover>
+                        <Button colorTheme={colors.dealEnvy} forceHover>
                             CTA
                         </Button>
                     </Cell>
@@ -349,7 +349,7 @@ storiesOf('Components/Button', module)
                         <Label>hover with flip</Label>
                     </Cell>
                     <Cell>
-                        <Button colorTheme="dealEnvy" flip forceHover>
+                        <Button colorTheme={colors.dealEnvy} flip forceHover>
                             CTA
                         </Button>
                     </Cell>
@@ -358,7 +358,7 @@ storiesOf('Components/Button', module)
                         <Label>disabled</Label>
                     </Cell>
                     <Cell>
-                        <Button colorTheme="dealEnvy" disabled>
+                        <Button colorTheme={colors.dealEnvy} disabled>
                             CTA
                         </Button>
                     </Cell>
@@ -624,7 +624,7 @@ storiesOf('Components/Button', module)
                     <Label>default</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" colorTheme="dealEnvy">
+                    <Button variant="outline" colorTheme={colors.dealEnvy}>
                         CTA
                     </Button>
                 </Cell>
@@ -633,7 +633,7 @@ storiesOf('Components/Button', module)
                     <Label>hover</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" colorTheme="dealEnvy" forceHover>
+                    <Button variant="outline" colorTheme={colors.dealEnvy} forceHover>
                         CTA
                     </Button>
                 </Cell>
@@ -642,7 +642,7 @@ storiesOf('Components/Button', module)
                     <Label>disabled</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" colorTheme="dealEnvy" disabled>
+                    <Button variant="outline" colorTheme={colors.dealEnvy} disabled>
                         CTA
                     </Button>
                 </Cell>
@@ -907,7 +907,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 200 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" colorTheme="dealEnvy">
+                    <Button variant="minimal" colorTheme={colors.dealEnvy}>
                         CTA
                     </Button>
                 </Cell>
@@ -916,7 +916,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" colorTheme="dealEnvy">
+                    <Button variant="minimal" colorTheme={colors.dealEnvy}>
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -927,7 +927,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Button
                         variant="minimal"
-                        colorTheme="dealEnvy"
+                        colorTheme={colors.dealEnvy}
                         minWidth="7rem"
                     >
                         CTA
@@ -938,7 +938,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" colorTheme="dealEnvy" icon={Cut}>
+                    <Button variant="minimal" colorTheme={colors.dealEnvy} icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>

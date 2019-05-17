@@ -6,7 +6,6 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { transparentize } from 'polished';
 // ANCHOR
 import { colors, fonts, sizes } from '../theme';
-import { Colors } from '../Typography/Typography.component';
 import { Theme, TRANSITION_SPEED } from './utils';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
@@ -24,7 +23,7 @@ interface ButtonProps {
     margin?: string;
 
     flip?: boolean;
-    colorTheme?: Theme | Colors;
+    colorTheme?: Theme;
     minWidth?: string;
     block?: boolean;
     icon?: any;
@@ -486,10 +485,6 @@ export const Button = ({
         : sizes.border.radius.base;
     const width = iconOnly ? dimensions[size].height : dimensions[size].width;
 
-    // find theme from string, otherwise use defaults
-    if (typeof colorTheme === 'string') {
-        colorTheme = colors[colorTheme];
-    }
     if (!colorTheme) {
         colorTheme = reverse
             ? reverseDefaults[variant]
@@ -516,6 +511,9 @@ export const Button = ({
             buttonStyles={buttonStyles}
             {...props}
         >
+            {/* Caveat: If the width was set to below 3rem, but the button ended up
+                being wider (because wide contents) then a horizontal hitbox could
+                be added to the button when it isn't needed. */}
             {(height < 3 || width < 3) && (
                 <HitArea buttonHeight={height} buttonWidth={width} />
             )}

@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // ANCHOR
 import { Star } from '..';
+import { colors } from '../theme';
 // COMPONENT
 import { Button } from './Button.component';
 // ENZYME
@@ -91,9 +92,9 @@ describe('Component: Button', () => {
             expect(tree).toMatchSnapshot();
         });
 
-        it('should accept a color theme name', () => {
+        it('should accept a color theme', () => {
             const subject = (
-                <Button variant="primary" colorTheme="dealEnvy">
+                <Button variant="primary" colorTheme={colors.dealEnvy}>
                     Text
                 </Button>
             );

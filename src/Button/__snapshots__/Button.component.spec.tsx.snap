@@ -4806,7 +4806,7 @@ Array [
 ]
 `;
 
-exports[`Component: Button Variant: Primary should accept a color theme name 1`] = `
+exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 .c2 + .c0 {
   margin-left: 1rem;
 }

@@ -4,7 +4,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css } from 'styled-components';
 // THEME
-import { fonts, colors } from '../theme';
+import { fonts, colors, Color } from '../theme';
 
 type Elements =
     | 'a'
@@ -21,23 +21,6 @@ type Elements =
     | 'code'
     | 'label'
     | 'pre';
-
-export type Colors =
-    | 'charcoal'
-    | 'ash'
-    | 'silver'
-    | 'lavenderWhispers'
-    | 'white'
-    | 'grapePurchase'
-    | 'savvyCyan'
-    | 'tealBreaker'
-    | 'dealEnvy'
-    | 'flashPink'
-    | 'cyberMango'
-    | 'goldMine'
-    | 'fireSale'
-    | 'error'
-    | 'success';
 
 type FontWeights =
     | 'normal'
@@ -100,7 +83,7 @@ export interface TypographyProps {
     href?: string;
     children?: any;
     weight?: FontWeights;
-    color?: 'inherit' | 'initital' | Colors;
+    color?: 'inherit' | 'initital' | Color;
     hue?: 'light' | 'base' | 'dark';
     size?: number;
     lineHeight?: number;
