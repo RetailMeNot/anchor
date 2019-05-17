@@ -4,19 +4,16 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { transparentize } from 'polished';
-// THEME
+// ANCHOR
 import { colors, fonts, sizes } from '../theme';
 import { Colors } from '../Typography/Typography.component';
+import { Theme, TRANSITION_SPEED } from './utils';
+import { Flip } from './Flip';
+import { HitArea } from './HitArea';
 
 type Variant = 'primary' | 'outline' | 'minimal';
 
 type ButtonSize = 'xlarge' | 'large' | 'small' | 'xsmall';
-
-interface Theme {
-    base: string;
-    light: string;
-    dark: string;
-}
 
 interface ButtonProps {
     children?: any;
@@ -114,8 +111,6 @@ const dimensions = {
         fontSize: 1,
     },
 };
-
-const transitionSpeed = `500ms`;
 
 interface ButtonStyles {
     base: FlattenSimpleInterpolation;
@@ -325,10 +320,10 @@ const StyledButton = styled.button<StyledButtonProps>`
             }
         `};
 
-	transition: ${transitionSpeed} ease background-color,
-                ${transitionSpeed} ease border-color,
-                ${transitionSpeed} ease color,
-                ${transitionSpeed} ease fill;
+	transition: ${TRANSITION_SPEED} ease background-color,
+                ${TRANSITION_SPEED} ease border-color,
+                ${TRANSITION_SPEED} ease color,
+                ${TRANSITION_SPEED} ease fill;
 
 	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
 	// Firefox.
@@ -461,60 +456,6 @@ const StyledButton = styled.button<StyledButtonProps>`
         `}
 `;
 
-interface StyledHitboxProps {
-    buttonHeight: number;
-    buttonWidth?: number;
-}
-
-const StyledHitbox = styled.div<StyledHitboxProps>`
-    position: absolute;
-
-    // overlap border
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-
-    // expand using margin to get to 3 rem tall and wide
-    margin: ${({ buttonHeight, buttonWidth }: StyledHitboxProps) =>
-        `-${(3 - buttonHeight) / 2}rem ${
-            buttonWidth && buttonWidth < 3
-                ? `-${(3 - buttonWidth) / 2}rem`
-                : '0'
-        }`};
-`;
-
-interface StyledFlipProps {
-    flipColor: string;
-}
-
-const StyledFlip = styled.div<StyledFlipProps>`
-    border-top-right-radius: ${sizes.border.radius.base};
-    border-bottom-left-radius: ${sizes.border.radius.base};
-
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    width: 1.25rem;
-    height: 1.25rem;
-    content: '';
-
-    transition: ${transitionSpeed} ease opacity;
-    background: linear-gradient(
-        45deg,
-        ${({ flipColor }) => flipColor},
-        ${({ flipColor }) => flipColor} 50%,
-        ${colors.silver.base} 0
-    );
-`;
-
-const Flip = ({ colorTheme }: { colorTheme: Theme }) => (
-    <React.Fragment>
-        <StyledFlip flipColor={colorTheme.base} />
-        <StyledFlip className="flip-base" flipColor={colorTheme.light} />
-    </React.Fragment>
-);
-
 export const Button = ({
     className,
     flip = false,
@@ -575,7 +516,7 @@ export const Button = ({
             {...props}
         >
             {(height < 3 || width < 3) && (
-                <StyledHitbox buttonHeight={height} buttonWidth={width} />
+                <HitArea buttonHeight={height} buttonWidth={width} />
             )}
             {Icon && <Icon scale={iconScale} />}
             {children}
