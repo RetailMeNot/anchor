@@ -204,7 +204,11 @@ storiesOf('Components/Modal', module)
                             >
                                 Decline
                             </Button>
-                            <Button block circular colorTheme={colors.flashPink}>
+                            <Button
+                                block
+                                circular
+                                colorTheme={colors.flashPink}
+                            >
                                 Accept
                             </Button>
                         </Footer>

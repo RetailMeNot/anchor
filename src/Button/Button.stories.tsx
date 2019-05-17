@@ -3,6 +3,7 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { boolean, text, select } from '@storybook/addon-knobs';
 // import { text, boolean } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
@@ -10,7 +11,9 @@ import styled from 'styled-components';
 import * as README from './README.md';
 // COMPONENT
 import { Button } from './Button.component';
-import { Typography, Cell, Grid, Cut, SuccessOutline, colors } from '..';
+import * as Icon from '../Icon';
+import { Typography, Cell, Grid, Cut, SuccessOutline } from '..';
+import { colors } from '../theme';
 
 const StyledStory = styled.div`
     padding: 2rem 3rem;
@@ -633,7 +636,11 @@ storiesOf('Components/Button', module)
                     <Label>hover</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" colorTheme={colors.dealEnvy} forceHover>
+                    <Button
+                        variant="outline"
+                        colorTheme={colors.dealEnvy}
+                        forceHover
+                    >
                         CTA
                     </Button>
                 </Cell>
@@ -642,7 +649,11 @@ storiesOf('Components/Button', module)
                     <Label>disabled</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" colorTheme={colors.dealEnvy} disabled>
+                    <Button
+                        variant="outline"
+                        colorTheme={colors.dealEnvy}
+                        disabled
+                    >
                         CTA
                     </Button>
                 </Cell>
@@ -938,7 +949,11 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" colorTheme={colors.dealEnvy} icon={Cut}>
+                    <Button
+                        variant="minimal"
+                        colorTheme={colors.dealEnvy}
+                        icon={Cut}
+                    >
                         {' '}
                         CTA Text
                     </Button>
@@ -2192,4 +2207,64 @@ storiesOf('Components/Button', module)
                 </Cell>
             </Grid>
         </StyledReverseStory>
-    ));
+    ))
+    .add('Button with Knobs', () => {
+        const chosenIcon = select(
+            'icon',
+            ['none', ...Object.keys(Icon)],
+            'none'
+        );
+        const chosenColor = select(
+            'colorTheme',
+            ['default', ...Object.keys(colors)],
+            'default'
+        );
+        const buttonText = text('Text', 'Modify Me');
+        const minWidth = text('minWidth', '');
+        const margin = text('margin', '');
+        const chosenSize = select(
+            'size',
+            ['xlarge', 'large', 'small', 'xsmall'],
+            'large'
+        );
+        const chosenVariant = select(
+            'variant',
+            ['primary', 'outline', 'minimal'],
+            'primary'
+        );
+        const isReversed = boolean('reverse', false);
+
+        const StoryComponent = isReversed ? StyledReverseStory : StyledStory;
+
+        return (
+            <StoryComponent>
+                <Typography tag="h2" weight={'bold'}>
+                    Configure me
+                </Typography>
+
+                <Button
+                    variant={chosenVariant}
+                    size={chosenSize}
+                    forceActive={boolean('force-state: active', false)}
+                    forceFocus={boolean('force-state: focus', false)}
+                    forceHover={boolean('force-state: hover', false)}
+                    reverse={isReversed}
+                    block={boolean('block', false)}
+                    flip={boolean('flip', false)}
+                    circular={boolean('circular', false)}
+                    disabled={boolean('disabled', false)}
+                    revealed={boolean('revealed', false)}
+                    minWidth={minWidth ? minWidth : undefined}
+                    margin={margin ? margin : undefined}
+                    colorTheme={
+                        chosenColor === 'default'
+                            ? undefined
+                            : colors[chosenColor]
+                    }
+                    icon={chosenIcon === 'none' ? undefined : Icon[chosenIcon]}
+                >
+                    {buttonText ? buttonText : undefined}
+                </Button>
+            </StoryComponent>
+        );
+    });
