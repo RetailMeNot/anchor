@@ -461,16 +461,47 @@ export const Button = ({
     flip = false,
     variant = 'primary',
     size = 'large',
+    block,
     disabled,
     revealed,
     colorTheme,
     reverse,
     circular,
     children,
+    minWidth,
     icon: Icon,
     ...props
 }: ButtonProps): React.ReactElement<ButtonProps> => {
     const iconOnly = Icon && React.Children.count(children) === 0;
+
+    /* tslint:disable no-console */
+    if (flip && circular) {
+        console.warn(
+            "Buttons should not have both 'flip' and 'circular' props."
+        );
+    }
+    if (flip && reverse) {
+        console.warn(
+            "Buttons should not have both 'flip' and 'reverse' props."
+        );
+    }
+    if (flip && disabled) {
+        console.warn(
+            "Buttons with 'flip' are not meant to be 'disabled'. Did you mean to make it 'revealed'?"
+        );
+    }
+    if (iconOnly && minWidth) {
+        console.warn("Button is icon-only so 'minWidth' prop will be ignored.");
+    }
+    if (iconOnly && block) {
+        console.warn("Button is icon-only so 'block' prop will be ignored.");
+    }
+    if (block && minWidth) {
+        console.warn(
+            "Button has 'block' prop so 'minWidth' prop will be ignored."
+        );
+    }
+    /* tslint:enable no-console */
 
     const iconScale = iconOnly
         ? size === 'xsmall' ||
@@ -497,8 +528,10 @@ export const Button = ({
         <StyledButton
             className={classNames('anchor-button', className)}
             flip={flip}
+            block={block}
             colorTheme={colorTheme}
             reverse={reverse}
+            minWidth={minWidth}
             $height={height}
             $size={size}
             icon={Icon}
