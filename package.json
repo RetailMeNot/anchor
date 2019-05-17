@@ -88,6 +88,7 @@
     "@types/storybook__addon-options": "^3.2.3",
     "@types/storybook__react": "^4.0.1",
     "@types/styled-components": "^4.1.12",
+    "@types/styled-react-modal": "^1.2.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -128,7 +129,8 @@
     "polished": "^3.2.0",
     "react-responsive": "^6.1.1",
     "rxjs": "^6.5.1",
-    "styled-css-grid": "^1.2.1"
+    "styled-css-grid": "^1.2.1",
+    "styled-react-modal": "^1.2.1"
   },
   "engines": {
     "node": ">=8"

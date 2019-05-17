@@ -20,6 +20,7 @@ export const sizes = {
     border: {
         radius: {
             base: '3px',
+            modal: '8px',
         },
         width: {
             base: '1px',

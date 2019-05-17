@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Modal.Header should render with title 1`] = `
+.c0 {
+  box-sizing: border-box;
+  min-height: 4rem;
+  padding: 1.25rem 4.75rem 1.25rem 2rem;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  color: #595959;
+  background: #FFFFFF;
+}
+
+.c0 ~ .c2.c2 {
+  padding-top: 0;
+}
+
+.c1 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<div
+  className="anchor-modal-header c0"
+>
+  <span
+    className="anchor-typography c1"
+    scale={20}
+  >
+    Header Title
+  </span>
+</div>
+`;
