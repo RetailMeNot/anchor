@@ -24,6 +24,7 @@ interface ButtonProps {
     revealed?: boolean;
     showSpinner?: boolean;
     className?: string;
+    margin?: string;
 
     flip?: boolean;
     colorTheme?: Theme | Colors;
@@ -309,8 +310,8 @@ const StyledButton = styled.button<StyledButtonProps>`
 	font-weight: 600;
 	font-family: ${fonts.fontFamily};
 	text-align: center;
-	cursor: pointer;
-    margin-right: ${sizes.padding.md};
+    cursor: pointer;
+    margin: ${({ margin }) => margin || `0 ${sizes.margin.md} 0 0`};
     display: flex;
     justify-content: center;
     align-items: center;

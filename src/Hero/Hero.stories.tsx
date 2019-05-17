@@ -9,7 +9,7 @@ import { Typography } from '..';
 import { colors } from '../theme';
 import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
-import { Grid, CustomAdaptor, StandardBreakpoints } from '../Grid';
+import { Grid, Cell, CustomAdaptor, StandardBreakpoints } from '../Grid';
 import { Button } from '../Button';
 // SUBJECT
 import { Hero } from './Hero.component';
@@ -81,7 +81,7 @@ storiesOf('Components/Hero', module)
                     background={color('Hero Background', tealGradient)}
                     minHeight="12.5rem"
                 >
-                    <Grid gap="0.375rem" columns={1}>
+                    <Grid gap="0.75rem" columns={1} justifyContent="center" alignContent="center">
                         <StyledImageWrapper>
                             <SomeImage />
                         </StyledImageWrapper>
@@ -96,13 +96,16 @@ storiesOf('Components/Hero', module)
                                 )}
                             </Subtitle>
                         </CustomAdaptor>
-                        <Button
-                            variant="outline"
-                            reverse
-                            onClick={() => alert('Paid!')}
-                        >
-                            {text('Button Text', 'Pay Debts Today')}
-                        </Button>
+                        <Cell>
+                            <Button
+                                variant="outline"
+                                reverse
+                                onClick={() => alert('Paid!')}
+                                margin="0 auto"
+                            >
+                                {text('Button Text', 'Pay Debts Today')}
+                            </Button>
+                        </Cell>
                     </Grid>
                 </Hero>
             </StyledStory>
