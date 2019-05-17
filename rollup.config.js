@@ -35,6 +35,7 @@ const componentList = {
     form: './src/Form/index.ts',
     grid: './src/Grid/index.ts',
     hero: './src/Hero/index.ts',
+    modal: './src/Modal/index.ts',
     layout: './src/Layout/index.ts',
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',

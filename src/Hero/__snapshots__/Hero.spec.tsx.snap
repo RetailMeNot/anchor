@@ -11,13 +11,13 @@ exports[`Component: Hero should render with custom content 1`] = `
   className="anchor-hero sc-jlyJG AeRNs"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-jhAzac fPAiMF"
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-fAjcbJ dbHCSs"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-fBuWsC eYerYp"
+    className="anchor-typography sc-caSCKo dgKdnK"
   >
     Some Typography text
   </span>
@@ -34,7 +34,7 @@ exports[`Component: Hero should render with title 1`] = `
   className="anchor-hero sc-jlyJG AeRNs"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-Rmtcm gGPFn"
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-fMiknA gjdtJO"
     scale={32}
   >
     Hero Title
@@ -47,13 +47,13 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   className="anchor-hero sc-jlyJG AeRNs"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-bRBYWo dZpDpm"
+    className="anchor-typography anchor-hero-title sc-gipzik gdVWic sc-dVhcbM jMfNJo"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-csuQGl cpNBFN sc-hzDkRC bdwMZL"
+    className="anchor-typography anchor-hero-subtitle sc-csuQGl cpNBFN sc-eqIVtm gyDLrA"
     scale={18}
   >
     Hero Subtitle
