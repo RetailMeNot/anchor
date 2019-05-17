@@ -81,7 +81,12 @@ storiesOf('Components/Hero', module)
                     background={color('Hero Background', tealGradient)}
                     minHeight="12.5rem"
                 >
-                    <Grid gap="0.75rem" columns={1} justifyContent="center" alignContent="center">
+                    <Grid
+                        gap="0.75rem"
+                        columns={1}
+                        justifyContent="center"
+                        alignContent="center"
+                    >
                         <StyledImageWrapper>
                             <SomeImage />
                         </StyledImageWrapper>

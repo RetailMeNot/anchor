@@ -5,7 +5,7 @@ import * as React from 'react';
 import { sizes } from '../../theme/sizes.theme';
 
 // VENDOR
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
 export const StyledFooter = styled.div<ModalFooterProps>`
@@ -13,6 +13,13 @@ export const StyledFooter = styled.div<ModalFooterProps>`
     width: 100%;
     border-radius: 0 0 ${sizes.border.radius.modal} ${sizes.border.radius.modal};
     margin-top: auto;
+    ${({ padding }) =>
+        padding &&
+        css`
+            && {
+                padding: ${padding};
+            }
+        `};
 
     display: flex;
     justify-content: center;
@@ -28,6 +35,7 @@ export interface ModalFooterProps {
     children?: any;
     className?: string;
     background?: string;
+    padding?: string;
 }
 
 export const ModalFooter = ({

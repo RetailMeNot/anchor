@@ -311,11 +311,19 @@ const StyledButton = styled.button<StyledButtonProps>`
 	font-family: ${fonts.fontFamily};
 	text-align: center;
     cursor: pointer;
-    margin: ${({ margin }) => margin || `0 ${sizes.margin.md} 0 0`};
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none !important;
+
+    margin: ${({ margin }: StyledButtonProps) => margin || `0`};
+    ${({ block, margin }: StyledButtonProps) =>
+        !margin &&
+        css`
+            & + & {
+                margin-left: ${block ? sizes.margin.sm : sizes.margin.md};
+            }
+        `};
 
 	transition: ${transitionSpeed} ease background-color,
                 ${transitionSpeed} ease border-color,
@@ -327,9 +335,14 @@ const StyledButton = styled.button<StyledButtonProps>`
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* Variants are color schemes */
+    /* Base and Disabled Styles */
     ${({ disabled, buttonStyles }: StyledButtonProps) =>
-        disabled ? buttonStyles.disabled : buttonStyles.base}
+        disabled
+            ? css`
+                  ${buttonStyles.disabled}
+                  cursor: not-allowed;
+              `
+            : buttonStyles.base}
 
     /* Sizing */
     padding: ${({ size, circular, iconOnly }: StyledButtonProps) =>
@@ -342,11 +355,15 @@ const StyledButton = styled.button<StyledButtonProps>`
               }rem`};
     font-size: ${({ size }) => dimensions[size].fontSize}rem;
     height: ${({ height }) => height}rem;
-    ${({ size, minWidth, iconOnly, height }: StyledButtonProps) =>
+    ${({ size, minWidth, iconOnly, height, block }: StyledButtonProps) =>
         iconOnly
             ? css`
                   // Make it a square
                   width: ${height}rem;
+              `
+            : block
+            ? css`
+                  width: 100%;
               `
             : css`
                   min-width: ${minWidth || `${dimensions[size].width}rem`};
@@ -362,21 +379,6 @@ const StyledButton = styled.button<StyledButtonProps>`
                     ? 0.5
                     : 0.375}rem;
             }
-        `}
-
-    /* Block sizing */
-    ${({ block }: StyledButtonProps) =>
-        block &&
-        css`
-            display: block;
-            width: 100%;
-        `}
-
-    /* Disabled State */
-    ${({ disabled }: StyledButtonProps) =>
-        disabled &&
-        css`
-            cursor: not-allowed;
         `}
 
     /* Hover styles */

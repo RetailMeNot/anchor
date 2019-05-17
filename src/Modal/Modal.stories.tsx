@@ -47,12 +47,13 @@ storiesOf('Components/Modal', module)
                         <Content>Stuff in the middle</Content>
                         <Footer>
                             <Button
+                                block
                                 onClick={() => setIsOpen(false)}
                                 variant="outline"
                             >
                                 Decline
                             </Button>
-                            <Button onClick={() => setIsOpen(false)}>
+                            <Button block onClick={() => setIsOpen(false)}>
                                 Accept
                             </Button>
                         </Footer>
@@ -195,8 +196,17 @@ storiesOf('Components/Modal', module)
                             </Typography>
                         </Content>
                         <Footer>
-                            <Button variant="outline">Decline</Button>
-                            <Button>Accept</Button>
+                            <Button
+                                block
+                                circular
+                                variant="minimal"
+                                colorTheme="flashPink"
+                            >
+                                Decline
+                            </Button>
+                            <Button block circular colorTheme="flashPink">
+                                Accept
+                            </Button>
                         </Footer>
                     </Modal>
                 </StyledStory>

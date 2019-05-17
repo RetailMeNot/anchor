@@ -2,27 +2,27 @@
 
 exports[`Component: Hero should be defined 1`] = `
 <section
-  className="anchor-hero sc-csuQGl cSfJBF"
+  className="anchor-hero sc-Rmtcm cMIHaF"
 />
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
 <section
-  className="anchor-hero sc-csuQGl cSfJBF"
+  className="anchor-hero sc-Rmtcm cMIHaF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-gisBJw bPSpRH"
+    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-kjoXOD kXULpW"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-kjoXOD iIctxt"
+    className="anchor-typography sc-cHGsZl iNgNYd"
   >
     Some Typography text
   </span>
   <button
-    className="anchor-button sc-gqjmRU knscE"
+    className="anchor-button sc-gqjmRU gQNdXw"
     height={3}
     size="large"
   >
@@ -33,10 +33,10 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 exports[`Component: Hero should render with title 1`] = `
 <section
-  className="anchor-hero sc-csuQGl cSfJBF"
+  className="anchor-hero sc-Rmtcm cMIHaF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-eqIVtm eeazzE"
+    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-fAjcbJ dbHCSs"
     scale={32}
   >
     Hero Title
@@ -46,16 +46,16 @@ exports[`Component: Hero should render with title 1`] = `
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
 <section
-  className="anchor-hero sc-csuQGl cSfJBF"
+  className="anchor-hero sc-Rmtcm cMIHaF"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-Rmtcm ewgNyG sc-fAjcbJ dbHCSs"
+    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-caSCKo jgTECj"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-bRBYWo kgkhic sc-caSCKo dScIep"
+    className="anchor-typography anchor-hero-subtitle sc-hzDkRC iZdeor sc-gisBJw dGDiUk"
     scale={18}
   >
     Hero Subtitle
