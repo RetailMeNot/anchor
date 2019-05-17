@@ -5,3 +5,11 @@ exports[`Component: Item should be defined 1`] = `
   className="anchor-menu-item sc-bdVaJa dlTGkF"
 />
 `;
+
+exports[`Component: Item should render with label 1`] = `
+<a
+  className="anchor-menu-item sc-bdVaJa dlTGkF"
+>
+  label
+</a>
+`;

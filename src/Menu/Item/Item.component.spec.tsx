@@ -6,24 +6,24 @@ import { Item } from './Item.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
-// TEST SETUP
-const subject = <Item path="/" />;
-const wrapper = mount(subject);
-const component = shallow(subject);
-
 describe('Component: Item', () => {
     it('should be defined', () => {
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
+        const subject = <Item path="/" />;
+        const wrapper = mount(subject);
+        const component = shallow(subject);
 
-        /* tslint:enable */
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();
-        const tree = renderer.create(subject).toJSON();
 
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with label', () => {
+        const subject = <Item path="/" label="label" />;
+
+        const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

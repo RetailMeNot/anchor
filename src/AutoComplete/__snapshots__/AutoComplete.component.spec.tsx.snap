@@ -24,6 +24,120 @@ exports[`Component: AutoComplete should be defined 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
+          placeholder="Search..."
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component: AutoComplete should render with a shadow 1`] = `
+<div
+  className="anchor-auto-complete sc-dnqmqq hWkEtg"
+  color="#595959"
+>
+  <div
+    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    onClick={[Function]}
+    size="lg"
+  >
+    <div
+      className="anchor-grid Grid__Grid-bojwg hIksjk"
+    >
+      <div
+        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+      >
+        <input
+          className="sc-bxivhb fYuLjj"
+          name="auto-complete"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
+<div
+  className="anchor-auto-complete sc-dnqmqq ijoWDl"
+  color="#595959"
+>
+  <div
+    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    onClick={[Function]}
+    size="lg"
+  >
+    <div
+      className="anchor-grid Grid__Grid-bojwg cutIDT"
+    >
+      <div
+        className="Cell__Cell-jsYrZv sc-bdVaJa ipDBmH"
+      >
+        <div>
+          prefix
+        </div>
+      </div>
+      <div
+        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+      >
+        <input
+          className="sc-bxivhb fYuLjj"
+          name="auto-complete"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="Cell__Cell-jsYrZv sc-bdVaJa ipDBmH"
+      >
+        <div>
+          suffix
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component: AutoComplete should render without a border 1`] = `
+<div
+  className="anchor-auto-complete sc-dnqmqq kggxia"
+  color="#595959"
+>
+  <div
+    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    onClick={[Function]}
+    size="lg"
+  >
+    <div
+      className="anchor-grid Grid__Grid-bojwg hIksjk"
+    >
+      <div
+        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+      >
+        <input
+          className="sc-bxivhb fYuLjj"
+          name="auto-complete"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
           type="text"
           value=""
         />

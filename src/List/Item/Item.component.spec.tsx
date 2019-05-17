@@ -7,7 +7,15 @@ import { Item } from './Item.component';
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Item>Item</Item>;
+const subject = (
+    <Item
+        onSelect={() => null}
+        onMouseOver={() => null}
+        onMouseOut={() => null}
+    >
+        Item
+    </Item>
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 
