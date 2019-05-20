@@ -3,7 +3,7 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, select } from '@storybook/addon-knobs';
+import { boolean, text, select, number } from '@storybook/addon-knobs';
 // import { text, boolean } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
@@ -84,21 +84,21 @@ storiesOf('Components/Button', module)
                         <Label>min width - 200 px</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xlarge">CTA</Button>
+                        <Button size="xl">CTA</Button>
                     </Cell>
 
                     <Cell>
                         <Label>flex width</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xlarge">I'm a very long CTA Text</Button>
+                        <Button size="xl">I'm a very long CTA Text</Button>
                     </Cell>
 
                     <Cell>
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xlarge" icon={Cut}>
+                        <Button size="xl" icon={Cut}>
                             {' '}
                             CTA Text
                         </Button>
@@ -117,21 +117,21 @@ storiesOf('Components/Button', module)
                         <Label>min width - 200 px</Label>
                     </Cell>
                     <Cell>
-                        <Button size="large">CTA</Button>
+                        <Button size="lg">CTA</Button>
                     </Cell>
 
                     <Cell>
                         <Label>flex width</Label>
                     </Cell>
                     <Cell>
-                        <Button size="large">I'm a very long CTA Text</Button>
+                        <Button size="lg">I'm a very long CTA Text</Button>
                     </Cell>
 
                     <Cell>
                         <Label>button with flip</Label>
                     </Cell>
                     <Cell>
-                        <Button size="large" flip>
+                        <Button size="lg" flip>
                             CTA
                         </Button>
                     </Cell>
@@ -140,7 +140,7 @@ storiesOf('Components/Button', module)
                         <Label>min width - 112px</Label>
                     </Cell>
                     <Cell>
-                        <Button size="large" minWidth="7rem">
+                        <Button size="lg" minWidth="7rem">
                             CTA
                         </Button>
                     </Cell>
@@ -149,7 +149,7 @@ storiesOf('Components/Button', module)
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="large" icon={Cut}>
+                        <Button size="lg" icon={Cut}>
                             {' '}
                             CTA Text
                         </Button>
@@ -168,21 +168,21 @@ storiesOf('Components/Button', module)
                         <Label>min width - 80 px</Label>
                     </Cell>
                     <Cell>
-                        <Button size="small">CTA</Button>
+                        <Button size="sm">CTA</Button>
                     </Cell>
 
                     <Cell>
                         <Label>flex width</Label>
                     </Cell>
                     <Cell>
-                        <Button size="small">I'm a very long CTA Text</Button>
+                        <Button size="sm">I'm a very long CTA Text</Button>
                     </Cell>
 
                     <Cell>
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="small" icon={Cut}>
+                        <Button size="sm" icon={Cut}>
                             {' '}
                             CTA Text
                         </Button>
@@ -201,21 +201,21 @@ storiesOf('Components/Button', module)
                         <Label>min width - 64 px</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xsmall">CTA</Button>
+                        <Button size="xs">CTA</Button>
                     </Cell>
 
                     <Cell>
                         <Label>flex width</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xsmall">I'm a very long CTA Text</Button>
+                        <Button size="xs">I'm a very long CTA Text</Button>
                     </Cell>
 
                     <Cell>
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xsmall" icon={Cut}>
+                        <Button size="xs" icon={Cut}>
                             {' '}
                             CTA Text
                         </Button>
@@ -226,7 +226,7 @@ storiesOf('Components/Button', module)
                     </Cell>
                     <Cell>
                         <ShowHitbox>
-                            <Button size="xsmall" onClick={action('onClick!')}>
+                            <Button size="xs" onClick={action('onClick!')}>
                                 CTA
                             </Button>
                         </ShowHitbox>
@@ -375,12 +375,18 @@ storiesOf('Components/Button', module)
                         padding: '1rem',
                     }}
                 >
-                    <Button size="large" block>
-                        CTA
-                    </Button>
-                    <Button size="large" block disabled>
-                        CTA
-                    </Button>
+                    <Grid columns={1} gap="1rem">
+                        <Cell>
+                            <Button size="lg" block>
+                                CTA
+                            </Button>
+                        </Cell>
+                        <Cell>
+                            <Button size="lg" block disabled>
+                                CTA
+                            </Button>
+                        </Cell>
+                    </Grid>
                 </div>
             </StyledStoryPrime>
         );
@@ -403,7 +409,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 200 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xlarge">
+                    <Button variant="outline" size="xl">
                         CTA
                     </Button>
                 </Cell>
@@ -412,7 +418,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xlarge">
+                    <Button variant="outline" size="xl">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -421,7 +427,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xlarge" icon={Cut}>
+                    <Button variant="outline" size="xl" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -440,7 +446,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 200 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="large">
+                    <Button variant="outline" size="lg">
                         CTA
                     </Button>
                 </Cell>
@@ -449,7 +455,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="large">
+                    <Button variant="outline" size="lg">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -458,7 +464,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 112px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="large" minWidth="7rem">
+                    <Button variant="outline" size="lg" minWidth="7rem">
                         CTA
                     </Button>
                 </Cell>
@@ -467,7 +473,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="large" icon={Cut}>
+                    <Button variant="outline" size="lg" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -486,7 +492,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 80 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="small">
+                    <Button variant="outline" size="sm">
                         CTA
                     </Button>
                 </Cell>
@@ -495,7 +501,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="small">
+                    <Button variant="outline" size="sm">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -504,7 +510,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="small" icon={Cut}>
+                    <Button variant="outline" size="sm" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -523,7 +529,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 64 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xsmall">
+                    <Button variant="outline" size="xs">
                         CTA
                     </Button>
                 </Cell>
@@ -532,7 +538,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xsmall">
+                    <Button variant="outline" size="xs">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -541,7 +547,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xsmall" icon={Cut}>
+                    <Button variant="outline" size="xs" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -554,7 +560,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             variant="outline"
-                            size="xsmall"
+                            size="xs"
                             onClick={action('onClick!')}
                         >
                             CTA
@@ -667,12 +673,18 @@ storiesOf('Components/Button', module)
                     padding: '1rem',
                 }}
             >
-                <Button variant="outline" block>
-                    CTA
-                </Button>
-                <Button variant="outline" block disabled>
-                    CTA
-                </Button>
+                <Grid columns={1} gap="1rem">
+                    <Cell>
+                        <Button variant="outline" block>
+                            CTA
+                        </Button>
+                    </Cell>
+                    <Cell>
+                        <Button variant="outline" block disabled>
+                            CTA
+                        </Button>
+                    </Cell>
+                </Grid>
             </div>
         </StyledStoryPrime>
     ))
@@ -694,7 +706,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 200 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xlarge">
+                    <Button variant="minimal" size="xl">
                         CTA
                     </Button>
                 </Cell>
@@ -703,7 +715,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xlarge">
+                    <Button variant="minimal" size="xl">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -712,7 +724,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xlarge" icon={Cut}>
+                    <Button variant="minimal" size="xl" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -731,7 +743,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 200 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="large">
+                    <Button variant="minimal" size="lg">
                         CTA
                     </Button>
                 </Cell>
@@ -740,7 +752,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="large">
+                    <Button variant="minimal" size="lg">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -749,7 +761,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 112px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="large" minWidth="7rem">
+                    <Button variant="minimal" size="lg" minWidth="7rem">
                         CTA
                     </Button>
                 </Cell>
@@ -758,7 +770,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="large" icon={Cut}>
+                    <Button variant="minimal" size="lg" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -777,7 +789,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 80 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="small">
+                    <Button variant="minimal" size="sm">
                         CTA
                     </Button>
                 </Cell>
@@ -786,7 +798,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="small">
+                    <Button variant="minimal" size="sm">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -795,7 +807,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="small" icon={Cut}>
+                    <Button variant="minimal" size="sm" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -814,7 +826,7 @@ storiesOf('Components/Button', module)
                     <Label>min width - 64 px</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xsmall">
+                    <Button variant="minimal" size="xs">
                         CTA
                     </Button>
                 </Cell>
@@ -823,7 +835,7 @@ storiesOf('Components/Button', module)
                     <Label>flex width</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xsmall">
+                    <Button variant="minimal" size="xs">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -832,7 +844,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xsmall" icon={Cut}>
+                    <Button variant="minimal" size="xs" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -845,7 +857,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             variant="minimal"
-                            size="xsmall"
+                            size="xs"
                             onClick={action('onClick!')}
                         >
                             CTA
@@ -968,12 +980,18 @@ storiesOf('Components/Button', module)
                     padding: '1rem',
                 }}
             >
-                <Button variant="minimal" size="large" block>
-                    CTA
-                </Button>
-                <Button variant="minimal" size="large" block disabled>
-                    CTA
-                </Button>
+                <Grid columns={1} gap="1rem">
+                    <Cell>
+                        <Button variant="minimal" size="lg" block>
+                            CTA
+                        </Button>
+                    </Cell>
+                    <Cell>
+                        <Button variant="minimal" size="lg" block disabled>
+                            CTA
+                        </Button>
+                    </Cell>
+                </Grid>
             </div>
         </StyledStoryPrime>
     ))
@@ -995,22 +1013,22 @@ storiesOf('Components/Button', module)
 
                 <Cell>
                     <Label>x-large</Label>
-                    <Button size="xlarge" icon={SuccessOutline} />
+                    <Button size="xl" icon={SuccessOutline} />
                 </Cell>
                 <Cell>
                     <Label>large</Label>
-                    <Button size="large" icon={SuccessOutline} />
+                    <Button size="lg" icon={SuccessOutline} />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
-                        <Button size="small" icon={SuccessOutline} />
+                        <Button size="sm" icon={SuccessOutline} />
                     </ShowHitbox>
                 </Cell>
                 <Cell>
                     <Label>xsmall</Label>
                     <ShowHitbox>
-                        <Button size="xsmall" icon={SuccessOutline} />
+                        <Button size="xs" icon={SuccessOutline} />
                     </ShowHitbox>
                 </Cell>
 
@@ -1020,7 +1038,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>x-large</Label>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         variant="outline"
                     />
@@ -1028,7 +1046,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>large</Label>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         variant="outline"
                     />
@@ -1037,7 +1055,7 @@ storiesOf('Components/Button', module)
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
-                            size="small"
+                            size="sm"
                             icon={SuccessOutline}
                             variant="outline"
                         />
@@ -1047,7 +1065,7 @@ storiesOf('Components/Button', module)
                     <Label>xsmall</Label>
                     <ShowHitbox>
                         <Button
-                            size="xsmall"
+                            size="xs"
                             icon={SuccessOutline}
                             variant="outline"
                         />
@@ -1060,7 +1078,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>x-large</Label>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         variant="minimal"
                     />
@@ -1068,7 +1086,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>large</Label>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         variant="minimal"
                     />
@@ -1077,7 +1095,7 @@ storiesOf('Components/Button', module)
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
-                            size="small"
+                            size="sm"
                             icon={SuccessOutline}
                             variant="minimal"
                         />
@@ -1087,7 +1105,7 @@ storiesOf('Components/Button', module)
                     <Label>xsmall</Label>
                     <ShowHitbox>
                         <Button
-                            size="xsmall"
+                            size="xs"
                             icon={SuccessOutline}
                             variant="minimal"
                         />
@@ -1099,22 +1117,22 @@ storiesOf('Components/Button', module)
                 </Cell>
                 <Cell>
                     <Label>x-large</Label>
-                    <Button size="xlarge" icon={SuccessOutline} circular />
+                    <Button size="xl" icon={SuccessOutline} circular />
                 </Cell>
                 <Cell>
                     <Label>large</Label>
-                    <Button size="large" icon={SuccessOutline} circular />
+                    <Button size="lg" icon={SuccessOutline} circular />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
-                        <Button size="small" icon={SuccessOutline} circular />
+                        <Button size="sm" icon={SuccessOutline} circular />
                     </ShowHitbox>
                 </Cell>
                 <Cell>
                     <Label>xsmall</Label>
                     <ShowHitbox>
-                        <Button size="xsmall" icon={SuccessOutline} circular />
+                        <Button size="xs" icon={SuccessOutline} circular />
                     </ShowHitbox>
                 </Cell>
 
@@ -1124,7 +1142,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>x-large</Label>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -1133,7 +1151,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>large</Label>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -1143,7 +1161,7 @@ storiesOf('Components/Button', module)
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
-                            size="small"
+                            size="sm"
                             icon={SuccessOutline}
                             circular
                             variant="outline"
@@ -1154,7 +1172,7 @@ storiesOf('Components/Button', module)
                     <Label>xsmall</Label>
                     <ShowHitbox>
                         <Button
-                            size="xsmall"
+                            size="xs"
                             icon={SuccessOutline}
                             circular
                             variant="outline"
@@ -1168,7 +1186,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>x-large</Label>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -1177,7 +1195,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <Label>large</Label>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -1187,7 +1205,7 @@ storiesOf('Components/Button', module)
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
-                            size="small"
+                            size="sm"
                             icon={SuccessOutline}
                             circular
                             variant="minimal"
@@ -1198,7 +1216,7 @@ storiesOf('Components/Button', module)
                     <Label>xsmall</Label>
                     <ShowHitbox>
                         <Button
-                            size="xsmall"
+                            size="xs"
                             icon={SuccessOutline}
                             circular
                             variant="minimal"
@@ -1226,7 +1244,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xlarge">
+                    <Button reverse size="xl">
                         CTA
                     </Button>
                 </Cell>
@@ -1235,7 +1253,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xlarge">
+                    <Button reverse size="xl">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1244,7 +1262,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xlarge" icon={Cut}>
+                    <Button reverse size="xl" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1263,7 +1281,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="large">
+                    <Button reverse size="lg">
                         CTA
                     </Button>
                 </Cell>
@@ -1272,7 +1290,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="large">
+                    <Button reverse size="lg">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1281,7 +1299,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 112px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="large" minWidth="7rem">
+                    <Button reverse size="lg" minWidth="7rem">
                         CTA
                     </Button>
                 </Cell>
@@ -1290,7 +1308,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="large" icon={Cut}>
+                    <Button reverse size="lg" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1309,7 +1327,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 80 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="small">
+                    <Button reverse size="sm">
                         CTA
                     </Button>
                 </Cell>
@@ -1318,7 +1336,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="small">
+                    <Button reverse size="sm">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1327,7 +1345,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="small" icon={Cut}>
+                    <Button reverse size="sm" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1346,7 +1364,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 64 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xsmall">
+                    <Button reverse size="xs">
                         CTA
                     </Button>
                 </Cell>
@@ -1355,7 +1373,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xsmall">
+                    <Button reverse size="xs">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1364,7 +1382,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xsmall" icon={Cut}>
+                    <Button reverse size="xs" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1377,7 +1395,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             reverse
-                            size="xsmall"
+                            size="xs"
                             onClick={action('onClick!')}
                         >
                             CTA
@@ -1446,12 +1464,18 @@ storiesOf('Components/Button', module)
                     padding: '1rem',
                 }}
             >
-                <Button reverse size="large" block>
-                    CTA
-                </Button>
-                <Button reverse size="large" block disabled>
-                    CTA
-                </Button>
+                <Grid columns={1} gap="1rem">
+                    <Cell>
+                        <Button reverse block>
+                            CTA
+                        </Button>
+                    </Cell>
+                    <Cell>
+                        <Button reverse block disabled>
+                            CTA
+                        </Button>
+                    </Cell>
+                </Grid>
             </div>
         </StyledReverseStory>
     ))
@@ -1473,7 +1497,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xlarge">
+                    <Button reverse variant="outline" size="xl">
                         CTA
                     </Button>
                 </Cell>
@@ -1482,7 +1506,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xlarge">
+                    <Button reverse variant="outline" size="xl">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1491,7 +1515,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xlarge" icon={Cut}>
+                    <Button reverse variant="outline" size="xl" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1510,7 +1534,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="large">
+                    <Button reverse variant="outline" size="lg">
                         CTA
                     </Button>
                 </Cell>
@@ -1519,7 +1543,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="large">
+                    <Button reverse variant="outline" size="lg">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1531,7 +1555,7 @@ storiesOf('Components/Button', module)
                     <Button
                         reverse
                         variant="outline"
-                        size="large"
+                        size="lg"
                         minWidth="7rem"
                     >
                         CTA
@@ -1542,7 +1566,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="large" icon={Cut}>
+                    <Button reverse variant="outline" size="lg" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1561,7 +1585,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 80 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="small">
+                    <Button reverse variant="outline" size="sm">
                         CTA
                     </Button>
                 </Cell>
@@ -1570,7 +1594,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="small">
+                    <Button reverse variant="outline" size="sm">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1579,7 +1603,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="small" icon={Cut}>
+                    <Button reverse variant="outline" size="sm" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1598,7 +1622,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 64 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xsmall">
+                    <Button reverse variant="outline" size="xs">
                         CTA
                     </Button>
                 </Cell>
@@ -1607,7 +1631,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xsmall">
+                    <Button reverse variant="outline" size="xs">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1616,7 +1640,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xsmall" icon={Cut}>
+                    <Button reverse variant="outline" size="xs" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1630,7 +1654,7 @@ storiesOf('Components/Button', module)
                         <Button
                             reverse
                             variant="outline"
-                            size="xsmall"
+                            size="xs"
                             onClick={action('onClick!')}
                         >
                             CTA
@@ -1701,12 +1725,24 @@ storiesOf('Components/Button', module)
                     padding: '1rem',
                 }}
             >
-                <Button reverse variant="outline" size="large" block>
-                    CTA
-                </Button>
-                <Button reverse variant="outline" size="large" block disabled>
-                    CTA
-                </Button>
+                <Grid columns={1} gap="1rem">
+                    <Cell>
+                        <Button reverse variant="outline" size="lg" block>
+                            CTA
+                        </Button>
+                    </Cell>
+                    <Cell>
+                        <Button
+                            reverse
+                            variant="outline"
+                            size="lg"
+                            block
+                            disabled
+                        >
+                            CTA
+                        </Button>
+                    </Cell>
+                </Grid>
             </div>
         </StyledReverseStory>
     ))
@@ -1728,7 +1764,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xlarge">
+                    <Button reverse variant="minimal" size="xl">
                         CTA
                     </Button>
                 </Cell>
@@ -1737,7 +1773,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xlarge">
+                    <Button reverse variant="minimal" size="xl">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1746,7 +1782,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xlarge" icon={Cut}>
+                    <Button reverse variant="minimal" size="xl" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1765,7 +1801,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 200 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="large">
+                    <Button reverse variant="minimal" size="lg">
                         CTA
                     </Button>
                 </Cell>
@@ -1774,7 +1810,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="large">
+                    <Button reverse variant="minimal" size="lg">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1786,7 +1822,7 @@ storiesOf('Components/Button', module)
                     <Button
                         reverse
                         variant="minimal"
-                        size="large"
+                        size="lg"
                         minWidth="7rem"
                     >
                         CTA
@@ -1797,7 +1833,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="large" icon={Cut}>
+                    <Button reverse variant="minimal" size="lg" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1816,7 +1852,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 80 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="small">
+                    <Button reverse variant="minimal" size="sm">
                         CTA
                     </Button>
                 </Cell>
@@ -1825,7 +1861,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="small">
+                    <Button reverse variant="minimal" size="sm">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1834,7 +1870,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="small" icon={Cut}>
+                    <Button reverse variant="minimal" size="sm" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1853,7 +1889,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>min width - 64 px</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xsmall">
+                    <Button reverse variant="minimal" size="xs">
                         CTA
                     </Button>
                 </Cell>
@@ -1862,7 +1898,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>flex width</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xsmall">
+                    <Button reverse variant="minimal" size="xs">
                         I'm a very long CTA Text
                     </Button>
                 </Cell>
@@ -1871,7 +1907,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xsmall" icon={Cut}>
+                    <Button reverse variant="minimal" size="xs" icon={Cut}>
                         {' '}
                         CTA Text
                     </Button>
@@ -1885,7 +1921,7 @@ storiesOf('Components/Button', module)
                         <Button
                             reverse
                             variant="minimal"
-                            size="xsmall"
+                            size="xs"
                             onClick={action('onClick!')}
                         >
                             CTA
@@ -1956,12 +1992,24 @@ storiesOf('Components/Button', module)
                     padding: '1rem',
                 }}
             >
-                <Button reverse variant="minimal" size="large" block>
-                    CTA
-                </Button>
-                <Button reverse variant="minimal" size="large" block disabled>
-                    CTA
-                </Button>
+                <Grid columns={1} gap="1rem">
+                    <Cell>
+                        <Button reverse variant="minimal" size="lg" block>
+                            CTA
+                        </Button>
+                    </Cell>
+                    <Cell>
+                        <Button
+                            reverse
+                            variant="minimal"
+                            size="lg"
+                            block
+                            disabled
+                        >
+                            CTA
+                        </Button>
+                    </Cell>
+                </Grid>
             </div>
         </StyledReverseStory>
     ))
@@ -1983,19 +2031,19 @@ storiesOf('Components/Button', module)
 
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
-                    <Button size="xlarge" icon={SuccessOutline} reverse />
+                    <Button size="xl" icon={SuccessOutline} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
-                    <Button size="large" icon={SuccessOutline} reverse />
+                    <Button size="lg" icon={SuccessOutline} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
-                    <Button size="small" icon={SuccessOutline} reverse />
+                    <Button size="sm" icon={SuccessOutline} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
-                    <Button size="xsmall" icon={SuccessOutline} reverse />
+                    <Button size="xs" icon={SuccessOutline} reverse />
                 </Cell>
 
                 <Cell>
@@ -2004,7 +2052,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         variant="outline"
                         reverse
@@ -2013,7 +2061,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         variant="outline"
                         reverse
@@ -2022,7 +2070,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
                     <Button
-                        size="small"
+                        size="sm"
                         icon={SuccessOutline}
                         variant="outline"
                         reverse
@@ -2031,7 +2079,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
-                        size="xsmall"
+                        size="xs"
                         icon={SuccessOutline}
                         variant="outline"
                         reverse
@@ -2044,7 +2092,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         variant="minimal"
                         reverse
@@ -2053,7 +2101,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         variant="minimal"
                         reverse
@@ -2062,7 +2110,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
                     <Button
-                        size="small"
+                        size="sm"
                         icon={SuccessOutline}
                         variant="minimal"
                         reverse
@@ -2071,7 +2119,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
-                        size="xsmall"
+                        size="xs"
                         icon={SuccessOutline}
                         variant="minimal"
                         reverse
@@ -2084,7 +2132,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         circular
                         reverse
@@ -2093,7 +2141,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         circular
                         reverse
@@ -2102,7 +2150,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
                     <Button
-                        size="small"
+                        size="sm"
                         icon={SuccessOutline}
                         circular
                         reverse
@@ -2111,7 +2159,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
-                        size="xsmall"
+                        size="xs"
                         icon={SuccessOutline}
                         circular
                         reverse
@@ -2124,7 +2172,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -2134,7 +2182,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -2144,7 +2192,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
                     <Button
-                        size="small"
+                        size="sm"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -2154,7 +2202,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
-                        size="xsmall"
+                        size="xs"
                         icon={SuccessOutline}
                         circular
                         variant="outline"
@@ -2168,7 +2216,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>x-large</ReverseLabel>
                     <Button
-                        size="xlarge"
+                        size="xl"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -2178,7 +2226,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
                     <Button
-                        size="large"
+                        size="lg"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -2188,7 +2236,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
                     <Button
-                        size="small"
+                        size="sm"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -2198,7 +2246,7 @@ storiesOf('Components/Button', module)
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
-                        size="xsmall"
+                        size="xs"
                         icon={SuccessOutline}
                         circular
                         variant="minimal"
@@ -2224,8 +2272,8 @@ storiesOf('Components/Button', module)
         const margin = text('margin', '');
         const chosenSize = select(
             'size',
-            ['xlarge', 'large', 'small', 'xsmall'],
-            'large'
+            ['xl', 'lg', 'sm', 'xs'],
+            'lg'
         );
         const chosenVariant = select(
             'variant',
@@ -2233,6 +2281,7 @@ storiesOf('Components/Button', module)
             'primary'
         );
         const isReversed = boolean('reverse', false);
+        const numberOfButtons = number('button count', 1);
 
         const StoryComponent = isReversed ? StyledReverseStory : StyledStory;
 
@@ -2241,30 +2290,32 @@ storiesOf('Components/Button', module)
                 <Typography tag="h2" weight={'bold'}>
                     Configure me
                 </Typography>
-
-                <Button
-                    variant={chosenVariant}
-                    size={chosenSize}
-                    forceActive={boolean('force-state: active', false)}
-                    forceFocus={boolean('force-state: focus', false)}
-                    forceHover={boolean('force-state: hover', false)}
-                    reverse={isReversed}
-                    block={boolean('block', false)}
-                    flip={boolean('flip', false)}
-                    circular={boolean('circular', false)}
-                    disabled={boolean('disabled', false)}
-                    revealed={boolean('revealed', false)}
-                    minWidth={minWidth ? minWidth : undefined}
-                    margin={margin ? margin : undefined}
-                    colorTheme={
-                        chosenColor === 'default'
-                            ? undefined
-                            : colors[chosenColor]
-                    }
-                    icon={chosenIcon === 'none' ? undefined : Icon[chosenIcon]}
-                >
-                    {buttonText ? buttonText : undefined}
-                </Button>
+                {Array.from(Array(numberOfButtons)).map((x, i) => (
+                    <Button
+                        key={`button${i}`}
+                        variant={chosenVariant}
+                        size={chosenSize}
+                        forceActive={boolean('force-state: active', false)}
+                        forceFocus={boolean('force-state: focus', false)}
+                        forceHover={boolean('force-state: hover', false)}
+                        reverse={isReversed}
+                        block={boolean('block', false)}
+                        flip={boolean('flip', false)}
+                        circular={boolean('circular', false)}
+                        disabled={boolean('disabled', false)}
+                        revealed={boolean('revealed', false)}
+                        minWidth={minWidth ? minWidth : undefined}
+                        margin={margin ? margin : undefined}
+                        colorTheme={
+                            chosenColor === 'default'
+                                ? undefined
+                                : colors[chosenColor]
+                        }
+                        icon={chosenIcon === 'none' ? undefined : Icon[chosenIcon]}
+                    >
+                        {buttonText ? buttonText : undefined}
+                    </Button>
+                ))}
             </StoryComponent>
         );
     });

@@ -12,7 +12,7 @@ import { HitArea } from './HitArea';
 
 type Variant = 'primary' | 'outline' | 'minimal';
 
-type ButtonSize = 'xlarge' | 'large' | 'small' | 'xsmall';
+type ButtonSize = 'xl' | 'lg' | 'sm' | 'xs';
 
 interface ButtonProps {
     children?: any;
@@ -82,28 +82,28 @@ const reverseDefaults = {
 };
 
 const dimensions = {
-    xsmall: {
+    xs: {
         width: 4,
         height: 2,
         padding: 0.5,
         circularPadding: 1,
         fontSize: 0.75,
     },
-    small: {
+    sm: {
         width: 5,
         height: 2.5,
         padding: 1,
         circularPadding: 1.5,
         fontSize: 0.875,
     },
-    large: {
+    lg: {
         width: 12.5,
         height: 3,
         padding: 1.5,
         circularPadding: 2,
         fontSize: 1,
     },
-    xlarge: {
+    xl: {
         width: 12.5,
         height: 3.5,
         padding: 2,
@@ -306,7 +306,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 	font-family: ${fonts.fontFamily};
 	text-align: center;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     outline: none !important;
@@ -370,7 +370,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         css`
             // Space icon from text
             & > .anchor-icon {
-                margin-right: ${$size === 'xlarge' || $size === 'large'
+                margin-right: ${$size === 'xl' || $size === 'lg'
                     ? 0.5
                     : 0.375}rem;
             }
@@ -460,7 +460,7 @@ export const Button = ({
     className,
     flip = false,
     variant = 'primary',
-    size = 'large',
+    size = 'lg',
     block,
     disabled,
     revealed,
@@ -504,8 +504,8 @@ export const Button = ({
     /* tslint:enable no-console */
 
     const iconScale = iconOnly
-        ? size === 'xsmall' ||
-          (size === 'small' && (circular || variant === 'minimal'))
+        ? size === 'xs' ||
+          (size === 'sm' && (circular || variant === 'minimal'))
             ? 'md'
             : 'lg'
         : 'md';

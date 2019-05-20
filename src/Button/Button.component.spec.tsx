@@ -298,26 +298,26 @@ describe('Component: Button', () => {
     });
 
     describe('Sizes', () => {
-        it('should render an xlarge button', () => {
-            const subject = <Button size="xlarge">Text</Button>;
+        it('should render an xl button', () => {
+            const subject = <Button size="xl">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
-        it('should render a large button', () => {
-            const subject = <Button size="large">Text</Button>;
+        it('should render a lg button', () => {
+            const subject = <Button size="lg">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
-        it('should render a small button', () => {
-            const subject = <Button size="small">Text</Button>;
+        it('should render a sm button', () => {
+            const subject = <Button size="sm">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
-        it('should render an xsmall button', () => {
-            const subject = <Button size="xsmall">Text</Button>;
+        it('should render an xs button', () => {
+            const subject = <Button size="xs">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
