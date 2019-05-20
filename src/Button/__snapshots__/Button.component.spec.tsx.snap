@@ -144,10 +144,10 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -371,10 +371,10 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -582,10 +582,10 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -741,10 +741,10 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -914,10 +914,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1097,10 +1097,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1281,10 +1281,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1459,10 +1459,10 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1603,10 +1603,10 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1757,10 +1757,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1914,10 +1914,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2075,10 +2075,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2235,10 +2235,10 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2359,10 +2359,10 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2503,10 +2503,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2658,10 +2658,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2815,10 +2815,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2899,7 +2899,7 @@ Array [
 ]
 `;
 
-exports[`Component: Button Sizes should render a large button 1`] = `
+exports[`Component: Button Sizes should render a md button 1`] = `
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -2907,10 +2907,10 @@ exports[`Component: Button Sizes should render a large button 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3083,7 +3083,191 @@ exports[`Component: Button Sizes should render a large button 1`] = `
 </button>
 `;
 
-exports[`Component: Button Sizes should render a small button 1`] = `
+exports[`Component: Button Sizes should render an lg button 1`] = `
+.c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+.c20 + .c0 {
+  margin-left: 1rem;
+}
+
+.c21 + .c0 {
+  margin-left: 1rem;
+}
+
+.c22 + .c0 {
+  margin-left: 1rem;
+}
+
+.c23 + .c0 {
+  margin-left: 1rem;
+}
+
+.c24 + .c0 {
+  margin-left: 1rem;
+}
+
+.c25 + .c0 {
+  margin-left: 1rem;
+}
+
+.c26 + .c0 {
+  margin-left: 1rem;
+}
+
+.c27 + .c0 {
+  margin-left: 1rem;
+}
+
+.c28 + .c0 {
+  margin-left: 1rem;
+}
+
+.c29 + .c0 {
+  margin-left: 1rem;
+}
+
+.c30 + .c0 {
+  margin-left: 1rem;
+}
+
+.c31 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 2rem;
+  font-size: 1rem;
+  height: 3.5rem;
+  min-width: 12.5rem;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+  className="anchor-button c0 c1"
+>
+  Text
+</button>
+`;
+
+exports[`Component: Button Sizes should render an sm button 1`] = `
 .c2 {
   position: absolute;
   top: -1px;
@@ -3224,10 +3408,10 @@ exports[`Component: Button Sizes should render a small button 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3283,191 +3467,7 @@ exports[`Component: Button Sizes should render a small button 1`] = `
 </button>
 `;
 
-exports[`Component: Button Sizes should render an xlarge button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin #0998D6;
-  background-color: #0998D6;
-  color: #FFFFFF;
-  padding: 0 2rem;
-  font-size: 1rem;
-  height: 3.5rem;
-  min-width: 12.5rem;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1:hover,
-.c1:focus,
-.c1:active {
-  background-color: #0074A6;
-  border: solid thin #0074A6;
-}
-
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
-}
-
-<button
-  className="anchor-button c0 c1"
->
-  Text
-</button>
-`;
-
-exports[`Component: Button Sizes should render an xsmall button 1`] = `
+exports[`Component: Button Sizes should render an xs button 1`] = `
 .c2 {
   position: absolute;
   top: -1px;
@@ -3612,10 +3612,10 @@ exports[`Component: Button Sizes should render an xsmall button 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3739,10 +3739,10 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3846,10 +3846,10 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -3963,10 +3963,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4082,10 +4082,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4205,10 +4205,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4327,10 +4327,10 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4418,10 +4418,10 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4520,10 +4520,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4625,10 +4625,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4734,10 +4734,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4842,10 +4842,10 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4910,10 +4910,10 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4981,10 +4981,10 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5042,10 +5042,10 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5123,10 +5123,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5206,10 +5206,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5293,10 +5293,10 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5407,10 +5407,10 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5507,10 +5507,10 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5607,10 +5607,10 @@ exports[`Component: Button should be defined 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;

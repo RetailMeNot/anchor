@@ -298,19 +298,19 @@ describe('Component: Button', () => {
     });
 
     describe('Sizes', () => {
-        it('should render an xl button', () => {
-            const subject = <Button size="xl">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
-            expect(tree).toMatchSnapshot();
-        });
-
-        it('should render a lg button', () => {
+        it('should render an lg button', () => {
             const subject = <Button size="lg">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
-        it('should render a sm button', () => {
+        it('should render a md button', () => {
+            const subject = <Button size="md">Text</Button>;
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+
+        it('should render an sm button', () => {
             const subject = <Button size="sm">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();

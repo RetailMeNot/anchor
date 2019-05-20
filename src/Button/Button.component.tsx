@@ -12,7 +12,7 @@ import { HitArea } from './HitArea';
 
 type Variant = 'primary' | 'outline' | 'minimal';
 
-type ButtonSize = 'xl' | 'lg' | 'sm' | 'xs';
+type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
 
 interface ButtonProps {
     children?: any;
@@ -96,14 +96,14 @@ const dimensions = {
         circularPadding: 1.5,
         fontSize: 0.875,
     },
-    lg: {
+    md: {
         width: 12.5,
         height: 3,
         padding: 1.5,
         circularPadding: 2,
         fontSize: 1,
     },
-    xl: {
+    lg: {
         width: 12.5,
         height: 3.5,
         padding: 2,
@@ -370,7 +370,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         css`
             // Space icon from text
             & > .anchor-icon {
-                margin-right: ${$size === 'xl' || $size === 'lg'
+                margin-right: ${$size === 'lg' || $size === 'md'
                     ? 0.5
                     : 0.375}rem;
             }
@@ -460,7 +460,7 @@ export const Button = ({
     className,
     flip = false,
     variant = 'primary',
-    size = 'lg',
+    size = 'md',
     block,
     disabled,
     revealed,
