@@ -376,15 +376,16 @@ const StyledButton = styled.button<StyledButtonProps>`
             }
         `}
 
-    /* Hover styles */
+    /* State styles */
     ${({
-        forceHover,
-        forceFocus,
-        forceActive,
         disabled,
         revealed,
         flip,
+        forceHover,
+        forceFocus,
+        forceActive,
         buttonStyles,
+        ...props
     }: StyledButtonProps) =>
         !disabled &&
         !revealed &&
@@ -400,6 +401,12 @@ const StyledButton = styled.button<StyledButtonProps>`
                         }
                     `}
             }
+            &:active {
+                ${buttonStyles.active}
+            }
+            &:focus {
+                ${buttonStyles.focus}
+            }
 
             ${(forceHover || forceFocus || forceActive) &&
                 css`
@@ -410,39 +417,16 @@ const StyledButton = styled.button<StyledButtonProps>`
                                 opacity: 0;
                             }
                         `}
+
+                    ${forceActive && buttonStyles.active}
+                    ${forceFocus && buttonStyles.focus}
+                    ${forceFocus && OutlineStyles({ buttonStyles, ...props })}
                 `}
         `}
 
-    /* Active styles */
-    ${({ forceActive, disabled, revealed, buttonStyles }: StyledButtonProps) =>
-        !disabled &&
-        !revealed &&
-        buttonStyles.active &&
-        css`
-            &:active {
-                ${buttonStyles.active}
-            }
-            ${forceActive && buttonStyles.active}
-        `}
-
-    /* Focus styles */
-    ${({ forceFocus, disabled, revealed, buttonStyles }: StyledButtonProps) =>
-        !disabled &&
-        !revealed &&
-        buttonStyles.focus &&
-        css`
-            &:focus {
-                ${buttonStyles.focus}
-            }
-            ${forceFocus && buttonStyles.focus}
-        `}
-
-    /* Outline */
     &:focus {
         ${OutlineStyles}
     }
-    ${({ forceFocus, ...props }: StyledButtonProps) =>
-        forceFocus && OutlineStyles(props)}
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) =>
