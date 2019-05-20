@@ -1,3 +1,4 @@
+export { AnchorIcons } from './utils';
 export { AddEvent } from './Icons/AddEvent.component';
 export { ArrowBack } from './Icons/ArrowBack.component';
 export { ArrowForward } from './Icons/ArrowForward.component';
