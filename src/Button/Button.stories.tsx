@@ -11,6 +11,7 @@ import styled from 'styled-components';
 import * as README from './README.md';
 // COMPONENT
 import { Button } from './Button.component';
+import { HitArea } from './HitArea/HitArea.component';
 import * as Icon from '../Icon';
 import { Typography, Cell, Grid, Cut, SuccessOutline } from '..';
 import { colors } from '../theme';
@@ -54,7 +55,7 @@ const Heading = styled(Typography)`
 `;
 
 const ShowHitbox = styled.div`
-    button > div {
+    button > ${HitArea} {
         background: rgba(255, 0, 0, 0.1);
     }
 `;
@@ -1445,7 +1446,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Outline', () => (
         <StyledReverseStory>
             <Typography tag="h2" weight={'bold'}>
-                Primary Buttons
+                Outline Buttons
             </Typography>
 
             <Heading>Large Button</Heading>
@@ -1703,7 +1704,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Minimal', () => (
         <StyledReverseStory>
             <Typography tag="h2" weight={'bold'}>
-                Primary Buttons
+                Minimal Buttons
             </Typography>
 
             <Heading>Large Button</Heading>
@@ -1961,7 +1962,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Icons', () => (
         <StyledReverseStory>
             <Typography tag="h2" weight={'bold'}>
-                Reverse Buttons
+                Icon Only Buttons
             </Typography>
 
             <Grid
@@ -2192,7 +2193,7 @@ storiesOf('Components/Button', module)
             ['default', ...Object.keys(colors)],
             'default'
         );
-        const buttonText = text('Text', 'Modify Me');
+        const buttonText = text('Text', 'Hello World');
         const minWidth = text('minWidth', '');
         const margin = text('margin', '');
         const chosenSize = select('size', ['lg', 'md', 'sm', 'xs'], 'md');

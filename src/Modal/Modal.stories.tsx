@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select, number, text } from '@storybook/addon-knobs';
+import { boolean, select, number, text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
@@ -22,6 +22,7 @@ const { Close, Header, Content, Footer } = Modal;
 const StyledStory = styled.div`
     background: ${colors.white.base};
     width: 100vw;
+    height: 120vh;
 `;
 
 const sizeOptions: ModalSize[] = ['sm', 'lg'];
@@ -33,18 +34,21 @@ storiesOf('Components/Modal', module)
             const [isOpen, setIsOpen] = useState<boolean>(true);
 
             return (
-                <div>
+                <React.Fragment>
                     <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
                     <Modal
                         size={select('size', sizeOptions, 'lg')}
                         isOpen={isOpen}
                         onBackgroundClick={() => setIsOpen(false)}
                         onEscapeKeydown={() => setIsOpen(false)}
+                        allowScroll={boolean('allowScroll', false)}
                     >
                         <Header title="It's dangerous to go alone.">
                             <Close onClick={() => setIsOpen(false)} />
                         </Header>
-                        <Content>Stuff in the middle</Content>
+                        <Content>
+                            <Typography>Stuff in the middle</Typography>
+                        </Content>
                         <Footer>
                             <Button
                                 block
@@ -58,14 +62,14 @@ storiesOf('Components/Modal', module)
                             </Button>
                         </Footer>
                     </Modal>
-                </div>
+                </React.Fragment>
             );
         };
 
         return (
             <ModalProvider>
                 <StyledStory>
-                    <Typography>Click this button!</Typography>
+                    <Typography tag="h5">Click this button!</Typography>
                     <OpenModalButton />
                 </StyledStory>
             </ModalProvider>
@@ -86,7 +90,9 @@ storiesOf('Components/Modal', module)
                 <StyledStory>
                     <Modal size={select('size', sizeOptions, 'sm')} isOpen>
                         <Close />
-                        <Content>Content Area</Content>
+                        <Content>
+                            <Typography>Content Area</Typography>
+                        </Content>
                     </Modal>
                 </StyledStory>
             </ModalProvider>
@@ -100,7 +106,9 @@ storiesOf('Components/Modal', module)
                         <Header title="Header Area">
                             <Close />
                         </Header>
-                        <Content>Content Area</Content>
+                        <Content>
+                            <Typography>Content Area</Typography>
+                        </Content>
                     </Modal>
                 </StyledStory>
             </ModalProvider>
@@ -112,8 +120,12 @@ storiesOf('Components/Modal', module)
                 <StyledStory>
                     <Modal size={select('size', sizeOptions, 'sm')} isOpen>
                         <Close />
-                        <Content>Content Area</Content>
-                        <Footer>Footer Area</Footer>
+                        <Content>
+                            <Typography>Content Area</Typography>
+                        </Content>
+                        <Footer>
+                            <Typography>Footer Area</Typography>
+                        </Footer>
                     </Modal>
                 </StyledStory>
             </ModalProvider>
@@ -162,15 +174,19 @@ storiesOf('Components/Modal', module)
         );
     })
     .add('Customized', () => {
-        return (
-            <ModalProvider>
-                <StyledStory>
+        const OpenModalButton = () => {
+            const [isOpen, setIsOpen] = useState<boolean>(true);
+
+            return (
+                <React.Fragment>
+                    <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+
                     <Modal
-                        isOpen
+                        isOpen={isOpen}
                         size={select('size', sizeOptions, 'sm')}
                         height={text('height', '25rem')}
                         width={text('width', '30rem')}
-                        margin={text('margin', '1rem')}
+                        margin={text('margin', 'auto')}
                         background={`linear-gradient(170deg, ${
                             colors.flashPink.base
                         } 0%, ${colors.fireSale.light} 50%, ${
@@ -178,10 +194,17 @@ storiesOf('Components/Modal', module)
                         } calc(50% + 1.25px))`}
                         color={text('color', colors.white.base)}
                         backgroundProps={{
-                            opacity: number('background opacity', 0.2),
+                            opacity: number('backgroundProps.opacity', 0.2),
                         }}
+                        allowScroll={boolean('allowScroll', false)}
+                        shadow={text(
+                            'shadow',
+                            '0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)'
+                        )}
+                        onBackgroundClick={() => setIsOpen(false)}
+                        onEscapeKeydown={() => setIsOpen(false)}
                     >
-                        <Close color="white" />
+                        <Close reverse onClick={() => setIsOpen(false)} />
                         <Content>
                             <Typography
                                 tag="p"
@@ -201,6 +224,7 @@ storiesOf('Components/Modal', module)
                                 circular
                                 variant="minimal"
                                 colorTheme={colors.flashPink}
+                                onClick={() => setIsOpen(false)}
                             >
                                 Decline
                             </Button>
@@ -208,11 +232,20 @@ storiesOf('Components/Modal', module)
                                 block
                                 circular
                                 colorTheme={colors.flashPink}
+                                onClick={() => setIsOpen(false)}
                             >
                                 Accept
                             </Button>
                         </Footer>
                     </Modal>
+                </React.Fragment>
+            );
+        };
+
+        return (
+            <ModalProvider>
+                <StyledStory>
+                    <OpenModalButton />
                 </StyledStory>
             </ModalProvider>
         );

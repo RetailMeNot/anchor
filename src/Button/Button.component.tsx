@@ -14,7 +14,7 @@ type Variant = 'primary' | 'outline' | 'minimal';
 
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
 
-interface ButtonProps {
+export interface ButtonProps {
     children?: any;
     disabled?: boolean;
     revealed?: boolean;
@@ -29,6 +29,7 @@ interface ButtonProps {
     icon?: any;
     circular?: boolean;
     reverse?: boolean;
+    outline?: boolean;
 
     forceHover?: boolean;
     forceFocus?: boolean;
@@ -280,7 +281,12 @@ const ButtonColorStyles = ({
     };
 };
 
-const OutlineStyles = ({ buttonStyles, borderRadius }: StyledButtonProps) =>
+const OutlineStyles = ({
+    buttonStyles,
+    borderRadius,
+    outline,
+}: StyledButtonProps) =>
+    outline &&
     css`
         &:after {
             position: absolute;
@@ -445,6 +451,7 @@ export const Button = ({
     flip = false,
     variant = 'primary',
     size = 'md',
+    outline = true,
     block,
     disabled,
     revealed,
@@ -513,6 +520,7 @@ export const Button = ({
             className={classNames('anchor-button', className)}
             flip={flip}
             block={block}
+            outline={outline}
             colorTheme={colorTheme}
             reverse={reverse}
             minWidth={minWidth}
