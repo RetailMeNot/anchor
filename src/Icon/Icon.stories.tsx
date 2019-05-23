@@ -44,15 +44,19 @@ storiesOf('Components/Icon', module)
             </Grid>
         </StyledStory>
     ))
-    .add('Size & Color', () => (
-        <StyledStory>
-            <Icon.AddEvent
-                color={color('color', DefaultColor)}
-                scale={select(
-                    'scale',
-                    ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
-                    'md'
-                )}
-            />
-        </StyledStory>
-    ));
+    .add('Size & Color', () => {
+        const iconKey = select('Select an Icon', Object.keys(Icon), 'AddEvent');
+
+        return (
+            <StyledStory>
+                {React.createElement(Icon[iconKey], {
+                    color: color('color', DefaultColor),
+                    scale: select(
+                        'scale',
+                        ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
+                        'md'
+                    ),
+                })}
+            </StyledStory>
+        );
+    });
