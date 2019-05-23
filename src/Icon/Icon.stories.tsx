@@ -46,8 +46,8 @@ storiesOf('Components/Icon', module)
     ))
     .add('Size & Color', () => {
         const iconKey = select('Select an Icon', Object.keys(Icon), 'AddEvent');
-        console.log(iconKey);
-        return(
+
+        return (
             <StyledStory>
                 {React.createElement(Icon[iconKey], {
                     color: color('color', DefaultColor),
@@ -55,7 +55,7 @@ storiesOf('Components/Icon', module)
                         'scale',
                         ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
                         'md'
-                    )
+                    ),
                 })}
             </StyledStory>
         );
