@@ -8,7 +8,7 @@ import { ChevronDown, ChevronUp } from '../Icon';
 import { ComfortableTheme } from './Themes/ComfortableTheme';
 import { CompactTheme } from './Themes/CompactTheme';
 
-type Themes = 'comfortable' | 'compact' | 'none';
+export type Themes = 'comfortable' | 'compact' | 'none';
 
 interface CollapseProps {
     /** Whether the component starts off open or closed. Can also be used to progrmatically open/close the component. */
@@ -18,17 +18,22 @@ interface CollapseProps {
     /** Text to show for the closed state of the component */
     closeText?: string;
     /** Icon to show for the open state of the component */
-    openIcon?: any;
+    openIcon?: React.ReactElement;
     /** Icon to show for the open state of the component */
-    closeIcon?: any;
+    closeIcon?: React.ReactElement;
     /** 2 possible themes, compact (doc site) and comfortable (RMN CBO), and also none to allow for styling */
     theme?: Themes;
+    /** This prop is solely used by the CollapseGroup component to make Collapse components have accordion behavior */
+    accordionHandler?: any;
+    /** This mostly exists for CollapseGroup in order to hide the bottom border of stacked Collapse children */
+    hasBottomBorder?: boolean;
     children?: any;
     className?: string;
 }
 
 interface StyledCollapseProps {
     theme?: string;
+    hasBottomBorder?: boolean;
 }
 
 export const DEFAULT_OPEN_TEXT = 'Open';
@@ -46,6 +51,14 @@ const StyledCollapse = styled.div<StyledCollapseProps>`
     display: block;
 
     ${props => CollapseThemes[props.theme]};
+
+    &.no-bottom-border {
+        border-bottom-style: none;
+
+        .anchor-collapse-button {
+            border-bottom-style: none;
+        }
+    }
 `;
 StyledCollapse.displayName = 'StyledCollapse';
 
@@ -53,9 +66,11 @@ export const Collapse = ({
     isOpen = false,
     openText = DEFAULT_OPEN_TEXT,
     closeText = DEFAULT_CLOSE_TEXT,
-    openIcon = false,
-    closeIcon = false,
+    openIcon,
+    closeIcon,
     theme = DEFAULT_THEME,
+    accordionHandler,
+    hasBottomBorder = true,
     className,
     children,
 }: CollapseProps) => {
@@ -76,10 +91,17 @@ export const Collapse = ({
     return (
         <StyledCollapse
             theme={theme}
-            className={classNames('anchor-collapse', open && 'open', className)}
+            className={classNames(
+                'anchor-collapse',
+                open && 'open',
+                theme,
+                !hasBottomBorder && 'no-bottom-border',
+                className
+            )}
         >
+            {/** accordionHandler is used by CollapseGroup to handle closing/opening a single Collapse component. */}
             <button
-                onClick={() => toggleOpen(!open)}
+                onClick={() => (accordionHandler ? accordionHandler() : toggleOpen(!open))}
                 className="anchor-collapse-button"
             >
                 {open ? (

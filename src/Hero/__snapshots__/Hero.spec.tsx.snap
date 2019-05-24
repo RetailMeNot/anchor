@@ -2,22 +2,22 @@
 
 exports[`Component: Hero should be defined 1`] = `
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero sc-bRBYWo jtoyUn"
 />
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero sc-bRBYWo jtoyUn"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-kjoXOD kXULpW"
+    className="anchor-typography anchor-hero-title sc-hzDkRC iSvqGy sc-cHGsZl fqZXkp"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-cHGsZl iNgNYd"
+    className="anchor-typography sc-TOsTZ jDzWUN"
   >
     Some Typography text
   </span>
@@ -31,10 +31,10 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 exports[`Component: Hero should render with title 1`] = `
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero sc-bRBYWo jtoyUn"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-fAjcbJ dbHCSs"
+    className="anchor-typography anchor-hero-title sc-hzDkRC iSvqGy sc-caSCKo jgTECj"
     scale={32}
   >
     Hero Title
@@ -44,16 +44,16 @@ exports[`Component: Hero should render with title 1`] = `
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero sc-bRBYWo jtoyUn"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-caSCKo jgTECj"
+    className="anchor-typography anchor-hero-title sc-hzDkRC iSvqGy sc-gisBJw bPSpRH"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-hzDkRC iZdeor sc-gisBJw dGDiUk"
+    className="anchor-typography anchor-hero-subtitle sc-jhAzac cKXBbx sc-kjoXOD bFMOTu"
     scale={18}
   >
     Hero Subtitle
