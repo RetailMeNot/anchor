@@ -133,10 +133,6 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   margin-left: 1rem;
 }
 
-.c36 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 1.5rem;
@@ -204,7 +200,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   className="anchor-button c0 c1"
 >
   <span
-    className="anchor-icon star c2"
+    className="anchor-icon star anchor-button-prefix c2"
     scale="lg"
   >
     <svg
@@ -231,7 +227,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 </button>
 `;
 
-exports[`Component: Button Icon Only should render an icon only 1`] = `
+exports[`Component: Button Icon Only should render icon-only using a prefix 1`] = `
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -360,7 +356,226 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
   margin-left: 1rem;
 }
 
-.c35 + .c0 {
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+.c2 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
+<button
+  className="anchor-button c0 c1"
+>
+  <span
+    className="anchor-icon star anchor-button-prefix c2"
+    scale="lg"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 16 16"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <path
+          d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  </span>
+</button>
+`;
+
+exports[`Component: Button Icon Only should render icon-only using a suffix 1`] = `
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+.c20 + .c0 {
+  margin-left: 1rem;
+}
+
+.c21 + .c0 {
+  margin-left: 1rem;
+}
+
+.c22 + .c0 {
+  margin-left: 1rem;
+}
+
+.c23 + .c0 {
+  margin-left: 1rem;
+}
+
+.c24 + .c0 {
+  margin-left: 1rem;
+}
+
+.c25 + .c0 {
+  margin-left: 1rem;
+}
+
+.c26 + .c0 {
+  margin-left: 1rem;
+}
+
+.c27 + .c0 {
+  margin-left: 1rem;
+}
+
+.c28 + .c0 {
+  margin-left: 1rem;
+}
+
+.c29 + .c0 {
+  margin-left: 1rem;
+}
+
+.c30 + .c0 {
+  margin-left: 1rem;
+}
+
+.c31 + .c0 {
+  margin-left: 1rem;
+}
+
+.c32 + .c0 {
+  margin-left: 1rem;
+}
+
+.c33 + .c0 {
+  margin-left: 1rem;
+}
+
+.c34 + .c0 {
   margin-left: 1rem;
 }
 
@@ -431,7 +646,7 @@ exports[`Component: Button Icon Only should render an icon only 1`] = `
   className="anchor-button c0 c1"
 >
   <span
-    className="anchor-icon star c2"
+    className="anchor-icon star anchor-button-suffix c2"
     scale="lg"
   >
     <svg
@@ -571,10 +786,6 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
   margin-left: 1rem;
 }
 
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -612,6 +823,14 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -730,10 +949,6 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
   margin-left: 1rem;
 }
 
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -770,6 +985,14 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -903,10 +1126,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -947,6 +1166,202 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+}
+
+.c1:active {
+  background: rgba(255,255,255,0.2);
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.c27 + .c0 {
+  margin-left: 1rem;
+}
+
+.c28 + .c0 {
+  margin-left: 1rem;
+}
+
+<button
+    className="anchor-button c0 c1"
+  >
+    Text
+  </button>,
+  .c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+.c20 + .c0 {
+  margin-left: 1rem;
+}
+
+.c21 + .c0 {
+  margin-left: 1rem;
+}
+
+.c22 + .c0 {
+  margin-left: 1rem;
+}
+
+.c23 + .c0 {
+  margin-left: 1rem;
+}
+
+.c24 + .c0 {
+  margin-left: 1rem;
+}
+
+.c25 + .c0 {
+  margin-left: 1rem;
+}
+
+.c26 + .c0 {
+  margin-left: 1rem;
+}
+
+.c27 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(255,255,255,0.16);
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.2);
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -970,10 +1385,6 @@ Array [
 }
 
 .c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
   margin-left: 1rem;
 }
 
@@ -1124,194 +1535,18 @@ Array [
   min-width: 12.5rem;
   background: rgba(255,255,255,0.16);
   color: #FFFFFF;
-  background: rgba(255,255,255,0.2);
 }
 
 .c1 + .c0 {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
-  background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
 }
 
-.c1:active {
-  background: rgba(255,255,255,0.2);
-}
-
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-<button
-    className="anchor-button c0 c1"
-  >
-    Text
-  </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #FFFFFF;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 12.5rem;
-  background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -1448,10 +1683,6 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   margin-left: 1rem;
 }
 
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -1490,6 +1721,14 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -1592,10 +1831,6 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
   margin-left: 1rem;
 }
 
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -1632,6 +1867,14 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -1746,7 +1989,164 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
 .c23 + .c0 {
+  margin-left: 1rem;
+}
+
+<button
+    className="anchor-button c0 c1"
+  >
+    Text
+  </button>,
+  .c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+.c20 + .c0 {
+  margin-left: 1rem;
+}
+
+.c21 + .c0 {
+  margin-left: 1rem;
+}
+
+.c22 + .c0 {
   margin-left: 1rem;
 }
 
@@ -1791,6 +2191,14 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -1810,7 +2218,7 @@ Array [
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c24 + .c0 {
+.c23 + .c0 {
   margin-left: 1rem;
 }
 
@@ -1948,165 +2356,12 @@ Array [
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-  color: #595959;
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
 }
 
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-<button
-    className="anchor-button c0 c1"
-  >
-    Text
-  </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: transparent;
-  color: #FFFFFF;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 12.5rem;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-  color: #595959;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2224,10 +2479,6 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   margin-left: 1rem;
 }
 
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -2266,6 +2517,14 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -2348,10 +2607,6 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
   margin-left: 1rem;
 }
 
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -2388,6 +2643,14 @@ exports[`Component: Button Reverse Variant: Primary should render a primary butt
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2492,10 +2755,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -2537,6 +2796,175 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+}
+
+.c1:active {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c1:focus {
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+<button
+    className="anchor-button c0 c1"
+  >
+    Text
+  </button>,
+  .c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+  color: #595959;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  border: solid thin rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.85);
+  color: #595959;
+  border: solid thin #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -2567,10 +2995,6 @@ Array [
 }
 
 .c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
   margin-left: 1rem;
 }
 
@@ -2694,161 +3118,12 @@ Array [
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
-  border: solid thin rgba(255,255,255,0.85);
-  background-color: rgba(255,255,255,0.85);
-  color: #595959;
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
 }
 
-.c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-}
-
-.c1:focus {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-}
-
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-<button
-    className="anchor-button c0 c1"
-  >
-    Text
-  </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-  color: #595959;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 12.5rem;
-  border: solid thin rgba(255,255,255,0.85);
-  background-color: rgba(255,255,255,0.85);
-  color: #595959;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2936,6 +3211,14 @@ exports[`Component: Button Sizes should render a md button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -3072,10 +3355,6 @@ exports[`Component: Button Sizes should render a md button 1`] = `
   margin-left: 1rem;
 }
 
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
   className="anchor-button c0 c1"
 >
@@ -3200,10 +3479,6 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
   margin-left: 1rem;
 }
 
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -3240,6 +3515,14 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -3397,10 +3680,6 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
   margin-left: 1rem;
 }
 
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -3437,6 +3716,14 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.375rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.375rem;
 }
 
 .c1:hover,
@@ -3601,10 +3888,6 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   margin-left: 1rem;
 }
 
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -3641,6 +3924,14 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.375rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.375rem;
 }
 
 .c1:hover,
@@ -3728,10 +4019,6 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   margin-left: 1rem;
 }
 
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -3769,6 +4056,14 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -3835,10 +4130,6 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   margin-left: 1rem;
 }
 
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -3875,6 +4166,14 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -3952,7 +4251,126 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
 .c14 + .c0 {
+  margin-left: 1rem;
+}
+
+<button
+    className="anchor-button c0 c1"
+  >
+    Text
+  </button>,
+  .c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
   margin-left: 1rem;
 }
 
@@ -3996,6 +4414,14 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4014,7 +4440,7 @@ Array [
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c15 + .c0 {
+.c14 + .c0 {
   margin-left: 1rem;
 }
 
@@ -4115,127 +4541,12 @@ Array [
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
 }
 
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-<button
-    className="anchor-button c0 c1"
-  >
-    Text
-  </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 12.5rem;
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4316,10 +4627,6 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   margin-left: 1rem;
 }
 
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -4357,6 +4664,14 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -4407,10 +4722,6 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   margin-left: 1rem;
 }
 
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -4447,6 +4758,14 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4509,7 +4828,112 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0074A6;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+  color: #FFFFFF;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
 .c10 + .c0 {
+  margin-left: 1rem;
+}
+
+<button
+    className="anchor-button c0 c1"
+  >
+    Text
+  </button>,
+  .c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
   margin-left: 1rem;
 }
 
@@ -4554,6 +4978,14 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4573,7 +5005,7 @@ Array [
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c11 + .c0 {
+.c10 + .c0 {
   margin-left: 1rem;
 }
 
@@ -4659,113 +5091,12 @@ Array [
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
-  background-color: #0074A6;
-  border: solid thin #0074A6;
-  color: #FFFFFF;
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
 }
 
-.c1:focus:after {
-  position: absolute;
-  content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-<button
-    className="anchor-button c0 c1"
-  >
-    Text
-  </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
-  position: relative;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin #0074A6;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 12.5rem;
-  background-color: #0074A6;
-  border: solid thin #0074A6;
-  color: #FFFFFF;
-}
-
-.c1 + .c0 {
-  margin-left: 1rem;
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4831,10 +5162,6 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   margin-left: 1rem;
 }
 
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -4871,6 +5198,14 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4940,6 +5275,14 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -5016,6 +5359,14 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -5071,6 +5422,14 @@ exports[`Component: Button Variant: Primary should render a primary button 1`] =
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5156,6 +5515,14 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5239,6 +5606,14 @@ Array [
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5324,6 +5699,14 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5438,6 +5821,14 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   margin-left: 1rem;
 }
 
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5475,31 +5866,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 </button>
 `;
 
-exports[`Component: Button Variant: Primary should render with an icon 1`] = `
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
+exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 .c1 {
   position: relative;
   border-radius: 4px;
@@ -5538,8 +5905,12 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-icon {
+.c1 > .anchor-button-prefix {
   margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5560,6 +5931,26 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
 .c2 {
   display: inline-block;
   height: 1rem;
@@ -5571,7 +5962,7 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
   className="anchor-button c0 c1"
 >
   <span
-    className="anchor-icon star c2"
+    className="anchor-icon star anchor-button-prefix c2"
     scale="md"
   >
     <svg
@@ -5596,6 +5987,130 @@ exports[`Component: Button Variant: Primary should render with an icon 1`] = `
     </svg>
   </span>
   Text
+</button>
+`;
+
+exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+<button
+  className="anchor-button c0 c1"
+>
+  Text
+  <span
+    className="anchor-icon star anchor-button-suffix c2"
+    scale="md"
+  >
+    <svg
+      height={16}
+      viewBox="0 0 16 16"
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 0h16v16H0z"
+        />
+        <path
+          d="M4.398 15.508a1.15 1.15 0 0 1-1.646-1.196l.577-3.996L.673 7.33a1.15 1.15 0 0 1 .676-1.9l3.754-.603 1.865-3.789a1.15 1.15 0 0 1 2.064 0l1.865 3.789 3.754.603a1.15 1.15 0 0 1 .676 1.9l-2.653 2.982.623 3.987a1.15 1.15 0 0 1-1.638 1.212l-3.657-1.776-3.604 1.773z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </g>
+    </svg>
+  </span>
 </button>
 `;
 
@@ -5636,6 +6151,14 @@ exports[`Component: Button should be defined 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
+}
+
+.c1 > .anchor-button-prefix {
+  margin-right: 0.5rem;
+}
+
+.c1 > .anchor-button-suffix {
+  margin-left: 0.5rem;
 }
 
 .c1:hover,
