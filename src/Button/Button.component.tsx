@@ -504,8 +504,7 @@ export const Button = ({
     /* tslint:enable no-console */
 
     const iconScale = iconOnly
-        ? size === 'xs' ||
-          (size === 'sm' && (circular || variant === 'minimal'))
+        ? size === 'xs' || (size === 'sm' && variant === 'minimal')
             ? 'md'
             : 'lg'
         : 'md';
