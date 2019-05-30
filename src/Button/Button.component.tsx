@@ -116,6 +116,9 @@ const dimensions = {
     },
 };
 
+const affixSpacing = (size: ButtonSize) =>
+    size === 'lg' || size === 'md' ? 0.5 : 0.375;
+
 interface ButtonStyles {
     base: FlattenSimpleInterpolation;
     disabled: FlattenSimpleInterpolation;
@@ -378,14 +381,10 @@ const StyledButton = styled.button<StyledButtonProps>`
         css`
             // Space icon from text
             & > .anchor-button-prefix {
-                margin-right: ${$size === 'lg' || $size === 'md'
-                    ? 0.5
-                    : 0.375}rem;
+                margin-right: ${affixSpacing($size)}rem;
             }
             & > .anchor-button-suffix {
-                margin-left: ${$size === 'lg' || $size === 'md'
-                    ? 0.5
-                    : 0.375}rem;
+                margin-left: ${affixSpacing($size)}rem;
             }
         `}
 
@@ -471,6 +470,7 @@ export const Button = ({
     suffix,
     ...props
 }: ButtonProps): React.ReactElement<ButtonProps> => {
+    // if there are no children and only prefix or only suffix are set
     const iconOnly =
         (prefix ? !suffix : !!suffix) && React.Children.count(children) === 0;
 
