@@ -1,28 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Hero should be defined 1`] = `
+.c0 {
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 7.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero c0"
 />
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
+.c5 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c5 + .c4 {
+  margin-left: 1rem;
+}
+
+.c5:hover,
+.c5:focus,
+.c5:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c5:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+.c0 {
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 7.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
+  position: relative;
+}
+
+.c2 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin: 1rem 0;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
+.c3 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero c0"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-kjoXOD kXULpW"
+    className="anchor-typography anchor-hero-title c1 c2"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography sc-cHGsZl iNgNYd"
+    className="anchor-typography c3"
   >
     Some Typography text
   </span>
   <button
-    className="anchor-button sc-jTzLTM hWiqrR"
+    className="anchor-button c4 c5"
   >
     CTA
   </button>
@@ -30,11 +172,60 @@ exports[`Component: Hero should render with custom content 1`] = `
 `;
 
 exports[`Component: Hero should render with title 1`] = `
+.c0 {
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 7.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
+  position: relative;
+}
+
+.c2 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin: 1rem 0;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero c0"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-fAjcbJ dbHCSs"
+    className="anchor-typography anchor-hero-title c1 c2"
     scale={32}
   >
     Hero Title
@@ -43,17 +234,89 @@ exports[`Component: Hero should render with title 1`] = `
 `;
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
+.c0 {
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 7.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
+  position: relative;
+}
+
+.c3 {
+  text-shadow: 0 0.125rem 0.125rem rgba(0,0,0,0.04);
+  position: relative;
+  display: block;
+}
+
+.c2 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin: 1rem 0;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
+.c4 {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.c4 small {
+  font-size: 87.5%;
+}
+
 <section
-  className="anchor-hero sc-Rmtcm cMIHaF"
+  className="anchor-hero c0"
 >
   <h1
-    className="anchor-typography anchor-hero-title sc-bRBYWo hjIGoq sc-caSCKo jgTECj"
+    className="anchor-typography anchor-hero-title c1 c2"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle sc-hzDkRC iZdeor sc-gisBJw dGDiUk"
+    className="anchor-typography anchor-hero-subtitle c3 c4"
     scale={18}
   >
     Hero Subtitle
