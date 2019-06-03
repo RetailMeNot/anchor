@@ -82,9 +82,19 @@ describe('Component: Button', () => {
             expect(tree).toMatchSnapshot();
         });
 
-        it('should render with an icon', () => {
+        it('should render with a prefix', () => {
             const subject = (
-                <Button variant="primary" icon={Star}>
+                <Button variant="primary" prefix={<Star />}>
+                    Text
+                </Button>
+            );
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+
+        it('should render with a suffix', () => {
+            const subject = (
+                <Button variant="primary" suffix={<Star />}>
                     Text
                 </Button>
             );
@@ -324,14 +334,20 @@ describe('Component: Button', () => {
     });
 
     describe('Icon Only', () => {
-        it('should render an icon only', () => {
-            const subject = <Button icon={Star} />;
+        it('should render icon-only using a prefix', () => {
+            const subject = <Button prefix={<Star />} />;
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+
+        it('should render icon-only using a suffix', () => {
+            const subject = <Button suffix={<Star />} />;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render a circular icon', () => {
-            const subject = <Button icon={Star} circular />;
+            const subject = <Button prefix={<Star />} circular />;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });

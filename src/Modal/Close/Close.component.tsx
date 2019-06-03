@@ -39,7 +39,7 @@ export const ModalClose = ({
         align={align}
     >
         <Button
-            icon={Close}
+            prefix={<Close />}
             variant="minimal"
             circular
             outline={false}

@@ -99,7 +99,7 @@ storiesOf('Components/Button', module)
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="lg" icon={Cut}>
+                        <Button size="lg" prefix={<Cut />}>
                             CTA Text
                         </Button>
                     </Cell>
@@ -149,7 +149,7 @@ storiesOf('Components/Button', module)
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="md" icon={Cut}>
+                        <Button size="md" prefix={<Cut />}>
                             CTA Text
                         </Button>
                     </Cell>
@@ -181,7 +181,7 @@ storiesOf('Components/Button', module)
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="sm" icon={Cut}>
+                        <Button size="sm" prefix={<Cut />}>
                             CTA Text
                         </Button>
                     </Cell>
@@ -213,7 +213,7 @@ storiesOf('Components/Button', module)
                         <Label>button with icon</Label>
                     </Cell>
                     <Cell>
-                        <Button size="xs" icon={Cut}>
+                        <Button size="xs" prefix={<Cut />}>
                             CTA Text
                         </Button>
                     </Cell>
@@ -424,7 +424,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="lg" icon={Cut}>
+                    <Button variant="outline" size="lg" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -469,7 +469,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="md" icon={Cut}>
+                    <Button variant="outline" size="md" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -505,7 +505,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="sm" icon={Cut}>
+                    <Button variant="outline" size="sm" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -541,7 +541,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="outline" size="xs" icon={Cut}>
+                    <Button variant="outline" size="xs" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -717,7 +717,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="lg" icon={Cut}>
+                    <Button variant="minimal" size="lg" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -762,7 +762,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="md" icon={Cut}>
+                    <Button variant="minimal" size="md" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -798,7 +798,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="sm" icon={Cut}>
+                    <Button variant="minimal" size="sm" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -834,7 +834,7 @@ storiesOf('Components/Button', module)
                     <Label>button with icon</Label>
                 </Cell>
                 <Cell>
-                    <Button variant="minimal" size="xs" icon={Cut}>
+                    <Button variant="minimal" size="xs" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -953,7 +953,7 @@ storiesOf('Components/Button', module)
                     <Button
                         variant="minimal"
                         colorTheme={colors.dealEnvy}
-                        icon={Cut}
+                        prefix={<Cut />}
                     >
                         CTA Text
                     </Button>
@@ -1001,22 +1001,22 @@ storiesOf('Components/Button', module)
 
                 <Cell>
                     <Label>large</Label>
-                    <Button size="lg" icon={SuccessOutline} />
+                    <Button size="lg" prefix={<SuccessOutline />} />
                 </Cell>
                 <Cell>
                     <Label>Medium</Label>
-                    <Button size="md" icon={SuccessOutline} />
+                    <Button size="md" prefix={<SuccessOutline />} />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
-                        <Button size="sm" icon={SuccessOutline} />
+                        <Button size="sm" prefix={<SuccessOutline />} />
                     </ShowHitbox>
                 </Cell>
                 <Cell>
                     <Label>xsmall</Label>
                     <ShowHitbox>
-                        <Button size="xs" icon={SuccessOutline} />
+                        <Button size="xs" prefix={<SuccessOutline />} />
                     </ShowHitbox>
                 </Cell>
 
@@ -1025,18 +1025,26 @@ storiesOf('Components/Button', module)
                 </Cell>
                 <Cell>
                     <Label>large</Label>
-                    <Button size="lg" icon={SuccessOutline} variant="outline" />
+                    <Button
+                        size="lg"
+                        prefix={<SuccessOutline />}
+                        variant="outline"
+                    />
                 </Cell>
                 <Cell>
                     <Label>Medium</Label>
-                    <Button size="md" icon={SuccessOutline} variant="outline" />
+                    <Button
+                        size="md"
+                        prefix={<SuccessOutline />}
+                        variant="outline"
+                    />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
                             size="sm"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             variant="outline"
                         />
                     </ShowHitbox>
@@ -1046,7 +1054,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="xs"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             variant="outline"
                         />
                     </ShowHitbox>
@@ -1057,18 +1065,26 @@ storiesOf('Components/Button', module)
                 </Cell>
                 <Cell>
                     <Label>large</Label>
-                    <Button size="lg" icon={SuccessOutline} variant="minimal" />
+                    <Button
+                        size="lg"
+                        prefix={<SuccessOutline />}
+                        variant="minimal"
+                    />
                 </Cell>
                 <Cell>
                     <Label>Medium</Label>
-                    <Button size="md" icon={SuccessOutline} variant="minimal" />
+                    <Button
+                        size="md"
+                        prefix={<SuccessOutline />}
+                        variant="minimal"
+                    />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
                         <Button
                             size="sm"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             variant="minimal"
                         />
                     </ShowHitbox>
@@ -1078,7 +1094,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="xs"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             variant="minimal"
                         />
                     </ShowHitbox>
@@ -1089,22 +1105,30 @@ storiesOf('Components/Button', module)
                 </Cell>
                 <Cell>
                     <Label>large</Label>
-                    <Button size="lg" icon={SuccessOutline} circular />
+                    <Button size="lg" prefix={<SuccessOutline />} circular />
                 </Cell>
                 <Cell>
                     <Label>Medium</Label>
-                    <Button size="md" icon={SuccessOutline} circular />
+                    <Button size="md" prefix={<SuccessOutline />} circular />
                 </Cell>
                 <Cell>
                     <Label>small</Label>
                     <ShowHitbox>
-                        <Button size="sm" icon={SuccessOutline} circular />
+                        <Button
+                            size="sm"
+                            prefix={<SuccessOutline />}
+                            circular
+                        />
                     </ShowHitbox>
                 </Cell>
                 <Cell>
                     <Label>xsmall</Label>
                     <ShowHitbox>
-                        <Button size="xs" icon={SuccessOutline} circular />
+                        <Button
+                            size="xs"
+                            prefix={<SuccessOutline />}
+                            circular
+                        />
                     </ShowHitbox>
                 </Cell>
 
@@ -1115,7 +1139,7 @@ storiesOf('Components/Button', module)
                     <Label>large</Label>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                     />
@@ -1124,7 +1148,7 @@ storiesOf('Components/Button', module)
                     <Label>Medium</Label>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                     />
@@ -1134,7 +1158,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="sm"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             circular
                             variant="outline"
                         />
@@ -1145,7 +1169,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="xs"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             circular
                             variant="outline"
                         />
@@ -1159,7 +1183,7 @@ storiesOf('Components/Button', module)
                     <Label>large</Label>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                     />
@@ -1168,7 +1192,7 @@ storiesOf('Components/Button', module)
                     <Label>Medium</Label>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                     />
@@ -1178,7 +1202,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="sm"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             circular
                             variant="minimal"
                         />
@@ -1189,7 +1213,7 @@ storiesOf('Components/Button', module)
                     <ShowHitbox>
                         <Button
                             size="xs"
-                            icon={SuccessOutline}
+                            prefix={<SuccessOutline />}
                             circular
                             variant="minimal"
                         />
@@ -1234,7 +1258,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="lg" icon={Cut}>
+                    <Button reverse size="lg" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -1279,7 +1303,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="md" icon={Cut}>
+                    <Button reverse size="md" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -1315,7 +1339,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="sm" icon={Cut}>
+                    <Button reverse size="sm" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -1351,7 +1375,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse size="xs" icon={Cut}>
+                    <Button reverse size="xs" prefix={<Cut />}>
                         CTA Text
                     </Button>
                 </Cell>
@@ -1479,7 +1503,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="lg" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="outline"
+                        size="lg"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1524,7 +1553,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="md" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="outline"
+                        size="md"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1560,7 +1594,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="sm" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="outline"
+                        size="sm"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1596,7 +1635,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="outline" size="xs" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="outline"
+                        size="xs"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1737,7 +1781,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="lg" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="minimal"
+                        size="lg"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1782,7 +1831,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="md" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="minimal"
+                        size="md"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1818,7 +1872,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="sm" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="minimal"
+                        size="sm"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1854,7 +1913,12 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>button with icon</ReverseLabel>
                 </Cell>
                 <Cell>
-                    <Button reverse variant="minimal" size="xs" icon={Cut}>
+                    <Button
+                        reverse
+                        variant="minimal"
+                        size="xs"
+                        prefix={<Cut />}
+                    >
                         CTA Text
                     </Button>
                 </Cell>
@@ -1977,19 +2041,19 @@ storiesOf('Components/Button', module)
 
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
-                    <Button size="lg" icon={SuccessOutline} reverse />
+                    <Button size="lg" prefix={<SuccessOutline />} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>Medium</ReverseLabel>
-                    <Button size="md" icon={SuccessOutline} reverse />
+                    <Button size="md" prefix={<SuccessOutline />} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
-                    <Button size="sm" icon={SuccessOutline} reverse />
+                    <Button size="sm" prefix={<SuccessOutline />} reverse />
                 </Cell>
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
-                    <Button size="xs" icon={SuccessOutline} reverse />
+                    <Button size="xs" prefix={<SuccessOutline />} reverse />
                 </Cell>
 
                 <Cell>
@@ -1999,7 +2063,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>large</ReverseLabel>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="outline"
                         reverse
                     />
@@ -2008,7 +2072,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>Medium</ReverseLabel>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="outline"
                         reverse
                     />
@@ -2017,7 +2081,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>small</ReverseLabel>
                     <Button
                         size="sm"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="outline"
                         reverse
                     />
@@ -2026,7 +2090,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
                         size="xs"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="outline"
                         reverse
                     />
@@ -2039,7 +2103,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>large</ReverseLabel>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="minimal"
                         reverse
                     />
@@ -2048,7 +2112,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>Medium</ReverseLabel>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="minimal"
                         reverse
                     />
@@ -2057,7 +2121,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>small</ReverseLabel>
                     <Button
                         size="sm"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="minimal"
                         reverse
                     />
@@ -2066,7 +2130,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
                         size="xs"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         variant="minimal"
                         reverse
                     />
@@ -2077,19 +2141,39 @@ storiesOf('Components/Button', module)
                 </Cell>
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
-                    <Button size="lg" icon={SuccessOutline} circular reverse />
+                    <Button
+                        size="lg"
+                        prefix={<SuccessOutline />}
+                        circular
+                        reverse
+                    />
                 </Cell>
                 <Cell>
                     <ReverseLabel>Medium</ReverseLabel>
-                    <Button size="md" icon={SuccessOutline} circular reverse />
+                    <Button
+                        size="md"
+                        prefix={<SuccessOutline />}
+                        circular
+                        reverse
+                    />
                 </Cell>
                 <Cell>
                     <ReverseLabel>small</ReverseLabel>
-                    <Button size="sm" icon={SuccessOutline} circular reverse />
+                    <Button
+                        size="sm"
+                        prefix={<SuccessOutline />}
+                        circular
+                        reverse
+                    />
                 </Cell>
                 <Cell>
                     <ReverseLabel>xsmall</ReverseLabel>
-                    <Button size="xs" icon={SuccessOutline} circular reverse />
+                    <Button
+                        size="xs"
+                        prefix={<SuccessOutline />}
+                        circular
+                        reverse
+                    />
                 </Cell>
 
                 <Cell>
@@ -2099,7 +2183,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>large</ReverseLabel>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                         reverse
@@ -2109,7 +2193,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>Medium</ReverseLabel>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                         reverse
@@ -2119,7 +2203,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>small</ReverseLabel>
                     <Button
                         size="sm"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                         reverse
@@ -2129,7 +2213,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
                         size="xs"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="outline"
                         reverse
@@ -2143,7 +2227,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>large</ReverseLabel>
                     <Button
                         size="lg"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                         reverse
@@ -2153,7 +2237,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>Medium</ReverseLabel>
                     <Button
                         size="md"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                         reverse
@@ -2163,7 +2247,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>small</ReverseLabel>
                     <Button
                         size="sm"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                         reverse
@@ -2173,7 +2257,7 @@ storiesOf('Components/Button', module)
                     <ReverseLabel>xsmall</ReverseLabel>
                     <Button
                         size="xs"
-                        icon={SuccessOutline}
+                        prefix={<SuccessOutline />}
                         circular
                         variant="minimal"
                         reverse
@@ -2183,8 +2267,13 @@ storiesOf('Components/Button', module)
         </StyledReverseStory>
     ))
     .add('Button with Knobs', () => {
-        const chosenIcon = select(
-            'icon',
+        const chosenPrefix = select(
+            'prefix',
+            ['none', ...Object.keys(Icon)],
+            'none'
+        );
+        const chosenSuffix = select(
+            'suffix',
             ['none', ...Object.keys(Icon)],
             'none'
         );
@@ -2206,6 +2295,9 @@ storiesOf('Components/Button', module)
         const numberOfButtons = number('button count', 1);
 
         const StoryComponent = isReversed ? StyledReverseStory : StyledStory;
+
+        const Prefix = chosenPrefix === 'none' ? undefined : Icon[chosenPrefix];
+        const Suffix = chosenSuffix === 'none' ? undefined : Icon[chosenSuffix];
 
         return (
             <StoryComponent>
@@ -2233,9 +2325,8 @@ storiesOf('Components/Button', module)
                                 ? undefined
                                 : colors[chosenColor]
                         }
-                        icon={
-                            chosenIcon === 'none' ? undefined : Icon[chosenIcon]
-                        }
+                        prefix={Prefix && <Prefix />}
+                        suffix={Suffix && <Suffix />}
                     >
                         {buttonText ? buttonText : undefined}
                     </Button>
