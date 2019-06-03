@@ -18,19 +18,19 @@ The component can accept the following `props`:
 
 * `isOpen` *(boolean)*: Defaults to **`false`**. Determines whether the Collapse component is open or not. Changing the value of this prop will programatticaly open/close the component, thusly not requiring a click event.
 
-* `openText` *(string)*: Defaults to **`'Open'`**. The text that appears on the button as a Call To Action (CTA) to open the collapsed content. If this prop is used and the `closeText` prop is not, `closeText` will use whatever is defined for `openText`. This is useful if you don't actually want the CTA text to change.
+* `openedText` *(string)*: Defaults to **`'Close'`**. The text that appears on the button as a Call To Action (CTA) when the component is open. If this prop is used and the `closedText` prop is not, `closedText` will use whatever is defined for `openedText`. This is useful if you don't actually want the CTA text to change.
 
-* `closeText` *(string)*: Defaults to **`'Close'`**. The text that appears on the button as a CTA to close the displayed content.
+* `closedText` *(string)*: Defaults to **`'Open'`**. The text that appears on the button as a CTA when the component is closed.
 
-* `openIcon` *(React.ReactElement)*: Defaults to **`<ChevronDown />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
+* `openedIcon` *(React.ReactElement)*: Defaults to **`<ChevronDown />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
 
-* `closeIcon` *(React.ReactElement)*: Defaults to **`<ChevronUp />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
+* `closedIcon` *(React.ReactElement)*: Defaults to **`<ChevronUp />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
 
-    #### `openIcon` and/or `closeIcon` usage
+    #### `openedIcon` and/or `closedIcon` usage
 
         <Collapse
-            openIcon={<ArrowLeft />}
-            closeIcon={<ArrowRight />}
+            openedIcon={<ArrowLeft />}
+            closedIcon={<ArrowRight />}
         >
             <div>Hello world.</div>
         </Collapse>
@@ -74,9 +74,9 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
 
 The component can accept the following `props`:
 
-* `openIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
+* `openedIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
 
-* `closeIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
+* `closedIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
 
 * `theme` *('comfortable' | 'compact' | 'none')*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
 

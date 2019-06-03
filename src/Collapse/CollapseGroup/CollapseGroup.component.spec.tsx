@@ -17,7 +17,8 @@ describe('Component: CollapseGroup', () => {
                 <Collapse>Hello World</Collapse>
                 <Collapse>Hello World</Collapse>
                 <Collapse>Hello World</Collapse>
-            </CollapseGroup>);
+            </CollapseGroup>
+        );
         const component = shallow(subject);
 
         expect(subject).toBeDefined();
@@ -71,8 +72,23 @@ describe('Component: CollapseGroup', () => {
         );
         const wrapper = mount(subject);
 
-        expect(wrapper.find('StyledCollapse.anchor-collapse').at(0).hasClass('no-bottom-border')).toEqual(true);
-        expect(wrapper.find('StyledCollapse.anchor-collapse').at(1).hasClass('no-bottom-border')).toEqual(true);
-        expect(wrapper.find('StyledCollapse.anchor-collapse').at(2).hasClass('no-bottom-border')).toEqual(false);
+        expect(
+            wrapper
+                .find('StyledCollapse.anchor-collapse')
+                .at(0)
+                .hasClass('no-bottom-border')
+        ).toEqual(true);
+        expect(
+            wrapper
+                .find('StyledCollapse.anchor-collapse')
+                .at(1)
+                .hasClass('no-bottom-border')
+        ).toEqual(true);
+        expect(
+            wrapper
+                .find('StyledCollapse.anchor-collapse')
+                .at(2)
+                .hasClass('no-bottom-border')
+        ).toEqual(false);
     });
 });

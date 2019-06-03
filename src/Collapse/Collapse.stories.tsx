@@ -8,8 +8,8 @@ import styled from 'styled-components';
 // COMPONENTS
 import {
     Collapse,
-    DEFAULT_OPEN_TEXT,
-    DEFAULT_CLOSE_TEXT,
+    DEFAULT_OPENED_TEXT,
+    DEFAULT_CLOSED_TEXT,
 } from './Collapse.component';
 import { CollapseGroup } from './CollapseGroup/CollapseGroup.component';
 import * as Icon from '../Icon';
@@ -57,9 +57,13 @@ storiesOf('Components/Collapse', module)
     })
     .add('Default', () => {
         const content = select('Example Content', [TEXT, 'list'], TEXT);
-        const iconOpenPick = select('iconOpen', Object.keys(Icon), 'ChevronUp');
-        const iconClosePick = select(
-            'iconClose',
+        const iconOpenedPick = select(
+            'iconOpened',
+            Object.keys(Icon),
+            'ChevronUp'
+        );
+        const iconClosedPick = select(
+            'iconClosed',
             Object.keys(Icon),
             'ChevronDown'
         );
@@ -68,18 +72,18 @@ storiesOf('Components/Collapse', module)
             <StyledComfortableStory>
                 <Collapse
                     isOpen={boolean('isOpen', false)}
-                    openText={text('openText', DEFAULT_OPEN_TEXT)}
-                    closeText={text('closeText', DEFAULT_CLOSE_TEXT)}
+                    openedText={text('openedText', DEFAULT_OPENED_TEXT)}
+                    closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
                     theme={select(
                         'theme',
                         ['compact', 'comfortable', 'none'],
                         'comfortable'
                     )}
                     hasBottomBorder={boolean('hasBottomBorder', true)}
-                    openIcon={React.createElement(Icon[iconOpenPick], {
+                    openedIcon={React.createElement(Icon[iconOpenedPick], {
                         color: colors.savvyCyan.base,
                     })}
-                    closeIcon={React.createElement(Icon[iconClosePick], {
+                    closedIcon={React.createElement(Icon[iconClosedPick], {
                         color: colors.savvyCyan.base,
                     })}
                 >
@@ -90,9 +94,13 @@ storiesOf('Components/Collapse', module)
     })
     .add('CollapseGroup', () => {
         const content = select('Example Content', [TEXT, 'list'], TEXT);
-        const iconOpenPick = select('iconOpen', Object.keys(Icon), 'ChevronUp');
-        const iconClosePick = select(
-            'iconClose',
+        const iconOpenedPick = select(
+            'iconOpened',
+            Object.keys(Icon),
+            'ChevronUp'
+        );
+        const iconClosedPick = select(
+            'iconClosed',
             Object.keys(Icon),
             'ChevronDown'
         );
@@ -112,10 +120,10 @@ storiesOf('Components/Collapse', module)
                         ['compact', 'comfortable', 'none'],
                         'comfortable'
                     )}
-                    openIcon={React.createElement(Icon[iconOpenPick], {
+                    openedIcon={React.createElement(Icon[iconOpenedPick], {
                         color: colors.savvyCyan.base,
                     })}
-                    closeIcon={React.createElement(Icon[iconClosePick], {
+                    closedIcon={React.createElement(Icon[iconClosedPick], {
                         color: colors.savvyCyan.base,
                     })}
                 >

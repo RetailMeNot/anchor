@@ -36,10 +36,10 @@ describe('Component: Collapse', () => {
         expect(component.find('.anchor-collapse-content').exists()).toBeFalsy();
     });
 
-    it('should use custom openText as closeText if no closeText is given.', () => {
+    it('should use custom openedText as closedText if no closedText is given.', () => {
         const sampleText = 'No Toggling Text';
         const subject = (
-            <Collapse openText={sampleText} isOpen={true}>
+            <Collapse openedText={sampleText} isOpen={true}>
                 Hello World!
             </Collapse>
         );
@@ -60,18 +60,18 @@ describe('Component: Collapse', () => {
         expect(wrapper.find('.anchor-collapse-content').exists()).toBeTruthy();
     });
 
-    it('should use different open icon when passed as a prop.', () => {
+    it('should use different closed icon when passed as a prop.', () => {
         const subject = (
-            <Collapse openIcon={<ArrowBack />}>Hello World!</Collapse>
+            <Collapse closedIcon={<ArrowBack />}>Hello World!</Collapse>
         );
         const wrapper = mount(subject);
 
         expect(wrapper.find('.anchor-icon.arrow-back').exists()).toBeTruthy();
     });
 
-    it('should use different close icon when passed as a prop.', () => {
+    it('should use different opened icon when passed as a prop.', () => {
         const subject = (
-            <Collapse closeIcon={<ArrowBack />} isOpen={true}>
+            <Collapse openedIcon={<ArrowBack />} isOpen={true}>
                 Hello World!
             </Collapse>
         );
