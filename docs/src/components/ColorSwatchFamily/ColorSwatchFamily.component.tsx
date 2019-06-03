@@ -4,59 +4,63 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { ColorSwatch } from '../ColorSwatch';
 import { Typography } from '../../../../src/Typography';
-// THEME
-import { colors } from '../../../../src/theme';
-
-
 // INTERFACES
 interface ColorSwatchFamilyProps {
-  baseColorHexCode: string;
-  baseColorName: string;
-  darkColorHexCode?: string;
-  lightColorHexCode?: string;
+    baseColorHexCode: string;
+    baseColorName: string;
+    darkColorHexCode?: string;
+    lightColorHexCode?: string;
 }
 
-
 // STYLES
-const StyledColorSwatchFamily = styled.div`
-  box-sizing: border-box;
-  margin: 2rem 0;
+const StyledColorSwatchFamily = styled.div<{
+    baseColorName: string;
+    baseColorHexCode: string;
+    darkColorHexCode?: string;
+    lightColorHexCode?: string;
+}>`
+    box-sizing: border-box;
+    margin: 2rem 0;
 
-  h2 {
-    margin: 1rem 0;
-  }
+    h2 {
+        margin: 1rem 0;
+    }
 `;
 
-
 // JSX MARKUP
-export const ColorSwatchFamily = ({ baseColorHexCode, baseColorName, darkColorHexCode, lightColorHexCode }: ColorSwatchFamilyProps): React.ReactElement<any> => (
-  <StyledColorSwatchFamily
-    baseColorName={baseColorName}
-    baseColorHexCode={baseColorHexCode}
-    darkColorHexCode={darkColorHexCode}
-    lightColorHexCode={lightColorHexCode}
-  >
+export const ColorSwatchFamily = ({
+    baseColorHexCode,
+    baseColorName,
+    darkColorHexCode,
+    lightColorHexCode,
+}: ColorSwatchFamilyProps): React.ReactElement<any> => (
+    <StyledColorSwatchFamily
+        baseColorName={baseColorName}
+        baseColorHexCode={baseColorHexCode}
+        darkColorHexCode={darkColorHexCode}
+        lightColorHexCode={lightColorHexCode}
+    >
+        <Typography tag="h2" weight={600}>
+            {baseColorName}
+        </Typography>
 
-    <Typography tag="h2" weight="600">{baseColorName}</Typography>
+        <ColorSwatch
+            colorHexCode={baseColorHexCode}
+            colorName={`${baseColorName}.base`}
+        />
 
-    <ColorSwatch
-      colorHexCode={baseColorHexCode}
-      colorName={`${baseColorName}.base`}
-    ></ColorSwatch>
+        {lightColorHexCode && (
+            <ColorSwatch
+                colorHexCode={lightColorHexCode}
+                colorName={`${baseColorName}.light`}
+            />
+        )}
 
-    { lightColorHexCode && (
-      <ColorSwatch
-        colorHexCode={lightColorHexCode}
-        colorName={`${baseColorName}.light`}
-      ></ColorSwatch>
-    )}
-
-    { darkColorHexCode && (
-      <ColorSwatch
-        colorHexCode={darkColorHexCode}
-        colorName={`${baseColorName}.dark`}
-      ></ColorSwatch>
-    )}
-
-  </StyledColorSwatchFamily>
+        {darkColorHexCode && (
+            <ColorSwatch
+                colorHexCode={darkColorHexCode}
+                colorName={`${baseColorName}.dark`}
+            />
+        )}
+    </StyledColorSwatchFamily>
 );

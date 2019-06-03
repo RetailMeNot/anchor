@@ -119,21 +119,21 @@ const StyledWaveOne = styled.div`
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
-        <StyledIndexPage>
-            <TempOverride />
-            <StyledLogo src={withPrefix('/images/anchor-logo.svg')} />
-            <StyledCaption>
-                A design system by <strong>RetailMeNot</strong>. Coming soon.
-            </StyledCaption>
-            <StyledOcean>
-                <StyledWaveOne />
-                <StyledWaveTwo />
-                <StyledWaveThree />
-                <StyledWaveFour />
-                <StyledWaveFive />
-                <StyledWaveSix />
-            </StyledOcean>
-        </StyledIndexPage>
+    <StyledIndexPage>
+        <TempOverride />
+        <StyledLogo src={withPrefix('/images/anchor-logo.svg')} />
+        <StyledCaption>
+            A design system by <strong>RetailMeNot</strong>. Coming soon.
+        </StyledCaption>
+        <StyledOcean>
+            <StyledWaveOne />
+            <StyledWaveTwo />
+            <StyledWaveThree />
+            <StyledWaveFour />
+            <StyledWaveFive />
+            <StyledWaveSix />
+        </StyledOcean>
+    </StyledIndexPage>
 );
 
 export default IndexPage;

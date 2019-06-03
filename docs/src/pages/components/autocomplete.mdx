@@ -1,14 +1,44 @@
-# Autocomplete
+# AutoComplete
 
-#### Usage
+Enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
 
-The autocomplete is a normal text input enhanced by a panel of suggested options.
+> The AutoComplete component encapsulates the [Text Input](/components/input) and provides a results list as the user 
+enters a search query. By default, the search results component encapsulates the [List](/components/list) component and 
+can utilize all of the behaviors of that component (e.g. displaying [Items](/components/list), 
+[Dividers](/components/list), [Titles](/components/list), etc).
 
-#### Autocomplete default usage
+## Usage
+
+In its most basic implementation, the only required prop for the autocomplete is the **dataSource** property. This is an 
+array of strings or objects with a **label** property that displays as the results.
+
+### Autocomplete default usage
+
+In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a 
+[List](/components/list) component when the AutoComplete has focus.
+
 ```tsx
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
-        allowClear={true}
+        dataSource={[
+            'Result 1',
+            'Result 2',
+            'Result 3',
+            'Result 4',
+        ]}
+    />
+</div>
+```
+
+### Autocomplete common usage
+
+In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a 
+[List](/components/list) component when the AutoComplete has focus and a **placeholder** and **prefix** are present allowing the 
+AutoComplete to look like a search AutoComplete.
+
+```tsx
+<div style={{ padding: '2rem 1rem' }}>
+    <AutoComplete
         placeholder="Search here..."
         prefix={<Search color={colors.ash.base} />}
         dataSource={[
@@ -20,8 +50,14 @@ The autocomplete is a normal text input enhanced by a panel of suggested options
     />
 </div>
 ```
-#### Autocomplete usage with custom nodes
-Note that the data source conforms to the List API's schema for generating breaks and title sections. 
+
+### Autocomplete usage with custom results passed in as dataSource
+
+In order to handle more robust use-cases, the Array specified as the **dataSource** can be made of object so long as 
+they have a **label** property defined (this will eventually be updated to allow the implementor to pass in an object and 
+a key-name to use that as the display text of the result). As well, the presence of a **listItemType** tells the 
+[List](/components/list) component what child node to render (e.g. '**divider**', '**title**', or '**item**').
+
 ```tsx
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
@@ -61,3 +97,128 @@ Note that the data source conforms to the List API's schema for generating break
     />
 </div>
 ```
+
+<br />
+
+## API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>dataSource</td>
+            <td>A collection used to render the results that should conform to the List component API</td>
+            <td>Array&lt;string&gt; | Array&lt;&#123; name: string; &#125;&gt;</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>className</td>
+            <td>Any class name(s)</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>The size of the AutoComplete</td>
+            <td>'sm' | 'md' | 'lg'</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>placeholder</td>
+            <td>The placeholder for the Input nested in the AutoComplete.</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>The initial value of the autocomplete.</td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>allowClear</td>
+            <td><strong>TODO:</strong> Enable a one-click clear of the AutoComplete's value.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>Enable/Disable the border of the AutoComplete.</td>
+            <td>Boolean</td>
+            <td>true</td>
+        </tr>
+        <tr>
+        	<td>shadow</td>
+        	<td>Enable/Disable the shadow of the AutoComplete.</td>
+        	<td>Boolean</td>
+        	<td>true</td>
+        </tr>
+        <tr>
+        	<td>background</td>
+        	<td>Set the background of the autocomplete.</td>
+        	<td>string | rgb | rgba</td>
+        	<td>white</td>
+        </tr>
+        <tr>
+        	<td>color</td>
+        	<td>Set the font color of the autocomplete.</td>
+        	<td>string | rgb | rgba</td>
+        	<td>Charcoal Light</td>
+        </tr>
+        <tr>
+        	<td>resultTemplate</td>
+        	<td>A custom template to render as a result item.</td>
+        	<td>JSX</td>
+        	<td>-</td>
+        </tr>
+        <tr>
+        	<td>suffix</td>
+        	<td>A prefix for the Text Input (see Input API)</td>
+        	<td>JSX</td>
+        	<td>-</td>
+        </tr>
+        <tr>
+        	<td>prefix</td>
+        	<td>A suffix for the Text Input (see Input API)</td>
+        	<td>JSX</td>
+        	<td>-</td>
+        </tr>
+        <tr>
+            <td>onFilter</td>
+            <td>An event handler for when the input value changes.</td>
+            <td>(term: string | number) => void;</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onSelect</td>
+            <td>An event handler for when a result is selected.</td>
+            <td>(value?: string | number, item?: any) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onChange</td>
+            <td>An event handler for when the value changes.</td>
+            <td>(value?: string | number, item?: any) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onFocus</td>
+            <td>An event handler for focus events.</td>
+            <td>(event?: React.FocusEvent) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onBlur</td>
+            <td>An event handler for blur events.</td>
+            <td>(event?: React.FocusEvent) => void</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
