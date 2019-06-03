@@ -7,6 +7,7 @@ import { transparentize } from 'polished';
 // ANCHOR
 import { colors, fonts, sizes } from '../theme';
 import { Theme, TRANSITION_SPEED } from './utils';
+import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
 
@@ -26,10 +27,12 @@ export interface ButtonProps {
     colorTheme?: Theme;
     minWidth?: string;
     block?: boolean;
-    icon?: any;
     circular?: boolean;
     reverse?: boolean;
     outline?: boolean;
+
+    prefix?: React.ReactElement<any>;
+    suffix?: React.ReactElement<any>;
 
     forceHover?: boolean;
     forceFocus?: boolean;
@@ -112,6 +115,9 @@ const dimensions = {
         fontSize: 1,
     },
 };
+
+const affixSpacing = (size: ButtonSize) =>
+    size === 'lg' || size === 'md' ? 0.5 : 0.375;
 
 interface ButtonStyles {
     base: FlattenSimpleInterpolation;
@@ -370,15 +376,15 @@ const StyledButton = styled.button<StyledButtonProps>`
                   min-width: ${minWidth || `${dimensions[$size].width}rem`};
               `}
 
-    ${({ icon, iconOnly, $size }: StyledButtonProps) =>
-        icon &&
+    ${({ iconOnly, $size }: StyledButtonProps) =>
         !iconOnly &&
         css`
             // Space icon from text
-            & > .anchor-icon {
-                margin-right: ${$size === 'lg' || $size === 'md'
-                    ? 0.5
-                    : 0.375}rem;
+            & > .anchor-button-prefix {
+                margin-right: ${affixSpacing($size)}rem;
+            }
+            & > .anchor-button-suffix {
+                margin-left: ${affixSpacing($size)}rem;
             }
         `}
 
@@ -460,10 +466,13 @@ export const Button = ({
     circular,
     children,
     minWidth,
-    icon: Icon,
+    prefix,
+    suffix,
     ...props
 }: ButtonProps): React.ReactElement<ButtonProps> => {
-    const iconOnly = Icon && React.Children.count(children) === 0;
+    // if there are no children and only prefix or only suffix are set
+    const iconOnly =
+        (prefix ? !suffix : !!suffix) && React.Children.count(children) === 0;
 
     /* tslint:disable no-console */
     if (flip && circular) {
@@ -495,8 +504,7 @@ export const Button = ({
     /* tslint:enable no-console */
 
     const iconScale = iconOnly
-        ? size === 'xs' ||
-          (size === 'sm' && (circular || variant === 'minimal'))
+        ? size === 'xs' || (size === 'sm' && variant === 'minimal')
             ? 'md'
             : 'lg'
         : 'md';
@@ -526,7 +534,6 @@ export const Button = ({
             minWidth={minWidth}
             $height={height}
             $size={size}
-            icon={Icon}
             iconOnly={iconOnly}
             circular={circular}
             variant={variant}
@@ -542,8 +549,17 @@ export const Button = ({
             {(height < 3 || width < 3) && (
                 <HitArea buttonHeight={height} buttonWidth={width} />
             )}
-            {Icon && <Icon scale={iconScale} />}
+            {prefix &&
+                cloneWithProps(prefix, {
+                    scale: iconScale,
+                    className: 'anchor-button-prefix',
+                })}
             {children}
+            {suffix &&
+                cloneWithProps(suffix, {
+                    scale: iconScale,
+                    className: 'anchor-button-suffix',
+                })}
             {flip && !disabled && !revealed && <Flip colorTheme={colorTheme} />}
         </StyledButton>
     );

@@ -82,7 +82,7 @@ exports[`Component: Modal.Close should render 1`] = `
     className="anchor-button c1 c2"
   >
     <span
-      className="anchor-icon close c3"
+      className="anchor-icon close anchor-button-prefix c3"
       scale="lg"
     >
       <svg

@@ -8,13 +8,14 @@ import {
     LivePreview,
     LiveEditorProps,
     PreProps,
-    LiveError
+    LiveError,
 } from 'react-live';
 import Component from '@reach/component-component';
 import { AutoComplete } from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
 // THEME
+// import { TableCSS } from '../Layout/Page/Page.component';
 import { colors } from '../../../../src/theme';
 
 // TODO: add CDN Inconsolata font
@@ -41,50 +42,60 @@ const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
     // This library uses element-based colors to set some of its colors, which necessitates the '!important' below
     .token-line {
         .token {
-            &.plain {
-                color: #d3d0c8;
-            }
-            &.keyword {
-                color: #99cc99 !important;
-            }
-            &.function {
-                color: #f2777a;
-            }
+            //&.plain {
+            //    color: #d3d0c8;
+            //}
+            //&.keyword {
+            //    color: #99cc99 !important;
+            //}
+            //&.function {
+            //    color: #f2777a;
+            //}
             &.punctuation {
-                color: #ffcc66;
+                color: rgba(211,208,200, 0.7);
             }
-            &.operator {
-                color: #f99157 !important;
-            }
+            //&.operator {
+            //    color: #f99157 !important;
+            //}
             &.tag {
-                color: #6699cc !important;
-            }
-            &.tag.script {
                 color: #f2777a !important;
             }
+            &.tag.script {
+                color: #99cc99 !important;
+            }
             &.tag.script.punctuation {
-                color: orange !important;
+                color: #f99157 !important;
             }
             &.tag.script.string {
                 color: #99cc99 !important;
             }
-            &.number {
-                color: #cc99cc !important;
+            &.tag.script.script-punctuation {
+                color: rgba(211, 208, 200, 0.7) !important;
             }
-            &.boolean {
-                color: inherit;
+            &.tag.attr-name {
+                color: #f99157 !important;
+                font-style: italic;
             }
+            //&.number {
+            //    color: #cc99cc !important;
+            //}
+            //&.boolean {
+            //    color: inherit;
+            //}
         }
     }
-}
+    }
+    textarea {
+        caret-color: white;
+    }
 `;
 
 const StyledLivePreview = styled(LivePreview)<PreProps>`
     ${CodePreviewForcedStyles};
     padding: 1rem;
     border: solid thin ${colors.silver.base};
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 `;
 
 interface CodePreviewProps {
