@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import { AutoComplete } from '@retailmenot/anchor';
 // COMPONENTS
-import { NormalizeCSS } from '../../../../../src/theme';
+import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { Footer } from '../';
 import { CodePreview } from '../../CodePreview';
 import {
@@ -32,6 +32,43 @@ interface PageProps {
 const StyledContentBody = styled.div`
     box-sizing: border-box;
     width: 90%;
+
+    table {
+        width: 100%;
+        font-family: ${fonts.fontFamily};
+        margin: 1rem 0;
+    }
+    th {
+        text-align: left;
+        padding: 0.75rem 0.5rem;
+        border-bottom: solid thin ${colors.silver.dark};
+    }
+    tr {
+        &:nth-child(even) {
+            background-color: ${colors.silver.light};
+        }
+    }
+    td {
+        padding: 0.75rem 0.5rem;
+        &:first-child {
+            font-family: monospace;
+            color: ${colors.flashPink.dark};
+        }
+        &:nth-child(3) {
+            font-family: monospace;
+            color: ${colors.cyberMango.dark};
+        }
+        &:nth-child(4) {
+            text-align: center;
+        }
+    }
+
+    blockquote {
+        padding-bottom: 0;
+        > p {
+            padding-bottom: 0.5rem;
+        }
+    }
 `;
 const StyledContentMain = styled.main`
     box-sizing: border-box;
@@ -78,25 +115,85 @@ const StyledPrimaryNav = styled.nav`
     }
 `;
 
+const StyledTable = styled.table``;
+
 const Components: any = {};
 
 Components.code = (props: any) => <CodePreview {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
 Components.inlineCode = (props: any) => <Typography tag="code" {...props} />;
 Components.pre = (props: any) => <Typography tag="pre" {...props} />;
-Components.h1 = (props: any) => <Typography weight={600} tag="h1" {...props} />;
-Components.h2 = (props: any) => <Typography weight={600} tag="h2" {...props} />;
-Components.h3 = (props: any) => <Typography weight={600} tag="h3" {...props} />;
-Components.h4 = (props: any) => <Typography weight={600} tag="h4" {...props} />;
-Components.h5 = (props: any) => <Typography weight={600} tag="h5" {...props} />;
-Components.h6 = (props: any) => <Typography weight={600} tag="h6" {...props} />;
+Components.h1 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children}`.toLowerCase()}
+        weight={600}
+        tag="h1"
+        {...props}
+        children={children}
+    />
+);
+Components.h2 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children.split(' ').join('-')}`.toLowerCase()}
+        weight={600}
+        tag="h2"
+        lineHeight={2.3}
+        {...props}
+        children={children}
+    />
+);
+Components.h3 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children.split(' ').join('-')}`.toLowerCase()}
+        weight={600}
+        tag="h3"
+        lineHeight={2.5}
+        {...props}
+        children={children}
+    />
+);
+Components.h4 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children.split(' ').join('-')}`.toLowerCase()}
+        weight={600}
+        tag="h4"
+        {...props}
+        children={children}
+    />
+);
+Components.h5 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children.split(' ').join('-')}`.toLowerCase()}
+        weight={600}
+        tag="h5"
+        {...props}
+        children={children}
+    />
+);
+Components.h6 = ({ children, ...props }: any) => (
+    <Typography
+        id={`${children.split(' ').join('-')}`.toLowerCase()}
+        weight={600}
+        tag="h6"
+        {...props}
+        children={children}
+    />
+);
 Components.p = (props: any) => <Typography tag="p" {...props} />;
-Components.a = (props: any) => <Typography tag="a" {...props} />;
-Components.blockquote = (props: any) => <Typography tag="blockquote" {...props} />;
-Components.strong = (props: any) => <Typography weight={600} tag="p" {...props} />;
+Components.a = (props: any) => (
+    <Typography color={colors.flashPink.base} tag="a" {...props} />
+);
+Components.blockquote = (props: any) => (
+    <Typography tag="blockquote" {...props} />
+);
+Components.strong = (props: any) => (
+    <Typography weight={600} tag="strong" {...props} />
+);
 Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
 Components.li = (props: any) => <li {...props} />;
+// TODO: This only binds to MD tables, not HTML
+Components.table = (props: any) => <StyledTable {...props} />;
 
 export const Page = ({
     children,
@@ -150,7 +247,9 @@ export const Page = ({
         <StyledContentBody>
             <Grid columns="minmax(180px, 300px) 1fr">
                 <StyledSideNav>
-                    <Typography tag="p">TODO: when we have accordions</Typography>
+                    <Typography tag="p">
+                        TODO: when we have accordions
+                    </Typography>
                 </StyledSideNav>
                 <Cell>
                     <StyledContentMain>
