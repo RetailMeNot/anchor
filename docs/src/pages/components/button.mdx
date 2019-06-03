@@ -3,41 +3,62 @@
 #### Usage
 
 Buttons are used to complete an action or make a choice. Some examples include Add, Save, Delete, Sign up. As a general
-rule, each page should have one primary button. Any remaining calls-to-action are represented as secondary buttons
-(e.g. Cancel). 
+rule, each page should have one primary button. Any remaining calls-to-action are represented as outline buttons
+(e.g. Cancel).
 
 #### Primary Button
 ```tsx
-<Component initialState={{ size: 'medium' }}>
-  {({ state, setState }) => 
+<Component initialState={{ size: 'md' }}>
+  {({ state, setState }) =>
     <div>
-      <Button size={state.size} onClick={() => { setState({ size: 'small' }) }}>Button Text</Button>
+      <Button
+        variant="primary"
+        size={state.size}
+        onClick={() => setState(({ size }) => ({
+          size: size === 'sm' ? 'md' : 'sm'
+        }))}
+      >
+        Button Text
+      </Button>
     </div>
   }
 </Component>
 ```
 
-#### Primary Button
+#### Outline Button
 ```tsx
-class Derp extends React.Component {
-    constructor(props) {
-        console.log(1);
-    }
-    
-    someFunc() {
-        const h = 1 === 1;
-        const g = true;
-        const t = [ { id:1, name: 'Test', value: true } ];
-        
-        return h;
-    }
+<Component initialState={{ size: 'md' }}>
+  {({ state, setState }) =>
+    <div>
+      <Button
+        variant="outline"
+        size={state.size}
+        onClick={() => setState(({ size }) => ({
+          size: size === 'sm' ? 'md' : 'sm'
+        }))}
+      >
+        Button Text
+      </Button>
+    </div>
+  }
+</Component>
+```
 
-    render () {
-        return (
-            <div>
-                1
-            </div>
-        );
-    }
-}
+#### Minimal Button
+```tsx
+<Component initialState={{ size: 'md' }}>
+  {({ state, setState }) =>
+    <div>
+      <Button
+        variant="minimal"
+        size={state.size}
+        onClick={() => setState(({ size }) => ({
+          size: size === 'sm' ? 'md' : 'sm'
+        }))}
+      >
+        Button Text
+      </Button>
+    </div>
+  }
+</Component>
 ```

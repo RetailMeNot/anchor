@@ -1,3 +1,20 @@
+export type Color =
+    | 'charcoal'
+    | 'ash'
+    | 'silver'
+    | 'lavenderWhispers'
+    | 'white'
+    | 'grapePurchase'
+    | 'savvyCyan'
+    | 'tealBreaker'
+    | 'dealEnvy'
+    | 'flashPink'
+    | 'cyberMango'
+    | 'goldMine'
+    | 'fireSale'
+    | 'error'
+    | 'success';
+
 export const colors = {
     charcoal: {
         base: '#323232',

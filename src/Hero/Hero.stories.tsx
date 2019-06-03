@@ -9,7 +9,7 @@ import { Typography } from '..';
 import { colors } from '../theme';
 import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
-import { Grid, CustomAdaptor, StandardBreakpoints } from '../Grid';
+import { Grid, Cell, CustomAdaptor, StandardBreakpoints } from '../Grid';
 import { Button } from '../Button';
 // SUBJECT
 import { Hero } from './Hero.component';
@@ -66,16 +66,6 @@ storiesOf('Components/Hero', module)
         );
     })
     .add('CTA', () => {
-        // Replace when proper button exists
-        const NeatButton = styled(Button)`
-            color: white;
-            border: thin solid white;
-            width: 9.5rem;
-            text-align: center;
-            margin: 0.1835rem auto;
-            font-size: 15px;
-        `;
-
         const StyledImageWrapper = styled.div`
             position: absolute;
             right: 0;
@@ -91,7 +81,12 @@ storiesOf('Components/Hero', module)
                     background={color('Hero Background', tealGradient)}
                     minHeight="12.5rem"
                 >
-                    <Grid gap="0.375rem" columns={1}>
+                    <Grid
+                        gap="0.75rem"
+                        columns={1}
+                        justifyContent="center"
+                        alignContent="center"
+                    >
                         <StyledImageWrapper>
                             <SomeImage />
                         </StyledImageWrapper>
@@ -106,12 +101,16 @@ storiesOf('Components/Hero', module)
                                 )}
                             </Subtitle>
                         </CustomAdaptor>
-                        <NeatButton
-                            variant="text"
-                            onClick={() => alert('Paid!')}
-                        >
-                            {text('Button Text', 'Pay Debts Today')}
-                        </NeatButton>
+                        <Cell>
+                            <Button
+                                variant="outline"
+                                reverse
+                                onClick={() => alert('Paid!')}
+                                margin="0 auto"
+                            >
+                                {text('Button Text', 'Pay Debts Today')}
+                            </Button>
+                        </Cell>
                     </Grid>
                 </Hero>
             </StyledStory>

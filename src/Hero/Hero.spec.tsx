@@ -5,6 +5,10 @@ import * as renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 // ANCHOR
 import { Button, Typography } from '..';
+// STYLED COMPONENTS
+/* tslint:disable no-import-side-effect*/
+import 'jest-styled-components';
+/* tslint:enable */
 // COMPONENT
 import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;

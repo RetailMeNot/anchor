@@ -71,6 +71,8 @@ const StyledModal = StyledReactModal.default.styled`
             Sizes[size].contentPadding}rem;
     }
     ${StyledFooter} {
+        padding: ${({ size = defaultSize }: ModalProps) =>
+            `0 ${Sizes[size].contentPadding}rem`};
         min-height: ${({ size = defaultSize }: ModalProps) =>
             Sizes[size].footerHeight}rem;
     }

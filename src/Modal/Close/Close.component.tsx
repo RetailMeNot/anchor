@@ -2,9 +2,8 @@
 import * as React from 'react';
 
 // ANCHOR
+import { Button, ButtonProps } from '../../Button';
 import { Close } from '../../Icon';
-import { IconSVGProps } from '../../Icon/utils';
-import { colors } from '../../theme/colors.theme';
 
 // VENDOR
 import styled from 'styled-components';
@@ -16,7 +15,8 @@ const StyledClose = styled.div`
     width: 3rem;
     margin: 0.5rem;
     top: 0;
-    right: 0;
+    ${({ align }: ModalCloseProps) =>
+        align === 'left' ? 'left: 0;' : 'right: 0;'}
 
     display: flex;
     justify-content: center;
@@ -25,23 +25,25 @@ const StyledClose = styled.div`
     cursor: pointer;
 `;
 
-export interface ModalCloseProps extends IconSVGProps {
-    onClick?: any;
-    className?: string;
+export interface ModalCloseProps extends ButtonProps {
+    align?: 'right' | 'left';
 }
 
 export const ModalClose = ({
-    onClick,
     className,
-    color = colors.savvyCyan.base,
-    scale = 'lg',
+    align = 'right',
     ...props
 }: ModalCloseProps) => (
     <StyledClose
         className={classnames('anchor-modal-close', className)}
-        onClick={onClick}
+        align={align}
     >
-        {/* This may change to an icon-only button, once that component is done */}
-        <Close color={color} scale={scale} {...props} />
+        <Button
+            prefix={<Close />}
+            variant="minimal"
+            circular
+            outline={false}
+            {...props}
+        />
     </StyledClose>
 );

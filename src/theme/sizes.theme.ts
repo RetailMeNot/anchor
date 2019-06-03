@@ -19,7 +19,7 @@ export const sizes = {
     margin: { ...standardSizes },
     border: {
         radius: {
-            base: '3px',
+            base: '4px',
             modal: '8px',
         },
         width: {
