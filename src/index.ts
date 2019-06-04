@@ -2,7 +2,7 @@ export { Avatar } from './Avatar';
 export { AutoComplete } from './AutoComplete';
 export { Button } from './Button/Button.component';
 export { Badge } from './Badge';
-export { Collapse } from './Collapse';
+export { Collapse, CollapseGroup } from './Collapse';
 export { DropDown } from './DropDown';
 export {
     Grid,
