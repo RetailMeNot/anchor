@@ -14,14 +14,16 @@ const standardSizes: Sizes = {
     xl: '3rem',
 };
 
+export const radii = {
+    base: '4px',
+    modal: '8px',
+};
+
 export const sizes = {
     padding: { ...standardSizes },
     margin: { ...standardSizes },
     border: {
-        radius: {
-            base: '4px',
-            modal: '8px',
-        },
+        radius: radii,
         width: {
             base: '1px',
         },

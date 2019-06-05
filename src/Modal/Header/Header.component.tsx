@@ -24,7 +24,7 @@ export const StyledHeader = styled.div<ModalHeaderProps>`
     order: -1;
 
     color: ${({ color = colors.charcoal.light }) => color};
-    background: ${({ background = colors.white.base }) => background};
+    background: ${({ background }) => background};
 
     // If the header exists, remove the Content's padding.
     // We're preferring this selector to using Modal :first-child

@@ -2,8 +2,8 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { boolean, select, number, text } from '@storybook/addon-knobs';
-import styled from 'styled-components';
+import { boolean, select, number, text, object } from '@storybook/addon-knobs';
+import styled, { ThemeProvider } from 'styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
 import { colors } from '../theme/index';
@@ -173,7 +173,58 @@ storiesOf('Components/Modal', module)
             </ModalProvider>
         );
     })
+    .add('Custom Theme', () => {
+        const size = select('size', sizeOptions, 'sm');
+        const width = text('width', '');
+        const borderRadius = text('borderRadius', 'modal');
+
+        const theme = {
+            modal: {
+                size: {
+                    lg: {
+                        height: 40,
+                        width: 100,
+                        contentPadding: 5,
+                        footerHeight: 6.5,
+                    },
+                    sm: {
+                        height: 25,
+                        width: 30,
+                        contentPadding: 1,
+                        footerHeight: 4,
+                    },
+                },
+            },
+            radii: {
+                modal: '32px',
+            },
+        };
+
+        return (
+            <ThemeProvider theme={object('theme', theme)}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal
+                            size={size}
+                            isOpen
+                            width={width ? width : undefined}
+                            borderRadius={
+                                borderRadius ? borderRadius : undefined
+                            }
+                        >
+                            <Close />
+                            <Header title="Modal with Custom Theme" />
+                            <Content>Content</Content>
+                            <Footer>Footer</Footer>
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
+        );
+    })
     .add('Customized', () => {
+        const height = text('height', '25rem');
+
         const OpenModalButton = () => {
             const [isOpen, setIsOpen] = useState<boolean>(true);
 
@@ -184,7 +235,7 @@ storiesOf('Components/Modal', module)
                     <Modal
                         isOpen={isOpen}
                         size={select('size', sizeOptions, 'sm')}
-                        height={text('height', '25rem')}
+                        height={height}
                         width={text('width', '30rem')}
                         margin={text('margin', 'auto')}
                         background={`linear-gradient(170deg, ${
