@@ -6,7 +6,6 @@ exports[`Component: Modal.Header should render with title 1`] = `
   min-height: 4rem;
   padding: 1.25rem 4.75rem 1.25rem 2rem;
   width: 100%;
-  border-radius: 8px 8px 0 0;
   margin-bottom: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,6 +14,8 @@ exports[`Component: Modal.Header should render with title 1`] = `
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
   color: #595959;
 }
 
@@ -41,6 +42,7 @@ exports[`Component: Modal.Header should render with title 1`] = `
 
 <div
   className="anchor-modal-header c0"
+  color="#595959"
 >
   <span
     className="anchor-typography c1"

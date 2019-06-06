@@ -176,6 +176,7 @@ storiesOf('Components/Modal', module)
     .add('Custom Theme', () => {
         const size = select('size', sizeOptions, 'sm');
         const width = text('width', '');
+        const height = text('height', '');
         const borderRadius = text('borderRadius', 'modal');
 
         const theme = {
@@ -208,6 +209,7 @@ storiesOf('Components/Modal', module)
                             size={size}
                             isOpen
                             width={width ? width : undefined}
+                            height={height ? height : undefined}
                             borderRadius={
                                 borderRadius ? borderRadius : undefined
                             }

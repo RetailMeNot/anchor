@@ -4,8 +4,9 @@ exports[`Component: Modal.Footer should render 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  border-radius: 0 0 8px 8px;
   margin-top: auto;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +23,6 @@ exports[`Component: Modal.Footer should render 1`] = `
   -ms-flex-order: 1;
   order: 1;
   justify-self: flex-end;
-  background: transparent;
 }
 
 <div

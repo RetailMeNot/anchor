@@ -5,19 +5,17 @@ import * as React from 'react';
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from 'styled-components';
 import {
+    variant,
+    compose,
     borderRadius as borderRadiusStyles,
     BorderRadiusProps,
-    variant,
-} from '../theme/system';
-import {
     margin as marginStyles,
     MarginProps,
     color as colorStyles,
     ColorProps,
     background as backgroundStyles,
     BackgroundProps,
-    compose,
-} from 'styled-system';
+} from '../theme/system';
 import classnames from 'classnames';
 
 // SUBCOMPONENTS
@@ -100,7 +98,12 @@ const StyledModal = StyledReactModal.default.styled`
     overflow: hidden;
 `;
 
-interface ModalProps extends StyledReactModal.ModalProps {
+interface ModalProps
+    extends StyledReactModal.ModalProps,
+        MarginProps,
+        BorderRadiusProps,
+        ColorProps,
+        BackgroundProps {
     size?: ModalSize;
     width?: string;
     height?: string;
@@ -116,11 +119,7 @@ export const Modal = ({
     background = 'white',
     borderRadius = 'modal',
     ...props
-}: ModalProps &
-    MarginProps &
-    BorderRadiusProps &
-    ColorProps &
-    BackgroundProps): React.ReactElement<ModalProps> => (
+}: ModalProps): React.ReactElement<ModalProps> => (
     <StyledModal
         {...{
             className: classnames('anchor-modal', className),

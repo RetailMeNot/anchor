@@ -2,24 +2,36 @@
 import * as React from 'react';
 
 // ANCHOR
-import { sizes } from '../../theme/sizes.theme';
+import {
+    compose,
+    color as colorStyles,
+    ColorProps,
+    background as backgroundStyles,
+    BackgroundProps,
+    borderRadius as borderRadiusStyles,
+    BorderRadiusProps,
+    padding as paddingStyles,
+    PaddingProps,
+} from '../../theme/system';
 
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import classnames from 'classnames';
 
 export const StyledFooter = styled.div<ModalFooterProps>`
     box-sizing: border-box;
     width: 100%;
-    border-radius: 0 0 ${sizes.border.radius.modal} ${sizes.border.radius.modal};
     margin-top: auto;
-    ${({ padding }) =>
-        padding &&
-        css`
-            && {
-                padding: ${padding};
-            }
-        `};
+
+    ${compose(
+        colorStyles,
+        backgroundStyles,
+        borderRadiusStyles
+    )}
+
+    && {
+        ${paddingStyles}
+    }
 
     display: flex;
     justify-content: center;
@@ -27,24 +39,27 @@ export const StyledFooter = styled.div<ModalFooterProps>`
 
     order: 1;
     justify-self: flex-end;
-
-    background: ${({ background = 'transparent' }) => background};
 `;
 
-export interface ModalFooterProps {
+export interface ModalFooterProps
+    extends ColorProps,
+        BackgroundProps,
+        BorderRadiusProps,
+        PaddingProps {
     children?: any;
     className?: string;
-    background?: string;
-    padding?: string;
+    color?: string;
 }
 
 export const ModalFooter = ({
     children,
     className,
+    borderRadiusBottom = 'inherit',
     ...props
 }: ModalFooterProps) => (
     <StyledFooter
         className={classnames('anchor-modal-footer', className)}
+        borderRadiusBottom={borderRadiusBottom}
         {...props}
     >
         {children}
