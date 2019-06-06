@@ -1,4 +1,7 @@
-export { AnchorIcons } from './utils';
+// When re-exporting an interface its type must be explicitly defined
+import { AnchorIcons } from './utils';
+export type AnchorIcons = AnchorIcons;
+
 export { AddEvent } from './Icons/AddEvent.component';
 export { ArrowBack } from './Icons/ArrowBack.component';
 export { ArrowForward } from './Icons/ArrowForward.component';
