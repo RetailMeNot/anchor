@@ -2,7 +2,7 @@
 
 exports[`Component: Collapse should match its snapshot. 1`] = `
 <div
-  className="anchor-collapse comfortable sc-bwzfXH bcZeDR"
+  className="anchor-collapse comfortable sc-dnqmqq fsbLLB"
 >
   <button
     className="anchor-collapse-button"

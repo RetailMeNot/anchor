@@ -30,16 +30,14 @@ export const variant = <T extends {}>({
 }: {
     themeKey: string;
     prop: string;
-    variants: { [key: string]: T };
+    variants?: { [key: string]: T };
     defaultValue: string;
 }) => (styleFn: (obj: T) => any) => (props: any) => {
-    const subTheme = get(props.theme, themeKey);
-    const variants = get(subTheme, prop, defaultVariants);
-
-    const currentValue = props[prop];
-    const variantObj = variants[currentValue || defaultValue];
-
-    return styleFn(variantObj);
+    const themeVariants = get(get(props.theme, themeKey), prop);
+    const variants = { ...defaultVariants, ...themeVariants };
+    const currentValue = props[prop] !== undefined ? props[prop] : defaultValue;
+    const variantObj = variants[currentValue];
+    return variantObj && styleFn(variantObj);
 };
 
 // define our own default

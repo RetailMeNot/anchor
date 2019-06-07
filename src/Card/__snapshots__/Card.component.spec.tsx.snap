@@ -2,10 +2,10 @@
 
 exports[`Component: Card should match its snapshot. 1`] = `
 <div
-  className="anchor-card sc-bxivhb kUgQih"
+  className="anchor-card sc-gqjmRU eRCyRz"
 >
   <div
-    className="anchor-card-content sc-htpNat jpIewe"
+    className="anchor-card-content sc-gZMcBi doxVbC"
   >
     <p>
       Test

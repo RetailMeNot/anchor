@@ -2,10 +2,10 @@
 
 exports[`Component: Avatar should match its snapshot. 1`] = `
 <div
-  className="anchor-avatar sc-bdVaJa gMaXCp"
+  className="anchor-avatar sc-dnqmqq ekBfgb"
 >
   <div
-    className="avatar-container sc-bwzfXH iExTQv"
+    className="avatar-container sc-iwsKbI juwfoN"
   >
     <svg
       height="36"

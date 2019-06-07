@@ -8,3 +8,5 @@ export { sizes } from './sizes.theme';
 export { variables } from './variables.theme';
 
 export { NormalizeCSS, GlobalCSS } from './GlobalStyles';
+
+export { anchorTheme } from './anchor.theme';

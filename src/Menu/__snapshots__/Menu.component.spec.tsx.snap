@@ -2,10 +2,10 @@
 
 exports[`Component: Menu should be defined 1`] = `
 <nav
-  className="anchor-menu sc-bdVaJa bAhNXE"
+  className="anchor-menu sc-dnqmqq epDQHb"
 >
   <a
-    className="anchor-menu-item sc-bwzfXH dOqrMo"
+    className="anchor-menu-item sc-iwsKbI dsuMkI"
   >
     Derp
   </a>

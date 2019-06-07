@@ -2,13 +2,13 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="anchor-list-item sc-bdVaJa kbqFBH"
+  className="anchor-list-item sc-dnqmqq kLlRvy"
   onMouseDown={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
   <p
-    className="anchor-typography sc-htpNat iwmNVF"
+    className="anchor-typography sc-gZMcBi kpDLCb"
     color="charcoal"
   >
     Item

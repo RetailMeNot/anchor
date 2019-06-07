@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Badge should be able to render with an icon 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c0 {
   position: relative;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
@@ -36,13 +43,6 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
 
 .c2:hover {
   border: 0.125rem solid;
-}
-
-.c1 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <div
@@ -389,6 +389,13 @@ exports[`Component: Badge should render a dot as the default \`size\` 1`] = `
 `;
 
 exports[`Component: Badge should render a double-digit count in a small badge with fully rounded border-radius 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c0 {
   position: relative;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
@@ -426,13 +433,6 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
 
 .c2:hover {
   border: 0.125rem solid;
-}
-
-.c1 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <div
@@ -476,6 +476,13 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
 `;
 
 exports[`Component: Badge should render a single-digit count in a large badge with fully rounded border-radius 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c0 {
   position: relative;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
@@ -513,13 +520,6 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
 
 .c2:hover {
   border: 0.125rem solid;
-}
-
-.c1 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <div
@@ -563,6 +563,13 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
 `;
 
 exports[`Component: Badge should render a single-digit count in a small badge with only partially rounded border-radius 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c0 {
   position: relative;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
@@ -600,13 +607,6 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
 
 .c2:hover {
   border: 0.125rem solid;
-}
-
-.c1 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <div
@@ -650,6 +650,13 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
 `;
 
 exports[`Component: Badge should render the count with absolute positioning if \`standalone\` is false 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c0 {
   position: relative;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
@@ -685,13 +692,6 @@ exports[`Component: Badge should render the count with absolute positioning if \
 
 .c2:hover {
   border: 0.125rem solid;
-}
-
-.c1 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <div

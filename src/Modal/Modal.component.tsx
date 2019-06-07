@@ -5,8 +5,8 @@ import * as React from 'react';
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from 'styled-components';
 import {
-    variant,
     compose,
+    variant,
     borderRadius as borderRadiusStyles,
     BorderRadiusProps,
     margin as marginStyles,
@@ -26,12 +26,9 @@ import { ModalClose } from './Close';
 
 export type ModalSize = 'lg' | 'sm';
 
-const MODAL_THEME_KEY = 'modal';
-
-const size = variant({
-    themeKey: MODAL_THEME_KEY,
-    prop: 'size',
-    variants: {
+export const MODAL_THEME_KEY = 'modal';
+export const MODAL_THEME = {
+    size: {
         lg: {
             width: 50,
             contentPadding: 2.5,
@@ -45,6 +42,12 @@ const size = variant({
             height: 42.375,
         },
     },
+};
+
+const size = variant({
+    themeKey: MODAL_THEME_KEY,
+    prop: 'size',
+    variants: MODAL_THEME.size,
     defaultValue: 'lg',
 });
 

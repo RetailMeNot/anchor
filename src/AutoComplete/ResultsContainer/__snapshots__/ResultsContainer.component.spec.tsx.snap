@@ -2,32 +2,32 @@
 
 exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 <div
-  className="anchor-auto-complete-results-container sc-ifAKCX OaKqT"
+  className="anchor-auto-complete-results-container sc-VigVT iwlPET"
 >
   <div
     className="auto-complete-results"
   >
     <a
-      className="anchor-list-item sc-bdVaJa kbqFBH"
+      className="anchor-list-item sc-dnqmqq kLlRvy"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
-        className="anchor-typography sc-dnqmqq jieFXo"
+        className="anchor-typography sc-kAzzGY jdHyeq"
         color="charcoal"
       >
         Result Item 1
       </p>
     </a>
     <a
-      className="anchor-list-item sc-bdVaJa kbqFBH"
+      className="anchor-list-item sc-dnqmqq kLlRvy"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
-        className="anchor-typography sc-iwsKbI eHJPYG"
+        className="anchor-typography sc-chPdSV ebqPgZ"
         color="charcoal"
       >
         Result Item 2
@@ -39,34 +39,34 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 exports[`Component: ResultsContainer should be defined 1`] = `
 <div
-  className="anchor-auto-complete-results-container sc-ifAKCX OaKqT"
+  className="anchor-auto-complete-results-container sc-VigVT iwlPET"
 >
   <div
-    className="anchor-list auto-complete-results sc-bxivhb cgDDEg"
+    className="anchor-list auto-complete-results sc-gqjmRU clBkdk"
   >
     <a
-      className="anchor-list-item sc-bdVaJa kbqFBH"
+      className="anchor-list-item sc-dnqmqq kLlRvy"
       label="Result Item 1"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
-        className="anchor-typography sc-gzVnrw kEzkJo"
+        className="anchor-typography sc-jzJRlG bxCSzw"
         color="charcoal"
       >
         Result Item 1
       </p>
     </a>
     <a
-      className="anchor-list-item sc-bdVaJa kbqFBH"
+      className="anchor-list-item sc-dnqmqq kLlRvy"
       label="Result Item 2"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
-        className="anchor-typography sc-htoDjs bogUXD"
+        className="anchor-typography sc-cSHVUG fjQHwG"
         color="charcoal"
       >
         Result Item 2

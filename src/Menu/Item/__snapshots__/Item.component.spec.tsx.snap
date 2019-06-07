@@ -2,13 +2,13 @@
 
 exports[`Component: Item should be defined 1`] = `
 <a
-  className="anchor-menu-item sc-bdVaJa dlTGkF"
+  className="anchor-menu-item sc-dnqmqq iHHhrM"
 />
 `;
 
 exports[`Component: Item should render with label 1`] = `
 <a
-  className="anchor-menu-item sc-bdVaJa dlTGkF"
+  className="anchor-menu-item sc-dnqmqq iHHhrM"
 >
   label
 </a>
