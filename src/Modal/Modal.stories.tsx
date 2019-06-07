@@ -13,7 +13,6 @@ import {
     Modal,
     BaseModalBackground,
     ModalProvider,
-    ModalSize,
 } from './Modal.component';
 
 const { useState } = React;
@@ -25,7 +24,7 @@ const StyledStory = styled.div`
     height: 120vh;
 `;
 
-const sizeOptions: ModalSize[] = ['sm', 'lg'];
+const sizeOptions = ['sm', 'lg'];
 
 storiesOf('Components/Modal', module)
     .addParameters({ readme: { sidebar: README } })
@@ -174,7 +173,7 @@ storiesOf('Components/Modal', module)
         );
     })
     .add('Custom Theme', () => {
-        const size = select('size', sizeOptions, 'sm');
+        const size = text('size', 'sm');
         const width = text('width', '');
         const height = text('height', '');
         const borderRadius = text('borderRadius', 'modal');
@@ -206,7 +205,7 @@ storiesOf('Components/Modal', module)
                 <ModalProvider>
                     <StyledStory>
                         <Modal
-                            size={size}
+                            size={size ? size : undefined}
                             isOpen
                             width={width ? width : undefined}
                             height={height ? height : undefined}

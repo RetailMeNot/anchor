@@ -24,8 +24,6 @@ import { ModalContent, StyledContent } from './Content';
 import { ModalFooter, StyledFooter } from './Footer';
 import { ModalClose } from './Close';
 
-export type ModalSize = 'lg' | 'sm';
-
 export const MODAL_THEME_KEY = 'modal';
 export const MODAL_THEME = {
     size: {
@@ -107,7 +105,7 @@ interface ModalProps
         BorderRadiusProps,
         ColorProps,
         BackgroundProps {
-    size?: ModalSize;
+    size?: string;
     width?: string;
     height?: string;
     shadow?: string;
