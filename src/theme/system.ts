@@ -20,6 +20,8 @@ export {
     PaddingProps,
     margin,
     MarginProps,
+    display,
+    DisplayProps,
 } from 'styled-system';
 
 export const variant = <T extends {}>({

@@ -1,18 +1,12 @@
-// REACT
+// VENDOR
 import * as React from 'react';
-
-// ENZYME
 import { mount } from 'enzyme';
-
-// STYLED COMPONENTS
+import { ThemeProvider } from 'styled-components';
 /* tslint:disable no-import-side-effect*/
 import 'jest-styled-components';
 /* tslint:enable */
 
-// VENDOR
-import { ThemeProvider } from 'styled-components';
-// import toJson from 'enzyme-to-json'
-
+// ANCHOR
 import { anchorTheme } from '../theme';
 
 // COMPONENT
@@ -31,7 +25,7 @@ describe('Component: Modal', () => {
         );
 
         const wrapper = mount(subject);
-        expect(wrapper.html()).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('should render with modal components', () => {
@@ -51,14 +45,14 @@ describe('Component: Modal', () => {
         );
 
         const wrapper = mount(subject);
-        expect(wrapper.html()).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('should render identically with the anchor theme provided', () => {
         const subject = (
             <ModalProvider>
                 <Modal isOpen>
-                    <Header title="Header Title">
+                    <Header>
                         <Close />
                     </Header>
                     <Content>Content</Content>
@@ -73,10 +67,8 @@ describe('Component: Modal', () => {
             <ThemeProvider theme={anchorTheme}>{subject}</ThemeProvider>
         );
 
-        // TODO: finish test
-        /* tslint:disable */
-        console.log(themedWrapper);
-        console.log(wrapper);
-        /* tslint:enable */
+        expect(wrapper.html()).toEqual(
+            themedWrapper.find(ModalProvider).html()
+        );
     });
 });

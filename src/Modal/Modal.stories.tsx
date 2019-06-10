@@ -9,11 +9,7 @@ import { Button, Typography } from '..';
 import { colors } from '../theme/index';
 // SUBJECT
 import * as README from './README.md';
-import {
-    Modal,
-    BaseModalBackground,
-    ModalProvider,
-} from './Modal.component';
+import { Modal, BaseModalBackground, ModalProvider } from './Modal.component';
 
 const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
