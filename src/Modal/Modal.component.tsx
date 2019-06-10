@@ -60,7 +60,7 @@ const StyledModal = StyledReactModal.default.styled`
     )}
 
     ${size(
-        ({ contentPadding, footerHeight, width, height }) => css`
+        ({ contentPadding = 0, footerHeight, width, height }) => css`
             height: ${({ height: propHeight }: ModalProps) =>
                 propHeight || `${height}rem`};
             width: ${({ width: propWidth }: ModalProps) =>

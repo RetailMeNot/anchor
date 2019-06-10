@@ -2,9 +2,15 @@
 import { radii } from './sizes.theme';
 import { MODAL_THEME_KEY, MODAL_THEME } from '../Modal';
 
+interface BreakpointTheme {
+    sm?: string;
+    md?: string;
+    lg?: string;
+    xl?: string;
+}
 // Copied from Adapter.StandardBreakpoints mins
 // todo: dedup- they should use a single source
-const breakpoints = {
+const breakpoints: BreakpointTheme = {
     sm: '576px',
     md: '768px',
     lg: '992px',
@@ -13,7 +19,7 @@ const breakpoints = {
 
 interface AnchorTheme {
     colors?: any;
-    breakpoints?: any;
+    breakpoints?: BreakpointTheme;
     radii?: any;
     [key: string]: any;
 }

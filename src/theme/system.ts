@@ -38,8 +38,8 @@ export const variant = <T extends {}>({
     const themeVariants = get(get(props.theme, themeKey), prop);
     const variants = { ...defaultVariants, ...themeVariants };
     const currentValue = props[prop] !== undefined ? props[prop] : defaultValue;
-    const variantObj = variants[currentValue];
-    return variantObj && styleFn(variantObj);
+    const variantObj = variants[currentValue] || {};
+    return styleFn(variantObj);
 };
 
 // define our own default
