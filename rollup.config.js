@@ -31,6 +31,7 @@ const componentList = {
     badge: './src/Badge/index.ts',
     button: './src/Button/index.ts',
     card: './src/Card/index.ts',
+    collapse: './src/Collapse/index.ts',
     dropdown: './src/DropDown/index.ts',
     form: './src/Form/index.ts',
     grid: './src/Grid/index.ts',
