@@ -8,6 +8,7 @@ import { AutoComplete } from '@retailmenot/anchor';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { Footer } from '../';
+import { SideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
 import {
     Grid,
@@ -247,9 +248,9 @@ export const Page = ({
         <StyledContentBody>
             <Grid columns="minmax(180px, 300px) 1fr">
                 <StyledSideNav>
-                    <Typography tag="p">
-                        TODO: when we have accordions
-                    </Typography>
+                    <div>
+                        <SideNavigation />
+                    </div>
                 </StyledSideNav>
                 <Cell>
                     <StyledContentMain>
