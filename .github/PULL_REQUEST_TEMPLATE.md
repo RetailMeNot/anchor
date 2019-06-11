@@ -14,6 +14,7 @@ I have done **all** of the following:
 - [ ] Added [stories](https://storybook.js.org/docs/basics/introduction/) with knobs for all possible configurations.
 - [ ] De-linted and ran [prettier](https://github.com/prettier/prettier) (`npm run pretty`) on my code.
 - [ ] Added name to OWNERS file for all new components
+- [ ] If adding a new component, add its export to the rollup config
 
 ---------
 **Outline your feature or bug-fix below**
