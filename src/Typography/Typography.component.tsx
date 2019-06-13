@@ -3,6 +3,8 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from 'styled-components';
+import { styled as xstyled } from '@xstyled/styled-components';
+
 // THEME
 import { fonts, colors, Color } from '../theme';
 

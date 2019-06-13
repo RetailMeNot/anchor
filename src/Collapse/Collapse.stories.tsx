@@ -74,11 +74,6 @@ storiesOf('Components/Collapse', module)
                     isOpen={boolean('isOpen', false)}
                     openedText={text('openedText', DEFAULT_OPENED_TEXT)}
                     closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
-                    theme={select(
-                        'theme',
-                        ['compact', 'comfortable', 'none'],
-                        'comfortable'
-                    )}
                     hasBottomBorder={boolean('hasBottomBorder', true)}
                     openedIcon={React.createElement(Icon[iconOpenedPick], {
                         color: colors.savvyCyan.base,
@@ -115,11 +110,6 @@ storiesOf('Components/Collapse', module)
                 <CollapseGroup
                     accordion={boolean('accordion', false)}
                     openIndex={0}
-                    theme={select(
-                        'theme',
-                        ['compact', 'comfortable', 'none'],
-                        'comfortable'
-                    )}
                     openedIcon={React.createElement(Icon[iconOpenedPick], {
                         color: colors.savvyCyan.base,
                     })}
