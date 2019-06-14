@@ -81,32 +81,52 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-auto-complete-results-container c0"
+=======
+  className="anchor-auto-complete-results-container sc-dymIpo cSBzO"
+>>>>>>> chore(Button): update to use xstyled
 >
   <div
     className="auto-complete-results"
   >
     <a
+<<<<<<< HEAD
       className="anchor-list-item c1"
+=======
+      className="anchor-list-item sc-eilVRo bRFgDJ"
+>>>>>>> chore(Button): update to use xstyled
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
+<<<<<<< HEAD
         className="anchor-typography c2"
+=======
+        className="anchor-typography sc-gJWqzi eaHslp"
+>>>>>>> chore(Button): update to use xstyled
         color="charcoal"
       >
         Result Item 1
       </p>
     </a>
     <a
+<<<<<<< HEAD
       className="anchor-list-item c1"
+=======
+      className="anchor-list-item sc-eilVRo bRFgDJ"
+>>>>>>> chore(Button): update to use xstyled
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
+<<<<<<< HEAD
         className="anchor-typography c3"
+=======
+        className="anchor-typography sc-rBLzX debWLM"
+>>>>>>> chore(Button): update to use xstyled
         color="charcoal"
       >
         Result Item 2
@@ -201,6 +221,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-auto-complete-results-container c0"
 >
   <div
@@ -208,27 +229,48 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   >
     <a
       className="anchor-list-item c2"
+=======
+  className="anchor-auto-complete-results-container sc-dymIpo cSBzO"
+>
+  <div
+    className="anchor-list auto-complete-results sc-cpmLhU fErbri"
+  >
+    <a
+      className="anchor-list-item sc-eilVRo bRFgDJ"
+>>>>>>> chore(Button): update to use xstyled
       label="Result Item 1"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
+<<<<<<< HEAD
         className="anchor-typography c3"
+=======
+        className="anchor-typography sc-fhYwyz idimuj"
+>>>>>>> chore(Button): update to use xstyled
         color="charcoal"
       >
         Result Item 1
       </p>
     </a>
     <a
+<<<<<<< HEAD
       className="anchor-list-item c2"
+=======
+      className="anchor-list-item sc-eilVRo bRFgDJ"
+>>>>>>> chore(Button): update to use xstyled
       label="Result Item 2"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
+<<<<<<< HEAD
         className="anchor-typography c4"
+=======
+        className="anchor-typography sc-jzgbtB bEpdID"
+>>>>>>> chore(Button): update to use xstyled
         color="charcoal"
       >
         Result Item 2

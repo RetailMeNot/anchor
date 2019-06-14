@@ -6,6 +6,10 @@ exports[`Component: List should be defined 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-list c0"
+=======
+  className="anchor-list sc-cpmLhU fErbri"
+>>>>>>> chore(Button): update to use xstyled
 />
 `;

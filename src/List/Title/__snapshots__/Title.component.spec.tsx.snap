@@ -28,10 +28,17 @@ exports[`Component: Title should be defined 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-list-title c0"
 >
   <span
     className="anchor-typography c1"
+=======
+  className="anchor-list-title sc-eilVRo fshmFX"
+>
+  <span
+    className="anchor-typography sc-emmjRN dMAQcX"
+>>>>>>> chore(Button): update to use xstyled
     color="ash"
     scale={12}
   >

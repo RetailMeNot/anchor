@@ -2,7 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import { FlattenSimpleInterpolation } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import { transparentize } from 'polished';
 // ANCHOR
 import { colors, fonts, sizes } from '../theme';
@@ -311,7 +312,7 @@ const OutlineStyles = ({
         }
     `;
 
-const StyledButton = styled.button<StyledButtonProps>`
+const StyledButton = styled('button')<StyledButtonProps>`
 	position: relative;
     border-radius: ${(props: StyledButtonProps) => props.borderRadius};
 	font-weight: 600;
@@ -360,7 +361,8 @@ const StyledButton = styled.button<StyledButtonProps>`
                       ? dimensions[$size].circularPadding
                       : dimensions[$size].padding
               }rem`};
-    font-size: ${({ $size }) => dimensions[$size].fontSize}rem;
+    font-size: ${({ $size }: StyledButtonProps) =>
+        dimensions[$size].fontSize}rem;
     height: ${({ $height }) => $height}rem;
     ${({ $size, minWidth, iconOnly, $height, block }: StyledButtonProps) =>
         iconOnly

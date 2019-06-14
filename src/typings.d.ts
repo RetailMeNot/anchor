@@ -1,6 +1,6 @@
 declare module '*.md' {
-    const content: string;
-    export = content;
+    const value: string;
+    export default value;
 }
 
 declare module '@xstyled/system' {
@@ -13,6 +13,15 @@ declare module '@xstyled/system' {
 }
 
 declare module '@xstyled/styled-components' {
+    import {
+        StyledInterface,
+        ThemedCssFunction,
+        DefaultTheme,
+    } from 'styled-components';
+
     const ThemeProvider: any;
-    const css: any;
+    export const css: ThemedCssFunction<DefaultTheme>;
+
+    const styled: StyledInterface;
+    export default styled;
 }
