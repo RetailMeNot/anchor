@@ -2546,7 +2546,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 </button>
 `;
 
-exports[`Component: Button Reverse Variant: Primary should render a primary button 1`] = `
+exports[`Component: Button Reverse Variant: Primary should render a filled button 1`] = `
 .c2 + .c0 {
   margin-left: 1rem;
 }
@@ -5385,7 +5385,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 </button>
 `;
 
-exports[`Component: Button Variant: Primary should render a primary button 1`] = `
+exports[`Component: Button Variant: Primary should render a filled button 1`] = `
 .c1 {
   position: relative;
   border-radius: 4px;

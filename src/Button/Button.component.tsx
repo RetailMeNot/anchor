@@ -12,7 +12,7 @@ import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
 
-type Variant = 'primary' | 'outline' | 'minimal';
+type Variant = 'filled' | 'outline' | 'minimal';
 
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
 
@@ -59,7 +59,7 @@ interface StyledButtonProps extends ButtonProps {
 }
 
 const themeDefaults = {
-    primary: colors.savvyCyan,
+    filled: colors.savvyCyan,
     outline: {
         base: colors.savvyCyan.dark,
         light: colors.savvyCyan.base,
@@ -73,7 +73,7 @@ const themeDefaults = {
 };
 
 const reverseDefaults = {
-    primary: {
+    filled: {
         base: colors.charcoal.light,
         light: colors.charcoal.light,
         dark: colors.charcoal.dark,
@@ -144,7 +144,7 @@ const ButtonColorStyles = ({
 
     if (reverse) {
         return {
-            primary: {
+            filled: {
                 base: css`
                     border: solid thin ${colors.white.base};
                     background-color: ${colors.white.base};
@@ -227,7 +227,7 @@ const ButtonColorStyles = ({
     }
 
     return {
-        primary: {
+        filled: {
             base: css`
                 border: solid thin ${base};
                 background-color: ${base};
@@ -444,7 +444,7 @@ const StyledButton = styled('button')<StyledButtonProps>`
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) =>
-        variant === 'primary' &&
+        variant === 'filled' &&
         revealed &&
         css`
             background-color: ${colors.silver.base};
@@ -457,7 +457,7 @@ const StyledButton = styled('button')<StyledButtonProps>`
 export const Button = ({
     className,
     flip = false,
-    variant = 'primary',
+    variant = 'filled',
     size = 'md',
     outline = true,
     block,

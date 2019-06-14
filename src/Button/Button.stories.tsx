@@ -66,11 +66,11 @@ storiesOf('Components/Button', module)
             sidebar: README,
         },
     })
-    .add('Primary', () => {
+    .add('Filled', () => {
         return (
             <StyledStoryPrime>
                 <Typography tag="h2" weight={'bold'}>
-                    Primary Buttons
+                    Filled Buttons
                 </Typography>
 
                 <Heading>Large Button</Heading>
@@ -996,7 +996,7 @@ storiesOf('Components/Button', module)
                 gap="2rem"
             >
                 <Cell>
-                    <Heading>Primary</Heading>
+                    <Heading>Filled</Heading>
                 </Cell>
 
                 <Cell>
@@ -1101,7 +1101,7 @@ storiesOf('Components/Button', module)
                 </Cell>
 
                 <Cell>
-                    <Heading>Primary + Circular</Heading>
+                    <Heading>Filled + Circular</Heading>
                 </Cell>
                 <Cell>
                     <Label>large</Label>
@@ -1222,10 +1222,10 @@ storiesOf('Components/Button', module)
             </Grid>
         </StyledStoryPrime>
     ))
-    .add('Reverse | Primary', () => (
+    .add('Reverse | Filled', () => (
         <StyledReverseStory>
             <Typography tag="h2" weight={'bold'}>
-                Primary Buttons
+                Filled Buttons
             </Typography>
 
             <Heading>Large Button</Heading>
@@ -2036,7 +2036,7 @@ storiesOf('Components/Button', module)
                 gap="2rem"
             >
                 <Cell>
-                    <Heading>Primary</Heading>
+                    <Heading>Filled</Heading>
                 </Cell>
 
                 <Cell>
@@ -2137,7 +2137,7 @@ storiesOf('Components/Button', module)
                 </Cell>
 
                 <Cell>
-                    <Heading>Primary + Circular</Heading>
+                    <Heading>Filled + Circular</Heading>
                 </Cell>
                 <Cell>
                     <ReverseLabel>large</ReverseLabel>
@@ -2288,8 +2288,8 @@ storiesOf('Components/Button', module)
         const chosenSize = select('size', ['lg', 'md', 'sm', 'xs'], 'md');
         const chosenVariant = select(
             'variant',
-            ['primary', 'outline', 'minimal'],
-            'primary'
+            ['filled', 'outline', 'minimal'],
+            'filled'
         );
         const isReversed = boolean('reverse', false);
         const numberOfButtons = number('button count', 1);

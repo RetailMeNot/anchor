@@ -24,15 +24,15 @@ describe('Component: Button', () => {
     });
 
     describe('Variant: Primary', () => {
-        it('should render a primary button', () => {
-            const subject = <Button variant="primary">Text</Button>;
+        it('should render a filled button', () => {
+            const subject = <Button variant="filled">Text</Button>;
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should have a disabled state', () => {
             const subject = (
-                <Button variant="primary" disabled>
+                <Button variant="filled" disabled>
                     Text
                 </Button>
             );
@@ -42,7 +42,7 @@ describe('Component: Button', () => {
 
         it('should render properly when flipped', () => {
             const subject = (
-                <Button variant="primary" flip>
+                <Button variant="filled" flip>
                     Text
                 </Button>
             );
@@ -52,7 +52,7 @@ describe('Component: Button', () => {
 
         it('should have a revealed state when flipped', () => {
             const subject = (
-                <Button variant="primary" flip revealed>
+                <Button variant="filled" flip revealed>
                     Text
                 </Button>
             );
@@ -63,13 +63,13 @@ describe('Component: Button', () => {
         it('should render hovered, active and focused states', () => {
             const subject = (
                 <React.Fragment>
-                    <Button variant="primary" forceHover>
+                    <Button variant="filled" forceHover>
                         Text
                     </Button>
-                    <Button variant="primary" forceActive>
+                    <Button variant="filled" forceActive>
                         Text
                     </Button>
-                    <Button variant="primary" forceFocus>
+                    <Button variant="filled" forceFocus>
                         Text
                     </Button>
                 </React.Fragment>
@@ -80,7 +80,7 @@ describe('Component: Button', () => {
 
         it('should render with a prefix', () => {
             const subject = (
-                <Button variant="primary" prefix={<Star />}>
+                <Button variant="filled" prefix={<Star />}>
                     Text
                 </Button>
             );
@@ -90,7 +90,7 @@ describe('Component: Button', () => {
 
         it('should render with a suffix', () => {
             const subject = (
-                <Button variant="primary" suffix={<Star />}>
+                <Button variant="filled" suffix={<Star />}>
                     Text
                 </Button>
             );
@@ -100,7 +100,7 @@ describe('Component: Button', () => {
 
         it('should accept a color theme', () => {
             const subject = (
-                <Button variant="primary" colorTheme={colors.dealEnvy}>
+                <Button variant="filled" colorTheme={colors.dealEnvy}>
                     Text
                 </Button>
             );
@@ -183,9 +183,9 @@ describe('Component: Button', () => {
 
     describe('Reverse', () => {
         describe('Variant: Primary', () => {
-            it('should render a primary button', () => {
+            it('should render a filled button', () => {
                 const subject = (
-                    <Button variant="primary" reverse>
+                    <Button variant="filled" reverse>
                         Text
                     </Button>
                 );
@@ -196,13 +196,13 @@ describe('Component: Button', () => {
             it('should render hovered, active and focused states', () => {
                 const subject = (
                     <React.Fragment>
-                        <Button variant="primary" reverse forceHover>
+                        <Button variant="filled" reverse forceHover>
                             Text
                         </Button>
-                        <Button variant="primary" reverse forceActive>
+                        <Button variant="filled" reverse forceActive>
                             Text
                         </Button>
-                        <Button variant="primary" reverse forceFocus>
+                        <Button variant="filled" reverse forceFocus>
                             Text
                         </Button>
                     </React.Fragment>
@@ -213,7 +213,7 @@ describe('Component: Button', () => {
 
             it('should have a disabled state', () => {
                 const subject = (
-                    <Button variant="primary" reverse disabled>
+                    <Button variant="filled" reverse disabled>
                         Text
                     </Button>
                 );
