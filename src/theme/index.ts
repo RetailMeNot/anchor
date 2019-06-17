@@ -15,4 +15,5 @@ export { NormalizeCSS, GlobalCSS } from './GlobalStyles';
 
 export const RootTheme = {
     typography,
+    radii: { none: '0', base: '4px', modal: '8px' },
 };

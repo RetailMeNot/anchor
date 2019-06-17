@@ -25,3 +25,19 @@ declare module '@xstyled/styled-components' {
     const styled: StyledInterface;
     export default styled;
 }
+
+declare module '@xstyled/system' {
+    export const variant: <T extends {}>({
+        key,
+        default: defaultValue,
+        variants,
+        prop,
+    }: {
+        key?: string;
+        default: string;
+        variants?: { [key: string]: T };
+        prop?: string;
+    }) => (props: any) => any;
+
+    export const th: any;
+}

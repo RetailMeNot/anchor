@@ -135,7 +135,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 
 .c1 {
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 1000px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -164,7 +164,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   padding: 0;
   font-size: 1rem;
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
 }
 
 .c1 + .c0 {
@@ -185,7 +185,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(1.5rem + 2px);
+  border-radius: calc(1000px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
@@ -387,7 +387,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   padding: 0;
   font-size: 1rem;
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
 }
 
 .c1 + .c0 {
@@ -610,7 +610,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   padding: 0;
   font-size: 1rem;
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
 }
 
 .c1 + .c0 {

@@ -4,6 +4,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { FlattenSimpleInterpolation } from 'styled-components';
 import styled, { css } from '@xstyled/styled-components';
+import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
 import { colors, fonts, sizes } from '../theme';
@@ -15,6 +16,11 @@ import { HitArea } from './HitArea';
 type Variant = 'filled' | 'outline' | 'minimal';
 
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
+
+const rem = (value: any) =>
+    typeof value === 'number' && !Number.isNaN(value) && value !== 0
+        ? `${value}rem`
+        : value;
 
 export interface ButtonProps {
     children?: any;
@@ -48,10 +54,13 @@ interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
     borderRadius: string;
     buttonStyles: ButtonStyles;
+    affixSpacing?: string | number;
+    padding?: string;
 
     // named this way to avoid applying html attributes
     $height: number;
     $size: ButtonSize;
+    $fontSize?: string | number;
 
     // make nonnullable
     colorTheme: Theme;
@@ -88,37 +97,45 @@ const reverseDefaults = {
 
 const dimensions = {
     xs: {
-        width: 4,
+        minWidth: 4,
         height: 2,
         padding: 0.5,
         circularPadding: 1,
         fontSize: 0.75,
+        affixSpacing: 0.375,
     },
     sm: {
-        width: 5,
+        minWidth: 5,
         height: 2.5,
         padding: 1,
         circularPadding: 1.5,
         fontSize: 0.875,
+        affixSpacing: 0.375,
     },
     md: {
-        width: 12.5,
+        minWidth: 12.5,
         height: 3,
         padding: 1.5,
         circularPadding: 2,
         fontSize: 1,
+        affixSpacing: 0.5,
     },
     lg: {
-        width: 12.5,
+        minWidth: 12.5,
         height: 3.5,
         padding: 2,
         circularPadding: 2.5,
         fontSize: 1,
+        affixSpacing: 0.5,
     },
 };
 
-const affixSpacing = (size: ButtonSize) =>
-    size === 'lg' || size === 'md' ? 0.5 : 0.375;
+const sizeStyles = createVariant({
+    key: 'buttons.sizes',
+    prop: 'size',
+    default: 'md',
+    variants: dimensions,
+});
 
 interface ButtonStyles {
     base: FlattenSimpleInterpolation;
@@ -305,7 +322,7 @@ const OutlineStyles = ({
             right: calc(-${sizes.border.width.base} - 2px);
             bottom: calc(-${sizes.border.width.base} - 2px);
 
-            border-radius: calc(${borderRadius} + 2px);
+            border-radius: calc(${th.radius(borderRadius)} + 2px);
 
             // shadow instead of border so that it doesn't contribute to clickable area
             ${buttonStyles.focusOutline}
@@ -313,8 +330,10 @@ const OutlineStyles = ({
     `;
 
 const StyledButton = styled('button')<StyledButtonProps>`
-	position: relative;
-    border-radius: ${(props: StyledButtonProps) => props.borderRadius};
+    position: relative;
+    ${({ borderRadius }) => css`
+        border-radius: ${borderRadius};
+    `}
 	font-weight: 600;
 	font-family: ${fonts.fontFamily};
 	text-align: center;
@@ -353,40 +372,31 @@ const StyledButton = styled('button')<StyledButtonProps>`
             : buttonStyles.base}
 
     /* Sizing */
-    padding: ${({ $size, circular, iconOnly }: StyledButtonProps) =>
-        iconOnly
-            ? '0'
-            : `0 ${
-                  circular
-                      ? dimensions[$size].circularPadding
-                      : dimensions[$size].padding
-              }rem`};
-    font-size: ${({ $size }: StyledButtonProps) =>
-        dimensions[$size].fontSize}rem;
-    height: ${({ $height }) => $height}rem;
-    ${({ $size, minWidth, iconOnly, $height, block }: StyledButtonProps) =>
-        iconOnly
-            ? css`
-                  // Make it a square
-                  width: ${$height}rem;
-              `
-            : block
+    ${({ $fontSize, $height, padding }) => css`
+        padding: ${padding};
+        font-size: ${rem($fontSize)};
+        height: ${rem($height)};
+    `}
+
+
+    ${({ minWidth, block }: StyledButtonProps) =>
+        block
             ? css`
                   width: 100%;
               `
             : css`
-                  min-width: ${minWidth || `${dimensions[$size].width}rem`};
+                  min-width: ${rem(minWidth)};
               `}
 
-    ${({ iconOnly, $size }: StyledButtonProps) =>
+    ${({ iconOnly, affixSpacing }: StyledButtonProps) =>
         !iconOnly &&
         css`
             // Space icon from text
             & > .anchor-button-prefix {
-                margin-right: ${affixSpacing($size)}rem;
+                margin-right: ${affixSpacing}rem;
             }
             & > .anchor-button-suffix {
-                margin-left: ${affixSpacing($size)}rem;
+                margin-left: ${affixSpacing}rem;
             }
         `}
 
@@ -511,17 +521,25 @@ export const Button = ({
             : 'lg'
         : 'md';
 
-    const height = dimensions[size].height;
-    const borderRadius = circular
-        ? `${height / 2}rem`
-        : sizes.border.radius.base;
-    const width = iconOnly ? dimensions[size].height : dimensions[size].width;
+    const dims = sizeStyles({ ...props, size });
+    const { height, affixSpacing, fontSize, minWidth: themeWidth } = dims;
+
+    // Value just needs to be larger than the height
+    // to make the ends circular. We're using a very
+    // large radius so that it doesn't actually have
+    // to be calculated from the height.
+    const borderRadius = circular ? '1000px' : sizes.border.radius.base;
+    const width = iconOnly ? height : minWidth || themeWidth;
 
     if (!colorTheme) {
         colorTheme = reverse
             ? reverseDefaults[variant]
             : themeDefaults[variant];
     }
+
+    const padding = iconOnly
+        ? '0'
+        : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
 
     const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
 
@@ -532,8 +550,11 @@ export const Button = ({
             block={block}
             outline={outline}
             colorTheme={colorTheme}
+            affixSpacing={affixSpacing}
+            $fontSize={fontSize}
+            padding={padding}
             reverse={reverse}
-            minWidth={minWidth}
+            minWidth={width}
             $height={height}
             $size={size}
             iconOnly={iconOnly}

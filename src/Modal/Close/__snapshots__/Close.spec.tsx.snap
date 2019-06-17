@@ -3,7 +3,7 @@
 exports[`Component: Modal.Close should render 1`] = `
 .c2 {
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 1000px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -32,7 +32,7 @@ exports[`Component: Modal.Close should render 1`] = `
   padding: 0;
   font-size: 1rem;
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
 }
 
 .c2 + .c1 {

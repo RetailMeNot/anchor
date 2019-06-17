@@ -3,10 +3,10 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, select, number } from '@storybook/addon-knobs';
-// import { text, boolean } from '@storybook/addon-knobs';
+import { boolean, text, select, number, object } from '@storybook/addon-knobs';
 // VENDOR
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { RootTheme } from '../theme';
 // README
 import * as README from './README.md';
 // COMPONENT
@@ -2332,5 +2332,75 @@ storiesOf('Components/Button', module)
                     </Button>
                 ))}
             </StoryComponent>
+        );
+    })
+    .add('Button within Theme Provider', () => {
+        const chosenPrefix = select(
+            'prefix',
+            ['none', ...Object.keys(Icon)],
+            'none'
+        );
+        const chosenSuffix = select(
+            'suffix',
+            ['none', ...Object.keys(Icon)],
+            'none'
+        );
+        const chosenColor = select(
+            'colorTheme',
+            ['default', ...Object.keys(colors)],
+            'default'
+        );
+        const buttonText = text('Text', 'Hello World');
+        const minWidth = text('minWidth', '');
+        const margin = text('margin', '');
+        const chosenSize = select('size', ['lg', 'md', 'sm', 'xs'], 'md');
+        const chosenVariant = select(
+            'variant',
+            ['filled', 'outline', 'minimal'],
+            'filled'
+        );
+        const isReversed = boolean('reverse', false);
+        const numberOfButtons = number('button count', 1);
+
+        const StoryComponent = isReversed ? StyledReverseStory : StyledStory;
+
+        const Prefix = chosenPrefix === 'none' ? undefined : Icon[chosenPrefix];
+        const Suffix = chosenSuffix === 'none' ? undefined : Icon[chosenSuffix];
+
+        return (
+            <ThemeProvider theme={object('theme', RootTheme)}>
+                <StoryComponent>
+                    <Typography tag="h2" weight={'bold'}>
+                        Configure me
+                    </Typography>
+                    {Array.from(Array(numberOfButtons)).map((x, i) => (
+                        <Button
+                            key={`button${i}`}
+                            variant={chosenVariant}
+                            size={chosenSize}
+                            forceActive={boolean('force-state: active', false)}
+                            forceFocus={boolean('force-state: focus', false)}
+                            forceHover={boolean('force-state: hover', false)}
+                            reverse={isReversed}
+                            block={boolean('block', false)}
+                            flip={boolean('flip', false)}
+                            circular={boolean('circular', false)}
+                            disabled={boolean('disabled', false)}
+                            revealed={boolean('revealed', false)}
+                            minWidth={minWidth ? minWidth : undefined}
+                            margin={margin ? margin : undefined}
+                            colorTheme={
+                                chosenColor === 'default'
+                                    ? undefined
+                                    : colors[chosenColor]
+                            }
+                            prefix={Prefix && <Prefix />}
+                            suffix={Suffix && <Suffix />}
+                        >
+                            {buttonText ? buttonText : undefined}
+                        </Button>
+                    ))}
+                </StoryComponent>
+            </ThemeProvider>
         );
     });

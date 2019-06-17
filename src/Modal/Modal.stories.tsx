@@ -174,9 +174,6 @@ storiesOf('Components/Modal', module)
         );
     })
     .add('Customized', () => {
-        /* tslint:disable */
-        const gradient = `linear-gradient(170deg, ${colors.flashPink.base} 0%, ${colors.fireSale.light} 50%, ${colors.white.base} calc(50% + 1.25px))`;
-        /* tslint:enable */
         const OpenModalButton = () => {
             const [isOpen, setIsOpen] = useState<boolean>(true);
             return (
