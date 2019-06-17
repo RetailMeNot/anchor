@@ -22,6 +22,8 @@ declare module '@xstyled/styled-components' {
     const ThemeProvider: any;
     export const css: ThemedCssFunction<DefaultTheme>;
 
+    export const ThemeProvider: any;
+
     const styled: StyledInterface;
     export default styled;
 }

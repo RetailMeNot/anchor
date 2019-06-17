@@ -18,7 +18,7 @@ import { HitArea } from './HitArea';
 
 type Variant = 'filled' | 'outline' | 'minimal';
 
-type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
+type ButtonSize = 'lg' | 'md' | 'sm' | 'xs' | string;
 
 export interface ButtonProps {
     children?: any;
@@ -92,38 +92,41 @@ const reverseDefaults = {
     minimal: colors.white,
 };
 
-const dimensions = {
-    xs: {
-        minWidth: 4,
-        height: 2,
-        padding: 0.5,
-        circularPadding: 1,
-        fontSize: 0.75,
-        affixSpacing: 0.375,
-    },
-    sm: {
-        minWidth: 5,
-        height: 2.5,
-        padding: 1,
-        circularPadding: 1.5,
-        fontSize: 0.875,
-        affixSpacing: 0.375,
-    },
-    md: {
-        minWidth: 12.5,
-        height: 3,
-        padding: 1.5,
-        circularPadding: 2,
-        fontSize: 1,
-        affixSpacing: 0.5,
-    },
-    lg: {
-        minWidth: 12.5,
-        height: 3.5,
-        padding: 2,
-        circularPadding: 2.5,
-        fontSize: 1,
-        affixSpacing: 0.5,
+export const BUTTON_KEY = 'buttons';
+export const BUTTON_THEME = {
+    sizes: {
+        xs: {
+            minWidth: 4,
+            height: 2,
+            padding: 0.5,
+            circularPadding: 1,
+            fontSize: 0.75,
+            affixSpacing: 0.375,
+        },
+        sm: {
+            minWidth: 5,
+            height: 2.5,
+            padding: 1,
+            circularPadding: 1.5,
+            fontSize: 0.875,
+            affixSpacing: 0.375,
+        },
+        md: {
+            minWidth: 12.5,
+            height: 3,
+            padding: 1.5,
+            circularPadding: 2,
+            fontSize: 1,
+            affixSpacing: 0.5,
+        },
+        lg: {
+            minWidth: 12.5,
+            height: 3.5,
+            padding: 2,
+            circularPadding: 2.5,
+            fontSize: 1,
+            affixSpacing: 0.5,
+        },
     },
 };
 
@@ -131,7 +134,7 @@ const sizeStyles = createVariant({
     key: 'buttons.sizes',
     prop: 'size',
     default: 'md',
-    variants: dimensions,
+    variants: BUTTON_THEME.sizes,
 });
 
 interface ButtonStyles {

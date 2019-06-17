@@ -2,11 +2,12 @@
 import * as React from 'react';
 
 // ANCHOR
-import { colors, sizes } from '../../theme';
+import { colors } from '../../theme/colors.theme';
+import { sizes } from '../../theme/sizes.theme';
 import { Theme, TRANSITION_SPEED } from '../utils';
 
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 
 export interface StyledFlipProps {
     flipColor: string;

@@ -13,7 +13,10 @@ export { variables } from './variables.theme';
 export { NormalizeCSS, GlobalCSS } from './GlobalStyles';
 // TODO: ============================================================ move all of these ^ consts to a different location
 
+import { BUTTON_KEY, BUTTON_THEME } from '../Button/Button.component';
+
 export const RootTheme = {
     typography,
     radii: { none: '0', base: '4px', modal: '8px' },
+    [BUTTON_KEY]: BUTTON_THEME,
 };

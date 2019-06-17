@@ -1,5 +1,5 @@
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 
 export interface StyledHitAreaProps {
     buttonHeight: number;

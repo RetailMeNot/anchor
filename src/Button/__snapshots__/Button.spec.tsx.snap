@@ -3810,6 +3810,203 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
 </button>
 `;
 
+exports[`Component: Button Theme Provided should use custom size variants from theme 1`] = `
+.c2 + .c0 {
+  margin-left: 1rem;
+}
+
+.c3 + .c0 {
+  margin-left: 1rem;
+}
+
+.c4 + .c0 {
+  margin-left: 1rem;
+}
+
+.c5 + .c0 {
+  margin-left: 1rem;
+}
+
+.c6 + .c0 {
+  margin-left: 1rem;
+}
+
+.c7 + .c0 {
+  margin-left: 1rem;
+}
+
+.c8 + .c0 {
+  margin-left: 1rem;
+}
+
+.c9 + .c0 {
+  margin-left: 1rem;
+}
+
+.c10 + .c0 {
+  margin-left: 1rem;
+}
+
+.c11 + .c0 {
+  margin-left: 1rem;
+}
+
+.c12 + .c0 {
+  margin-left: 1rem;
+}
+
+.c13 + .c0 {
+  margin-left: 1rem;
+}
+
+.c14 + .c0 {
+  margin-left: 1rem;
+}
+
+.c15 + .c0 {
+  margin-left: 1rem;
+}
+
+.c16 + .c0 {
+  margin-left: 1rem;
+}
+
+.c17 + .c0 {
+  margin-left: 1rem;
+}
+
+.c18 + .c0 {
+  margin-left: 1rem;
+}
+
+.c19 + .c0 {
+  margin-left: 1rem;
+}
+
+.c20 + .c0 {
+  margin-left: 1rem;
+}
+
+.c21 + .c0 {
+  margin-left: 1rem;
+}
+
+.c22 + .c0 {
+  margin-left: 1rem;
+}
+
+.c23 + .c0 {
+  margin-left: 1rem;
+}
+
+.c24 + .c0 {
+  margin-left: 1rem;
+}
+
+.c25 + .c0 {
+  margin-left: 1rem;
+}
+
+.c26 + .c0 {
+  margin-left: 1rem;
+}
+
+.c27 + .c0 {
+  margin-left: 1rem;
+}
+
+.c28 + .c0 {
+  margin-left: 1rem;
+}
+
+.c29 + .c0 {
+  margin-left: 1rem;
+}
+
+.c30 + .c0 {
+  margin-left: 1rem;
+}
+
+.c31 + .c0 {
+  margin-left: 1rem;
+}
+
+.c32 + .c0 {
+  margin-left: 1rem;
+}
+
+.c33 + .c0 {
+  margin-left: 1rem;
+}
+
+.c34 + .c0 {
+  margin-left: 1rem;
+}
+
+.c35 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: #FFFFFF;
+  padding: 0 4rem;
+  height: 8rem;
+  min-width: 30rem;
+}
+
+.c1 + .c0 {
+  margin-left: 1rem;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c1:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+  className="anchor-button c0 c1"
+/>
+`;
+
 exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 .c2 + .c0 {
   margin-left: 1rem;

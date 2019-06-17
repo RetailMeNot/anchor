@@ -1,13 +1,19 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+import { shallow, mount } from 'enzyme';
+/* tslint:disable no-import-side-effect*/
+import 'jest-styled-components';
+/* tslint:enable */
 // ANCHOR
 import { Star } from '..';
 import { colors } from '../theme';
+import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 // COMPONENT
 import { Button } from './Button.component';
-// ENZYME
-import { shallow, mount } from 'enzyme';
+
+const withTheme = (theme: any) => (component: React.ReactElement<any>) =>
+    cloneWithProps(component, { theme });
 
 describe('Component: Button', () => {
     it('should be defined', () => {
@@ -344,6 +350,28 @@ describe('Component: Button', () => {
 
         it('should render a circular icon', () => {
             const subject = <Button prefix={<Star />} circular />;
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+
+    describe('Theme Provided', () => {
+        it('should use custom size variants from theme', () => {
+            const theme = {
+                buttons: {
+                    sizes: {
+                        humongous: {
+                            minWidth: 30,
+                            height: 8,
+                            affixSpacing: 3,
+                            padding: 4,
+                            contentPadding: 5,
+                        },
+                    },
+                },
+            };
+
+            const subject = withTheme(theme)(<Button size="humongous" />);
             const tree = renderer.create(subject).toJSON();
             expect(tree).toMatchSnapshot();
         });
