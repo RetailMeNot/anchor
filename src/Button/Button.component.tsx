@@ -7,8 +7,11 @@ import styled, { css } from '@xstyled/styled-components';
 import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
-import { colors, fonts, sizes } from '../theme';
+import { colors } from '../theme/colors.theme';
+import { fonts } from '../theme/fonts.theme';
+import { sizes } from '../theme/sizes.theme';
 import { Theme, TRANSITION_SPEED } from './utils';
+import { rem } from '../utils/rem/rem';
 import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
@@ -16,11 +19,6 @@ import { HitArea } from './HitArea';
 type Variant = 'filled' | 'outline' | 'minimal';
 
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
-
-const rem = (value: any) =>
-    typeof value === 'number' && !Number.isNaN(value) && value !== 0
-        ? `${value}rem`
-        : value;
 
 export interface ButtonProps {
     children?: any;
