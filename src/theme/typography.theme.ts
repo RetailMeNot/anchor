@@ -2,8 +2,9 @@
 import { css } from '@xstyled/styled-components';
 // THEME
 import { colors } from './colors.theme';
+import { fonts } from './fonts.theme';
 
-interface TypographyTheme {
+export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES
     fontFamily: string;
     fontSize: string;
@@ -31,9 +32,9 @@ interface TypographyTheme {
     };
 }
 
-const Typography: TypographyTheme = {
-    fontFamily: 'Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif',
-    fontSize: '16px',
+export const typography: TypographyTheme = {
+    fontFamily: fonts.fontFamily,
+    fontSize: `${fonts.baseFontSize}px`,
     fontWeight: 'normal',
     lineHeight: '1.5rem',
     scale: {
@@ -169,5 +170,3 @@ const Typography: TypographyTheme = {
         `,
     },
 };
-
-export default Typography;

@@ -1,5 +1,5 @@
 // Theme Files
-import * as typography from './typography.theme';
+import { typography } from './typography.theme';
 
 // TODO: ============================================================ move all of these v consts to a different location
 

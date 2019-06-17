@@ -11,7 +11,7 @@ import { Grid, Cell } from '../Grid';
 // README
 import * as README from './README.md';
 // THEME
-import typography from '../theme/typography.theme';
+import { RootTheme } from '../theme';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
@@ -34,10 +34,6 @@ const elements = [
     'pre',
 ];
 
-const Theme = {
-    typography,
-};
-
 storiesOf('Components/Typography', module)
     .addParameters({
         readme: {
@@ -45,7 +41,7 @@ storiesOf('Components/Typography', module)
         },
     })
     .add('Default', () => (
-        <ThemeProvider theme={Theme}>
+        <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Typography tag="h1">Scales</Typography>
                 <Grid columns="100%" minRowHeight="5rem" gap="1rem">
