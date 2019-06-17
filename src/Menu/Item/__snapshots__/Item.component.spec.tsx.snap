@@ -21,7 +21,11 @@ exports[`Component: Item should be defined 1`] = `
 }
 
 <a
+<<<<<<< HEAD
   className="anchor-menu-item c0"
+=======
+  className="anchor-menu-item sc-cpmLhU jyvUSM"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 />
 `;
 
@@ -46,7 +50,11 @@ exports[`Component: Item should render with label 1`] = `
 }
 
 <a
+<<<<<<< HEAD
   className="anchor-menu-item c0"
+=======
+  className="anchor-menu-item sc-cpmLhU jyvUSM"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 >
   label
 </a>

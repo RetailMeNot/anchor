@@ -7,9 +7,13 @@ exports[`Component: List should be defined 1`] = `
 
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="anchor-list c0"
 =======
   className="anchor-list sc-cpmLhU fErbri"
 >>>>>>> chore(Button): update to use xstyled
+=======
+  className="anchor-list sc-gFaPwZ hIMKKS"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 />
 `;

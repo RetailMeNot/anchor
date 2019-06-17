@@ -82,30 +82,42 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="anchor-auto-complete-results-container c0"
 =======
   className="anchor-auto-complete-results-container sc-dymIpo cSBzO"
 >>>>>>> chore(Button): update to use xstyled
+=======
+  className="anchor-auto-complete-results-container sc-fhYwyz dentJw"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 >
   <div
     className="auto-complete-results"
   >
     <a
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="anchor-list-item c1"
 =======
       className="anchor-list-item sc-eilVRo bRFgDJ"
 >>>>>>> chore(Button): update to use xstyled
+=======
+      className="anchor-list-item sc-cpmLhU gYfctl"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="anchor-typography c2"
 =======
         className="anchor-typography sc-gJWqzi eaHslp"
 >>>>>>> chore(Button): update to use xstyled
+=======
+        className="anchor-typography sc-CtfFt eORGVW"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
         color="charcoal"
       >
         Result Item 1
@@ -113,20 +125,28 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     </a>
     <a
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="anchor-list-item c1"
 =======
       className="anchor-list-item sc-eilVRo bRFgDJ"
 >>>>>>> chore(Button): update to use xstyled
+=======
+      className="anchor-list-item sc-cpmLhU gYfctl"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
       onMouseDown={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
       <p
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="anchor-typography c3"
 =======
         className="anchor-typography sc-rBLzX debWLM"
 >>>>>>> chore(Button): update to use xstyled
+=======
+        className="anchor-typography sc-laTMn ktdpKe"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
         color="charcoal"
       >
         Result Item 2
@@ -222,6 +242,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="anchor-auto-complete-results-container c0"
 >
   <div
@@ -231,13 +252,20 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       className="anchor-list-item c2"
 =======
   className="anchor-auto-complete-results-container sc-dymIpo cSBzO"
+=======
+  className="anchor-auto-complete-results-container sc-fhYwyz dentJw"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 >
   <div
-    className="anchor-list auto-complete-results sc-cpmLhU fErbri"
+    className="anchor-list auto-complete-results sc-gFaPwZ hIMKKS"
   >
     <a
+<<<<<<< HEAD
       className="anchor-list-item sc-eilVRo bRFgDJ"
 >>>>>>> chore(Button): update to use xstyled
+=======
+      className="anchor-list-item sc-cpmLhU gYfctl"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
       label="Result Item 1"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
@@ -245,10 +273,14 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <p
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="anchor-typography c3"
 =======
         className="anchor-typography sc-fhYwyz idimuj"
 >>>>>>> chore(Button): update to use xstyled
+=======
+        className="anchor-typography sc-rBLzX debWLM"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
         color="charcoal"
       >
         Result Item 1
@@ -256,10 +288,14 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     </a>
     <a
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="anchor-list-item c2"
 =======
       className="anchor-list-item sc-eilVRo bRFgDJ"
 >>>>>>> chore(Button): update to use xstyled
+=======
+      className="anchor-list-item sc-cpmLhU gYfctl"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
       label="Result Item 2"
       onMouseDown={[Function]}
       onMouseOut={[Function]}
@@ -267,10 +303,14 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <p
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="anchor-typography c4"
 =======
         className="anchor-typography sc-jzgbtB bEpdID"
 >>>>>>> chore(Button): update to use xstyled
+=======
+        className="anchor-typography sc-bMvGRv DvYbu"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
         color="charcoal"
       >
         Result Item 2

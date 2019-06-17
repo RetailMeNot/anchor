@@ -56,10 +56,14 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
 
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="anchor-collapse comfortable c0"
 =======
   className="anchor-collapse comfortable sc-eerKOB fpexmm"
 >>>>>>> chore(Button): move prefix/suffix spacing into margin props
+=======
+  className="anchor-collapse comfortable sc-dymIpo jlPoID"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 >
   <button
     className="anchor-collapse-button"

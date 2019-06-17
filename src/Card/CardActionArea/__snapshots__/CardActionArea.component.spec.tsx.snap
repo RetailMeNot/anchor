@@ -12,6 +12,10 @@ exports[`Component: CardActionArea should be defined 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-card-action-area c0"
+=======
+  className="anchor-card-action-area sc-cpmLhU ktrltm"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 />
 `;

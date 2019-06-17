@@ -26,6 +26,10 @@ exports[`Component: CardAction should be defined 1`] = `
 }
 
 <div
+<<<<<<< HEAD
   className="anchor-card-action c0"
+=======
+  className="anchor-card-action sc-cpmLhU fDeiZg"
+>>>>>>> chore(Button): update snapshots due to modifying theme file
 />
 `;
