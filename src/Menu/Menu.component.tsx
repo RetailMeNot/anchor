@@ -65,11 +65,11 @@ const StyledMenu = styled.nav`
       background-color: rgba(255, 255, 255, .1);
     }
 
-    &:first-child {
+    &:first-of-type {
       margin-left: 0;
     }
 
-    &:last-child {
+    &:last-of-type {
       margin-right: 0;
     }
   }
