@@ -825,14 +825,6 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -985,14 +977,6 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -1166,14 +1150,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -1354,14 +1330,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -1539,14 +1507,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -1723,14 +1683,6 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -1867,14 +1819,6 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2030,14 +1974,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -2191,14 +2127,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -2354,14 +2282,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2519,14 +2439,6 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -2643,14 +2555,6 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -2796,14 +2700,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -2957,14 +2853,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -3116,14 +3004,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -3211,14 +3091,6 @@ exports[`Component: Button Sizes should render a md button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -3517,14 +3389,6 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -3716,14 +3580,6 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.375rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.375rem;
 }
 
 .c1:hover,
@@ -3926,14 +3782,6 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.375rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.375rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4058,14 +3906,6 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -4166,14 +4006,6 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4291,14 +4123,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4414,14 +4238,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4539,14 +4355,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4666,14 +4474,6 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -4758,14 +4558,6 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -4869,14 +4661,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -4978,14 +4762,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5089,14 +4865,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5200,14 +4968,6 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5275,14 +5035,6 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:focus:after {
@@ -5359,14 +5111,6 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:focus:after {
   position: absolute;
   content: '';
@@ -5422,14 +5166,6 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5515,14 +5251,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5606,14 +5334,6 @@ Array [
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5699,14 +5419,6 @@ Array [
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,
@@ -5821,14 +5533,6 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5905,14 +5609,6 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -5952,6 +5648,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 }
 
 .c2 {
+  margin: 0 0.5rem 0 0;
   display: inline-block;
   height: 1rem;
   width: 1rem;
@@ -6029,14 +5726,6 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   margin-left: 1rem;
 }
 
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c1:hover,
 .c1:focus,
 .c1:active {
@@ -6076,6 +5765,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
 }
 
 .c2 {
+  margin: 0 0 0 0.5rem;
   display: inline-block;
   height: 1rem;
   width: 1rem;
@@ -6151,14 +5841,6 @@ exports[`Component: Button should be defined 1`] = `
 
 .c1 + .c0 {
   margin-left: 1rem;
-}
-
-.c1 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c1 > .anchor-button-suffix {
-  margin-left: 0.5rem;
 }
 
 .c1:hover,

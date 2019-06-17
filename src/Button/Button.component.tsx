@@ -54,7 +54,6 @@ interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
     borderRadius: string;
     buttonStyles: ButtonStyles;
-    affixSpacing?: string | number;
     padding?: string;
 
     // named this way to avoid applying html attributes
@@ -388,18 +387,6 @@ const StyledButton = styled('button')<StyledButtonProps>`
                   min-width: ${rem(minWidth)};
               `}
 
-    ${({ iconOnly, affixSpacing }: StyledButtonProps) =>
-        !iconOnly &&
-        css`
-            // Space icon from text
-            & > .anchor-button-prefix {
-                margin-right: ${affixSpacing}rem;
-            }
-            & > .anchor-button-suffix {
-                margin-left: ${affixSpacing}rem;
-            }
-        `}
-
     /* State styles */
     ${({
         disabled,
@@ -550,7 +537,6 @@ export const Button = ({
             block={block}
             outline={outline}
             colorTheme={colorTheme}
-            affixSpacing={affixSpacing}
             $fontSize={fontSize}
             padding={padding}
             reverse={reverse}
@@ -575,12 +561,14 @@ export const Button = ({
             {prefix &&
                 cloneWithProps(prefix, {
                     scale: iconScale,
+                    margin: iconOnly ? undefined : `0 ${affixSpacing}rem 0 0`,
                     className: 'anchor-button-prefix',
                 })}
             {children}
             {suffix &&
                 cloneWithProps(suffix, {
                     scale: iconScale,
+                    margin: iconOnly ? undefined : `0 0 0 ${affixSpacing}rem`,
                     className: 'anchor-button-suffix',
                 })}
             {flip && !disabled && !revealed && <Flip colorTheme={colorTheme} />}

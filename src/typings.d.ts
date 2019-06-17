@@ -40,4 +40,6 @@ declare module '@xstyled/system' {
     }) => (props: any) => any;
 
     export const th: any;
+
+    export const margin: any;
 }

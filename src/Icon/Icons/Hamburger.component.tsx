@@ -14,10 +14,12 @@ export const Hamburger = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon hamburger', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

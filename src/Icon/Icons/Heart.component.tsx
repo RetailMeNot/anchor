@@ -14,10 +14,12 @@ export const Heart = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon heart', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

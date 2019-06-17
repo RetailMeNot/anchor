@@ -14,10 +14,12 @@ export const InfoOutline = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon info-outline', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

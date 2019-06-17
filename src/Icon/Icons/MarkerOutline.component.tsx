@@ -14,10 +14,12 @@ export const MarkerOutline = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon marker-outline', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

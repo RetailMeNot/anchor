@@ -14,10 +14,12 @@ export const PlusSmall = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon plus-small', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}
