@@ -51,7 +51,7 @@ storiesOf('Components/Typography', module)
                 <Grid columns="100%" minRowHeight="5rem" gap="1rem">
                     {scales.map((scale: any) => (
                         <Cell key={scale}>
-                            <Typography color="ash" scale={scale}>
+                            <Typography color="charcoal" scale={scale}>
                                 Font size is {scale}px | Scale value = {scale}
                             </Typography>
                         </Cell>
@@ -61,7 +61,7 @@ storiesOf('Components/Typography', module)
                 <Grid columns="100%" minRowHeight="5rem" gap="1rem">
                     {elements.map((element: any) => (
                         <Cell key={element}>
-                            <Typography hue="dark" tag={element}>
+                            <Typography tag={element}>
                                 Element: {element}
                             </Typography>
                         </Cell>

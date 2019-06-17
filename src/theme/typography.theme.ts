@@ -139,8 +139,9 @@ const Typography: TypographyTheme = {
         blockquote: css`
             margin: 1rem 0;
             padding: 0.5rem 0 0.5rem 1rem;
-            border-left: 0.5rem solid ${colors.silver.base};
-            color: ${colors.ash.dark};
+            border-left: 0.5rem solid ${colors.ash.base};
+            color: ${colors.charcoal.base};
+            font-style: italic;
             line-height: 1.5rem;
         `,
         address: css`

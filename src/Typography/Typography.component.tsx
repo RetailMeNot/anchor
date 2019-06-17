@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // THEME
 import { colors, Color } from '../theme';
@@ -105,11 +105,10 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     margin: 0;
     padding: 0;
     // TODO: colors when theme colors are defined
-    color: ${({ color = 'inherit', hue = 'base' }: any) =>
-        colors[color] ? colors[color][hue] : color};
+    ${({ color = 'inherit', hue = 'base' }: any) => css({ color: colors[color] ? colors[color][hue] : color })};
 
     // Use a scale to set size & line-height
-        ${variant({
+    ${variant({
         key: 'typography.scale',
         default: 16,
         prop: 'scale',
@@ -123,34 +122,34 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     })}
 
     // CSS Overrides
-    text-align: ${({ align = 'inherit' }: any) => align};
-    display: ${({ display }: any) => (display ? display : null)};
-    text-transform: ${({ transform = 'none' }: any) => transform};
+    ${({ align = 'inherit' }: any) => css({ textAlign:  align })};
+    ${({ display }: any) => display ? css({ display: display || null}) : null };
+    ${({ transform = 'none' }: any) => css({ textTransform: transform })};
 
     // Override Size & Line Height
-    font-weight: ${({ weight }: any) => (weight ? weight : null)};
+    ${({ weight }: any) => css({ fontWeight: weight ? weight : null })};
 
     // Throw a warning that says you really shouldn't do this
-    font-size: ${({ size }: any) => {
+    ${({ size }: any) => {
         if (size) {
             /* tslint:disable no-console */
             console.warn(
                 'Overriding the size property is almost always a bad idea.'
             );
             /* tslint:enable no-console */
-            return `${size}rem`;
+            return css({ fontSize: `${size}rem` });
         } else {
             return null;
         }
     }};
-    line-height: ${({ lineHeight }: any) => {
+    ${({ lineHeight }: any) => {
         if (lineHeight) {
             /* tslint:disable no-console */
             console.warn(
                 'Overriding the lineHeight property is almost always a bad idea.'
             );
             /* tslint:enable no-console */
-            return `${lineHeight}rem`;
+            return css({ lineHeight: `${lineHeight}rem` });
         } else {
             return null;
         }
