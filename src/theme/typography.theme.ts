@@ -1,8 +1,24 @@
 // VENDOR
-import { css } from '@xstyled/styled-components';
+import { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
 // THEME
 import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';
+
+type TypographyTags =
+ | 'a'
+ | 'p'
+ | 'span'
+ | 'h1'
+ | 'h2'
+ | 'h3'
+ | 'h4'
+ | 'h5'
+ | 'h6'
+ | 'blockquote'
+ | 'address'
+ | 'code'
+ | 'pre'
+ | 'label';
 
 export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES
@@ -12,23 +28,10 @@ export interface TypographyTheme {
     lineHeight: string;
     // FONT TREATMENTS
     scale: {
-        [key: number]: string;
+        [key: number]: FlattenSimpleInterpolation;
     };
     tag: {
-        a?: string;
-        p?: string;
-        span?: string;
-        h1?: string;
-        h2?: string;
-        h3?: string;
-        h4?: string;
-        h5?: string;
-        h6?: string;
-        blockquote?: string;
-        address?: string;
-        code?: string;
-        pre?: string;
-        label?: string;
+        [K in TypographyTags]: FlattenSimpleInterpolation;
     };
 }
 

@@ -3,11 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-<<<<<<< HEAD
 import { th, variant } from '@xstyled/system';
-=======
-
->>>>>>> chore(Button): update to use xstyled
 // THEME
 import { colors, Color } from '../theme';
 
