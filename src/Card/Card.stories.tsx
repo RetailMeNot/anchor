@@ -4,12 +4,13 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Card } from './Card.component';
 import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
 import { Ellipses } from '../Icon';
-import { colors, fonts } from '../theme';
+import { colors, fonts, RootTheme } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
 // README
@@ -131,47 +132,53 @@ storiesOf('Components/Card', module)
         },
     })
     .add('Two Row With Action', () => (
-        <StyledStory>
-            <Grid columns="repeat(auto-fit, 290px)">
-                {[1, 2, 3, 4].map((index: number) => (
-                    <Cell width={1} key={index}>
-                        <Card action={CardAction}>
-                            <TwoRowWithActionCardContent />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="repeat(auto-fit, 290px)">
+                    {[1, 2, 3, 4].map((index: number) => (
+                        <Cell width={1} key={index}>
+                            <Card action={CardAction}>
+                                <TwoRowWithActionCardContent />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ))
     .add('Brand Cards', () => (
-        <StyledStory>
-            <Grid columns="repeat(auto-fit, 200px)">
-                {[1, 2, 3, 4, 5].map((index: number) => (
-                    <Cell key={index}>
-                        <Card>
-                            <BrandCardContent
-                                title={`Brand Name ${index}`}
-                                key={index}
-                            />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="repeat(auto-fit, 200px)">
+                    {[1, 2, 3, 4, 5].map((index: number) => (
+                        <Cell key={index}>
+                            <Card>
+                                <BrandCardContent
+                                    title={`Brand Name ${index}`}
+                                    key={index}
+                                />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ))
     .add('Wide Cards With ActionArea', () => (
-        <StyledStory>
-            <Grid columns="minmax(400px, 900px)">
-                {[1, 2, 3, 4, 5].map((index: number) => (
-                    <Cell key={index}>
-                        <Card actionArea={<ActionArea />}>
-                            <WideCardContent
-                                title={`Wide Card ${index}`}
-                                key={index}
-                            />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="minmax(400px, 900px)">
+                    {[1, 2, 3, 4, 5].map((index: number) => (
+                        <Cell key={index}>
+                            <Card actionArea={<ActionArea />}>
+                                <WideCardContent
+                                    title={`Wide Card ${index}`}
+                                    key={index}
+                                />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ));

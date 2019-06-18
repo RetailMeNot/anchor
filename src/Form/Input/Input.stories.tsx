@@ -8,47 +8,50 @@ import styled from 'styled-components';
 import { Input } from './Input.component';
 import { Search, Mobile } from '../../Icon';
 import { Grid, Cell } from '../../Grid';
-import { colors } from '../../theme';
+import { colors, RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
+import { ThemeProvider } from "@xstyled/styled-components";
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
 `;
 
 const InputStories = () => (
-    <StyledStory>
-        <Grid columns="200px">
-            <Cell>
-                <Input
-                    placeholder="Enter text here"
-                    label="Enter text here"
-                    type="text"
-                />
-            </Cell>
-            <Cell>
-                <Input
-                    placeholder="Enter a number here"
-                    type="number"
-                    suffix={<Search color={colors.ash.dark} />}
-                />
-            </Cell>
-            <Cell>
-                <Input
-                    placeholder="(512) 666-6666"
-                    label="Enter a phone number here"
-                    prefix={<Mobile color={colors.ash.dark} />}
-                    type="tel"
-                />
-            </Cell>
-            <Cell>
-                <Input
-                    prefix={<Search color={colors.ash.dark} />}
-                    type="number"
-                />
-            </Cell>
-        </Grid>
-    </StyledStory>
+    <ThemeProvider theme={RootTheme}>
+        <StyledStory>
+            <Grid columns="200px">
+                <Cell>
+                    <Input
+                        placeholder="Enter text here"
+                        label="Enter text here"
+                        type="text"
+                    />
+                </Cell>
+                <Cell>
+                    <Input
+                        placeholder="Enter a number here"
+                        type="number"
+                        suffix={<Search color={colors.ash.dark} />}
+                    />
+                </Cell>
+                <Cell>
+                    <Input
+                        placeholder="(512) 666-6666"
+                        label="Enter a phone number here"
+                        prefix={<Mobile color={colors.ash.dark} />}
+                        type="tel"
+                    />
+                </Cell>
+                <Cell>
+                    <Input
+                        prefix={<Search color={colors.ash.dark} />}
+                        type="number"
+                    />
+                </Cell>
+            </Grid>
+        </StyledStory>
+    </ThemeProvider>
 );
 
 storiesOf('Components/Form/Input', module)

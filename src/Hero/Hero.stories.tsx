@@ -4,9 +4,11 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { text, color } from '@storybook/addon-knobs';
+// VENDOR
+import { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Typography } from '..';
-import { colors } from '../theme';
+import { colors, RootTheme } from '../theme';
 import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
 import { Grid, Cell, CustomAdaptor, StandardBreakpoints } from '../Grid';
@@ -31,17 +33,19 @@ storiesOf('Components/Hero', module)
         },
     })
     .add('Default', () => (
-        <StyledStory>
-            <Hero
-                background={color('Hero Background', tealGradient)}
-                minHeight="9.375rem"
-            >
-                <Title>{text('Title', 'Baratheon')}</Title>
-                <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
-                    <Subtitle>{text('Subtitle', 'Ours is the Fury')}</Subtitle>
-                </CustomAdaptor>
-            </Hero>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Hero
+                    background={color('Hero Background', tealGradient)}
+                    minHeight="9.375rem"
+                >
+                    <Title>{text('Title', 'Baratheon')}</Title>
+                    <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
+                        <Subtitle>{text('Subtitle', 'Ours is the Fury')}</Subtitle>
+                    </CustomAdaptor>
+                </Hero>
+            </StyledStory>
+        </ThemeProvider>
     ))
     .add('Simple', () => {
         const BreadCrumbs = styled(Typography)`
@@ -52,17 +56,19 @@ storiesOf('Components/Hero', module)
         `;
 
         return (
-            <StyledStory>
-                <Hero
-                    background={color('Hero Background', tealGradient)}
-                    color={color('Hero Color', colors.white.base)}
-                >
-                    <BreadCrumbs scale={14} weight={500}>
-                        {text('Subtext', 'Westeros / House Tyrell')}
-                    </BreadCrumbs>
-                    <Title>{text('Title', 'Olenna Tyrell')}</Title>
-                </Hero>
-            </StyledStory>
+            <ThemeProvider theme={RootTheme}>
+                <StyledStory>
+                    <Hero
+                        background={color('Hero Background', tealGradient)}
+                        color={color('Hero Color', colors.white.base)}
+                    >
+                        <BreadCrumbs scale={14} weight={500}>
+                            {text('Subtext', 'Westeros / House Tyrell')}
+                        </BreadCrumbs>
+                        <Title>{text('Title', 'Olenna Tyrell')}</Title>
+                    </Hero>
+                </StyledStory>
+            </ThemeProvider>
         );
     })
     .add('CTA', () => {
@@ -76,43 +82,45 @@ storiesOf('Components/Hero', module)
         `;
 
         return (
-            <StyledStory>
-                <Hero
-                    background={color('Hero Background', tealGradient)}
-                    minHeight="12.5rem"
-                >
-                    <Grid
-                        gap="0.75rem"
-                        columns={1}
-                        justifyContent="center"
-                        alignContent="center"
+            <ThemeProvider theme={RootTheme}>
+                <StyledStory>
+                    <Hero
+                        background={color('Hero Background', tealGradient)}
+                        minHeight="12.5rem"
                     >
-                        <StyledImageWrapper>
-                            <SomeImage />
-                        </StyledImageWrapper>
-                        <Title scale={44}>
-                            {text('Title', 'House Lannister')}
-                        </Title>
-                        <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
-                            <Subtitle>
-                                {text(
-                                    'Subtitle',
-                                    'A Lannister always pays his debts'
-                                )}
-                            </Subtitle>
-                        </CustomAdaptor>
-                        <Cell>
-                            <Button
-                                variant="outline"
-                                reverse
-                                onClick={() => alert('Paid!')}
-                                margin="0 auto"
-                            >
-                                {text('Button Text', 'Pay Debts Today')}
-                            </Button>
-                        </Cell>
-                    </Grid>
-                </Hero>
-            </StyledStory>
+                        <Grid
+                            gap="0.75rem"
+                            columns={1}
+                            justifyContent="center"
+                            alignContent="center"
+                        >
+                            <StyledImageWrapper>
+                                <SomeImage />
+                            </StyledImageWrapper>
+                            <Title scale={44}>
+                                {text('Title', 'House Lannister')}
+                            </Title>
+                            <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
+                                <Subtitle>
+                                    {text(
+                                        'Subtitle',
+                                        'A Lannister always pays his debts'
+                                    )}
+                                </Subtitle>
+                            </CustomAdaptor>
+                            <Cell>
+                                <Button
+                                    variant="outline"
+                                    reverse
+                                    onClick={() => alert('Paid!')}
+                                    margin="0 auto"
+                                >
+                                    {text('Button Text', 'Pay Debts Today')}
+                                </Button>
+                            </Cell>
+                        </Grid>
+                    </Hero>
+                </StyledStory>
+            </ThemeProvider>
         );
     });

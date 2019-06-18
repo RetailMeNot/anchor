@@ -4,6 +4,8 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { text, color } from '@storybook/addon-knobs';
+// VENDOR
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import {
     Layout,
@@ -11,7 +13,7 @@ import {
     DEFAULT_CONTENT_WIDTH,
     TRANSPARENT,
 } from './Layout.component';
-import { colors } from '../theme';
+import { colors, RootTheme } from '../theme';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Page } from './Page';
@@ -33,23 +35,25 @@ storiesOf('Components/Layout', module)
         },
     })
     .add('Default', () => (
-        <StyledStory>
-            <Page header={<Header />} footer={<Footer />}>
-                <Layout
-                    layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
-                    contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
-                    layoutBackgroundColor={color(
-                        'Layout Background Color',
-                        TRANSPARENT
-                    )}
-                    contentBackgroundColor={color(
-                        'Content Background Color',
-                        TRANSPARENT
-                    )}
-                >
-                    <h1>Default Layout</h1>
-                    <h2>This example uses the Page component as a wrapper.</h2>
-                </Layout>
-            </Page>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Page header={<Header />} footer={<Footer />}>
+                    <Layout
+                        layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
+                        contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
+                        layoutBackgroundColor={color(
+                            'Layout Background Color',
+                            TRANSPARENT
+                        )}
+                        contentBackgroundColor={color(
+                            'Content Background Color',
+                            TRANSPARENT
+                        )}
+                    >
+                        <h1>Default Layout</h1>
+                        <h2>This example uses the Page component as a wrapper.</h2>
+                    </Layout>
+                </Page>
+            </StyledStory>
+        </ThemeProvider>
     ));

@@ -4,13 +4,14 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled from 'styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
 import { Search } from '../Icon';
 import { Grid, Cell } from '../Grid';
 import { Item } from '../List';
 import { Typography } from '../Typography';
-import { colors } from '../theme';
+import { colors, RootTheme } from '../theme';
 // README
 import * as README from './README.md';
 // THEME
@@ -41,22 +42,24 @@ const StateBasedAutoCompleteStory = () => {
         tempDataStringSource('')
     );
     return (
-        <StyledStory>
-            <Grid columns={1}>
-                <Cell width={1}>
-                    <Typography tag="h1">AutoComplete 1</Typography>
-                    <br />
-                    <AutoComplete
-                        placeholder="Search here..."
-                        onFilter={(newTerm: any) => {
-                            setTempData(tempDataStringSource(newTerm));
-                        }}
-                        prefix={<Search color={colors.ash.base} />}
-                        dataSource={tempData}
-                    />
-                </Cell>
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns={1}>
+                    <Cell width={1}>
+                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <br />
+                        <AutoComplete
+                            placeholder="Search here..."
+                            onFilter={(newTerm: any) => {
+                                setTempData(tempDataStringSource(newTerm));
+                            }}
+                            prefix={<Search color={colors.ash.base} />}
+                            dataSource={tempData}
+                        />
+                    </Cell>
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 

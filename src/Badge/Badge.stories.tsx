@@ -5,13 +5,14 @@ import { storiesOf } from '@storybook/react';
 import { boolean, color, number } from '@storybook/addon-knobs';
 // VENDOR
 import styled from 'styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Badge } from './Badge.component';
 import { Cart } from '../Icon';
 // README
 import * as README from './README.md';
 // THEME
-import { colors } from '../theme';
+import { colors, RootTheme } from '../theme';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
@@ -35,29 +36,31 @@ const StateBasedBadgeStoryDot = () => {
     };
 
     return (
-        <StyledStory
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-        >
-            <Badge
-                backgroundColor={color(
-                    'Background Color',
-                    colors.flashPink.base
-                )}
-                borderColor={color('Border Color', colors.grapePurchase.base)}
-                borderColorHover={color(
-                    'Border Color on Hover',
-                    colors.grapePurchase.light
-                )}
-                count={number('Count', 1)}
-                isParentHovered={isHovered}
-                offsetBottom={number('Offset Bottom in rems', 1.2)}
-                offsetLeft={number('Offset Left in rems', 0.9)}
-                showZero={boolean('Show Zero', false)}
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={handleOnMouseLeave}
             >
-                <Cart scale="lg" />
-            </Badge>
-        </StyledStory>
+                <Badge
+                    backgroundColor={color(
+                        'Background Color',
+                        colors.flashPink.base
+                    )}
+                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColorHover={color(
+                        'Border Color on Hover',
+                        colors.grapePurchase.light
+                    )}
+                    count={number('Count', 1)}
+                    isParentHovered={isHovered}
+                    offsetBottom={number('Offset Bottom in rems', 1.2)}
+                    offsetLeft={number('Offset Left in rems', 0.9)}
+                    showZero={boolean('Show Zero', false)}
+                >
+                    <Cart scale="lg" />
+                </Badge>
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 
@@ -71,32 +74,34 @@ const StateBasedBadgeStorySmall = () => {
     };
 
     return (
-        <StyledStory
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-        >
-            <Badge
-                backgroundColor={color(
-                    'Background Color',
-                    colors.flashPink.base
-                )}
-                borderColor={color('Border Color', colors.grapePurchase.base)}
-                borderColorHover={color(
-                    'Border Color on Hover',
-                    colors.grapePurchase.light
-                )}
-                count={number('Count', 1)}
-                isParentHovered={isHovered}
-                offsetBottom={number('Offset Bottom in rems', 1.1)}
-                offsetLeft={number('Offset Left in rems', 0.6)}
-                overflowCount={number('Overflow Count', 9)}
-                showZero={boolean('Show Zero', false)}
-                size="small"
-                textColor={color('Text Color', colors.white.base)}
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={handleOnMouseLeave}
             >
-                <Cart scale="lg" />
-            </Badge>
-        </StyledStory>
+                <Badge
+                    backgroundColor={color(
+                        'Background Color',
+                        colors.flashPink.base
+                    )}
+                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColorHover={color(
+                        'Border Color on Hover',
+                        colors.grapePurchase.light
+                    )}
+                    count={number('Count', 1)}
+                    isParentHovered={isHovered}
+                    offsetBottom={number('Offset Bottom in rems', 1.1)}
+                    offsetLeft={number('Offset Left in rems', 0.6)}
+                    overflowCount={number('Overflow Count', 9)}
+                    showZero={boolean('Show Zero', false)}
+                    size="small"
+                    textColor={color('Text Color', colors.white.base)}
+                >
+                    <Cart scale="lg" />
+                </Badge>
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 
@@ -110,29 +115,31 @@ const StateBasedBadgeStoryLargeStandalone = () => {
     };
 
     return (
-        <StyledStory
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-        >
-            <Badge
-                backgroundColor={color(
-                    'Background Color',
-                    colors.flashPink.base
-                )}
-                borderColor={color('Border Color', colors.grapePurchase.base)}
-                borderColorHover={color(
-                    'Border Color on Hover',
-                    colors.grapePurchase.light
-                )}
-                count={number('Count', 1)}
-                isParentHovered={isHovered}
-                overflowCount={number('Overflow Count', 9)}
-                showZero={boolean('Show Zero', false)}
-                size="large"
-                standalone={true}
-                textColor={color('Text Color', colors.white.base)}
-            />
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={handleOnMouseLeave}
+            >
+                <Badge
+                    backgroundColor={color(
+                        'Background Color',
+                        colors.flashPink.base
+                    )}
+                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColorHover={color(
+                        'Border Color on Hover',
+                        colors.grapePurchase.light
+                    )}
+                    count={number('Count', 1)}
+                    isParentHovered={isHovered}
+                    overflowCount={number('Overflow Count', 9)}
+                    showZero={boolean('Show Zero', false)}
+                    size="large"
+                    standalone={true}
+                    textColor={color('Text Color', colors.white.base)}
+                />
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 

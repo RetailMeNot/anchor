@@ -4,6 +4,8 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { text, color } from '@storybook/addon-knobs';
+// VENDOR
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import {
     SidebarLayout,
@@ -15,7 +17,7 @@ import {
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { Sider } from '../Sider';
-import { colors } from '../../theme/index';
+import { colors, RootTheme } from '../../theme/index';
 import { Page } from '../Page';
 // README
 import * as README from './README.md';
@@ -42,24 +44,26 @@ storiesOf('Components/Layout', module)
         },
     })
     .add('Sidebar Layout', () => (
-        <StyledStory>
-            <Page header={<Header />} footer={<Footer />}>
-                <SidebarLayout
-                    layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
-                    contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
-                    layoutBackgroundColor={color(
-                        'Layout Background Color',
-                        TRANSPARENT
-                    )}
-                    contentBackgroundColor={color(
-                        'Content Background Color',
-                        TRANSPARENT
-                    )}
-                    sidebar={<Sider />}
-                    sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
-                >
-                    <h1>Hello!</h1>
-                </SidebarLayout>
-            </Page>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Page header={<Header />} footer={<Footer />}>
+                    <SidebarLayout
+                        layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
+                        contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
+                        layoutBackgroundColor={color(
+                            'Layout Background Color',
+                            TRANSPARENT
+                        )}
+                        contentBackgroundColor={color(
+                            'Content Background Color',
+                            TRANSPARENT
+                        )}
+                        sidebar={<Sider />}
+                        sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
+                    >
+                        <h1>Hello!</h1>
+                    </SidebarLayout>
+                </Page>
+            </StyledStory>
+        </ThemeProvider>
     ));
