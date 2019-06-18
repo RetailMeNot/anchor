@@ -1,11 +1,11 @@
 // REACT
 import * as React from 'react';
-// ENZYME
+// VENDOR
 import { mount } from 'enzyme';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Modal, ModalProvider } from './Modal.component';
 import { RootTheme } from '../theme';
-import { ThemeProvider } from '@xstyled/styled-components';
 const { Header, Content, Footer, Close } = Modal;
 
 describe('Component: Modal', () => {

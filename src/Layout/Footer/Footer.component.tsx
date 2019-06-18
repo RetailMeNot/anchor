@@ -231,8 +231,8 @@ const RenderLinks = ({
 }) => (
     <CenteredGrid columns={columns} gap="1rem">
         {items.map(({ title, key: sectionKey, children }: any) => (
-            <Cell width={1}>
-                <FooterSection key={sectionKey} title={title}>
+            <Cell key={sectionKey} width={1}>
+                <FooterSection title={title}>
                     <ul>
                         {children.map(({ key, href, label }: any) => (
                             <li key={key}>
