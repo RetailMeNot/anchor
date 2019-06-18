@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: CardActionArea should be defined 1`] = `
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  width: 100%;
+  border-top: solid thin #E7E7E7;
+  background-color: white;
+}
+
 <div
-  className="anchor-card-action-area sc-bdVaJa hvqWKs"
+  className="anchor-card-action-area c0"
 />
 `;

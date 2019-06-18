@@ -23,7 +23,7 @@ import {
 // README
 import * as README from './README.md';
 import { RootTheme } from '../../theme';
-import { ThemeProvider } from "@xstyled/styled-components";
+import { ThemeProvider } from '@xstyled/styled-components';
 
 const StyledStory = styled.div`
     padding: 2rem 5rem;
@@ -54,12 +54,14 @@ storiesOf('Components/Grid/Adaptor', module)
                 </LegacyDesktop>
                 <LegacyTablet>
                     <p>
-                        I am visible on Tablet {dimension(LegacyBreakpoints.tablet)}
+                        I am visible on Tablet{' '}
+                        {dimension(LegacyBreakpoints.tablet)}
                     </p>
                 </LegacyTablet>
                 <LegacyPhone>
                     <p>
-                        I am visible on Phone {dimension(LegacyBreakpoints.phone)}
+                        I am visible on Phone{' '}
+                        {dimension(LegacyBreakpoints.phone)}
                     </p>
                 </LegacyPhone>
             </StyledStory>
@@ -68,24 +70,38 @@ storiesOf('Components/Grid/Adaptor', module)
     .add('Standard Breakpoints', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <h4>Resize this window to view the six different breakpoints</h4>
+                <h4>
+                    Resize this window to view the six different breakpoints
+                </h4>
                 <XS>
-                    <p>I am visible on xs {dimension(StandardBreakpoints.xs)}</p>
+                    <p>
+                        I am visible on xs {dimension(StandardBreakpoints.xs)}
+                    </p>
                 </XS>
                 <SM>
-                    <p>I am visible on sm {dimension(StandardBreakpoints.sm)}</p>
+                    <p>
+                        I am visible on sm {dimension(StandardBreakpoints.sm)}
+                    </p>
                 </SM>
                 <MD>
-                    <p>I am visible on md {dimension(StandardBreakpoints.md)}</p>
+                    <p>
+                        I am visible on md {dimension(StandardBreakpoints.md)}
+                    </p>
                 </MD>
                 <LG>
-                    <p>I am visible on lg {dimension(StandardBreakpoints.lg)}</p>
+                    <p>
+                        I am visible on lg {dimension(StandardBreakpoints.lg)}
+                    </p>
                 </LG>
                 <XL>
-                    <p>I am visible on xl {dimension(StandardBreakpoints.xl)}</p>
+                    <p>
+                        I am visible on xl {dimension(StandardBreakpoints.xl)}
+                    </p>
                 </XL>
                 <XXL>
-                    <p>I am visible on xxl {dimension(StandardBreakpoints.xxl)}</p>
+                    <p>
+                        I am visible on xxl {dimension(StandardBreakpoints.xxl)}
+                    </p>
                 </XXL>
             </StyledStory>
         </ThemeProvider>

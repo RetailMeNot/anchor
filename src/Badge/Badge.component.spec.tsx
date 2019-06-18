@@ -6,9 +6,6 @@ import { Badge } from './Badge.component';
 import { Cart } from '../Icon';
 // ENZYME
 import { shallow, mount } from 'enzyme';
-/* tslint:disable no-import-side-effect*/
-import 'jest-styled-components';
-/* tslint:enable */
 
 describe('Component: Badge', () => {
     it('should be defined and match its snapshot', () => {

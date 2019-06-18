@@ -42,7 +42,9 @@ storiesOf('Components/Layout', module)
                     footerHeight={text('Footer Height', DEFAULT_FOOTER_HEIGHT)}
                 >
                     <h1>Page</h1>
-                    <h2>Main wrapper, includes a header and footer and content</h2>
+                    <h2>
+                        Main wrapper, includes a header and footer and content
+                    </h2>
                 </Page>
             </StyledStory>
         </ThemeProvider>

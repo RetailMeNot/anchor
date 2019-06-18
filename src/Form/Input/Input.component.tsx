@@ -57,6 +57,7 @@ interface InputProps {
     readOnly?: boolean;
     placeholder?: string;
     label?: string;
+    ariaLabel?: string;
     // TODO: buttons?
     prefix?: React.FunctionComponent<any> | JSX.Element;
     suffix?: React.FunctionComponent<any> | JSX.Element;
@@ -235,6 +236,7 @@ export const Input = forwardRef(
             value,
             size,
             id,
+            ariaLabel,
         }: InputProps,
         ref: React.RefObject<any>
     ) => {
@@ -273,6 +275,7 @@ export const Input = forwardRef(
                     {prefix && <CenteredCell>{prefix}</CenteredCell>}
                     <StyledReversedCell>
                         <StyledInput
+                            aria-label={ariaLabel}
                             ref={inputRef}
                             id={id}
                             hasLabel={!!label}

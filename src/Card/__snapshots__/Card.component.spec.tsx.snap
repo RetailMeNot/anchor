@@ -1,11 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Card should match its snapshot. 1`] = `
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  padding: 1rem;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  box-sizing: border-box;
+  border-radius: 0.125rem;
+  border: solid thin #E7E7E7;
+}
+
 <div
-  className="anchor-card sc-bxivhb kUgQih"
+  className="anchor-card c0"
 >
   <div
-    className="anchor-card-content sc-htpNat jpIewe"
+    className="anchor-card-content c1"
   >
     <p>
       Test

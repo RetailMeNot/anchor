@@ -38,7 +38,10 @@ storiesOf('Components/DropDown', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <p>DropDown 1</p>
-                <DropDown overlay={<MockList />} position={{ top: 35, left: 50 }}>
+                <DropDown
+                    overlay={<MockList />}
+                    position={{ top: 35, left: 50 }}
+                >
                     <a>
                         DropDown Link <br /> big
                     </a>

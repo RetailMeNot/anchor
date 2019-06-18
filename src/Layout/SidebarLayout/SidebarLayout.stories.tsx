@@ -49,7 +49,10 @@ storiesOf('Components/Layout', module)
                 <Page header={<Header />} footer={<Footer />}>
                     <SidebarLayout
                         layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
-                        contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
+                        contentWidth={text(
+                            'Content Width',
+                            DEFAULT_CONTENT_WIDTH
+                        )}
                         layoutBackgroundColor={color(
                             'Layout Background Color',
                             TRANSPARENT
@@ -59,7 +62,10 @@ storiesOf('Components/Layout', module)
                             TRANSPARENT
                         )}
                         sidebar={<Sider />}
-                        sidebarWidth={text('Sidebar Width', DEFAULT_SIDEBAR_WIDTH)}
+                        sidebarWidth={text(
+                            'Sidebar Width',
+                            DEFAULT_SIDEBAR_WIDTH
+                        )}
                     >
                         <h1>Hello!</h1>
                     </SidebarLayout>

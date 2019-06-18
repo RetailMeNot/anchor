@@ -18,6 +18,7 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
+    name?: string;
     dataSource?: AutoCompleteDataSource | string[] | number[];
     className?: string;
     size?: 'sm' | 'md' | 'lg';
@@ -88,6 +89,7 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
 `;
 
 export const AutoComplete = ({
+    name = '',
     className,
     placeholder,
     // children,
@@ -153,6 +155,11 @@ export const AutoComplete = ({
             {...props}
         >
             <Input
+                ariaLabel={
+                    name.length
+                        ? `auto-complete-${name.toLowerCase()}`
+                        : 'auto-complete'
+                }
                 value={term}
                 ref={inputRef}
                 size={size}

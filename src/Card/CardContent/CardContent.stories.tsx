@@ -27,8 +27,8 @@ storiesOf('Components/Card/CardContent', module)
             <StyledStory>
                 <CardContent>
                     <p>
-                        This is the container for card content. You can specify it's
-                        padding via the <code>Card</code> component.
+                        This is the container for card content. You can specify
+                        it's padding via the <code>Card</code> component.
                     </p>
                 </CardContent>
             </StyledStory>

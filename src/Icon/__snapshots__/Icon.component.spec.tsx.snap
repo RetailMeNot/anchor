@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Icon should render out a AddEvent 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon add-event sc-bdVaJa gENAGr"
+  className="anchor-icon add-event c0"
   scale="md"
 >
   <svg
@@ -21,8 +28,15 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
 `;
 
 exports[`Component: Icon should render out a ArrowBack 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon arrow-back sc-bdVaJa gENAGr"
+  className="anchor-icon arrow-back c0"
   scale="md"
 >
   <svg
@@ -58,8 +72,15 @@ exports[`Component: Icon should render out a ArrowBack 1`] = `
 `;
 
 exports[`Component: Icon should render out a ArrowForward 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon arrow-forward sc-bdVaJa gENAGr"
+  className="anchor-icon arrow-forward c0"
   scale="md"
 >
   <svg
@@ -95,8 +116,15 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
 `;
 
 exports[`Component: Icon should render out a AvatarIcon 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon avatar sc-bdVaJa gENAGr"
+  className="anchor-icon avatar c0"
   scale="md"
 >
   <svg
@@ -132,8 +160,15 @@ exports[`Component: Icon should render out a AvatarIcon 1`] = `
 `;
 
 exports[`Component: Icon should render out a AvatarOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon avatar-outline sc-bdVaJa gENAGr"
+  className="anchor-icon avatar-outline c0"
   scale="md"
 >
   <svg
@@ -169,8 +204,15 @@ exports[`Component: Icon should render out a AvatarOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a BarCode 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon bar-code sc-bdVaJa gENAGr"
+  className="anchor-icon bar-code c0"
   scale="md"
 >
   <svg
@@ -204,8 +246,15 @@ exports[`Component: Icon should render out a BarCode 1`] = `
 `;
 
 exports[`Component: Icon should render out a BulletList 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon bullet-list sc-bdVaJa gENAGr"
+  className="anchor-icon bullet-list c0"
   scale="md"
 >
   <svg
@@ -235,8 +284,15 @@ exports[`Component: Icon should render out a BulletList 1`] = `
 `;
 
 exports[`Component: Icon should render out a Calendar 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon calendar sc-bdVaJa gENAGr"
+  className="anchor-icon calendar c0"
   scale="md"
 >
   <svg
@@ -262,8 +318,15 @@ exports[`Component: Icon should render out a Calendar 1`] = `
 `;
 
 exports[`Component: Icon should render out a Camera 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon camera sc-bdVaJa gENAGr"
+  className="anchor-icon camera c0"
   scale="md"
 >
   <svg
@@ -295,8 +358,15 @@ exports[`Component: Icon should render out a Camera 1`] = `
 `;
 
 exports[`Component: Icon should render out a Cart 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon cart sc-bdVaJa gENAGr"
+  className="anchor-icon cart c0"
   scale="md"
 >
   <svg
@@ -326,8 +396,15 @@ exports[`Component: Icon should render out a Cart 1`] = `
 `;
 
 exports[`Component: Icon should render out a CashBack 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon cash-back sc-bdVaJa gENAGr"
+  className="anchor-icon cash-back c0"
   scale="md"
 >
   <svg
@@ -360,8 +437,15 @@ exports[`Component: Icon should render out a CashBack 1`] = `
 `;
 
 exports[`Component: Icon should render out a Cells 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon cells sc-bdVaJa gENAGr"
+  className="anchor-icon cells c0"
   scale="md"
 >
   <svg
@@ -387,8 +471,15 @@ exports[`Component: Icon should render out a Cells 1`] = `
 `;
 
 exports[`Component: Icon should render out a Chat 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chat sc-bdVaJa gENAGr"
+  className="anchor-icon chat c0"
   scale="md"
 >
   <svg
@@ -421,8 +512,15 @@ exports[`Component: Icon should render out a Chat 1`] = `
 `;
 
 exports[`Component: Icon should render out a Check 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon check sc-bdVaJa gENAGr"
+  className="anchor-icon check c0"
   scale="md"
 >
   <svg
@@ -448,8 +546,15 @@ exports[`Component: Icon should render out a Check 1`] = `
 `;
 
 exports[`Component: Icon should render out a CheckSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon check-small sc-bdVaJa gENAGr"
+  className="anchor-icon check-small c0"
   scale="md"
 >
   <svg
@@ -476,8 +581,15 @@ exports[`Component: Icon should render out a CheckSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronDown 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-down sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-down c0"
   scale="md"
 >
   <svg
@@ -496,8 +608,15 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-down-small sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-down-small c0"
   scale="md"
 >
   <svg
@@ -516,8 +635,15 @@ exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronLeft 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-left sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-left c0"
   scale="md"
 >
   <svg
@@ -536,8 +662,15 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-left-small sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-left-small c0"
   scale="md"
 >
   <svg
@@ -564,8 +697,15 @@ exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronRight 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-right sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-right c0"
   scale="md"
 >
   <svg
@@ -584,8 +724,15 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-right-small sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-right-small c0"
   scale="md"
 >
   <svg
@@ -612,8 +759,15 @@ exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronUp 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-up sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-up c0"
   scale="md"
 >
   <svg
@@ -632,8 +786,15 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
 `;
 
 exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon chevron-up-small sc-bdVaJa gENAGr"
+  className="anchor-icon chevron-up-small c0"
   scale="md"
 >
   <svg
@@ -660,8 +821,15 @@ exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a Clock 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon clock sc-bdVaJa gENAGr"
+  className="anchor-icon clock c0"
   scale="md"
 >
   <svg
@@ -698,8 +866,15 @@ exports[`Component: Icon should render out a Clock 1`] = `
 `;
 
 exports[`Component: Icon should render out a Close 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon close sc-bdVaJa gENAGr"
+  className="anchor-icon close c0"
   scale="md"
 >
   <svg
@@ -732,8 +907,15 @@ exports[`Component: Icon should render out a Close 1`] = `
 `;
 
 exports[`Component: Icon should render out a CloseSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon close-small sc-bdVaJa gENAGr"
+  className="anchor-icon close-small c0"
   scale="md"
 >
   <svg
@@ -766,8 +948,15 @@ exports[`Component: Icon should render out a CloseSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a CommentMore 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon comment-more sc-bdVaJa gENAGr"
+  className="anchor-icon comment-more c0"
   scale="md"
 >
   <svg
@@ -800,8 +989,15 @@ exports[`Component: Icon should render out a CommentMore 1`] = `
 `;
 
 exports[`Component: Icon should render out a CreditCard 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon credit-card sc-bdVaJa gENAGr"
+  className="anchor-icon credit-card c0"
   scale="md"
 >
   <svg
@@ -835,8 +1031,15 @@ exports[`Component: Icon should render out a CreditCard 1`] = `
 `;
 
 exports[`Component: Icon should render out a CrossHairs 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon cross-hairs sc-bdVaJa gENAGr"
+  className="anchor-icon cross-hairs c0"
   scale="md"
 >
   <svg
@@ -863,8 +1066,15 @@ exports[`Component: Icon should render out a CrossHairs 1`] = `
 `;
 
 exports[`Component: Icon should render out a Cut 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon cut sc-bdVaJa gENAGr"
+  className="anchor-icon cut c0"
   scale="md"
 >
   <svg
@@ -897,8 +1107,15 @@ exports[`Component: Icon should render out a Cut 1`] = `
 `;
 
 exports[`Component: Icon should render out a Disabled 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon disabled sc-bdVaJa gENAGr"
+  className="anchor-icon disabled c0"
   scale="md"
 >
   <svg
@@ -931,8 +1148,15 @@ exports[`Component: Icon should render out a Disabled 1`] = `
 `;
 
 exports[`Component: Icon should render out a Dislike 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon dislike sc-bdVaJa gENAGr"
+  className="anchor-icon dislike c0"
   scale="md"
 >
   <svg
@@ -965,8 +1189,15 @@ exports[`Component: Icon should render out a Dislike 1`] = `
 `;
 
 exports[`Component: Icon should render out a Download 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon download sc-bdVaJa gENAGr"
+  className="anchor-icon download c0"
   scale="md"
 >
   <svg
@@ -999,8 +1230,15 @@ exports[`Component: Icon should render out a Download 1`] = `
 `;
 
 exports[`Component: Icon should render out a Ellipses 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon ellipses sc-bdVaJa gENAGr"
+  className="anchor-icon ellipses c0"
   scale="md"
 >
   <svg
@@ -1033,8 +1271,15 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
 `;
 
 exports[`Component: Icon should render out a EllipsesVertical 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon ellipses-vertical sc-bdVaJa gENAGr"
+  className="anchor-icon ellipses-vertical c0"
   scale="md"
 >
   <svg
@@ -1068,8 +1313,15 @@ exports[`Component: Icon should render out a EllipsesVertical 1`] = `
 `;
 
 exports[`Component: Icon should render out a Envelope 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon envelope sc-bdVaJa gENAGr"
+  className="anchor-icon envelope c0"
   scale="md"
 >
   <svg
@@ -1102,8 +1354,15 @@ exports[`Component: Icon should render out a Envelope 1`] = `
 `;
 
 exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon envelope-open sc-bdVaJa gENAGr"
+  className="anchor-icon envelope-open c0"
   scale="md"
 >
   <svg
@@ -1136,8 +1395,15 @@ exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
 `;
 
 exports[`Component: Icon should render out a Error 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon error sc-bdVaJa gENAGr"
+  className="anchor-icon error c0"
   scale="md"
 >
   <svg
@@ -1168,8 +1434,15 @@ exports[`Component: Icon should render out a Error 1`] = `
 `;
 
 exports[`Component: Icon should render out a Expand 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon expand sc-bdVaJa gENAGr"
+  className="anchor-icon expand c0"
   scale="md"
 >
   <svg
@@ -1202,8 +1475,15 @@ exports[`Component: Icon should render out a Expand 1`] = `
 `;
 
 exports[`Component: Icon should render out a Gear 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon gear sc-bdVaJa gENAGr"
+  className="anchor-icon gear c0"
   scale="md"
 >
   <svg
@@ -1236,8 +1516,15 @@ exports[`Component: Icon should render out a Gear 1`] = `
 `;
 
 exports[`Component: Icon should render out a GiftCard 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon gift-card sc-bdVaJa gENAGr"
+  className="anchor-icon gift-card c0"
   scale="md"
 >
   <svg
@@ -1276,8 +1563,15 @@ exports[`Component: Icon should render out a GiftCard 1`] = `
 `;
 
 exports[`Component: Icon should render out a Hamburger 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon hamburger sc-bdVaJa gENAGr"
+  className="anchor-icon hamburger c0"
   scale="md"
 >
   <svg
@@ -1309,8 +1603,15 @@ exports[`Component: Icon should render out a Hamburger 1`] = `
 `;
 
 exports[`Component: Icon should render out a Heart 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon heart sc-bdVaJa gENAGr"
+  className="anchor-icon heart c0"
   scale="md"
 >
   <svg
@@ -1343,8 +1644,15 @@ exports[`Component: Icon should render out a Heart 1`] = `
 `;
 
 exports[`Component: Icon should render out a HeartOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon heart-outline sc-bdVaJa gENAGr"
+  className="anchor-icon heart-outline c0"
   scale="md"
 >
   <svg
@@ -1377,8 +1685,15 @@ exports[`Component: Icon should render out a HeartOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Home 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon home sc-bdVaJa gENAGr"
+  className="anchor-icon home c0"
   scale="md"
 >
   <svg
@@ -1403,8 +1718,15 @@ exports[`Component: Icon should render out a Home 1`] = `
 `;
 
 exports[`Component: Icon should render out a Info 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon info sc-bdVaJa gENAGr"
+  className="anchor-icon info c0"
   scale="md"
 >
   <svg
@@ -1434,8 +1756,15 @@ exports[`Component: Icon should render out a Info 1`] = `
 `;
 
 exports[`Component: Icon should render out a InfoOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon info-outline sc-bdVaJa gENAGr"
+  className="anchor-icon info-outline c0"
   scale="md"
 >
   <svg
@@ -1460,8 +1789,15 @@ exports[`Component: Icon should render out a InfoOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Laptop 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon laptop sc-bdVaJa gENAGr"
+  className="anchor-icon laptop c0"
   scale="md"
 >
   <svg
@@ -1494,8 +1830,15 @@ exports[`Component: Icon should render out a Laptop 1`] = `
 `;
 
 exports[`Component: Icon should render out a Lightning 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon lightning sc-bdVaJa gENAGr"
+  className="anchor-icon lightning c0"
   scale="md"
 >
   <svg
@@ -1529,8 +1872,15 @@ exports[`Component: Icon should render out a Lightning 1`] = `
 `;
 
 exports[`Component: Icon should render out a Like 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon like sc-bdVaJa gENAGr"
+  className="anchor-icon like c0"
   scale="md"
 >
   <svg
@@ -1563,8 +1913,15 @@ exports[`Component: Icon should render out a Like 1`] = `
 `;
 
 exports[`Component: Icon should render out a ListIcon 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon list sc-bdVaJa gENAGr"
+  className="anchor-icon list c0"
   scale="md"
 >
   <svg
@@ -1596,8 +1953,15 @@ exports[`Component: Icon should render out a ListIcon 1`] = `
 `;
 
 exports[`Component: Icon should render out a Lock 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon lock sc-bdVaJa gENAGr"
+  className="anchor-icon lock c0"
   scale="md"
 >
   <svg
@@ -1644,8 +2008,15 @@ exports[`Component: Icon should render out a Lock 1`] = `
 `;
 
 exports[`Component: Icon should render out a Map 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon map sc-bdVaJa gENAGr"
+  className="anchor-icon map c0"
   scale="md"
 >
   <svg
@@ -1670,8 +2041,15 @@ exports[`Component: Icon should render out a Map 1`] = `
 `;
 
 exports[`Component: Icon should render out a Marker 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon marker sc-bdVaJa gENAGr"
+  className="anchor-icon marker c0"
   scale="md"
 >
   <svg
@@ -1704,8 +2082,15 @@ exports[`Component: Icon should render out a Marker 1`] = `
 `;
 
 exports[`Component: Icon should render out a MarkerOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon marker-outline sc-bdVaJa gENAGr"
+  className="anchor-icon marker-outline c0"
   scale="md"
 >
   <svg
@@ -1738,8 +2123,15 @@ exports[`Component: Icon should render out a MarkerOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Mobile 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon mobile sc-bdVaJa gENAGr"
+  className="anchor-icon mobile c0"
   scale="md"
 >
   <svg
@@ -1772,8 +2164,15 @@ exports[`Component: Icon should render out a Mobile 1`] = `
 `;
 
 exports[`Component: Icon should render out a News 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon news sc-bdVaJa gENAGr"
+  className="anchor-icon news c0"
   scale="md"
 >
   <svg
@@ -1806,8 +2205,15 @@ exports[`Component: Icon should render out a News 1`] = `
 `;
 
 exports[`Component: Icon should render out a Pencil 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon pencil sc-bdVaJa gENAGr"
+  className="anchor-icon pencil c0"
   scale="md"
 >
   <svg
@@ -1840,8 +2246,15 @@ exports[`Component: Icon should render out a Pencil 1`] = `
 `;
 
 exports[`Component: Icon should render out a Play 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon play sc-bdVaJa gENAGr"
+  className="anchor-icon play c0"
   scale="md"
 >
   <svg
@@ -1867,8 +2280,15 @@ exports[`Component: Icon should render out a Play 1`] = `
 `;
 
 exports[`Component: Icon should render out a Plus 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon plus sc-bdVaJa gENAGr"
+  className="anchor-icon plus c0"
   scale="md"
 >
   <svg
@@ -1901,8 +2321,15 @@ exports[`Component: Icon should render out a Plus 1`] = `
 `;
 
 exports[`Component: Icon should render out a PlusSmall 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon plus-small sc-bdVaJa gENAGr"
+  className="anchor-icon plus-small c0"
   scale="md"
 >
   <svg
@@ -1935,8 +2362,15 @@ exports[`Component: Icon should render out a PlusSmall 1`] = `
 `;
 
 exports[`Component: Icon should render out a Print 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon print sc-bdVaJa gENAGr"
+  className="anchor-icon print c0"
   scale="md"
 >
   <svg
@@ -1955,8 +2389,15 @@ exports[`Component: Icon should render out a Print 1`] = `
 `;
 
 exports[`Component: Icon should render out a Question 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon question sc-bdVaJa gENAGr"
+  className="anchor-icon question c0"
   scale="md"
 >
   <svg
@@ -1986,8 +2427,15 @@ exports[`Component: Icon should render out a Question 1`] = `
 `;
 
 exports[`Component: Icon should render out a QuestionOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon question-outline sc-bdVaJa gENAGr"
+  className="anchor-icon question-outline c0"
   scale="md"
 >
   <svg
@@ -2012,8 +2460,15 @@ exports[`Component: Icon should render out a QuestionOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Refresh 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon refresh sc-bdVaJa gENAGr"
+  className="anchor-icon refresh c0"
   scale="md"
 >
   <svg
@@ -2046,8 +2501,15 @@ exports[`Component: Icon should render out a Refresh 1`] = `
 `;
 
 exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon retail-me-not-logo sc-bdVaJa gENAGr"
+  className="anchor-icon retail-me-not-logo c0"
   scale="md"
 >
   <svg
@@ -2080,8 +2542,15 @@ exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
 `;
 
 exports[`Component: Icon should render out a SadFace 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon sad-face sc-bdVaJa gENAGr"
+  className="anchor-icon sad-face c0"
   scale="md"
 >
   <svg
@@ -2124,8 +2593,15 @@ exports[`Component: Icon should render out a SadFace 1`] = `
 `;
 
 exports[`Component: Icon should render out a Search 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon search sc-bdVaJa gENAGr"
+  className="anchor-icon search c0"
   scale="md"
 >
   <svg
@@ -2144,8 +2620,15 @@ exports[`Component: Icon should render out a Search 1`] = `
 `;
 
 exports[`Component: Icon should render out a Share 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon share sc-bdVaJa gENAGr"
+  className="anchor-icon share c0"
   scale="md"
 >
   <svg
@@ -2178,8 +2661,15 @@ exports[`Component: Icon should render out a Share 1`] = `
 `;
 
 exports[`Component: Icon should render out a Sliders 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon sliders sc-bdVaJa gENAGr"
+  className="anchor-icon sliders c0"
   scale="md"
 >
   <svg
@@ -2209,8 +2699,15 @@ exports[`Component: Icon should render out a Sliders 1`] = `
 `;
 
 exports[`Component: Icon should render out a Star 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon star sc-bdVaJa gENAGr"
+  className="anchor-icon star c0"
   scale="md"
 >
   <svg
@@ -2237,8 +2734,15 @@ exports[`Component: Icon should render out a Star 1`] = `
 `;
 
 exports[`Component: Icon should render out a StarHalf 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon star-half sc-bdVaJa gENAGr"
+  className="anchor-icon star-half c0"
   scale="md"
 >
   <svg
@@ -2270,8 +2774,15 @@ exports[`Component: Icon should render out a StarHalf 1`] = `
 `;
 
 exports[`Component: Icon should render out a StarOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon star-outline sc-bdVaJa gENAGr"
+  className="anchor-icon star-outline c0"
   scale="md"
 >
   <svg
@@ -2298,8 +2809,15 @@ exports[`Component: Icon should render out a StarOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Success 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon success sc-bdVaJa gENAGr"
+  className="anchor-icon success c0"
   scale="md"
 >
   <svg
@@ -2334,8 +2852,15 @@ exports[`Component: Icon should render out a Success 1`] = `
 `;
 
 exports[`Component: Icon should render out a SuccessOutline 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon success-outline sc-bdVaJa gENAGr"
+  className="anchor-icon success-outline c0"
   scale="md"
 >
   <svg
@@ -2368,8 +2893,15 @@ exports[`Component: Icon should render out a SuccessOutline 1`] = `
 `;
 
 exports[`Component: Icon should render out a Tag 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon tag sc-bdVaJa gENAGr"
+  className="anchor-icon tag c0"
   scale="md"
 >
   <svg
@@ -2402,8 +2934,15 @@ exports[`Component: Icon should render out a Tag 1`] = `
 `;
 
 exports[`Component: Icon should render out a TagAdd 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon tag-add sc-bdVaJa gENAGr"
+  className="anchor-icon tag-add c0"
   scale="md"
 >
   <svg
@@ -2436,8 +2975,15 @@ exports[`Component: Icon should render out a TagAdd 1`] = `
 `;
 
 exports[`Component: Icon should render out a Upload 1`] = `
+.c0 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 <span
-  className="anchor-icon upload sc-bdVaJa gENAGr"
+  className="anchor-icon upload c0"
   scale="md"
 >
   <svg

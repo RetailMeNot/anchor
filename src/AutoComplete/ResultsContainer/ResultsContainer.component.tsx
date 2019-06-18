@@ -260,6 +260,7 @@ export const ResultsContainer = forwardRef(
                                     term,
                                     currentIndex,
                                     index: relativeIndex(index),
+                                    key: relativeIndex(index),
                                 })
                         )}
                     </div>

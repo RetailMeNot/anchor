@@ -1,11 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Layout should match its snapshot. 1`] = `
+.c0 {
+  max-width: 100%;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+.c1 {
+  max-width: 71.25rem;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
 <section
-  className="anchor-layout sc-bdVaJa HHpEE"
+  className="anchor-layout c0"
 >
   <div
-    className="sc-bwzfXH ehanXF"
+    className="c1"
   />
 </section>
 `;

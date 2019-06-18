@@ -58,9 +58,7 @@ const StyledModal = StyledReactModal.default.styled`
     // Footer (respectively) are also used.
     ${StyledContent} {
         padding: ${({ size = defaultSize }: ModalProps) =>
-            `4rem ${Sizes[size].contentPadding}rem 0 ${
-                Sizes[size].contentPadding
-            }rem`};
+            `4rem ${Sizes[size].contentPadding}rem 0 ${Sizes[size].contentPadding}rem`};
         &:last-child {
             padding-bottom: ${({ size = defaultSize }: ModalProps) =>
                 `${Sizes[size].contentPadding}rem`};

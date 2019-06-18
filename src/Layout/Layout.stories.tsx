@@ -40,7 +40,10 @@ storiesOf('Components/Layout', module)
                 <Page header={<Header />} footer={<Footer />}>
                     <Layout
                         layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
-                        contentWidth={text('Content Width', DEFAULT_CONTENT_WIDTH)}
+                        contentWidth={text(
+                            'Content Width',
+                            DEFAULT_CONTENT_WIDTH
+                        )}
                         layoutBackgroundColor={color(
                             'Layout Background Color',
                             TRANSPARENT
@@ -51,7 +54,9 @@ storiesOf('Components/Layout', module)
                         )}
                     >
                         <h1>Default Layout</h1>
-                        <h2>This example uses the Page component as a wrapper.</h2>
+                        <h2>
+                            This example uses the Page component as a wrapper.
+                        </h2>
                     </Layout>
                 </Page>
             </StyledStory>

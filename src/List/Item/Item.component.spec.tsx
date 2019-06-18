@@ -1,20 +1,24 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+// VENDOR
+import { shallow, mount } from 'enzyme';
+import { RootTheme } from '../../theme';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Item } from './Item.component';
-// ENZYME
-import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
 const subject = (
-    <Item
-        onSelect={() => null}
-        onMouseOver={() => null}
-        onMouseOut={() => null}
-    >
-        Item
-    </Item>
+    <ThemeProvider theme={RootTheme}>
+        <Item
+            onSelect={() => null}
+            onMouseOver={() => null}
+            onMouseOut={() => null}
+        >
+            Item
+        </Item>
+    </ThemeProvider>
 );
 const wrapper = mount(subject);
 const component = shallow(subject);

@@ -22,9 +22,7 @@ const StyledStory = styled.div`
     width: 100vw;
 `;
 
-const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${
-    colors.dealEnvy.light
-})`;
+const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
 
 storiesOf('Components/Hero', module)
     .addParameters({
@@ -41,7 +39,9 @@ storiesOf('Components/Hero', module)
                 >
                     <Title>{text('Title', 'Baratheon')}</Title>
                     <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
-                        <Subtitle>{text('Subtitle', 'Ours is the Fury')}</Subtitle>
+                        <Subtitle>
+                            {text('Subtitle', 'Ours is the Fury')}
+                        </Subtitle>
                     </CustomAdaptor>
                 </Hero>
             </StyledStory>
@@ -100,7 +100,9 @@ storiesOf('Components/Hero', module)
                             <Title scale={44}>
                                 {text('Title', 'House Lannister')}
                             </Title>
-                            <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
+                            <CustomAdaptor
+                                minWidth={StandardBreakpoints.sm.min}
+                            >
                                 <Subtitle>
                                     {text(
                                         'Subtitle',

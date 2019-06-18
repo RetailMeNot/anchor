@@ -1,11 +1,8 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// Vendor
+// VENDOR
 import { shallow, mount } from 'enzyme';
-// tslint:disable-next-line: no-import-side-effect
-import 'jest-styled-components';
-/* tslint:enable */
 // COMPONENT
 import { CollapseGroup } from './CollapseGroup.component';
 import { Collapse } from '../Collapse.component';

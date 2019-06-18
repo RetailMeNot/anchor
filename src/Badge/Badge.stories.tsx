@@ -46,7 +46,10 @@ const StateBasedBadgeStoryDot = () => {
                         'Background Color',
                         colors.flashPink.base
                     )}
-                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColor={color(
+                        'Border Color',
+                        colors.grapePurchase.base
+                    )}
                     borderColorHover={color(
                         'Border Color on Hover',
                         colors.grapePurchase.light
@@ -84,7 +87,10 @@ const StateBasedBadgeStorySmall = () => {
                         'Background Color',
                         colors.flashPink.base
                     )}
-                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColor={color(
+                        'Border Color',
+                        colors.grapePurchase.base
+                    )}
                     borderColorHover={color(
                         'Border Color on Hover',
                         colors.grapePurchase.light
@@ -125,7 +131,10 @@ const StateBasedBadgeStoryLargeStandalone = () => {
                         'Background Color',
                         colors.flashPink.base
                     )}
-                    borderColor={color('Border Color', colors.grapePurchase.base)}
+                    borderColor={color(
+                        'Border Color',
+                        colors.grapePurchase.base
+                    )}
                     borderColorHover={color(
                         'Border Color on Hover',
                         colors.grapePurchase.light

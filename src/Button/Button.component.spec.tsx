@@ -8,10 +8,6 @@ import { colors } from '../theme';
 import { Button } from './Button.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
-// STYLED COMPONENTS
-/* tslint:disable no-import-side-effect*/
-import 'jest-styled-components';
-/* tslint:enable */
 
 describe('Component: Button', () => {
     it('should be defined', () => {

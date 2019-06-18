@@ -105,7 +105,8 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     margin: 0;
     padding: 0;
     // TODO: colors when theme colors are defined
-    ${({ color = 'inherit', hue = 'base' }: any) => css({ color: colors[color] ? colors[color][hue] : color })};
+    ${({ color = 'inherit', hue = 'base' }: any) =>
+        css({ color: colors[color] ? colors[color][hue] : color })};
 
     // Use a scale to set size & line-height
     ${variant({
@@ -122,8 +123,9 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     })}
 
     // CSS Overrides
-    ${({ align = 'inherit' }: any) => css({ textAlign:  align })};
-    ${({ display }: any) => display ? css({ display: display || null}) : null };
+    ${({ align = 'inherit' }: any) => css({ textAlign: align })};
+    ${({ display }: any) =>
+        display ? css({ display: display || null }) : null};
     ${({ transform = 'none' }: any) => css({ textTransform: transform })};
 
     // Override Size & Line Height

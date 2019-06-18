@@ -1,24 +1,28 @@
 // REACT
 import * as React from 'react';
+// VENDOR
 import * as renderer from 'react-test-renderer';
+import { ThemeProvider } from '@xstyled/styled-components';
+import { shallow, mount } from 'enzyme';
 // COMPONENT
+import { RootTheme } from '../../theme';
 import { ResultsContainer } from './ResultsContainer.component';
 import { Item } from '../../List';
-// ENZYME
-import { shallow, mount } from 'enzyme';
 
 describe('Component: ResultsContainer', () => {
     it('should be defined', () => {
         const subject = (
-            <ResultsContainer
-                term="a"
-                emitSelectedItem={() => true}
-                emitActiveTerm={() => true}
-                dataSource={[
-                    { value: 1, label: 'Result Item 1' },
-                    { value: 2, label: 'Result Item 2' },
-                ]}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <ResultsContainer
+                    term="a"
+                    emitSelectedItem={() => true}
+                    emitActiveTerm={() => true}
+                    dataSource={[
+                        { value: 1, label: 'Result Item 1' },
+                        { value: 2, label: 'Result Item 2' },
+                    ]}
+                />
+            </ThemeProvider>
         );
         const wrapper = mount(subject);
         const component = shallow(subject);
@@ -39,16 +43,18 @@ describe('Component: ResultsContainer', () => {
         );
 
         const subject = (
-            <ResultsContainer
-                term="a"
-                emitSelectedItem={() => true}
-                emitActiveTerm={() => true}
-                dataSource={[
-                    { value: 1, label: 'Result Item 1' },
-                    { value: 2, label: 'Result Item 2' },
-                ]}
-                resultTemplate={CustomResult}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <ResultsContainer
+                    term="a"
+                    emitSelectedItem={() => true}
+                    emitActiveTerm={() => true}
+                    dataSource={[
+                        { value: 1, label: 'Result Item 1' },
+                        { value: 2, label: 'Result Item 2' },
+                    ]}
+                    resultTemplate={CustomResult}
+                />
+            </ThemeProvider>
         );
 
         const tree = renderer.create(subject).toJSON();

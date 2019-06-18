@@ -27,10 +27,13 @@ storiesOf('Components/Card/CardActionArea', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <CardActionArea
-                    backgroundColor={color('Background Color', colors.silver.light)}
+                    backgroundColor={color(
+                        'Background Color',
+                        colors.silver.light
+                    )}
                 >
-                    The action area is a large section dedicated for card actions.
-                    You can specify a backgroundColor
+                    The action area is a large section dedicated for card
+                    actions. You can specify a backgroundColor
                 </CardActionArea>
             </StyledStory>
         </ThemeProvider>
