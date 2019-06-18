@@ -49,12 +49,6 @@ describe('Component: Badge', () => {
             </Badge>
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'position',
-            'absolute'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should render the count without absolute positioning if `standalone` is true', () => {
@@ -67,12 +61,6 @@ describe('Component: Badge', () => {
             />
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).not.toHaveStyleRule(
-            'position',
-            'absolute'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should render a single-digit count in a small badge with only partially rounded border-radius', () => {
@@ -82,12 +70,6 @@ describe('Component: Badge', () => {
             </Badge>
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'border-radius',
-            '0.4rem'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should render a double-digit count in a small badge with fully rounded border-radius', () => {
@@ -97,12 +79,6 @@ describe('Component: Badge', () => {
             </Badge>
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'border-radius',
-            '1rem'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should render a single-digit count in a large badge with fully rounded border-radius', () => {
@@ -112,34 +88,17 @@ describe('Component: Badge', () => {
             </Badge>
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'border-radius',
-            '1rem'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should hide the count by default if `count` is 0', () => {
         const subject = <Badge count={0} size="small" />;
-        const wrapper = mount(subject);
         const tree = renderer.create(subject).toJSON();
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'display',
-            'none'
-        );
         expect(tree).toMatchSnapshot();
     });
     it('should show the count if `showZero` is true, even if `count` is 0 ', () => {
         const subject = <Badge count={0} showZero={true} size="small" />;
         const wrapper = mount(subject);
         const tree = renderer.create(subject).toJSON();
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'display',
-            'flex'
-        );
         expect(wrapper.find('div.anchor-badge-count').text()).toBe('0');
         expect(tree).toMatchSnapshot();
     });
@@ -155,7 +114,6 @@ describe('Component: Badge', () => {
         const subject = <Badge count={8} overflowCount={6} size="large" />;
         const wrapper = mount(subject);
         const tree = renderer.create(subject).toJSON();
-
         expect(wrapper.find('div.anchor-badge').text()).toBe('6+');
         expect(tree).toMatchSnapshot();
     });
@@ -169,12 +127,6 @@ describe('Component: Badge', () => {
             />
         );
         const tree = renderer.create(subject).toJSON();
-        const wrapper = mount(subject);
-
-        expect(wrapper.find('div.anchor-badge-count')).toHaveStyleRule(
-            'border',
-            '0.125rem solid palevioletred'
-        );
         expect(tree).toMatchSnapshot();
     });
 });
