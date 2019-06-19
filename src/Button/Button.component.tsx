@@ -2,7 +2,10 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
+import styled, {
+    css,
+    FlattenSimpleInterpolation,
+} from '@xstyled/styled-components';
 import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
@@ -47,7 +50,7 @@ export interface ButtonProps {
     size?: ButtonSize;
 }
 
-interface StyledButtonProps extends ButtonProps {
+export interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
     borderRadius: string;
     buttonStyles: ButtonStyles;
