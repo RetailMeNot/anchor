@@ -5,20 +5,20 @@ import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';
 
 type TypographyTags =
- | 'a'
- | 'p'
- | 'span'
- | 'h1'
- | 'h2'
- | 'h3'
- | 'h4'
- | 'h5'
- | 'h6'
- | 'blockquote'
- | 'address'
- | 'code'
- | 'pre'
- | 'label';
+    | 'a'
+    | 'p'
+    | 'span'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'blockquote'
+    | 'address'
+    | 'code'
+    | 'pre'
+    | 'label';
 
 export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES

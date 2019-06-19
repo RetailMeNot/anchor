@@ -2,8 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import { FlattenSimpleInterpolation } from 'styled-components';
 import styled, { css } from '@xstyled/styled-components';
+import { FlattenSimpleInterpolation } from '@xstyled/styled-components';
 import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
@@ -128,6 +128,176 @@ export const BUTTON_THEME = {
             affixSpacing: 0.5,
         },
     },
+
+    variants: {
+        filled: {
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: ${colorTheme.base};
+                          color: ${colors.white.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                          color: ${colorTheme.base};
+                          opacity: 0.5;
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.light};
+                          background-color: ${colors.ash.light};
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin
+                              ${transparentize(0.15, colors.white.base)};
+                          background-color: ${transparentize(
+                              0.15,
+                              colors.white.base
+                          )};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          background-color: ${colorTheme.dark};
+                          border: solid thin ${colorTheme.dark};
+                      `,
+            active: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                      `
+                    : undefined,
+            focus: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                      `
+                    : undefined,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colorTheme.base)};
+                      `,
+        },
+        outline: {
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          opacity: 0.5;
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.dark};
+                          background-color: transparent;
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: ${colorTheme.base};
+                          color: ${colors.charcoal.light};
+                      `
+                    : css`
+                          background-color: ${colorTheme.dark};
+                          border: solid thin ${colorTheme.dark};
+                          color: ${colors.white.base};
+                      `,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colorTheme.light)};
+                      `,
+        },
+        minimal: {
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colors.ash.dark};
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.light};
+                          background-color: ${colors.ash.light};
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          background: ${transparentize(0.84, colorTheme.base)};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          background: ${transparentize(0.84, colors.ash.dark)};
+                          color: ${colorTheme.dark};
+                      `,
+            active: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          background: ${transparentize(0.8, colorTheme.base)};
+                      `
+                    : undefined,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.ash.dark)};
+                      `,
+        },
+    },
 };
 
 const sizeStyles = createVariant({
@@ -138,172 +308,32 @@ const sizeStyles = createVariant({
 });
 
 interface ButtonStyles {
-    base: FlattenSimpleInterpolation;
-    disabled: FlattenSimpleInterpolation;
-    hover: FlattenSimpleInterpolation;
-    active?: FlattenSimpleInterpolation;
-    focus?: FlattenSimpleInterpolation;
-    focusOutline?: FlattenSimpleInterpolation;
+    base:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    disabled:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    hover:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    active?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    focus?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    focusOutline?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
 }
 
-interface ButtonStylesGroup {
-    [key: string]: ButtonStyles;
-}
-
-const ButtonColorStyles = ({
-    colorTheme,
-    reverse,
-}: {
-    colorTheme: Theme;
-    reverse?: boolean;
-}): ButtonStylesGroup => {
-    const { base, dark, light } = colorTheme;
-
-    if (reverse) {
-        return {
-            filled: {
-                base: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                    color: ${base};
-                `,
-                disabled: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                    color: ${base};
-                    opacity: 0.5;
-                `,
-                hover: css`
-                    border: solid thin
-                        ${transparentize(0.15, colors.white.base)};
-                    background-color: ${transparentize(
-                        0.15,
-                        colors.white.base
-                    )};
-                    color: ${base};
-                `,
-                active: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                `,
-                focus: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-            outline: {
-                base: css`
-                    border: solid thin ${base};
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                disabled: css`
-                    opacity: 0.5;
-                    border: solid thin ${base};
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                hover: css`
-                    border: solid thin ${base};
-                    background-color: ${base};
-                    color: ${colors.charcoal.light};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-            minimal: {
-                base: css`
-                    border: solid thin transparent;
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                disabled: css`
-                    border: solid thin transparent;
-                    background-color: transparent;
-                    color: ${colors.ash.dark};
-                `,
-                hover: css`
-                    background: ${transparentize(0.84, base)};
-                    color: ${base};
-                `,
-                active: css`
-                    background: ${transparentize(0.8, base)};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-        };
-    }
-
-    return {
-        filled: {
-            base: css`
-                border: solid thin ${base};
-                background-color: ${base};
-                color: ${colors.white.base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.light};
-                background-color: ${colors.ash.light};
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background-color: ${dark};
-                border: solid thin ${dark};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, base)};
-            `,
-        },
-        outline: {
-            base: css`
-                border: solid thin ${base};
-                background-color: transparent;
-                color: ${base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.dark};
-                background-color: transparent;
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background-color: ${dark};
-                border: solid thin ${dark};
-                color: ${colors.white.base};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, light)};
-            `,
-        },
-        minimal: {
-            base: css`
-                border: solid thin transparent;
-                background-color: transparent;
-                color: ${base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.light};
-                background-color: ${colors.ash.light};
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background: ${transparentize(0.84, colors.ash.dark)};
-                color: ${dark};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, colors.ash.dark)};
-            `,
-        },
-    };
-};
+const stateStyles = createVariant({
+    key: 'buttons.sizes',
+    prop: 'variant',
+    default: 'filled',
+    variants: BUTTON_THEME.variants,
+});
 
 const OutlineStyles = ({
     buttonStyles,
@@ -529,7 +559,7 @@ export const Button = ({
         ? '0'
         : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
 
-    const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
+    const buttonStyles = stateStyles({ ...props, colorTheme, variant });
 
     return (
         <StyledButton
