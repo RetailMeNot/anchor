@@ -476,6 +476,51 @@ exports[`Component: Modal should be defined 1`] = `
 `;
 
 exports[`Component: Modal should render with modal components 1`] = `
+.c7 {
+  position: relative;
+  border-radius: 1000px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
 .c10 {
   box-sizing: border-box;
   width: 100%;
@@ -532,51 +577,6 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
-}
-
-.c7 {
-  position: relative;
-  border-radius: 1000px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
 }
 
 .c8 {
@@ -843,7 +843,52 @@ exports[`Component: Modal should render with modal components 1`] = `
         >
           <Portal
             containerInfo={
-              .c10 {
+              .c7 {
+  position: relative;
+  border-radius: 1000px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c10 {
   box-sizing: border-box;
   width: 100%;
   -webkit-order: 0;
@@ -899,51 +944,6 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
-}
-
-.c7 {
-  position: relative;
-  border-radius: 1000px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
 }
 
 .c8 {
