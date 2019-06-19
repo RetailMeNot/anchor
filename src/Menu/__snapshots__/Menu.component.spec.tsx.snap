@@ -87,17 +87,10 @@ exports[`Component: Menu should be defined 1`] = `
 }
 
 <nav
-<<<<<<< HEAD
   className="anchor-menu c0"
 >
   <a
     className="anchor-menu-item c1"
-=======
-  className="anchor-menu sc-cpmLhU bloDQZ"
->
-  <a
-    className="anchor-menu-item sc-dymIpo cSNty"
->>>>>>> chore(Button): update snapshots due to modifying theme file
   >
     Derp
   </a>

@@ -8,10 +8,6 @@ exports[`Component: Divider should be defined 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="anchor-list-divider c0"
-=======
-  className="anchor-list-divider sc-cpmLhU gjzPVC"
->>>>>>> chore(Button): update snapshots due to modifying theme file
 />
 `;

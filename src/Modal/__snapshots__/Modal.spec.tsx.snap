@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 exports[`Component: Modal should be defined 1`] = `
 .c1 {
   position: relative;
@@ -75,6 +73,70 @@ exports[`Component: Modal should be defined 1`] = `
 <ThemeProvider
   theme={
     Object {
+      "buttons": Object {
+        "sizes": Object {
+          "lg": Object {
+            "affixSpacing": 0.5,
+            "circularPadding": 2.5,
+            "fontSize": 1,
+            "height": 3.5,
+            "minWidth": 12.5,
+            "padding": 2,
+          },
+          "md": Object {
+            "affixSpacing": 0.5,
+            "circularPadding": 2,
+            "fontSize": 1,
+            "height": 3,
+            "minWidth": 12.5,
+            "padding": 1.5,
+          },
+          "sm": Object {
+            "affixSpacing": 0.375,
+            "circularPadding": 1.5,
+            "fontSize": 0.875,
+            "height": 2.5,
+            "minWidth": 5,
+            "padding": 1,
+          },
+          "xs": Object {
+            "affixSpacing": 0.375,
+            "circularPadding": 1,
+            "fontSize": 0.75,
+            "height": 2,
+            "minWidth": 4,
+            "padding": 0.5,
+          },
+        },
+        "variants": Object {
+          "filled": Object {
+            "active": [Function],
+            "base": [Function],
+            "disabled": [Function],
+            "focus": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+          "minimal": Object {
+            "active": [Function],
+            "base": [Function],
+            "disabled": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+          "outline": Object {
+            "base": [Function],
+            "disabled": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+        },
+      },
+      "radii": Object {
+        "base": "4px",
+        "modal": "8px",
+        "none": "0",
+      },
       "typography": Object {
         "fontFamily": "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
         "fontSize": "16px",
@@ -794,6 +856,51 @@ exports[`Component: Modal should be defined 1`] = `
 `;
 
 exports[`Component: Modal should render with modal components 1`] = `
+.c7 {
+  position: relative;
+  border-radius: 1000px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
 .c10 {
   box-sizing: border-box;
   width: 100%;
@@ -850,51 +957,6 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
-}
-
-.c7 {
-  position: relative;
-  border-radius: 1.5rem;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
 }
 
 .c8 {
@@ -1018,6 +1080,70 @@ exports[`Component: Modal should render with modal components 1`] = `
 <ThemeProvider
   theme={
     Object {
+      "buttons": Object {
+        "sizes": Object {
+          "lg": Object {
+            "affixSpacing": 0.5,
+            "circularPadding": 2.5,
+            "fontSize": 1,
+            "height": 3.5,
+            "minWidth": 12.5,
+            "padding": 2,
+          },
+          "md": Object {
+            "affixSpacing": 0.5,
+            "circularPadding": 2,
+            "fontSize": 1,
+            "height": 3,
+            "minWidth": 12.5,
+            "padding": 1.5,
+          },
+          "sm": Object {
+            "affixSpacing": 0.375,
+            "circularPadding": 1.5,
+            "fontSize": 0.875,
+            "height": 2.5,
+            "minWidth": 5,
+            "padding": 1,
+          },
+          "xs": Object {
+            "affixSpacing": 0.375,
+            "circularPadding": 1,
+            "fontSize": 0.75,
+            "height": 2,
+            "minWidth": 4,
+            "padding": 0.5,
+          },
+        },
+        "variants": Object {
+          "filled": Object {
+            "active": [Function],
+            "base": [Function],
+            "disabled": [Function],
+            "focus": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+          "minimal": Object {
+            "active": [Function],
+            "base": [Function],
+            "disabled": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+          "outline": Object {
+            "base": [Function],
+            "disabled": [Function],
+            "focusOutline": [Function],
+            "hover": [Function],
+          },
+        },
+      },
+      "radii": Object {
+        "base": "4px",
+        "modal": "8px",
+        "none": "0",
+      },
       "typography": Object {
         "fontFamily": "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
         "fontSize": "16px",
@@ -1482,7 +1608,52 @@ exports[`Component: Modal should render with modal components 1`] = `
           >
             <Portal
               containerInfo={
-                .c10 {
+                .c7 {
+  position: relative;
+  border-radius: 1000px;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
+}
+
+.c10 {
   box-sizing: border-box;
   width: 100%;
   -webkit-order: 0;
@@ -1538,51 +1709,6 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
-}
-
-.c7 {
-  position: relative;
-  border-radius: 1.5rem;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
 }
 
 .c8 {
@@ -2163,50 +2289,17 @@ exports[`Component: Modal should render with modal components 1`] = `
                                             variant="minimal"
                                           >
                                             <styled.button
+                                              $fontSize={1}
                                               $height={3}
                                               $size="md"
-                                              borderRadius="1.5rem"
+                                              borderRadius="1000px"
                                               buttonStyles={
                                                 Object {
-                                                  "base": Array [
-                                                    "
-                border: solid thin transparent;
-                background-color: transparent;
-                color: ",
-                                                    "#0074A6",
-                                                    ";
-            ",
-                                                  ],
-                                                  "disabled": Array [
-                                                    "
-                border: solid thin ",
-                                                    "#D3D3D3",
-                                                    ";
-                background-color: ",
-                                                    "#D3D3D3",
-                                                    ";
-                color: ",
-                                                    "#808080",
-                                                    ";
-            ",
-                                                  ],
-                                                  "focusOutline": Array [
-                                                    "
-                box-shadow: 0 0 0 2px ",
-                                                    "rgba(128,128,128,0.4)",
-                                                    ";
-            ",
-                                                  ],
-                                                  "hover": Array [
-                                                    "
-                background: ",
-                                                    "rgba(128,128,128,0.16)",
-                                                    ";
-                color: ",
-                                                    "#0074A6",
-                                                    ";
-            ",
-                                                  ],
+                                                  "active": [Function],
+                                                  "base": [Function],
+                                                  "disabled": [Function],
+                                                  "focusOutline": [Function],
+                                                  "hover": [Function],
                                                 }
                                               }
                                               circular={true}
@@ -2220,54 +2313,23 @@ exports[`Component: Modal should render with modal components 1`] = `
                                               }
                                               flip={false}
                                               iconOnly={true}
+                                              minWidth={3}
                                               outline={false}
+                                              padding="0"
                                               variant="minimal"
                                             >
                                               <StyledComponent
+                                                $fontSize={1}
                                                 $height={3}
                                                 $size="md"
-                                                borderRadius="1.5rem"
+                                                borderRadius="1000px"
                                                 buttonStyles={
                                                   Object {
-                                                    "base": Array [
-                                                      "
-                border: solid thin transparent;
-                background-color: transparent;
-                color: ",
-                                                      "#0074A6",
-                                                      ";
-            ",
-                                                    ],
-                                                    "disabled": Array [
-                                                      "
-                border: solid thin ",
-                                                      "#D3D3D3",
-                                                      ";
-                background-color: ",
-                                                      "#D3D3D3",
-                                                      ";
-                color: ",
-                                                      "#808080",
-                                                      ";
-            ",
-                                                    ],
-                                                    "focusOutline": Array [
-                                                      "
-                box-shadow: 0 0 0 2px ",
-                                                      "rgba(128,128,128,0.4)",
-                                                      ";
-            ",
-                                                    ],
-                                                    "hover": Array [
-                                                      "
-                background: ",
-                                                      "rgba(128,128,128,0.16)",
-                                                      ";
-                color: ",
-                                                      "#0074A6",
-                                                      ";
-            ",
-                                                    ],
+                                                    "active": [Function],
+                                                    "base": [Function],
+                                                    "disabled": [Function],
+                                                    "focusOutline": [Function],
+                                                    "hover": [Function],
                                                   }
                                                 }
                                                 circular={true}
@@ -2290,14 +2352,12 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                       "lastClassName": "c7",
                                                       "rules": Array [
                                                         "
-	position: relative;
-    border-radius: ",
+    position: relative;
+    ",
                                                         [Function],
-                                                        ";
-	font-weight: 600;
-	font-family: ",
-                                                        "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
-                                                        ";
+                                                        [Function],
+                                                        [Function],
+                                                        "
 	text-align: center;
     cursor: pointer;
     display: inline-flex;
@@ -2312,18 +2372,10 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                         [Function],
                                                         ";
 
-	transition: ",
-                                                        "500ms",
-                                                        " ease background-color,
-                ",
-                                                        "500ms",
-                                                        " ease border-color,
-                ",
-                                                        "500ms",
-                                                        " ease color,
-                ",
-                                                        "500ms",
-                                                        " ease fill;
+	transition: 500ms ease background-color,
+                500ms ease border-color,
+                500ms ease color,
+                500ms ease fill;
 
 	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
 	// Firefox.
@@ -2336,18 +2388,10 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                         "
 
     /* Sizing */
-    padding: ",
-                                                        [Function],
-                                                        ";
-    font-size: ",
-                                                        [Function],
-                                                        "rem;
-    height: ",
-                                                        [Function],
-                                                        "rem;
     ",
                                                         [Function],
                                                         "
+
 
     ",
                                                         [Function],
@@ -2383,7 +2427,9 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                 }
                                                 forwardedRef={null}
                                                 iconOnly={true}
+                                                minWidth={3}
                                                 outline={false}
+                                                padding="0"
                                                 variant="minimal"
                                               >
                                                 <button
@@ -2409,14 +2455,18 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                               "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
+    ",
+                                                                [Function],
+                                                                "
     display: inline-block;
     height: ",
                                                                 [Function],
                                                                 ";
     width: ",
                                                                 [Function],
-                                                                ";
-    line-height: 0;
+                                                                ";",
+                                                                [Function],
+                                                                "
 ",
                                                               ],
                                                             },
@@ -2599,21 +2649,3 @@ exports[`Component: Modal should render with modal components 1`] = `
   </ModalProvider>
 </ThemeProvider>
 `;
-=======
-exports[`Component: Modal should be defined 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 fcpeBy\\">Contents</div></div></div>"`;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-exports[`Component: Modal should render with modal components 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 fcpeBy\\"><div class=\\"anchor-modal-header sc-eerKOB hibfQG\\"><span class=\\"anchor-typography sc-gJWqzi eamfns\\" scale=\\"20\\">Header Title</span><div class=\\"anchor-modal-close sc-fhYwyz gZUkom\\"><button class=\\"anchor-button sc-bnXvFD bOQPMv\\"><span class=\\"anchor-icon close anchor-button-prefix sc-gFaPwZ supvm\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><g fill=\\"currentColor\\" fill-rule=\\"nonzero\\"><path d=\\"M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z\\"></path><path d=\\"M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z\\"></path></g></g></svg></span></button></div></div><div class=\\"anchor-modal-content sc-eilVRo fNhhNT\\">Content</div><div class=\\"anchor-modal-footer sc-emmjRN hUcgRM\\">Footer</div></div></div></div>"`;
->>>>>>> chore(Button): update to use xstyled
-=======
-exports[`Component: Modal should render with modal components 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 fcpeBy\\"><div class=\\"anchor-modal-header sc-eerKOB hibfQG\\"><span class=\\"anchor-typography sc-gJWqzi eamfns\\" scale=\\"20\\">Header Title</span><div class=\\"anchor-modal-close sc-fhYwyz gZUkom\\"><button class=\\"anchor-button sc-bnXvFD eUoKQL\\"><span class=\\"anchor-icon close anchor-button-prefix sc-gFaPwZ supvm\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><g fill=\\"currentColor\\" fill-rule=\\"nonzero\\"><path d=\\"M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z\\"></path><path d=\\"M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z\\"></path></g></g></svg></span></button></div></div><div class=\\"anchor-modal-content sc-eilVRo fNhhNT\\">Content</div><div class=\\"anchor-modal-footer sc-emmjRN hUcgRM\\">Footer</div></div></div></div>"`;
->>>>>>> feat(Button): refactor to use size variant
-=======
-exports[`Component: Modal should render with modal components 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 fcpeBy\\"><div class=\\"anchor-modal-header sc-eerKOB hibfQG\\"><span class=\\"anchor-typography sc-gJWqzi eamfns\\" scale=\\"20\\">Header Title</span><div class=\\"anchor-modal-close sc-fhYwyz gZUkom\\"><button class=\\"anchor-button sc-bnXvFD eRyCpd\\"><span class=\\"anchor-icon close anchor-button-prefix sc-gFaPwZ byrmtj\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><g fill=\\"currentColor\\" fill-rule=\\"nonzero\\"><path d=\\"M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z\\"></path><path d=\\"M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z\\"></path></g></g></svg></span></button></div></div><div class=\\"anchor-modal-content sc-eilVRo fNhhNT\\">Content</div><div class=\\"anchor-modal-footer sc-emmjRN hUcgRM\\">Footer</div></div></div></div>"`;
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
-=======
-exports[`Component: Modal should be defined 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 hSfgwC\\">Contents</div></div></div>"`;
-
-exports[`Component: Modal should render with modal components 1`] = `"<div><button></button></div><div><div class=\\"baseStyles__BaseModalBackground-sc-12bzkqq-0 sc-jzgbtB cDXWhQ\\"><div class=\\"anchor-modal Modal__styles-sc-1q9xwty-0 hSfgwC\\"><div class=\\"anchor-modal-header sc-dymIpo htuEhn\\"><span class=\\"anchor-typography sc-gJWqzi eamfns\\" scale=\\"20\\">Header Title</span><div class=\\"anchor-modal-close sc-fhYwyz gZUkom\\"><button class=\\"anchor-button sc-emmjRN lmbGMd\\"><span class=\\"anchor-icon close anchor-button-prefix sc-gFaPwZ byrmtj\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><g fill=\\"currentColor\\" fill-rule=\\"nonzero\\"><path d=\\"M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z\\"></path><path d=\\"M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z\\"></path></g></g></svg></span></button></div></div><div class=\\"anchor-modal-content sc-cpmLhU WkeLF\\">Content</div><div class=\\"anchor-modal-footer sc-bnXvFD bKVaSm\\">Footer</div></div></div></div>"`;
->>>>>>> chore(Button): update snapshots due to modifying theme file

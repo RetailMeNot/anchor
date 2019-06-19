@@ -19,17 +19,10 @@ exports[`Component: Card should match its snapshot. 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="anchor-card c0"
 >
   <div
     className="anchor-card-content c1"
-=======
-  className="anchor-card sc-gFaPwZ gdyCbE"
->
-  <div
-    className="anchor-card-content sc-bnXvFD Aexuv"
->>>>>>> chore(Button): update snapshots due to modifying theme file
   >
     <p>
       Test

@@ -46,29 +46,13 @@ exports[`Component: Item should be defined 1`] = `
 }
 
 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
   className="anchor-list-item c0"
-=======
-  className="anchor-list-item sc-eilVRo bRFgDJ"
->>>>>>> chore(Button): update to use xstyled
-=======
-  className="anchor-list-item sc-cpmLhU gYfctl"
->>>>>>> chore(Button): update snapshots due to modifying theme file
   onMouseDown={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
   <p
-<<<<<<< HEAD
-<<<<<<< HEAD
     className="anchor-typography c1"
-=======
-    className="anchor-typography sc-emmjRN jcNkMC"
->>>>>>> chore(Button): update to use xstyled
-=======
-    className="anchor-typography sc-bnXvFD cqXARH"
->>>>>>> chore(Button): update snapshots due to modifying theme file
     color="charcoal"
   >
     Item

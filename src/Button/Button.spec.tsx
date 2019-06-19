@@ -2,18 +2,17 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
-/* tslint:disable no-import-side-effect*/
-import 'jest-styled-components';
-/* tslint:enable */
 // ANCHOR
 import { Star } from '..';
-import { colors } from '../theme';
+import { RootTheme, colors } from '../theme';
 import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 // COMPONENT
 import { Button } from './Button.component';
 
 const withTheme = (theme: any) => (component: React.ReactElement<any>) =>
     cloneWithProps(component, { theme });
+
+const withRootTheme = withTheme(RootTheme);
 
 describe('Component: Button', () => {
     it('should be defined', () => {
@@ -24,7 +23,9 @@ describe('Component: Button', () => {
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();
-        const tree = renderer.create(<Button>Submit</Button>).toJSON();
+        const tree = renderer
+            .create(withRootTheme(<Button>Submit</Button>))
+            .toJSON();
 
         expect(tree).toMatchSnapshot();
     });
@@ -32,7 +33,7 @@ describe('Component: Button', () => {
     describe('Variant: Primary', () => {
         it('should render a filled button', () => {
             const subject = <Button variant="filled">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -42,7 +43,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -52,7 +53,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -62,7 +63,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -80,7 +81,7 @@ describe('Component: Button', () => {
                     </Button>
                 </React.Fragment>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -90,7 +91,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -100,7 +101,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -110,7 +111,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });
@@ -118,7 +119,7 @@ describe('Component: Button', () => {
     describe('Variant: Outline', () => {
         it('should render an outline button', () => {
             const subject = <Button variant="outline">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -136,7 +137,7 @@ describe('Component: Button', () => {
                     </Button>
                 </React.Fragment>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -146,7 +147,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });
@@ -154,7 +155,7 @@ describe('Component: Button', () => {
     describe('Variant: Minimal', () => {
         it('should render an minimal button', () => {
             const subject = <Button variant="minimal">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -172,7 +173,7 @@ describe('Component: Button', () => {
                     </Button>
                 </React.Fragment>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
@@ -182,7 +183,7 @@ describe('Component: Button', () => {
                     Text
                 </Button>
             );
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });
@@ -195,7 +196,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -213,7 +214,7 @@ describe('Component: Button', () => {
                         </Button>
                     </React.Fragment>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -223,7 +224,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
         });
@@ -235,7 +236,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -253,7 +254,7 @@ describe('Component: Button', () => {
                         </Button>
                     </React.Fragment>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -263,7 +264,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
         });
@@ -275,7 +276,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -293,7 +294,7 @@ describe('Component: Button', () => {
                         </Button>
                     </React.Fragment>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
 
@@ -303,7 +304,7 @@ describe('Component: Button', () => {
                         Text
                     </Button>
                 );
-                const tree = renderer.create(subject).toJSON();
+                const tree = renderer.create(withRootTheme(subject)).toJSON();
                 expect(tree).toMatchSnapshot();
             });
         });
@@ -312,25 +313,25 @@ describe('Component: Button', () => {
     describe('Sizes', () => {
         it('should render an lg button', () => {
             const subject = <Button size="lg">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render a md button', () => {
             const subject = <Button size="md">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render an sm button', () => {
             const subject = <Button size="sm">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render an xs button', () => {
             const subject = <Button size="xs">Text</Button>;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });
@@ -338,19 +339,19 @@ describe('Component: Button', () => {
     describe('Icon Only', () => {
         it('should render icon-only using a prefix', () => {
             const subject = <Button prefix={<Star />} />;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render icon-only using a suffix', () => {
             const subject = <Button suffix={<Star />} />;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
 
         it('should render a circular icon', () => {
             const subject = <Button prefix={<Star />} circular />;
-            const tree = renderer.create(subject).toJSON();
+            const tree = renderer.create(withRootTheme(subject)).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });

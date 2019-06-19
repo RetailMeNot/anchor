@@ -144,27 +144,11 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
   className="anchor-auto-complete c0"
   color="#595959"
 >
   <div
     className="anchor-input auto-complete-input c1"
-=======
-  className="anchor-auto-complete sc-gJWqzi hbHObW"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-eerKOB cuGopW"
->>>>>>> chore(Button): update to use xstyled
-=======
-  className="anchor-auto-complete sc-CtfFt jduBSB"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-dymIpo dyAcxu"
->>>>>>> chore(Button): update snapshots due to modifying theme file
     onClick={[Function]}
     size="lg"
   >
@@ -172,25 +156,11 @@ exports[`Component: AutoComplete should be defined 1`] = `
       className="anchor-grid c2"
     >
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="anchor-cell c3 c4"
       >
         <input
           aria-label="auto-complete"
           className="c5"
-=======
-        className="anchor-cell sc-emmjRN bCrftr Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-cpmLhU sdQEs"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="anchor-cell sc-bnXvFD eIvGkR Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-gFaPwZ hXrOMJ"
->>>>>>> chore(Button): update snapshots due to modifying theme file
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -352,27 +322,11 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
   className="anchor-auto-complete c0"
   color="#595959"
 >
   <div
     className="anchor-input auto-complete-input c1"
-=======
-  className="anchor-auto-complete sc-gJWqzi hOhyFI"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-eerKOB cuGopW"
->>>>>>> chore(Button): update to use xstyled
-=======
-  className="anchor-auto-complete sc-CtfFt gxayDm"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-dymIpo dyAcxu"
->>>>>>> chore(Button): update snapshots due to modifying theme file
     onClick={[Function]}
     size="lg"
   >
@@ -380,25 +334,11 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
       className="anchor-grid c2"
     >
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="anchor-cell c3 c4"
       >
         <input
           aria-label="auto-complete"
           className="c5"
-=======
-        className="anchor-cell sc-emmjRN bCrftr Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-cpmLhU sdQEs"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="anchor-cell sc-bnXvFD eIvGkR Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-gFaPwZ hXrOMJ"
->>>>>>> chore(Button): update snapshots due to modifying theme file
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -577,27 +517,11 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
   className="anchor-auto-complete c0"
   color="#595959"
 >
   <div
     className="anchor-input auto-complete-input c1"
-=======
-  className="anchor-auto-complete sc-gJWqzi hbHObW"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-eerKOB cuGopW"
->>>>>>> chore(Button): update to use xstyled
-=======
-  className="anchor-auto-complete sc-CtfFt jduBSB"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-dymIpo dyAcxu"
->>>>>>> chore(Button): update snapshots due to modifying theme file
     onClick={[Function]}
     size="lg"
   >
@@ -605,40 +529,18 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
       className="anchor-grid c2"
     >
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="c3"
-=======
-        className="Cell__Cell-jsYrZv sc-eilVRo kqGwHD"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="Cell__Cell-jsYrZv sc-cpmLhU jdIma"
->>>>>>> chore(Button): update snapshots due to modifying theme file
       >
         <div>
           prefix
         </div>
       </div>
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="anchor-cell c4 c5"
       >
         <input
           aria-label="auto-complete"
           className="c6"
-=======
-        className="anchor-cell sc-emmjRN bCrftr Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-cpmLhU sdQEs"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="anchor-cell sc-bnXvFD eIvGkR Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-gFaPwZ hXrOMJ"
->>>>>>> chore(Button): update snapshots due to modifying theme file
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -650,15 +552,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
         />
       </div>
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="c3"
-=======
-        className="Cell__Cell-jsYrZv sc-eilVRo kqGwHD"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="Cell__Cell-jsYrZv sc-cpmLhU jdIma"
->>>>>>> chore(Button): update snapshots due to modifying theme file
       >
         <div>
           suffix
@@ -803,27 +697,11 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
   className="anchor-auto-complete c0"
   color="#595959"
 >
   <div
     className="anchor-input auto-complete-input c1"
-=======
-  className="anchor-auto-complete sc-gJWqzi btZaEd"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-eerKOB cuGopW"
->>>>>>> chore(Button): update to use xstyled
-=======
-  className="anchor-auto-complete sc-CtfFt jqaoUw"
-  color="#595959"
->
-  <div
-    className="anchor-input auto-complete-input sc-dymIpo dyAcxu"
->>>>>>> chore(Button): update snapshots due to modifying theme file
     onClick={[Function]}
     size="lg"
   >
@@ -831,25 +709,11 @@ exports[`Component: AutoComplete should render without a border 1`] = `
       className="anchor-grid c2"
     >
       <div
-<<<<<<< HEAD
-<<<<<<< HEAD
         className="anchor-cell c3 c4"
       >
         <input
           aria-label="auto-complete"
           className="c5"
-=======
-        className="anchor-cell sc-emmjRN bCrftr Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-cpmLhU sdQEs"
->>>>>>> chore(Button): update to use xstyled
-=======
-        className="anchor-cell sc-bnXvFD eIvGkR Cell__Cell-jsYrZv fDguhG"
-      >
-        <input
-          className="sc-gFaPwZ hXrOMJ"
->>>>>>> chore(Button): update snapshots due to modifying theme file
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}

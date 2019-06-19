@@ -9,11 +9,7 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon add-event c0"
-=======
-  className="anchor-icon add-event sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -40,11 +36,7 @@ exports[`Component: Icon should render out a ArrowBack 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon arrow-back c0"
-=======
-  className="anchor-icon arrow-back sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -88,11 +80,7 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon arrow-forward c0"
-=======
-  className="anchor-icon arrow-forward sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -136,11 +124,7 @@ exports[`Component: Icon should render out a AvatarIcon 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon avatar c0"
-=======
-  className="anchor-icon avatar sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -184,11 +168,7 @@ exports[`Component: Icon should render out a AvatarOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon avatar-outline c0"
-=======
-  className="anchor-icon avatar-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -232,11 +212,7 @@ exports[`Component: Icon should render out a BarCode 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon bar-code c0"
-=======
-  className="anchor-icon bar-code sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -278,11 +254,7 @@ exports[`Component: Icon should render out a BulletList 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon bullet-list c0"
-=======
-  className="anchor-icon bullet-list sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -320,11 +292,7 @@ exports[`Component: Icon should render out a Calendar 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon calendar c0"
-=======
-  className="anchor-icon calendar sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -358,11 +326,7 @@ exports[`Component: Icon should render out a Camera 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon camera c0"
-=======
-  className="anchor-icon camera sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -402,11 +366,7 @@ exports[`Component: Icon should render out a Cart 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon cart c0"
-=======
-  className="anchor-icon cart sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -444,11 +404,7 @@ exports[`Component: Icon should render out a CashBack 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon cash-back c0"
-=======
-  className="anchor-icon cash-back sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -489,11 +445,7 @@ exports[`Component: Icon should render out a Cells 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon cells c0"
-=======
-  className="anchor-icon cells sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -527,11 +479,7 @@ exports[`Component: Icon should render out a Chat 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chat c0"
-=======
-  className="anchor-icon chat sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -572,11 +520,7 @@ exports[`Component: Icon should render out a Check 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon check c0"
-=======
-  className="anchor-icon check sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -610,11 +554,7 @@ exports[`Component: Icon should render out a CheckSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon check-small c0"
-=======
-  className="anchor-icon check-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -649,11 +589,7 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-down c0"
-=======
-  className="anchor-icon chevron-down sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -680,11 +616,7 @@ exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-down-small c0"
-=======
-  className="anchor-icon chevron-down-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -711,11 +643,7 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-left c0"
-=======
-  className="anchor-icon chevron-left sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -742,11 +670,7 @@ exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-left-small c0"
-=======
-  className="anchor-icon chevron-left-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -781,11 +705,7 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-right c0"
-=======
-  className="anchor-icon chevron-right sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -812,11 +732,7 @@ exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-right-small c0"
-=======
-  className="anchor-icon chevron-right-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -851,11 +767,7 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-up c0"
-=======
-  className="anchor-icon chevron-up sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -882,11 +794,7 @@ exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon chevron-up-small c0"
-=======
-  className="anchor-icon chevron-up-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -921,11 +829,7 @@ exports[`Component: Icon should render out a Clock 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon clock c0"
-=======
-  className="anchor-icon clock sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -970,11 +874,7 @@ exports[`Component: Icon should render out a Close 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon close c0"
-=======
-  className="anchor-icon close sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1015,11 +915,7 @@ exports[`Component: Icon should render out a CloseSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon close-small c0"
-=======
-  className="anchor-icon close-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1060,11 +956,7 @@ exports[`Component: Icon should render out a CommentMore 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon comment-more c0"
-=======
-  className="anchor-icon comment-more sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1105,11 +997,7 @@ exports[`Component: Icon should render out a CreditCard 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon credit-card c0"
-=======
-  className="anchor-icon credit-card sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1151,11 +1039,7 @@ exports[`Component: Icon should render out a CrossHairs 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon cross-hairs c0"
-=======
-  className="anchor-icon cross-hairs sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1190,11 +1074,7 @@ exports[`Component: Icon should render out a Cut 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon cut c0"
-=======
-  className="anchor-icon cut sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1235,11 +1115,7 @@ exports[`Component: Icon should render out a Disabled 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon disabled c0"
-=======
-  className="anchor-icon disabled sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1280,11 +1156,7 @@ exports[`Component: Icon should render out a Dislike 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon dislike c0"
-=======
-  className="anchor-icon dislike sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1325,11 +1197,7 @@ exports[`Component: Icon should render out a Download 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon download c0"
-=======
-  className="anchor-icon download sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1370,11 +1238,7 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon ellipses c0"
-=======
-  className="anchor-icon ellipses sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1415,11 +1279,7 @@ exports[`Component: Icon should render out a EllipsesVertical 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon ellipses-vertical c0"
-=======
-  className="anchor-icon ellipses-vertical sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1461,11 +1321,7 @@ exports[`Component: Icon should render out a Envelope 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon envelope c0"
-=======
-  className="anchor-icon envelope sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1506,11 +1362,7 @@ exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon envelope-open c0"
-=======
-  className="anchor-icon envelope-open sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1551,11 +1403,7 @@ exports[`Component: Icon should render out a Error 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon error c0"
-=======
-  className="anchor-icon error sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1594,11 +1442,7 @@ exports[`Component: Icon should render out a Expand 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon expand c0"
-=======
-  className="anchor-icon expand sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1639,11 +1483,7 @@ exports[`Component: Icon should render out a Gear 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon gear c0"
-=======
-  className="anchor-icon gear sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1684,11 +1524,7 @@ exports[`Component: Icon should render out a GiftCard 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon gift-card c0"
-=======
-  className="anchor-icon gift-card sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1735,11 +1571,7 @@ exports[`Component: Icon should render out a Hamburger 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon hamburger c0"
-=======
-  className="anchor-icon hamburger sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1779,11 +1611,7 @@ exports[`Component: Icon should render out a Heart 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon heart c0"
-=======
-  className="anchor-icon heart sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1824,11 +1652,7 @@ exports[`Component: Icon should render out a HeartOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon heart-outline c0"
-=======
-  className="anchor-icon heart-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1869,11 +1693,7 @@ exports[`Component: Icon should render out a Home 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon home c0"
-=======
-  className="anchor-icon home sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1906,11 +1726,7 @@ exports[`Component: Icon should render out a Info 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon info c0"
-=======
-  className="anchor-icon info sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1948,11 +1764,7 @@ exports[`Component: Icon should render out a InfoOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon info-outline c0"
-=======
-  className="anchor-icon info-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -1985,11 +1797,7 @@ exports[`Component: Icon should render out a Laptop 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon laptop c0"
-=======
-  className="anchor-icon laptop sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2030,11 +1838,7 @@ exports[`Component: Icon should render out a Lightning 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon lightning c0"
-=======
-  className="anchor-icon lightning sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2076,11 +1880,7 @@ exports[`Component: Icon should render out a Like 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon like c0"
-=======
-  className="anchor-icon like sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2121,11 +1921,7 @@ exports[`Component: Icon should render out a ListIcon 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon list c0"
-=======
-  className="anchor-icon list sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2165,11 +1961,7 @@ exports[`Component: Icon should render out a Lock 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon lock c0"
-=======
-  className="anchor-icon lock sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2224,11 +2016,7 @@ exports[`Component: Icon should render out a Map 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon map c0"
-=======
-  className="anchor-icon map sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2261,11 +2049,7 @@ exports[`Component: Icon should render out a Marker 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon marker c0"
-=======
-  className="anchor-icon marker sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2306,11 +2090,7 @@ exports[`Component: Icon should render out a MarkerOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon marker-outline c0"
-=======
-  className="anchor-icon marker-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2351,11 +2131,7 @@ exports[`Component: Icon should render out a Mobile 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon mobile c0"
-=======
-  className="anchor-icon mobile sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2396,11 +2172,7 @@ exports[`Component: Icon should render out a News 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon news c0"
-=======
-  className="anchor-icon news sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2441,11 +2213,7 @@ exports[`Component: Icon should render out a Pencil 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon pencil c0"
-=======
-  className="anchor-icon pencil sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2486,11 +2254,7 @@ exports[`Component: Icon should render out a Play 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon play c0"
-=======
-  className="anchor-icon play sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2524,11 +2288,7 @@ exports[`Component: Icon should render out a Plus 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon plus c0"
-=======
-  className="anchor-icon plus sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2569,11 +2329,7 @@ exports[`Component: Icon should render out a PlusSmall 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon plus-small c0"
-=======
-  className="anchor-icon plus-small sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2614,11 +2370,7 @@ exports[`Component: Icon should render out a Print 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon print c0"
-=======
-  className="anchor-icon print sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2645,11 +2397,7 @@ exports[`Component: Icon should render out a Question 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon question c0"
-=======
-  className="anchor-icon question sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2687,11 +2435,7 @@ exports[`Component: Icon should render out a QuestionOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon question-outline c0"
-=======
-  className="anchor-icon question-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2724,11 +2468,7 @@ exports[`Component: Icon should render out a Refresh 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon refresh c0"
-=======
-  className="anchor-icon refresh sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2769,11 +2509,7 @@ exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon retail-me-not-logo c0"
-=======
-  className="anchor-icon retail-me-not-logo sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2814,11 +2550,7 @@ exports[`Component: Icon should render out a SadFace 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon sad-face c0"
-=======
-  className="anchor-icon sad-face sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2869,11 +2601,7 @@ exports[`Component: Icon should render out a Search 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon search c0"
-=======
-  className="anchor-icon search sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2900,11 +2628,7 @@ exports[`Component: Icon should render out a Share 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon share c0"
-=======
-  className="anchor-icon share sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2945,11 +2669,7 @@ exports[`Component: Icon should render out a Sliders 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon sliders c0"
-=======
-  className="anchor-icon sliders sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -2987,11 +2707,7 @@ exports[`Component: Icon should render out a Star 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon star c0"
-=======
-  className="anchor-icon star sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3026,11 +2742,7 @@ exports[`Component: Icon should render out a StarHalf 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon star-half c0"
-=======
-  className="anchor-icon star-half sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3070,11 +2782,7 @@ exports[`Component: Icon should render out a StarOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon star-outline c0"
-=======
-  className="anchor-icon star-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3109,11 +2817,7 @@ exports[`Component: Icon should render out a Success 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon success c0"
-=======
-  className="anchor-icon success sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3156,11 +2860,7 @@ exports[`Component: Icon should render out a SuccessOutline 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon success-outline c0"
-=======
-  className="anchor-icon success-outline sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3201,11 +2901,7 @@ exports[`Component: Icon should render out a Tag 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon tag c0"
-=======
-  className="anchor-icon tag sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3246,11 +2942,7 @@ exports[`Component: Icon should render out a TagAdd 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon tag-add c0"
-=======
-  className="anchor-icon tag-add sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
@@ -3291,11 +2983,7 @@ exports[`Component: Icon should render out a Upload 1`] = `
 }
 
 <span
-<<<<<<< HEAD
   className="anchor-icon upload c0"
-=======
-  className="anchor-icon upload sc-eilVRo iqWNAQ"
->>>>>>> chore(Button): move prefix/suffix spacing into margin props
   scale="md"
 >
   <svg
