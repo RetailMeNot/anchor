@@ -2,8 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from '@xstyled/styled-components';
-import { FlattenSimpleInterpolation } from '@xstyled/styled-components';
+import styled, { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
 import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
@@ -329,7 +328,7 @@ interface ButtonStyles {
 }
 
 const stateStyles = createVariant({
-    key: 'buttons.sizes',
+    key: 'buttons.variants',
     prop: 'variant',
     default: 'filled',
     variants: BUTTON_THEME.variants,
@@ -359,6 +358,7 @@ const OutlineStyles = ({
         }
     `;
 
+// TODO: grep styled. to styled('')
 const StyledButton = styled('button')<StyledButtonProps>`
     position: relative;
     ${({ borderRadius }) => css`
