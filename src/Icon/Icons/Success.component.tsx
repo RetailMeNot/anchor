@@ -14,10 +14,12 @@ export const Success = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon success', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

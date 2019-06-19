@@ -14,10 +14,12 @@ export const RetailMeNotLogo = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon retail-me-not-logo', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

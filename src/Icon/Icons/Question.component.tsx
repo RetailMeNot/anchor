@@ -14,10 +14,12 @@ export const Question = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon question', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

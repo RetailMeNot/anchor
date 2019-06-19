@@ -14,10 +14,12 @@ export const Sliders = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon sliders', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

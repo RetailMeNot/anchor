@@ -14,10 +14,12 @@ export const BarCode = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon bar-code', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

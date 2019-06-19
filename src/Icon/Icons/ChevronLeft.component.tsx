@@ -14,10 +14,12 @@ export const ChevronLeft = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon chevron-left', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

@@ -14,10 +14,12 @@ export const EnvelopeOpen = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon envelope-open', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}
