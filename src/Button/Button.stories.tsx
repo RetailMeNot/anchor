@@ -16,7 +16,7 @@ import * as Icon from '../Icon';
 import { Typography, Cell, Grid, Cut, SuccessOutline } from '..';
 import { colors } from '../theme';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 3rem;
 `;
 
@@ -56,7 +56,7 @@ const Heading = styled(Typography)`
     }
 `;
 
-const ShowHitbox = styled.div`
+const ShowHitbox = styled('div')`
     button > ${HitArea} {
         background: rgba(255, 0, 0, 0.1);
     }

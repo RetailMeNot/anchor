@@ -17,7 +17,7 @@ import { CardActionArea } from './CardActionArea';
 import * as README from './README.md';
 // THEME
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     h2 {
         font-family: ${fonts.fontFamily};
         font-weight: normal;

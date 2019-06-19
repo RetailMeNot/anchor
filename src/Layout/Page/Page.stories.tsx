@@ -19,7 +19,7 @@ import * as README from './README.md';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: ${colors.white.base};
     width: 100%;
 `;

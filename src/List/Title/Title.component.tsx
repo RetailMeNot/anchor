@@ -12,7 +12,7 @@ export interface TitleProps {
     label?: string;
 }
 
-const StyledTitle = styled.div`
+const StyledTitle = styled('div')`
     box-sizing: border-box;
     padding: 0.75rem 1rem;
 `;

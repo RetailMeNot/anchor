@@ -70,17 +70,372 @@ exports[`Component: Modal should be defined 1`] = `
   background-color: rgba(0,0,0,0.6);
 }
 
-<ModalProvider
-  backgroundComponent={
+<ThemeProvider
+  theme={
     Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-jzgbtB",
-        "isStatic": false,
-        "lastClassName": "c0",
-        "rules": Array [
-          "
+      "colors": Object {
+        "accent": Array [
+          "#66CCFF",
+          "#0998D6",
+          "#0074A6",
+          "#00E0D1",
+          "#00CCCD",
+          "#00BDBD",
+        ],
+        "borders": Object {
+          "base": "#D3D3D3",
+          "dark": "#808080",
+          "error": "#808080",
+          "success": "#808080",
+        },
+        "neutrals": Array [
+          "#FFFFFF",
+          "#FAFAFA",
+          "#F1F1F1",
+          "#E7E7E7",
+          "#D3D3D3",
+          "#A6A6A6",
+          "#808080",
+          "#595959",
+          "#323232",
+          "#000000",
+        ],
+        "primary": Array [
+          "#91609C",
+          "#602D6C",
+          "#4B2354",
+        ],
+        "secondary": Array [
+          "#14A382",
+          "#DF206C",
+          "#EB663D",
+          "#F5A623",
+        ],
+      },
+      "typography": Object {
+        "fontColor": "#323232",
+        "fontFamily": "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "normal",
+        "lineHeight": "1.5rem",
+        "scale": Object {
+          "12": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "14": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "16": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "18": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "20": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "24": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "28": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "32": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "36": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "44": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "52": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "62": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+        },
+        "tag": Object {
+          "a": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+            text-decoration: none;",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "address": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "blockquote": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+            font-style: italic;",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "code": Array [
+            Array [
+              "
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+                'Liberation Mono', 'Courier New', monospace;
+            background: #323232;
+            display: block;",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h1": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h2": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h3": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h4": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h5": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h6": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "label": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "p": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "pre": Array [
+            Array [
+              "
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+                'Liberation Mono', 'Courier New', monospace;
+        ",
+            ],
+          ],
+          "span": Array [
+            Array [
+              "
+            // TODO
+        ",
+            ],
+          ],
+        },
+      },
+    }
+  }
+>
+  <ModalProvider
+    backgroundComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-jzgbtB",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
   display: flex;
   position: fixed;
   top: 0;
@@ -92,61 +447,61 @@ exports[`Component: Modal should be defined 1`] = `
   align-items: center;
   justify-content: center
 ",
-          "
+            "
     box-sizing: border-box;
     overflow-y: auto;
     padding: ",
-          [Function],
-          ";
+            [Function],
+            ";
     background-color: ",
-          [Function],
-          ";
+            [Function],
+            ";
 ",
+          ],
+        },
+        "displayName": "Styled(baseStyles__BaseModalBackground)",
+        "foldedComponentIds": Array [
+          "baseStyles__BaseModalBackground-sc-12bzkqq-0",
         ],
-      },
-      "displayName": "Styled(baseStyles__BaseModalBackground)",
-      "foldedComponentIds": Array [
-        "baseStyles__BaseModalBackground-sc-12bzkqq-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "sc-jzgbtB",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
+        "render": [Function],
+        "styledComponentId": "sc-jzgbtB",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
     }
-  }
->
-  <div>
-    <button />
-    <Component
-      isOpen={true}
-    >
-      <i
-        className="anchor-modal"
+  >
+    <div>
+      <button />
+      <Component
         isOpen={true}
       >
-        <t
-          WrapperComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Modal__styles-sc-1q9xwty-0",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "
+        <i
+          className="anchor-modal"
+          isOpen={true}
+        >
+          <t
+            WrapperComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Modal__styles-sc-1q9xwty-0",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
     position: relative;
     width: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     height: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     margin: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
 
     display: flex;
     align-items: center;
@@ -154,17 +509,17 @@ exports[`Component: Modal should be defined 1`] = `
     justify-content: space-between;
 
     border-radius: ",
-                  "8px",
-                  ";
+                    "8px",
+                    ";
     background: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     ",
-                  [Function],
-                  "
+                    [Function],
+                    "
     box-shadow: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
 
     overflow: hidden;
 
@@ -175,54 +530,54 @@ exports[`Component: Modal should be defined 1`] = `
     // in isolation, but lose the top or bottom padding if the Header or
     // Footer (respectively) are also used.
     ",
-                  ".c2",
-                  " {
+                    ".c2",
+                    " {
         padding: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         &:last-child {
             padding-bottom: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         }
     }
     ",
-                  ".c3",
-                  " {
+                    ".c3",
+                    " {
         padding-left: ",
-                  [Function],
-                  "rem;
+                    [Function],
+                    "rem;
     }
     ",
-                  ".c4",
-                  " {
+                    ".c4",
+                    " {
         padding: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         min-height: ",
-                  [Function],
-                  "rem;
+                    [Function],
+                    "rem;
     }
 ",
-                ],
-              },
-              "displayName": "Modal__styles",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Modal__styles-sc-1q9xwty-0",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
+                  ],
+                },
+                "displayName": "Modal__styles",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Modal__styles-sc-1q9xwty-0",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
             }
-          }
-          backgroundProps={Object {}}
-          className="anchor-modal"
-          isOpen={true}
-        >
-          <Portal
-            containerInfo={
-              .c1 {
+            backgroundProps={Object {}}
+            className="anchor-modal"
+            isOpen={true}
+          >
+            <Portal
+              containerInfo={
+                .c1 {
   position: relative;
   width: 50rem;
   height: 42.375rem;
@@ -292,32 +647,32 @@ exports[`Component: Modal should be defined 1`] = `
 }
 
 <div>
-                <div
-                  class="c0"
-                >
                   <div
-                    class="anchor-modal c1"
+                    class="c0"
                   >
-                    Contents
+                    <div
+                      class="anchor-modal c1"
+                    >
+                      Contents
+                    </div>
                   </div>
                 </div>
-              </div>
-            }
-          >
-            <Styled(baseStyles__BaseModalBackground)
-              onClick={[Function]}
+              }
             >
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-jzgbtB",
-                      "isStatic": false,
-                      "lastClassName": "c0",
-                      "rules": Array [
-                        "
+              <Styled(baseStyles__BaseModalBackground)
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-jzgbtB",
+                        "isStatic": false,
+                        "lastClassName": "c0",
+                        "rules": Array [
+                          "
   display: flex;
   position: fixed;
   top: 0;
@@ -329,62 +684,62 @@ exports[`Component: Modal should be defined 1`] = `
   align-items: center;
   justify-content: center
 ",
-                        "
+                          "
     box-sizing: border-box;
     overflow-y: auto;
     padding: ",
-                        [Function],
-                        ";
+                          [Function],
+                          ";
     background-color: ",
-                        [Function],
-                        ";
+                          [Function],
+                          ";
 ",
+                        ],
+                      },
+                      "displayName": "Styled(baseStyles__BaseModalBackground)",
+                      "foldedComponentIds": Array [
+                        "baseStyles__BaseModalBackground-sc-12bzkqq-0",
                       ],
-                    },
-                    "displayName": "Styled(baseStyles__BaseModalBackground)",
-                    "foldedComponentIds": Array [
-                      "baseStyles__BaseModalBackground-sc-12bzkqq-0",
-                    ],
-                    "render": [Function],
-                    "styledComponentId": "sc-jzgbtB",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
+                      "render": [Function],
+                      "styledComponentId": "sc-jzgbtB",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
                   }
-                }
-                forwardedRef={[Function]}
-                onClick={[Function]}
-              >
-                <div
-                  className="c0"
+                  forwardedRef={[Function]}
                   onClick={[Function]}
                 >
-                  <Modal__styles
-                    className="anchor-modal"
+                  <div
+                    className="c0"
+                    onClick={[Function]}
                   >
-                    <StyledComponent
+                    <Modal__styles
                       className="anchor-modal"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Modal__styles-sc-1q9xwty-0",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
+                    >
+                      <StyledComponent
+                        className="anchor-modal"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Modal__styles-sc-1q9xwty-0",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "
     position: relative;
     width: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     height: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     margin: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
 
     display: flex;
     align-items: center;
@@ -392,17 +747,17 @@ exports[`Component: Modal should be defined 1`] = `
     justify-content: space-between;
 
     border-radius: ",
-                              "8px",
-                              ";
+                                "8px",
+                                ";
     background: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     ",
-                              [Function],
-                              "
+                                [Function],
+                                "
     box-shadow: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
 
     overflow: hidden;
 
@@ -413,114 +768,70 @@ exports[`Component: Modal should be defined 1`] = `
     // in isolation, but lose the top or bottom padding if the Header or
     // Footer (respectively) are also used.
     ",
-                              ".c2",
-                              " {
+                                ".c2",
+                                " {
         padding: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         &:last-child {
             padding-bottom: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         }
     }
     ",
-                              ".c3",
-                              " {
+                                ".c3",
+                                " {
         padding-left: ",
-                              [Function],
-                              "rem;
+                                [Function],
+                                "rem;
     }
     ",
-                              ".c4",
-                              " {
+                                ".c4",
+                                " {
         padding: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         min-height: ",
-                              [Function],
-                              "rem;
+                                [Function],
+                                "rem;
     }
 ",
-                            ],
-                          },
-                          "displayName": "Modal__styles",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Modal__styles-sc-1q9xwty-0",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
+                              ],
+                            },
+                            "displayName": "Modal__styles",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "Modal__styles-sc-1q9xwty-0",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
                         }
-                      }
-                      forwardedRef={null}
-                    >
-                      <div
-                        className="anchor-modal c1"
+                        forwardedRef={null}
                       >
-                        Contents
-                      </div>
-                    </StyledComponent>
-                  </Modal__styles>
-                </div>
-              </StyledComponent>
-            </Styled(baseStyles__BaseModalBackground)>
-          </Portal>
-        </t>
-      </i>
-    </Component>
-  </div>
-  <div />
-</ModalProvider>
+                        <div
+                          className="anchor-modal c1"
+                        >
+                          Contents
+                        </div>
+                      </StyledComponent>
+                    </Modal__styles>
+                  </div>
+                </StyledComponent>
+              </Styled(baseStyles__BaseModalBackground)>
+            </Portal>
+          </t>
+        </i>
+      </Component>
+    </div>
+    <div />
+  </ModalProvider>
+</ThemeProvider>
 `;
 
 exports[`Component: Modal should render with modal components 1`] = `
-.c7 {
-  position: relative;
-  border-radius: 1000px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
-}
-
 .c10 {
   box-sizing: border-box;
   width: 100%;
@@ -577,6 +888,51 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
+}
+
+.c7 {
+  position: relative;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
 }
 
 .c8 {
@@ -679,9 +1035,15 @@ exports[`Component: Modal should render with modal components 1`] = `
 
 .c4 {
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
   font-weight: bold;
@@ -691,17 +1053,372 @@ exports[`Component: Modal should render with modal components 1`] = `
   font-size: 87.5%;
 }
 
-<ModalProvider
-  backgroundComponent={
+<ThemeProvider
+  theme={
     Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-jzgbtB",
-        "isStatic": false,
-        "lastClassName": "c0",
-        "rules": Array [
-          "
+      "colors": Object {
+        "accent": Array [
+          "#66CCFF",
+          "#0998D6",
+          "#0074A6",
+          "#00E0D1",
+          "#00CCCD",
+          "#00BDBD",
+        ],
+        "borders": Object {
+          "base": "#D3D3D3",
+          "dark": "#808080",
+          "error": "#808080",
+          "success": "#808080",
+        },
+        "neutrals": Array [
+          "#FFFFFF",
+          "#FAFAFA",
+          "#F1F1F1",
+          "#E7E7E7",
+          "#D3D3D3",
+          "#A6A6A6",
+          "#808080",
+          "#595959",
+          "#323232",
+          "#000000",
+        ],
+        "primary": Array [
+          "#91609C",
+          "#602D6C",
+          "#4B2354",
+        ],
+        "secondary": Array [
+          "#14A382",
+          "#DF206C",
+          "#EB663D",
+          "#F5A623",
+        ],
+      },
+      "typography": Object {
+        "fontColor": "#323232",
+        "fontFamily": "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "normal",
+        "lineHeight": "1.5rem",
+        "scale": Object {
+          "12": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "14": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "16": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "18": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "20": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "24": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "28": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "32": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "36": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "44": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "52": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "62": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+        },
+        "tag": Object {
+          "a": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+            text-decoration: none;",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "address": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "blockquote": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+            font-style: italic;",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "code": Array [
+            Array [
+              "
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+                'Liberation Mono', 'Courier New', monospace;
+            background: #323232;
+            display: block;",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h1": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h2": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h3": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h4": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h5": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "h6": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "label": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "p": Array [
+            Array [
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "",
+              [Function],
+              "
+        ",
+            ],
+          ],
+          "pre": Array [
+            Array [
+              "
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+                'Liberation Mono', 'Courier New', monospace;
+        ",
+            ],
+          ],
+          "span": Array [
+            Array [
+              "
+            // TODO
+        ",
+            ],
+          ],
+        },
+      },
+    }
+  }
+>
+  <ModalProvider
+    backgroundComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-jzgbtB",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
   display: flex;
   position: fixed;
   top: 0;
@@ -713,61 +1430,61 @@ exports[`Component: Modal should render with modal components 1`] = `
   align-items: center;
   justify-content: center
 ",
-          "
+            "
     box-sizing: border-box;
     overflow-y: auto;
     padding: ",
-          [Function],
-          ";
+            [Function],
+            ";
     background-color: ",
-          [Function],
-          ";
+            [Function],
+            ";
 ",
+          ],
+        },
+        "displayName": "Styled(baseStyles__BaseModalBackground)",
+        "foldedComponentIds": Array [
+          "baseStyles__BaseModalBackground-sc-12bzkqq-0",
         ],
-      },
-      "displayName": "Styled(baseStyles__BaseModalBackground)",
-      "foldedComponentIds": Array [
-        "baseStyles__BaseModalBackground-sc-12bzkqq-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "sc-jzgbtB",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
+        "render": [Function],
+        "styledComponentId": "sc-jzgbtB",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
     }
-  }
->
-  <div>
-    <button />
-    <Component
-      isOpen={true}
-    >
-      <i
-        className="anchor-modal"
+  >
+    <div>
+      <button />
+      <Component
         isOpen={true}
       >
-        <t
-          WrapperComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Modal__styles-sc-1q9xwty-0",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "
+        <i
+          className="anchor-modal"
+          isOpen={true}
+        >
+          <t
+            WrapperComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Modal__styles-sc-1q9xwty-0",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
     position: relative;
     width: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     height: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     margin: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
 
     display: flex;
     align-items: center;
@@ -775,17 +1492,17 @@ exports[`Component: Modal should render with modal components 1`] = `
     justify-content: space-between;
 
     border-radius: ",
-                  "8px",
-                  ";
+                    "8px",
+                    ";
     background: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
     ",
-                  [Function],
-                  "
+                    [Function],
+                    "
     box-shadow: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
 
     overflow: hidden;
 
@@ -796,99 +1513,54 @@ exports[`Component: Modal should render with modal components 1`] = `
     // in isolation, but lose the top or bottom padding if the Header or
     // Footer (respectively) are also used.
     ",
-                  ".c9",
-                  " {
+                    ".c9",
+                    " {
         padding: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         &:last-child {
             padding-bottom: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         }
     }
     ",
-                  ".c2",
-                  " {
+                    ".c2",
+                    " {
         padding-left: ",
-                  [Function],
-                  "rem;
+                    [Function],
+                    "rem;
     }
     ",
-                  ".c11",
-                  " {
+                    ".c11",
+                    " {
         padding: ",
-                  [Function],
-                  ";
+                    [Function],
+                    ";
         min-height: ",
-                  [Function],
-                  "rem;
+                    [Function],
+                    "rem;
     }
 ",
-                ],
-              },
-              "displayName": "Modal__styles",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Modal__styles-sc-1q9xwty-0",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
+                  ],
+                },
+                "displayName": "Modal__styles",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Modal__styles-sc-1q9xwty-0",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
             }
-          }
-          backgroundProps={Object {}}
-          className="anchor-modal"
-          isOpen={true}
-        >
-          <Portal
-            containerInfo={
-              .c7 {
-  position: relative;
-  border-radius: 1000px;
-  font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  text-align: center;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none !important;
-  margin: 0;
-  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: solid thin transparent;
-  background-color: transparent;
-  color: #0074A6;
-  padding: 0;
-  font-size: 1rem;
-  height: 3rem;
-  min-width: 3rem;
-}
-
-.c7 + .c6 {
-  margin-left: 1rem;
-}
-
-.c7:hover,
-.c7:focus,
-.c7:active {
-  background: rgba(128,128,128,0.16);
-  color: #0074A6;
-}
-
-.c10 {
+            backgroundProps={Object {}}
+            className="anchor-modal"
+            isOpen={true}
+          >
+            <Portal
+              containerInfo={
+                .c10 {
   box-sizing: border-box;
   width: 100%;
   -webkit-order: 0;
@@ -944,6 +1616,51 @@ exports[`Component: Modal should render with modal components 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
+}
+
+.c7 {
+  position: relative;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin transparent;
+  background-color: transparent;
+  color: #0074A6;
+  padding: 0;
+  font-size: 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.c7 + .c6 {
+  margin-left: 1rem;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  background: rgba(128,128,128,0.16);
+  color: #0074A6;
 }
 
 .c8 {
@@ -1046,9 +1763,15 @@ exports[`Component: Modal should render with modal components 1`] = `
 
 .c4 {
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
   font-weight: bold;
@@ -1059,90 +1782,90 @@ exports[`Component: Modal should render with modal components 1`] = `
 }
 
 <div>
-                <div
-                  class="c0"
-                >
                   <div
-                    class="anchor-modal c1"
+                    class="c0"
                   >
                     <div
-                      class="anchor-modal-header c2 c3"
+                      class="anchor-modal c1"
                     >
-                      <span
-                        class="anchor-typography c4"
-                        scale="20"
-                      >
-                        Header Title
-                      </span>
                       <div
-                        class="anchor-modal-close c5"
+                        class="anchor-modal-header c2 c3"
                       >
-                        <button
-                          class="anchor-button c6 c7"
+                        <span
+                          class="anchor-typography c4"
+                          scale="20"
                         >
-                          <span
-                            class="anchor-icon close anchor-button-prefix c8"
-                            scale="lg"
+                          Header Title
+                        </span>
+                        <div
+                          class="anchor-modal-close c5"
+                        >
+                          <button
+                            class="anchor-button c6 c7"
                           >
-                            <svg
-                              height="24"
-                              viewBox="0 0 16 16"
-                              width="24"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <span
+                              class="anchor-icon close anchor-button-prefix c8"
+                              scale="lg"
                             >
-                              <g
-                                fill="none"
-                                fill-rule="evenodd"
+                              <svg
+                                height="24"
+                                viewBox="0 0 16 16"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
                               >
-                                <path
-                                  d="M0 0h16v16H0z"
-                                />
                                 <g
-                                  fill="currentColor"
-                                  fill-rule="nonzero"
+                                  fill="none"
+                                  fill-rule="evenodd"
                                 >
                                   <path
-                                    d="M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z"
+                                    d="M0 0h16v16H0z"
                                   />
-                                  <path
-                                    d="M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z"
-                                  />
+                                  <g
+                                    fill="currentColor"
+                                    fill-rule="nonzero"
+                                  >
+                                    <path
+                                      d="M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z"
+                                    />
+                                    <path
+                                      d="M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z"
+                                    />
+                                  </g>
                                 </g>
-                              </g>
-                            </svg>
-                          </span>
-                        </button>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      class="anchor-modal-content c9 c10"
-                    >
-                      Content
-                    </div>
-                    <div
-                      class="anchor-modal-footer c11 c12"
-                    >
-                      Footer
+                      <div
+                        class="anchor-modal-content c9 c10"
+                      >
+                        Content
+                      </div>
+                      <div
+                        class="anchor-modal-footer c11 c12"
+                      >
+                        Footer
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            }
-          >
-            <Styled(baseStyles__BaseModalBackground)
-              onClick={[Function]}
+              }
             >
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-jzgbtB",
-                      "isStatic": false,
-                      "lastClassName": "c0",
-                      "rules": Array [
-                        "
+              <Styled(baseStyles__BaseModalBackground)
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-jzgbtB",
+                        "isStatic": false,
+                        "lastClassName": "c0",
+                        "rules": Array [
+                          "
   display: flex;
   position: fixed;
   top: 0;
@@ -1154,62 +1877,62 @@ exports[`Component: Modal should render with modal components 1`] = `
   align-items: center;
   justify-content: center
 ",
-                        "
+                          "
     box-sizing: border-box;
     overflow-y: auto;
     padding: ",
-                        [Function],
-                        ";
+                          [Function],
+                          ";
     background-color: ",
-                        [Function],
-                        ";
+                          [Function],
+                          ";
 ",
+                        ],
+                      },
+                      "displayName": "Styled(baseStyles__BaseModalBackground)",
+                      "foldedComponentIds": Array [
+                        "baseStyles__BaseModalBackground-sc-12bzkqq-0",
                       ],
-                    },
-                    "displayName": "Styled(baseStyles__BaseModalBackground)",
-                    "foldedComponentIds": Array [
-                      "baseStyles__BaseModalBackground-sc-12bzkqq-0",
-                    ],
-                    "render": [Function],
-                    "styledComponentId": "sc-jzgbtB",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
+                      "render": [Function],
+                      "styledComponentId": "sc-jzgbtB",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
                   }
-                }
-                forwardedRef={[Function]}
-                onClick={[Function]}
-              >
-                <div
-                  className="c0"
+                  forwardedRef={[Function]}
                   onClick={[Function]}
                 >
-                  <Modal__styles
-                    className="anchor-modal"
+                  <div
+                    className="c0"
+                    onClick={[Function]}
                   >
-                    <StyledComponent
+                    <Modal__styles
                       className="anchor-modal"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Modal__styles-sc-1q9xwty-0",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
+                    >
+                      <StyledComponent
+                        className="anchor-modal"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Modal__styles-sc-1q9xwty-0",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "
     position: relative;
     width: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     height: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     margin: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
 
     display: flex;
     align-items: center;
@@ -1217,17 +1940,17 @@ exports[`Component: Modal should render with modal components 1`] = `
     justify-content: space-between;
 
     border-radius: ",
-                              "8px",
-                              ";
+                                "8px",
+                                ";
     background: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
     ",
-                              [Function],
-                              "
+                                [Function],
+                                "
     box-shadow: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
 
     overflow: hidden;
 
@@ -1238,255 +1961,255 @@ exports[`Component: Modal should render with modal components 1`] = `
     // in isolation, but lose the top or bottom padding if the Header or
     // Footer (respectively) are also used.
     ",
-                              ".c9",
-                              " {
+                                ".c9",
+                                " {
         padding: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         &:last-child {
             padding-bottom: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         }
     }
     ",
-                              ".c2",
-                              " {
+                                ".c2",
+                                " {
         padding-left: ",
-                              [Function],
-                              "rem;
+                                [Function],
+                                "rem;
     }
     ",
-                              ".c11",
-                              " {
+                                ".c11",
+                                " {
         padding: ",
-                              [Function],
-                              ";
+                                [Function],
+                                ";
         min-height: ",
-                              [Function],
-                              "rem;
+                                [Function],
+                                "rem;
     }
 ",
-                            ],
-                          },
-                          "displayName": "Modal__styles",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Modal__styles-sc-1q9xwty-0",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
+                              ],
+                            },
+                            "displayName": "Modal__styles",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "Modal__styles-sc-1q9xwty-0",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
                         }
-                      }
-                      forwardedRef={null}
-                    >
-                      <div
-                        className="anchor-modal c1"
+                        forwardedRef={null}
                       >
-                        <Component
-                          title="Header Title"
+                        <div
+                          className="anchor-modal c1"
                         >
-                          <styled.div
-                            className="anchor-modal-header"
+                          <Component
+                            title="Header Title"
                           >
-                            <StyledComponent
+                            <styled.div
                               className="anchor-modal-header"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "c2",
-                                    "isStatic": false,
-                                    "lastClassName": "c3",
-                                    "rules": Array [
-                                      "
+                            >
+                              <StyledComponent
+                                className="anchor-modal-header"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "c2",
+                                      "isStatic": false,
+                                      "lastClassName": "c3",
+                                      "rules": Array [
+                                        "
     box-sizing: border-box;
     min-height: 4rem;
     padding: 1.25rem 4.75rem 1.25rem 2rem;
     width: 100%;
     border-radius: ",
-                                      "8px",
-                                      " ",
-                                      "8px",
-                                      " 0 0;
+                                        "8px",
+                                        " ",
+                                        "8px",
+                                        " 0 0;
     margin-bottom: 1rem;
 
     display: flex;
     order: -1;
 
     color: ",
-                                      [Function],
-                                      ";
+                                        [Function],
+                                        ";
     background: ",
-                                      [Function],
-                                      ";
+                                        [Function],
+                                        ";
 
     // If the header exists, remove the Content's padding.
     // We're preferring this selector to using Modal :first-child
     // in case there is a close button placed before it, and using a
     // double selector to ensure it takes precedence.
     & ~ ",
-                                      ".c9",
-                                      ".c9",
-                                      " {
+                                        ".c9",
+                                        ".c9",
+                                        " {
         padding-top: 0;
     }
 ",
-                                    ],
-                                  },
-                                  "displayName": "styled.div",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "c2",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "c2",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
                                 }
-                              }
-                              forwardedRef={null}
-                            >
-                              <div
-                                className="anchor-modal-header c2 c3"
+                                forwardedRef={null}
                               >
-                                <Component
-                                  scale={20}
-                                  weight="bold"
+                                <div
+                                  className="anchor-modal-header c2 c3"
                                 >
-                                  <styled.span
-                                    className="anchor-typography"
+                                  <Component
                                     scale={20}
-                                    tag="span"
                                     weight="bold"
                                   >
-                                    <StyledComponent
+                                    <styled.span
                                       className="anchor-typography"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gJWqzi",
-                                            "isStatic": false,
-                                            "lastClassName": "c4",
-                                            "rules": Array [
-                                              "
-    box-sizing: border-box;
-    // Global Font Properties
-    font-family: ",
-                                              [Function],
-                                              ";
-    font-size: ",
-                                              [Function],
-                                              ";
-    font-weight: ",
-                                              [Function],
-                                              ";
-    line-height: ",
-                                              [Function],
-                                              ";
-    // Spacing",
-                                              [Function],
-                                              [Function],
-                                              "
-    // TODO: colors when theme colors are defined
-    ",
-                                              [Function],
-                                              ";
-
-    // Use a scale to set size & line-height
-    ",
-                                              [Function],
-                                              "
-
-    // Apply default styles for element
-    ",
-                                              [Function],
-                                              "
-
-    // CSS Overrides
-    ",
-                                              [Function],
-                                              ";
-    ",
-                                              [Function],
-                                              ";
-    ",
-                                              [Function],
-                                              ";
-
-    // Override Size & Line Height
-    ",
-                                              [Function],
-                                              ";
-
-    // Throw a warning that says you really shouldn't do this
-    ",
-                                              [Function],
-                                              ";
-    ",
-                                              [Function],
-                                              ";
-
-    small {",
-                                              [Function],
-                                              "
-    }
-",
-                                            ],
-                                          },
-                                          "displayName": "styled.span",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-gJWqzi",
-                                          "target": "span",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
                                       scale={20}
                                       tag="span"
                                       weight="bold"
                                     >
-                                      <span
-                                        className="anchor-typography c4"
+                                      <StyledComponent
+                                        className="anchor-typography"
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-gJWqzi",
+                                              "isStatic": false,
+                                              "lastClassName": "c4",
+                                              "rules": Array [
+                                                "
+    box-sizing: border-box;
+    // Global Font Properties
+    font-family: ",
+                                                [Function],
+                                                ";
+    font-size: ",
+                                                [Function],
+                                                ";
+    font-weight: ",
+                                                [Function],
+                                                ";
+    line-height: ",
+                                                [Function],
+                                                ";
+    // Spacing",
+                                                [Function],
+                                                [Function],
+                                                "
+    // TODO: colors when theme colors are defined
+    ",
+                                                [Function],
+                                                ";
+
+    // Use a scale to set size & line-height
+    ",
+                                                [Function],
+                                                "
+
+    // Apply default styles for element
+    ",
+                                                [Function],
+                                                "
+
+    // CSS Overrides
+    ",
+                                                [Function],
+                                                ";
+    ",
+                                                [Function],
+                                                ";
+    ",
+                                                [Function],
+                                                ";
+
+    // Override Size & Line Height
+    ",
+                                                [Function],
+                                                ";
+
+    // Throw a warning that says you really shouldn't do this
+    ",
+                                                [Function],
+                                                ";
+    ",
+                                                [Function],
+                                                ";
+
+    small {",
+                                                [Function],
+                                                "
+    }
+",
+                                              ],
+                                            },
+                                            "displayName": "styled.span",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-gJWqzi",
+                                            "target": "span",
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                          }
+                                        }
+                                        forwardedRef={null}
                                         scale={20}
+                                        tag="span"
+                                        weight="bold"
                                       >
-                                        Header Title
-                                      </span>
-                                    </StyledComponent>
-                                  </styled.span>
-                                </Component>
-                                <Component>
-                                  <styled.div
-                                    align="right"
-                                    className="anchor-modal-close"
-                                  >
-                                    <StyledComponent
+                                        <span
+                                          className="anchor-typography c4"
+                                          scale={20}
+                                        >
+                                          Header Title
+                                        </span>
+                                      </StyledComponent>
+                                    </styled.span>
+                                  </Component>
+                                  <Component>
+                                    <styled.div
                                       align="right"
                                       className="anchor-modal-close"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fhYwyz",
-                                            "isStatic": false,
-                                            "lastClassName": "c5",
-                                            "rules": Array [
-                                              "
+                                    >
+                                      <StyledComponent
+                                        align="right"
+                                        className="anchor-modal-close"
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-fhYwyz",
+                                              "isStatic": false,
+                                              "lastClassName": "c5",
+                                              "rules": Array [
+                                                "
     position: absolute;
     height: 3rem;
     width: 3rem;
     margin: 0.5rem;
     top: 0;
     ",
-                                              [Function],
-                                              "
+                                                [Function],
+                                                "
 
     display: flex;
     justify-content: center;
@@ -1494,71 +2217,74 @@ exports[`Component: Modal should render with modal components 1`] = `
 
     cursor: pointer;
 ",
-                                            ],
-                                          },
-                                          "displayName": "styled.div",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-fhYwyz",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
+                                              ],
+                                            },
+                                            "displayName": "styled.div",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-fhYwyz",
+                                            "target": "div",
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                          }
                                         }
-                                      }
-                                      forwardedRef={null}
-                                    >
-                                      <div
-                                        className="anchor-modal-close c5"
+                                        forwardedRef={null}
                                       >
-                                        <Component
-                                          circular={true}
-                                          outline={false}
-                                          prefix={<Unknown />}
-                                          variant="minimal"
+                                        <div
+                                          className="anchor-modal-close c5"
                                         >
-                                          <styled.button
-                                            $fontSize={1}
-                                            $height={3}
-                                            $size="md"
-                                            borderRadius="1000px"
-                                            buttonStyles={
-                                              Object {
-                                                "active": [Function],
-                                                "base": [Function],
-                                                "disabled": [Function],
-                                                "focusOutline": [Function],
-                                                "hover": [Function],
-                                              }
-                                            }
+                                          <Component
                                             circular={true}
-                                            className="anchor-button"
-                                            colorTheme={
-                                              Object {
-                                                "base": "#0074A6",
-                                                "dark": "#0074A6",
-                                                "light": "#0998D6",
-                                              }
-                                            }
-                                            flip={false}
-                                            iconOnly={true}
-                                            minWidth={3}
                                             outline={false}
-                                            padding="0"
+                                            prefix={<Unknown />}
                                             variant="minimal"
                                           >
-                                            <StyledComponent
-                                              $fontSize={1}
+                                            <styled.button
                                               $height={3}
                                               $size="md"
-                                              borderRadius="1000px"
+                                              borderRadius="1.5rem"
                                               buttonStyles={
                                                 Object {
-                                                  "active": [Function],
-                                                  "base": [Function],
-                                                  "disabled": [Function],
-                                                  "focusOutline": [Function],
-                                                  "hover": [Function],
+                                                  "base": Array [
+                                                    "
+                border: solid thin transparent;
+                background-color: transparent;
+                color: ",
+                                                    "#0074A6",
+                                                    ";
+            ",
+                                                  ],
+                                                  "disabled": Array [
+                                                    "
+                border: solid thin ",
+                                                    "#D3D3D3",
+                                                    ";
+                background-color: ",
+                                                    "#D3D3D3",
+                                                    ";
+                color: ",
+                                                    "#808080",
+                                                    ";
+            ",
+                                                  ],
+                                                  "focusOutline": Array [
+                                                    "
+                box-shadow: 0 0 0 2px ",
+                                                    "rgba(128,128,128,0.4)",
+                                                    ";
+            ",
+                                                  ],
+                                                  "hover": Array [
+                                                    "
+                background: ",
+                                                    "rgba(128,128,128,0.16)",
+                                                    ";
+                color: ",
+                                                    "#0074A6",
+                                                    ";
+            ",
+                                                  ],
                                                 }
                                               }
                                               circular={true}
@@ -1571,22 +2297,85 @@ exports[`Component: Modal should render with modal components 1`] = `
                                                 }
                                               }
                                               flip={false}
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "c6",
-                                                    "isStatic": false,
-                                                    "lastClassName": "c7",
-                                                    "rules": Array [
+                                              iconOnly={true}
+                                              outline={false}
+                                              variant="minimal"
+                                            >
+                                              <StyledComponent
+                                                $height={3}
+                                                $size="md"
+                                                borderRadius="1.5rem"
+                                                buttonStyles={
+                                                  Object {
+                                                    "base": Array [
                                                       "
-    position: relative;
-    ",
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
+                border: solid thin transparent;
+                background-color: transparent;
+                color: ",
+                                                      "#0074A6",
+                                                      ";
+            ",
+                                                    ],
+                                                    "disabled": Array [
                                                       "
+                border: solid thin ",
+                                                      "#D3D3D3",
+                                                      ";
+                background-color: ",
+                                                      "#D3D3D3",
+                                                      ";
+                color: ",
+                                                      "#808080",
+                                                      ";
+            ",
+                                                    ],
+                                                    "focusOutline": Array [
+                                                      "
+                box-shadow: 0 0 0 2px ",
+                                                      "rgba(128,128,128,0.4)",
+                                                      ";
+            ",
+                                                    ],
+                                                    "hover": Array [
+                                                      "
+                background: ",
+                                                      "rgba(128,128,128,0.16)",
+                                                      ";
+                color: ",
+                                                      "#0074A6",
+                                                      ";
+            ",
+                                                    ],
+                                                  }
+                                                }
+                                                circular={true}
+                                                className="anchor-button"
+                                                colorTheme={
+                                                  Object {
+                                                    "base": "#0074A6",
+                                                    "dark": "#0074A6",
+                                                    "light": "#0998D6",
+                                                  }
+                                                }
+                                                flip={false}
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "c6",
+                                                      "isStatic": false,
+                                                      "lastClassName": "c7",
+                                                      "rules": Array [
+                                                        "
+	position: relative;
+    border-radius: ",
+                                                        [Function],
+                                                        ";
+	font-weight: 600;
+	font-family: ",
+                                                        "Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif",
+                                                        ";
 	text-align: center;
     cursor: pointer;
     display: inline-flex;
@@ -1595,16 +2384,24 @@ exports[`Component: Modal should render with modal components 1`] = `
     outline: none !important;
 
     margin: ",
-                                                      [Function],
-                                                      ";
+                                                        [Function],
+                                                        ";
     ",
-                                                      [Function],
-                                                      ";
+                                                        [Function],
+                                                        ";
 
-	transition: 500ms ease background-color,
-                500ms ease border-color,
-                500ms ease color,
-                500ms ease fill;
+	transition: ",
+                                                        "500ms",
+                                                        " ease background-color,
+                ",
+                                                        "500ms",
+                                                        " ease border-color,
+                ",
+                                                        "500ms",
+                                                        " ease color,
+                ",
+                                                        "500ms",
+                                                        " ease fill;
 
 	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
 	// Firefox.
@@ -1613,222 +2410,224 @@ exports[`Component: Modal should render with modal components 1`] = `
 
     /* Base and Disabled Styles */
     ",
-                                                      [Function],
-                                                      "
+                                                        [Function],
+                                                        "
 
     /* Sizing */
+    padding: ",
+                                                        [Function],
+                                                        ";
+    font-size: ",
+                                                        [Function],
+                                                        "rem;
+    height: ",
+                                                        [Function],
+                                                        "rem;
     ",
-                                                      [Function],
-                                                      "
-
+                                                        [Function],
+                                                        "
 
     ",
-                                                      [Function],
-                                                      "
+                                                        [Function],
+                                                        "
 
     /* State styles */
     ",
-                                                      [Function],
-                                                      "
+                                                        [Function],
+                                                        "
 
     &:focus {
         ",
-                                                      [Function],
-                                                      "
+                                                        [Function],
+                                                        "
     }
 
     /* Revealed State */
     ",
-                                                      [Function],
-                                                      "
+                                                        [Function],
+                                                        "
 ",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.button",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "c6",
-                                                  "target": "button",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
+                                                      ],
+                                                    },
+                                                    "displayName": "styled.button",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "c6",
+                                                    "target": "button",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
                                                 }
-                                              }
-                                              forwardedRef={null}
-                                              iconOnly={true}
-                                              minWidth={3}
-                                              outline={false}
-                                              padding="0"
-                                              variant="minimal"
-                                            >
-                                              <button
-                                                className="anchor-button c6 c7"
+                                                forwardedRef={null}
+                                                iconOnly={true}
+                                                outline={false}
+                                                variant="minimal"
                                               >
-                                                <Component
-                                                  className="anchor-button-prefix"
-                                                  scale="lg"
+                                                <button
+                                                  className="anchor-button c6 c7"
                                                 >
-                                                  <AnchorIcon
-                                                    className="anchor-icon close anchor-button-prefix"
+                                                  <Component
+                                                    className="anchor-button-prefix"
                                                     scale="lg"
                                                   >
-                                                    <StyledComponent
+                                                    <AnchorIcon
                                                       className="anchor-icon close anchor-button-prefix"
-                                                      forwardedComponent={
-                                                        Object {
-                                                          "$$typeof": Symbol(react.forward_ref),
-                                                          "attrs": Array [],
-                                                          "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-gFaPwZ",
-                                                            "isStatic": false,
-                                                            "lastClassName": "c8",
-                                                            "rules": Array [
-                                                              "
-    ",
-                                                              [Function],
-                                                              "
-    display: inline-block;
-    height: ",
-                                                              [Function],
-                                                              ";
-    width: ",
-                                                              [Function],
-                                                              ";",
-                                                              [Function],
-                                                              "
-",
-                                                            ],
-                                                          },
-                                                          "displayName": "AnchorIcon",
-                                                          "foldedComponentIds": Array [],
-                                                          "render": [Function],
-                                                          "styledComponentId": "sc-gFaPwZ",
-                                                          "target": "span",
-                                                          "toString": [Function],
-                                                          "warnTooManyClasses": [Function],
-                                                          "withComponent": [Function],
-                                                        }
-                                                      }
-                                                      forwardedRef={null}
                                                       scale="lg"
                                                     >
-                                                      <span
-                                                        className="anchor-icon close anchor-button-prefix c8"
+                                                      <StyledComponent
+                                                        className="anchor-icon close anchor-button-prefix"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-gFaPwZ",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c8",
+                                                              "rules": Array [
+                                                                "
+    display: inline-block;
+    height: ",
+                                                                [Function],
+                                                                ";
+    width: ",
+                                                                [Function],
+                                                                ";
+    line-height: 0;
+",
+                                                              ],
+                                                            },
+                                                            "displayName": "AnchorIcon",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-gFaPwZ",
+                                                            "target": "span",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
                                                         scale="lg"
                                                       >
-                                                        <svg
-                                                          height={24}
-                                                          viewBox="0 0 16 16"
-                                                          width={24}
-                                                          xmlns="http://www.w3.org/2000/svg"
+                                                        <span
+                                                          className="anchor-icon close anchor-button-prefix c8"
+                                                          scale="lg"
                                                         >
-                                                          <g
-                                                            fill="none"
-                                                            fillRule="evenodd"
+                                                          <svg
+                                                            height={24}
+                                                            viewBox="0 0 16 16"
+                                                            width={24}
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <path
-                                                              d="M0 0h16v16H0z"
-                                                            />
                                                             <g
-                                                              fill="currentColor"
-                                                              fillRule="nonzero"
+                                                              fill="none"
+                                                              fillRule="evenodd"
                                                             >
                                                               <path
-                                                                d="M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z"
+                                                                d="M0 0h16v16H0z"
                                                               />
-                                                              <path
-                                                                d="M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z"
-                                                              />
+                                                              <g
+                                                                fill="currentColor"
+                                                                fillRule="nonzero"
+                                                              >
+                                                                <path
+                                                                  d="M4.398 4.37l6.852 6.85-.495.495-6.852-6.85c-.292-.292-.354-.75-.073-1.032.283-.284.742-.222 1.035.07l6.85 6.851c.293.292.355.75.111.987l-.04.048c-.28.281-.74.218-1.031-.074l.495-.495c.033.034.055.044.036.078-.02.013-.027-.01-.065-.049L4.371 4.4c-.044-.043-.068-.047-.044-.072.025-.024.029 0 .071.043z"
+                                                                />
+                                                                <path
+                                                                  d="M11.468 4.617l.248.248-6.851 6.85c-.292.293-.75.355-1.012.092l-.023-.021c-.281-.281-.218-.74.073-1.032l6.85-6.85c.292-.293.752-.355 1.013-.092l.023.021c.281.281.218.74-.073 1.031l-.248-.247z"
+                                                                />
+                                                              </g>
                                                             </g>
-                                                          </g>
-                                                        </svg>
-                                                      </span>
-                                                    </StyledComponent>
-                                                  </AnchorIcon>
-                                                </Component>
-                                              </button>
-                                            </StyledComponent>
-                                          </styled.button>
-                                        </Component>
-                                      </div>
-                                    </StyledComponent>
-                                  </styled.div>
-                                </Component>
-                              </div>
-                            </StyledComponent>
-                          </styled.div>
-                        </Component>
-                        <Component>
-                          <styled.div
-                            className="anchor-modal-content"
-                          >
-                            <StyledComponent
+                                                          </svg>
+                                                        </span>
+                                                      </StyledComponent>
+                                                    </AnchorIcon>
+                                                  </Component>
+                                                </button>
+                                              </StyledComponent>
+                                            </styled.button>
+                                          </Component>
+                                        </div>
+                                      </StyledComponent>
+                                    </styled.div>
+                                  </Component>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </Component>
+                          <Component>
+                            <styled.div
                               className="anchor-modal-content"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "c9",
-                                    "isStatic": true,
-                                    "lastClassName": "c10",
-                                    "rules": Array [
-                                      "
+                            >
+                              <StyledComponent
+                                className="anchor-modal-content"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "c9",
+                                      "isStatic": true,
+                                      "lastClassName": "c10",
+                                      "rules": Array [
+                                        "
     box-sizing: border-box;
     width: 100%;
 
     order: 0;
     flex-grow: 1;
 ",
-                                    ],
-                                  },
-                                  "displayName": "styled.div",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "c9",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "c9",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
                                 }
-                              }
-                              forwardedRef={null}
-                            >
-                              <div
-                                className="anchor-modal-content c9 c10"
+                                forwardedRef={null}
                               >
-                                Content
-                              </div>
-                            </StyledComponent>
-                          </styled.div>
-                        </Component>
-                        <Component>
-                          <styled.div
-                            className="anchor-modal-footer"
-                          >
-                            <StyledComponent
+                                <div
+                                  className="anchor-modal-content c9 c10"
+                                >
+                                  Content
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </Component>
+                          <Component>
+                            <styled.div
                               className="anchor-modal-footer"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "c11",
-                                    "isStatic": false,
-                                    "lastClassName": "c12",
-                                    "rules": Array [
-                                      "
+                            >
+                              <StyledComponent
+                                className="anchor-modal-footer"
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "c11",
+                                      "isStatic": false,
+                                      "lastClassName": "c12",
+                                      "rules": Array [
+                                        "
     box-sizing: border-box;
     width: 100%;
     border-radius: 0 0 ",
-                                      "8px",
-                                      " ",
-                                      "8px",
-                                      ";
+                                        "8px",
+                                        " ",
+                                        "8px",
+                                        ";
     margin-top: auto;
     ",
-                                      [Function],
-                                      ";
+                                        [Function],
+                                        ";
 
     display: flex;
     justify-content: center;
@@ -1838,42 +2637,43 @@ exports[`Component: Modal should render with modal components 1`] = `
     justify-self: flex-end;
 
     background: ",
-                                      [Function],
-                                      ";
+                                        [Function],
+                                        ";
 ",
-                                    ],
-                                  },
-                                  "displayName": "styled.div",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "c11",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "c11",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
                                 }
-                              }
-                              forwardedRef={null}
-                            >
-                              <div
-                                className="anchor-modal-footer c11 c12"
+                                forwardedRef={null}
                               >
-                                Footer
-                              </div>
-                            </StyledComponent>
-                          </styled.div>
-                        </Component>
-                      </div>
-                    </StyledComponent>
-                  </Modal__styles>
-                </div>
-              </StyledComponent>
-            </Styled(baseStyles__BaseModalBackground)>
-          </Portal>
-        </t>
-      </i>
-    </Component>
-  </div>
-  <div />
-</ModalProvider>
+                                <div
+                                  className="anchor-modal-footer c11 c12"
+                                >
+                                  Footer
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </Component>
+                        </div>
+                      </StyledComponent>
+                    </Modal__styles>
+                  </div>
+                </StyledComponent>
+              </Styled(baseStyles__BaseModalBackground)>
+            </Portal>
+          </t>
+        </i>
+      </Component>
+    </div>
+    <div />
+  </ModalProvider>
+</ThemeProvider>
 `;

@@ -19,13 +19,13 @@ import { Search, Hamburger, ChevronDown } from '../../Icon';
 import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
-const StyledHeaderElement = styled.header`
+const StyledHeaderElement = styled('header')`
     background-color: ${colors.grapePurchase.base};
     margin: 0;
     color: ${colors.white.base};
 `;
 
-const SecondaryContainer = styled.div`
+const SecondaryContainer = styled('div')`
     width: 100%;
     background-color: ${colors.grapePurchase.dark};
     > * {
@@ -33,7 +33,7 @@ const SecondaryContainer = styled.div`
         margin: 0 auto;
     }
 `;
-const MainContainer = styled.div`
+const MainContainer = styled('div')`
     width: 100%;
     > * {
         max-width: 1140px;

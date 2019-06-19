@@ -16,7 +16,7 @@ import { DefaultColor } from './utils';
 import * as README from './README.md';
 import { RootTheme } from '../theme';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 
     div {

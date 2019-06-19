@@ -16,7 +16,7 @@ import { colors, RootTheme } from '../theme';
 import * as README from './README.md';
 // THEME
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     box-sizing: border-box;
     min-width: 90vw;
 `;

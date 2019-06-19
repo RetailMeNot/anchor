@@ -13,7 +13,7 @@ import { colors, RootTheme } from '../../theme';
 import * as README from './README.md';
 import { ThemeProvider } from '@xstyled/styled-components';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 

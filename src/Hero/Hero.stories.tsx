@@ -17,7 +17,7 @@ import { Button } from '../Button';
 import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: ${colors.white.base};
     width: 100vw;
 `;
@@ -72,7 +72,7 @@ storiesOf('Components/Hero', module)
         );
     })
     .add('CTA', () => {
-        const StyledImageWrapper = styled.div`
+        const StyledImageWrapper = styled('div')`
             position: absolute;
             right: 0;
             bottom: 0;

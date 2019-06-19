@@ -13,7 +13,7 @@ import { colors, RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 

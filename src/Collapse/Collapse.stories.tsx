@@ -20,7 +20,7 @@ import * as README from './README.md';
 
 const TEXT = 'text';
 
-const StyledComfortableStory = styled.div`
+const StyledComfortableStory = styled('div')`
     padding: 2rem 5rem;
 `;
 

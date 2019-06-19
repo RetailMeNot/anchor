@@ -15,7 +15,7 @@ import styled from 'styled-components';
 // STYLES
 import { colors, fonts } from '../../theme';
 
-const StyledFooterElement = styled.footer`
+const StyledFooterElement = styled('footer')`
     font-family: ${fonts.fontFamily};
     font-size: 0.75rem;
     background-color: ${colors.white.base};
@@ -29,13 +29,13 @@ const CenteredGrid = styled(Grid)`
     justify-items: center;
 `;
 
-const DesktopContainer = styled.div`
+const DesktopContainer = styled('div')`
     max-width: 71.25rem;
     padding: 2rem 1rem 1rem;
     margin: 0 auto;
 `;
 
-const MobileFooterContainer = styled.div`
+const MobileFooterContainer = styled('div')`
     padding: 2rem 1rem 0;
 
     hr {
@@ -44,7 +44,7 @@ const MobileFooterContainer = styled.div`
     }
 `;
 
-const LegalLinksContainer = styled.ul`
+const LegalLinksContainer = styled('ul')`
     list-style: none;
     margin: 2rem 1.5rem 1rem;
     padding: 0;

@@ -20,7 +20,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
 .c1 {
   display: block;
   position: relative;
-  border: solid thin #D3D3D3;
+  border: solid thin borders.base;
   border-radius: 0.25rem;
   cursor: text;
   box-sizing: border-box;
@@ -58,7 +58,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 .c1.focus {
-  border-color: #808080;
+  border-color: borders.dark;
 }
 
 .c1 label {
@@ -197,7 +197,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 .c1 {
   display: block;
   position: relative;
-  border: solid thin #D3D3D3;
+  border: solid thin borders.base;
   border-radius: 0.25rem;
   cursor: text;
   box-sizing: border-box;
@@ -235,7 +235,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 .c1.focus {
-  border-color: #808080;
+  border-color: borders.dark;
 }
 
 .c1 label {
@@ -393,7 +393,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 .c1 {
   display: block;
   position: relative;
-  border: solid thin #D3D3D3;
+  border: solid thin borders.base;
   border-radius: 0.25rem;
   cursor: text;
   box-sizing: border-box;
@@ -431,7 +431,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 .c1.focus {
-  border-color: #808080;
+  border-color: borders.dark;
 }
 
 .c1 label {
@@ -583,7 +583,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 .c1 {
   display: block;
   position: relative;
-  border: solid thin #D3D3D3;
+  border: solid thin borders.base;
   border-radius: 0.25rem;
   cursor: text;
   box-sizing: border-box;
@@ -621,7 +621,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 .c1.focus {
-  border-color: #808080;
+  border-color: borders.dark;
 }
 
 .c1 label {

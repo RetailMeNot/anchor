@@ -19,7 +19,7 @@ import {
 const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: ${colors.white.base};
     width: 100vw;
     height: 120vh;

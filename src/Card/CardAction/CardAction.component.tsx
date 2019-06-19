@@ -11,7 +11,7 @@ export interface CardActionProps {
     children?: any;
 }
 
-const StyledCard = styled.div`
+const StyledCard = styled('div')`
     box-sizing: border-box;
     position: absolute;
     display: flex;

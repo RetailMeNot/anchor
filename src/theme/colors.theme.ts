@@ -92,3 +92,42 @@ export const colors = {
         dark: '#268068',
     },
 };
+
+type ColorHue = { light: string; base: string; dark: string };
+
+export interface ColorsThemeSchema {
+    primary: ColorHue;
+    secondary: ColorHue;
+    accent: ColorHue;
+    neutrals: {
+        [key: string]: ColorHue;
+    };
+
+    borders: {
+        base: string;
+        // light: string;
+        dark: string;
+        error: string;
+        success: string;
+    };
+}
+
+export const ColorsTheme: ColorsThemeSchema = {
+    primary: colors.grapePurchase,
+    accent: colors.savvyCyan,
+    secondary: colors.dealEnvy,
+    neutrals: {
+        white: colors.white,
+        ash: colors.ash,
+        silver: colors.silver,
+        charcoal: colors.charcoal,
+    },
+    borders: {
+        // PRAGMATIC
+        base: colors.ash.light,
+        dark: colors.ash.dark,
+        // SEMANTIC
+        error: colors.ash.dark,
+        success: colors.ash.dark,
+    },
+};

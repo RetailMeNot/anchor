@@ -14,7 +14,7 @@ import * as README from './README.md';
 import { RootTheme } from '../theme';
 // THEME
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 

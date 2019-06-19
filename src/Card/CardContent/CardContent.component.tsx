@@ -21,7 +21,7 @@ const gutterSizes = {
     large: '1.5rem',
 };
 
-const StyledCard = styled.div`
+const StyledCard = styled('div')`
     box-sizing: border-box;
     position: relative;
     display: block;

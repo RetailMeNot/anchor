@@ -26,6 +26,7 @@ export interface TypographyTheme {
     fontSize: string;
     fontWeight: string;
     lineHeight: string;
+    fontColor: string;
     // FONT TREATMENTS
     scale: {
         [key: number]: FlattenSimpleInterpolation;
@@ -40,6 +41,7 @@ export const typography: TypographyTheme = {
     fontSize: `${fonts.baseFontSize}px`,
     fontWeight: 'normal',
     lineHeight: '1.5rem',
+    fontColor: colors.charcoal.base,
     scale: {
         62: css`
             font-size: 3.875rem;

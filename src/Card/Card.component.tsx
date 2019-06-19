@@ -22,7 +22,7 @@ export interface CardProps {
     gutter?: Gutters;
 }
 
-const StyledCard = styled.div`
+const StyledCard = styled('div')`
     position: relative;
     width: 100%;
     font-family: ${fonts.fontFamily};

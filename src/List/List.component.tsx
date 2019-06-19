@@ -33,7 +33,7 @@ const itemComponent = {
     divider: Divider,
 };
 
-const StyledList = styled.div`
+const StyledList = styled('div')`
     box-sizing: border-box;
 `;
 

@@ -32,7 +32,7 @@ interface DropDownState {
     width?: number;
 }
 
-const StyledDropDown = styled.div`
+const StyledDropDown = styled('div')`
     font-family: ${fonts.fontFamily};
     position: relative;
     cursor: pointer;
@@ -76,7 +76,7 @@ const StyledDropDownContainer = styled(DropDownContainer)`
         bottom ? `${bottom}px !important` : 'inherit'};
 `;
 
-const ArrowUp = styled.div`
+const ArrowUp = styled('div')`
     position: absolute;
     top: -0.4rem;
     left: 1rem;

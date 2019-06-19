@@ -13,7 +13,7 @@ export interface CardActionAreaProps {
     backgroundColor?: string;
 }
 
-const StyledCardActionArea = styled.div`
+const StyledCardActionArea = styled('div')`
     box-sizing: border-box;
     position: relative;
     display: inline-block;

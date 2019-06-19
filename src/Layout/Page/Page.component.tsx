@@ -14,7 +14,7 @@ export const DEFAULT_FOOTER_HEIGHT = '20.375rem';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledPage = styled.main`
+const StyledPage = styled('main')`
     display: flex;
     flex-direction: column;
     height: 100vh;

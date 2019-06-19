@@ -32,7 +32,7 @@ const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
 );
 /* tslint:enable max-line-length */
 
-const StyledAvatar = styled.div`
+const StyledAvatar = styled('div')`
     border: solid 0.1875rem ${rgba(colors.white.base, 0.4)};
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ const StyledAvatar = styled.div`
     }
 `;
 
-const InnerBorder = styled.div`
+const InnerBorder = styled('div')`
     flex: 0 0 1.625rem;
     width: 1.625rem;
     height: 1.625rem;

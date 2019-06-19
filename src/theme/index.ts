@@ -1,5 +1,6 @@
 // Theme Files
 import { typography } from './typography.theme';
+import { ColorsTheme as colors } from './colors.theme';
 
 // TODO: ============================================================ move all of these v consts to a different location
 
@@ -19,4 +20,5 @@ export const RootTheme = {
     typography,
     radii: { none: '0', base: '4px', modal: '8px' },
     [BUTTON_KEY]: BUTTON_THEME,
+    colors,
 };

@@ -10,7 +10,7 @@ import { Typography } from '../../../Typography';
 // STYLES
 import { colors } from '../../../theme';
 
-const StyledMobileCTAElement = styled.a`
+const StyledMobileCTAElement = styled('a')`
     box-sizing: border-box;
     cursor: pointer;
     min-width: 250px;

@@ -2,14 +2,15 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
 import { get } from '../../utils/get/get';
 // THEME
-import { colors, fonts } from '../../theme';
+import { colors } from '../../theme';
 
 const { useState, forwardRef, useImperativeHandle } = React;
 
@@ -95,11 +96,11 @@ const InputSizeDimensions = {
     `,
 };
 
-const StyledInputWrapper = styled.div`
+const StyledInputWrapper = styled('div')`
     // Input Display Size
     display: block;
     position: relative;
-    border: solid thin ${colors.ash.light};
+    border: solid thin ${th.color('borders.base')};
     border-radius: 0.25rem;
     cursor: text;
     box-sizing: border-box;
@@ -112,12 +113,12 @@ const StyledInputWrapper = styled.div`
     ${({ size = 'md' }: InputProps) => InputSizeDimensions[size]};
 
     ::placeholder {
-        font-family: ${fonts.fontFamily};
+        font-family: ${th('typography.fontFamily')};
         color: ${colors.ash.dark};
     }
 
     &.focus {
-        border-color: ${colors.ash.dark};
+        border-color: ${th.color('borders.dark')};
     }
 
     label {
@@ -171,7 +172,7 @@ const StyledInput = styled.input<StyledInputProps>`
     color: ${colors.charcoal.light};
     // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
     //transition: all 250ms;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     // Disable Number Spinners
     &[type='number']::-webkit-inner-spin-button,
     &[type='number']::-webkit-outer-spin-button {
