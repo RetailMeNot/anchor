@@ -2380,7 +2380,7 @@ storiesOf('Components/Button', module)
             </ThemeProvider>
         );
     })
-    .add('Button within Theme Provider', () => {
+    .add('Button with Custom Theme', () => {
         const chosenPrefix = select(
             'prefix',
             ['none', ...Object.keys(Icon)],
