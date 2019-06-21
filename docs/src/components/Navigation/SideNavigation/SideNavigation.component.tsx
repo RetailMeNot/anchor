@@ -16,6 +16,7 @@ const StyledCollapseGroup = styled(CollapseGroup)`
         text-decoration: none;
 
         &.active {
+            /* TODO: When we have a dedicated theme provider these colors should be moved into it. */
             background-color: #e3eef6;
             color: #007ecd;
         }
@@ -42,7 +43,7 @@ export class SideNavigation extends React.PureComponent {
     constructor(props: object) {
         super(props);
 
-        sections.map((section: SectionProperties, i: number) => {
+        sections.forEach((section: SectionProperties, i: number) => {
             const { pattern } = section;
             const { pathname } = window.location;
 

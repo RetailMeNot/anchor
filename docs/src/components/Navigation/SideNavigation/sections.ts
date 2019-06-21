@@ -6,19 +6,8 @@ export const sections = [
             {
                 title: 'Introduction',
                 path: '/'
-            }
-        ]
-    },
-
-    {
-        title: 'SUPPORT',
-        pattern: '/support',
-        links: [
-            {
-                title: '[In Development]',
-                path: '/support'
-            }
-        ]
+            },
+        ],
     },
 
     {
@@ -27,68 +16,101 @@ export const sections = [
         links: [
             {
                 title: 'All',
-                path: '/components'
+                path: '/components',
             },
             {
                 title: 'Autocomplete',
-                path: '/components/autocomplete'
+                path: '/components/autocomplete',
             },
             {
                 title: 'Badge',
-                path: '/components/badge'
+                path: '/components/badge',
             },
             {
                 title: 'Button',
-                path: '/components/button'
+                path: '/components/button',
             },
             {
                 title: 'Card',
-                path: '/components/card'
+                path: '/components/card',
             },
             {
                 title: 'Collapse',
-                path: '/components/collapse/'
+                path: '/components/collapse/',
             },
             {
                 title: 'Dropdown',
-                path: '/components/dropdown'
+                path: '/components/dropdown',
             },
             {
                 title: 'Grid',
-                path: '/components/grid'
+                path: '/components/grid',
             },
             {
                 title: 'Hero',
-                path: '/components/hero'
+                path: '/components/hero',
             },
             {
                 title: 'Icon',
-                path: '/components/icon'
+                path: '/components/icon',
             },
             {
                 title: 'Input',
-                path: '/components/input'
+                path: '/components/input',
             },
             {
                 title: 'Layout',
-                path: '/components/layout'
+                path: '/components/layout',
             },
             {
                 title: 'List',
-                path: '/components/list'
+                path: '/components/list',
             },
             {
                 title: 'Menu',
-                path: '/components/menu'
+                path: '/components/menu',
             },
             {
                 title: 'Modal',
-                path: '/components/modal'
+                path: '/components/modal',
             },
             {
                 title: 'Typography',
-                path: '/components/typography'
+                path: '/components/typography',
             },
-        ]
-    }
+        ],
+    },
+
+    {
+        title: 'THEME',
+        pattern: '/theme',
+        links: [
+            {
+                title: 'RMN',
+                path: '/theme',
+            },
+        ],
+    },
+
+    {
+        title: 'UTILITIES',
+        pattern: '/utilities',
+        links: [
+            {
+                title: '[In Development]',
+                path: '/utilities',
+            },
+        ],
+    },
+
+    {
+        title: 'SUPPORT',
+        pattern: '/support',
+        links: [
+            {
+                title: '[In Development]',
+                path: '/support',
+            },
+        ],
+    },
 ];
