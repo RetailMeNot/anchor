@@ -1,130 +1,88 @@
 // REACT
 import * as React from 'react';
+
 // VENDOR
-import styled from 'styled-components';
-import classNames from 'classnames';
 import { Link } from 'gatsby';
-// THEME
-import { colors, sizes } from '../../../../../src/theme';
+import styled from 'styled-components';
 
-export const StyledSideNavigationElement = styled.nav`
-    min-width: 299px;
-    max-width: 299px;
-    background-color: ${colors.silver.base};
-    border-right: solid 1px ${colors.silver.dark};
-    overflow-y: auto;
-    overflow-x: hidden;
+// COMPONENTS
+import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 
-    > ul {
-        > li {
-            border-bottom: solid thin ${colors.silver.dark};
-            > a {
-                font-weight: 500;
-            }
-        }
+// TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
+import { sections } from './sections.ts';
 
-        ul li a {
-            padding-left: ${sizes.padding.lg};
-        }
+const StyledCollapseGroup = styled(CollapseGroup)`
+    li a {
+        text-decoration: none;
 
-        &:last-of-type {
-            padding-bottom: ${sizes.padding.xl};
-        }
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-
-        li {
-            flex: 1;
-
-            a {
-                display: block;
-                padding: ${sizes.padding.md};
-                cursor: pointer;
-                text-decoration: none;
-                color: ${colors.charcoal.light};
-
-                font-size: 0.875rem;
-
-                transition: background-color 250ms;
-
-                &:hover {
-                    background-color: ${colors.silver.dark};
-                }
-
-                &.active {
-                    color: ${colors.charcoal.dark};
-                }
-            }
+        &.active {
+            /* TODO: When we have a dedicated theme provider these colors should be moved into it. */
+            background-color: #e3eef6;
+            color: #007ecd;
         }
     }
 `;
 
-interface SideNavigationProps {
-    className?: string;
-    children?: any;
+interface SectionProperties {
+    title: string;
+    pattern: string;
+    links: object[];
 }
 
-interface NavigationItem {
-    route: string;
-    label: string;
-    children?: any[];
+interface LinkProperties {
+    title: string;
+    path: string;
 }
 
-const navOptions: NavigationItem[] = [
-    { route: '/support', label: 'Support' },
-    {
-        route: '/utilities',
-        label: 'Utilities',
-        children: [{ route: '/theme', label: 'Theme' }],
-    },
-    {
-        route: '/components',
-        label: 'Components',
-        children: [
-            { route: '/components/button', label: 'Button' },
-            { route: '/components/grid', label: 'Grid' },
-            { route: '/components/layout', label: 'Layout' },
-        ],
-    },
-];
+export class SideNavigation extends React.PureComponent {
+    mainOpenIndex: number;
 
-const navLink = (
-    route: string,
-    label: string,
-    children?: any[]
-): React.ReactElement<any> => (
-    <li key={label}>
-        <Link to={route} activeClassName="active">
-            {label}
-        </Link>
-        {children && children.length ? (
-            <ul>
-                {children.map(
-                    ({
-                        route: subRoute,
-                        label: subLabel,
-                        children: subChildren,
-                    }) => navLink(subRoute, subLabel, subChildren)
-                )}
-            </ul>
-        ) : null}
-    </li>
-);
+    // I'm using PureComponent in order to use a constructor since ComponentWillMount is being deprecated.
+    // I need to get the index of the current section in order to pass that value to CollapseGroup.
+    // This is what makes the correct Collapse component open when navigating the site.
+    constructor(props: object) {
+        super(props);
 
-export const SideNavigation = ({
-    className,
-}: SideNavigationProps): React.ReactElement<any> => (
-    <StyledSideNavigationElement className={classNames(className)}>
-        <ul>
-            {navOptions.map(({ route, label, children: navChildren }) =>
-                navLink(route, label, navChildren)
-            )}
-        </ul>
-    </StyledSideNavigationElement>
-);
+        sections.forEach((section: SectionProperties, i: number) => {
+            const { pattern } = section;
+            const { pathname } = window.location;
+
+            // Compares the current url with the path associated to a section and gets its index if it matches.
+            if (pattern.length > 0 && pathname.includes(pattern)) {
+                this.mainOpenIndex = i;
+            }
+        });
+    }
+
+    render() {
+        return (
+            <StyledCollapseGroup
+                theme="compact"
+                openIndex={this.mainOpenIndex}
+                accordion
+            >
+                {sections.map((section: SectionProperties, i: number) => (
+                    <Collapse
+                        openedText={section.title}
+                        key={`collapse-key-${i}`}
+                    >
+                        <ul>
+                            {section.links.map(
+                                (link: LinkProperties, j: number) => (
+                                    <li key={`link-key-${j}`}>
+                                        <Link
+                                            to={link.path}
+                                            activeClassName="active"
+                                        >
+                                            {link.title}
+                                        </Link>
+                                    </li>
+                                )
+                            )}
+                        </ul>
+                    </Collapse>
+                ))}
+            </StyledCollapseGroup>
+        );
+    }
+}
