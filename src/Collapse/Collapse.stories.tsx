@@ -107,6 +107,8 @@ storiesOf('Components/Collapse', module)
             'ChevronDown'
         );
 
+        const Content = content === TEXT ? TextContent : ListContent;
+
         return (
             <ThemeProvider theme={RootTheme}>
                 <section>
@@ -131,25 +133,13 @@ storiesOf('Components/Collapse', module)
                         })}
                     >
                         <Collapse>
-                            {content === TEXT ? (
-                                <TextContent />
-                            ) : (
-                                <ListContent />
-                            )}
+                            <Content />
                         </Collapse>
                         <Collapse>
-                            {content === TEXT ? (
-                                <TextContent />
-                            ) : (
-                                <ListContent />
-                            )}
+                            <Content />
                         </Collapse>
                         <Collapse>
-                            {content === TEXT ? (
-                                <TextContent />
-                            ) : (
-                                <ListContent />
-                            )}
+                            <Content />
                         </Collapse>
                     </CollapseGroup>
                 </section>
