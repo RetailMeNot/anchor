@@ -133,7 +133,7 @@ const variants = {
 const variantStyles = createVariant({
     key: 'collapse.variants',
     prop: 'variant',
-    default: 'comfortable',
+    default: DEFAULT_VARIANT,
     variants: variants,
 });
 
