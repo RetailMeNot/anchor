@@ -31,9 +31,7 @@ export interface TypographyTheme {
     scale: {
         [key: number]: FlattenSimpleInterpolation;
     };
-    tag: {
-        [K in TypographyTags]: FlattenSimpleInterpolation;
-    };
+    tag: { [K in TypographyTags]: FlattenSimpleInterpolation };
 }
 
 export const typography: TypographyTheme = {

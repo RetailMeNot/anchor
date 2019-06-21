@@ -1,18 +1,21 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+import { shallow, mount } from 'enzyme';
+import { ThemeProvider } from '@xstyled/styled-components';
+import { RootTheme } from '../theme';
 // COMPONENT
 import { AutoComplete } from './AutoComplete.component';
-// ENZYME
-import { shallow, mount } from 'enzyme';
 
 describe('Component: AutoComplete', () => {
     it('should be defined', () => {
         const subject = (
-            <AutoComplete
-                placeholder="Search..."
-                dataSource={[{ value: 1, label: 'Result Item 1' }]}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <AutoComplete
+                    placeholder="Search..."
+                    dataSource={[{ value: 1, label: 'Result Item 1' }]}
+                />
+            </ThemeProvider>
         );
         const wrapper = mount(subject);
         const component = shallow(subject);
@@ -27,11 +30,13 @@ describe('Component: AutoComplete', () => {
 
     it('should render with a suffix and prefix', () => {
         const subject = (
-            <AutoComplete
-                prefix={<div>prefix</div>}
-                suffix={<div>suffix</div>}
-                dataSource={[{ value: 1, label: 'Result Item 1' }]}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <AutoComplete
+                    prefix={<div>prefix</div>}
+                    suffix={<div>suffix</div>}
+                    dataSource={[{ value: 1, label: 'Result Item 1' }]}
+                />
+            </ThemeProvider>
         );
 
         const tree = renderer.create(subject).toJSON();
@@ -40,10 +45,12 @@ describe('Component: AutoComplete', () => {
 
     it('should render with a shadow', () => {
         const subject = (
-            <AutoComplete
-                shadow={true}
-                dataSource={[{ value: 1, label: 'Result Item 1' }]}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <AutoComplete
+                    shadow={true}
+                    dataSource={[{ value: 1, label: 'Result Item 1' }]}
+                />
+            </ThemeProvider>
         );
 
         const tree = renderer.create(subject).toJSON();
@@ -52,10 +59,12 @@ describe('Component: AutoComplete', () => {
 
     it('should render without a border', () => {
         const subject = (
-            <AutoComplete
-                border={false}
-                dataSource={[{ value: 1, label: 'Result Item 1' }]}
-            />
+            <ThemeProvider theme={RootTheme}>
+                <AutoComplete
+                    border={false}
+                    dataSource={[{ value: 1, label: 'Result Item 1' }]}
+                />
+            </ThemeProvider>
         );
 
         const tree = renderer.create(subject).toJSON();

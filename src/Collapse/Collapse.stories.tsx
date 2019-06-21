@@ -4,7 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 // VENDOR
-import styled from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import {
     Collapse,
@@ -13,7 +13,7 @@ import {
 } from './Collapse.component';
 import { CollapseGroup } from './CollapseGroup/CollapseGroup.component';
 import * as Icon from '../Icon';
-import { colors } from '../theme';
+import { RootTheme, colors } from '../theme';
 import { Typography } from '../Typography/Typography.component';
 // README
 import * as README from './README.md';
@@ -69,22 +69,29 @@ storiesOf('Components/Collapse', module)
         );
 
         return (
-            <StyledComfortableStory>
-                <Collapse
-                    isOpen={boolean('isOpen', false)}
-                    openedText={text('openedText', DEFAULT_OPENED_TEXT)}
-                    closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
-                    hasBottomBorder={boolean('hasBottomBorder', true)}
-                    openedIcon={React.createElement(Icon[iconOpenedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                    closedIcon={React.createElement(Icon[iconClosedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                >
-                    {content === TEXT ? <TextContent /> : <ListContent />}
-                </Collapse>
-            </StyledComfortableStory>
+            <ThemeProvider theme={RootTheme}>
+                <StyledComfortableStory>
+                    <Collapse
+                        variant={select(
+                            'variant',
+                            ['compact', 'comfortable', 'none'],
+                            'comfortable'
+                        )}
+                        isOpen={boolean('isOpen', false)}
+                        openedText={text('openedText', DEFAULT_OPENED_TEXT)}
+                        closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
+                        hasBottomBorder={boolean('hasBottomBorder', true)}
+                        openedIcon={React.createElement(Icon[iconOpenedPick], {
+                            color: colors.savvyCyan.base,
+                        })}
+                        closedIcon={React.createElement(Icon[iconClosedPick], {
+                            color: colors.savvyCyan.base,
+                        })}
+                    >
+                        {content === TEXT ? <TextContent /> : <ListContent />}
+                    </Collapse>
+                </StyledComfortableStory>
+            </ThemeProvider>
         );
     })
     .add('CollapseGroup', () => {
@@ -101,32 +108,51 @@ storiesOf('Components/Collapse', module)
         );
 
         return (
-            <section>
-                <Typography tag="h2">CollapseGroup Example</Typography>
-                <Typography tag="p">
-                    Adjusting Knobs for CollapseGroup will apply settings to
-                    Collapse child components.
-                </Typography>
-                <CollapseGroup
-                    accordion={boolean('accordion', false)}
-                    openIndex={0}
-                    openedIcon={React.createElement(Icon[iconOpenedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                    closedIcon={React.createElement(Icon[iconClosedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                >
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                </CollapseGroup>
-            </section>
+            <ThemeProvider theme={RootTheme}>
+                <section>
+                    <Typography tag="h2">CollapseGroup Example</Typography>
+                    <Typography tag="p">
+                        Adjusting Knobs for CollapseGroup will apply settings to
+                        Collapse child components.
+                    </Typography>
+                    <CollapseGroup
+                        variant={select(
+                            'variant',
+                            ['compact', 'comfortable', 'none'],
+                            'comfortable'
+                        )}
+                        accordion={boolean('accordion', false)}
+                        openIndex={0}
+                        openedIcon={React.createElement(Icon[iconOpenedPick], {
+                            color: colors.savvyCyan.base,
+                        })}
+                        closedIcon={React.createElement(Icon[iconClosedPick], {
+                            color: colors.savvyCyan.base,
+                        })}
+                    >
+                        <Collapse>
+                            {content === TEXT ? (
+                                <TextContent />
+                            ) : (
+                                <ListContent />
+                            )}
+                        </Collapse>
+                        <Collapse>
+                            {content === TEXT ? (
+                                <TextContent />
+                            ) : (
+                                <ListContent />
+                            )}
+                        </Collapse>
+                        <Collapse>
+                            {content === TEXT ? (
+                                <TextContent />
+                            ) : (
+                                <ListContent />
+                            )}
+                        </Collapse>
+                    </CollapseGroup>
+                </section>
+            </ThemeProvider>
         );
     });
