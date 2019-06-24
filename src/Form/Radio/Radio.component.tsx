@@ -6,9 +6,9 @@ import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
 // ANCHOR
-import { colors } from '../theme/colors.theme';
-import { fonts } from '../theme/fonts.theme';
-import { Typography } from '../Typography';
+import { colors } from '../../theme/colors.theme';
+import { fonts } from '../../theme/fonts.theme';
+import { Typography } from '../../Typography/index';
 
 const StyledInput = styled('input')`
     display: none;

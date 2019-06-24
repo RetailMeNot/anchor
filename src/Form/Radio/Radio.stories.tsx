@@ -4,23 +4,22 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
-// ANCHOR
 // SUBJECT
 import * as README from './README.md';
 import { Radio } from './Radio.component';
 
-// const { useState } = React;
+const { useState } = React;
 
 const StyledStory = styled.div`
     background: #f1f1f1;
     padding: 1rem;
 `;
 
-storiesOf('Components/Radio', module)
+storiesOf('Components/Form/Radio', module)
     .addParameters({ readme: { sidebar: README } })
     .add('Default', () =>
         React.createElement(() => {
-            const [selectedValue, setSelectedValue] = React.useState('banana');
+            const [selectedValue, setSelectedValue] = useState('banana');
 
             function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
                 setSelectedValue(event.target.value);

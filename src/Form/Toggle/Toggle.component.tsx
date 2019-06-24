@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
 // ANCHOR
-import { colors } from '../theme/colors.theme';
+import { colors } from '../../theme/colors.theme';
 
 const metaTextColor = colors.ash.dark;
 

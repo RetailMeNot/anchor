@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 // ANCHOR
-import { colors } from '../theme/index';
+import { colors } from '../../theme/index';
 // SUBJECT
 import * as README from './README.md';
 import { Toggle } from './Toggle.component';
@@ -16,7 +16,7 @@ const StyledStory = styled.div`
     background: ${colors.white.base};
 `;
 
-storiesOf('Components/Toggle', module)
+storiesOf('Components/Form/Toggle', module)
     .addParameters({ readme: { sidebar: README } })
     .add('Default', () =>
         React.createElement(() => {
