@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Radio should be defined 1`] = `"<label class=\\"anchor-radio sc-bwzfXH jAuTqB\\"><input type=\\"checkbox\\" class=\\"sc-bdVaJa dDqVak\\"><span class=\\"anchor-typography sc-htpNat kdTHkA\\"></span></label>"`;

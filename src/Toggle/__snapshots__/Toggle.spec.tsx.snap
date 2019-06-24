@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Toggle should be defined 1`] = `"<label class=\\"anchor-toggle\\"><input type=\\"checkbox\\" class=\\"sc-bdVaJa dDqVak\\"><span class=\\"sc-bwzfXH fWcEK\\"></span></label>"`;

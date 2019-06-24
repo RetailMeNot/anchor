@@ -37,6 +37,7 @@ const componentList = {
     grid: './src/Grid/index.ts',
     hero: './src/Hero/index.ts',
     modal: './src/Modal/index.ts',
+    toggle: './src/Toggle/index.ts',
     layout: './src/Layout/index.ts',
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
