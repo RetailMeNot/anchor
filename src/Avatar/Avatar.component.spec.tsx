@@ -1,13 +1,19 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
+import { RootTheme } from '../theme';
 import { Avatar } from './Avatar.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
-const subject = <Avatar />;
+const subject = (
+    <ThemeProvider theme={RootTheme}>
+        <Avatar />
+    </ThemeProvider>
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 
