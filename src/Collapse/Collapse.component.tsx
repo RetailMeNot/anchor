@@ -3,10 +3,8 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { variant as createVariant } from '@xstyled/system';
+import { variant as createVariant, th } from '@xstyled/system';
 // Components
-import { colors } from '../theme/colors.theme';
-import { fonts } from '../theme/fonts.theme';
 import { ChevronDown, ChevronUp } from '../Icon';
 
 export type CollapseVariants = 'comfortable' | 'compact' | 'none' | string;
@@ -47,8 +45,8 @@ const DEFAULT_VARIANT = 'comfortable';
 const variants = {
     comfortable: css`
         padding: 1rem 2rem;
-        border-top: solid ${colors.silver.dark} 1px;
-        border-bottom: solid ${colors.silver.dark} 1px;
+        border-top: solid thin ${th.color('neutrals.silver.dark')};
+        border-bottom: solid thin ${th.color('neutrals.silver.dark')};
 
         .anchor-collapse-button {
             cursor: pointer;
@@ -77,14 +75,14 @@ const variants = {
         }
     `,
     compact: css`
-        color: ${colors.charcoal.light};
+        color: neutrals.charcoal.light;
 
         .anchor-collapse-button {
-            background-color: ${colors.white.base};
+            background-color: neutrals.white.base;
             border-style: none;
-            border-bottom: solid ${colors.silver.base} 1px;
-            border-top: solid ${colors.silver.base} 1px;
-            color: ${colors.charcoal.light};
+            border-bottom: solid thin ${th.color('borders.light')};
+            border-top: solid thin ${th.color('borders.light')};
+            color: neutrals.charcoal.light;
             cursor: pointer;
             display: block;
             font-weight: bold;
@@ -104,7 +102,7 @@ const variants = {
         }
 
         .anchor-collapse-content {
-            background-color: ${colors.silver.light};
+            background-color: neutrals.silver.light;
 
             ul {
                 padding: 0;
@@ -140,7 +138,7 @@ const variantStyles = createVariant({
 const StyledCollapse = styled.div<StyledCollapseProps>`
     display: block;
     box-sizing: border-box;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
 
     ${variantStyles}
 
