@@ -2,9 +2,11 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-// THEME
-import { colors, fonts } from '../theme';
+import styled, {
+    css,
+    FlattenSimpleInterpolation,
+} from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 interface BadgeProps {
     backgroundColor?: string;
@@ -46,38 +48,38 @@ const BadgeSizeStyles: BadgeStylesGroup = {
     `,
 };
 
-const StyledBadgeContainer = styled.div`
+const StyledBadgeContainer = styled('div')`
     position: relative;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     display: inline-block;
 `;
 
-const StyledBadge = styled.div<BadgeProps>`
+const StyledBadge = styled('div')<BadgeProps>`
     align-items: center;
-    background-color: ${({ backgroundColor }: BadgeProps) => backgroundColor};
+    ${({ backgroundColor, textColor: color }) =>
+        css({ backgroundColor, color })};
     border: 0.125rem solid ${({
         borderColor,
         borderColorHover,
         isParentHovered,
-    }: BadgeProps) => (isParentHovered ? borderColorHover : borderColor)};
+    }) => th.color(isParentHovered ? borderColorHover : borderColor)};
     box-sizing: border-box;
-    color: ${({ textColor }: BadgeProps) => textColor};
     font-weight: 700;
     justify-content: center;
     text-align: center;
 
     /* Border Radius */
-    ${({ count = 1, size }: BadgeProps) =>
+    ${({ count = 1, size }) =>
         size === 'small' && count < 10
             ? `border-radius: 0.4rem;`
             : `border-radius: 1rem;`}
 
     /* Show/Hide */
-    ${({ count, showZero }: BadgeProps) =>
+    ${({ count, showZero }) =>
         !showZero && count === 0 ? `display: none;` : `display: flex;`}
 
     /* Non-standalone styles */
-    ${({ offsetBottom, offsetLeft, standalone }: BadgeProps) =>
+    ${({ offsetBottom, offsetLeft, standalone }) =>
         standalone
             ? null
             : `
@@ -87,18 +89,18 @@ const StyledBadge = styled.div<BadgeProps>`
     `}
 
     /* Sizes */
-    ${({ size = 'dot' }: BadgeProps) => BadgeSizeStyles[size]}
+    ${({ size = 'dot' }) => BadgeSizeStyles[size]}
 
     &:hover {
-        border: 0.125rem solid ${({ borderColorHover }: BadgeProps) =>
-            borderColorHover};
+        border: 0.125rem solid ${({ borderColorHover }) =>
+            th.color(borderColorHover)};
     }
 `;
 
 export const Badge = ({
-    backgroundColor = colors.flashPink.base,
-    borderColor,
-    borderColorHover,
+    backgroundColor = 'error',
+    borderColor = 'error',
+    borderColorHover = 'error',
     children,
     className,
     count = 0,
@@ -109,7 +111,7 @@ export const Badge = ({
     size = 'dot',
     showZero = false,
     standalone = false,
-    textColor = colors.white.base,
+    textColor = 'neutrals.white.base',
     ...props
 }: BadgeProps): JSX.Element => {
     const getDisplayCount = (

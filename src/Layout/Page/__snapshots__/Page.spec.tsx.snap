@@ -1,16 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Page should be defined. 1`] = `
+.c2 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.c1 {
+  display: grid;
+  height: 100vh;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(20px,auto);
+  grid-template-rows: minmax(1.5rem,auto) 1fr minmax(20.375rem,auto);
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 8px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100%;
+  width: 100vw;
+}
+
 <main
-  className="anchor-page sc-bwzfXH iBroqk"
+  className="anchor-page c0"
 >
   <div
-    className="anchor-grid Grid__Grid-bojwg clknHu"
+    className="anchor-grid c1"
     height="100vh"
     rows="minmax(1.5rem,auto) 1fr minmax(20.375rem,auto)"
   >
     <div
-      className="anchor-cell Cell__Cell-jsYrZv fDguhG"
+      className="anchor-cell c2"
     />
   </div>
 </main>

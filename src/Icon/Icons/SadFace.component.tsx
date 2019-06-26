@@ -14,10 +14,12 @@ export const SadFace = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon sad-face', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

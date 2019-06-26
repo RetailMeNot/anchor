@@ -1,11 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Menu should be defined 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 250px;
+  background-color: primary.base;
+  font-size: 0.875rem;
+  border-radius: base;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c0 > * > a,
+.c0 > a {
+  display: inline-block;
+  line-height: 1.125rem;
+  color: neutrals.white.base;
+  -webkit-transition: background-color 500ms,color:500ms;
+  transition: background-color 500ms,color:500ms;
+  margin: 0 0.125rem;
+}
+
+.c0 > * > a:hover,
+.c0 > a:hover {
+  color: neutrals.white.base;
+  background-color: rgba(255,255,255,.1);
+}
+
+.c0 > * > a:active,
+.c0 > a:active,
+.c0 > * > a.active,
+.c0 > a.active {
+  color: color:neutrals.white.base;
+  background-color: rgba(255,255,255,.1);
+}
+
+.c0 > * > a:focus,
+.c0 > a:focus {
+  background-color: rgba(255,255,255,.1);
+}
+
+.c0 > * > a:first-of-type,
+.c0 > a:first-of-type {
+  margin-left: 0;
+}
+
+.c0 > * > a:last-of-type,
+.c0 > a:last-of-type {
+  margin-right: 0;
+}
+
+.c0 > * > a,
+.c0 > a {
+  border-radius: base;
+  font-weight: 600;
+  padding: 1rem 0.75rem;
+}
+
+.c1 {
+  cursor: pointer;
+  text-align: center;
+  color: text.body;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.c1 svg {
+  max-width: 8px;
+}
+
 <nav
-  className="anchor-menu sc-bdVaJa bAhNXE"
+  className="anchor-menu c0"
 >
   <a
-    className="anchor-menu-item sc-bwzfXH dOqrMo"
+    className="anchor-menu-item c1"
   >
     Derp
   </a>

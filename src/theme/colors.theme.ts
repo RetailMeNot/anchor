@@ -92,3 +92,68 @@ export const colors = {
         dark: '#268068',
     },
 };
+
+type ColorHue = { light: string; base: string; dark: string };
+type Neutrals = 'white' | 'ash' | 'silver' | 'charcoal';
+
+export interface ColorsThemeSchema {
+    primary: ColorHue;
+    secondary: ColorHue;
+    accent: ColorHue;
+    neutrals: { [K in Neutrals]: ColorHue };
+
+    borders: {
+        base: string;
+        light: string;
+        dark: string;
+        error: string;
+        success: string;
+    };
+
+    text: {
+        body: string;
+        link: {
+            base: string;
+            hover: string;
+            focus: string;
+            visited: string;
+        };
+        placeholder: string;
+    };
+
+    error: string;
+    success: string;
+}
+
+export const ColorsTheme: ColorsThemeSchema = {
+    primary: colors.grapePurchase,
+    accent: colors.savvyCyan,
+    secondary: colors.dealEnvy,
+    neutrals: {
+        white: colors.white,
+        ash: colors.ash,
+        silver: colors.silver,
+        charcoal: colors.charcoal,
+    },
+    borders: {
+        // PRAGMATIC
+        light: colors.silver.base,
+        base: colors.ash.light,
+        dark: colors.ash.dark,
+        // SEMANTIC
+        error: colors.ash.dark,
+        success: colors.ash.dark,
+    },
+    text: {
+        body: colors.charcoal.base,
+        link: {
+            base: colors.savvyCyan.dark,
+            hover: colors.savvyCyan.dark,
+            focus: colors.savvyCyan.dark,
+            visited: colors.savvyCyan.dark,
+        },
+        placeholder: colors.ash.dark,
+    },
+    error: colors.fireSale.dark,
+    success: colors.dealEnvy.dark,
+};

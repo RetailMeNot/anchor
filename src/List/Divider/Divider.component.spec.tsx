@@ -1,10 +1,10 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+// VENDOR
+import { shallow, mount } from 'enzyme';
 // COMPONENT
 import { Divider } from './Divider.component';
-// ENZYME
-import { shallow, mount } from 'enzyme';
 
 describe('Component: Divider', () => {
     it('should be defined', () => {

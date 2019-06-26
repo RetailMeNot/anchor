@@ -1,7 +1,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 // COMPONENTS
 import { Grid, Cell } from '../../Grid';
@@ -14,7 +14,7 @@ export const DEFAULT_FOOTER_HEIGHT = '20.375rem';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledPage = styled.main`
+const StyledPage = styled('main')`
     display: flex;
     flex-direction: column;
     height: 100vh;

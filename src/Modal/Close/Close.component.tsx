@@ -6,10 +6,10 @@ import { Button, ButtonProps } from '../../Button';
 import { Close } from '../../Icon';
 
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 
-const StyledClose = styled.div`
+const StyledClose = styled('div')`
     position: absolute;
     height: 3rem;
     width: 3rem;

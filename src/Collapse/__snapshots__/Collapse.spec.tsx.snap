@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Collapse should match its snapshot. 1`] = `
+.c1 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+.c0 {
+  display: block;
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  padding: 1rem 2rem;
+  border-top: solid thin #D3D3D3;
+  border-bottom: solid thin #D3D3D3;
+}
+
+.c0 .anchor-collapse-button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-style: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .anchor-collapse-button:focus {
+  outline: none;
+}
+
+.c0 .anchor-collapse-button span:last-child {
+  float: right;
+}
+
+.c0 .anchor-collapse-content {
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+.c0.no-bottom-border {
+  border-bottom-style: none;
+}
+
+.c0.no-bottom-border .anchor-collapse-button {
+  border-bottom-style: none;
+}
+
+<div
+  className="anchor-collapse comfortable c0"
+>
+  <button
+    className="anchor-collapse-button"
+    onClick={[Function]}
+  >
+    Open
+     
+    <span
+      className="anchor-icon chevron-up c1"
+      scale="md"
+    >
+      <svg
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 7.523l2.954 2.518a.77.77 0 0 0 1.058-.001l.014-.014a.721.721 0 0 0-.009-1.052L8.53 5.96a.767.767 0 0 0-1.048-.009l-3.506 3.03a.719.719 0 0 0-.001 1.043l.015.015a.767.767 0 0 0 1.048.01L8 7.523z"
+          fill="currentColor"
+          fillRule="nonzero"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;

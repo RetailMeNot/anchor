@@ -1,5 +1,5 @@
 // VENDOR
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from '@xstyled/styled-components';
 
 export const NormalizeCSS = createGlobalStyle`
   html {

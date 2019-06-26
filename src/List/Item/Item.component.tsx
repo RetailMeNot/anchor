@@ -2,11 +2,9 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
-// THEME
-import { colors, sizes, variables } from '../../theme';
 
 export interface ItemProps {
     onMouseOver?: (event: React.MouseEvent) => any;
@@ -18,19 +16,23 @@ export interface ItemProps {
     className?: string;
 }
 
-const StyledItem = styled.a`
+const StyledItem = styled('a')`
     display: flex;
-    border-radius: ${variables.borderRadius};
-    padding: ${sizes.padding.sm} ${sizes.padding.md};
+    border-radius: base;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 500ms;
-    background-color: ${colors.white.base};
+    background-color: neutrals.white.base;
     &:hover {
-        background-color: ${colors.silver.light};
+        background-color: neutrals.silver.light;
     }
 
     &.active {
-        background-color: ${colors.silver.base};
+        background-color: neutrals.silver.base;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 `;
 

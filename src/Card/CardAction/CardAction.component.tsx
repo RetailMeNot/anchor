@@ -2,27 +2,26 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
-// THEME
-import { fonts } from '../../theme';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 export interface CardActionProps {
     className?: string;
     children?: any;
 }
 
-const StyledCard = styled.div`
+const StyledCard = styled('div')`
     box-sizing: border-box;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     top: 0;
     right: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: white;
+    background-color: neutrals.white.base;
     z-index: 1;
 `;
 

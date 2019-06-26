@@ -3,19 +3,19 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
 import { Search } from '../Icon';
 import { Grid, Cell } from '../Grid';
 import { Item } from '../List';
 import { Typography } from '../Typography';
-import { colors } from '../theme';
+import { colors, RootTheme } from '../theme';
 // README
 import * as README from './README.md';
 // THEME
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     box-sizing: border-box;
     min-width: 90vw;
 `;
@@ -41,22 +41,24 @@ const StateBasedAutoCompleteStory = () => {
         tempDataStringSource('')
     );
     return (
-        <StyledStory>
-            <Grid columns={1}>
-                <Cell width={1}>
-                    <Typography tag="h1">AutoComplete 1</Typography>
-                    <br />
-                    <AutoComplete
-                        placeholder="Search here..."
-                        onFilter={(newTerm: any) => {
-                            setTempData(tempDataStringSource(newTerm));
-                        }}
-                        prefix={<Search color={colors.ash.base} />}
-                        dataSource={tempData}
-                    />
-                </Cell>
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns={1}>
+                    <Cell width={1}>
+                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <br />
+                        <AutoComplete
+                            placeholder="Search here..."
+                            onFilter={(newTerm: any) => {
+                                setTempData(tempDataStringSource(newTerm));
+                            }}
+                            prefix={<Search color={colors.ash.base} />}
+                            dataSource={tempData}
+                        />
+                    </Cell>
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 
@@ -82,23 +84,25 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
         tempDataStringSource('')
     );
     return (
-        <StyledStory>
-            <Grid columns={1}>
-                <Cell width={1}>
-                    <Typography tag="h1">AutoComplete 1</Typography>
-                    <br />
-                    <AutoComplete
-                        placeholder="Search here..."
-                        onFilter={(newTerm: any) => {
-                            setTempData(tempDataStringSource(newTerm));
-                        }}
-                        prefix={<Search color={colors.ash.base} />}
-                        dataSource={tempData}
-                        resultTemplate={CustomResult}
-                    />
-                </Cell>
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns={1}>
+                    <Cell width={1}>
+                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <br />
+                        <AutoComplete
+                            placeholder="Search here..."
+                            onFilter={(newTerm: any) => {
+                                setTempData(tempDataStringSource(newTerm));
+                            }}
+                            prefix={<Search color={colors.ash.base} />}
+                            dataSource={tempData}
+                            resultTemplate={CustomResult}
+                        />
+                    </Cell>
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     );
 };
 
@@ -113,47 +117,49 @@ storiesOf('Components/AutoComplete', module)
         <StateBasedAutoCompleteStoryCustomResult />
     ))
     .add('Object Array Results', () => (
-        <StyledStory>
-            <Grid columns={1}>
-                <Cell width={1}>
-                    <Typography tag="h1">AutoComplete 1</Typography>
-                    <br />
-                    <AutoComplete
-                        allowClear={true}
-                        placeholder="Search here..."
-                        prefix={<Search color={colors.ash.base} />}
-                        dataSource={[
-                            {
-                                label: 'Title of a section 1',
-                                id: 1,
-                                someBoolean: false,
-                                listItemType: 'title',
-                            },
-                            { label: 'Item 1', id: 2, someBoolean: true },
-                            { label: 'Item 3', id: 3, someBoolean: true },
-                            { label: 'Item 4', id: 4, someBoolean: true },
-                            { label: 'Item 5', id: 5, someBoolean: true },
-                            {
-                                label: 'Title of a section 2',
-                                id: 6,
-                                someBoolean: true,
-                                listItemType: 'title',
-                            },
-                            { label: 'Item 7', id: 7, someBoolean: true },
-                            { label: 'Item 8', id: 8, someBoolean: true },
-                            {
-                                label: 'Title of a section 3',
-                                id: 9,
-                                someBoolean: true,
-                                listItemType: 'title',
-                            },
-                            {
-                                listItemType: 'divider',
-                            },
-                            { label: 'Item 11', id: 11, someBoolean: true },
-                        ]}
-                    />
-                </Cell>
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns={1}>
+                    <Cell width={1}>
+                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <br />
+                        <AutoComplete
+                            allowClear={true}
+                            placeholder="Search here..."
+                            prefix={<Search color={colors.ash.base} />}
+                            dataSource={[
+                                {
+                                    label: 'Title of a section 1',
+                                    id: 1,
+                                    someBoolean: false,
+                                    listItemType: 'title',
+                                },
+                                { label: 'Item 1', id: 2, someBoolean: true },
+                                { label: 'Item 3', id: 3, someBoolean: true },
+                                { label: 'Item 4', id: 4, someBoolean: true },
+                                { label: 'Item 5', id: 5, someBoolean: true },
+                                {
+                                    label: 'Title of a section 2',
+                                    id: 6,
+                                    someBoolean: true,
+                                    listItemType: 'title',
+                                },
+                                { label: 'Item 7', id: 7, someBoolean: true },
+                                { label: 'Item 8', id: 8, someBoolean: true },
+                                {
+                                    label: 'Title of a section 3',
+                                    id: 9,
+                                    someBoolean: true,
+                                    listItemType: 'title',
+                                },
+                                {
+                                    listItemType: 'divider',
+                                },
+                                { label: 'Item 11', id: 11, someBoolean: true },
+                            ]}
+                        />
+                    </Cell>
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ));

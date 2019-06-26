@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // THEME
 import { colors } from '../../theme';
 
@@ -16,7 +16,7 @@ export interface DividerProps {
     className?: string;
 }
 
-const StyledDivider = styled.div`
+const StyledDivider = styled('div')`
     height: .5rem;
     border-top: solid thin ${colors.ash.light}
     margin-top: 1rem;

@@ -14,10 +14,12 @@ export const ArrowForward = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon arrow-forward', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

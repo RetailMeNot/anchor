@@ -14,10 +14,12 @@ export const EllipsesVertical = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon ellipses-vertical', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

@@ -14,10 +14,12 @@ export const Search = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon search', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

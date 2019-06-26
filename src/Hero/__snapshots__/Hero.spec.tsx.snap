@@ -68,14 +68,6 @@ exports[`Component: Hero should render with custom content 1`] = `
   margin-left: 1rem;
 }
 
-.c5 > .anchor-button-prefix {
-  margin-right: 0.5rem;
-}
-
-.c5 > .anchor-button-suffix {
-  margin-left: 0.5rem;
-}
-
 .c5:hover,
 .c5:focus,
 .c5:active {
@@ -123,19 +115,22 @@ exports[`Component: Hero should render with custom content 1`] = `
 }
 
 .c2 {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: normal;
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
   text-align: inherit;
   text-transform: none;
-  font-size: 2rem;
-  line-height: 2.5rem;
   font-weight: 600;
 }
 
@@ -144,11 +139,16 @@ exports[`Component: Hero should render with custom content 1`] = `
 }
 
 .c3 {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
 }
@@ -209,19 +209,22 @@ exports[`Component: Hero should render with title 1`] = `
 }
 
 .c2 {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: normal;
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
   text-align: inherit;
   text-transform: none;
-  font-size: 2rem;
-  line-height: 2.5rem;
   font-weight: 600;
 }
 
@@ -277,19 +280,22 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 }
 
 .c2 {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: normal;
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
   text-align: inherit;
   text-transform: none;
-  font-size: 2rem;
-  line-height: 2.5rem;
   font-weight: 600;
 }
 
@@ -298,15 +304,18 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 }
 
 .c4 {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
   margin: 0;
   padding: 0;
   color: inherit;
-  text-align: inherit;
-  text-transform: none;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  text-align: inherit;
+  text-transform: none;
   font-weight: 600;
 }
 

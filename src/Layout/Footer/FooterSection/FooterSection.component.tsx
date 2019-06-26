@@ -1,18 +1,17 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled, { css } from 'styled-components';
-// STYLES
-import { colors, fonts } from '../../../theme';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 const reset = css`
     margin: 0;
     padding: 0;
 `;
 
-const StyledFooterSectionElement = styled.section`
+const StyledFooterSectionElement = styled('section')`
     width: 6.875rem;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     font-size: 0.75rem;
 
     h4 {
@@ -21,7 +20,7 @@ const StyledFooterSectionElement = styled.section`
         font-weight: 700;
         font-size: 0.75rem;
         line-height: 1rem;
-        color: ${colors.charcoal.light};
+        color: font.body;
     }
 
     ul {
@@ -43,7 +42,7 @@ const StyledFooterSectionElement = styled.section`
         display: block;
         margin-bottom: 0.75rem;
         text-decoration: none;
-        color: ${colors.charcoal.light};
+        color: text.body;
         font-weight: 500;
     }
 `;

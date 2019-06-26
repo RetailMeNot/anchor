@@ -1,23 +1,24 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// Vendor
+// VENDOR
 import { shallow, mount } from 'enzyme';
-// tslint:disable-next-line: no-import-side-effect
-import 'jest-styled-components';
-/* tslint:enable */
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
+import { RootTheme } from '../../theme';
 import { CollapseGroup } from './CollapseGroup.component';
 import { Collapse } from '../Collapse.component';
 
 describe('Component: CollapseGroup', () => {
     it('should match its snapshot.', () => {
         const subject = (
-            <CollapseGroup theme="comfortable">
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-            </CollapseGroup>
+            <ThemeProvider theme={RootTheme}>
+                <CollapseGroup variant="comfortable">
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                </CollapseGroup>
+            </ThemeProvider>
         );
         const component = shallow(subject);
 
@@ -31,11 +32,13 @@ describe('Component: CollapseGroup', () => {
 
     it("should show only one Collapse component's content when accordion is true.", () => {
         const subject = (
-            <CollapseGroup accordion openIndex={1}>
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-            </CollapseGroup>
+            <ThemeProvider theme={RootTheme}>
+                <CollapseGroup accordion openIndex={1}>
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                </CollapseGroup>
+            </ThemeProvider>
         );
         const wrapper = mount(subject);
         const toggleButton = wrapper.find('.anchor-collapse-button').first();
@@ -49,11 +52,13 @@ describe('Component: CollapseGroup', () => {
     // tslint:disable-next-line: max-line-length
     it("should assign props specified on the component to child Collapse child component's, and override them.", () => {
         const subject = (
-            <CollapseGroup theme="comfortable">
-                <Collapse>Hello World</Collapse>
-                <Collapse theme="none">Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-            </CollapseGroup>
+            <ThemeProvider theme={RootTheme}>
+                <CollapseGroup variant="comfortable">
+                    <Collapse>Hello World</Collapse>
+                    <Collapse variant="none">Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                </CollapseGroup>
+            </ThemeProvider>
         );
         const component = mount(subject);
 
@@ -64,11 +69,13 @@ describe('Component: CollapseGroup', () => {
 
     it('should remove the bottom border of Collapse child components.', () => {
         const subject = (
-            <CollapseGroup>
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-                <Collapse>Hello World</Collapse>
-            </CollapseGroup>
+            <ThemeProvider theme={RootTheme}>
+                <CollapseGroup>
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                    <Collapse>Hello World</Collapse>
+                </CollapseGroup>
+            </ThemeProvider>
         );
         const wrapper = mount(subject);
 

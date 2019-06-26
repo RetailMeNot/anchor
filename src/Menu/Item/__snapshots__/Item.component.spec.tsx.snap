@@ -1,14 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Item should be defined 1`] = `
+.c0 {
+  cursor: pointer;
+  text-align: center;
+  color: text.body;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.c0 svg {
+  max-width: 8px;
+}
+
 <a
-  className="anchor-menu-item sc-bdVaJa dlTGkF"
+  className="anchor-menu-item c0"
 />
 `;
 
 exports[`Component: Item should render with label 1`] = `
+.c0 {
+  cursor: pointer;
+  text-align: center;
+  color: text.body;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.c0 svg {
+  max-width: 8px;
+}
+
 <a
-  className="anchor-menu-item sc-bdVaJa dlTGkF"
+  className="anchor-menu-item c0"
 >
   label
 </a>

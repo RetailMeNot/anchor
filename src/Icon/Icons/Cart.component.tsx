@@ -14,10 +14,12 @@ export const Cart = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon cart', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

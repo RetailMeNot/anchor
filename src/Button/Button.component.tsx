@@ -2,18 +2,25 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import styled, {
+    css,
+    FlattenSimpleInterpolation,
+} from '@xstyled/styled-components';
+import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
-import { colors, fonts, sizes } from '../theme';
+import { colors } from '../theme/colors.theme';
+import { fonts } from '../theme/fonts.theme';
+import { sizes } from '../theme/sizes.theme';
 import { Theme, TRANSITION_SPEED } from './utils';
+import { rem } from '../utils/rem/rem';
 import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
 
-type Variant = 'primary' | 'outline' | 'minimal';
+type Variant = 'filled' | 'outline' | 'minimal';
 
-type ButtonSize = 'lg' | 'md' | 'sm' | 'xs';
+type ButtonSize = 'lg' | 'md' | 'sm' | 'xs' | string;
 
 export interface ButtonProps {
     children?: any;
@@ -43,14 +50,16 @@ export interface ButtonProps {
     size?: ButtonSize;
 }
 
-interface StyledButtonProps extends ButtonProps {
+export interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
     borderRadius: string;
     buttonStyles: ButtonStyles;
+    padding?: string;
 
     // named this way to avoid applying html attributes
     $height: number;
     $size: ButtonSize;
+    $fontSize?: string | number;
 
     // make nonnullable
     colorTheme: Theme;
@@ -58,7 +67,7 @@ interface StyledButtonProps extends ButtonProps {
 }
 
 const themeDefaults = {
-    primary: colors.savvyCyan,
+    filled: colors.savvyCyan,
     outline: {
         base: colors.savvyCyan.dark,
         light: colors.savvyCyan.base,
@@ -72,7 +81,7 @@ const themeDefaults = {
 };
 
 const reverseDefaults = {
-    primary: {
+    filled: {
         base: colors.charcoal.light,
         light: colors.charcoal.light,
         dark: colors.charcoal.dark,
@@ -85,207 +94,248 @@ const reverseDefaults = {
     minimal: colors.white,
 };
 
-const dimensions = {
-    xs: {
-        width: 4,
-        height: 2,
-        padding: 0.5,
-        circularPadding: 1,
-        fontSize: 0.75,
+export const BUTTON_KEY = 'buttons';
+export const BUTTON_THEME = {
+    sizes: {
+        xs: {
+            minWidth: 4,
+            height: 2,
+            padding: 0.5,
+            circularPadding: 1,
+            fontSize: 0.75,
+            affixSpacing: 0.375,
+        },
+        sm: {
+            minWidth: 5,
+            height: 2.5,
+            padding: 1,
+            circularPadding: 1.5,
+            fontSize: 0.875,
+            affixSpacing: 0.375,
+        },
+        md: {
+            minWidth: 12.5,
+            height: 3,
+            padding: 1.5,
+            circularPadding: 2,
+            fontSize: 1,
+            affixSpacing: 0.5,
+        },
+        lg: {
+            minWidth: 12.5,
+            height: 3.5,
+            padding: 2,
+            circularPadding: 2.5,
+            fontSize: 1,
+            affixSpacing: 0.5,
+        },
     },
-    sm: {
-        width: 5,
-        height: 2.5,
-        padding: 1,
-        circularPadding: 1.5,
-        fontSize: 0.875,
-    },
-    md: {
-        width: 12.5,
-        height: 3,
-        padding: 1.5,
-        circularPadding: 2,
-        fontSize: 1,
-    },
-    lg: {
-        width: 12.5,
-        height: 3.5,
-        padding: 2,
-        circularPadding: 2.5,
-        fontSize: 1,
-    },
-};
 
-const affixSpacing = (size: ButtonSize) =>
-    size === 'lg' || size === 'md' ? 0.5 : 0.375;
-
-interface ButtonStyles {
-    base: FlattenSimpleInterpolation;
-    disabled: FlattenSimpleInterpolation;
-    hover: FlattenSimpleInterpolation;
-    active?: FlattenSimpleInterpolation;
-    focus?: FlattenSimpleInterpolation;
-    focusOutline?: FlattenSimpleInterpolation;
-}
-
-interface ButtonStylesGroup {
-    [key: string]: ButtonStyles;
-}
-
-const ButtonColorStyles = ({
-    colorTheme,
-    reverse,
-}: {
-    colorTheme: Theme;
-    reverse?: boolean;
-}): ButtonStylesGroup => {
-    const { base, dark, light } = colorTheme;
-
-    if (reverse) {
-        return {
-            primary: {
-                base: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                    color: ${base};
-                `,
-                disabled: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                    color: ${base};
-                    opacity: 0.5;
-                `,
-                hover: css`
-                    border: solid thin
-                        ${transparentize(0.15, colors.white.base)};
-                    background-color: ${transparentize(
-                        0.15,
-                        colors.white.base
-                    )};
-                    color: ${base};
-                `,
-                active: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                `,
-                focus: css`
-                    border: solid thin ${colors.white.base};
-                    background-color: ${colors.white.base};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-            outline: {
-                base: css`
-                    border: solid thin ${base};
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                disabled: css`
-                    opacity: 0.5;
-                    border: solid thin ${base};
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                hover: css`
-                    border: solid thin ${base};
-                    background-color: ${base};
-                    color: ${colors.charcoal.light};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-            minimal: {
-                base: css`
-                    border: solid thin transparent;
-                    background-color: transparent;
-                    color: ${base};
-                `,
-                disabled: css`
-                    border: solid thin transparent;
-                    background-color: transparent;
-                    color: ${colors.ash.dark};
-                `,
-                hover: css`
-                    background: ${transparentize(0.84, base)};
-                    color: ${base};
-                `,
-                active: css`
-                    background: ${transparentize(0.8, base)};
-                `,
-                focusOutline: css`
-                    box-shadow: 0 0 0 2px
-                        ${transparentize(0.6, colors.white.base)};
-                `,
-            },
-        };
-    }
-
-    return {
-        primary: {
-            base: css`
-                border: solid thin ${base};
-                background-color: ${base};
-                color: ${colors.white.base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.light};
-                background-color: ${colors.ash.light};
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background-color: ${dark};
-                border: solid thin ${dark};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, base)};
-            `,
+    variants: {
+        filled: {
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: ${colorTheme.base};
+                          color: ${colors.white.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                          color: ${colorTheme.base};
+                          opacity: 0.5;
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.light};
+                          background-color: ${colors.ash.light};
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin
+                              ${transparentize(0.15, colors.white.base)};
+                          background-color: ${transparentize(
+                              0.15,
+                              colors.white.base
+                          )};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          background-color: ${colorTheme.dark};
+                          border: solid thin ${colorTheme.dark};
+                      `,
+            active: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                      `
+                    : undefined,
+            focus: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colors.white.base};
+                          background-color: ${colors.white.base};
+                      `
+                    : undefined,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colorTheme.base)};
+                      `,
         },
         outline: {
-            base: css`
-                border: solid thin ${base};
-                background-color: transparent;
-                color: ${base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.dark};
-                background-color: transparent;
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background-color: ${dark};
-                border: solid thin ${dark};
-                color: ${colors.white.base};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, light)};
-            `,
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          opacity: 0.5;
+                          border: solid thin ${colorTheme.base};
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.dark};
+                          background-color: transparent;
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin ${colorTheme.base};
+                          background-color: ${colorTheme.base};
+                          color: ${colors.charcoal.light};
+                      `
+                    : css`
+                          background-color: ${colorTheme.dark};
+                          border: solid thin ${colorTheme.dark};
+                          color: ${colors.white.base};
+                      `,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colorTheme.light)};
+                      `,
         },
         minimal: {
-            base: css`
-                border: solid thin transparent;
-                background-color: transparent;
-                color: ${base};
-            `,
-            disabled: css`
-                border: solid thin ${colors.ash.light};
-                background-color: ${colors.ash.light};
-                color: ${colors.ash.dark};
-            `,
-            hover: css`
-                background: ${transparentize(0.84, colors.ash.dark)};
-                color: ${dark};
-            `,
-            focusOutline: css`
-                box-shadow: 0 0 0 2px ${transparentize(0.6, colors.ash.dark)};
-            `,
+            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colorTheme.base};
+                      `,
+            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          border: solid thin transparent;
+                          background-color: transparent;
+                          color: ${colors.ash.dark};
+                      `
+                    : css`
+                          border: solid thin ${colors.ash.light};
+                          background-color: ${colors.ash.light};
+                          color: ${colors.ash.dark};
+                      `,
+            hover: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          background: ${transparentize(0.84, colorTheme.base)};
+                          color: ${colorTheme.base};
+                      `
+                    : css`
+                          background: ${transparentize(0.84, colors.ash.dark)};
+                          color: ${colorTheme.dark};
+                      `,
+            active: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          background: ${transparentize(0.8, colorTheme.base)};
+                      `
+                    : undefined,
+            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+                reverse
+                    ? css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.white.base)};
+                      `
+                    : css`
+                          box-shadow: 0 0 0 2px
+                              ${transparentize(0.6, colors.ash.dark)};
+                      `,
         },
-    };
+    },
 };
+
+const sizeStyles = createVariant({
+    key: 'buttons.sizes',
+    prop: 'size',
+    default: 'md',
+    variants: BUTTON_THEME.sizes,
+});
+
+interface ButtonStyles {
+    base:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    disabled:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    hover:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    active?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    focus?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+    focusOutline?:
+        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+        | FlattenSimpleInterpolation;
+}
+
+const stateStyles = createVariant({
+    key: 'buttons.variants',
+    prop: 'variant',
+    default: 'filled',
+    variants: BUTTON_THEME.variants,
+});
 
 const OutlineStyles = ({
     buttonStyles,
@@ -299,21 +349,25 @@ const OutlineStyles = ({
             content: '';
 
             // overlap border and extend 2px past
+            // TODO: determine xstyled approach for resolving calculations
             top: calc(-${sizes.border.width.base} - 2px);
             left: calc(-${sizes.border.width.base} - 2px);
             right: calc(-${sizes.border.width.base} - 2px);
             bottom: calc(-${sizes.border.width.base} - 2px);
 
-            border-radius: calc(${borderRadius} + 2px);
+            border-radius: calc(${th.radius(borderRadius)} + 2px);
 
             // shadow instead of border so that it doesn't contribute to clickable area
             ${buttonStyles.focusOutline}
         }
     `;
 
-const StyledButton = styled.button<StyledButtonProps>`
-	position: relative;
-    border-radius: ${(props: StyledButtonProps) => props.borderRadius};
+// TODO: grep styled. to styled('')
+const StyledButton = styled('button')<StyledButtonProps>`
+    position: relative;
+    ${({ borderRadius }) => css`
+        border-radius: ${borderRadius};
+    `}
 	font-weight: 600;
 	font-family: ${fonts.fontFamily};
 	text-align: center;
@@ -352,41 +406,21 @@ const StyledButton = styled.button<StyledButtonProps>`
             : buttonStyles.base}
 
     /* Sizing */
-    padding: ${({ $size, circular, iconOnly }: StyledButtonProps) =>
-        iconOnly
-            ? '0'
-            : `0 ${
-                  circular
-                      ? dimensions[$size].circularPadding
-                      : dimensions[$size].padding
-              }rem`};
-    font-size: ${({ $size }) => dimensions[$size].fontSize}rem;
-    height: ${({ $height }) => $height}rem;
-    ${({ $size, minWidth, iconOnly, $height, block }: StyledButtonProps) =>
-        iconOnly
-            ? css`
-                  // Make it a square
-                  width: ${$height}rem;
-              `
-            : block
+    ${({ $fontSize, $height, padding }) => css`
+        padding: ${padding};
+        font-size: ${rem($fontSize)};
+        height: ${rem($height)};
+    `}
+
+
+    ${({ minWidth, block }: StyledButtonProps) =>
+        block
             ? css`
                   width: 100%;
               `
             : css`
-                  min-width: ${minWidth || `${dimensions[$size].width}rem`};
+                  min-width: ${rem(minWidth)};
               `}
-
-    ${({ iconOnly, $size }: StyledButtonProps) =>
-        !iconOnly &&
-        css`
-            // Space icon from text
-            & > .anchor-button-prefix {
-                margin-right: ${affixSpacing($size)}rem;
-            }
-            & > .anchor-button-suffix {
-                margin-left: ${affixSpacing($size)}rem;
-            }
-        `}
 
     /* State styles */
     ${({
@@ -442,7 +476,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 
     /* Revealed State */
     ${({ variant, revealed }: StyledButtonProps) =>
-        variant === 'primary' &&
+        variant === 'filled' &&
         revealed &&
         css`
             background-color: ${colors.silver.base};
@@ -455,7 +489,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 export const Button = ({
     className,
     flip = false,
-    variant = 'primary',
+    variant = 'filled',
     size = 'md',
     outline = true,
     block,
@@ -509,11 +543,15 @@ export const Button = ({
             : 'lg'
         : 'md';
 
-    const height = dimensions[size].height;
-    const borderRadius = circular
-        ? `${height / 2}rem`
-        : sizes.border.radius.base;
-    const width = iconOnly ? dimensions[size].height : dimensions[size].width;
+    const dims = sizeStyles({ ...props, size });
+    const { height, affixSpacing, fontSize, minWidth: themeWidth } = dims;
+
+    // Value just needs to be larger than the height
+    // to make the ends circular. We're using a very
+    // large radius so that it doesn't actually have
+    // to be calculated from the height.
+    const borderRadius = circular ? 'circular' : 'base';
+    const width = iconOnly ? height : minWidth || themeWidth;
 
     if (!colorTheme) {
         colorTheme = reverse
@@ -521,7 +559,11 @@ export const Button = ({
             : themeDefaults[variant];
     }
 
-    const buttonStyles = ButtonColorStyles({ colorTheme, reverse })[variant];
+    const padding = iconOnly
+        ? '0'
+        : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
+
+    const buttonStyles = stateStyles({ ...props, colorTheme, variant });
 
     return (
         <StyledButton
@@ -530,8 +572,10 @@ export const Button = ({
             block={block}
             outline={outline}
             colorTheme={colorTheme}
+            $fontSize={fontSize}
+            padding={padding}
             reverse={reverse}
-            minWidth={minWidth}
+            minWidth={width}
             $height={height}
             $size={size}
             iconOnly={iconOnly}
@@ -552,12 +596,14 @@ export const Button = ({
             {prefix &&
                 cloneWithProps(prefix, {
                     scale: iconScale,
+                    margin: iconOnly ? undefined : `0 ${affixSpacing}rem 0 0`,
                     className: 'anchor-button-prefix',
                 })}
             {children}
             {suffix &&
                 cloneWithProps(suffix, {
                     scale: iconScale,
+                    margin: iconOnly ? undefined : `0 0 0 ${affixSpacing}rem`,
                     className: 'anchor-button-suffix',
                 })}
             {flip && !disabled && !revealed && <Flip colorTheme={colorTheme} />}

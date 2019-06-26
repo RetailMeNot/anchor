@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
@@ -12,7 +12,7 @@ export interface TitleProps {
     label?: string;
 }
 
-const StyledTitle = styled.div`
+const StyledTitle = styled('div')`
     box-sizing: border-box;
     padding: 0.75rem 1rem;
 `;

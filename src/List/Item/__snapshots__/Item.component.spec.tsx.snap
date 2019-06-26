@@ -1,14 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Item should be defined 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+  background-color: #FFFFFF;
+}
+
+.c0:hover {
+  background-color: #FAFAFA;
+}
+
+.c0.active {
+  background-color: #F1F1F1;
+}
+
+.c0 p {
+  margin-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: #595959;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
 <a
-  className="anchor-list-item sc-bdVaJa kbqFBH"
+  className="anchor-list-item c0"
   onMouseDown={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
   <p
-    className="anchor-typography sc-htpNat iwmNVF"
+    className="anchor-typography c1"
     color="charcoal"
   >
     Item

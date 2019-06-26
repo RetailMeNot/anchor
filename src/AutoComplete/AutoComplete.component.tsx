@@ -2,12 +2,10 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
 // COMPONENTS
 import { Input } from '../Form';
 import { ResultsContainer } from './ResultsContainer';
-// THEME
-import { colors } from '../theme';
 
 const { useState, useRef } = React;
 
@@ -18,6 +16,7 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
+    name?: string;
     dataSource?: AutoCompleteDataSource | string[] | number[];
     className?: string;
     size?: 'sm' | 'md' | 'lg';
@@ -57,29 +56,37 @@ const EventKeyCodes = {
     ARROW_DOWN: 40,
 };
 
-const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
+const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
     width: 100%;
     position: relative;
-    ${({ border }: StyledAutoCompleteProps) =>
-        border ? `border: solid thin ${colors.ash.light}` : null};
-    border-radius: 0.25rem;
+    border: solid thin transparent;
+    ${({ border }) =>
+        css({
+            borderColor: border ? 'borders.base' : 'transparent',
+        })};
+    border-radius: base;
     transition: border-color 250ms;
-    background: ${({ background }: StyledAutoCompleteProps) => background};
-    color: ${({ color }: StyledAutoCompleteProps) => color};
-    ${({ shadow }: StyledAutoCompleteProps) =>
+    ${({ background: backgroundColor, color }) =>
+        css({ backgroundColor, color })}
+    ${({ shadow }) =>
         shadow
             ? 'box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);'
             : null};
 
     &:hover {
-        border: ${({ border }: StyledAutoCompleteProps) =>
-            border ? `solid thin ${colors.ash.base}` : null};
+        ${({ border }) =>
+            css({
+                borderColor: border ? 'borders.dark' : 'transparent',
+            })};
     }
 
     &:active,
+    &.focus,
     &:focus {
-        border: ${({ border }: StyledAutoCompleteProps) =>
-            border ? `solid thin ${colors.ash.dark}` : null};
+        ${({ border }) =>
+            css({
+                borderColor: border ? 'borders.dark' : 'transparent',
+            })};
     }
 
     .auto-complete-input {
@@ -88,6 +95,7 @@ const StyledAutoComplete = styled.div<StyledAutoCompleteProps>`
 `;
 
 export const AutoComplete = ({
+    name = '',
     className,
     placeholder,
     // children,
@@ -101,8 +109,8 @@ export const AutoComplete = ({
     size = 'lg',
     shadow = false,
     border = true,
-    background = colors.white.base,
-    color = colors.charcoal.light,
+    background = 'neutrals.white.base',
+    color = 'neutrals.charcoal.light',
     resultTemplate,
     allowClear,
     ...props
@@ -149,10 +157,17 @@ export const AutoComplete = ({
             border={border}
             background={background}
             color={color}
-            className={classNames('anchor-auto-complete', className)}
+            className={classNames('anchor-auto-complete', className, {
+                focus: isFocused,
+            })}
             {...props}
         >
             <Input
+                ariaLabel={
+                    name.length
+                        ? `auto-complete-${name.toLowerCase()}`
+                        : 'auto-complete'
+                }
                 value={term}
                 ref={inputRef}
                 size={size}

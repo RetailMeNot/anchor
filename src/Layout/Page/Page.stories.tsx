@@ -2,8 +2,9 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { text } from '@storybook/addon-knobs';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import {
     Page,
@@ -12,14 +13,13 @@ import {
 } from './Page.component';
 import { Footer } from '../Footer/Footer.component';
 import { Header } from '../Header/Header.component';
-import { colors } from '../../theme';
+import { RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledStory = styled.div`
-    background: ${colors.white.base};
+const StyledStory = styled('div')`
     width: 100%;
 `;
 
@@ -32,15 +32,19 @@ storiesOf('Components/Layout', module)
         },
     })
     .add('Page', () => (
-        <StyledStory>
-            <Page
-                header={<Header />}
-                footer={<Footer />}
-                headerHeight={text('Header Height', DEFAULT_HEADER_HEIGHT)}
-                footerHeight={text('Footer Height', DEFAULT_FOOTER_HEIGHT)}
-            >
-                <h1>Page</h1>
-                <h2>Main wrapper, includes a header and footer and content</h2>
-            </Page>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Page
+                    header={<Header />}
+                    footer={<Footer />}
+                    headerHeight={text('Header Height', DEFAULT_HEADER_HEIGHT)}
+                    footerHeight={text('Footer Height', DEFAULT_FOOTER_HEIGHT)}
+                >
+                    <h1>Page</h1>
+                    <h2>
+                        Main wrapper, includes a header and footer and content
+                    </h2>
+                </Page>
+            </StyledStory>
+        </ThemeProvider>
     ));

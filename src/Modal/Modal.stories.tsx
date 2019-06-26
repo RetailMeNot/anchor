@@ -3,10 +3,10 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { boolean, select, number, text } from '@storybook/addon-knobs';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
-import { colors } from '../theme/index';
+import { RootTheme, colors } from '../theme';
 // SUBJECT
 import * as README from './README.md';
 import {
@@ -19,7 +19,7 @@ import {
 const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: ${colors.white.base};
     width: 100vw;
     height: 120vh;
@@ -67,94 +67,112 @@ storiesOf('Components/Modal', module)
         };
 
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Typography tag="h5">Click this button!</Typography>
-                    <OpenModalButton />
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Typography tag="h5">Click this button!</Typography>
+                        <OpenModalButton />
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Blank', () => {
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen />
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal
+                            size={select('size', sizeOptions, 'sm')}
+                            isOpen
+                        />
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Content', () => {
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen>
-                        <Close />
-                        <Content>
-                            <Typography>Content Area</Typography>
-                        </Content>
-                    </Modal>
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                            <Close />
+                            <Content>
+                                <Typography>Content Area</Typography>
+                            </Content>
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Header + Content', () => {
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen>
-                        <Header title="Header Area">
-                            <Close />
-                        </Header>
-                        <Content>
-                            <Typography>Content Area</Typography>
-                        </Content>
-                    </Modal>
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                            <Header title="Header Area">
+                                <Close />
+                            </Header>
+                            <Content>
+                                <Typography>Content Area</Typography>
+                            </Content>
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Content + Footer', () => {
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen>
-                        <Close />
-                        <Content>
-                            <Typography>Content Area</Typography>
-                        </Content>
-                        <Footer>
-                            <Typography>Footer Area</Typography>
-                        </Footer>
-                    </Modal>
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                            <Close />
+                            <Content>
+                                <Typography>Content Area</Typography>
+                            </Content>
+                            <Footer>
+                                <Typography>Footer Area</Typography>
+                            </Footer>
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Oversized', () => {
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <Modal
-                        isOpen
-                        height={text('height', '100rem')}
-                        size={select('size', sizeOptions, 'lg')}
-                        backgroundProps={{
-                            padding: text('background padding', '2rem 1rem'),
-                        }}
-                    >
-                        <Header title="Oversized Modal">
-                            <Close />
-                        </Header>
-                        <Content>
-                            <Typography>Psst... down below!</Typography>
-                        </Content>
-                        <Footer>
-                            <Typography>Psst... up above!</Typography>
-                        </Footer>
-                    </Modal>
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <Modal
+                            isOpen
+                            height={text('height', '100rem')}
+                            size={select('size', sizeOptions, 'lg')}
+                            backgroundProps={{
+                                padding: text(
+                                    'background padding',
+                                    '2rem 1rem'
+                                ),
+                            }}
+                        >
+                            <Header title="Oversized Modal">
+                                <Close />
+                            </Header>
+                            <Content>
+                                <Typography>Psst... down below!</Typography>
+                            </Content>
+                            <Footer>
+                                <Typography>Psst... up above!</Typography>
+                            </Footer>
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Custom Background', () => {
@@ -163,20 +181,21 @@ storiesOf('Components/Modal', module)
         `;
 
         return (
-            <ModalProvider backgroundComponent={CustomBackground}>
-                <StyledStory>
-                    <Modal size={select('size', sizeOptions, 'sm')} isOpen>
-                        <Close />
-                        <Header title="Modal with Custom Background" />
-                    </Modal>
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider backgroundComponent={CustomBackground}>
+                    <StyledStory>
+                        <Modal size={select('size', sizeOptions, 'sm')} isOpen>
+                            <Close />
+                            <Header title="Modal with Custom Background" />
+                        </Modal>
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     })
     .add('Customized', () => {
         const OpenModalButton = () => {
             const [isOpen, setIsOpen] = useState<boolean>(true);
-
             return (
                 <React.Fragment>
                     <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -187,11 +206,11 @@ storiesOf('Components/Modal', module)
                         height={text('height', '25rem')}
                         width={text('width', '30rem')}
                         margin={text('margin', 'auto')}
-                        background={`linear-gradient(170deg, ${
-                            colors.flashPink.base
-                        } 0%, ${colors.fireSale.light} 50%, ${
-                            colors.white.base
-                        } calc(50% + 1.25px))`}
+                        background={`linear-gradient(
+                                170deg, ${colors.flashPink.base} 0%,
+                                ${colors.fireSale.light} 50%,
+                                ${colors.white.base} calc(50% + 1.25px))
+                            `}
                         color={text('color', colors.white.base)}
                         backgroundProps={{
                             opacity: number('backgroundProps.opacity', 0.2),
@@ -243,10 +262,12 @@ storiesOf('Components/Modal', module)
         };
 
         return (
-            <ModalProvider>
-                <StyledStory>
-                    <OpenModalButton />
-                </StyledStory>
-            </ModalProvider>
+            <ThemeProvider theme={RootTheme}>
+                <ModalProvider>
+                    <StyledStory>
+                        <OpenModalButton />
+                    </StyledStory>
+                </ModalProvider>
+            </ThemeProvider>
         );
     });

@@ -14,10 +14,12 @@ export const CommentMore = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon comment-more', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

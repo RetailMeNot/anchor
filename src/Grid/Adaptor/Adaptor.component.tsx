@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import Responsive from 'react-responsive';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { Cell } from 'styled-css-grid';
 
 interface CustomAdaptorProps {

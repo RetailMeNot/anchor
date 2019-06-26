@@ -14,10 +14,12 @@ export const Laptop = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon laptop', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

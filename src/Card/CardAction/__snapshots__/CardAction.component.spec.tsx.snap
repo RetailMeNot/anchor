@@ -1,7 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: CardAction should be defined 1`] = `
+.c0 {
+  box-sizing: border-box;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: neutrals.white.base;
+  z-index: 1;
+}
+
 <div
-  className="anchor-card-action sc-bdVaJa gYJVgS"
+  className="anchor-card-action c0"
 />
 `;

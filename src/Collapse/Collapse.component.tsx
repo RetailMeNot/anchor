@@ -1,17 +1,19 @@
 // REACT
 import * as React from 'react';
-// Vendor
+// VENDOR
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { variant as createVariant, th } from '@xstyled/system';
 // Components
 import { ChevronDown, ChevronUp } from '../Icon';
-import { ComfortableTheme } from './Themes/ComfortableTheme';
-import { CompactTheme } from './Themes/CompactTheme';
 
-export type Themes = 'comfortable' | 'compact' | 'none';
+export type CollapseVariants = 'comfortable' | 'compact' | 'none' | string;
 
 interface CollapseProps {
-    /** Whether the component starts off open or closed. Can also be used to progrmatically open/close the component. */
+    /**
+     * Whether the component starts off open or closed. Can also be used to programmatically open/close the
+     * component.
+     */
     isOpen?: boolean;
     /** Text to show for the opened state of the component */
     openedText?: string;
@@ -21,36 +23,124 @@ interface CollapseProps {
     openedIcon?: React.ReactElement;
     /** Icon to show for the closed state of the component */
     closedIcon?: React.ReactElement;
-    /** 2 possible themes, compact (doc site) and comfortable (RMN CBO), and also none to allow for styling */
-    theme?: Themes;
+    /** 2 possible variants, compact (doc site) and comfortable (RMN CBO), and also none to allow for styling */
+    variant?: CollapseVariants;
     /** This prop is solely used by the CollapseGroup component to make Collapse components have accordion behavior */
-    accordionHandler?: any;
+    onClick?: any;
     /** This mostly exists for CollapseGroup in order to hide the bottom border of stacked Collapse children */
     hasBottomBorder?: boolean;
     children?: any;
     className?: string;
 }
 
-interface StyledCollapseProps {
-    theme?: string;
+interface StyledCollapseProps extends CollapseProps {
+    variant?: string;
     hasBottomBorder?: boolean;
 }
 
 export const DEFAULT_OPENED_TEXT = 'Close';
 export const DEFAULT_CLOSED_TEXT = 'Open';
-const DEFAULT_THEME = 'comfortable';
+const DEFAULT_VARIANT = 'comfortable';
 
-// Associates files from Collapse/Themes directory to specific theme names
-export const CollapseThemes: { [key: string]: FlattenSimpleInterpolation } = {
-    comfortable: ComfortableTheme,
-    compact: CompactTheme,
-    none: css``,
+const variants = {
+    comfortable: css`
+        padding: 1rem 2rem;
+        border-top: solid thin ${th.color('borders.base')};
+        border-bottom: solid thin ${th.color('borders.base')};
+
+        .anchor-collapse-button {
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: left;
+            border-style: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.5rem 0;
+            user-select: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            span:last-child {
+                float: right;
+            }
+        }
+
+        .anchor-collapse-content {
+            font-size: 1rem;
+            text-align: left;
+            padding: 0.5rem 0;
+        }
+    `,
+    compact: css`
+        color: neutrals.charcoal.light;
+
+        .anchor-collapse-button {
+            background-color: neutrals.white.base;
+            border-style: none;
+            border-bottom: solid thin ${th.color('borders.light')};
+            border-top: solid thin ${th.color('borders.light')};
+            color: neutrals.charcoal.light;
+            cursor: pointer;
+            display: block;
+            font-weight: bold;
+            height: 3rem;
+            padding: 0 1.3125rem;
+            text-align: left;
+            user-select: none;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+
+            *:last-child {
+                float: right;
+            }
+        }
+
+        .anchor-collapse-content {
+            background-color: neutrals.silver.light;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+            // TODO: we shouldn't be using as many fragile nested selectors and we should be using Typography
+            li a {
+                display: block;
+                padding-left: 3.4375rem;
+                height: 2.6875rem;
+                line-height: 2.6875rem;
+                cursor: pointer;
+                font-size: 0.875rem;
+                color: #222;
+
+                &:hover {
+                    background-color: rgba(0, 126, 205, 0.1);
+                }
+            }
+        }
+    `,
+    none: css({}),
 };
+
+const variantStyles = createVariant({
+    key: 'collapse.variants',
+    prop: 'variant',
+    default: DEFAULT_VARIANT,
+    variants: variants,
+});
 
 const StyledCollapse = styled.div<StyledCollapseProps>`
     display: block;
+    box-sizing: border-box;
+    font-family: ${th('typography.fontFamily')};
 
-    ${props => CollapseThemes[props.theme]};
+    ${variantStyles}
 
     &.no-bottom-border {
         border-bottom-style: none;
@@ -68,8 +158,8 @@ export const Collapse = ({
     closedText = DEFAULT_CLOSED_TEXT,
     openedIcon,
     closedIcon,
-    theme = DEFAULT_THEME,
-    accordionHandler,
+    variant = DEFAULT_VARIANT,
+    onClick,
     hasBottomBorder = true,
     className,
     children,
@@ -77,33 +167,33 @@ export const Collapse = ({
     const [open, toggleOpen] = React.useState<boolean>(isOpen);
     const IconOpened = openedIcon || <ChevronDown />;
     const IconClosed = closedIcon || <ChevronUp />;
-    // If the user provides custom openedText but not custom closedText, then use openedText for closedText as well
+
+    // If the user provides custom openedText but not custom closedText
+    // then use openedText for closedText as well
     const textClosed =
         openedText !== DEFAULT_OPENED_TEXT && closedText === DEFAULT_CLOSED_TEXT
             ? openedText
             : closedText;
 
-    // Allows for the programmatic opening/closing of the Collapse w/o a user having to click it
+    // Allows for the programmatic opening/closing of the Collapse
+    // without a user having to click it
     React.useEffect(() => {
         toggleOpen(isOpen);
     }, [isOpen]);
 
     return (
         <StyledCollapse
-            theme={theme}
+            variant={variant}
             className={classNames(
                 'anchor-collapse',
                 open && 'open',
-                theme,
+                variant,
                 !hasBottomBorder && 'no-bottom-border',
                 className
             )}
         >
-            {/** accordionHandler is used by CollapseGroup to handle closing/opening a single Collapse component. */}
             <button
-                onClick={() =>
-                    accordionHandler ? accordionHandler() : toggleOpen(!open)
-                }
+                onClick={onClick || (() => toggleOpen(!open))}
                 className="anchor-collapse-button"
             >
                 {open ? (

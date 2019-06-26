@@ -1,21 +1,20 @@
 // REACT
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-
-// COMPONENT
-import { Typography } from './Typography.component';
-
-// ENZYME
+// VENDOR
 import { mount } from 'enzyme';
-
-// STYLED COMPONENTS
-/* tslint:disable no-import-side-effect*/
-import 'jest-styled-components';
-/* tslint:enable */
+import { Typography } from './Typography.component';
+// COMPONENT
+import { RootTheme } from '../theme';
+import { ThemeProvider } from '@xstyled/styled-components';
 
 describe('Component: Typography', () => {
     it('match its snapshot', () => {
-        const subject = <Typography>Test text</Typography>;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography>Test text</Typography>
+            </ThemeProvider>
+        );
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
@@ -35,29 +34,47 @@ describe('Component: Typography', () => {
             'pre',
         ].forEach((element: any) => {
             expect(
-                mount(<Typography tag={element}>Test text</Typography>).exists(
-                    element
-                )
+                mount(
+                    <ThemeProvider theme={RootTheme}>
+                        <Typography tag={element}>Test text</Typography>
+                    </ThemeProvider>
+                ).exists(element)
             ).toBeTruthy();
         });
     });
     it('should a span by default', () => {
         expect(
-            mount(<Typography>Test text</Typography>).exists('span')
+            mount(
+                <ThemeProvider theme={RootTheme}>
+                    <Typography>Test text</Typography>
+                </ThemeProvider>
+            ).exists('span')
         ).toBeTruthy();
     });
     it('should accept a custom size', () => {
-        const subject = <Typography size={2}>Text</Typography>;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography size={2}>Text</Typography>
+            </ThemeProvider>
+        );
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
     it('should accept a custom lineHeight', () => {
-        const subject = <Typography lineHeight={3}>Text</Typography>;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography lineHeight={3}>Text</Typography>
+            </ThemeProvider>
+        );
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
     it('should accept a custom display', () => {
-        const subject = <Typography display="block">Text</Typography>;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography display="block">Text</Typography>
+            </ThemeProvider>
+        );
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });

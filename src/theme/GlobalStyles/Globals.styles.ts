@@ -1,24 +1,14 @@
 // VENDOR
-import { createGlobalStyle, css } from 'styled-components';
-// THEME
-import { fonts } from '../fonts.theme';
-import { colors } from '../colors.theme';
-
-const typography = css`
-    a {
-        text-decoration: none;
-        color: ${colors.savvyCyan.dark};
-    }
-`;
+import { createGlobalStyle } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 export const GlobalCSS = createGlobalStyle`
   html,
   body {
-    font-family: ${fonts.fontFamily};
-    color: ${colors.charcoal.base};
-    font-size: ${fonts.baseFontSize}px;
+    font-family: ${th('typography.fontFamily')};
+    color: text.body;
+    font-size: ${th('typography.fontSize')};
     letter-spacing: 0;
     line-height: 1.357142857rem;
   }
-  ${typography}
 `;

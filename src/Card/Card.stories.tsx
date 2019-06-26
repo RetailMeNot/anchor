@@ -3,34 +3,33 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Card } from './Card.component';
 import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
 import { Ellipses } from '../Icon';
-import { colors, fonts } from '../theme';
+import { colors, RootTheme } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
 // README
 import * as README from './README.md';
 // THEME
 
-const StyledStory = styled.div`
-    h2 {
-        font-family: ${fonts.fontFamily};
+const StyledStory = styled('div')`
+    h2,
+    h3 {
+        font-family: ${th('typography.fontFamily')};
         font-weight: normal;
-        color: ${colors.charcoal.light};
+        color: text.body;
         margin-bottom: 0.5rem;
     }
     h3 {
-        font-family: ${fonts.fontFamily};
-        font-weight: normal;
-        color: ${colors.charcoal.light};
         margin: 0;
     }
     p {
-        color: ${colors.ash.base};
+        color: text.body;
         margin: 0;
     }
     .card-action-area {
@@ -89,7 +88,7 @@ const BrandCardContent = ({ title }: { title: string }) => (
 );
 
 const WideCardContent = ({ title }: { title: string }) => (
-    <Grid columns="96px minmax(400px, 750px) 90px" flow="column" gap="16px">
+    <Grid columns="96px minmax(400px, 750px) 190px" flow="column" gap="16px">
         <CenteredCell center={true} top={1} left={1}>
             <p>$1.00</p>
         </CenteredCell>
@@ -131,47 +130,53 @@ storiesOf('Components/Card', module)
         },
     })
     .add('Two Row With Action', () => (
-        <StyledStory>
-            <Grid columns="repeat(auto-fit, 290px)">
-                {[1, 2, 3, 4].map((index: number) => (
-                    <Cell width={1} key={index}>
-                        <Card action={CardAction}>
-                            <TwoRowWithActionCardContent />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="repeat(auto-fit, 290px)">
+                    {[1, 2, 3, 4].map((index: number) => (
+                        <Cell width={1} key={index}>
+                            <Card action={CardAction}>
+                                <TwoRowWithActionCardContent />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ))
     .add('Brand Cards', () => (
-        <StyledStory>
-            <Grid columns="repeat(auto-fit, 200px)">
-                {[1, 2, 3, 4, 5].map((index: number) => (
-                    <Cell key={index}>
-                        <Card>
-                            <BrandCardContent
-                                title={`Brand Name ${index}`}
-                                key={index}
-                            />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="repeat(auto-fit, 200px)">
+                    {[1, 2, 3, 4, 5].map((index: number) => (
+                        <Cell key={index}>
+                            <Card>
+                                <BrandCardContent
+                                    title={`Brand Name ${index}`}
+                                    key={index}
+                                />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ))
     .add('Wide Cards With ActionArea', () => (
-        <StyledStory>
-            <Grid columns="minmax(400px, 900px)">
-                {[1, 2, 3, 4, 5].map((index: number) => (
-                    <Cell key={index}>
-                        <Card actionArea={<ActionArea />}>
-                            <WideCardContent
-                                title={`Wide Card ${index}`}
-                                key={index}
-                            />
-                        </Card>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Grid columns="minmax(400px, 900px)">
+                    {[1, 2, 3, 4, 5].map((index: number) => (
+                        <Cell key={index}>
+                            <Card actionArea={<ActionArea />}>
+                                <WideCardContent
+                                    title={`Wide Card ${index}`}
+                                    key={index}
+                                />
+                            </Card>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ));

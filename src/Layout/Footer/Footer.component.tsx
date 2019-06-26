@@ -11,16 +11,15 @@ import {
 } from '../../Grid';
 import { FooterSection } from './FooterSection/FooterSection.component';
 // VENDOR
-import styled from 'styled-components';
-// STYLES
-import { colors, fonts } from '../../theme';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
-const StyledFooterElement = styled.footer`
-    font-family: ${fonts.fontFamily};
+const StyledFooterElement = styled('footer')`
+    font-family: ${th('typography.fontFamily')};
     font-size: 0.75rem;
-    background-color: ${colors.white.base};
-    border-bottom: solid 1rem ${colors.grapePurchase.base};
-    color: ${colors.ash.dark};
+    background-color: neutrals.white.base;
+    border-bottom: solid 1rem ${th.color('primary.base')};
+    color: text.body;
     font-weight: 500;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
 `;
@@ -29,22 +28,22 @@ const CenteredGrid = styled(Grid)`
     justify-items: center;
 `;
 
-const DesktopContainer = styled.div`
+const DesktopContainer = styled('div')`
     max-width: 71.25rem;
     padding: 2rem 1rem 1rem;
     margin: 0 auto;
 `;
 
-const MobileFooterContainer = styled.div`
+const MobileFooterContainer = styled('div')`
     padding: 2rem 1rem 0;
 
     hr {
         border: none;
-        border-top: solid thin ${colors.silver.base};
+        border-top: solid thin ${th.color('borders.light')};
     }
 `;
 
-const LegalLinksContainer = styled.ul`
+const LegalLinksContainer = styled('ul')`
     list-style: none;
     margin: 2rem 1.5rem 1rem;
     padding: 0;
@@ -57,7 +56,6 @@ const LegalLinksContainer = styled.ul`
 
     a {
         text-decoration: none;
-        color: ${colors.ash.dark};
         line-height: 1.5rem;
     }
 `;
@@ -231,8 +229,8 @@ const RenderLinks = ({
 }) => (
     <CenteredGrid columns={columns} gap="1rem">
         {items.map(({ title, key: sectionKey, children }: any) => (
-            <Cell width={1}>
-                <FooterSection key={sectionKey} title={title}>
+            <Cell key={sectionKey} width={1}>
+                <FooterSection title={title}>
                     <ul>
                         {children.map(({ key, href, label }: any) => (
                             <li key={key}>

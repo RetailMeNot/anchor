@@ -14,10 +14,12 @@ export const TagAdd = ({
     color = DefaultColor,
     scale = DefaultScale,
     className,
+    ...props
 }: IconSVGProps) => (
     <StyledIcon
         className={classNames('anchor-icon tag-add', className)}
         scale={scale}
+        {...props}
     >
         <svg
             width={Scale[scale]}

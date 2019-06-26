@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: List should be defined 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
 <div
-  className="anchor-list sc-bxivhb cgDDEg"
+  className="anchor-list c0"
 />
 `;

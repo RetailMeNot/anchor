@@ -1,23 +1,168 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: AutoComplete should be defined 1`] = `
+.c4 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.c2 {
+  display: grid;
+  height: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(2.5rem,auto);
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+}
+
+.c1 {
+  display: block;
+  position: relative;
+  border: solid thin #D3D3D3;
+  border-radius: 0.25rem;
+  cursor: text;
+  box-sizing: border-box;
+  min-width: 5rem;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 3.125rem;
+  padding: 0.25rem;
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
+}
+
+.c1::-webkit-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::-moz-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1:-ms-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1.focus {
+  border-color: #808080;
+}
+
+.c1 label {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  height: 1.4rem;
+  -webkit-transform: translate(0,0.6rem) scale(1);
+  -ms-transform: translate(0,0.6rem) scale(1);
+  transform: translate(0,0.6rem) scale(1);
+}
+
+.c1 label.lift {
+  -webkit-transform: translate(0,0) scale(1);
+  -ms-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  padding: 0 0.25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  outline: none !important;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 1;
+  color: #323232;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c5:placeholder-shown + label {
+  cursor: text;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c0 {
+  width: 100%;
+  position: relative;
+  border: solid thin transparent;
+  border-color: #D3D3D3;
+  border-radius: 4px;
+  -webkit-transition: border-color 250ms;
+  transition: border-color 250ms;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover {
+  border-color: #808080;
+}
+
+.c0:active,
+.c0.focus,
+.c0:focus {
+  border-color: #808080;
+}
+
+.c0 .auto-complete-input {
+  border: none;
+}
+
 <div
-  className="anchor-auto-complete sc-dnqmqq ijoWDl"
-  color="#595959"
+  className="anchor-auto-complete c0"
+  color="neutrals.charcoal.light"
 >
   <div
-    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
     <div
-      className="anchor-grid Grid__Grid-bojwg hIksjk"
+      className="anchor-grid c2"
     >
       <div
-        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+        className="anchor-cell c3 c4"
       >
         <input
-          className="sc-bxivhb fYuLjj"
+          aria-label="auto-complete"
+          className="c5"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -35,23 +180,169 @@ exports[`Component: AutoComplete should be defined 1`] = `
 `;
 
 exports[`Component: AutoComplete should render with a shadow 1`] = `
+.c4 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.c2 {
+  display: grid;
+  height: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(2.5rem,auto);
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+}
+
+.c1 {
+  display: block;
+  position: relative;
+  border: solid thin #D3D3D3;
+  border-radius: 0.25rem;
+  cursor: text;
+  box-sizing: border-box;
+  min-width: 5rem;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 3.125rem;
+  padding: 0.25rem;
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
+}
+
+.c1::-webkit-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::-moz-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1:-ms-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1.focus {
+  border-color: #808080;
+}
+
+.c1 label {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  height: 1.4rem;
+  -webkit-transform: translate(0,0.6rem) scale(1);
+  -ms-transform: translate(0,0.6rem) scale(1);
+  transform: translate(0,0.6rem) scale(1);
+}
+
+.c1 label.lift {
+  -webkit-transform: translate(0,0) scale(1);
+  -ms-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  padding: 0 0.25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  outline: none !important;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 1;
+  color: #323232;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c5:placeholder-shown + label {
+  cursor: text;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c0 {
+  width: 100%;
+  position: relative;
+  border: solid thin transparent;
+  border-color: #D3D3D3;
+  border-radius: 4px;
+  -webkit-transition: border-color 250ms;
+  transition: border-color 250ms;
+  background-color: #FFFFFF;
+  color: #595959;
+  box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0,0,0,0.12);
+}
+
+.c0:hover {
+  border-color: #808080;
+}
+
+.c0:active,
+.c0.focus,
+.c0:focus {
+  border-color: #808080;
+}
+
+.c0 .auto-complete-input {
+  border: none;
+}
+
 <div
-  className="anchor-auto-complete sc-dnqmqq hWkEtg"
-  color="#595959"
+  className="anchor-auto-complete c0"
+  color="neutrals.charcoal.light"
 >
   <div
-    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
     <div
-      className="anchor-grid Grid__Grid-bojwg hIksjk"
+      className="anchor-grid c2"
     >
       <div
-        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+        className="anchor-cell c3 c4"
       >
         <input
-          className="sc-bxivhb fYuLjj"
+          aria-label="auto-complete"
+          className="c5"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -68,30 +359,194 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 `;
 
 exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
+.c5 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.c2 {
+  display: grid;
+  height: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(2.5rem,auto);
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-gap: 0;
+}
+
+.c3 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  display: block;
+  position: relative;
+  border: solid thin #D3D3D3;
+  border-radius: 0.25rem;
+  cursor: text;
+  box-sizing: border-box;
+  min-width: 5rem;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 3.125rem;
+  padding: 0.25rem;
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
+}
+
+.c1::-webkit-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::-moz-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1:-ms-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1.focus {
+  border-color: #808080;
+}
+
+.c1 label {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  height: 1.4rem;
+  -webkit-transform: translate(0,0.6rem) scale(1);
+  -ms-transform: translate(0,0.6rem) scale(1);
+  transform: translate(0,0.6rem) scale(1);
+}
+
+.c1 label.lift {
+  -webkit-transform: translate(0,0) scale(1);
+  -ms-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  padding: 0 0.25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  outline: none !important;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 1;
+  color: #323232;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c6:placeholder-shown + label {
+  cursor: text;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c0 {
+  width: 100%;
+  position: relative;
+  border: solid thin transparent;
+  border-color: #D3D3D3;
+  border-radius: 4px;
+  -webkit-transition: border-color 250ms;
+  transition: border-color 250ms;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover {
+  border-color: #808080;
+}
+
+.c0:active,
+.c0.focus,
+.c0:focus {
+  border-color: #808080;
+}
+
+.c0 .auto-complete-input {
+  border: none;
+}
+
 <div
-  className="anchor-auto-complete sc-dnqmqq ijoWDl"
-  color="#595959"
+  className="anchor-auto-complete c0"
+  color="neutrals.charcoal.light"
 >
   <div
-    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
     <div
-      className="anchor-grid Grid__Grid-bojwg cutIDT"
+      className="anchor-grid c2"
     >
       <div
-        className="Cell__Cell-jsYrZv sc-bdVaJa ipDBmH"
+        className="c3"
       >
         <div>
           prefix
         </div>
       </div>
       <div
-        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+        className="anchor-cell c4 c5"
       >
         <input
-          className="sc-bxivhb fYuLjj"
+          aria-label="auto-complete"
+          className="c6"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -103,7 +558,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
         />
       </div>
       <div
-        className="Cell__Cell-jsYrZv sc-bdVaJa ipDBmH"
+        className="c3"
       >
         <div>
           suffix
@@ -115,23 +570,168 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 `;
 
 exports[`Component: AutoComplete should render without a border 1`] = `
+.c4 {
+  height: 100%;
+  min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.c2 {
+  display: grid;
+  height: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(2.5rem,auto);
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+}
+
+.c1 {
+  display: block;
+  position: relative;
+  border: solid thin #D3D3D3;
+  border-radius: 0.25rem;
+  cursor: text;
+  box-sizing: border-box;
+  min-width: 5rem;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 3.125rem;
+  padding: 0.25rem;
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
+}
+
+.c1::-webkit-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::-moz-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1:-ms-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1::placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c1.focus {
+  border-color: #808080;
+}
+
+.c1 label {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  height: 1.4rem;
+  -webkit-transform: translate(0,0.6rem) scale(1);
+  -ms-transform: translate(0,0.6rem) scale(1);
+  transform: translate(0,0.6rem) scale(1);
+}
+
+.c1 label.lift {
+  -webkit-transform: translate(0,0) scale(1);
+  -ms-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  padding: 0 0.25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  outline: none !important;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 1;
+  color: #323232;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c5:placeholder-shown + label {
+  cursor: text;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c0 {
+  width: 100%;
+  position: relative;
+  border: solid thin transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  -webkit-transition: border-color 250ms;
+  transition: border-color 250ms;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.c0:hover {
+  border-color: transparent;
+}
+
+.c0:active,
+.c0.focus,
+.c0:focus {
+  border-color: transparent;
+}
+
+.c0 .auto-complete-input {
+  border: none;
+}
+
 <div
-  className="anchor-auto-complete sc-dnqmqq kggxia"
-  color="#595959"
+  className="anchor-auto-complete c0"
+  color="neutrals.charcoal.light"
 >
   <div
-    className="anchor-input auto-complete-input sc-bwzfXH ewBCKc"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
     <div
-      className="anchor-grid Grid__Grid-bojwg hIksjk"
+      className="anchor-grid c2"
     >
       <div
-        className="anchor-cell sc-htpNat jOmony Cell__Cell-jsYrZv fDguhG"
+        className="anchor-cell c3 c4"
       >
         <input
-          className="sc-bxivhb fYuLjj"
+          aria-label="auto-complete"
+          className="c5"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}

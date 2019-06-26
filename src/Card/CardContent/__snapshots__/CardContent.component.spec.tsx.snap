@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: CardContent should be defined 1`] = `
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  padding: 1rem;
+}
+
 <div
-  className="anchor-card-content sc-bdVaJa icXeZn"
+  className="anchor-card-content c0"
 />
 `;

@@ -2,12 +2,11 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import { lighten } from 'polished';
 // COMPONENTS
 import { ItemProps } from './Item/Item.component';
-// THEME
-import { colors, fonts, variables } from '../theme';
 
 interface MenuProps {
     children?:
@@ -22,7 +21,7 @@ interface MenuProps {
     justify?: 'flex-start' | 'flex-end';
 }
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled('nav')`
   margin: 0;
   padding: 0;
   display: flex;
@@ -32,50 +31,65 @@ const StyledMenu = styled.nav`
   //overflow-y: hidden;
   //overflow-x: auto;
 
-  background: ${({ bg = colors.grapePurchase.base }: MenuProps) => bg};
+  ${({ bg = th.color('primary.base') }: MenuProps) =>
+      css({
+          backgroundColor: bg,
+      })};
   font-size: 0.875rem;
-  font-family: ${fonts.fontFamily};
-  border-radius: ${variables.borderRadius};
+  font-family: ${th('typography.fontFamily')};
+  border-radius: ${th.radius('base')};
 
   /* TODO: use React.clone to append a run-time class here instead of using a * selector */
   > * > a,
   > a {
     display: inline-block;
     line-height: 1.125rem;
-    color: ${({ color = colors.white.base }: MenuProps) => color};
+    ${({ color = th.color('neutrals.white.base') }: MenuProps) =>
+        css({
+            color,
+        })};
     transition: background-color 500ms, color: 500ms;
     margin: 0 0.125rem;
 
     &:hover {
-      color: ${({ color = colors.white.base }: MenuProps) =>
-          lighten(20, color)};
+      ${({ color }: MenuProps) =>
+          css({
+              color: color
+                  ? lighten(20, color)
+                  : th.color('neutrals.white.base'),
+          })};
       background-color: rgba(255, 255, 255, .1);
     }
 
     &:active,
     &.active {
-      color: ${({ color = colors.white.base }: MenuProps) =>
-          lighten(20, color)};
+      color: ${({ color }: MenuProps) =>
+          css({
+              color: color
+                  ? lighten(20, color)
+                  : th.color('neutrals.white.base'),
+          })};
       background-color: rgba(255, 255, 255, .1); // TODO: more or less opacity
     }
 
     &:focus {
-      color: ${({ color = colors.silver.dark }: MenuProps) =>
-          lighten(20, color)};
       background-color: rgba(255, 255, 255, .1);
     }
 
-    &:first-child {
+    &:first-of-type {
       margin-left: 0;
     }
 
-    &:last-child {
+    &:last-of-type {
       margin-right: 0;
     }
   }
 
   /* Positioning */
-  justify-content: ${({ justify = 'flex-start' }: MenuProps) => justify};
+  ${({ justify = 'flex-start' }: MenuProps) =>
+      css({
+          justifyContent: justify,
+      })};
 
   /* Menu Sizes */
   ${({ size = 'large' }: MenuProps) => MenuSizes[size]};
@@ -94,7 +108,7 @@ const MenuSizes = {
     large: css`
         > * > a,
         > a {
-            border-radius: ${variables.borderRadius};
+            border-radius: ${th.radius('base')};
             font-weight: 600;
             padding: 1rem 0.75rem;
         }

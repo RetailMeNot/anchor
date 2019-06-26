@@ -2,14 +2,13 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
 import { get } from '../../utils/get/get';
-// THEME
-import { colors, fonts } from '../../theme';
 
 const { useState, forwardRef, useImperativeHandle } = React;
 
@@ -57,6 +56,7 @@ interface InputProps {
     readOnly?: boolean;
     placeholder?: string;
     label?: string;
+    ariaLabel?: string;
     // TODO: buttons?
     prefix?: React.FunctionComponent<any> | JSX.Element;
     suffix?: React.FunctionComponent<any> | JSX.Element;
@@ -94,11 +94,11 @@ const InputSizeDimensions = {
     `,
 };
 
-const StyledInputWrapper = styled.div`
+const StyledInputWrapper = styled('div')`
     // Input Display Size
     display: block;
     position: relative;
-    border: solid thin ${colors.ash.light};
+    border: solid thin ${th.color('borders.base')};
     border-radius: 0.25rem;
     cursor: text;
     box-sizing: border-box;
@@ -111,12 +111,12 @@ const StyledInputWrapper = styled.div`
     ${({ size = 'md' }: InputProps) => InputSizeDimensions[size]};
 
     ::placeholder {
-        font-family: ${fonts.fontFamily};
-        color: ${colors.ash.dark};
+        font-family: ${th('typography.fontFamily')};
+        color: text.placeholder;
     }
 
     &.focus {
-        border-color: ${colors.ash.dark};
+        border-color: ${th.color('borders.dark')};
     }
 
     label {
@@ -158,7 +158,7 @@ interface StyledInputProps {
     placeholder: InputContentType;
 }
 
-const StyledInput = styled.input<StyledInputProps>`
+const StyledInput = styled('input')<StyledInputProps>`
     box-sizing: border-box;
     border: none;
     padding: 0;
@@ -167,10 +167,10 @@ const StyledInput = styled.input<StyledInputProps>`
     -webkit-appearance: none;
     background-color: transparent;
     z-index: 1;
-    color: ${colors.charcoal.light};
+    color: text.body;
     // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
     //transition: all 250ms;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     // Disable Number Spinners
     &[type='number']::-webkit-inner-spin-button,
     &[type='number']::-webkit-outer-spin-button {
@@ -235,6 +235,7 @@ export const Input = forwardRef(
             value,
             size,
             id,
+            ariaLabel,
         }: InputProps,
         ref: React.RefObject<any>
     ) => {
@@ -273,6 +274,7 @@ export const Input = forwardRef(
                     {prefix && <CenteredCell>{prefix}</CenteredCell>}
                     <StyledReversedCell>
                         <StyledInput
+                            aria-label={ariaLabel}
                             ref={inputRef}
                             id={id}
                             hasLabel={!!label}

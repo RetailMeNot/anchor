@@ -3,15 +3,16 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from './Typography.component';
 import { Grid, Cell } from '../Grid';
 // README
 import * as README from './README.md';
 // THEME
+import { RootTheme } from '../theme';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
@@ -30,6 +31,7 @@ const elements = [
     'address',
     'code',
     'pre',
+    'a',
 ];
 
 storiesOf('Components/Typography', module)
@@ -39,26 +41,28 @@ storiesOf('Components/Typography', module)
         },
     })
     .add('Default', () => (
-        <StyledStory>
-            <Typography tag="h1">Scales</Typography>
-            <Grid columns="100%" minRowHeight="50px" gap="16px">
-                {scales.map((scale: any) => (
-                    <Cell key={scale}>
-                        <Typography color="ash" scale={scale}>
-                            Font size is {scale}px | Scale value = {scale}
-                        </Typography>
-                    </Cell>
-                ))}
-            </Grid>
-            <Typography tag="h1">Elements</Typography>
-            <Grid columns="100%" minRowHeight="50px" gap="16px">
-                {elements.map((element: any) => (
-                    <Cell key={element}>
-                        <Typography hue="dark" tag={element}>
-                            Element: {element}
-                        </Typography>
-                    </Cell>
-                ))}
-            </Grid>
-        </StyledStory>
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Typography tag="h1">Scales</Typography>
+                <Grid columns="100%" minRowHeight="5rem" gap="1rem">
+                    {scales.map((scale: any) => (
+                        <Cell key={scale}>
+                            <Typography color="charcoal" scale={scale}>
+                                Font size is {scale}px | Scale value = {scale}
+                            </Typography>
+                        </Cell>
+                    ))}
+                </Grid>
+                <Typography tag="h1">Elements</Typography>
+                <Grid columns="100%" minRowHeight="5rem" gap="1rem">
+                    {elements.map((element: any) => (
+                        <Cell key={element}>
+                            <Typography tag={element}>
+                                Element: {element}
+                            </Typography>
+                        </Cell>
+                    ))}
+                </Grid>
+            </StyledStory>
+        </ThemeProvider>
     ));
