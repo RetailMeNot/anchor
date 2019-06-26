@@ -17,7 +17,7 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
   align-items: center;
   height: 2rem;
   width: 2rem;
-  border-radius: circular;
+  border-radius: 1000px;
 }
 
 .c0 svg {
@@ -32,10 +32,11 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
   flex: 0 0 1.625rem;
   width: 1.625rem;
   height: 1.625rem;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   font-size: 0.75rem;
   font-weight: bold;
-  color: text.body;
-  background-color: neutrals.silver.base;
+  color: #323232;
+  background-color: #F1F1F1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +49,7 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: circular;
+  border-radius: 1000px;
   overflow: hidden;
 }
 
