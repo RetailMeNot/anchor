@@ -56,7 +56,8 @@ const StyledBadgeContainer = styled('div')`
 
 const StyledBadge = styled('div')<BadgeProps>`
     align-items: center;
-    ${({ backgroundColor, textColor: color }) => css({ backgroundColor, color })};
+    ${({ backgroundColor, textColor: color }) =>
+        css({ backgroundColor, color })};
     border: 0.125rem solid ${({
         borderColor,
         borderColorHover,
