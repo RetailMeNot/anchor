@@ -109,7 +109,7 @@ const variants = {
                 margin: 0;
                 list-style-type: none;
             }
-
+            // TODO: we shouldn't be using as many fragile nested selectors and we should be using Typography
             li a {
                 display: block;
                 padding-left: 3.4375rem;
