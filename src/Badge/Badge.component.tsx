@@ -56,14 +56,13 @@ const StyledBadgeContainer = styled('div')`
 
 const StyledBadge = styled('div')<BadgeProps>`
     align-items: center;
-    background-color: ${({ backgroundColor }) => backgroundColor};
+    ${({ backgroundColor, textColor: color }) => css({ backgroundColor, color })};
     border: 0.125rem solid ${({
         borderColor,
         borderColorHover,
         isParentHovered,
-    }) => (isParentHovered ? borderColorHover : borderColor)};
+    }) => th.color(isParentHovered ? borderColorHover : borderColor)};
     box-sizing: border-box;
-    color: ${({ textColor }) => textColor};
     font-weight: 700;
     justify-content: center;
     text-align: center;
@@ -97,9 +96,9 @@ const StyledBadge = styled('div')<BadgeProps>`
 `;
 
 export const Badge = ({
-    backgroundColor = 'success',
-    borderColor,
-    borderColorHover,
+    backgroundColor = 'error',
+    borderColor = 'error',
+    borderColorHover = 'error',
     children,
     className,
     count = 0,

@@ -152,6 +152,6 @@ export const ColorsTheme: ColorsThemeSchema = {
             visited: colors.savvyCyan.dark,
         },
     },
-    error: colors.flashPink.base,
-    success: colors.success.base,
+    error: colors.fireSale.dark,
+    success: colors.dealEnvy.dark,
 };
