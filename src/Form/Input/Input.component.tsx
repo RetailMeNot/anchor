@@ -9,8 +9,6 @@ import { Typography } from '../../Typography';
 import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
 import { get } from '../../utils/get/get';
-// THEME
-import { colors } from '../../theme';
 
 const { useState, forwardRef, useImperativeHandle } = React;
 
@@ -114,7 +112,7 @@ const StyledInputWrapper = styled('div')`
 
     ::placeholder {
         font-family: ${th('typography.fontFamily')};
-        color: ${colors.ash.dark};
+        color: text.placeholder;
     }
 
     &.focus {
@@ -160,7 +158,7 @@ interface StyledInputProps {
     placeholder: InputContentType;
 }
 
-const StyledInput = styled.input<StyledInputProps>`
+const StyledInput = styled('input')<StyledInputProps>`
     box-sizing: border-box;
     border: none;
     padding: 0;
@@ -169,7 +167,7 @@ const StyledInput = styled.input<StyledInputProps>`
     -webkit-appearance: none;
     background-color: transparent;
     z-index: 1;
-    color: ${colors.charcoal.light};
+    color: text.body;
     // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
     //transition: all 250ms;
     font-family: ${th('typography.fontFamily')};

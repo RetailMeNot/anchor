@@ -118,6 +118,7 @@ export interface ColorsThemeSchema {
             focus: string;
             visited: string;
         };
+        placeholder: string;
     };
 
     error: string;
@@ -151,6 +152,7 @@ export const ColorsTheme: ColorsThemeSchema = {
             focus: colors.savvyCyan.dark,
             visited: colors.savvyCyan.dark,
         },
+        placeholder: colors.ash.dark,
     },
     error: colors.fireSale.dark,
     success: colors.dealEnvy.dark,
