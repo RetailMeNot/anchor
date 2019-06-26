@@ -35,7 +35,7 @@ The component can accept the following `props`:
             <div>Hello world.</div>
         </Collapse>
 
-* `theme` *('comfortable' | 'compact' | 'none')*: Defaults to **`'comfortable'`**.
+* `variant` *('comfortable' | 'compact' | 'none')*: Defaults to **`'comfortable'`**.
     * **comfortable**: has considerable spacing. It is intended to be used for showing/hiding larger pieces of content.
     * **compact**: has much tighter spacing. It is intended to be used for showing/hiding navigation elements.
     * **none**: Applies no styling whatsoever to the component. Useful for when you want complete control of all styling via styled-components/css/etc., but still keep the functionality of the component. The component has many classes in place to try and make it easier to accomplish this.
@@ -60,7 +60,7 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
     import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 
     const example = () => (
-        <CollapseGroup theme="compact">
+        <CollapseGroup variant="compact">
             <Collapse>
                 I will appear and disappear when the rendered button is clicked!
             </Collapse>
@@ -78,7 +78,7 @@ The component can accept the following `props`:
 
 * `closedIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
 
-* `theme` *('comfortable' | 'compact' | 'none')*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
+* `variant` *('comfortable' | 'compact' | 'none')*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
 
 * `accordion` *(boolean)*: Defaults to **`false`**. Enables accordion functionality, where only one **`Collapse`** component can be open at a time.
 

@@ -100,9 +100,7 @@ export interface ColorsThemeSchema {
     primary: ColorHue;
     secondary: ColorHue;
     accent: ColorHue;
-    neutrals: {
-        [K in Neutrals]: ColorHue;
-    };
+    neutrals: { [K in Neutrals]: ColorHue };
 
     borders: {
         base: string;

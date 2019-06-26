@@ -3,13 +3,19 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // Vendor
 import { shallow, mount } from 'enzyme';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
+import { RootTheme } from '../theme';
 import { Collapse } from './';
 import { ArrowBack } from '../Icon';
 
 describe('Component: Collapse', () => {
     it('should match its snapshot.', () => {
-        const subject = <Collapse />;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Collapse />
+            </ThemeProvider>
+        );
         const component = shallow(subject);
 
         expect(subject).toBeDefined();
