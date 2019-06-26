@@ -92,7 +92,8 @@ const StyledBadge = styled('div')<BadgeProps>`
     ${({ size = 'dot' }) => BadgeSizeStyles[size]}
 
     &:hover {
-        border: 0.125rem solid ${({ borderColorHover }) => borderColorHover};
+        border: 0.125rem solid ${({ borderColorHover }) =>
+            th.color(borderColorHover)};
     }
 `;
 
