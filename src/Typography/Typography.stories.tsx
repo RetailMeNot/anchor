@@ -3,8 +3,7 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from './Typography.component';
 import { Grid, Cell } from '../Grid';
@@ -13,7 +12,7 @@ import * as README from './README.md';
 // THEME
 import { RootTheme } from '../theme';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
@@ -32,6 +31,7 @@ const elements = [
     'address',
     'code',
     'pre',
+    'a',
 ];
 
 storiesOf('Components/Typography', module)

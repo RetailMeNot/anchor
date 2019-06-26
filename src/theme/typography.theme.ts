@@ -1,5 +1,6 @@
 // VENDOR
 import { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
+// import { th } from '@xstyled/system';
 // THEME
 import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';
@@ -26,7 +27,6 @@ export interface TypographyTheme {
     fontSize: string;
     fontWeight: string;
     lineHeight: string;
-    fontColor: string;
     // FONT TREATMENTS
     scale: {
         [key: number]: FlattenSimpleInterpolation;
@@ -41,7 +41,6 @@ export const typography: TypographyTheme = {
     fontSize: `${fonts.baseFontSize}px`,
     fontWeight: 'normal',
     lineHeight: '1.5rem',
-    fontColor: colors.charcoal.base,
     scale: {
         62: css`
             font-size: 3.875rem;
@@ -100,6 +99,18 @@ export const typography: TypographyTheme = {
             line-height: 1.5rem;
             text-decoration: none;
             transition: color 250ms;
+            color: text.link.base;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+                color: text.link.hover;
+            }
+            &:focus {
+                color: text.link.focus;
+            }
+            &:visited {
+                color: text.link.visited;
+            }
         `,
         p: css`
             font-weight: normal;

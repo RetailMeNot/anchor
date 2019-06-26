@@ -1,10 +1,9 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import classNames from 'classnames';
-// STYLES
-import { colors } from '../../theme';
 // COMPONENTS
 import { Menu, Item } from '../../Menu';
 import {
@@ -20,14 +19,14 @@ import { AutoComplete } from '../../AutoComplete';
 import { Avatar } from '../../Avatar';
 
 const StyledHeaderElement = styled('header')`
-    background-color: ${colors.grapePurchase.base};
+    background-color: primary.base;
     margin: 0;
-    color: ${colors.white.base};
+    color: neutrals.white.base;
 `;
 
 const SecondaryContainer = styled('div')`
     width: 100%;
-    background-color: ${colors.grapePurchase.dark};
+    background-color: primary.dark;
     > * {
         max-width: 1140px;
         margin: 0 auto;
@@ -174,7 +173,7 @@ export const Header = ({ className, ...props }: HeaderProps) => (
                 <Menu
                     className="secondary-navigation"
                     size="small"
-                    bg={colors.grapePurchase.dark}
+                    bg={th.color('primary.dark')}
                     justify="flex-end"
                 >
                     <Item path="/">Rx Saver</Item>

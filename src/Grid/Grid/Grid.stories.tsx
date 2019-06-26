@@ -4,8 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import { Grid, Cell } from 'styled-css-grid';
-import styled from 'styled-components';
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { XS, CustomAdaptor, StandardBreakpoints } from '../../Grid';
 // README

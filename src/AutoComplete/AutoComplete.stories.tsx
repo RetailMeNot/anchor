@@ -3,8 +3,7 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
 import { Search } from '../Icon';

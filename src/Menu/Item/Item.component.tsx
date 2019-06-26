@@ -2,10 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
-// COMPONENTS
-// THEME
-import { colors } from '../../theme';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 export interface ItemProps {
     path: string;
@@ -23,7 +21,8 @@ export interface ItemProps {
 const StyledItem = styled('a')`
     cursor: pointer;
     text-align: center;
-    color: ${colors.silver.dark};
+    font-family: ${th('typography.fontFamily')};
+    color: text.body;
     text-decoration: none;
     transition: color 250ms;
 

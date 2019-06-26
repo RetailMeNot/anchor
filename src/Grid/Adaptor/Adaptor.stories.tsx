@@ -4,7 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { number } from '@storybook/addon-knobs';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENT
 import {
     LegacyDesktop,

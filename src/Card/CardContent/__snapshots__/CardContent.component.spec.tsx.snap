@@ -6,7 +6,6 @@ exports[`Component: CardContent should be defined 1`] = `
   position: relative;
   display: block;
   padding: 1rem;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 <div

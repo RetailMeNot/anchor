@@ -38,22 +38,18 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -102,7 +98,6 @@ exports[`Component: AutoComplete should be defined 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #595959;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
@@ -122,21 +117,23 @@ exports[`Component: AutoComplete should be defined 1`] = `
 .c0 {
   width: 100%;
   position: relative;
-  border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border: solid thin transparent;
+  border-color: borders.base;
+  border-radius: base;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background: #FFFFFF;
-  color: #595959;
+  background-color: neutrals.white.base;
+  color: neutrals.charcoal.light;
 }
 
 .c0:hover {
-  border: solid thin #A6A6A6;
+  border-color: borders.dark;
 }
 
 .c0:active,
+.c0.focus,
 .c0:focus {
-  border: solid thin #808080;
+  border-color: borders.dark;
 }
 
 .c0 .auto-complete-input {
@@ -145,7 +142,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
 
 <div
   className="anchor-auto-complete c0"
-  color="#595959"
+  color="neutrals.charcoal.light"
 >
   <div
     className="anchor-input auto-complete-input c1"
@@ -215,22 +212,18 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -279,7 +272,6 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #595959;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
@@ -299,22 +291,24 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 .c0 {
   width: 100%;
   position: relative;
-  border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border: solid thin transparent;
+  border-color: borders.base;
+  border-radius: base;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background: #FFFFFF;
-  color: #595959;
+  background-color: neutrals.white.base;
+  color: neutrals.charcoal.light;
   box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0,0,0,0.12);
 }
 
 .c0:hover {
-  border: solid thin #A6A6A6;
+  border-color: borders.dark;
 }
 
 .c0:active,
+.c0.focus,
 .c0:focus {
-  border: solid thin #808080;
+  border-color: borders.dark;
 }
 
 .c0 .auto-complete-input {
@@ -323,7 +317,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 
 <div
   className="anchor-auto-complete c0"
-  color="#595959"
+  color="neutrals.charcoal.light"
 >
   <div
     className="anchor-input auto-complete-input c1"
@@ -411,22 +405,18 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -475,7 +465,6 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #595959;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c6[type='number']::-webkit-inner-spin-button,
@@ -495,21 +484,23 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 .c0 {
   width: 100%;
   position: relative;
-  border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border: solid thin transparent;
+  border-color: borders.base;
+  border-radius: base;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background: #FFFFFF;
-  color: #595959;
+  background-color: neutrals.white.base;
+  color: neutrals.charcoal.light;
 }
 
 .c0:hover {
-  border: solid thin #A6A6A6;
+  border-color: borders.dark;
 }
 
 .c0:active,
+.c0.focus,
 .c0:focus {
-  border: solid thin #808080;
+  border-color: borders.dark;
 }
 
 .c0 .auto-complete-input {
@@ -518,7 +509,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 
 <div
   className="anchor-auto-complete c0"
-  color="#595959"
+  color="neutrals.charcoal.light"
 >
   <div
     className="anchor-input auto-complete-input c1"
@@ -601,22 +592,18 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -665,7 +652,6 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #595959;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
@@ -685,11 +671,23 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 .c0 {
   width: 100%;
   position: relative;
-  border-radius: 0.25rem;
+  border: solid thin transparent;
+  border-color: transparent;
+  border-radius: base;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background: #FFFFFF;
-  color: #595959;
+  background-color: neutrals.white.base;
+  color: neutrals.charcoal.light;
+}
+
+.c0:hover {
+  border-color: transparent;
+}
+
+.c0:active,
+.c0.focus,
+.c0:focus {
+  border-color: transparent;
 }
 
 .c0 .auto-complete-input {
@@ -698,7 +696,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 
 <div
   className="anchor-auto-complete c0"
-  color="#595959"
+  color="neutrals.charcoal.light"
 >
   <div
     className="anchor-input auto-complete-input c1"

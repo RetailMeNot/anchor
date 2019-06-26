@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { List } from '../../List';
 // UTILS
 const { useState, forwardRef, useImperativeHandle } = React;

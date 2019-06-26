@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, select, number, object } from '@storybook/addon-knobs';
 // VENDOR
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { RootTheme } from '../theme';
 // README
 import * as README from './README.md';

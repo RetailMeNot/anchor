@@ -3,14 +3,14 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Card } from './Card.component';
 import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
 import { Ellipses } from '../Icon';
-import { colors, fonts, RootTheme } from '../theme';
+import { colors, RootTheme } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
 // README
@@ -18,20 +18,18 @@ import * as README from './README.md';
 // THEME
 
 const StyledStory = styled('div')`
-    h2 {
-        font-family: ${fonts.fontFamily};
+    h2,
+    h3 {
+        font-family: ${th('typography.fontFamily')};
         font-weight: normal;
-        color: ${colors.charcoal.light};
+        color: text.body;
         margin-bottom: 0.5rem;
     }
     h3 {
-        font-family: ${fonts.fontFamily};
-        font-weight: normal;
-        color: ${colors.charcoal.light};
         margin: 0;
     }
     p {
-        color: ${colors.ash.base};
+        color: text.body;
         margin: 0;
     }
     .card-action-area {
@@ -90,7 +88,7 @@ const BrandCardContent = ({ title }: { title: string }) => (
 );
 
 const WideCardContent = ({ title }: { title: string }) => (
-    <Grid columns="96px minmax(400px, 750px) 90px" flow="column" gap="16px">
+    <Grid columns="96px minmax(400px, 750px) 190px" flow="column" gap="16px">
         <CenteredCell center={true} top={1} left={1}>
             <p>$1.00</p>
         </CenteredCell>

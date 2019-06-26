@@ -10,10 +10,9 @@ exports[`Component: Menu should be defined 1`] = `
   display: flex;
   width: 100%;
   min-width: 250px;
-  background: #602D6C;
+  background-color: primary.base;
   font-size: 0.875rem;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
-  border-radius: 0.25rem;
+  border-radius: base;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -24,7 +23,7 @@ exports[`Component: Menu should be defined 1`] = `
 .c0 > a {
   display: inline-block;
   line-height: 1.125rem;
-  color: #FFFFFF;
+  color: neutrals.white.base;
   -webkit-transition: background-color 500ms,color:500ms;
   transition: background-color 500ms,color:500ms;
   margin: 0 0.125rem;
@@ -32,7 +31,7 @@ exports[`Component: Menu should be defined 1`] = `
 
 .c0 > * > a:hover,
 .c0 > a:hover {
-  color: #fff;
+  color: neutrals.white.base;
   background-color: rgba(255,255,255,.1);
 }
 
@@ -40,13 +39,12 @@ exports[`Component: Menu should be defined 1`] = `
 .c0 > a:active,
 .c0 > * > a.active,
 .c0 > a.active {
-  color: #fff;
+  color: color:neutrals.white.base;
   background-color: rgba(255,255,255,.1);
 }
 
 .c0 > * > a:focus,
 .c0 > a:focus {
-  color: #fff;
   background-color: rgba(255,255,255,.1);
 }
 
@@ -62,7 +60,7 @@ exports[`Component: Menu should be defined 1`] = `
 
 .c0 > * > a,
 .c0 > a {
-  border-radius: 0.25rem;
+  border-radius: base;
   font-weight: 600;
   padding: 1rem 0.75rem;
 }
@@ -70,7 +68,7 @@ exports[`Component: Menu should be defined 1`] = `
 .c1 {
   cursor: pointer;
   text-align: center;
-  color: #E7E7E7;
+  color: text.body;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;

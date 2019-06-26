@@ -2,12 +2,10 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import { fromEvent, Subscription } from 'rxjs';
-import { rgba } from 'polished';
 import { get } from '../utils/get/get';
-// THEME
-import { colors, variables, fonts, sizes } from '../theme';
 
 interface DropDownPosition {
     top?: number;
@@ -33,7 +31,7 @@ interface DropDownState {
 }
 
 const StyledDropDown = styled('div')`
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     position: relative;
     cursor: pointer;
     line-height: 1rem;
@@ -59,12 +57,12 @@ const DropDownContainer = (props: DropDownContainerProps) => <div {...props} />;
 const StyledDropDownContainer = styled(DropDownContainer)`
     min-width: 10rem;
     position: absolute;
-    padding: ${sizes.padding.xs} 0;
+    padding: 0.25rem 0;
     z-index: 1;
-    background-color: ${colors.white.base};
-    box-shadow: 0 0.5rem 0.5rem 0 ${rgba(colors.charcoal.dark, 0.12)};
-    border-radius: ${variables.borderRadius};
-    border: thin solid ${colors.silver.dark};
+    background-color: neutrals.white.base;
+    box-shadow: 0 0.5rem 0.5rem 0 ${th.color('neutrals.ash.base')};
+    border-radius: base;
+    border: thin solid neutrals.silver.dark;
     /* Defined Position */
     top: ${({ position: { top } = {} }: DropDownContainerProps) =>
         top ? `${top}px !important` : 'inherit'};

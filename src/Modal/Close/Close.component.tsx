@@ -6,7 +6,7 @@ import { Button, ButtonProps } from '../../Button';
 import { Close } from '../../Icon';
 
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 
 const StyledClose = styled('div')`

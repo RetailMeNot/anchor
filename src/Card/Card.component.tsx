@@ -2,15 +2,13 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { CardActionArea } from './CardActionArea';
 import { CardAction } from './CardAction';
 import { CardContent } from './CardContent';
-// UTILS
-// import { get } from '../../utils/get/get';
 // THEME
-import { fonts, colors } from '../theme';
 
 export type Gutters = 'none' | 'small' | 'medium' | 'large';
 
@@ -25,10 +23,10 @@ export interface CardProps {
 const StyledCard = styled('div')`
     position: relative;
     width: 100%;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     box-sizing: border-box;
-    border-radius: 0.125rem;
-    border: solid thin ${colors.silver.dark};
+    border-radius: ${th.radius('base')};
+    border: solid thin ${th.color('borders.base')};
 `;
 
 export const Card: React.FunctionComponent<CardProps> = ({

@@ -3,7 +3,7 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 // VENDOR
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Input } from './Input.component';
 import { Search, Mobile } from '../../Icon';
@@ -11,7 +11,6 @@ import { Grid, Cell } from '../../Grid';
 import { colors, RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
-import { ThemeProvider } from '@xstyled/styled-components';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;

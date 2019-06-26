@@ -2,10 +2,9 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
 import { text, color } from '@storybook/addon-knobs';
 // VENDOR
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Typography } from '..';
 import { colors, RootTheme } from '../theme';

@@ -1,7 +1,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 // COMPONENTS
 import { Grid, Cell } from '../../Grid';

@@ -4,7 +4,7 @@ exports[`Component: Item should be defined 1`] = `
 .c0 {
   cursor: pointer;
   text-align: center;
-  color: #E7E7E7;
+  color: text.body;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;
@@ -29,7 +29,7 @@ exports[`Component: Item should render with label 1`] = `
 .c0 {
   cursor: pointer;
   text-align: center;
-  color: #E7E7E7;
+  color: text.body;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;

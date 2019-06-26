@@ -94,22 +94,36 @@ export const colors = {
 };
 
 type ColorHue = { light: string; base: string; dark: string };
+type Neutrals = 'white' | 'ash' | 'silver' | 'charcoal';
 
 export interface ColorsThemeSchema {
     primary: ColorHue;
     secondary: ColorHue;
     accent: ColorHue;
     neutrals: {
-        [key: string]: ColorHue;
+        [K in Neutrals]: ColorHue;
     };
 
     borders: {
         base: string;
-        // light: string;
+        light: string;
         dark: string;
         error: string;
         success: string;
     };
+
+    text: {
+        body: string;
+        link: {
+            base: string;
+            hover: string;
+            focus: string;
+            visited: string;
+        };
+    };
+
+    error: string;
+    success: string;
 }
 
 export const ColorsTheme: ColorsThemeSchema = {
@@ -124,10 +138,22 @@ export const ColorsTheme: ColorsThemeSchema = {
     },
     borders: {
         // PRAGMATIC
+        light: colors.silver.base,
         base: colors.ash.light,
         dark: colors.ash.dark,
         // SEMANTIC
         error: colors.ash.dark,
         success: colors.ash.dark,
     },
+    text: {
+        body: colors.charcoal.base,
+        link: {
+            base: colors.savvyCyan.dark,
+            hover: colors.savvyCyan.dark,
+            focus: colors.savvyCyan.dark,
+            visited: colors.savvyCyan.dark,
+        },
+    },
+    error: colors.flashPink.base,
+    success: colors.success.base,
 };

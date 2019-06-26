@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { text } from '@storybook/addon-knobs';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
@@ -13,14 +13,13 @@ import {
 } from './Page.component';
 import { Footer } from '../Footer/Footer.component';
 import { Header } from '../Header/Header.component';
-import { colors, RootTheme } from '../../theme';
+import { RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
     width: 100%;
 `;
 

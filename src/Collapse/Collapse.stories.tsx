@@ -4,7 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import {
     Collapse,

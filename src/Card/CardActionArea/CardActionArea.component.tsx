@@ -2,10 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
-// COMPONENTS
-// THEME
-import { fonts, colors } from '../../theme';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 
 export interface CardActionAreaProps {
     className?: string;
@@ -17,9 +15,9 @@ const StyledCardActionArea = styled('div')`
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     width: 100%;
-    border-top: solid thin ${colors.silver.dark};
+    border-top: solid thin ${th.color('neutrals.silver.dark')};
     background-color: ${({ backgroundColor = 'white' }: CardActionAreaProps) =>
         backgroundColor};
 `;

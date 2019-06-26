@@ -2,7 +2,10 @@
 import * as React from 'react';
 // Vendor
 import classNames from 'classnames';
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import styled, {
+    css,
+    FlattenSimpleInterpolation,
+} from '@xstyled/styled-components';
 // Components
 import { ChevronDown, ChevronUp } from '../Icon';
 import { ComfortableTheme } from './Themes/ComfortableTheme';
@@ -11,7 +14,10 @@ import { CompactTheme } from './Themes/CompactTheme';
 export type Themes = 'comfortable' | 'compact' | 'none';
 
 interface CollapseProps {
-    /** Whether the component starts off open or closed. Can also be used to progrmatically open/close the component. */
+    /**
+     * Whether the component starts off open or closed. Can also be used to programmatically open/close the
+     * component.
+     */
     isOpen?: boolean;
     /** Text to show for the opened state of the component */
     openedText?: string;

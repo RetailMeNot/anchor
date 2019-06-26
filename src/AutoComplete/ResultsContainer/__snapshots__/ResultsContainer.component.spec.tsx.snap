@@ -6,7 +6,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   -webkit-transition: background-color 500ms;
@@ -20,6 +20,10 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 .c1.active {
   background-color: #F1F1F1;
+}
+
+.c1 p {
+  margin-bottom: 0;
 }
 
 .c0 {
@@ -122,7 +126,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   -webkit-transition: background-color 500ms;
@@ -136,6 +140,10 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c2.active {
   background-color: #F1F1F1;
+}
+
+.c2 p {
+  margin-bottom: 0;
 }
 
 .c1 {

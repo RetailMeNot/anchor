@@ -2,11 +2,10 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Gutters } from '../Card.component';
-// THEME
-import { fonts } from '../../theme';
 
 export interface CardContentProps {
     className?: string;
@@ -27,7 +26,7 @@ const StyledCard = styled('div')`
     display: block;
     padding: ${({ gutter = 'medium' }: CardContentProps) =>
         gutterSizes[gutter]};
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
 `;
 
 export const CardContent: React.FunctionComponent<CardContentProps> = ({

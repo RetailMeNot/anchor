@@ -1,17 +1,13 @@
 // REACT
 import * as React from 'react';
-
-// ANCHOR
-import { sizes } from '../../theme/sizes.theme';
-
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import classnames from 'classnames';
 
-export const StyledFooter = styled.div<ModalFooterProps>`
+export const StyledFooter = styled('div')<ModalFooterProps>`
     box-sizing: border-box;
     width: 100%;
-    border-radius: 0 0 ${sizes.border.radius.modal} ${sizes.border.radius.modal};
+    border-radius: 0 0 modal modal;
     margin-top: auto;
     ${({ padding }) =>
         padding &&

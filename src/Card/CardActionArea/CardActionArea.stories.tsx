@@ -4,8 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { color } from '@storybook/addon-knobs';
 // VENDOR
-import styled from 'styled-components';
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { CardActionArea } from './CardActionArea.component';
 // THEME

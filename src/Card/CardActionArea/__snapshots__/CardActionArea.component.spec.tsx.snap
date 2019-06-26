@@ -5,9 +5,8 @@ exports[`Component: CardActionArea should be defined 1`] = `
   box-sizing: border-box;
   position: relative;
   display: inline-block;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   width: 100%;
-  border-top: solid thin #E7E7E7;
+  border-top: solid thin neutrals.silver.dark;
   background-color: white;
 }
 

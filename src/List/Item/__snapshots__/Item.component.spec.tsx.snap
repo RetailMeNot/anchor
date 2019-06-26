@@ -6,7 +6,7 @@ exports[`Component: Item should be defined 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   -webkit-transition: background-color 500ms;
@@ -20,6 +20,10 @@ exports[`Component: Item should be defined 1`] = `
 
 .c0.active {
   background-color: #F1F1F1;
+}
+
+.c0 p {
+  margin-bottom: 0;
 }
 
 .c1 {

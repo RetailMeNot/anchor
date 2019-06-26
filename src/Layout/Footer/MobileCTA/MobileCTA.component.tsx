@@ -1,14 +1,11 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import classNames from 'classnames';
 // COMPONENTS
-// import { Icon } from '../../../Icon';
 import { Grid, Cell, CenteredCell } from '../../../Grid';
 import { Typography } from '../../../Typography';
-// STYLES
-import { colors } from '../../../theme';
 
 const StyledMobileCTAElement = styled('a')`
     box-sizing: border-box;
@@ -146,7 +143,7 @@ const Chevron = () => (
     <svg width="8" height="16" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M.311 15.707l-.03-.031a1.04 1.04 0 0 1 0-1.423L5.611 8 .282 1.747a1.04 1.04 0 0 1 0-1.422l.03-.032a.94.94 0 0 1 1.365 0L7.72 7.29a1.04 1.04 0 0 1 0 1.422l-6.043 6.996a.94.94 0 0 1-1.365 0"
-            fill={colors.savvyCyan.dark}
+            fill="#0074A6"
             fillRule="evenodd"
         />
     </svg>

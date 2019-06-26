@@ -2,9 +2,8 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
 // VENDOR
-import { ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { MobileCTA } from './MobileCTA.component';
 // README

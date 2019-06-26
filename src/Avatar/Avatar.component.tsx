@@ -2,12 +2,9 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from 'styled-components';
-import { rgba } from 'polished';
-// COMPONENTS
-
-// THEME
-import { colors, fonts } from '../theme';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+import { transparentize } from 'polished';
 
 interface AvatarProps {
     className?: string;
@@ -33,13 +30,13 @@ const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
 /* tslint:enable max-line-length */
 
 const StyledAvatar = styled('div')`
-    border: solid 0.1875rem ${rgba(colors.white.base, 0.4)};
+    border: solid 0.1875rem ${transparentize(0.4, 'white')};
     display: flex;
     justify-content: center;
     align-items: center;
     height: 2rem;
     width: 2rem;
-    border-radius: 50%;
+    border-radius: 1000px;
 
     svg {
         justify-self: baseline;
@@ -52,15 +49,15 @@ const InnerBorder = styled('div')`
     flex: 0 0 1.625rem;
     width: 1.625rem;
     height: 1.625rem;
-    font-family: ${fonts.fontFamily};
+    font-family: ${th('typography.fontFamily')};
     font-size: 0.75rem;
     font-weight: bold;
-    color: ${colors.charcoal.light};
-    background-color: ${colors.silver.base};
+    color: text.body;
+    background-color: neutrals.silver.base;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 1000px;
     overflow: hidden;
 `;
 

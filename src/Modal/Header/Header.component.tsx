@@ -1,30 +1,31 @@
 // REACT
 import * as React from 'react';
-
+// VENDOR
+import styled, { css } from '@xstyled/styled-components';
+import classnames from 'classnames';
 // ANCHOR
 import { Typography } from '../../Typography';
-import { sizes } from '../../theme/sizes.theme';
-import { colors } from '../../theme/colors.theme';
 import { StyledContent } from '../Content/Content.component';
 
-import styled from 'styled-components';
-import classnames from 'classnames';
-
-export const StyledHeader = styled.div<ModalHeaderProps>`
+export const StyledHeader = styled('div')<ModalHeaderProps>`
     box-sizing: border-box;
     min-height: 4rem;
     padding: 1.25rem 4.75rem 1.25rem 2rem;
     width: 100%;
-    border-radius: ${sizes.border.radius.modal} ${
-    sizes.border.radius.modal
-} 0 0;
+    border-radius: modal modal 0 0;
     margin-bottom: 1rem;
 
     display: flex;
     order: -1;
 
-    color: ${({ color = colors.charcoal.light }) => color};
-    background: ${({ background = colors.white.base }) => background};
+    ${({ color = 'neutrals.charcoal.light' }) =>
+        css({
+            color,
+        })};
+    ${({ background = 'neutrals.white.base' }) =>
+        css({
+            backgroundColor: background,
+        })};
 
     // If the header exists, remove the Content's padding.
     // We're preferring this selector to using Modal :first-child
