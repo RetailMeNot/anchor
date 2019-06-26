@@ -3,7 +3,7 @@
 exports[`Component: Modal.Close should render 1`] = `
 .c2 {
   position: relative;
-  border-radius: 1000px;
+  border-radius: circular;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   text-align: center;

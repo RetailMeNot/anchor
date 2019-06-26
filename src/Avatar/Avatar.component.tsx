@@ -36,7 +36,7 @@ const StyledAvatar = styled('div')`
     align-items: center;
     height: 2rem;
     width: 2rem;
-    border-radius: 1000px;
+    border-radius: circular;
 
     svg {
         justify-self: baseline;
@@ -57,7 +57,7 @@ const InnerBorder = styled('div')`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1000px;
+    border-radius: circular;
     overflow: hidden;
 `;
 

@@ -18,7 +18,7 @@ import { BUTTON_KEY, BUTTON_THEME } from '../Button/Button.component';
 
 export const RootTheme = {
     typography,
-    radii: { none: '0', base: '4px', modal: '8px' },
+    radii: { none: '0', base: '4px', modal: '8px', circular: '1000px' },
     [BUTTON_KEY]: BUTTON_THEME,
     colors,
 };

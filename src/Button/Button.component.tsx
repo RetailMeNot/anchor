@@ -349,6 +349,7 @@ const OutlineStyles = ({
             content: '';
 
             // overlap border and extend 2px past
+            // TODO: determine xstyled approach for resolving calculations
             top: calc(-${sizes.border.width.base} - 2px);
             left: calc(-${sizes.border.width.base} - 2px);
             right: calc(-${sizes.border.width.base} - 2px);
@@ -549,7 +550,7 @@ export const Button = ({
     // to make the ends circular. We're using a very
     // large radius so that it doesn't actually have
     // to be calculated from the height.
-    const borderRadius = circular ? '1000px' : sizes.border.radius.base;
+    const borderRadius = circular ? 'circular' : 'base';
     const width = iconOnly ? height : minWidth || themeWidth;
 
     if (!colorTheme) {
