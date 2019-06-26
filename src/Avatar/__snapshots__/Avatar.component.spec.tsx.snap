@@ -2,7 +2,7 @@
 
 exports[`Component: Avatar should match its snapshot. 1`] = `
 .c0 {
-  border: solid 0.1875rem rgba(255,255,255,0.6);
+  border: solid 0.1875rem rgba(255,255,255,0.4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
