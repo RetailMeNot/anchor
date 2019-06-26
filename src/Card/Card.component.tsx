@@ -25,7 +25,7 @@ const StyledCard = styled('div')`
     width: 100%;
     font-family: ${th('typography.fontFamily')};
     box-sizing: border-box;
-    border-radius: ${th.radius('base')};
+    border-radius: base;
     border: solid thin ${th.color('borders.base')};
 `;
 

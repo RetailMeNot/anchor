@@ -101,7 +101,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
   -webkit-appearance: none;
   background-color: transparent;
   z-index: 1;
-  color: #595959;
+  color: #323232;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
@@ -280,7 +280,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   -webkit-appearance: none;
   background-color: transparent;
   z-index: 1;
-  color: #595959;
+  color: #323232;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
@@ -478,7 +478,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   -webkit-appearance: none;
   background-color: transparent;
   z-index: 1;
-  color: #595959;
+  color: #323232;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
@@ -670,7 +670,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   -webkit-appearance: none;
   background-color: transparent;
   z-index: 1;
-  color: #595959;
+  color: #323232;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
