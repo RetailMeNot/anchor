@@ -13,8 +13,8 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
   padding: 1rem 2rem;
-  border-top: solid thin #E7E7E7;
-  border-bottom: solid thin #E7E7E7;
+  border-top: solid thin #D3D3D3;
+  border-bottom: solid thin #D3D3D3;
 }
 
 .c0 .anchor-collapse-button {

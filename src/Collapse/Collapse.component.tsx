@@ -45,8 +45,8 @@ const DEFAULT_VARIANT = 'comfortable';
 const variants = {
     comfortable: css`
         padding: 1rem 2rem;
-        border-top: solid thin ${th.color('neutrals.silver.dark')};
-        border-bottom: solid thin ${th.color('neutrals.silver.dark')};
+        border-top: solid thin ${th.color('borders.base')};
+        border-bottom: solid thin ${th.color('borders.base')};
 
         .anchor-collapse-button {
             cursor: pointer;
