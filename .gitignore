@@ -1,5 +1,7 @@
 # Globals
 *.log
+package-lock.json
+yarn.lock
 
 # Libraries
 node_modules
