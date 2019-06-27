@@ -3,7 +3,9 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
+import { RootTheme } from '../../theme';
 // SUBJECT
 import * as README from './README.md';
 import { Radio } from './Radio.component';
@@ -27,37 +29,39 @@ storiesOf('Components/Form/Radio', module)
             const disabled = boolean('disabled', false);
 
             return (
-                <StyledStory>
-                    <Radio
-                        checked={selectedValue === 'banana'}
-                        onChange={handleChange}
-                        value="banana"
-                        size={size}
-                        disabled={disabled}
-                    >
-                        Banana
-                    </Radio>
+                <ThemeProvider theme={RootTheme}>
+                    <StyledStory>
+                        <Radio
+                            checked={selectedValue === 'banana'}
+                            onChange={handleChange}
+                            value="banana"
+                            size={size}
+                            disabled={disabled}
+                        >
+                            Banana
+                        </Radio>
 
-                    <Radio
-                        checked={selectedValue === 'blueberry'}
-                        onChange={handleChange}
-                        value="blueberry"
-                        size={size}
-                        disabled={disabled}
-                    >
-                        Blueberry
-                    </Radio>
+                        <Radio
+                            checked={selectedValue === 'blueberry'}
+                            onChange={handleChange}
+                            value="blueberry"
+                            size={size}
+                            disabled={disabled}
+                        >
+                            Blueberry
+                        </Radio>
 
-                    <Radio
-                        checked={selectedValue === 'orange'}
-                        onChange={handleChange}
-                        value="orange"
-                        size={size}
-                        disabled={disabled}
-                    >
-                        Orange
-                    </Radio>
-                </StyledStory>
+                        <Radio
+                            checked={selectedValue === 'orange'}
+                            onChange={handleChange}
+                            value="orange"
+                            size={size}
+                            disabled={disabled}
+                        >
+                            Orange
+                        </Radio>
+                    </StyledStory>
+                </ThemeProvider>
             );
         })
     );

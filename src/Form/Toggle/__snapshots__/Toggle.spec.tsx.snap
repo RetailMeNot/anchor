@@ -29,7 +29,7 @@ exports[`Component: Toggle should be defined 1`] = `
   position: relative;
   height: 22px;
   width: 32px;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,7 +63,7 @@ exports[`Component: Toggle should be defined 1`] = `
   top: 50%;
   width: 1.125rem;
   height: 1.125rem;
-  border-radius: 50%;
+  border-radius: 1000px;
   background-color: #808080;
   -webkit-transform: translate(0,-50%);
   -ms-transform: translate(0,-50%);

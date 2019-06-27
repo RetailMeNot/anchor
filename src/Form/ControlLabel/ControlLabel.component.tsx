@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import classnames from 'classnames';
 
 // ANCHOR
@@ -59,8 +59,12 @@ export const ControlLabel = ({
         {cloneWithProps(control, { value })}
         {
             <Typography
-                marginLeft={labelPlacement === 'right' ? labelSpacing : undefined}
-                marginRight={labelPlacement === 'left' ? labelSpacing : undefined}
+                marginLeft={
+                    labelPlacement === 'right' ? labelSpacing : undefined
+                }
+                marginRight={
+                    labelPlacement === 'left' ? labelSpacing : undefined
+                }
             >
                 {label}
             </Typography>

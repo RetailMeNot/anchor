@@ -3,7 +3,9 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
+import { RootTheme } from '../../theme';
 // SUBJECT
 import * as README from './README.md';
 import { ControlLabel } from './ControlLabel.component';
@@ -17,13 +19,8 @@ const StyledStory = styled.div`
 
 const ToggleableToggle = () => {
     const [checked, setChecked] = React.useState<boolean>(true);
-    return (
-        <Toggle
-            checked={checked}
-            onChange={() => setChecked(!checked)}
-         />
-    );
-}
+    return <Toggle checked={checked} onChange={() => setChecked(!checked)} />;
+};
 
 storiesOf('Components/Form/ControlLabel', module)
     .addParameters({ readme: { sidebar: README } })
@@ -35,75 +32,77 @@ storiesOf('Components/Form/ControlLabel', module)
                 setSelectedValue(event.target.value);
             }
 
-            const labelPlacement = select('labelPlacement', ['left', 'right'], 'right');
+            const labelPlacement = select(
+                'labelPlacement',
+                ['left', 'right'],
+                'right'
+            );
             const labelSpacing = text('labelSpacing', '') || undefined;
 
             return (
-                <StyledStory>
-                    <ControlLabel
-                        value="banana"
-                        label="Banana"
-                        labelPlacement={labelPlacement}
-                        labelSpacing={labelSpacing}
-                        control={
-                            <Radio
-                                value="banana"
-                                onChange={handleChange}
-                                checked={selectedValue === 'banana'}
-                            />
-                        }
-                    />
-                    <br />
-                    <ControlLabel
-                        value="blueberry"
-                        label="Blueberry"
-                        labelPlacement={labelPlacement}
-                        labelSpacing={labelSpacing}
-                        control={
-                            <Radio
-                                value="blueberry"
-                                onChange={handleChange}
-                                checked={selectedValue === 'blueberry'}
-                            />
-                        }
-                    />
-                    <br />
-                    <ControlLabel
-                        value="orange"
-                        label="Orange"
-                        labelPlacement={labelPlacement}
-                        labelSpacing={labelSpacing}
-                        control={
-                            <Radio
-                                value="orange"
-                                onChange={handleChange}
-                                checked={selectedValue === 'orange'}
-                            />
-                        }
-                    />
-                    <br />
-                    <br />
-                    <br />
-                    <ControlLabel
-                        value="orange"
-                        label="Daily Deals"
-                        labelPlacement={labelPlacement}
-                        labelSpacing={labelSpacing}
-                        control={
-                            <ToggleableToggle />
-                        }
-                    />
-                    <br />
-                    <ControlLabel
-                        value="orange"
-                        label="Daily Deals"
-                        labelPlacement={labelPlacement}
-                        labelSpacing={labelSpacing}
-                        control={
-                            <ToggleableToggle />
-                        }
-                    />
-                </StyledStory>
+                <ThemeProvider theme={RootTheme}>
+                    <StyledStory>
+                        <ControlLabel
+                            value="banana"
+                            label="Banana"
+                            labelPlacement={labelPlacement}
+                            labelSpacing={labelSpacing}
+                            control={
+                                <Radio
+                                    value="banana"
+                                    onChange={handleChange}
+                                    checked={selectedValue === 'banana'}
+                                />
+                            }
+                        />
+                        <br />
+                        <ControlLabel
+                            value="blueberry"
+                            label="Blueberry"
+                            labelPlacement={labelPlacement}
+                            labelSpacing={labelSpacing}
+                            control={
+                                <Radio
+                                    value="blueberry"
+                                    onChange={handleChange}
+                                    checked={selectedValue === 'blueberry'}
+                                />
+                            }
+                        />
+                        <br />
+                        <ControlLabel
+                            value="orange"
+                            label="Orange"
+                            labelPlacement={labelPlacement}
+                            labelSpacing={labelSpacing}
+                            control={
+                                <Radio
+                                    value="orange"
+                                    onChange={handleChange}
+                                    checked={selectedValue === 'orange'}
+                                />
+                            }
+                        />
+                        <br />
+                        <br />
+                        <br />
+                        <ControlLabel
+                            value="orange"
+                            label="Daily Deals"
+                            labelPlacement={labelPlacement}
+                            labelSpacing={labelSpacing}
+                            control={<ToggleableToggle />}
+                        />
+                        <br />
+                        <ControlLabel
+                            value="orange"
+                            label="Daily Deals"
+                            labelPlacement={labelPlacement}
+                            labelSpacing={labelSpacing}
+                            control={<ToggleableToggle />}
+                        />
+                    </StyledStory>
+                </ThemeProvider>
             );
         })
     );

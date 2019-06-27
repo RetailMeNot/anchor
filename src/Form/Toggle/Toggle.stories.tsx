@@ -3,9 +3,9 @@ import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
-import { colors } from '../../theme/index';
+import { colors, RootTheme } from '../../theme';
 // SUBJECT
 import * as README from './README.md';
 import { Toggle } from './Toggle.component';
@@ -26,16 +26,18 @@ storiesOf('Components/Form/Toggle', module)
             const showText = boolean('showText', true);
 
             return (
-                <StyledStory>
-                    <Toggle
-                        checked={checked}
-                        showText={showText}
-                        knobSize={text('knobSize', null) || undefined}
-                        disabled={boolean('disabled', false)}
-                        onChange={() => setChecked(!checked)}
-                    />
-                    {childText}
-                </StyledStory>
+                <ThemeProvider theme={RootTheme}>
+                    <StyledStory>
+                        <Toggle
+                            checked={checked}
+                            showText={showText}
+                            knobSize={text('knobSize', null) || undefined}
+                            disabled={boolean('disabled', false)}
+                            onChange={() => setChecked(!checked)}
+                        />
+                        {childText}
+                    </StyledStory>
+                </ThemeProvider>
             );
         })
     );

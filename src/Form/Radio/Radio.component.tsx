@@ -2,7 +2,8 @@
 import * as React from 'react';
 
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
@@ -28,7 +29,7 @@ const StyledLabel = styled('label')<RadioProps>`
         top: 0;
         left: 0;
         z-index: 1;
-        border: 1px solid ${colors.ash.light};
+        border: 1px solid ${th.color('neutrals.ash.light')};
         border-radius: 50%;
         background-color: white;
 
@@ -38,12 +39,13 @@ const StyledLabel = styled('label')<RadioProps>`
     &:after {
         position: absolute;
         z-index: 2;
-        ${({ size, fillSize }) => css({
-            width: fillSize,
-            height: fillSize,
-            top: `calc((${size} - ${fillSize}) / 2)`,
-            left: `calc((${size} - ${fillSize}) / 2)`,
-        })}
+        ${({ size, fillSize }) =>
+            css({
+                width: fillSize,
+                height: fillSize,
+                top: `calc((${size} - ${fillSize}) / 2)`,
+                left: `calc((${size} - ${fillSize}) / 2)`,
+            })}
         content: '';
         border-radius: 50%;
         background-color: ${colors.grapePurchase.base};
