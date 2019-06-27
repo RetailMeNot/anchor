@@ -92,6 +92,9 @@ export interface TypographyProps {
     scale?: Scale;
     size?: number;
     lineHeight?: number;
+
+    marginLeft?: string | number;
+    marginRight?: string | number;
 }
 
 const StyledTypography = (tag: TextElements) => styled[tag]`
@@ -103,6 +106,7 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     line-height: ${th('typography.lineHeight')};
     // Spacing
     margin: 0;
+    ${({ marginLeft, marginRight }: any) => css({ marginLeft, marginRight })}
     padding: 0;
     // TODO: colors when theme colors are defined
     ${({ color = 'inherit', hue = 'base' }: any) =>

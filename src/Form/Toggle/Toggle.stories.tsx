@@ -22,14 +22,19 @@ storiesOf('Components/Form/Toggle', module)
         React.createElement(() => {
             const [checked, setChecked] = useState<boolean>(true);
 
+            const childText = text('label', '') || undefined;
+            const showText = boolean('showText', true);
+
             return (
                 <StyledStory>
                     <Toggle
                         checked={checked}
+                        showText={showText}
                         knobSize={text('knobSize', null) || undefined}
                         disabled={boolean('disabled', false)}
                         onChange={() => setChecked(!checked)}
                     />
+                    {childText}
                 </StyledStory>
             );
         })

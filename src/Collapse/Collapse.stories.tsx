@@ -110,7 +110,6 @@ storiesOf('Components/Collapse', module)
         const Content = content === TEXT ? TextContent : ListContent;
 
         return (
-<<<<<<< HEAD
             <ThemeProvider theme={RootTheme}>
                 <section>
                     <Typography tag="h2">CollapseGroup Example</Typography>
@@ -119,7 +118,7 @@ storiesOf('Components/Collapse', module)
                         Collapse child components.
                     </Typography>
                     <CollapseGroup
-                        variant={select(
+                        variant={select<'compact' | 'comfortable' | 'none'>(
                             'variant',
                             ['compact', 'comfortable', 'none'],
                             'comfortable'
@@ -145,39 +144,5 @@ storiesOf('Components/Collapse', module)
                     </CollapseGroup>
                 </section>
             </ThemeProvider>
-=======
-            <section>
-                <Typography tag="h2">CollapseGroup Example</Typography>
-                <Typography tag="p">
-                    Adjusting Knobs for CollapseGroup will apply settings to
-                    Collapse child components.
-                </Typography>
-                <CollapseGroup
-                    accordion={boolean('accordion', false)}
-                    openIndex={0}
-                    theme={select<'compact' | 'comfortable' | 'none'>(
-                        'theme',
-                        ['compact', 'comfortable', 'none'],
-                        'comfortable'
-                    )}
-                    openedIcon={React.createElement(Icon[iconOpenedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                    closedIcon={React.createElement(Icon[iconClosedPick], {
-                        color: colors.savvyCyan.base,
-                    })}
-                >
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                    <Collapse>
-                        {content === TEXT ? <TextContent /> : <ListContent />}
-                    </Collapse>
-                </CollapseGroup>
-            </section>
->>>>>>> feat(Form): add basic radio and toggle inputs
         );
     });

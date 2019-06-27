@@ -6,11 +6,11 @@ import 'jest-styled-components';
 /* tslint:enable */
 
 // COMPONENT
-import { Toggle } from './Toggle.component';
+import { ControlLabel } from './ControlLabel.component';
 
-describe('Component: Toggle', () => {
+describe('Component: ControlLabel', () => {
     it('should be defined', () => {
-        const subject = <Toggle />;
+        const subject = <ControlLabel value="value" label="label" control={<div/>}/>;
 
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();

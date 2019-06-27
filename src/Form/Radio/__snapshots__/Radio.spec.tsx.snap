@@ -1,3 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Radio should be defined 1`] = `"<label class=\\"anchor-radio sc-bwzfXH jAuTqB\\"><input type=\\"checkbox\\" class=\\"sc-bdVaJa dDqVak\\"><span class=\\"anchor-typography sc-htpNat kdTHkA\\"></span></label>"`;
+exports[`Component: Radio should be defined 1`] = `
+.c1 {
+  display: none;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  width: 1.375rem;
+  height: 1.375rem;
+  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+}
+
+.c0:before {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #D3D3D3;
+  border-radius: 50%;
+  background-color: white;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.c0:after {
+  position: absolute;
+  z-index: 2;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: calc((1.375rem - 0.75rem) / 2);
+  left: calc((1.375rem - 0.75rem) / 2);
+  content: '';
+  border-radius: 50%;
+  background-color: #602D6C;
+  visibility: hidden;
+}
+
+<label
+  className="anchor-radio c0"
+  size="1.375rem"
+>
+  <input
+    className="c1"
+    type="checkbox"
+  />
+</label>
+`;

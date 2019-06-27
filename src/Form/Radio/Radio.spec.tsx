@@ -1,6 +1,6 @@
 // VENDOR
 import * as React from 'react';
-import { mount } from 'enzyme';
+import * as renderer from 'react-test-renderer';
 /* tslint:disable no-import-side-effect*/
 import 'jest-styled-components';
 /* tslint:enable */
@@ -12,7 +12,7 @@ describe('Component: Radio', () => {
     it('should be defined', () => {
         const subject = <Radio />;
 
-        const wrapper = mount(subject);
-        expect(wrapper.html()).toMatchSnapshot();
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
     });
 });

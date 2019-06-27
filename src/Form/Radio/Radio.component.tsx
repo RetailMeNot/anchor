@@ -8,7 +8,6 @@ import classnames from 'classnames';
 // ANCHOR
 import { colors } from '../../theme/colors.theme';
 import { fonts } from '../../theme/fonts.theme';
-import { Typography } from '../../Typography/index';
 
 const StyledInput = styled('input')`
     display: none;
@@ -16,13 +15,9 @@ const StyledInput = styled('input')`
 
 const StyledLabel = styled('label')<RadioProps>`
     position: relative;
-    display: flex;
+    display: inline-flex;
     cursor: pointer;
-    ${({ size }) => css`
-        padding-left: calc(${size} + 0.5rem);
-        line-height: ${size};
-    `}
-    margin-bottom: 1rem;
+    ${({ size }) => css({ width: size, height: size })}
     font-family: ${fonts.fontFamily};
 
     &:before {
@@ -42,11 +37,13 @@ const StyledLabel = styled('label')<RadioProps>`
 
     &:after {
         position: absolute;
-        top: 5px;
-        left: 5px;
         z-index: 2;
-        width: 12px;
-        height: 12px;
+        ${({ size, fillSize }) => css({
+            width: fillSize,
+            height: fillSize,
+            top: `calc((${size} - ${fillSize}) / 2)`,
+            left: `calc((${size} - ${fillSize}) / 2)`,
+        })}
         content: '';
         border-radius: 50%;
         background-color: ${colors.grapePurchase.base};
@@ -65,6 +62,7 @@ interface RadioProps {
     value?: string;
 
     size?: string;
+    fillSize?: string;
 
     inputProps?: any;
     onChange?: (arg: any) => any;
@@ -76,15 +74,15 @@ export const Radio = ({
     className,
     inputProps,
     size = '1.375rem',
+    fillSize = '0.75rem',
     ...props
 }: RadioProps): React.ReactElement<RadioProps> => (
     <StyledLabel
         className={classnames('anchor-radio', className)}
-        htmlFor={id}
         size={size}
+        fillSize={fillSize}
         {...props}
     >
         <StyledInput type="checkbox" id={id} {...props} {...inputProps} />
-        <Typography>{children}</Typography>
     </StyledLabel>
 );
