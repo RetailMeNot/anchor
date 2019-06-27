@@ -1,12 +1,13 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled from 'styled-components';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import { AutoComplete } from '@retailmenot/anchor';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
+import { RootTheme } from '../../../../../src/theme';
 import { Footer } from '../';
 import { SideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
@@ -201,68 +202,70 @@ export const Page = ({
     className,
     enableFooter,
 }: PageProps): React.ReactElement<any> => (
-    <StyledPageElement className={classNames(className)}>
-        <NormalizeCSS />
-        <StyledHeader>
-            <Grid
-                columns="300px minmax(300px, 1fr) minmax(200px, 1fr)"
-                columnGap="1rem"
-                minRowHeight="4.625rem"
-            >
-                <CenteredCell>
-                    <StyledLogoContainer href="/">
-                        <img alt="Anchor Logo Horizontal" src={logo} />
-                    </StyledLogoContainer>
-                </CenteredCell>
-                <CenteredCell>
-                    <AutoComplete
-                        placeholder="Search on Anchor"
-                        prefix={<Search />}
-                        shadow={false}
-                        border={false}
-                        dataSource={['1', '1', '1', '1']}
-                    />
-                </CenteredCell>
-                <Cell>
-                    <StyledPrimaryNav>
-                        <Typography
-                            tag="a"
-                            weight={600}
-                            className="active"
-                            href="/support"
-                        >
-                            Support
-                        </Typography>
-                        <Typography
-                            tag="a"
-                            weight={600}
-                            className="active"
-                            href="/support"
-                        >
-                            Github
-                        </Typography>
-                    </StyledPrimaryNav>
-                </Cell>
-            </Grid>
-        </StyledHeader>
-        <StyledContentBody>
-            <Grid columns="minmax(180px, 300px) 1fr">
-                <StyledSideNav>
-                    <div>
-                        <SideNavigation />
-                    </div>
-                </StyledSideNav>
-                <Cell>
-                    <StyledContentMain>
-                        <MDXProvider components={Components}>
-                            {children}
-                        </MDXProvider>
-                        {enableFooter && <Footer />}
-                    </StyledContentMain>
-                </Cell>
-            </Grid>
-        </StyledContentBody>
-    </StyledPageElement>
+    <ThemeProvider theme={RootTheme}>
+        <StyledPageElement className={classNames(className)}>
+            <NormalizeCSS />
+            <StyledHeader>
+                <Grid
+                    columns="300px minmax(300px, 1fr) minmax(200px, 1fr)"
+                    columnGap="1rem"
+                    minRowHeight="4.625rem"
+                >
+                    <CenteredCell>
+                        <StyledLogoContainer href="/">
+                            <img alt="Anchor Logo Horizontal" src={logo} />
+                        </StyledLogoContainer>
+                    </CenteredCell>
+                    <CenteredCell>
+                        <AutoComplete
+                            placeholder="Search on Anchor"
+                            prefix={<Search />}
+                            shadow={false}
+                            border={false}
+                            dataSource={['1', '1', '1', '1']}
+                        />
+                    </CenteredCell>
+                    <Cell>
+                        <StyledPrimaryNav>
+                            <Typography
+                                tag="a"
+                                weight={600}
+                                className="active"
+                                href="/support"
+                            >
+                                Support
+                            </Typography>
+                            <Typography
+                                tag="a"
+                                weight={600}
+                                className="active"
+                                href="/support"
+                            >
+                                Github
+                            </Typography>
+                        </StyledPrimaryNav>
+                    </Cell>
+                </Grid>
+            </StyledHeader>
+            <StyledContentBody>
+                <Grid columns="minmax(180px, 300px) 1fr">
+                    <StyledSideNav>
+                        <div>
+                            <SideNavigation />
+                        </div>
+                    </StyledSideNav>
+                    <Cell>
+                        <StyledContentMain>
+                            <MDXProvider components={Components}>
+                                {children}
+                            </MDXProvider>
+                            {enableFooter && <Footer />}
+                        </StyledContentMain>
+                    </Cell>
+                </Grid>
+            </StyledContentBody>
+        </StyledPageElement>
+    </ThemeProvider>
 );
 
 export default Page;

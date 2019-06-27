@@ -6,13 +6,13 @@ Buttons are used to complete an action or make a choice. Some examples include A
 rule, each page should have one primary button. Any remaining calls-to-action are represented as outline buttons
 (e.g. Cancel).
 
-#### Primary Button
+#### Filled Button
 ```tsx
 <Component initialState={{ size: 'md' }}>
   {({ state, setState }) =>
     <div>
       <Button
-        variant="primary"
+        variant="filled"
         size={state.size}
         onClick={() => setState(({ size }) => ({
           size: size === 'sm' ? 'md' : 'sm'
