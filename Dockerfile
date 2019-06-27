@@ -3,11 +3,11 @@ FROM node:dubnium as builder
 WORKDIR /usr/app
 
 COPY . .
-RUN npm ci
+RUN npm i
 
 WORKDIR /usr/app/docs
 
-RUN npm ci
+RUN npm i
 RUN npm run build
 
 
