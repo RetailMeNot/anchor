@@ -19,6 +19,7 @@ type TypographyTags =
     | 'address'
     | 'code'
     | 'pre'
+    | 'strong'
     | 'label';
 
 export interface TypographyTheme {
@@ -181,6 +182,9 @@ export const typography: TypographyTheme = {
         label: css`
             font-weight: normal;
             line-height: 1.5rem;
+        `,
+        strong: css`
+            font-weight: bold;
         `,
     },
 };

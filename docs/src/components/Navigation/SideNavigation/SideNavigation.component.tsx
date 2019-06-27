@@ -1,15 +1,12 @@
 // REACT
 import * as React from 'react';
-
 // VENDOR
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-
 // COMPONENTS
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
-
 // TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
-import { sections } from './sections.ts';
+import { sections } from './sections';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
     li a {
@@ -42,11 +39,12 @@ export class SideNavigation extends React.PureComponent {
     // This is what makes the correct Collapse component open when navigating the site.
     constructor(props: object) {
         super(props);
+    }
 
+    componentDidMount(): void {
         sections.forEach((section: SectionProperties, i: number) => {
             const { pattern } = section;
             const { pathname } = window.location;
-
             // Compares the current url with the path associated to a section and gets its index if it matches.
             if (pattern.length > 0 && pathname.includes(pattern)) {
                 this.mainOpenIndex = i;
