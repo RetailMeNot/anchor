@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 // TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
