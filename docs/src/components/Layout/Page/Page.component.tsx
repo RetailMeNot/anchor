@@ -9,7 +9,7 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { RootTheme } from '../../../../../src/theme';
 import { Footer } from '../';
-import { SideNavigation } from '../../Navigation';
+import { EnhancedSideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
 import {
     Grid,
@@ -251,7 +251,7 @@ export const Page = ({
                 <Grid columns="minmax(180px, 300px) 1fr">
                     <StyledSideNav>
                         <div>
-                            <SideNavigation />
+                            <EnhancedSideNavigation />
                         </div>
                     </StyledSideNav>
                     <Cell>
