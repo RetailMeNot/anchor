@@ -1,9 +1,4 @@
-// VARIABLES
-import { variables } from './variables.theme';
-
-const { baseFontSize, fontFamily } = variables;
-
 export const fonts = {
-    baseFontSize,
-    fontFamily,
+    baseFontSize: 16,
+    fontFamily: 'Avenir Next, Segoe UI, Helvetica, Roboto, sans-serif',
 };
