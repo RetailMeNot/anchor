@@ -2,7 +2,6 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select, text } from '@storybook/addon-knobs';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { RootTheme } from '../theme';
@@ -27,13 +26,6 @@ storiesOf('Components/Form', module).add('Example', () =>
         function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
             setSelectedVeganOption(event.target.value);
         }
-
-        const labelPlacement = select(
-            'labelPlacement',
-            ['left', 'right'],
-            'right'
-        );
-        const labelSpacing = text('labelSpacing', '') || undefined;
 
         const StyledForm = styled('form')`
             display: flex;
@@ -87,8 +79,6 @@ storiesOf('Components/Form', module).add('Example', () =>
                             value="dairyFree"
                             label="Dairy Free"
                             weight={600}
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
                             control={
                                 <Toggle
                                     checked={realDealEnabled}
