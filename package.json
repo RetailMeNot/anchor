@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-alpha.31",
+  "version": "0.0.1-alpha.32",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.js",
@@ -49,6 +49,7 @@
   },
   "author": "Kameron (@sharkparty)",
   "license": "UNLICENSED",
+  "types": "./ts/index.d.ts",
   "peerDependencies": {
     "@xstyled/styled-components": "^1.5.0",
     "@xstyled/system": "^1.5.0",
