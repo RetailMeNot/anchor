@@ -7,7 +7,10 @@ import classnames from 'classnames';
 
 // ANCHOR
 import { cloneWithProps } from '../../utils/cloneWithProps/cloneWithProps';
-import { Typography, TypographyProps } from '../../Typography/Typography.component';
+import {
+    Typography,
+    TypographyProps,
+} from '../../Typography/Typography.component';
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
 const StyledLabel = styled(Typography)<ControlLabelProps>`

@@ -21,7 +21,7 @@ describe('Component: Toggle', () => {
     it('should be disableable', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
-                <Toggle disabled/>
+                <Toggle disabled />
             </ThemeProvider>
         );
 
@@ -31,7 +31,7 @@ describe('Component: Toggle', () => {
     it('can be checked', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
-                <Toggle checked/>
+                <Toggle checked />
             </ThemeProvider>
         );
 

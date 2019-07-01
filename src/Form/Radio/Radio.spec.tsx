@@ -21,7 +21,7 @@ describe('Component: Radio', () => {
     it('should be disableable', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
-                <Radio disabled/>
+                <Radio disabled />
             </ThemeProvider>
         );
 
@@ -31,7 +31,7 @@ describe('Component: Radio', () => {
     it('can be checked', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
-                <Radio checked/>
+                <Radio checked />
             </ThemeProvider>
         );
 
