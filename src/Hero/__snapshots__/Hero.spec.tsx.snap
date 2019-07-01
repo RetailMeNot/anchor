@@ -34,7 +34,7 @@ exports[`Component: Hero should render with custom content 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -116,7 +116,7 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
@@ -140,7 +140,7 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
@@ -210,7 +210,7 @@ exports[`Component: Hero should render with title 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
@@ -281,7 +281,7 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
@@ -305,7 +305,7 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;

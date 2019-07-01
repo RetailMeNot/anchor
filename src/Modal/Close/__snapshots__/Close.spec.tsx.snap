@@ -5,7 +5,7 @@ exports[`Component: Modal.Close should render 1`] = `
   position: relative;
   border-radius: circular;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
