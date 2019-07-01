@@ -18,4 +18,24 @@ describe('Component: Toggle', () => {
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
+    it('should be disableable', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Toggle disabled/>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+    it('can be checked', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Toggle checked/>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
