@@ -19,7 +19,7 @@ exports[`Component: Toggle can be checked 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
@@ -118,7 +118,7 @@ exports[`Component: Toggle should be defined 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
@@ -214,7 +214,7 @@ exports[`Component: Toggle should be disableable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
