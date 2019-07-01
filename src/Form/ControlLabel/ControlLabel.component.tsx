@@ -3,28 +3,25 @@ import * as React from 'react';
 
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
 import { cloneWithProps } from '../../utils/cloneWithProps/cloneWithProps';
-import { Typography } from '../../Typography/index';
+import { Typography, TypographyProps } from '../../Typography/index';
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
-const StyledLabel = styled('label')<ControlLabelProps>`
+const StyledLabel = styled(Typography)<ControlLabelProps>`
     position: relative;
-    display: flex;
+    display: inline-flex;
+    ${spaceStyles}
     ${({ labelPlacement, disabled }) =>
         css({
-            color: disabled ? 'text.disabled' : 'inherit',
             flexDirection: labelPlacement === 'right' ? 'row' : 'row-reverse',
             cursor: disabled ? 'not-allowed' : 'pointer',
         })}
-    ${spaceStyles}
-    font-family: ${th('typography.fontFamily')};
 `;
 
-interface ControlLabelProps extends SpaceProps {
+interface ControlLabelProps extends SpaceProps, TypographyProps {
     children?: any;
     className?: string;
     id?: string;
@@ -43,6 +40,8 @@ export const ControlLabel = ({
     className,
     labelPlacement = 'right',
     labelSpacing = '0.5rem',
+    marginBottom = '1rem',
+    lineHeight = 1.375,
     control,
     value,
     disabled,
@@ -50,26 +49,24 @@ export const ControlLabel = ({
 }: ControlLabelProps): React.ReactElement<ControlLabelProps> => (
     <StyledLabel
         className={classnames('anchor-control-label', className)}
+        tag="label"
         htmlFor={id}
+        color={disabled ? 'text.disabled' : undefined}
         value={value}
         label={label}
         control={control}
         disabled={disabled}
         labelPlacement={labelPlacement}
+        marginBottom={marginBottom}
+        lineHeight={lineHeight}
         {...props}
     >
-        {cloneWithProps(control, { value, disabled })}
-        {
-            <Typography
-                marginLeft={
-                    labelPlacement === 'right' ? labelSpacing : undefined
-                }
-                marginRight={
-                    labelPlacement === 'left' ? labelSpacing : undefined
-                }
-            >
-                {label}
-            </Typography>
-        }
+        {cloneWithProps(control, {
+            value,
+            disabled,
+            marginLeft: labelPlacement === 'left' ? labelSpacing : undefined,
+            marginRight: labelPlacement === 'right' ? labelSpacing : undefined,
+        })}
+        {label}
     </StyledLabel>
 );

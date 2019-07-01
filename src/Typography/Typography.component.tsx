@@ -89,7 +89,7 @@ export interface TypographyProps extends SpaceProps {
     children?: any;
     tag?: TextElements;
     weight?: FontWeights;
-    color?: 'inherit' | 'initial' | Color;
+    color?: 'inherit' | 'initial' | Color | string;
     hue?: 'light' | 'base' | 'dark';
     scale?: Scale;
     size?: number;

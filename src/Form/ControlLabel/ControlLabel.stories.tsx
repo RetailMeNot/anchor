@@ -13,8 +13,8 @@ import { Radio } from '../Radio';
 import { Toggle } from '../Toggle';
 
 const StyledStory = styled.div`
-    color: text.body;
     padding: 1rem;
+    color: #555;
 `;
 
 const ToggleableToggle = (props: any) => {
@@ -45,70 +45,73 @@ storiesOf('Components/Form/ControlLabel', module)
             );
             const labelSpacing = text('labelSpacing', '') || undefined;
 
+            const StyledForm = styled('form')`
+                display: flex;
+                flex-direction: column;
+            `;
+
             return (
                 <ThemeProvider theme={RootTheme}>
                     <StyledStory>
-                        <ControlLabel
-                            value="banana"
-                            label="Banana"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            control={
-                                <Radio
-                                    value="banana"
-                                    onChange={handleChange}
-                                    checked={selectedValue === 'banana'}
-                                />
-                            }
-                        />
-                        <br />
-                        <ControlLabel
-                            value="blueberry"
-                            label="Blueberry"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            control={
-                                <Radio
-                                    value="blueberry"
-                                    onChange={handleChange}
-                                    checked={selectedValue === 'blueberry'}
-                                />
-                            }
-                        />
-                        <br />
-                        <ControlLabel
-                            value="orange"
-                            label="Orange"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            disabled
-                            control={
-                                <Radio
-                                    value="orange"
-                                    onChange={handleChange}
-                                    checked={selectedValue === 'orange'}
-                                />
-                            }
-                        />
-                        <br />
-                        <br />
-                        <br />
-                        <ControlLabel
-                            value="orange"
-                            label="Daily Deals"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            control={<ToggleableToggle />}
-                        />
-                        <br />
-                        <ControlLabel
-                            value="orange"
-                            label="Daily Deals"
-                            disabled
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            control={<ToggleableToggle />}
-                        />
+                        <StyledForm>
+                            <ControlLabel
+                                value="banana"
+                                label="Banana"
+                                labelPlacement={labelPlacement}
+                                labelSpacing={labelSpacing}
+                                control={
+                                    <Radio
+                                        value="banana"
+                                        onChange={handleChange}
+                                        checked={selectedValue === 'banana'}
+                                    />
+                                }
+                            />
+                            <ControlLabel
+                                value="blueberry"
+                                label="Blueberry"
+                                labelPlacement={labelPlacement}
+                                labelSpacing={labelSpacing}
+                                control={
+                                    <Radio
+                                        value="blueberry"
+                                        onChange={handleChange}
+                                        checked={selectedValue === 'blueberry'}
+                                    />
+                                }
+                            />
+                            <ControlLabel
+                                value="orange"
+                                label="Orange"
+                                labelPlacement={labelPlacement}
+                                labelSpacing={labelSpacing}
+                                disabled
+                                control={
+                                    <Radio
+                                        value="orange"
+                                        onChange={handleChange}
+                                        checked={selectedValue === 'orange'}
+                                    />
+                                }
+                            />
+                            <br />
+                            <ControlLabel
+                                value="orange"
+                                label="Daily Deals"
+                                weight={600}
+                                labelPlacement={labelPlacement}
+                                labelSpacing={labelSpacing}
+                                control={<ToggleableToggle />}
+                            />
+                            <ControlLabel
+                                value="orange"
+                                label="Daily Deals"
+                                disabled
+                                labelPlacement={labelPlacement}
+                                labelSpacing={labelSpacing}
+                                control={<ToggleableToggle />}
+                            />
+                        </StyledForm>
                     </StyledStory>
                 </ThemeProvider>
             );

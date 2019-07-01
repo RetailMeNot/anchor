@@ -1,9 +1,14 @@
 // REACT
 import * as React from 'react';
+const { forwardRef } = React;
+
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
+
+// ANCHOR
+import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
 const HiddenCheckbox = styled('input')<ToggleProps>`
     display: none;
@@ -12,6 +17,8 @@ const HiddenCheckbox = styled('input')<ToggleProps>`
 const StyledToggle = styled('label')<ToggleProps>`
     display: inline-flex;
     flex-direction: column;
+
+    ${spaceStyles}
 
     // Styles for the ON/OFF
     font-family: ${th('typography.fontFamily')};
@@ -92,7 +99,7 @@ const Switch = styled('span')<ToggleProps>`
     }
 `;
 
-interface ToggleProps {
+interface ToggleProps extends SpaceProps {
     className?: string;
     id?: string;
     htmlFor?: string;
@@ -111,46 +118,52 @@ interface ToggleProps {
     onChange?: (arg: any) => any;
 }
 
-export const Toggle = ({
-    id,
-    className,
-    inputProps,
-    checked,
-    showText = true,
-    height = '1.375rem',
-    toggleColor = '#784c82',
-    knobSize = '1.125rem',
-    trackHeight = '0.75rem',
-    trackWidth = '2rem',
-    disabled,
-    ...props
-}: ToggleProps): React.ReactElement<ToggleProps> => (
-    <StyledToggle
-        className={classnames('anchor-toggle', className)}
-        disabled={disabled}
-        htmlFor={id}
-        height={height}
-        trackWidth={trackWidth}
-        trackHeight={trackHeight}
-    >
-        <Switch
-            knobSize={knobSize}
+export const Toggle = forwardRef(
+    (
+        {
+            id,
+            className,
+            inputProps,
+            checked,
+            showText = true,
+            height = '1.375rem',
+            toggleColor = '#784c82',
+            knobSize = '1.125rem',
+            trackHeight = '0.75rem',
+            trackWidth = '2rem',
+            disabled,
+            ...props
+        }: ToggleProps,
+        ref: React.RefObject<any>
+    ): React.ReactElement<ToggleProps> => (
+        <StyledToggle
+            className={classnames('anchor-toggle', className)}
+            disabled={disabled}
+            htmlFor={id}
             height={height}
-            toggleColor={toggleColor}
-            trackHeight={trackHeight}
             trackWidth={trackWidth}
-            checked={checked}
-            disabled={disabled}
+            trackHeight={trackHeight}
             {...props}
-        />
-        <HiddenCheckbox
-            type="checkbox"
-            id={id}
-            checked={checked}
-            disabled={disabled}
-            {...props}
-            {...inputProps}
-        />
-        {showText && (checked ? 'ON' : 'OFF')}
-    </StyledToggle>
+        >
+            <Switch
+                knobSize={knobSize}
+                height={height}
+                toggleColor={toggleColor}
+                trackHeight={trackHeight}
+                trackWidth={trackWidth}
+                checked={checked}
+                disabled={disabled}
+            />
+            <HiddenCheckbox
+                type="checkbox"
+                id={id}
+                checked={checked}
+                disabled={disabled}
+                ref={ref}
+                {...props}
+                {...inputProps}
+            />
+            {showText && (checked ? 'ON' : 'OFF')}
+        </StyledToggle>
+    )
 );

@@ -3,16 +3,15 @@
 exports[`Component: ControlLabel should be defined 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: inherit;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   cursor: pointer;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c1 {
@@ -23,9 +22,12 @@ exports[`Component: ControlLabel should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
-  margin-left: 0.5rem;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
   color: inherit;
 }
 
@@ -34,18 +36,15 @@ exports[`Component: ControlLabel should be defined 1`] = `
 }
 
 <label
-  className="anchor-control-label c0"
+  className="anchor-typography anchor-control-label c0 c1"
   label="label"
   value="value"
 >
   <div
     className=""
+    marginRight="0.5rem"
     value="value"
   />
-  <span
-    className="anchor-typography c1"
-  >
-    label
-  </span>
+  label
 </label>
 `;

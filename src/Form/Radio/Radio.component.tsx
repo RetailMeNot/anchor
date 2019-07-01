@@ -1,10 +1,14 @@
 // REACT
 import * as React from 'react';
+const { forwardRef } = React;
 
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
+
+// ANCHOR
+import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
 const StyledInput = styled('input')`
     display: none;
@@ -23,6 +27,8 @@ const StyledLabel = styled('label')<RadioProps>`
     cursor: pointer;
     font-family: ${th.color('typography.fontFamily')};
     ${({ size }) => css({ width: size, height: size })}
+
+    ${spaceStyles}
 
     &:before {
         display: block;
@@ -63,7 +69,7 @@ const StyledLabel = styled('label')<RadioProps>`
     }
 `;
 
-interface RadioProps {
+interface RadioProps extends SpaceProps {
     children?: any;
     className?: string;
     id?: string;
@@ -80,23 +86,34 @@ interface RadioProps {
     onChange?: (arg: any) => any;
 }
 
-export const Radio = ({
-    id,
-    children,
-    className,
-    inputProps,
-    size = '1.375rem',
-    fillSize = '0.75rem',
-    fillColor = '#794a83',
-    ...props
-}: RadioProps): React.ReactElement<RadioProps> => (
-    <StyledLabel
-        className={classnames('anchor-radio', className)}
-        size={size}
-        fillSize={fillSize}
-        fillColor={fillColor}
-        {...props}
-    >
-        <StyledInput type="checkbox" id={id} {...props} {...inputProps} />
-    </StyledLabel>
+export const Radio = forwardRef(
+    (
+        {
+            id,
+            children,
+            className,
+            inputProps,
+            size = '1.375rem',
+            fillSize = '0.75rem',
+            fillColor = '#794a83',
+            ...props
+        }: RadioProps,
+        ref: React.RefObject<any>
+    ): React.ReactElement<RadioProps> => (
+        <StyledLabel
+            className={classnames('anchor-radio', className)}
+            size={size}
+            fillSize={fillSize}
+            fillColor={fillColor}
+            {...props}
+        >
+            <StyledInput
+                ref={ref}
+                type="checkbox"
+                id={id}
+                {...props}
+                {...inputProps}
+            />
+        </StyledLabel>
+    )
 );
