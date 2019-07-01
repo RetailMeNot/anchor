@@ -11,7 +11,7 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
 .c0 {
   display: block;
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 1rem 2rem;
   border-top: solid thin #D3D3D3;
   border-bottom: solid thin #D3D3D3;

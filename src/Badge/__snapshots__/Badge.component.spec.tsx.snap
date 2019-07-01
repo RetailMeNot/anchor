@@ -3,7 +3,7 @@
 exports[`Component: Badge should be able to render with an icon 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -88,7 +88,7 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
 exports[`Component: Badge should be defined and match its snapshot 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -138,7 +138,7 @@ exports[`Component: Badge should be defined and match its snapshot 1`] = `
 exports[`Component: Badge should hide the count by default if \`count\` is 0 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -187,7 +187,7 @@ exports[`Component: Badge should hide the count by default if \`count\` is 0 1`]
 exports[`Component: Badge should render \`count\` if \`count\` is less than \`overflowCount\` 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -239,7 +239,7 @@ exports[`Component: Badge should render \`count\` if \`count\` is less than \`ov
 exports[`Component: Badge should render \`overflowCount\`+ if \`count\` is more than \`overflowCount\` 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -291,7 +291,7 @@ exports[`Component: Badge should render \`overflowCount\`+ if \`count\` is more 
 exports[`Component: Badge should render a count with the border color of \`borderColorHover\` if \`isParentHovered\` is true. 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -341,7 +341,7 @@ exports[`Component: Badge should render a count with the border color of \`borde
 exports[`Component: Badge should render a dot as the default \`size\` 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -391,7 +391,7 @@ exports[`Component: Badge should render a dot as the default \`size\` 1`] = `
 exports[`Component: Badge should render a double-digit count in a small badge with fully rounded border-radius 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -478,7 +478,7 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
 exports[`Component: Badge should render a single-digit count in a large badge with fully rounded border-radius 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -565,7 +565,7 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
 exports[`Component: Badge should render a single-digit count in a small badge with only partially rounded border-radius 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -652,7 +652,7 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
 exports[`Component: Badge should render the count with absolute positioning if \`standalone\` is false 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -737,7 +737,7 @@ exports[`Component: Badge should render the count with absolute positioning if \
 exports[`Component: Badge should render the count without absolute positioning if \`standalone\` is true 1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 
@@ -784,7 +784,7 @@ exports[`Component: Badge should render the count without absolute positioning i
 exports[`Component: Badge should show the count if \`showZero\` is true, even if \`count\` is 0  1`] = `
 .c0 {
   position: relative;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   display: inline-block;
 }
 

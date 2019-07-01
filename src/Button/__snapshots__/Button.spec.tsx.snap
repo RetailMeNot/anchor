@@ -141,7 +141,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   position: relative;
   border-radius: 1000px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -368,7 +368,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -595,7 +595,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -806,7 +806,7 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -965,7 +965,7 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1138,7 +1138,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1321,7 +1321,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1505,7 +1505,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1683,7 +1683,7 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1827,7 +1827,7 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -1981,7 +1981,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2138,7 +2138,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2299,7 +2299,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2459,7 +2459,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2583,7 +2583,7 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2727,7 +2727,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -2882,7 +2882,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -3039,7 +3039,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -3135,7 +3135,7 @@ exports[`Component: Button Sizes should render a md button 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -3435,7 +3435,7 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -3632,7 +3632,7 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -3836,7 +3836,7 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4043,7 +4043,7 @@ exports[`Component: Button Theme Provided should use custom size variants from t
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4164,7 +4164,7 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4271,7 +4271,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4388,7 +4388,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4507,7 +4507,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4630,7 +4630,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4752,7 +4752,7 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4843,7 +4843,7 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -4945,7 +4945,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5050,7 +5050,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5159,7 +5159,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5267,7 +5267,7 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5339,7 +5339,7 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5414,7 +5414,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5479,7 +5479,7 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5564,7 +5564,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5651,7 +5651,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5742,7 +5742,7 @@ Array [
   position: relative;
   border-radius: base;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5860,7 +5860,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -5940,7 +5940,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -6061,7 +6061,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -6182,7 +6182,7 @@ exports[`Component: Button should be defined 1`] = `
   position: relative;
   border-radius: 4px;
   font-weight: 600;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
   cursor: pointer;
   display: -webkit-inline-box;

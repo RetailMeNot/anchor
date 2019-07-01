@@ -38,22 +38,22 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -102,7 +102,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #323232;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
@@ -217,22 +217,22 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -281,7 +281,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #323232;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
@@ -415,22 +415,22 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -479,7 +479,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #323232;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
 .c6[type='number']::-webkit-inner-spin-button,
@@ -607,22 +607,22 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::-moz-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1:-ms-input-placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
 .c1::placeholder {
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: #808080;
 }
 
@@ -671,7 +671,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   background-color: transparent;
   z-index: 1;
   color: #323232;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
 .c5[type='number']::-webkit-inner-spin-button,
