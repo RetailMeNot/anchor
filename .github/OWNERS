@@ -19,7 +19,7 @@
 /src/Dropdown @sharkparty
 /src/Grid @sharkparty
 /src/Card @sharkparty
-/src/Form @sharkparty
+/src/Form/Input @sharkparty
 /src/List @sharkparty
 /src/Menu @sharkparty
 /src/Typography @sharkparty
@@ -29,7 +29,7 @@
 /src/Hero @brandonlilly
 /src/Button @brandonlilly
 /src/Modal @brandonlilly
-/src/Toggle @brandonlilly
-/src/Radio @brandonlilly
-/src/ControlLabel @brandonlilly
+/src/Form/Toggle @brandonlilly
+/src/Form/Radio @brandonlilly
+/src/Form/ControlLabel @brandonlilly
 /src/Badge @bjohnsonrmn
