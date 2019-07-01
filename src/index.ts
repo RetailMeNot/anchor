@@ -36,5 +36,5 @@ export {
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Modal } from './Modal';
-export { Input, Toggle, Radio } from './Form';
+export { Input, Toggle, Radio, ControlLabel } from './Form';
 export * from './Icon';

@@ -1,1 +1,1 @@
-export { Typography, TypographyProps } from './Typography.component';
+export { Typography } from './Typography.component';
