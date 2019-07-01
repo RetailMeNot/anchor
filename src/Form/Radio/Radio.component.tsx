@@ -10,8 +10,7 @@ import classnames from 'classnames';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
-const StyledInput = styled('input')`
-    display: none;
+const HiddenInput = styled('input')`
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -55,14 +54,14 @@ const StyledLabel = styled('label')<RadioProps>`
     &:after {
         position: absolute;
         border-radius: circular;
-        ${({ checked, size, fillSize, fillColor }) =>
+        ${({ disabled, checked, size, fillSize, fillColor }) =>
             css({
                 width: fillSize,
                 height: fillSize,
                 top: `calc((${size} - ${fillSize}) / 2)`,
                 left: `calc((${size} - ${fillSize}) / 2)`,
                 backgroundColor: fillColor,
-                visibility: !checked ? 'hidden' : undefined,
+                visibility: !checked || disabled ? 'hidden' : undefined,
             })}
         content: '';
         z-index: 2;
@@ -77,6 +76,7 @@ interface RadioProps extends SpaceProps {
     checked?: boolean;
     disabled?: boolean;
     value?: string;
+    name?: string;
 
     size?: string;
     fillSize?: string;
@@ -107,9 +107,9 @@ export const Radio = forwardRef(
             fillColor={fillColor}
             {...props}
         >
-            <StyledInput
+            <HiddenInput
                 ref={ref}
-                type="checkbox"
+                type="radio"
                 id={id}
                 {...props}
                 {...inputProps}

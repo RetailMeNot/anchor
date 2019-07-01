@@ -2,7 +2,6 @@
 
 exports[`Component: Radio should be defined 1`] = `
 .c1 {
-  display: none;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -58,7 +57,7 @@ exports[`Component: Radio should be defined 1`] = `
 >
   <input
     className="c1"
-    type="checkbox"
+    type="radio"
   />
 </label>
 `;

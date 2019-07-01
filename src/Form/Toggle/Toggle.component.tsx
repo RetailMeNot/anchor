@@ -10,8 +10,14 @@ import classnames from 'classnames';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
-const HiddenCheckbox = styled('input')<ToggleProps>`
-    display: none;
+const HiddenInput = styled('input')<ToggleProps>`
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0
+    right: 0;
+    bottom: 0;
 `;
 
 const StyledToggle = styled('label')<ToggleProps>`
@@ -106,6 +112,7 @@ interface ToggleProps extends SpaceProps {
 
     checked?: boolean;
     disabled?: boolean;
+    name?: string;
 
     height?: string;
     showText?: boolean;
@@ -154,7 +161,7 @@ export const Toggle = forwardRef(
                 checked={checked}
                 disabled={disabled}
             />
-            <HiddenCheckbox
+            <HiddenInput
                 type="checkbox"
                 id={id}
                 checked={checked}

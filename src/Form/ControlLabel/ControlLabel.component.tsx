@@ -22,13 +22,13 @@ const StyledLabel = styled(Typography)<ControlLabelProps>`
 `;
 
 interface ControlLabelProps extends SpaceProps, TypographyProps {
-    children?: any;
     className?: string;
     id?: string;
 
     disabled?: boolean;
     value?: string;
     label: string;
+    name?: string;
     control: React.ReactElement<any>;
     labelPlacement?: 'left' | 'right';
     labelSpacing?: string | number;
@@ -42,9 +42,10 @@ export const ControlLabel = ({
     labelSpacing = '0.5rem',
     marginBottom = '1rem',
     lineHeight = 1.375,
-    control,
     value,
     disabled,
+    control,
+    name,
     ...props
 }: ControlLabelProps): React.ReactElement<ControlLabelProps> => (
     <StyledLabel
@@ -54,8 +55,9 @@ export const ControlLabel = ({
         color={disabled ? 'text.disabled' : undefined}
         value={value}
         label={label}
-        control={control}
         disabled={disabled}
+        control={control}
+        name={name}
         labelPlacement={labelPlacement}
         marginBottom={marginBottom}
         lineHeight={lineHeight}
@@ -64,6 +66,7 @@ export const ControlLabel = ({
         {cloneWithProps(control, {
             value,
             disabled,
+            name,
             marginLeft: labelPlacement === 'left' ? labelSpacing : undefined,
             marginRight: labelPlacement === 'right' ? labelSpacing : undefined,
         })}

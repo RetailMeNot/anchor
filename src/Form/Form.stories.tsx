@@ -14,23 +14,18 @@ const StyledStory = styled.div`
     color: #555;
 `;
 
-const ToggleableToggle = (props: any) => {
-    const [checked, setChecked] = React.useState<boolean>(true);
-    return (
-        <Toggle
-            checked={checked}
-            onChange={() => setChecked(!checked)}
-            {...props}
-        />
-    );
-};
-
 storiesOf('Components/Form', module).add('Example', () =>
     React.createElement(() => {
-        const [selectedValue, setSelectedValue] = React.useState('banana');
+        const [veganOptionsEnabled, setVeganOptionsEnabled] = React.useState(
+            true
+        );
+        const [realDealEnabled, setRealDealEnabled] = React.useState(true);
+        const [selectedVeganOption, setSelectedVeganOption] = React.useState(
+            'salad'
+        );
 
         function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-            setSelectedValue(event.target.value);
+            setSelectedVeganOption(event.target.value);
         }
 
         const labelPlacement = select(
@@ -50,61 +45,58 @@ storiesOf('Components/Form', module).add('Example', () =>
                 <StyledStory>
                     <StyledForm>
                         <ControlLabel
-                            value="banana"
-                            label="Banana"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
+                            value="dairyFree"
+                            label="Vegan Option"
+                            weight={600}
                             control={
-                                <Radio
-                                    value="banana"
-                                    onChange={handleChange}
-                                    checked={selectedValue === 'banana'}
+                                <Toggle
+                                    checked={veganOptionsEnabled}
+                                    onChange={() =>
+                                        setVeganOptionsEnabled(
+                                            !veganOptionsEnabled
+                                        )
+                                    }
                                 />
                             }
                         />
                         <ControlLabel
-                            value="blueberry"
-                            label="Blueberry"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
+                            value="salad"
+                            label="Salad"
+                            disabled={!veganOptionsEnabled}
+                            marginLeft="2rem"
                             control={
                                 <Radio
-                                    value="blueberry"
                                     onChange={handleChange}
-                                    checked={selectedValue === 'blueberry'}
+                                    checked={selectedVeganOption === 'salad'}
                                 />
                             }
                         />
                         <ControlLabel
-                            value="orange"
-                            label="Orange"
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            disabled
+                            value="seitan"
+                            label="Seitan Steak"
+                            disabled={!veganOptionsEnabled}
+                            marginLeft="2rem"
                             control={
                                 <Radio
-                                    value="orange"
                                     onChange={handleChange}
-                                    checked={selectedValue === 'orange'}
+                                    checked={selectedVeganOption === 'seitan'}
                                 />
                             }
                         />
-                        <br />
                         <ControlLabel
-                            value="orange"
-                            label="Daily Deals"
+                            value="dairyFree"
+                            label="Dairy Free"
                             weight={600}
                             labelPlacement={labelPlacement}
                             labelSpacing={labelSpacing}
-                            control={<ToggleableToggle />}
-                        />
-                        <ControlLabel
-                            value="orange"
-                            label="Daily Deals"
-                            disabled
-                            labelPlacement={labelPlacement}
-                            labelSpacing={labelSpacing}
-                            control={<ToggleableToggle />}
+                            control={
+                                <Toggle
+                                    checked={realDealEnabled}
+                                    onChange={() =>
+                                        setRealDealEnabled(!realDealEnabled)
+                                    }
+                                />
+                            }
                         />
                     </StyledForm>
                 </StyledStory>
