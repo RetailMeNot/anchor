@@ -7,13 +7,11 @@ exports[`Component: Typography match its snapshot 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
+  color: inherit;
 }
 
 .c0 small {
@@ -34,14 +32,12 @@ exports[`Component: Typography should accept a custom display 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   display: block;
   text-transform: none;
+  color: inherit;
 }
 
 .c0 small {
@@ -63,14 +59,12 @@ exports[`Component: Typography should accept a custom lineHeight 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
   line-height: 3rem;
+  color: inherit;
 }
 
 .c0 small {
@@ -91,14 +85,12 @@ exports[`Component: Typography should accept a custom size 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
   font-size: 2rem;
+  color: inherit;
 }
 
 .c0 small {

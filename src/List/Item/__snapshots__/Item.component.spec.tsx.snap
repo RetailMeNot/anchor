@@ -32,9 +32,6 @@ exports[`Component: Item should be defined 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: #595959;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -43,6 +40,7 @@ exports[`Component: Item should be defined 1`] = `
   margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
+  color: #595959;
 }
 
 .c1 small {

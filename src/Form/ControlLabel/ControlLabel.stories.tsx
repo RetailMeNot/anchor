@@ -13,13 +13,19 @@ import { Radio } from '../Radio';
 import { Toggle } from '../Toggle';
 
 const StyledStory = styled.div`
-    background: #f1f1f1;
+    color: text.body;
     padding: 1rem;
 `;
 
-const ToggleableToggle = () => {
+const ToggleableToggle = (props: any) => {
     const [checked, setChecked] = React.useState<boolean>(true);
-    return <Toggle checked={checked} onChange={() => setChecked(!checked)} />;
+    return (
+        <Toggle
+            checked={checked}
+            onChange={() => setChecked(!checked)}
+            {...props}
+        />
+    );
 };
 
 storiesOf('Components/Form/ControlLabel', module)
@@ -75,6 +81,7 @@ storiesOf('Components/Form/ControlLabel', module)
                             label="Orange"
                             labelPlacement={labelPlacement}
                             labelSpacing={labelSpacing}
+                            disabled
                             control={
                                 <Radio
                                     value="orange"
@@ -97,6 +104,7 @@ storiesOf('Components/Form/ControlLabel', module)
                         <ControlLabel
                             value="orange"
                             label="Daily Deals"
+                            disabled
                             labelPlacement={labelPlacement}
                             labelSpacing={labelSpacing}
                             control={<ToggleableToggle />}

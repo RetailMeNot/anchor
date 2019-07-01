@@ -5,16 +5,11 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
 
-const inputHeight = `22px`;
-const knobWidth = `32px`;
-const trackWidth = `32px`;
-const trackHeight = `12px`;
-
-const StyledCheckbox = styled('input')`
+const HiddenCheckbox = styled('input')<ToggleProps>`
     display: none;
 `;
 
-const StyledToggle = styled('span')`
+const StyledToggle = styled('label')<ToggleProps>`
     display: inline-flex;
     flex-direction: column;
 
@@ -24,18 +19,24 @@ const StyledToggle = styled('span')`
     line-height: 1rem;
     font-weight: 500;
     text-align: center;
-    color: #555;
-
+    ${({ disabled }) =>
+        css({
+            color: disabled ? 'text.disabled' : '#555',
+            cursor: disabled ? 'not-allowed' : 'pointer',
+        })}
     user-select: none;
 `;
 
-const StyledSpan = styled('span')<ToggleProps>`
+const Switch = styled('span')<ToggleProps>`
     position: relative;
-    height: ${inputHeight};
-    width: ${trackWidth};
+    ${({ height, trackWidth }) =>
+        css({
+            height,
+            width: trackWidth,
+        })}
+
     margin-bottom: 0.25rem;
     display: flex;
-    cursor: pointer;
 
     // Styles the track the knob slides on
     &:before {
@@ -43,13 +44,21 @@ const StyledSpan = styled('span')<ToggleProps>`
         top: 50%;
         content: '';
 
-        height: ${trackHeight};
-        width: ${knobWidth};
         border-radius: circular;
         background-color: neutrals.ash.light;
         transform: translate(0, -50%);
         transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
             opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+        ${({ checked, disabled, trackWidth, toggleColor, trackHeight }) =>
+            css`
+                height: ${trackHeight};
+                width: ${trackWidth};
+                background-color: ${checked && !disabled
+                    ? toggleColor
+                    : 'neutrals.ash.light'};
+                opacity: ${checked && !disabled ? 0.5 : undefined};
+            `}
     }
 
     // Styles the knob of the toggle
@@ -66,35 +75,37 @@ const StyledSpan = styled('span')<ToggleProps>`
             height: ${knobSize};
         `}
         border-radius: circular;
-        background-color: neutrals.ash.dark;
+
+        // background-color: neutrals.ash.dark;
         transform: translate(0, -50%);
+
+        ${({ checked, disabled, knobSize, trackWidth, toggleColor }) =>
+            css`
+                transform: translate(
+                    ${checked ? `calc(${trackWidth} - ${knobSize})` : 0},
+                    -50%
+                );
+                background-color: ${checked && !disabled
+                    ? toggleColor
+                    : 'neutrals.ash.dark'};
+            `}
     }
-
-    ${({ checked, knobSize, toggleColor }) =>
-        checked &&
-        css`
-            &:before {
-                background-color: ${toggleColor};
-                opacity: 0.5;
-            }
-
-            &:after {
-                transform: translate(calc(${trackWidth} - ${knobSize}), -50%);
-                background-color: ${toggleColor};
-            }
-        `}
 `;
 
 interface ToggleProps {
     className?: string;
     id?: string;
+    htmlFor?: string;
 
     checked?: boolean;
     disabled?: boolean;
 
+    height?: string;
     showText?: boolean;
     knobSize?: string;
     toggleColor?: string;
+    trackHeight?: string;
+    trackWidth?: string;
 
     inputProps?: any;
     onChange?: (arg: any) => any;
@@ -106,26 +117,40 @@ export const Toggle = ({
     inputProps,
     checked,
     showText = true,
+    height = '1.375rem',
     toggleColor = '#784c82',
     knobSize = '1.125rem',
+    trackHeight = '0.75rem',
+    trackWidth = '2rem',
+    disabled,
     ...props
 }: ToggleProps): React.ReactElement<ToggleProps> => (
-    <StyledToggle className={classnames('anchor-toggle', className)}>
-        <label htmlFor={id}>
-            <StyledCheckbox
-                type="checkbox"
-                id={id}
-                checked={checked}
-                {...props}
-                {...inputProps}
-            />
-            <StyledSpan
-                knobSize={knobSize}
-                toggleColor={toggleColor}
-                checked={checked}
-                {...props}
-            />
-        </label>
+    <StyledToggle
+        className={classnames('anchor-toggle', className)}
+        disabled={disabled}
+        htmlFor={id}
+        height={height}
+        trackWidth={trackWidth}
+        trackHeight={trackHeight}
+    >
+        <Switch
+            knobSize={knobSize}
+            height={height}
+            toggleColor={toggleColor}
+            trackHeight={trackHeight}
+            trackWidth={trackWidth}
+            checked={checked}
+            disabled={disabled}
+            {...props}
+        />
+        <HiddenCheckbox
+            type="checkbox"
+            id={id}
+            checked={checked}
+            disabled={disabled}
+            {...props}
+            {...inputProps}
+        />
         {showText && (checked ? 'ON' : 'OFF')}
     </StyledToggle>
 );

@@ -3,34 +3,34 @@ import * as React from 'react';
 
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
 import { cloneWithProps } from '../../utils/cloneWithProps/cloneWithProps';
-import { fonts } from '../../theme/fonts.theme';
 import { Typography } from '../../Typography/index';
+import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
 const StyledLabel = styled('label')<ControlLabelProps>`
-    display: inline-flex;
-    ${({ labelPlacement }) =>
-        css({
-            flexDirection: labelPlacement === 'right' ? 'row' : 'row-reverse',
-        })}
-    align-items: center;
-
     position: relative;
-    cursor: pointer;
-
-    margin-bottom: 1rem;
-    font-family: ${fonts.fontFamily};
+    display: flex;
+    ${({ labelPlacement, disabled }) =>
+        css({
+            color: disabled ? 'text.disabled' : 'inherit',
+            flexDirection: labelPlacement === 'right' ? 'row' : 'row-reverse',
+            cursor: disabled ? 'not-allowed' : 'pointer',
+        })}
+    ${spaceStyles}
+    font-family: ${th('typography.fontFamily')};
 `;
 
-interface ControlLabelProps {
+interface ControlLabelProps extends SpaceProps {
     children?: any;
     className?: string;
     id?: string;
 
-    value: string;
+    disabled?: boolean;
+    value?: string;
     label: string;
     control: React.ReactElement<any>;
     labelPlacement?: 'left' | 'right';
@@ -45,6 +45,7 @@ export const ControlLabel = ({
     labelSpacing = '0.5rem',
     control,
     value,
+    disabled,
     ...props
 }: ControlLabelProps): React.ReactElement<ControlLabelProps> => (
     <StyledLabel
@@ -53,10 +54,11 @@ export const ControlLabel = ({
         value={value}
         label={label}
         control={control}
+        disabled={disabled}
         labelPlacement={labelPlacement}
         {...props}
     >
-        {cloneWithProps(control, { value })}
+        {cloneWithProps(control, { value, disabled })}
         {
             <Typography
                 marginLeft={

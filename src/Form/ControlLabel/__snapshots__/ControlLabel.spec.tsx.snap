@@ -2,20 +2,16 @@
 
 exports[`Component: ControlLabel should be defined 1`] = `
 .c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: inherit;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
   cursor: pointer;
-  margin-bottom: 1rem;
   font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
@@ -25,14 +21,12 @@ exports[`Component: ControlLabel should be defined 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  margin-left: 0.5rem;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
+  margin-left: 0.5rem;
+  color: inherit;
 }
 
 .c1 small {

@@ -3,6 +3,13 @@
 exports[`Component: Radio should be defined 1`] = `
 .c1 {
   display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .c0 {
@@ -12,9 +19,9 @@ exports[`Component: Radio should be defined 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
+  font-family: typography.fontFamily;
   width: 1.375rem;
   height: 1.375rem;
-  font-family: Avenir Next,Segoe UI,Helvetica,Roboto,sans-serif;
 }
 
 .c0:before {
@@ -25,24 +32,24 @@ exports[`Component: Radio should be defined 1`] = `
   top: 0;
   left: 0;
   z-index: 1;
-  border: 1px solid #D3D3D3;
-  border-radius: 50%;
+  border-radius: 1000px;
   background-color: white;
   width: 1.375rem;
   height: 1.375rem;
+  border: 1px solid #D3D3D3;
 }
 
 .c0:after {
   position: absolute;
-  z-index: 2;
+  border-radius: 1000px;
   width: 0.75rem;
   height: 0.75rem;
   top: calc((1.375rem - 0.75rem) / 2);
   left: calc((1.375rem - 0.75rem) / 2);
-  content: '';
-  border-radius: 50%;
-  background-color: #602D6C;
+  background-color: #794a83;
   visibility: hidden;
+  content: '';
+  z-index: 2;
 }
 
 <label
