@@ -215,6 +215,7 @@ export const AutoComplete = ({
             />
             {isFocused && dataSource.length > 0 && (
                 <ResultsContainer
+                    size={size}
                     ref={resultsRef}
                     emitSelectedItem={(item: any) => {
                         changeActiveValue(item);

@@ -73,7 +73,14 @@ interface InputProps {
 }
 
 const InputSizeDimensions = {
-    sm: css``,
+    sm: css`
+        height: 2.5rem;
+
+        input {
+            height: 0.75rem;
+            font-size: 0.875rem;
+        }
+    `,
     md: css`
         height: 3.125rem;
         padding: 0.25rem;

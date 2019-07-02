@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import { List } from '../../List';
 // UTILS
 const { useState, forwardRef, useImperativeHandle } = React;
@@ -19,6 +19,7 @@ type EmitActiveTerm = (newTerm: string) => void;
 interface ResultsContainerProps {
     initialIndex?: number;
     className?: string;
+    size?: 'sm' | 'md' | 'lg';
     term: string;
     dataSource: any[];
     emitSelectedItem: EmitSelectedItem;
@@ -27,6 +28,7 @@ interface ResultsContainerProps {
 }
 interface StyledResultsContainerProps {
     children?: any;
+    size?: 'sm' | 'md' | 'lg';
 }
 
 export interface ResultItemProps {
@@ -37,16 +39,23 @@ export interface ResultItemProps {
     value: any;
 }
 
-const StyledResultsContainerContainer = styled.div<StyledResultsContainerProps>`
+const ResultContainerSpaceFromAutoComplete = {
+    sm: '2.6rem',
+    md: '3.25rem',
+    lg: '3.25rem',
+};
+
+const StyledResultsContainer = styled('div')<StyledResultsContainerProps>`
     background-color: white;
     position: absolute;
     width: inherit;
     z-index: 3;
     box-sizing: border-box;
-    top: 3.25rem;
-    box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
     padding: 1rem;
+    ${({ size = 'md' }) =>
+        css({ top: ResultContainerSpaceFromAutoComplete[size] })};
 `;
 
 const createResult = (label: string, value?: any): DataItem => ({
@@ -240,7 +249,7 @@ export const ResultsContainer = forwardRef(
             },
         }));
         return (
-            <StyledResultsContainerContainer
+            <StyledResultsContainer
                 className={classNames(
                     'anchor-auto-complete-results-container',
                     className
@@ -267,7 +276,7 @@ export const ResultsContainer = forwardRef(
                 ) : (
                     <List items={results} className="auto-complete-results" />
                 )}
-            </StyledResultsContainerContainer>
+            </StyledResultsContainer>
         );
     }
 );
