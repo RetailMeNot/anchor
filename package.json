@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-alpha.32",
+  "version": "0.0.1-alpha.33",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.js",
@@ -13,6 +13,7 @@
     "doc": "docs"
   },
   "files": [
+    "ts",
     "commonjs",
     "esm"
   ],
@@ -35,7 +36,7 @@
     "test:dev": "jest --watch --env=jsdom",
     "clean": "rm -rf esm commonjs ts .cache && git clean -Xdf",
     "build": "concurrently --names 'modules,typescript' 'npm run build:modules' 'npm run build:ts'",
-    "build:ts": "tsc",
+    "build:ts": "tsc -d",
     "build:modules": "rollup -c rollup.config.js",
     "ci": "concurrently --names 'lint,test' 'npm run lint' 'npm run test'",
     "prepublishOnly": "npm run build",

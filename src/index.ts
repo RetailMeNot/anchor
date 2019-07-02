@@ -25,7 +25,7 @@ export { Page, Layout, SidebarLayout, Footer, Header } from './Layout';
 export { List, Item as ListItem } from './List';
 export { Menu, Item as MenuItem } from './Menu';
 export { Typography } from './Typography';
-export { colors, fonts, sizes, GlobalCSS, NormalizeCSS } from './theme';
+export { colors, fonts, sizes, GlobalCSS, NormalizeCSS, RootTheme } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Input } from './Form';
