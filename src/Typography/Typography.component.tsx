@@ -4,8 +4,10 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
-// THEME
+// ANCHOR
+import { space as spaceStyles, SpaceProps } from '../theme/system.theme';
 import { colors, Color } from '../theme';
+import { rem } from '../utils/rem/rem';
 
 type TextElements =
     | 'a'
@@ -77,7 +79,7 @@ export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
 
 type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
 
-export interface TypographyProps {
+export interface TypographyProps extends SpaceProps {
     className?: string;
     align?: TextAlign;
     transform?: TextTransforms;
@@ -87,26 +89,20 @@ export interface TypographyProps {
     children?: any;
     tag?: TextElements;
     weight?: FontWeights;
-    color?: 'inherit' | 'initial' | Color;
+    color?: 'inherit' | 'initial' | Color | string;
     hue?: 'light' | 'base' | 'dark';
     scale?: Scale;
     size?: number;
     lineHeight?: number;
 }
 
-const StyledTypography = (tag: TextElements) => styled[tag]`
+const StyledTypography = (tag: TextElements) => styled(tag)<TypographyProps>`
     box-sizing: border-box;
     // Global Font Properties
     font-family: ${th('typography.fontFamily')};
     font-size: ${th('typography.fontSize')};
     font-weight: ${th('typography.fontWeight')};
     line-height: ${th('typography.lineHeight')};
-    // Spacing
-    margin: 0;
-    padding: 0;
-    // TODO: colors when theme colors are defined
-    ${({ color = 'inherit', hue = 'base' }: any) =>
-        css({ color: colors[color] ? colors[color][hue] : color })};
 
     // Use a scale to set size & line-height
     ${variant({
@@ -123,39 +119,48 @@ const StyledTypography = (tag: TextElements) => styled[tag]`
     })}
 
     // CSS Overrides
-    ${({ align = 'inherit' }: any) => css({ textAlign: align })};
-    ${({ display }: any) =>
-        display ? css({ display: display || null }) : null};
-    ${({ transform = 'none' }: any) => css({ textTransform: transform })};
+    ${({ align = 'inherit', display, transform = 'none' }) =>
+        css({
+            textAlign: align,
+            display: display,
+            textTransform: transform,
+        })};
 
     // Override Size & Line Height
-    ${({ weight }: any) => css({ fontWeight: weight ? weight : null })};
+    ${({ weight }) => css({ fontWeight: weight })};
 
     // Throw a warning that says you really shouldn't do this
-    ${({ size }: any) => {
+    ${({ size }) => {
         if (size) {
             /* tslint:disable no-console */
             console.warn(
                 'Overriding the size property is almost always a bad idea.'
             );
             /* tslint:enable no-console */
-            return css({ fontSize: `${size}rem` });
+            return css({ fontSize: rem(size) });
         } else {
             return null;
         }
     }};
-    ${({ lineHeight }: any) => {
+    ${({ lineHeight }) => {
         if (lineHeight) {
             /* tslint:disable no-console */
             console.warn(
                 'Overriding the lineHeight property is almost always a bad idea.'
             );
             /* tslint:enable no-console */
-            return css({ lineHeight: `${lineHeight}rem` });
+            return css({ lineHeight: rem(lineHeight) });
         } else {
             return null;
         }
     }};
+
+    // Spacing
+    ${spaceStyles}
+
+    // TODO: colors when theme colors are defined
+    ${({ color = 'inherit', hue = 'base' }) =>
+        css({ color: colors[color] ? colors[color][hue] : color })};
 
     small {
         font-size: 87.5%;

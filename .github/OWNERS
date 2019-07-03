@@ -15,14 +15,21 @@
 
 # Component Owners
 /src/AutoComplete @sharkparty
+/src/Avatar @sharkparty
+/src/Dropdown @sharkparty
 /src/Grid @sharkparty
 /src/Card @sharkparty
-/src/Form @sharkparty
+/src/Form/Input @sharkparty
 /src/List @sharkparty
+/src/Menu @sharkparty
 /src/Typography @sharkparty
 /src/Icon @zero0Halo
+/src/Collapse @zero0Halo
+/src/Layout @zero0Halo
 /src/Hero @brandonlilly
 /src/Button @brandonlilly
 /src/Modal @brandonlilly
+/src/Form/Toggle @brandonlilly
+/src/Form/Radio @brandonlilly
+/src/Form/ControlLabel @brandonlilly
 /src/Badge @bjohnsonrmn
-/src/Collapse @zero0Halo

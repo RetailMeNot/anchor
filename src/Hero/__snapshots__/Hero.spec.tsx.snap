@@ -120,9 +120,6 @@ exports[`Component: Hero should render with custom content 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
@@ -132,6 +129,7 @@ exports[`Component: Hero should render with custom content 1`] = `
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
+  color: inherit;
 }
 
 .c2 small {
@@ -144,13 +142,11 @@ exports[`Component: Hero should render with custom content 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
+  color: inherit;
 }
 
 .c3 small {
@@ -214,9 +210,6 @@ exports[`Component: Hero should render with title 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
@@ -226,6 +219,7 @@ exports[`Component: Hero should render with title 1`] = `
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
+  color: inherit;
 }
 
 .c2 small {
@@ -285,9 +279,6 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
@@ -297,6 +288,7 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
+  color: inherit;
 }
 
 .c2 small {
@@ -309,14 +301,12 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: inherit;
   font-size: 1.125rem;
   line-height: 1.5rem;
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
+  color: inherit;
 }
 
 .c4 small {

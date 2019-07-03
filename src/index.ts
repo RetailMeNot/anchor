@@ -35,6 +35,6 @@ export {
 } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
-export { Input } from './Form';
 export { Modal } from './Modal';
+export { Input, Toggle, Radio, ControlLabel } from './Form';
 export * from './Icon';

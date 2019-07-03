@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { text, color } from '@storybook/addon-knobs';
+import { text, color, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
@@ -20,13 +20,6 @@ import { colors, RootTheme } from '../../theme/index';
 import { Page } from '../Page';
 // README
 import * as README from './README.md';
-
-// Constants
-// ------------------------------------------------------------------------------------------------------------------
-// const alignmentOptions = {
-//     left: LEFT,
-//     right: RIGHT,
-// };
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
@@ -61,6 +54,11 @@ storiesOf('Components/Layout', module)
                             TRANSPARENT
                         )}
                         sidebar={<Sider />}
+                        sidebarAlign={select<'left' | 'right'>(
+                            'Sidebar Alignment',
+                            ['left', 'right'],
+                            'left'
+                        )}
                         sidebarWidth={text(
                             'Sidebar Width',
                             DEFAULT_SIDEBAR_WIDTH

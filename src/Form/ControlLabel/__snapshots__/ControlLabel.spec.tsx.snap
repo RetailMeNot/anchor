@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ControlLabel should be defined 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  text-align: inherit;
+  text-transform: none;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<label
+  className="anchor-typography anchor-control-label c0 c1"
+  label="label"
+  value="value"
+>
+  <div
+    className=""
+    marginRight="0.5rem"
+    value="value"
+  />
+  label
+</label>
+`;

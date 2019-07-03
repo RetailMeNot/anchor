@@ -72,7 +72,7 @@ storiesOf('Components/Collapse', module)
             <ThemeProvider theme={RootTheme}>
                 <StyledComfortableStory>
                     <Collapse
-                        variant={select(
+                        variant={select<'compact' | 'comfortable' | 'none'>(
                             'variant',
                             ['compact', 'comfortable', 'none'],
                             'comfortable'
@@ -118,7 +118,7 @@ storiesOf('Components/Collapse', module)
                         Collapse child components.
                     </Typography>
                     <CollapseGroup
-                        variant={select(
+                        variant={select<'compact' | 'comfortable' | 'none'>(
                             'variant',
                             ['compact', 'comfortable', 'none'],
                             'comfortable'
