@@ -77,7 +77,7 @@ const InputSizeDimensions = {
         height: 2.5rem;
 
         input {
-            height: 0.75rem;
+            height: 1rem;
             font-size: 0.875rem;
         }
     `,
