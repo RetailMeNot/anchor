@@ -42,16 +42,13 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
     };
 
     componentWillMount() {
-        let mainOpenIndex = 0;
+        const { pathname } = this.props.location;
 
-        sections.forEach((section: SectionProperties, i: number) => {
+        const mainOpenIndex = sections.reduce((openIndex: number, section: SectionProperties, index: number) => {
             const { pattern } = section;
-            const { pathname } = this.props.location;
             // Compares the current url with the path associated to a section and gets its index if it matches.
-            if (pattern.length && pathname.includes(pattern)) {
-                mainOpenIndex = i;
-            }
-        });
+            return (pattern.length && pathname.includes(pattern)) ? index : openIndex;
+          }, 0);
 
         this.setState({mainOpenIndex});
     }
