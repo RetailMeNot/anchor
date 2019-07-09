@@ -7,6 +7,7 @@ import styled from '@xstyled/styled-components';
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 // TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
 import { sections } from './sections';
+import { AddLocation } from '../AddLocation';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
     li a {
@@ -20,6 +21,10 @@ const StyledCollapseGroup = styled(CollapseGroup)`
     }
 `;
 
+interface SideNavigationProps {
+    location?: object;
+}
+
 interface SectionProperties {
     title: string;
     pattern: string;
@@ -31,32 +36,30 @@ interface LinkProperties {
     path: string;
 }
 
-export class SideNavigation extends React.PureComponent {
-    mainOpenIndex: number;
+class SideNavigation extends React.PureComponent<SideNavigationProps> {
+    state = {
+        mainOpenIndex: false,
+    };
 
-    // I'm using PureComponent in order to use a constructor since ComponentWillMount is being deprecated.
-    // I need to get the index of the current section in order to pass that value to CollapseGroup.
-    // This is what makes the correct Collapse component open when navigating the site.
-    constructor(props: object) {
-        super(props);
-    }
+    componentWillMount() {
+        const { pathname } = this.props.location;
 
-    componentDidMount(): void {
-        sections.forEach((section: SectionProperties, i: number) => {
+        const mainOpenIndex = sections.reduce((openIndex: number, section: SectionProperties, index: number) => {
             const { pattern } = section;
-            const { pathname } = window.location;
             // Compares the current url with the path associated to a section and gets its index if it matches.
-            if (pattern.length > 0 && pathname.includes(pattern)) {
-                this.mainOpenIndex = i;
-            }
-        });
+            return (pattern.length && pathname.includes(pattern)) ? index : openIndex;
+          }, 0);
+
+        this.setState({mainOpenIndex});
     }
 
     render() {
-        return (
+        const { mainOpenIndex } = this.state;
+
+        return ( mainOpenIndex !== false && (
             <StyledCollapseGroup
-                theme="compact"
-                openIndex={this.mainOpenIndex}
+                variant="compact"
+                openIndex={mainOpenIndex}
                 accordion
             >
                 {sections.map((section: SectionProperties, i: number) => (
@@ -80,7 +83,10 @@ export class SideNavigation extends React.PureComponent {
                         </ul>
                     </Collapse>
                 ))}
-            </StyledCollapseGroup>
+            </StyledCollapseGroup>)
         );
     }
 }
+
+// HOC adds the location prop to SideNavigation
+export const EnhancedSideNavigation = AddLocation(SideNavigation);
