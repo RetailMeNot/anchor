@@ -22,10 +22,6 @@ exports[`Component: Item should be defined 1`] = `
   background-color: #F1F1F1;
 }
 
-.c0 p {
-  margin-bottom: 0;
-}
-
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -34,10 +30,6 @@ exports[`Component: Item should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
   color: #595959;
@@ -53,11 +45,11 @@ exports[`Component: Item should be defined 1`] = `
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
-  <p
+  <span
     className="anchor-typography c1"
     color="charcoal"
   >
     Item
-  </p>
+  </span>
 </a>
 `;

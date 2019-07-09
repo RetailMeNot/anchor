@@ -30,10 +30,6 @@ const StyledItem = styled('a')`
     &.active {
         background-color: neutrals.silver.base;
     }
-
-    p {
-        margin-bottom: 0;
-    }
 `;
 
 export const Item = ({
@@ -53,7 +49,7 @@ export const Item = ({
         className={classNames('anchor-list-item', className, { active })}
         {...props}
     >
-        <Typography tag="p" color="charcoal" hue="light">
+        <Typography tag="span" color="charcoal" hue="light">
             {children}
         </Typography>
     </StyledItem>
