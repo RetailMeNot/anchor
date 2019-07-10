@@ -22,10 +22,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   background-color: #F1F1F1;
 }
 
-.c1 p {
-  margin-bottom: 0;
-}
-
 .c0 {
   background-color: white;
   position: absolute;
@@ -46,10 +42,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
   color: #595959;
@@ -67,10 +59,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
   color: #595959;
@@ -92,12 +80,12 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
-      <p
+      <span
         className="anchor-typography c2"
         color="charcoal"
       >
         Result Item 1
-      </p>
+      </span>
     </a>
     <a
       className="anchor-list-item c1"
@@ -105,12 +93,12 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
-      <p
+      <span
         className="anchor-typography c3"
         color="charcoal"
       >
         Result Item 2
-      </p>
+      </span>
     </a>
   </div>
 </div>
@@ -138,10 +126,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   background-color: #F1F1F1;
 }
 
-.c2 p {
-  margin-bottom: 0;
-}
-
 .c1 {
   box-sizing: border-box;
 }
@@ -166,10 +150,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
   color: #595959;
@@ -187,10 +167,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 1rem;
   text-align: inherit;
   text-transform: none;
   color: #595959;
@@ -213,12 +189,12 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
-      <p
+      <span
         className="anchor-typography c3"
         color="charcoal"
       >
         Result Item 1
-      </p>
+      </span>
     </a>
     <a
       className="anchor-list-item c2"
@@ -227,12 +203,12 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOut={[Function]}
       onMouseOver={[Function]}
     >
-      <p
+      <span
         className="anchor-typography c4"
         color="charcoal"
       >
         Result Item 2
-      </p>
+      </span>
     </a>
   </div>
 </div>

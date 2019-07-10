@@ -10,7 +10,13 @@ import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
 import { get } from '../../utils/get/get';
 
-const { useState, forwardRef, useImperativeHandle } = React;
+const {
+    useState,
+    forwardRef,
+    useImperativeHandle,
+    useEffect,
+    createRef,
+} = React;
 
 type InputTypes =
     // | 'button'
@@ -246,12 +252,18 @@ export const Input = forwardRef(
         }: InputProps,
         ref: React.RefObject<any>
     ) => {
-        const inputRef = React.createRef<HTMLInputElement>();
+        const inputRef = createRef<HTMLInputElement>();
         const [inputValue, setInputValue] = useState<string | number>(value);
         const [focus, setFocus] = useState<boolean>(false);
 
+        useEffect(() => {
+            setInputValue(value);
+        }, [value]);
+
         useImperativeHandle(ref, () => ({
-            update: (newValue: InputContentType) => setInputValue(newValue),
+            update: (newValue: InputContentType) => {
+                setInputValue(newValue);
+            },
             blur: () => (inputRef.current ? inputRef.current.blur() : null),
         }));
 

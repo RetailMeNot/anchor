@@ -21,9 +21,7 @@ const StyledStory = styled('div')`
     width: 100vw;
 `;
 
-const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${
-    colors.dealEnvy.light
-})`;
+const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
 
 storiesOf('Components/Hero', module)
     .addParameters({
