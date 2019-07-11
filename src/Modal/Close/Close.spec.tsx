@@ -11,4 +11,11 @@ describe('Component: Modal.Close', () => {
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it('should match snapshot with alignment set', () => {
+        const subject = <Close align="left" />;
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
 });

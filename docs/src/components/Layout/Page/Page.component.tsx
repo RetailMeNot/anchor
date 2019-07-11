@@ -117,13 +117,23 @@ const StyledPrimaryNav = styled.nav`
     }
 `;
 
+// These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
+// to the CodePreview component.
+const StyledInlineCode = styled.span`
+    background-color: rgba(27,31,35,.05);
+    font-family: "SFMono-Regular",Consolas,Liberation Mono,Menlo,Courier,monospace;
+    border-radius: 3px;
+    padding: .2em .4em;
+    font-size: 85%;
+`;
+
 const StyledTable = styled.table``;
 
 const Components: any = {};
 
 Components.code = (props: any) => <CodePreview {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
-Components.inlineCode = (props: any) => <Typography tag="code" {...props} />;
+Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
 Components.pre = (props: any) => <Typography tag="pre" {...props} />;
 Components.h1 = ({ children, ...props }: any) => (
     <Typography
@@ -181,6 +191,7 @@ Components.h6 = ({ children, ...props }: any) => (
         children={children}
     />
 );
+
 Components.p = (props: any) => <Typography tag="p" {...props} />;
 Components.a = (props: any) => (
     <Typography color={colors.flashPink.base} tag="a" {...props} />
