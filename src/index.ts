@@ -22,7 +22,12 @@ export {
     CenteredCell,
 } from './Grid';
 export { Page, Layout, SidebarLayout, Footer, Header } from './Layout';
-export { List, Item as ListItem } from './List';
+export {
+    List,
+    Item as ListItem,
+    Title as ListTitle,
+    Divider as ListDivider,
+} from './List';
 export { Menu, Item as MenuItem } from './Menu';
 export { Typography } from './Typography';
 export {
