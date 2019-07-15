@@ -14,6 +14,7 @@ export interface ItemProps {
     value?: any;
     children?: any;
     className?: string;
+    href?: string;
 }
 
 const StyledItem = styled('a')`
@@ -40,6 +41,7 @@ export const Item = ({
     onMouseOut = () => null,
     value,
     active,
+    href,
     ...props
 }: ItemProps): React.ReactElement<any> => (
     <StyledItem
@@ -47,6 +49,7 @@ export const Item = ({
         onMouseOut={onMouseOut}
         onMouseDown={() => onSelect(value)}
         className={classNames('anchor-list-item', className, { active })}
+        href={href}
         {...props}
     >
         <Typography tag="span" color="charcoal" hue="light">

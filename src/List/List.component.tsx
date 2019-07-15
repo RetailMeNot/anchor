@@ -7,8 +7,6 @@ import styled from '@xstyled/styled-components';
 import { Item } from './Item';
 import { Title } from './Title';
 import { Divider } from './Divider';
-// UTILS
-import { filterChildrenByType } from '../utils/filterChildrenByType/filterChildrenByType';
 
 type ListItemType = 'item' | 'title' | 'divider';
 
@@ -55,11 +53,11 @@ export const List: React.FunctionComponent<ListProps> = ({
                   ) => {
                       return React.createElement<any>(
                           itemComponent[listItemType],
-                          { label, key, ...r },
+                          { label, key: key || `list-${index}`, ...r },
                           label
                       );
                   }
               )
-            : filterChildrenByType(children, ['Item', 'Title', 'Divider'])}
+            : children}
     </StyledList>
 );
