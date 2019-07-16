@@ -11,7 +11,11 @@ import {
     LiveError,
 } from 'react-live';
 import Component from '@reach/component-component';
-import { AutoComplete } from '@retailmenot/anchor';
+import {
+    AutoComplete,
+    Collapse,
+    CollapseGroup
+} from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
 // THEME
@@ -107,6 +111,8 @@ const scope = {
     Component,
     // Overrides
     AutoComplete,
+    Collapse,
+    CollapseGroup,
 };
 
 export const CodePreview = ({
@@ -114,8 +120,8 @@ export const CodePreview = ({
 }: CodePreviewProps): React.ReactElement<any> => (
     <StyledContainerElement>
         <LiveProvider code={children} scope={scope}>
-            <StyledLivePreview />
             <StyledLiveEditor wrap="true" />
+            <StyledLivePreview />
             <StyledErrorElement />
         </LiveProvider>
     </StyledContainerElement>

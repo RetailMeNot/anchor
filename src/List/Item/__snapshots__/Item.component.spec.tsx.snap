@@ -27,19 +27,6 @@ exports[`Component: Item should be defined 1`] = `
   background-color: #F1F1F1;
 }
 
-.c0 span.anchor-typography {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.c0 ~ .anchor-list-divider {
-  padding-top: 0.25rem;
-}
-
-.c0 ~ .anchor-list-title {
-  margin-top: 0.5rem;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;

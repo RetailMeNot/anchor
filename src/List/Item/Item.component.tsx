@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from '@xstyled/styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
@@ -39,19 +39,6 @@ const StyledItem = styled('a')<ItemProps>`
     &.active {
         background-color: neutrals.silver.base;
     }
-
-    span.anchor-typography {
-        ${({ size = 'sm' }) =>
-            size === 'sm'
-                ? css({ fontSize: '0.875rem', fontWeight: 500 })
-                : css({ fontSize: '1rem', fontWeight: 400 })}
-    }
-    ~ .anchor-list-divider {
-        padding-top: 0.25rem;
-    }
-    ~ .anchor-list-title {
-        margin-top: 0.5rem;
-    }
 `;
 
 const StyledTypography = styled(Typography)`
@@ -60,7 +47,6 @@ const StyledTypography = styled(Typography)`
     align-items: center;
     width: 100%;
     height: 100%;
-
     .item-prefix {
         display: flex;
         align-items: center;
