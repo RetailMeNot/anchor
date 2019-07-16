@@ -17,9 +17,12 @@ export interface DividerProps {
 }
 
 const StyledDivider = styled('div')`
-    height: .5rem;
-    border-top: solid thin ${colors.ash.light}
-    margin-top: 1rem;
+    height: 0.5rem;
+    padding: 0.5rem 1rem;
+    hr {
+        border: none;
+        border-top: solid thin ${colors.ash.light};
+    }
 `;
 
 const DefaultProps: DividerProps = {};
@@ -27,7 +30,9 @@ const DefaultProps: DividerProps = {};
 export const Divider = ({
     className,
 }: DividerProps): React.ReactElement<any> => (
-    <StyledDivider className={classNames('anchor-list-divider', className)} />
+    <StyledDivider className={classNames('anchor-list-divider', className)}>
+        <hr />
+    </StyledDivider>
 );
 
 Divider.defaultProps = DefaultProps;

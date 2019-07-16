@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
-import { List, Item } from './';
+import { List, Item, Title, Divider } from './';
 import { Typography } from '../Typography';
 import { Home } from '../Icon';
 // README
@@ -28,10 +28,19 @@ storiesOf('Components/List', module)
             <StyledStory>
                 <Typography>List</Typography>
                 <List>
+                    <Title>Title 1</Title>
+                    <Item>Item 1</Item>
+                    <Item>Item 1</Item>
+                    <Title>Title 1</Title>
+                    <Item>Item 1</Item>
                     <Item>Item 1</Item>
                     <Item>Item 3</Item>
+                    <Divider />
                     <Item>Item 4</Item>
-                    <Item>Item 5</Item>
+                    <Item>Item 4</Item>
+                    <Divider />
+                    <Title>Title 2</Title>
+                    <Item size="lg">Item 5</Item>
                     <Item suffix={<small>$2.00</small>}>Item 6</Item>
                     <Item
                         prefix={

@@ -2,6 +2,7 @@
 
 exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,6 +15,8 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   background-color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
+  height: 2.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .c1:hover {
@@ -22,6 +25,19 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 .c1.active {
   background-color: #F1F1F1;
+}
+
+.c1 span.anchor-typography {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.c1 ~ .anchor-list-divider {
+  padding-top: 0.25rem;
+}
+
+.c1 ~ .anchor-list-title {
+  margin-top: 0.5rem;
 }
 
 .c2 {
@@ -37,6 +53,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .c2 .item-prefix {
@@ -80,6 +97,10 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   text-align: right;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .c0 {
@@ -166,6 +187,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 exports[`Component: ResultsContainer should be defined 1`] = `
 .c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,6 +200,8 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   background-color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
+  height: 2.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .c2:hover {
@@ -186,6 +210,19 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c2.active {
   background-color: #F1F1F1;
+}
+
+.c2 span.anchor-typography {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.c2 ~ .anchor-list-divider {
+  padding-top: 0.25rem;
+}
+
+.c2 ~ .anchor-list-title {
+  margin-top: 0.5rem;
 }
 
 .c3 {
@@ -201,6 +238,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .c3 .item-prefix {
@@ -244,6 +282,10 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   text-align: right;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .c1 {

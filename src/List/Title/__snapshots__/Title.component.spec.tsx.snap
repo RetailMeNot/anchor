@@ -17,7 +17,7 @@ exports[`Component: Title should be defined 1`] = `
   font-weight: 500;
   text-align: inherit;
   text-transform: none;
-  font-weight: 600;
+  font-weight: 700;
   color: #808080;
 }
 

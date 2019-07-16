@@ -33,6 +33,7 @@ const itemComponent = {
 
 const StyledList = styled('div')`
     box-sizing: border-box;
+    padding-bottom: 1.25rem;
 `;
 
 export const List: React.FunctionComponent<ListProps> = ({

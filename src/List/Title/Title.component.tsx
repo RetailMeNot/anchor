@@ -22,7 +22,7 @@ export const Title = ({
     children,
 }: TitleProps): React.ReactElement<any> => (
     <StyledTitle className={classNames('anchor-list-title', className)}>
-        <Typography weight={600} scale={12} color="ash" hue="dark">
+        <Typography weight={700} scale={12} color="ash" hue="dark">
             {children}
         </Typography>
     </StyledTitle>

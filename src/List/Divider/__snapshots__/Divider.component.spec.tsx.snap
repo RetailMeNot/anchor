@@ -2,12 +2,18 @@
 
 exports[`Component: Divider should be defined 1`] = `
 .c0 {
-  height: .5rem;
+  height: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.c0 hr {
+  border: none;
   border-top: solid thin #D3D3D3;
-  margin-top: 1rem;
 }
 
 <div
   className="anchor-list-divider c0"
-/>
+>
+  <hr />
+</div>
 `;

@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
@@ -17,9 +17,11 @@ export interface ItemProps {
     href?: string;
     prefix?: React.ReactElement<any>;
     suffix?: React.ReactElement<any>;
+    size?: 'sm' | 'lg';
 }
 
-const StyledItem = styled('a')`
+const StyledItem = styled('a')<ItemProps>`
+    box-sizing: border-box;
     display: flex;
     border-radius: base;
     padding: 0.5rem 1rem;
@@ -27,6 +29,8 @@ const StyledItem = styled('a')`
     transition: background-color 500ms;
     background-color: neutrals.white.base;
     text-decoration: none;
+    height: 2.75rem;
+    margin-bottom: 0.25rem;
 
     &:hover {
         background-color: neutrals.silver.light;
@@ -35,6 +39,19 @@ const StyledItem = styled('a')`
     &.active {
         background-color: neutrals.silver.base;
     }
+
+    span.anchor-typography {
+        ${({ size = 'sm' }) =>
+            size === 'sm'
+                ? css({ fontSize: '0.875rem', fontWeight: 500 })
+                : css({ fontSize: '1rem', fontWeight: 400 })}
+    }
+    ~ .anchor-list-divider {
+        padding-top: 0.25rem;
+    }
+    ~ .anchor-list-title {
+        margin-top: 0.5rem;
+    }
 `;
 
 const StyledTypography = styled(Typography)`
@@ -42,6 +59,7 @@ const StyledTypography = styled(Typography)`
     align-content: space-between;
     align-items: center;
     width: 100%;
+    height: 100%;
 
     .item-prefix {
         display: flex;
@@ -58,6 +76,7 @@ const StyledTypography = styled(Typography)`
         align-items: center;
         flex: 0 0 0;
         text-align: right;
+        justify-content: flex-end;
     }
 `;
 
