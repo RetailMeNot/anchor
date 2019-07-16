@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled, { css } from '@xstyled/styled-components';
+import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 

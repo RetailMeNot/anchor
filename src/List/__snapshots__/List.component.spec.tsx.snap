@@ -3,6 +3,7 @@
 exports[`Component: List should be defined 1`] = `
 .c0 {
   box-sizing: border-box;
+  padding-bottom: 1.25rem;
 }
 
 <div

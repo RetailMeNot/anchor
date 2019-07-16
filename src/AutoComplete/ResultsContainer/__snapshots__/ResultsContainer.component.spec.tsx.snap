@@ -27,19 +27,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   background-color: #F1F1F1;
 }
 
-.c1 span.anchor-typography {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.c1 ~ .anchor-list-divider {
-  padding-top: 0.25rem;
-}
-
-.c1 ~ .anchor-list-title {
-  margin-top: 0.5rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,19 +199,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   background-color: #F1F1F1;
 }
 
-.c2 span.anchor-typography {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.c2 ~ .anchor-list-divider {
-  padding-top: 0.25rem;
-}
-
-.c2 ~ .anchor-list-title {
-  margin-top: 0.5rem;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -290,6 +264,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c1 {
   box-sizing: border-box;
+  padding-bottom: 1.25rem;
 }
 
 .c0 {
