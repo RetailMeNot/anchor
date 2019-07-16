@@ -6,6 +6,8 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { List, Item } from './';
+import { Typography } from '../Typography';
+import { Home } from '../Icon';
 // README
 import * as README from './README.md';
 import { RootTheme } from '../theme';
@@ -24,14 +26,26 @@ storiesOf('Components/List', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <p>List</p>
+                <Typography>List</Typography>
                 <List>
                     <Item>Item 1</Item>
                     <Item>Item 3</Item>
                     <Item>Item 4</Item>
                     <Item>Item 5</Item>
-                    <Item>Item 6</Item>
-                    <Item>Item 7</Item>
+                    <Item suffix={<small>$2.00</small>}>Item 6</Item>
+                    <Item
+                        prefix={
+                            <span
+                                style={{
+                                    paddingRight: '16px',
+                                }}
+                            >
+                                <Home />
+                            </span>
+                        }
+                    >
+                        Item 7
+                    </Item>
                 </List>
             </StyledStory>
         </ThemeProvider>

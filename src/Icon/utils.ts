@@ -24,7 +24,7 @@ export const DefaultColor = 'currentColor';
 export const DefaultScale = 'md';
 
 export const StyledIcon = styled('span')<IconSVGProps>`
-    ${marginStyles}
+    ${marginStyles};
     display: inline-block;
     height: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};
     width: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};

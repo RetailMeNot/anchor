@@ -12,6 +12,8 @@ exports[`Component: Item should be defined 1`] = `
   -webkit-transition: background-color 500ms;
   transition: background-color 500ms;
   background-color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:hover {
@@ -23,6 +25,64 @@ exports[`Component: Item should be defined 1`] = `
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c1 .item-prefix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+}
+
+.c1 .item-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 4 1 auto;
+  -ms-flex: 4 1 auto;
+  flex: 4 1 auto;
+}
+
+.c1 .item-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  text-align: right;
+}
+
+.c2 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -35,7 +95,7 @@ exports[`Component: Item should be defined 1`] = `
   color: #595959;
 }
 
-.c1 small {
+.c2 small {
   font-size: 87.5%;
 }
 
@@ -46,7 +106,7 @@ exports[`Component: Item should be defined 1`] = `
   onMouseOver={[Function]}
 >
   <span
-    className="anchor-typography c1"
+    className="anchor-typography c1 c2"
     color="charcoal"
   >
     Item
