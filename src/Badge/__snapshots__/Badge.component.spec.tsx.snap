@@ -60,7 +60,7 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path
           d="M0 0h16v16H0z"
@@ -450,7 +450,7 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path
           d="M0 0h16v16H0z"
@@ -537,7 +537,7 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path
           d="M0 0h16v16H0z"
@@ -624,7 +624,7 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path
           d="M0 0h16v16H0z"
@@ -709,7 +709,7 @@ exports[`Component: Badge should render the count with absolute positioning if \
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path
           d="M0 0h16v16H0z"

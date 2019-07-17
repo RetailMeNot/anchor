@@ -6,7 +6,6 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
-import { Grid, Cell, CenteredCell } from '../../Grid';
 // UTILS
 import { get } from '../../utils/get/get';
 
@@ -64,8 +63,8 @@ interface InputProps {
     label?: string;
     ariaLabel?: string;
     // TODO: buttons?
-    prefix?: React.FunctionComponent<any> | JSX.Element;
-    suffix?: React.FunctionComponent<any> | JSX.Element;
+    prefix?: React.ReactElement<any>;
+    suffix?: React.ReactElement<any>;
     size?: 'sm' | 'md' | 'lg';
     type?: InputTypes;
     // Overrides
@@ -142,7 +141,8 @@ const StyledInputWrapper = styled('div')`
     }
 `;
 
-const StyledReversedCell = styled(Cell)`
+const StyledReversedInputContainer = styled('div')`
+    flex: 1 1 auto;
     display: flex;
     flex-flow: column-reverse;
     padding: 0 0.25rem;
@@ -202,6 +202,12 @@ const StyledInput = styled('input')<StyledInputProps>`
     ${({ hasLabel = false }: any) => (hasLabel ? LabelPresent : null)};
 `;
 
+const StyledInputContainer = styled('div')`
+    display: flex;
+    align-items: center;
+    height: 100%;
+`;
+
 const eventTypeResolver = (
     handler: (...args: any) => any,
     event: React.FocusEvent<Element> | React.ChangeEvent<HTMLInputElement>,
@@ -219,15 +225,6 @@ const eventTypeResolver = (
             handler(inputValue, event);
             break;
     }
-};
-
-const prefixAndSuffixDimensions = '1.5rem';
-
-const InputLayouts = {
-    prefix: `${prefixAndSuffixDimensions} 1fr`,
-    suffix: `1fr ${prefixAndSuffixDimensions}`,
-    both: `${prefixAndSuffixDimensions} 1fr ${prefixAndSuffixDimensions}`,
-    neither: `1fr`,
 };
 
 export const Input = forwardRef(
@@ -267,15 +264,6 @@ export const Input = forwardRef(
             blur: () => (inputRef.current ? inputRef.current.blur() : null),
         }));
 
-        // TODO: Doc this
-        let inputLayout = InputLayouts.neither;
-        if (prefix && suffix) {
-            inputLayout = InputLayouts.both;
-        } else if (prefix) {
-            inputLayout = InputLayouts.prefix;
-        } else if (suffix) {
-            inputLayout = InputLayouts.suffix;
-        }
         return (
             <StyledInputWrapper
                 size={size}
@@ -289,9 +277,13 @@ export const Input = forwardRef(
                     focus,
                 })}
             >
-                <Grid columns={inputLayout} gap="0" minRowHeight="2.5rem">
-                    {prefix && <CenteredCell>{prefix}</CenteredCell>}
-                    <StyledReversedCell>
+                <StyledInputContainer>
+                    {prefix
+                        ? React.cloneElement(prefix, {
+                              className: 'input-prefix',
+                          })
+                        : null}
+                    <StyledReversedInputContainer>
                         <StyledInput
                             aria-label={ariaLabel}
                             ref={inputRef}
@@ -348,9 +340,13 @@ export const Input = forwardRef(
                                 {label}
                             </Typography>
                         )}
-                    </StyledReversedCell>
-                    {suffix && <CenteredCell>{suffix}</CenteredCell>}
-                </Grid>
+                    </StyledReversedInputContainer>
+                    {suffix
+                        ? React.cloneElement(suffix, {
+                              className: 'input-suffix',
+                          })
+                        : null}
+                </StyledInputContainer>
             </StyledInputWrapper>
         );
     }

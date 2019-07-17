@@ -1,22 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: AutoComplete should be defined 1`] = `
-.c4 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
-.c2 {
-  display: grid;
-  height: auto;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(2.5rem,auto);
-  grid-template-columns: 1fr;
-  grid-gap: 0;
-}
-
 .c1 {
   display: block;
   position: relative;
@@ -78,6 +62,9 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 .c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,7 +79,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
   justify-content: center;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   border: none;
   padding: 0;
@@ -105,18 +92,30 @@ exports[`Component: AutoComplete should be defined 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c5:placeholder-shown + label {
+.c4:placeholder-shown + label {
   cursor: text;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c0 {
@@ -155,14 +154,14 @@ exports[`Component: AutoComplete should be defined 1`] = `
     size="lg"
   >
     <div
-      className="anchor-grid c2"
+      className="c2"
     >
       <div
-        className="anchor-cell c3 c4"
+        className="c3"
       >
         <input
           aria-label="auto-complete"
-          className="c5"
+          className="c4"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -180,22 +179,6 @@ exports[`Component: AutoComplete should be defined 1`] = `
 `;
 
 exports[`Component: AutoComplete should render with a shadow 1`] = `
-.c4 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
-.c2 {
-  display: grid;
-  height: auto;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(2.5rem,auto);
-  grid-template-columns: 1fr;
-  grid-gap: 0;
-}
-
 .c1 {
   display: block;
   position: relative;
@@ -257,6 +240,9 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 .c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,7 +257,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   justify-content: center;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   border: none;
   padding: 0;
@@ -284,18 +270,30 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c5:placeholder-shown + label {
+.c4:placeholder-shown + label {
   cursor: text;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c0 {
@@ -335,14 +333,14 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
     size="lg"
   >
     <div
-      className="anchor-grid c2"
+      className="c2"
     >
       <div
-        className="anchor-cell c3 c4"
+        className="c3"
       >
         <input
           aria-label="auto-complete"
-          className="c5"
+          className="c4"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -359,41 +357,6 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 `;
 
 exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
-.c5 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
-.c2 {
-  display: grid;
-  height: auto;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(2.5rem,auto);
-  grid-template-columns: 1.5rem 1fr 1.5rem;
-  grid-gap: 0;
-}
-
-.c3 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .c1 {
   display: block;
   position: relative;
@@ -454,7 +417,10 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   transform: translate(0,0) scale(1);
 }
 
-.c4 {
+.c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -469,7 +435,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   justify-content: center;
 }
 
-.c6 {
+.c4 {
   box-sizing: border-box;
   border: none;
   padding: 0;
@@ -482,18 +448,30 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
-.c6[type='number']::-webkit-inner-spin-button,
-.c6[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c6:placeholder-shown + label {
+.c4:placeholder-shown + label {
   cursor: text;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c0 {
@@ -532,21 +510,19 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
     size="lg"
   >
     <div
-      className="anchor-grid c2"
+      className="c2"
     >
+      <div
+        className="input-prefix"
+      >
+        prefix
+      </div>
       <div
         className="c3"
       >
-        <div>
-          prefix
-        </div>
-      </div>
-      <div
-        className="anchor-cell c4 c5"
-      >
         <input
           aria-label="auto-complete"
-          className="c6"
+          className="c4"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
@@ -558,11 +534,9 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
         />
       </div>
       <div
-        className="c3"
+        className="input-suffix"
       >
-        <div>
-          suffix
-        </div>
+        suffix
       </div>
     </div>
   </div>
@@ -570,22 +544,6 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 `;
 
 exports[`Component: AutoComplete should render without a border 1`] = `
-.c4 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
-.c2 {
-  display: grid;
-  height: auto;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(2.5rem,auto);
-  grid-template-columns: 1fr;
-  grid-gap: 0;
-}
-
 .c1 {
   display: block;
   position: relative;
@@ -647,6 +605,9 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 .c3 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -661,7 +622,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   justify-content: center;
 }
 
-.c5 {
+.c4 {
   box-sizing: border-box;
   border: none;
   padding: 0;
@@ -674,18 +635,30 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c5:placeholder-shown + label {
+.c4:placeholder-shown + label {
   cursor: text;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c0 {
@@ -724,14 +697,14 @@ exports[`Component: AutoComplete should render without a border 1`] = `
     size="lg"
   >
     <div
-      className="anchor-grid c2"
+      className="c2"
     >
       <div
-        className="anchor-cell c3 c4"
+        className="c3"
       >
         <input
           aria-label="auto-complete"
-          className="c5"
+          className="c4"
           name="auto-complete"
           onBlur={[Function]}
           onChange={[Function]}
