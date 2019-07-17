@@ -127,6 +127,10 @@ const StyledInlineCode = styled.span`
     font-size: 85%;
 `;
 
+const StyledLi = styled.li`
+    padding-bottom: .5rem;
+`;
+
 const StyledTable = styled.table``;
 
 const Components: any = {};
@@ -204,7 +208,7 @@ Components.strong = (props: any) => (
 );
 Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
-Components.li = (props: any) => <li {...props} />;
+Components.li = (props: any) => <StyledLi><Typography {...props} /></StyledLi>;
 // TODO: This only binds to MD tables, not HTML
 Components.table = (props: any) => <StyledTable {...props} />;
 
