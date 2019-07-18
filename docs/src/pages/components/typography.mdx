@@ -1,1 +1,192 @@
+import { Link } from 'gatsby';
+
+<br />
+
 # Typography
+
+The `Typography` component lets you easily add unified text styles to the page without having to create
+a lot of extra css.
+
+One of the principal features of this component is the concept of **`scale`**.
+Although it's possible to alter the `line-height` (`lineHeight` prop) and `font-size` (`size` prop)
+of `Typography`, it's recommended to alter its `scale` instead. Often, semantic HTML tagging
+doesn't always get the same text styles and this helps alleviate that problem. It also assists in
+rendering common fonts regardless of their enclosing tags.
+
+Using `Typography` without modifying any of its props will wrap any text element in a `span` tag.
+These are the default styles for Typography:
+
+* `font-family: Avenir Next, Segoe UI, Helvetica Neue, Helvetica, Roboto,sans-serif;`
+* `font-size: 1rem;`
+* `line-height: 1.5rem;`
+* `text-align: inherit;`
+* `text-transform: none;`
+* `color: inherit;`
+
+<br />
+
+#### Inline Code Editor
+
+```tsx
+<div>
+    <Typography tag="p">
+        The quick <Typography tag="span" transform="uppercase" color="#ff0000" weight="bolder">red</Typography> fox
+    </Typography>
+    <Typography tag="h2" color="charcoal" hue="light">
+        jumped
+    </Typography>
+    <Typography tag="p">
+        over the <Typography tag="span" scale="28" color="brown">brown</Typography> lazy dog.
+    </Typography>
+</div>
+```
+
+<br />
+
+### API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>align</td>
+            <td>
+                Changes the alignment of text within the component.
+                As this is the application of a css property, standard css rules apply.
+            </td>
+            <td>'center' | 'left' | 'right' | 'inherit' | 'justify'</td>
+            <td>inherit</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>
+                Takes a color value, either via hex code or by name. If
+                you use one of Anchor's <Link to="/theme">theme</Link> colors, you'll be able to
+                control its hue via a prop noted below.
+            </td>
+            <td>String</td>
+            <td>inherit</td>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>
+                Controls the css display property of the tag.
+            </td>
+            <td>
+                'inline' | 'block' | 'contents' | 'flex' | 'grid' | 'inline-block' | 'inline-flex' |
+                'inline-grid' | 'inline-table' | 'list-item' | 'run-in' | 'table' | 'table-caption'
+                | 'table-column-group' | 'table-header-group' | 'table-footer-group' |
+                'table-row-group' | 'table-cell' | 'table-column' | 'table-row' | 'none' |
+                'initial' | `inherit`
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td>
+                When used in conjunction with setting the tag prop to a, creates a link to the
+                specified page/resource.
+            </td>
+            <td>
+                String
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>htmlFor</td>
+            <td>
+                When used in conjuction setting the tag prop to label, adds the <a href="https://www.w3schools.com/tags/att_for.asp" target="_blank">for</a> html
+                attribute in order to associate the label to a form element.
+            </td>
+            <td>
+                String
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>hue</td>
+            <td>
+                If the color prop is set to one of Anchor's <Link to="/theme">theme</Link> colors,
+                allows changing that color's hue.
+            </td>
+            <td>
+                'light' | 'base' | 'dark'
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>lineHeight</td>
+            <td>
+                Changes the line-height css property. It is not recommended to edit this value, as
+                the scale prop will adjust both size and lineHeight accordingly.
+            </td>
+            <td>
+                Number
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>scale</td>
+            <td>
+                This value directly affects the size and lineHeight props directly, ensuring
+                that there is no overlap of text between lines no matter what value is input.
+            </td>
+            <td>
+                62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12
+            </td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>
+                Changes the font-size css property. It is not recommended to edit this value,
+                as the scale prop will adjust both size and lineHeight accordingly.
+            </td>
+            <td>
+                -
+            </td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>tag</td>
+            <td>
+                Changing this prop will let the component render as the specified html tag.
+            </td>
+            <td>
+                'a' | 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' |
+                'address' | 'code' | 'label' | 'pre'
+            </td>
+            <td>'span'</td>
+        </tr>
+        <tr>
+            <td>transform</td>
+            <td>
+                Changes the text-transform css property.
+            </td>
+            <td>
+                'none' | 'capitalize' | 'uppercase' | 'lowercase' | 'initial' | 'inherit'
+            </td>
+            <td>'none'</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>
+                Changes the font-weight css property.
+            </td>
+            <td>
+                'normal' | 'bold' | 'bolder' | 'lighter' | '100' | '200' | '300' | '400' | '500' | '600' |
+                '700' | '800' | '900' | 'initial' | 'inherit'
+            </td>
+            <td>'none'</td>
+        </tr>
+    </tbody>
+</table>
+
+<br /><br />
