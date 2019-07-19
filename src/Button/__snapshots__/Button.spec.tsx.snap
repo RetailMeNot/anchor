@@ -4068,6 +4068,7 @@ exports[`Component: Button Theme Provided should use custom size variants from t
   background-color: #0998D6;
   color: #FFFFFF;
   padding: 0 4rem;
+  font-size: 1.5rem;
   height: 8rem;
   min-width: 30rem;
 }
