@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
-import { colors, RootTheme } from '../../theme';
+import { RootTheme } from '../../theme';
 // SUBJECT
 import * as README from './README.md';
 import { Toggle } from './Toggle.component';
@@ -13,7 +13,7 @@ import { Toggle } from './Toggle.component';
 const { useState } = React;
 
 const StyledStory = styled.div`
-    background: ${colors.white.base};
+    background: white;
 `;
 
 storiesOf('Components/Form/Toggle', module)
