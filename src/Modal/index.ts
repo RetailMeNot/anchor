@@ -1,1 +1,1 @@
-export { Modal } from './Modal.component';
+export { Modal, BaseModalBackground, ModalProvider } from './Modal.component';

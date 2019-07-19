@@ -40,6 +40,6 @@ export {
 } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
-export { Modal } from './Modal';
+export { Modal, BaseModalBackground, ModalProvider } from './Modal';
 export { Input, Toggle, Radio, ControlLabel } from './Form';
 export * from './Icon';
