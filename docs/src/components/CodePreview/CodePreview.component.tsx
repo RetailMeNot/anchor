@@ -11,6 +11,9 @@ import {
     LiveError,
 } from 'react-live';
 import Component from '@reach/component-component';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+// tslint:disable-next-line: no-submodule-imports
+import github from 'prism-react-renderer/themes/github';
 import {
     AutoComplete,
     Collapse,
@@ -104,6 +107,8 @@ const StyledLivePreview = styled(LivePreview)<PreProps>`
 
 interface CodePreviewProps {
     children?: any;
+    className?: string;
+    live?: boolean;
 }
 
 const scope = {
@@ -115,14 +120,44 @@ const scope = {
     CollapseGroup,
 };
 
+/*
+    By default, the CodePreview component will render a non-interactive code block. However if the
+    live prop is passed, the interactive code editor is used instead.
+*/
 export const CodePreview = ({
     children,
-}: CodePreviewProps): React.ReactElement<any> => (
-    <StyledContainerElement>
-        <LiveProvider code={children} scope={scope}>
-            <StyledLiveEditor wrap="true" />
-            <StyledLivePreview />
-            <StyledErrorElement />
-        </LiveProvider>
-    </StyledContainerElement>
-);
+    className,
+    live = false,
+}: CodePreviewProps): React.ReactElement<any> => {
+    const language = (className) ? className.replace(/language-/, '') : 'javascript';
+
+    if (live) {
+        return(
+            <StyledContainerElement>
+                <LiveProvider code={children} scope={scope}>
+                    <StyledLiveEditor wrap="true" />
+                    <StyledLivePreview />
+                    <StyledErrorElement />
+                </LiveProvider>
+            </StyledContainerElement>
+        );
+    }
+
+    // This is code taken from MDX's own documentation on rendering a code block
+    // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
+    return (
+        <Highlight {...defaultProps} code={children} language={language} theme={github}>
+            {({className, style, tokens, getLineProps, getTokenProps}) => (
+                <pre className={className} style={{...style, padding: '20px'}}>
+                    {tokens.map((line, i) => (
+                        <div key={i} {...getLineProps({line, key: i})}>
+                            {line.map((token, key) => (
+                                <span key={key} {...getTokenProps({token, key})} />
+                            ))}
+                        </div>
+                    ))}
+                </pre>
+            )}
+        </Highlight>
+    );
+};
