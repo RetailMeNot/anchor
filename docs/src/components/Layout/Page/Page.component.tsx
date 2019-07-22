@@ -132,6 +132,10 @@ const StyledLi = styled.li`
     padding-bottom: 0.5rem;
 `;
 
+const StyledHr = styled('hr')`
+    margin: 2rem 0;
+`;
+
 const StyledTable = styled.table``;
 
 const Components: any = {};
@@ -192,6 +196,7 @@ Components.h6 = ({ children, ...props }: any) => (
         id={`${children.split(' ').join('-')}`.toLowerCase()}
         weight={600}
         tag="h6"
+        mb="1"
         {...props}
         children={children}
     />
@@ -214,6 +219,7 @@ Components.li = (props: any) => (
         <Typography {...props} />
     </StyledLi>
 );
+Components.hr = (props: any) => <StyledHr {...props} />;
 // TODO: This only binds to MD tables, not HTML
 Components.table = (props: any) => <StyledTable {...props} />;
 
