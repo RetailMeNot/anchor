@@ -24,4 +24,7 @@ export const RootTheme = {
     radii: { none: '0', base: '4px', modal: '8px', circular: '1000px' },
     [BUTTON_KEY]: BUTTON_THEME,
     colors: ColorsTheme,
+    breakpoints: {
+        xs: 0,
+    },
 };

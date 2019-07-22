@@ -367,6 +367,7 @@ describe('Component: Button', () => {
                             affixSpacing: 3,
                             padding: 4,
                             contentPadding: 5,
+                            fontSize: 1.5,
                         },
                     },
                 },

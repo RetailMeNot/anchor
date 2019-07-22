@@ -226,7 +226,7 @@ storiesOf('Components/Modal', module)
                         <Close reverse onClick={() => setIsOpen(false)} />
                         <Content>
                             <Typography
-                                tag="p"
+                                tag="h2"
                                 scale={24}
                                 weight={600}
                                 align="center"

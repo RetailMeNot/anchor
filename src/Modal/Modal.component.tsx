@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import classnames from 'classnames';
 // COMPONENTS
 import { ModalHeader, StyledHeader } from './Header';
@@ -31,10 +32,12 @@ const StyledModal = StyledReactModal.default.styled`
     flex-direction: column;
     justify-content: space-between;
 
-    border-radius: modal;
-    ${({ background = 'neutrals.white.base' }: ModalProps) =>
-        css({ backgroundColor: background })};
-    ${({ color }: ModalProps) => css({ color })}
+    ${({ background = 'neutrals.white.base', color }: ModalProps) =>
+        css({
+            background: th.color(background),
+            color,
+            borderRadius: 'modal',
+        })};
     box-shadow: ${({
         shadow = '0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)',
     }: ModalProps) => shadow};
@@ -49,7 +52,9 @@ const StyledModal = StyledReactModal.default.styled`
     // Footer (respectively) are also used.
     ${StyledContent} {
         padding: ${({ size = defaultSize }: ModalProps) =>
-            `4rem ${Sizes[size].contentPadding}rem 0 ${Sizes[size].contentPadding}rem`};
+            `4rem ${Sizes[size].contentPadding}rem 0 ${
+                Sizes[size].contentPadding
+            }rem`};
         &:last-child {
             padding-bottom: ${({ size = defaultSize }: ModalProps) =>
                 `${Sizes[size].contentPadding}rem`};

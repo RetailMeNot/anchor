@@ -139,6 +139,7 @@ export const Toggle = forwardRef(
             trackHeight = '0.75rem',
             trackWidth = '2rem',
             disabled,
+            onChange,
             ...props
         }: ToggleProps,
         ref: React.RefObject<any>
@@ -164,6 +165,7 @@ export const Toggle = forwardRef(
             <HiddenInput
                 type="checkbox"
                 id={id}
+                onChange={onChange}
                 checked={checked}
                 disabled={disabled}
                 ref={ref}
