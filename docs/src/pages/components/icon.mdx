@@ -1,4 +1,46 @@
+import { IconList, IconCount, IconTextList } from '../../components/IconList';
+import { Collapse } from '@retailmenot/anchor';
+
+<br />
+
 # Icon
 
+All of the icons are `svg`'s, and can be colored and scaled as needed. **Anchor** does not group all
+of the icons together, rather they are individually imported in order to keep the bundle size small.
+All icons are rendered individually by their name, i.e. **`ArrowBack`** or **`Expand`**, as shown below.
 
+#### Available Icons
 
+There are currently <IconCount /> icons available. Note that you can try any of these icons in the **Live Code Editor**.
+
+<Collapse openedText="SHOW/HIDE ALL ICONS" isOpen={true}>
+    <IconList />
+</Collapse>
+
+<br />
+
+#### Live Code Editor
+
+```tsx
+<section>
+    <div>
+        <Star color="red" />
+    </div>
+
+    <div>
+        <AvatarIcon scale="xl" />
+    </div>
+</section>
+```
+
+<br />
+
+### Props
+
+* `color`: Defaults to **`currentColor`**, a SVG color property that will allow the icon to inherit its parent color.
+However, if a value is passed it will take whatever hex/rgb/rgba value provided.
+* `scale`: Defaults to **`md`**, which translates to 16px by 16px. The full range of options are **`'xs', 'sm', 'md', 'lg', 'xl', 'xxl'`**
+* `className`: An additional class name. All icons have the **`anchor-icon`** class name in addition to a more specific class.
+Ex: **`class="anchor-icon arrow-back"`**.
+
+<br /><br />
