@@ -40,7 +40,7 @@ storiesOf('Components/List', module)
                     <Item>Item 4</Item>
                     <Divider />
                     <Title>Title 2</Title>
-                    <Item size="lg">Item 5</Item>
+                    <Item size="sm">Item 5</Item>
                     <Item suffix={<small>$2.00</small>}>Item 6</Item>
                     <Item
                         prefix={

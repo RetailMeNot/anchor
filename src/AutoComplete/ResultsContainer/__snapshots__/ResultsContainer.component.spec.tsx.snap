@@ -90,6 +90,14 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   justify-content: flex-end;
 }
 
+.c2.lg {
+  font-size: 1rem;
+}
+
+.c2.sm {
+  font-size: 0.875rem;
+}
+
 .c0 {
   background-color: white;
   position: absolute;
@@ -149,7 +157,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="anchor-typography c2 c3"
+        className="anchor-typography lg c2 c3"
         color="charcoal"
       >
         Result Item 1
@@ -162,7 +170,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="anchor-typography c2 c4"
+        className="anchor-typography lg c2 c4"
         color="charcoal"
       >
         Result Item 2
@@ -262,6 +270,14 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   justify-content: flex-end;
 }
 
+.c3.lg {
+  font-size: 1rem;
+}
+
+.c3.sm {
+  font-size: 0.875rem;
+}
+
 .c1 {
   box-sizing: border-box;
   padding-bottom: 1.25rem;
@@ -327,7 +343,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="anchor-typography c3 c4"
+        className="anchor-typography lg c3 c4"
         color="charcoal"
       >
         Result Item 1
@@ -341,7 +357,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="anchor-typography c3 c5"
+        className="anchor-typography lg c3 c5"
         color="charcoal"
       >
         Result Item 2

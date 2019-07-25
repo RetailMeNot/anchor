@@ -47,6 +47,7 @@ const StyledTypography = styled(Typography)`
     align-items: center;
     width: 100%;
     height: 100%;
+
     .item-prefix {
         display: flex;
         align-items: center;
@@ -64,6 +65,12 @@ const StyledTypography = styled(Typography)`
         text-align: right;
         justify-content: flex-end;
     }
+    &.lg {
+        font-size: 1rem;
+    }
+    &.sm {
+        font-size: 0.875rem;
+    }
 `;
 
 export const Item = ({
@@ -77,6 +84,7 @@ export const Item = ({
     href,
     prefix,
     suffix,
+    size = 'lg',
     ...props
 }: ItemProps): React.ReactElement<any> => (
     <StyledItem
@@ -87,7 +95,12 @@ export const Item = ({
         href={href}
         {...props}
     >
-        <StyledTypography tag="span" color="charcoal" hue="light">
+        <StyledTypography
+            tag="span"
+            color="charcoal"
+            hue="light"
+            className={size}
+        >
             {prefix && React.cloneElement(prefix, { className: 'item-prefix' })}
             {prefix || suffix ? (
                 <span className="item-main">{children}</span>
