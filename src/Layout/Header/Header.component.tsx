@@ -40,7 +40,7 @@ const MainContainer = styled('div')`
     }
 `;
 
-interface HeaderProps {
+interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
     primary?: any;

@@ -24,7 +24,7 @@ const StyledPage = styled('main')`
 
 // Interfaces
 // ------------------------------------------------------------------------------------------------------------------
-interface PageProps {
+interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
     /** The header of the website. This can be a component. */
     header?: any;
     /** The footer of the website. This can be a component. */
@@ -40,17 +40,17 @@ interface PageProps {
 
 // Components
 // ------------------------------------------------------------------------------------------------------------------
-export const Page = ({
+export const Page: React.FunctionComponent<PageProps> = ({
     header,
     footer,
     headerHeight = DEFAULT_HEADER_HEIGHT,
     footerHeight = DEFAULT_FOOTER_HEIGHT,
     className,
     children,
-}: PageProps): React.ReactElement<any> => (
-    <StyledPage className={classnames('anchor-page', className)}>
+    ...props
+}: PageProps): React.ReactElement<PageProps> => (
+    <StyledPage className={classnames('anchor-page', className)} {...props}>
         <NormalizeCSS />
-
         <Grid
             columns={1}
             rows={`minmax(${headerHeight},auto) 1fr minmax(${footerHeight},auto)`}

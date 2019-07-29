@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import { List } from '../../List';
 // UTILS
 const { useState, forwardRef, useImperativeHandle } = React;
@@ -16,7 +17,7 @@ type DataItem = {
 type EmitSelectedItem = (newItem: DataItem) => void;
 type EmitActiveTerm = (newTerm: string) => void;
 
-interface ResultsContainerProps {
+interface ResultsContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     initialIndex?: number;
     className?: string;
     size?: 'sm' | 'md' | 'lg';
@@ -52,7 +53,7 @@ const StyledResultsContainer = styled('div')<StyledResultsContainerProps>`
     z-index: 3;
     box-sizing: border-box;
     box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 ${th.radius('base')} ${th.radius('base')};
     padding: 1rem;
     ${({ size = 'md' }) =>
         css({ top: ResultContainerSpaceFromAutoComplete[size] })};

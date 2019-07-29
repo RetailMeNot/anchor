@@ -14,8 +14,8 @@ interface DropDownPosition {
     left?: number;
 }
 
-interface DropDownProps {
-    overlay: React.ReactElement<any> | Array<React.ReactElement<any>>;
+interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
+    overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
     trigger?: 'hover' | 'click'; // TODO: 'contextMenu';
     className?: string;
     children?: any;
@@ -30,7 +30,7 @@ interface DropDownState {
     width?: number;
 }
 
-const StyledDropDown = styled('div')`
+const StyledDropDown = styled('div')<DropDownProps>`
     font-family: ${th('typography.fontFamily')};
     position: relative;
     cursor: pointer;
@@ -54,7 +54,9 @@ interface DropDownContainerProps {
 }
 const DropDownContainer = (props: DropDownContainerProps) => <div {...props} />;
 
-const StyledDropDownContainer = styled(DropDownContainer)`
+const StyledDropDownContainer = styled(DropDownContainer)<
+    DropDownContainerProps
+>`
     min-width: 10rem;
     position: absolute;
     padding: 0.25rem 0;
@@ -64,13 +66,13 @@ const StyledDropDownContainer = styled(DropDownContainer)`
     border-radius: base;
     border: thin solid neutrals.silver.dark;
     /* Defined Position */
-    top: ${({ position: { top } = {} }: DropDownContainerProps) =>
+    top: ${({ position: { top } = {} }) =>
         top ? `${top}px !important` : 'inherit'};
-    left: ${({ position: { left } = {} }: DropDownContainerProps) =>
+    left: ${({ position: { left } = {} }) =>
         left ? `${left}px !important` : '0'};
-    right: ${({ position: { right } = {} }: DropDownContainerProps) =>
+    right: ${({ position: { right } = {} }) =>
         right ? `${right}px !important` : 'inherit'};
-    bottom: ${({ position: { bottom } = {} }: DropDownContainerProps) =>
+    bottom: ${({ position: { bottom } = {} }) =>
         bottom ? `${bottom}px !important` : 'inherit'};
 `;
 

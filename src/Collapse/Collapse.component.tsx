@@ -9,7 +9,7 @@ import { ChevronDown, ChevronUp } from '../Icon';
 
 export type CollapseVariants = 'comfortable' | 'compact' | 'none' | string;
 
-interface CollapseProps {
+interface CollapseProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
      * Whether the component starts off open or closed. Can also be used to programmatically open/close the
      * component.
@@ -135,7 +135,7 @@ const variantStyles = createVariant({
     variants: variants,
 });
 
-const StyledCollapse = styled.div<StyledCollapseProps>`
+const StyledCollapse = styled('div')<StyledCollapseProps>`
     display: block;
     box-sizing: border-box;
     font-family: ${th('typography.fontFamily')};
@@ -152,7 +152,7 @@ const StyledCollapse = styled.div<StyledCollapseProps>`
 `;
 StyledCollapse.displayName = 'StyledCollapse';
 
-export const Collapse = ({
+export const Collapse: React.FunctionComponent<CollapseProps> = ({
     isOpen = false,
     openedText = DEFAULT_OPENED_TEXT,
     closedText = DEFAULT_CLOSED_TEXT,
@@ -163,7 +163,8 @@ export const Collapse = ({
     hasBottomBorder = true,
     className,
     children,
-}: CollapseProps) => {
+    ...props
+}: CollapseProps): React.ReactElement<CollapseProps> => {
     const [open, toggleOpen] = React.useState<boolean>(isOpen);
     const IconOpened = openedIcon || <ChevronDown />;
     const IconClosed = closedIcon || <ChevronUp />;
@@ -191,6 +192,7 @@ export const Collapse = ({
                 !hasBottomBorder && 'no-bottom-border',
                 className
             )}
+            {...props}
         >
             <button
                 onClick={onClick || (() => toggleOpen(!open))}

@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 // THEME
 import { colors } from '../../theme';
 
-export interface DividerProps {
+export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
@@ -16,7 +16,7 @@ export interface DividerProps {
     className?: string;
 }
 
-const StyledDivider = styled('div')`
+const StyledDivider = styled('div')<DividerProps>`
     height: 0.5rem;
     padding: 0.5rem 1rem;
     hr {
@@ -25,14 +25,14 @@ const StyledDivider = styled('div')`
     }
 `;
 
-const DefaultProps: DividerProps = {};
-
 export const Divider = ({
     className,
+    ...props
 }: DividerProps): React.ReactElement<any> => (
-    <StyledDivider className={classNames('anchor-list-divider', className)}>
+    <StyledDivider
+        className={classNames('anchor-list-divider', className)}
+        {...props}
+    >
         <hr />
     </StyledDivider>
 );
-
-Divider.defaultProps = DefaultProps;

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
-export interface ItemProps {
+export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
     path: string;
     label?: string;
     children?: any;
@@ -18,7 +18,7 @@ export interface ItemProps {
     type?: any;
 }
 
-const StyledItem = styled('a')`
+const StyledItem = styled('a')<ItemProps>`
     cursor: pointer;
     text-align: center;
     font-family: ${th('typography.fontFamily')};
@@ -37,14 +37,14 @@ const StyledItem = styled('a')`
     }
 `;
 
-export const Item = ({
+export const Item: React.FunctionComponent<ItemProps> = ({
     className,
     children,
     label,
     size,
     active,
     ...props
-}: ItemProps): React.ReactElement<any> => (
+}: ItemProps): React.ReactElement<ItemProps> => (
     <StyledItem
         className={classNames('anchor-menu-item', className, { active })}
         {...props}

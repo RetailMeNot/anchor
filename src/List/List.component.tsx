@@ -18,7 +18,7 @@ type ListItem = {
     };
 };
 
-interface ListProps {
+interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
     hidden?: boolean;
@@ -41,7 +41,7 @@ export const List: React.FunctionComponent<ListProps> = ({
     children = [],
     items,
     ...props
-}: ListProps): React.ReactElement<any> => (
+}: ListProps): React.ReactElement<ListProps> => (
     <StyledList className={classNames('anchor-list', className)} {...props}>
         {items
             ? items.map(

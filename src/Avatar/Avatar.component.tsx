@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import { transparentize } from 'polished';
 
-interface AvatarProps {
+interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     // Configuration
     label?: string;
@@ -29,7 +29,7 @@ const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
 );
 /* tslint:enable max-line-length */
 
-const StyledAvatar = styled('div')`
+const StyledAvatar = styled('div')<AvatarProps>`
     border: solid 0.1875rem ${transparentize(0.6, 'white')};
     display: flex;
     justify-content: center;
@@ -61,14 +61,12 @@ const InnerBorder = styled('div')`
     overflow: hidden;
 `;
 
-const DefaultProps: AvatarProps = {};
-
 export const Avatar = ({
     className,
     src,
     label,
     ...props
-}: AvatarProps = DefaultProps): React.ReactElement<any> => (
+}: AvatarProps): React.ReactElement<AvatarProps> => (
     <StyledAvatar className={classNames('anchor-avatar', className)} {...props}>
         <InnerBorder className="avatar-container">
             {/* TODO: handle image src */}
@@ -76,5 +74,3 @@ export const Avatar = ({
         </InnerBorder>
     </StyledAvatar>
 );
-
-Avatar.defaultProps = DefaultProps;

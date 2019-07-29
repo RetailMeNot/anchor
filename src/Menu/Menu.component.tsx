@@ -8,7 +8,7 @@ import { lighten } from 'polished';
 // COMPONENTS
 import { ItemProps } from './Item/Item.component';
 
-interface MenuProps {
+interface MenuProps extends React.HTMLAttributes<HTMLDivElement> {
     children?:
         | Array<React.ReactElement<ItemProps>>
         | React.ReactElement<ItemProps>;
@@ -21,7 +21,7 @@ interface MenuProps {
     justify?: 'flex-start' | 'flex-end';
 }
 
-const StyledMenu = styled('nav')`
+const StyledMenu = styled('nav')<MenuProps>`
   margin: 0;
   padding: 0;
   display: flex;
@@ -31,7 +31,7 @@ const StyledMenu = styled('nav')`
   //overflow-y: hidden;
   //overflow-x: auto;
 
-  ${({ bg = th.color('primary.base') }: MenuProps) =>
+  ${({ bg = th.color('primary.base') }) =>
       css({
           backgroundColor: bg,
       })};
@@ -44,7 +44,7 @@ const StyledMenu = styled('nav')`
   > a {
     display: inline-block;
     line-height: 1.125rem;
-    ${({ color = th.color('neutrals.white.base') }: MenuProps) =>
+    ${({ color = th.color('neutrals.white.base') }) =>
         css({
             color,
         })};
@@ -52,7 +52,7 @@ const StyledMenu = styled('nav')`
     margin: 0 0.125rem;
 
     &:hover {
-      ${({ color }: MenuProps) =>
+      ${({ color }) =>
           css({
               color: color
                   ? lighten(20, color)
@@ -63,7 +63,7 @@ const StyledMenu = styled('nav')`
 
     &:active,
     &.active {
-      color: ${({ color }: MenuProps) =>
+      color: ${({ color }) =>
           css({
               color: color
                   ? lighten(20, color)
@@ -86,13 +86,13 @@ const StyledMenu = styled('nav')`
   }
 
   /* Positioning */
-  ${({ justify = 'flex-start' }: MenuProps) =>
+  ${({ justify = 'flex-start' }) =>
       css({
           justifyContent: justify,
       })};
 
   /* Menu Sizes */
-  ${({ size = 'large' }: MenuProps) => MenuSizes[size]};
+  ${({ size = 'large' }) => MenuSizes[size]};
 `;
 
 const MenuSizes = {
@@ -115,11 +115,11 @@ const MenuSizes = {
     `,
 };
 
-export const Menu = ({
+export const Menu: React.FunctionComponent<MenuProps> = ({
     className,
     children,
     ...props
-}: MenuProps): React.ReactElement<any> => (
+}: MenuProps): React.ReactElement<MenuProps> => (
     <StyledMenu className={classNames('anchor-menu', className)} {...props}>
         {/* TODO: React.cloneElement() to add props from parent to child? */}
         {/* TODO: Need to solve the container issue */}

@@ -79,7 +79,7 @@ export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
 
 type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
 
-export interface TypographyProps extends SpaceProps {
+export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     className?: string;
     align?: TextAlign;
     transform?: TextTransforms;

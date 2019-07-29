@@ -1,12 +1,15 @@
+// REACT
+import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 
-export interface StyledHitAreaProps {
+export interface StyledHitAreaProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     buttonHeight: number;
     buttonWidth?: number;
 }
 
-export const HitArea = styled.div<StyledHitAreaProps>`
+export const HitArea = styled('div')<StyledHitAreaProps>`
     position: absolute;
 
     // overlap border

@@ -44,13 +44,11 @@ storiesOf('Components/List', module)
                     <Item suffix={<small>$2.00</small>}>Item 6</Item>
                     <Item
                         prefix={
-                            <span
+                            <Home
                                 style={{
                                     paddingRight: '16px',
                                 }}
-                            >
-                                <Home />
-                            </span>
+                            />
                         }
                     >
                         Item 7

@@ -22,7 +22,7 @@ type Variant = 'filled' | 'outline' | 'minimal';
 
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs' | string;
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children?: any;
     disabled?: boolean;
     revealed?: boolean;
@@ -38,8 +38,8 @@ export interface ButtonProps {
     reverse?: boolean;
     outline?: boolean;
 
-    prefix?: React.ReactElement<any>;
-    suffix?: React.ReactElement<any>;
+    prefix?: any;
+    suffix?: any;
 
     forceHover?: boolean;
     forceFocus?: boolean;
@@ -367,7 +367,7 @@ const StyledButton = styled('button')<StyledButtonProps>`
     position: relative;
     ${({ borderRadius }) => css`
         border-radius: ${borderRadius};
-    `}
+    `};
 	font-weight: 600;
 	font-family: ${fonts.fontFamily};
 	text-align: center;
@@ -400,7 +400,7 @@ const StyledButton = styled('button')<StyledButtonProps>`
     ${({ disabled, buttonStyles }: StyledButtonProps) =>
         disabled
             ? css`
-                  ${buttonStyles.disabled}
+                  ${buttonStyles.disabled};
                   cursor: not-allowed;
               `
             : buttonStyles.base}

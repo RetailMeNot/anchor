@@ -12,7 +12,7 @@ import { CardContent } from './CardContent';
 
 export type Gutters = 'none' | 'small' | 'medium' | 'large';
 
-export interface CardProps {
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
     action?: any;
@@ -20,7 +20,7 @@ export interface CardProps {
     gutter?: Gutters;
 }
 
-const StyledCard = styled('div')`
+const StyledCard = styled('div')<CardProps>`
     position: relative;
     width: 100%;
     font-family: ${th('typography.fontFamily')};
@@ -36,7 +36,7 @@ export const Card: React.FunctionComponent<CardProps> = ({
     actionArea,
     gutter,
     ...props
-}: CardProps): JSX.Element => (
+}: CardProps): React.ReactElement<CardProps> => (
     <StyledCard className={classNames('anchor-card', className)} {...props}>
         {action && <CardAction>{action}</CardAction>}
         <CardContent gutter={gutter} children={children} />
