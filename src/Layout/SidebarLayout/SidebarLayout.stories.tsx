@@ -14,7 +14,6 @@ import {
     TRANSPARENT,
 } from './SidebarLayout.component';
 import { Footer } from '../Footer';
-import { Header } from '../Header';
 import { Sider } from '../Sider';
 import { colors, RootTheme } from '../../theme/index';
 import { Page } from '../Page';
@@ -38,7 +37,7 @@ storiesOf('Components/Layout', module)
     .add('Sidebar Layout', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Page header={<Header />} footer={<Footer />}>
+                <Page footer={<Footer />}>
                     <SidebarLayout
                         layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
                         contentWidth={text(

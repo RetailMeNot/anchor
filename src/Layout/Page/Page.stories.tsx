@@ -12,7 +12,6 @@ import {
     DEFAULT_FOOTER_HEIGHT,
 } from './Page.component';
 import { Footer } from '../Footer/Footer.component';
-import { Header } from '../Header/Header.component';
 import { RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
@@ -35,7 +34,6 @@ storiesOf('Components/Layout', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Page
-                    header={<Header />}
                     footer={<Footer />}
                     headerHeight={text('Header Height', DEFAULT_HEADER_HEIGHT)}
                     footerHeight={text('Footer Height', DEFAULT_FOOTER_HEIGHT)}

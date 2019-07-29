@@ -13,7 +13,6 @@ import {
     TRANSPARENT,
 } from './Layout.component';
 import { colors, RootTheme } from '../theme';
-import { Header } from './Header';
 import { Footer } from './Footer';
 import { Page } from './Page';
 // README
@@ -36,7 +35,7 @@ storiesOf('Components/Layout', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Page header={<Header />} footer={<Footer />}>
+                <Page footer={<Footer />}>
                     <Layout
                         layoutWidth={text('Layout Width', DEFAULT_LAYOUT_WIDTH)}
                         contentWidth={text(
