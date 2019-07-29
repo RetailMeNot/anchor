@@ -13,15 +13,10 @@ available in **Anchor** for the `openedIcon` and `closedIcon` props.
 
 #### Live Code Editor
 
-```tsx
-<div>
-    <Collapse
-        openedIcon={<ArrowBack />}
-        closedIcon={<ArrowForward />}
-    >
-        <div>Different icons for open and closed.</div>
-    </Collapse>
-</div>
+```tsx live
+<Collapse>
+    I will appear and disappear when the rendered button is clicked!
+</Collapse>
 ```
 
 <br />
@@ -33,6 +28,18 @@ available in **Anchor** for the `openedIcon` and `closedIcon` props.
 * `closedText` *(string)*: Defaults to **`'Open'`**. The text that appears on the button as a CTA when the component is closed.
 * `openedIcon` *(React.ReactElement)*: Defaults to **`<ChevronDown />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
 * `closedIcon` *(React.ReactElement)*: Defaults to **`<ChevronUp />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
+
+#### openedIcon and/or closedIcon usage
+
+```tsx live
+<Collapse
+    openedIcon={<ArrowBack />}
+    closedIcon={<ArrowForward />}
+>
+    <div>Hello world.</div>
+</Collapse>
+```
+
 * `variant` *('comfortable' | 'compact' | 'none')*: Defaults to **`'comfortable'`**.
     * **comfortable**: has considerable spacing. It is intended to be used for showing/hiding larger pieces of content.
     * **compact**: has much tighter spacing. It is intended to be used for showing/hiding navigation elements.
@@ -47,8 +54,8 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
 
 #### Live Code Editor
 
-```tsx
-<CollapseGroup variant="compact" accordion>
+```tsx live
+<CollapseGroup variant="compact">
     <Collapse>
         I will appear and disappear when the rendered button is clicked!
     </Collapse>

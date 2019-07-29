@@ -2,22 +2,22 @@
 
 Enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
 
-> The AutoComplete component encapsulates the [Text Input](/components/input) and provides a results list as the user 
-enters a search query. By default, the search results component encapsulates the [List](/components/list) component and 
-can utilize all of the behaviors of that component (e.g. displaying [Items](/components/list), 
+> The AutoComplete component encapsulates the [Text Input](/components/input) and provides a results list as the user
+enters a search query. By default, the search results component encapsulates the [List](/components/list) component and
+can utilize all of the behaviors of that component (e.g. displaying [Items](/components/list),
 [Dividers](/components/list), [Titles](/components/list), etc).
 
 ## Usage
 
-In its most basic implementation, the only required prop for the autocomplete is the **dataSource** property. This is an 
+In its most basic implementation, the only required prop for the autocomplete is the **dataSource** property. This is an
 array of strings or objects with a **label** property that displays as the results.
 
 ### Autocomplete default usage
 
-In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a 
+In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a
 [List](/components/list) component when the AutoComplete has focus.
 
-```tsx
+```tsx live
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
         dataSource={[
@@ -32,11 +32,11 @@ In this use-case, an array of strings is passed in as the **dataSource** propert
 
 ### Autocomplete common usage
 
-In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a 
-[List](/components/list) component when the AutoComplete has focus and a **placeholder** and **prefix** are present allowing the 
+In this use-case, an array of strings is passed in as the **dataSource** property and that is then rendered inside of a
+[List](/components/list) component when the AutoComplete has focus and a **placeholder** and **prefix** are present allowing the
 AutoComplete to look like a search AutoComplete.
 
-```tsx
+```tsx live
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
         placeholder="Search here..."
@@ -53,12 +53,12 @@ AutoComplete to look like a search AutoComplete.
 
 ### Autocomplete usage with custom results passed in as dataSource
 
-In order to handle more robust use-cases, the Array specified as the **dataSource** can be made of object so long as 
-they have a **label** property defined (this will eventually be updated to allow the implementor to pass in an object and 
-a key-name to use that as the display text of the result). As well, the presence of a **listItemType** tells the 
+In order to handle more robust use-cases, the Array specified as the **dataSource** can be made of object so long as
+they have a **label** property defined (this will eventually be updated to allow the implementor to pass in an object and
+a key-name to use that as the display text of the result). As well, the presence of a **listItemType** tells the
 [List](/components/list) component what child node to render (e.g. '**divider**', '**title**', or '**item**').
 
-```tsx
+```jsx live
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
         allowClear={true}
