@@ -21,7 +21,7 @@ export {
     StandardBreakpoints,
     CenteredCell,
 } from './Grid';
-export { Page, Layout, SidebarLayout, Footer, Header } from './Layout';
+export { Page, Layout, SidebarLayout, Footer } from './Layout';
 export {
     List,
     Item as ListItem,
