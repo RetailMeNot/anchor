@@ -27,24 +27,21 @@ const StyledMenu = styled('nav')<MenuProps>`
   display: flex;
   width: 100%;
   min-width: 250px;
-  /* TODO: for mobile */
-  //overflow-y: hidden;
-  //overflow-x: auto;
 
-  ${({ bg = th.color('primary.base') }) =>
+  ${({ bg = 'primary.base' }) =>
       css({
           backgroundColor: bg,
       })};
   font-size: 0.875rem;
   font-family: ${th('typography.fontFamily')};
-  border-radius: ${th.radius('base')};
+  border-radius: base;
 
   /* TODO: use React.clone to append a run-time class here instead of using a * selector */
   > * > a,
   > a {
     display: inline-block;
     line-height: 1.125rem;
-    ${({ color = th.color('neutrals.white.base') }) =>
+    ${({ color = 'neutrals.white.base' }) =>
         css({
             color,
         })};
@@ -54,9 +51,7 @@ const StyledMenu = styled('nav')<MenuProps>`
     &:hover {
       ${({ color }) =>
           css({
-              color: color
-                  ? lighten(20, color)
-                  : th.color('neutrals.white.base'),
+              color: color ? lighten(20, color) : 'neutrals.white.base',
           })};
       background-color: rgba(255, 255, 255, .1);
     }
@@ -65,9 +60,7 @@ const StyledMenu = styled('nav')<MenuProps>`
     &.active {
       color: ${({ color }) =>
           css({
-              color: color
-                  ? lighten(20, color)
-                  : th.color('neutrals.white.base'),
+              color: color ? lighten(20, color) : 'neutrals.white.base',
           })};
       background-color: rgba(255, 255, 255, .1); // TODO: more or less opacity
     }
