@@ -1,19 +1,17 @@
 // REACT
 import * as React from 'react';
-
 // ANCHOR
 import { colors } from '../../theme/colors.theme';
 import { sizes } from '../../theme/sizes.theme';
 import { Theme, TRANSITION_SPEED } from '../utils';
-
 // VENDOR
 import styled from '@xstyled/styled-components';
 
-export interface StyledFlipProps {
+export interface StyledFlipProps extends React.HTMLAttributes<HTMLDivElement> {
     flipColor: string;
 }
 
-export const StyledFlip = styled.div<StyledFlipProps>`
+export const StyledFlip = styled('div')<StyledFlipProps>`
     border-top-right-radius: ${sizes.border.radius.base};
     border-bottom-left-radius: ${sizes.border.radius.base};
 
@@ -33,9 +31,13 @@ export const StyledFlip = styled.div<StyledFlipProps>`
     );
 `;
 
-export const Flip = ({ colorTheme }: { colorTheme: Theme }) => (
-    <React.Fragment>
+export const Flip = ({
+    colorTheme,
+}: {
+    colorTheme: Theme;
+}): React.ReactElement<StyledFlipProps> => (
+    <>
         <StyledFlip flipColor={colorTheme.base} />
         <StyledFlip className="flip-base" flipColor={colorTheme.light} />
-    </React.Fragment>
+    </>
 );

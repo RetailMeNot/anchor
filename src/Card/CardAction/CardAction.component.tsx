@@ -5,12 +5,12 @@ import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
-export interface CardActionProps {
+export interface CardActionProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
 }
 
-const StyledCard = styled('div')`
+const StyledCard = styled('div')<CardActionProps>`
     box-sizing: border-box;
     position: absolute;
     display: flex;
@@ -29,7 +29,7 @@ export const CardAction: React.FunctionComponent<CardActionProps> = ({
     className,
     children,
     ...props
-}: CardActionProps): JSX.Element => (
+}: CardActionProps): React.ReactElement<CardActionProps> => (
     <StyledCard
         className={classNames('anchor-card-action', className)}
         {...props}

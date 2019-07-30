@@ -3,13 +3,18 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 
-const StyledSiderElement = styled.section``;
+const StyledSiderElement = styled('section')<SiderProps>``;
 
-interface SiderProps {
+interface SiderProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
 }
 
-export const Sider = ({ children }: SiderProps): React.ReactElement<any> => (
-    <StyledSiderElement className="anchor-sider">{children}</StyledSiderElement>
+export const Sider = ({
+    children,
+    ...props
+}: SiderProps): React.ReactElement<SiderProps> => (
+    <StyledSiderElement className="anchor-sider" {...props}>
+        {children}
+    </StyledSiderElement>
 );

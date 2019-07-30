@@ -8,7 +8,7 @@ import styled, {
 } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
-interface BadgeProps {
+interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
     backgroundColor?: string;
     borderColor?: string;
     borderColorHover?: string;
@@ -48,7 +48,8 @@ const BadgeSizeStyles: BadgeStylesGroup = {
     `,
 };
 
-const StyledBadgeContainer = styled('div')`
+// TODO: this encapsulation may be redundant
+const StyledBadgeContainer = styled('div')<BadgeProps>`
     position: relative;
     font-family: ${th('typography.fontFamily')};
     display: inline-block;

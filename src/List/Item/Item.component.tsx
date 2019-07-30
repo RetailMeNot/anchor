@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
-export interface ItemProps {
+export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
@@ -15,8 +15,8 @@ export interface ItemProps {
     children?: any;
     className?: string;
     href?: string;
-    prefix?: React.ReactElement<any>;
-    suffix?: React.ReactElement<any>;
+    prefix?: any;
+    suffix?: any;
     size?: 'sm' | 'lg';
 }
 

@@ -47,7 +47,7 @@ type InputEventHandler = (
     event?: KeyboardEvent
 ) => any;
 
-interface InputProps {
+interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
     // Identifiers
     id?: string;
     className?: string;
@@ -63,8 +63,8 @@ interface InputProps {
     label?: string;
     ariaLabel?: string;
     // TODO: buttons?
-    prefix?: React.ReactElement<any>;
-    suffix?: React.ReactElement<any>;
+    prefix?: any;
+    suffix?: any;
     size?: 'sm' | 'md' | 'lg';
     type?: InputTypes;
     // Overrides
@@ -106,7 +106,7 @@ const InputSizeDimensions = {
     `,
 };
 
-const StyledInputWrapper = styled('div')`
+const StyledInputWrapper = styled('div')<InputProps>`
     // Input Display Size
     display: block;
     position: relative;
@@ -246,6 +246,7 @@ export const Input = forwardRef(
             size,
             id,
             ariaLabel,
+            ...props
         }: InputProps,
         ref: React.RefObject<any>
     ) => {
@@ -276,6 +277,7 @@ export const Input = forwardRef(
                 className={classNames('anchor-input', className, {
                     focus,
                 })}
+                {...props}
             >
                 <StyledInputContainer>
                     {prefix

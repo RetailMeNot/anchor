@@ -22,13 +22,13 @@ type SidebarAlignment = 'left' | 'right';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledLayout = styled.section<StyledLayoutProps>`
+const StyledLayout = styled('section')<StyledLayoutProps>`
     max-width: ${props => props.layoutWidth};
     background-color: ${props => props.layoutBackgroundColor};
     margin: 0 auto;
 `;
 
-const StyledContent = styled.div<StyledContentProps>`
+const StyledContent = styled('div')<StyledContentProps>`
     max-width: ${props => props.contentWidth};
     background-color: ${props => props.contentBackgroundColor};
     margin: 0 auto;
@@ -39,7 +39,7 @@ StyledContent.displayName = 'StyledContent';
 
 // Interfaces
 // ------------------------------------------------------------------------------------------------------------------
-interface SidebarLayoutProps {
+interface SidebarLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
     /** The width of the layout, edge to edge. */
     layoutWidth?: string;
     /** The width of the content within the layout. */
@@ -59,12 +59,12 @@ interface SidebarLayoutProps {
     children?: any;
 }
 
-interface StyledLayoutProps {
+interface StyledLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
     layoutWidth?: string;
     layoutBackgroundColor?: string;
 }
 
-interface StyledContentProps {
+interface StyledContentProps extends React.HTMLAttributes<HTMLDivElement> {
     contentWidth?: string;
     contentBackgroundColor?: string;
 }
@@ -81,11 +81,13 @@ export const SidebarLayout = ({
     sidebarWidth = DEFAULT_SIDEBAR_WIDTH,
     children,
     className,
-}: SidebarLayoutProps): React.ReactElement<any> => (
+    ...props
+}: SidebarLayoutProps): React.ReactElement<SidebarLayoutProps> => (
     <StyledLayout
         layoutWidth={layoutWidth}
         layoutBackgroundColor={layoutBackgroundColor}
         className={classnames('anchor-sidebar-layout', className)}
+        {...props}
     >
         <StyledContent
             contentWidth={contentWidth}

@@ -7,7 +7,7 @@ import { th } from '@xstyled/system';
 // COMPONENTS
 import { Gutters } from '../Card.component';
 
-export interface CardContentProps {
+export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     gutter?: Gutters;
     children?: any;
@@ -20,7 +20,7 @@ const gutterSizes = {
     large: '1.5rem',
 };
 
-const StyledCard = styled('div')`
+const StyledCard = styled('div')<CardContentProps>`
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -33,7 +33,7 @@ export const CardContent: React.FunctionComponent<CardContentProps> = ({
     className,
     children,
     ...props
-}: CardContentProps): JSX.Element => (
+}: CardContentProps): React.ReactElement<CardContentProps> => (
     <StyledCard
         className={classNames('anchor-card-content', className)}
         {...props}

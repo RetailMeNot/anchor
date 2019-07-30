@@ -15,14 +15,14 @@ import { colors } from '../theme';
 // Hero
 // ------------------------------------------------------------------------------------------------------------------
 
-interface StyledHeroProps {
+interface StyledHeroProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: TextAlign;
     background?: string;
     color?: string;
     minHeight?: string;
 }
 
-const StyledHero = styled.section<StyledHeroProps>`
+const StyledHero = styled('section')<StyledHeroProps>`
     background: ${props => props.background};
     box-sizing: border-box;
     position: relative;
@@ -37,7 +37,7 @@ const StyledHero = styled.section<StyledHeroProps>`
     justify-content: center;
 `;
 
-interface HeroProps {
+interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
     background?: string;
     align?: TextAlign;
     color?: string;

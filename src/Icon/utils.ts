@@ -4,7 +4,7 @@ import { margin as marginStyles } from '../theme/system.theme';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
-export interface IconSVGProps {
+export interface IconSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
     scale?: ScaleFactors;
     color?: string;
     className?: string;

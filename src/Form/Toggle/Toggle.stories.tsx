@@ -12,7 +12,7 @@ import { Toggle } from './Toggle.component';
 
 const { useState } = React;
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: white;
 `;
 

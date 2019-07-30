@@ -24,10 +24,13 @@ const StyledLabel = styled(Typography)<ControlLabelProps>`
         })}
 `;
 
-interface ControlLabelProps extends SpaceProps, TypographyProps {
+interface ControlLabelProps
+    extends SpaceProps,
+        TypographyProps,
+        React.HTMLAttributes<any> {
     className?: string;
     id?: string;
-
+    children?: any;
     disabled?: boolean;
     value?: string;
     label: string;

@@ -5,13 +5,14 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
-export interface CardActionAreaProps {
+export interface CardActionAreaProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
     backgroundColor?: string;
 }
 
-const StyledCardActionArea = styled('div')`
+const StyledCardActionArea = styled('div')<CardActionAreaProps>`
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -26,7 +27,7 @@ export const CardActionArea: React.FunctionComponent<CardActionAreaProps> = ({
     className,
     children,
     ...props
-}: CardActionAreaProps): JSX.Element => (
+}: CardActionAreaProps): React.ReactElement<CardActionAreaProps> => (
     <StyledCardActionArea
         className={classNames('anchor-card-action-area', className)}
         {...props}

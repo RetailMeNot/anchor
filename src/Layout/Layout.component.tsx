@@ -12,13 +12,13 @@ export const TRANSPARENT = 'transparent';
 
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
-const StyledLayout = styled.section<StyledLayoutProps>`
+const StyledLayout = styled('section')<StyledLayoutProps>`
     max-width: ${props => props.layoutWidth};
     background-color: ${props => props.layoutBackgroundColor};
     margin: 0 auto;
 `;
 
-const StyledContent = styled.div<StyledContentProps>`
+const StyledContent = styled('div')<StyledContentProps>`
     max-width: ${props => props.contentWidth};
     background-color: ${props => props.contentBackgroundColor};
     margin: 0 auto;
@@ -29,7 +29,7 @@ StyledLayout.displayName = 'StyledLayout';
 
 // Interfaces
 // ------------------------------------------------------------------------------------------------------------------
-interface LayoutProps {
+interface LayoutProps extends React.HTMLAttributes<HTMLDivElement> {
     /** The width of the layout, edge to edge. */
     layoutWidth?: string;
     /** The width of the content within the layout. */
@@ -55,18 +55,20 @@ interface StyledContentProps {
 
 // Components
 // ------------------------------------------------------------------------------------------------------------------
-export const Layout = ({
+export const Layout: React.FunctionComponent<LayoutProps> = ({
     layoutWidth = DEFAULT_LAYOUT_WIDTH,
     layoutBackgroundColor = TRANSPARENT,
     contentWidth = DEFAULT_CONTENT_WIDTH,
     contentBackgroundColor = TRANSPARENT,
     className,
     children,
-}: LayoutProps): React.ReactElement<any> => (
+    ...props
+}: LayoutProps): React.ReactElement<LayoutProps> => (
     <StyledLayout
         layoutWidth={layoutWidth}
         layoutBackgroundColor={layoutBackgroundColor}
         className={classnames('anchor-layout', className)}
+        {...props}
     >
         <StyledContent
             contentWidth={contentWidth}

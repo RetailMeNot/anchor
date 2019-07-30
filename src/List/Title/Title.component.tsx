@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
-export interface TitleProps {
+export interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: any;
     className?: string;
     label?: string;

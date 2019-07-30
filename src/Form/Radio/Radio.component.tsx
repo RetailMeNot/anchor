@@ -1,12 +1,10 @@
 // REACT
 import * as React from 'react';
 const { forwardRef } = React;
-
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
-
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
@@ -15,7 +13,7 @@ const HiddenInput = styled('input')`
     opacity: 0;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
     right: 0;
     bottom: 0;
 `;
@@ -68,7 +66,7 @@ const StyledLabel = styled('label')<RadioProps>`
     }
 `;
 
-interface RadioProps extends SpaceProps {
+interface RadioProps extends SpaceProps, React.HTMLAttributes<any> {
     children?: any;
     className?: string;
     id?: string;

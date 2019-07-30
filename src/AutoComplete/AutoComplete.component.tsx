@@ -32,8 +32,8 @@ interface AutoCompleteProps {
     color?: string;
     // TODO: Allow children
     resultTemplate?: (props: any) => any;
-    suffix?: React.ReactElement<any>;
-    prefix?: React.ReactElement<any>;
+    suffix?: any;
+    prefix?: any;
     // Event Handlers
     onFilter?: (term: string | number) => void;
     onSelect?: (value?: string | number, item?: any) => void;

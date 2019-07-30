@@ -8,10 +8,10 @@ import { CollapseVariants } from '../Collapse.component';
 
 // Currently no styles but following the design pattern of anchor components where top-level components
 // are styled components.
-const StyledCollapseGroup = styled.div``;
+const StyledCollapseGroup = styled('div')<CollapseGroupProps>``;
 StyledCollapseGroup.displayName = 'StyledCollapseGroup';
 
-interface CollapseGroupProps {
+interface CollapseGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     /**
      * Whether or not the CollapseGroup acts as an accordion, i.e. only one
      * Collapse child can be open at a time.
@@ -33,13 +33,13 @@ interface CollapseGroupProps {
     className?: string;
 }
 
-export const CollapseGroup = ({
+export const CollapseGroup: React.FunctionComponent<CollapseGroupProps> = ({
     accordion = false,
     openIndex = 0,
     children,
     className,
     ...props
-}: CollapseGroupProps) => {
+}: CollapseGroupProps): React.ReactElement<CollapseGroupProps> => {
     const [currentOpenIndex, setCurrentOpenIndex] = React.useState<number>(
         openIndex
     );
@@ -47,6 +47,7 @@ export const CollapseGroup = ({
     return (
         <StyledCollapseGroup
             className={classNames('anchor-collapse-group', className)}
+            {...props}
         >
             {/* If accordion is true, all Collapse components are cloned in order to
             control their isOpen prop. Additionally, they are cloned to apply global

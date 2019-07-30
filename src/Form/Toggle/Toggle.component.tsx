@@ -1,12 +1,10 @@
 // REACT
 import * as React from 'react';
 const { forwardRef } = React;
-
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
-
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
 
@@ -15,7 +13,7 @@ const HiddenInput = styled('input')<ToggleProps>`
     opacity: 0;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
     right: 0;
     bottom: 0;
 `;
@@ -46,7 +44,7 @@ const Switch = styled('span')<ToggleProps>`
         css({
             height,
             width: trackWidth,
-        })}
+        })};
 
     margin-bottom: 0.25rem;
     display: flex;
@@ -105,7 +103,7 @@ const Switch = styled('span')<ToggleProps>`
     }
 `;
 
-interface ToggleProps extends SpaceProps {
+interface ToggleProps extends SpaceProps, React.HTMLAttributes<any> {
     className?: string;
     id?: string;
     htmlFor?: string;
@@ -134,6 +132,7 @@ export const Toggle = forwardRef(
             checked,
             showText = true,
             height = '1.375rem',
+            // TODO: this should be a variable
             toggleColor = '#784c82',
             knobSize = '1.125rem',
             trackHeight = '0.75rem',

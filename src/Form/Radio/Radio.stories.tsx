@@ -10,7 +10,7 @@ import { RootTheme } from '../../theme';
 import * as README from './README.md';
 import { Radio } from './Radio.component';
 
-const StyledStory = styled.div`
+const StyledStory = styled('div')`
     background: #f1f1f1;
     padding: 1rem;
 `;
@@ -41,6 +41,7 @@ storiesOf('Components/Form/Radio', module)
                     <StyledStory>
                         {options.map(({ value, label }) => (
                             <Radio
+                                key={label}
                                 checked={selectedValue === value}
                                 onChange={handleChange}
                                 value={value}
