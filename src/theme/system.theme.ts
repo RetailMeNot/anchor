@@ -5,4 +5,8 @@ export {
     PaddingProps,
     margin,
     MarginProps,
+    color,
+    ColorProps,
+    backgroundColor,
+    BackgroundColorProps,
 } from '@xstyled/system';

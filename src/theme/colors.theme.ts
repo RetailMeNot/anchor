@@ -122,6 +122,11 @@ export interface ColorsThemeSchema {
         placeholder: string;
     };
 
+    background: {
+        body: string;
+        content: string;
+    };
+
     error: string;
     success: string;
 }
@@ -155,6 +160,10 @@ export const ColorsTheme: ColorsThemeSchema = {
         },
         disabled: colors.ash.light,
         placeholder: colors.ash.dark,
+    },
+    background: {
+        body: colors.silver.base,
+        content: colors.white.base,
     },
     error: colors.fireSale.dark,
     success: colors.dealEnvy.dark,

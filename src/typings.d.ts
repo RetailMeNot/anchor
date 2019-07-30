@@ -41,6 +41,8 @@ declare module '@xstyled/system' {
         prop?: string;
     }) => (props: any) => any;
 
+    export const compose: any;
+
     // https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/styled-system/index.d.ts
     import * as CSS from 'csstype';
 
@@ -107,10 +109,20 @@ declare module '@xstyled/system' {
             | 'px'
         > {}
 
+    export interface ColorProps {
+        color?: ResponsiveValue<CSS.ColorProperty>;
+    }
+    export interface BackgroundColorProps<TLength = TLengthStyledSystem> {
+        backgroundColor?: ResponsiveValue<CSS.BackgroundProperty<TLength>>;
+    }
+
     export interface StyleFn {
         (...args: any[]): any;
         propTypes?: string[];
     }
+
+    export const color: StyleFn;
+    export const backgroundColor: StyleFn;
 
     export const space: StyleFn;
     export const margin: StyleFn;
