@@ -11,6 +11,7 @@ import * as README from './README.md';
 import { ControlLabel } from './ControlLabel.component';
 import { Radio } from '../Radio';
 import { Toggle } from '../Toggle';
+import { Checkbox } from '../Checkbox';
 
 const StyledStory = styled.div`
     padding: 1rem;
@@ -32,9 +33,11 @@ storiesOf('Components/Form/ControlLabel', module)
             const labelSpacing = text('labelSpacing', '') || undefined;
             const label = text('label', 'Label for the control');
 
-            const controls = { Toggle, Radio };
+            const controls = { Toggle, Radio, Checkbox };
             const Control =
-                controls[select('control', ['Toggle', 'Radio'], 'Toggle')];
+                controls[
+                    select('control', ['Toggle', 'Radio', 'Checkbox'], 'Toggle')
+                ];
 
             return (
                 <ThemeProvider theme={RootTheme}>

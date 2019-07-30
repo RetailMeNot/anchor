@@ -1,6 +1,6 @@
 // Theme Files
 import { typography } from './typography.theme';
-import { ColorsTheme } from './colors.theme';
+import { ColorsTheme, colors } from './colors.theme';
 
 // TODO: ============================================================ move all of these v consts to a different location
 
@@ -26,5 +26,13 @@ export const RootTheme = {
     colors: ColorsTheme,
     breakpoints: {
         xs: 0,
+    },
+    // todo: we should likely remove the color.borders colors and just use this
+    // or find a way to reference the colors.border colors here
+    // e.g. `thin solid borders.base`
+    borders: {
+        light: `thin solid ${colors.silver.base}`,
+        base: `thin solid ${colors.ash.light}`,
+        dark: `thin solid ${colors.ash.dark}`,
     },
 };

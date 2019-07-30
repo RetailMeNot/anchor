@@ -41,5 +41,5 @@ export {
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Modal, BaseModalBackground, ModalProvider } from './Modal';
-export { Input, Toggle, Radio, ControlLabel } from './Form';
+export { Input, Toggle, Radio, Checkbox, ControlLabel } from './Form';
 export * from './Icon';
