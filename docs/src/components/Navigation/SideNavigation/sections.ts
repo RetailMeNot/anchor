@@ -23,6 +23,10 @@ export const sections = [
                 path: '/components/autocomplete/',
             },
             {
+                title: 'Avatar',
+                path: '/components/avatar/',
+            },
+            {
                 title: 'Badge',
                 path: '/components/badge/',
             },

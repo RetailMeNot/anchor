@@ -120,15 +120,16 @@ const StyledPrimaryNav = styled.nav`
 // These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
 // to the CodePreview component.
 const StyledInlineCode = styled.span`
-    background-color: rgba(27,31,35,.05);
-    font-family: "SFMono-Regular",Consolas,Liberation Mono,Menlo,Courier,monospace;
+    background-color: rgba(27, 31, 35, 0.05);
+    font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
     border-radius: 3px;
-    padding: .2em .4em;
+    padding: 0.2em 0.4em;
     font-size: 85%;
 `;
 
 const StyledLi = styled.li`
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 `;
 
 const StyledTable = styled.table``;
@@ -208,7 +209,11 @@ Components.strong = (props: any) => (
 );
 Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
-Components.li = (props: any) => <StyledLi><Typography {...props} /></StyledLi>;
+Components.li = (props: any) => (
+    <StyledLi>
+        <Typography {...props} />
+    </StyledLi>
+);
 // TODO: This only binds to MD tables, not HTML
 Components.table = (props: any) => <StyledTable {...props} />;
 

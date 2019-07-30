@@ -14,11 +14,7 @@ import Component from '@reach/component-component';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 // tslint:disable-next-line: no-submodule-imports
 import github from 'prism-react-renderer/themes/github';
-import {
-    AutoComplete,
-    Collapse,
-    CollapseGroup
-} from '@retailmenot/anchor';
+import { AutoComplete, Collapse, CollapseGroup } from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
 // THEME
@@ -37,14 +33,14 @@ const StyledErrorElement = styled(LiveError)`
 `;
 
 const StyledContainerElement = styled.div`
-    margin: 1rem 0;
+    margin: 2rem 0;
     display: block;
 `;
 
 const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
     background-color: ${colors.charcoal.base};
-    border-bottom-left-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
     ${CodePreviewForcedStyles};
     // This library uses element-based colors to set some of its colors, which necessitates the '!important' below
     .token-line {
@@ -100,15 +96,16 @@ const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
 const StyledLivePreview = styled(LivePreview)<PreProps>`
     ${CodePreviewForcedStyles};
     padding: 1rem;
-    border: solid thin ${colors.silver.base};
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    border: solid thin ${colors.silver.dark};
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 `;
 
 interface CodePreviewProps {
     children?: any;
     className?: string;
     live?: boolean;
+    title?: string;
 }
 
 const scope = {
@@ -128,12 +125,19 @@ export const CodePreview = ({
     children,
     className,
     live = false,
+    title = 'Live Code Editor',
 }: CodePreviewProps): React.ReactElement<any> => {
-    const language = (className) ? className.replace(/language-/, '') : 'javascript';
+    const language = className
+        ? className.replace(/language-/, '')
+        : 'javascript';
 
     if (live) {
-        return(
+        return (
             <StyledContainerElement>
+                <Anchor.Typography tag="h6" pb="3" m="0" weight={600}>
+                    {title}
+                </Anchor.Typography>
+
                 <LiveProvider code={children} scope={scope}>
                     <StyledLiveEditor wrap="true" />
                     <StyledLivePreview />
@@ -146,13 +150,24 @@ export const CodePreview = ({
     // This is code taken from MDX's own documentation on rendering a code block
     // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
     return (
-        <Highlight {...defaultProps} code={children} language={language} theme={github}>
-            {({className, style, tokens, getLineProps, getTokenProps}) => (
-                <pre className={className} style={{...style, padding: '20px'}}>
+        <Highlight
+            {...defaultProps}
+            code={children}
+            language={language}
+            theme={github}
+        >
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre
+                    className={className}
+                    style={{ ...style, padding: '20px' }}
+                >
                     {tokens.map((line, i) => (
-                        <div key={i} {...getLineProps({line, key: i})}>
+                        <div key={i} {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (
-                                <span key={key} {...getTokenProps({token, key})} />
+                                <span
+                                    key={key}
+                                    {...getTokenProps({ token, key })}
+                                />
                             ))}
                         </div>
                     ))}

@@ -6,9 +6,11 @@ import { Location } from '@reach/router';
 export function AddLocation(Component: any) {
     return class EnhancedWithLocation extends React.Component {
         render() {
-            return(
+            return (
                 <Location>
-                    {locationProps => <Component {...locationProps} {...this.props} />}
+                    {locationProps => (
+                        <Component {...locationProps} {...this.props} />
+                    )}
                 </Location>
             );
         }

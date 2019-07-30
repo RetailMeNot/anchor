@@ -1,2 +1,46 @@
+<br />
+
 # Avatar
+
+The `Avatar` component renders a generic avatar graphic, or a stylized label.
+
+```tsx live
+    <section>
+        <Typography tag="div" pb="4">
+            <Typography tag="h3">Avatar with a label...</Typography>
+            <Avatar label="ps" />
+        </Typography>
+
+        <Typography tag="div">
+            <Typography tag="h3">Avatar without a label...</Typography>
+            <Avatar />
+        </Typography>
+    </section>
+```
+
+<br />
+
+### API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>label</td>
+            <td>Displays the string rather than the avatar graphic. Although any length string can
+                be provided, only the first two characters will be displayed (such as initials) and
+                also capitalized.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
 
