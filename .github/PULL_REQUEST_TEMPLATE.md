@@ -15,6 +15,7 @@ I have done **all** of the following:
 - [ ] De-linted and ran [prettier](https://github.com/prettier/prettier) (`npm run pretty`) on my code.
 - [ ] Added name to OWNERS file for all new components
 - [ ] If adding a new component, add its export to the rollup config
+- [ ] package.json version is bumped (if necessary)
 
 ---------
 **Outline your feature or bug-fix below**

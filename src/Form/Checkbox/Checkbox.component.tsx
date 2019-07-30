@@ -8,7 +8,7 @@ import { compose } from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
-import { Check } from '../..';
+import { Check } from '../../Icon';
 import { StyledIcon } from '../../Icon/utils';
 import {
     space as spaceStyles,
@@ -38,6 +38,7 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
 
     user-select: none;
     border: dark;
+    // todo: may want to read from a theme value here
     border-radius: 2px;
 
     ${compose(
