@@ -67,7 +67,7 @@ exports[`Component: Checkbox can be checked 1`] = `
 
 <label
   checked={true}
-  className="anchor-toggle c0"
+  className="anchor-checkbox c0"
   color="primary.base"
   size="1.375rem"
 >
@@ -157,7 +157,7 @@ exports[`Component: Checkbox should be defined 1`] = `
 }
 
 <label
-  className="anchor-toggle c0"
+  className="anchor-checkbox c0"
   color="primary.base"
   size="1.375rem"
 >
@@ -252,7 +252,7 @@ exports[`Component: Checkbox should be disableable 1`] = `
 }
 
 <label
-  className="anchor-toggle c0"
+  className="anchor-checkbox c0"
   color="primary.base"
   disabled={true}
   size="1.375rem"
