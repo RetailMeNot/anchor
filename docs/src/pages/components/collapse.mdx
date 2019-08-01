@@ -11,8 +11,6 @@ does not simply show/hide content, it re-renders it.
 When using the **Live Code Editor**, you can use any <Link to="/components/icon">Icon component</Link>
 available in **Anchor** for the `openedIcon` and `closedIcon` props.
 
-#### Live Code Editor
-
 ```tsx live
 <Collapse>
     I will appear and disappear when the rendered button is clicked!
@@ -29,9 +27,9 @@ available in **Anchor** for the `openedIcon` and `closedIcon` props.
 * `openedIcon` *(React.ReactElement)*: Defaults to **`<ChevronDown />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
 * `closedIcon` *(React.ReactElement)*: Defaults to **`<ChevronUp />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
 
-#### openedIcon and/or closedIcon usage
+###### openedIcon and/or closedIcon usage
 
-```tsx live
+```tsx live hideTitle
 <Collapse
     openedIcon={<ArrowBack />}
     closedIcon={<ArrowForward />}
@@ -51,8 +49,6 @@ available in **Anchor** for the `openedIcon` and `closedIcon` props.
 # CollapseGroup
 
 The **`CollapseGroup`** component combines multiple **`Collapse`** components together, allowing a single component to apply props to all children, unifying their appearance, and adding the ability to have accordion functionality.
-
-#### Live Code Editor
 
 ```tsx live
 <CollapseGroup variant="compact">

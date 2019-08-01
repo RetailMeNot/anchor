@@ -18,7 +18,6 @@ for the user to interact with. Here is an example of the modal:
 There are several components to `Modal` that interact with each other to provide the complete
 experience. As noted after the code sample below some are not required.
 
-###### Imports
 ```js
 import { Modal, RootTheme, ModalProvider } from '@retailmenot/anchor';
 import { ThemeProvider } from 'styled-components';
@@ -59,7 +58,6 @@ single `ModalProvider`.*
 Lets pretend we have an extremely basic React application called `App`. The `index.js` file where `App`
 gets attached to the **DOM** is the perfect place to initialize `ThemeProvider` and `ModalProvider`.
 
-###### Example Application
 ```jsx
 import * as React from 'react';
 import ReactDOM from 'react-dom';
@@ -95,7 +93,7 @@ example, but that's not required. As long as the `isOpen` prop of `Modal` receiv
 changes, that's all that is necessary to open and close the modal.
 
 ###### ModalAndButton Component Example
-```jsx
+```jsx hideTitle
 import * as React from 'react';
 import { Modal, Button, Typography } from '@retailmenot/anchor';
 
@@ -146,7 +144,7 @@ component above, it's time to use it. Below is an example page that exists withi
 It's as simple as dropping in our `ModalAndButton` into the page to have it work!
 
 ###### Page Example
-```jsx
+```jsx hideTitle
 import * as React from 'react';
 import styled from 'styled-components';
 import { Typography } from '@retailmenot/anchor';

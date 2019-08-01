@@ -21,26 +21,26 @@ const StyledModalExample = styled.div`
 `;
 
 export const ModalExample = () => (
-        <ModalProvider>
-            <StyledModalExample>
-                <Typography tag="h2" mt="0">
-                    An Example Page
+    <ModalProvider>
+        <StyledModalExample>
+            <Typography tag="h2" mt="0">
+                An Example Page
+            </Typography>
+
+            <section>
+                <Typography tag="div" pb="2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc tempor ante quis mauris hendrerit, sed egestas nulla
+                    porttitor. Pellentesque habitant morbi tristique senectus et
+                    netus et malesuada fames ac turpis egestas. Quisque
+                    convallis, risus non ornare lacinia, enim neque malesuada
+                    nisi, nec bibendum enim orci eu diam. Nunc vulputate
+                    placerat magna non ultrices. Aenean pharetra ante at sapien
+                    facilisis, eget accumsan quam suscipit.
                 </Typography>
 
-                <section>
-                    <Typography tag="div" pb="2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc tempor ante quis mauris hendrerit, sed egestas
-                        nulla porttitor. Pellentesque habitant morbi tristique
-                        senectus et netus et malesuada fames ac turpis egestas.
-                        Quisque convallis, risus non ornare lacinia, enim neque
-                        malesuada nisi, nec bibendum enim orci eu diam. Nunc
-                        vulputate placerat magna non ultrices. Aenean pharetra
-                        ante at sapien facilisis, eget accumsan quam suscipit.
-                    </Typography>
-
-                    <ModalAndButton />
-                </section>
-            </StyledModalExample>
-        </ModalProvider>
+                <ModalAndButton />
+            </section>
+        </StyledModalExample>
+    </ModalProvider>
 );
