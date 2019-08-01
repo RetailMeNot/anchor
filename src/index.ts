@@ -37,6 +37,7 @@ export {
     GlobalCSS,
     NormalizeCSS,
     RootTheme,
+    variables,
 } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
