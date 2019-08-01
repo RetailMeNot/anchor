@@ -8,6 +8,7 @@ import { ColorsTheme, colors } from './colors.theme';
 import { Color } from './colors.theme';
 export type Color = Color;
 
+export { variables } from './variables.theme';
 export { colors } from './colors.theme';
 export { fonts } from './fonts.theme';
 // I'm sorry internet, but this works.
