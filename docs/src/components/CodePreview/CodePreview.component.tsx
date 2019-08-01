@@ -1,3 +1,19 @@
+/*
+    This component is polymorphic. It can be either a static code block, or it can be an interactive
+    code editor. This is an example of it being used as a static code block.
+
+    ```jsx
+        const x = 0;
+    ```
+
+    And this is an example of it being used as an interactive code editor. Note that only components
+    can be used in the editor and only Anchor components at that.
+
+    ```tsx live
+        <AddEvent />
+    ```
+*/
+
 // REACT
 import * as React from 'react';
 // VENDOR

@@ -1,3 +1,386 @@
+import { Link } from 'gatsby';
+import { Typography } from '@retailmenot/anchor';
+import { ModalExample } from '../../components/ModalExample';
+
 <br />
 
 # Modal
+
+The Modal component is an overlay over all content on the page, presenting its own content area
+for the user to interact with. Here is an example of the modal:
+
+<br />
+
+<ModalExample />
+
+<br />
+
+There are several components to `Modal` that interact with each other to provide the complete
+experience. As noted after the code sample below some are not required.
+
+###### Imports
+```js
+import { Modal, RootTheme, ModalProvider } from '@retailmenot/anchor';
+import { ThemeProvider } from 'styled-components';
+
+const { Header, Footer, Close, Content } = Modal;
+```
+
+<br />
+
+* `Modal` is the key component, and without it there is no modal.
+* `Header` **is not required**. It creates a header at the top of the modal that allows for a title,
+with configurable background color and font color. If using the `Close` component (noted below) it's
+a good idea to make it a child of the Header.
+* `Footer` **is not required**. It creates a footer at the bottom of the modal with configurable padding
+and background color.
+* `Close` **is not required**. It provides a styled `button` element to close the modal. It is
+recommended to make the `Close` component a child of `Header`. *NOTE! By itself,  this button has no
+functionality. A function to close the modal will have to be assigned as an `onClick` event.*
+* `Content` **is not required**. It serves as a styled wrapper for the actual content that will
+show up in the modal. It has no props and serves only to correctly position the content within the
+modal. Content has a set amount of padding on all sides, however it will lose its top padding if
+used with `Header`, and it will lose it's bottom padding if used with `Footer`.
+* `RootTheme` provides a number of css styles that the modal will use.
+* `ModalProvider` will set the root portal where `Modal`s will be rendered.
+* `ThemeProvider` comes from the <a href="https://www.styled-components.com/" target="_blank">`styled-components`</a> library
+and will apply the `RootTheme` to the modal.
+
+*NOTE! It's best to put `ThemeProvider`  and `ModalProvider` components higher up in the application
+tree. `ThemeProvider` will make the styles from `RootTheme` available to any Anchor component in the
+application if it is defined near the top. `ModalProvider` only needs to be used a single time, and
+if it wraps an application that means that multiple `Modal` components can be used but with just a
+single `ModalProvider`.*
+
+---
+
+## Putting it Together
+
+Lets pretend we have an extremely basic React application called `App`. The `index.js` file where `App`
+gets attached to the **DOM** is the perfect place to initialize `ThemeProvider` and `ModalProvider`.
+
+###### Example Application
+```jsx
+import * as React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App'; // This path is just an example
+import { ThemeProvider } from 'styled-components';
+import { RootTheme, ModalProvider} from '@retailmenot/anchor';
+
+const Root = (
+    <ThemeProvider theme={RootTheme}>
+        <ModalProvider>
+            <App />
+        </ModalProvider>
+    </ThemeProvider>
+);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.getElementById('app');
+    ReactDOM.render(Root, wrapper);
+});
+```
+
+<br />
+
+By wrapping our application in these providers, we don't have to do anything else except build the
+modal and the button to open it.
+
+In the code below, I've imported the <Link to="/components/modal">`Button`</Link> and <Link to="/components/typography">`Typography`</Link> components
+from Anchor just to make things look a little nicer. I'm also using a **React hook** to track the
+state of the modal, `isOpen`, with its corresponding function to change that state, `setIsOpen`.
+
+I'm putting both the button to open the `Modal` and the `Modal` itself in the same file in this
+example, but that's not required. As long as the `isOpen` prop of `Modal` receives a value that
+changes, that's all that is necessary to open and close the modal.
+
+###### ModalAndButton Component Example
+```jsx
+import * as React from 'react';
+import { Modal, Button, Typography } from '@retailmenot/anchor';
+
+const { Header, Footer, Close, Content } = Modal;
+
+export const ModalAndButton = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    return(
+        <React.Fragment>
+            <Button onClick={() => setIsOpen(true)}>
+                Click Me For a Modal!
+            </Button>
+
+            <Modal
+                size="sm"
+                isOpen={isOpen}
+                onBackgroundClick={() => setIsOpen(false)}
+                onEscapeKeydown={() => setIsOpen(false)}
+            >
+                <Header title="Modal Example">
+                    <Close onClick={() => setIsOpen(false)} />
+                </Header>
+
+                <Content>
+                    <Typography tag="h3">Hello World!</Typography>
+                </Content>
+
+                <Footer>
+                    <Button
+                        block
+                        onClick={() => setIsOpen(false)}
+                        variant="minimal"
+                    >
+                        Cancel
+                    </Button>
+                </Footer>
+            </Modal>
+        </React.Fragment>
+    );
+};
+```
+
+<br />
+
+Now that we have the providers declared at the top of our application and we've created our `ModalAndButton`
+component above, it's time to use it. Below is an example page that exists within our application.
+It's as simple as dropping in our `ModalAndButton` into the page to have it work!
+
+###### Page Example
+```jsx
+import * as React from 'react';
+import styled from 'styled-components';
+import { Typography } from '@retailmenot/anchor';
+import { ModalAndButton } from './components/ModalAndButton'; // This path is just an example
+
+const StyledPageExample = styled.div`
+    border:solid black 1px;
+    padding:1rem;
+    margin: 1rem;
+    background-color: white;
+    max-width: 30rem;
+`;
+
+export const PageExample = () => (
+    <StyledPageExample>
+        <Typography tag="h2" pt="0">An Example Page</Typography>
+
+        <section>
+            <Typography tag="div">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nunc tempor ante quis mauris hendrerit, sed egestas nulla porttitor.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Quisque convallis, risus non ornare lacinia, enim neque malesuada nisi, nec bibendum enim orci eu diam.
+                Nunc vulputate placerat magna non ultrices.
+                Aenean pharetra ante at sapien facilisis, eget accumsan quam suscipit.
+            </Typography>
+
+            <ModalAndButton />
+        </section>
+    </StyledPageExample>
+);
+```
+
+<br />
+
+And voila! Here is our `PageExample` component rendered with our `ModalAndButton`!
+
+<br />
+
+<ModalExample />
+
+<br /><br />
+
+## API's
+
+---
+
+### Modal
+
+The `Modal` component is based off of `styled-react-modal` and as such accepts any of those <Typography tag="a" href="https://github.com/AlexanderRichey/styled-react-modal#modal" target="_blank">props</Typography>.
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>background</td>
+            <td>
+                Sets the background color of the modal. It uses Anchor's <Link to="/theme">theme</Link> colors
+                by default, but any color value can be provided.
+            </td>
+            <td>
+                String
+            </td>
+            <td>white.base</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>
+                Sets the font color of the modal. It uses Anchor's <Link to="/theme">theme</Link> colors
+                by default, but any color value can be provided.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>
+                A specific height of the modal. Accepts any standard css unit, i.e. 500px, 50%, etc.
+            </td>
+            <td>String</td>
+            <td>42.375rem</td>
+        </tr>
+        <tr>
+            <td>margin</td>
+            <td>
+                Applies a margin to the Modal container. It is not recommended to change this value
+                unless you do not want the modal centered. Accepts any standard margin shorthand
+                value, i.e. '5px 10px 8px'.
+            </td>
+            <td>String</td>
+            <td>auto</td>
+        </tr>
+        <tr>
+            <td>shadow</td>
+            <td>
+                Applies a box-shadow to the Modal container. Accepts any standard box-shadow shorthand
+                value.
+            </td>
+            <td>String</td>
+            <td>0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>
+                Changes the size of the modal.
+            </td>
+            <td>
+                'lg' | 'sm'
+            </td>
+            <td>'lg'</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>
+                A specific width of the modal. Accepts any standard css unit, i.e. 500px, 50%, etc.
+                If no width is specified, the size is used instead.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### Header
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>background</td>
+            <td>
+                Sets the background color of the header. It uses Anchor's <Link to="/theme">theme</Link> colors
+                by default, but any color value can be provided.
+            </td>
+            <td>
+                String
+            </td>
+            <td>white.base</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>
+                Sets the font color of the title. It uses Anchor's <Link to="/theme">theme</Link> colors
+                by default, but any color value can be provided.
+            </td>
+            <td>String</td>
+            <td>charcoal.light</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>
+                Renders the supplied text with Anchor's <Link to="/components/typography">Typography</Link> component with a scale of
+                20 and a weight of bold.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### Footer
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>background</td>
+            <td>
+                Sets the background color of the footer.
+            </td>
+            <td>
+                String
+            </td>
+            <td>transparent</td>
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td>
+                Sets the padding for the footer.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### Close
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>align</td>
+            <td>
+                Aligns the close button to the left or right corner of its parent element.
+            </td>
+            <td>'right' | 'left'</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+<br /><br />

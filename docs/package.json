@@ -4,7 +4,7 @@
     "author": "Kameron (@sharkparty)",
     "dependencies": {
         "@reach/component-component": "^0.1.3",
-        "@retailmenot/anchor": "^0.0.1-alpha.31",
+        "@retailmenot/anchor": "^0.0.1-beta.8",
         "@xstyled/styled-components": "^1.5.2",
         "babel-plugin-styled-components": "^1.10.6",
         "classnames": "^2.2.6",
