@@ -9,7 +9,6 @@ import classnames from 'classnames';
 
 // ANCHOR
 import { Check } from '../../Icon';
-import { StyledIcon } from '../../Icon/utils';
 import {
     space as spaceStyles,
     SpaceProps,
@@ -37,7 +36,8 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
     justify-content: center;
 
     user-select: none;
-    border: dark;
+    // todo: don't hardcode
+    border: thin solid #808080;
     // todo: may want to read from a theme value here
     border-radius: 2px;
 
@@ -54,14 +54,6 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
             cursor: disabled ? 'default' : 'pointer',
             opacity: disabled ? 0.4 : 1,
         })}
-
-    ${StyledIcon} {
-        transition: opacity 100ms ease-in-out;
-        ${({ checked }) =>
-            css({
-                opacity: checked ? 1 : 0,
-            })}
-    }
 `;
 
 interface CheckboxProps extends SpaceProps, ColorProps, BackgroundColorProps {
@@ -108,7 +100,7 @@ export const Checkbox = forwardRef(
             checked={checked}
             {...props}
         >
-            <Check scale="sm" />
+            {checked && <Check scale="sm" />}
             <HiddenInput
                 type="checkbox"
                 id={id}

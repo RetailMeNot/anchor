@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Checkbox can be checked 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   height: 0.875rem;
   width: 0.875rem;
   line-height: 0;
 }
 
-.c3 {
+.c2 {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -16,18 +16,6 @@ exports[`Component: Checkbox can be checked 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.c4 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 0;
-}
-
-.c5 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 0;
 }
 
 .c0 {
@@ -59,12 +47,6 @@ exports[`Component: Checkbox can be checked 1`] = `
   opacity: 1;
 }
 
-.c0 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 1;
-}
-
 <label
   checked={true}
   className="anchor-checkbox c0"
@@ -72,7 +54,7 @@ exports[`Component: Checkbox can be checked 1`] = `
   size="1.375rem"
 >
   <span
-    className="anchor-icon check c1 c2"
+    className="anchor-icon check c1"
     scale="sm"
   >
     <svg
@@ -97,21 +79,14 @@ exports[`Component: Checkbox can be checked 1`] = `
   </span>
   <input
     checked={true}
-    className="c3"
+    className="c2"
     type="checkbox"
   />
 </label>
 `;
 
 exports[`Component: Checkbox should be defined 1`] = `
-.c2 {
-  display: inline-block;
-  height: 0.875rem;
-  width: 0.875rem;
-  line-height: 0;
-}
-
-.c3 {
+.c1 {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -150,57 +125,20 @@ exports[`Component: Checkbox should be defined 1`] = `
   opacity: 1;
 }
 
-.c0 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 0;
-}
-
 <label
   className="anchor-checkbox c0"
   color="primary.base"
   size="1.375rem"
 >
-  <span
-    className="anchor-icon check c1 c2"
-    scale="sm"
-  >
-    <svg
-      height={14}
-      viewBox="0 0 16 16"
-      width={14}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        fill="none"
-        fillRule="evenodd"
-      >
-        <path
-          d="M0 0h16v16H0z"
-        />
-        <path
-          d="M14.627 5.133l-7.637 7.5a1.282 1.282 0 0 1-1.8 0l-3.817-3.75a1.235 1.235 0 0 1 0-1.768 1.288 1.288 0 0 1 1.799 0L6.09 9.982l6.737-6.617a1.291 1.291 0 0 1 1.8 0c.496.488.496 1.28 0 1.768"
-          fill="currentColor"
-        />
-      </g>
-    </svg>
-  </span>
   <input
-    className="c3"
+    className="c1"
     type="checkbox"
   />
 </label>
 `;
 
 exports[`Component: Checkbox should be disableable 1`] = `
-.c2 {
-  display: inline-block;
-  height: 0.875rem;
-  width: 0.875rem;
-  line-height: 0;
-}
-
-.c3 {
+.c1 {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -208,12 +146,6 @@ exports[`Component: Checkbox should be disableable 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.c4 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 0;
 }
 
 .c0 {
@@ -245,44 +177,14 @@ exports[`Component: Checkbox should be disableable 1`] = `
   opacity: 0.4;
 }
 
-.c0 .c1 {
-  -webkit-transition: opacity 100ms ease-in-out;
-  transition: opacity 100ms ease-in-out;
-  opacity: 0;
-}
-
 <label
   className="anchor-checkbox c0"
   color="primary.base"
   disabled={true}
   size="1.375rem"
 >
-  <span
-    className="anchor-icon check c1 c2"
-    scale="sm"
-  >
-    <svg
-      height={14}
-      viewBox="0 0 16 16"
-      width={14}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        fill="none"
-        fillRule="evenodd"
-      >
-        <path
-          d="M0 0h16v16H0z"
-        />
-        <path
-          d="M14.627 5.133l-7.637 7.5a1.282 1.282 0 0 1-1.8 0l-3.817-3.75a1.235 1.235 0 0 1 0-1.768 1.288 1.288 0 0 1 1.799 0L6.09 9.982l6.737-6.617a1.291 1.291 0 0 1 1.8 0c.496.488.496 1.28 0 1.768"
-          fill="currentColor"
-        />
-      </g>
-    </svg>
-  </span>
   <input
-    className="c3"
+    className="c1"
     disabled={true}
     type="checkbox"
   />

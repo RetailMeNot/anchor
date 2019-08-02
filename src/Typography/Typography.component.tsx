@@ -127,33 +127,12 @@ const StyledTypography = (tag: TextElements) => styled(tag)<TypographyProps>`
         })};
 
     // Override Size & Line Height
-    ${({ weight }) => css({ fontWeight: weight })};
-
-    // Throw a warning that says you really shouldn't do this
-    ${({ size }) => {
-        if (size) {
-            /* tslint:disable no-console */
-            console.warn(
-                'Overriding the size property is almost always a bad idea.'
-            );
-            /* tslint:enable no-console */
-            return css({ fontSize: rem(size) });
-        } else {
-            return null;
-        }
-    }};
-    ${({ lineHeight }) => {
-        if (lineHeight) {
-            /* tslint:disable no-console */
-            console.warn(
-                'Overriding the lineHeight property is almost always a bad idea.'
-            );
-            /* tslint:enable no-console */
-            return css({ lineHeight: rem(lineHeight) });
-        } else {
-            return null;
-        }
-    }};
+    ${({ lineHeight, size, weight }) =>
+        css({
+            lineHeight: rem(lineHeight),
+            fontSize: rem(size),
+            fontWeight: weight,
+        })};
 
     // Spacing
     ${spaceStyles}
