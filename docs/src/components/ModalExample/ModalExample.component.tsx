@@ -28,7 +28,7 @@ export const ModalExample = () => (
             </Typography>
 
             <section>
-                <Typography tag="div" pb="2">
+                <Typography tag="p" pb="2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc tempor ante quis mauris hendrerit, sed egestas nulla
                     porttitor. Pellentesque habitant morbi tristique senectus et

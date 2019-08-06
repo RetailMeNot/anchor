@@ -12,61 +12,159 @@ When using the **Live Code Editor**, you can use any <Link to="/components/icon"
 available in **Anchor** for the `openedIcon` and `closedIcon` props.
 
 ```tsx live
-<Collapse>
-    I will appear and disappear when the rendered button is clicked!
-</Collapse>
-```
-
-<br />
-
-### Props
-
-* `isOpen` *(boolean)*: Defaults to **`false`**. Determines whether the Collapse component is open or not. Changing the value of this prop will programatticaly open/close the component, thusly not requiring a click event.
-* `openedText` *(string)*: Defaults to **`'Close'`**. The text that appears on the button as a Call To Action (CTA) when the component is open. If this prop is used and the `closedText` prop is not, `closedText` will use whatever is defined for `openedText`. This is useful if you don't actually want the CTA text to change.
-* `closedText` *(string)*: Defaults to **`'Open'`**. The text that appears on the button as a CTA when the component is closed.
-* `openedIcon` *(React.ReactElement)*: Defaults to **`<ChevronDown />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
-* `closedIcon` *(React.ReactElement)*: Defaults to **`<ChevronUp />`** from `Icon`. Accepts any component to render, although realistically sticking to components from `Icon` make the most sense.
-
-###### openedIcon and/or closedIcon usage
-
-```tsx live hideTitle
 <Collapse
-    openedIcon={<ArrowBack />}
     closedIcon={<ArrowForward />}
+    closedText={'Open Me'}
+    hasBottomBorder={true}
+    isOpen={false}
+    openedIcon={<ArrowBack />}
+    openedText={'Close Me'}
+    variant={'comfortable'}
 >
     <div>Hello world.</div>
 </Collapse>
 ```
 
-* `variant` *('comfortable' | 'compact' | 'none')*: Defaults to **`'comfortable'`**.
-    * **comfortable**: has considerable spacing. It is intended to be used for showing/hiding larger pieces of content.
-    * **compact**: has much tighter spacing. It is intended to be used for showing/hiding navigation elements.
-    * **none**: Applies no styling whatsoever to the component. Useful for when you want complete control of all styling via styled-components/css/etc., but still keep the functionality of the component. The component has many classes in place to try and make it easier to accomplish this.
-* `hasBottomBorder`: *(boolean)*: Defaults to **`true`**. Shows/hides the bottom border.
-
-<br />
-
-# CollapseGroup
+## CollapseGroup
 
 The **`CollapseGroup`** component combines multiple **`Collapse`** components together, allowing a single component to apply props to all children, unifying their appearance, and adding the ability to have accordion functionality.
 
 ```tsx live
-<CollapseGroup variant="compact">
+<CollapseGroup
+    accordion={true}
+    closedIcon={<ArrowForward />}
+    openedIcon={<ArrowBack />}
+    openIndex={1}
+    variant="compact"
+>
     <Collapse>
-        I will appear and disappear when the rendered button is clicked!
+        <Typography pl="5">
+            I will appear and disappear when the rendered button is clicked!
+        </Typography>
     </Collapse>
     <Collapse>
-        I will also appear and disappear when the rendered button is clicked!
+        <Typography pl="5">
+            I will also appear and disappear when the rendered button is clicked!
+        </Typography>
     </Collapse>
 </CollapseGroup>
 ```
 
-### Props
+<br />
 
-* `openedIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
-* `closedIcon` *(React.ReactElement)*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
-* `variant` *('comfortable' | 'compact' | 'none')*: No default. Using this prop will apply the setting to all child **`Collapse`** components. Otherwise its functionality is as noted above for **`Collapse`**.
-* `accordion` *(boolean)*: Defaults to **`false`**. Enables accordion functionality, where only one **`Collapse`** component can be open at a time.
-* `openIndex` *(number)*: Defaults to **`0`**. If **`accordion`** is set to **`true`**, this determines which **`Collapse`** component will start in the open state.
+## API's
+
+---
+
+### Collapse
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>closedIcon</td>
+            <td>The icon that appears when the component is closed.</td>
+            <td>ReactElement</td>
+            <td><pre>ChevronUp</pre> from <strong>Anchor</strong></td>
+        </tr>
+        <tr>
+            <td>closedText</td>
+            <td>The text that appears on the button as a CTA when the component is closed.</td>
+            <td>String</td>
+            <td>Open</td>
+        </tr>
+        <tr>
+            <td>hasBottomBorder</td>
+            <td>Shows/hides the bottom border.</td>
+            <td>Boolean</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>isOpen</td>
+            <td>Determines whether the Collapse component is open or not. Changing the value of this prop will programatticaly open/close the component, thusly not requiring a click event.</td>
+            <td>Boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>openedIcon</td>
+            <td>The icon that appears when the component is opened.</td>
+            <td>ReactElement</td>
+            <td><pre>ChevronDown</pre> from <strong>Anchor</strong></td>
+        </tr>
+        <tr>
+            <td>openedText</td>
+            <td>The text that appears on the button as a CTA when the component is opened.</td>
+            <td>String</td>
+            <td>Close</td>
+        </tr>
+        <tr>
+            <td>variant</td>
+            <td>Several variants of collapse. Comfortable has considerable spacing, compact has
+                much tighter spacing, and none removes all styling.
+            </td>
+            <td>'comfortable' | 'compact' | 'none'</td>
+            <td>comfortable</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### CollapseGroup
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>accordion</td>
+            <td>Enables accordion functionality, where only one Collapse component can be open at a time.</td>
+            <td>Boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>closedIcon</td>
+            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
+                its functionality is as noted above for Collapse.
+            </td>
+            <td>ReactElement</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>openedIcon</td>
+            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
+                its functionality is as noted above for Collapse.</td>
+            <td>ReactElement</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>openIndex</td>
+            <td>If accordion is set to true, this determines which Collapse component will start in
+                the open state based on index.</td>
+            <td>Number</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>variant</td>
+            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
+                its functionality is as noted above for Collapse.</td>
+            <td>'comfortable' | 'compact' | 'none'</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
 
 <br /><br />
