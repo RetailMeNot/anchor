@@ -48,6 +48,7 @@ import * as Anchor from '../../../../src';
 // THEME
 // import { TableCSS } from '../Layout/Page/Page.component';
 import { colors } from '../../../../src/theme';
+import { BottomArea, MoreInfo } from '../CardExample';
 
 // TODO: add CDN Inconsolata font
 
@@ -148,6 +149,9 @@ const scope = {
     AutoComplete,
     Collapse,
     CollapseGroup,
+    // Example Components
+    BottomArea,
+    MoreInfo,
 };
 
 /*
