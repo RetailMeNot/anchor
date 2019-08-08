@@ -1,2 +1,157 @@
+import { Link } from 'gatsby';
+import { CardExample } from '../../components/CardExample';
+
+<br />
+
 # Card
 
+The `Card` component is intended to be used to convey short pieces of information, such as offers.
+They are designed to be relatively small in size, although **Anchor**'s `Card` component is very
+flexible in this regard, expanding to accomodate whatever content is within it.
+<br />
+
+<CardExample />
+
+---
+
+## Putting it Together
+
+`Card` is used to organize content in a concise way so it's a good idea to to create a few
+components ahead of time to use. In the example below, we have a styled component that is extending
+**Anchor**'s `InfoOutline` component, one of the <Link to="/components/icon/">icons</Link>. Hovering
+over the icon will display a small tooltip. Note that we're importing **Anchor**'s `colors`
+object for all of the examples to follow. Refer to the <Link to="/theme">theme</Link> section for
+more information.
+
+###### MoreInfo Component Example
+```jsx hideTitle
+import * as React from 'react';
+import styled from 'styled-components';
+import { colors, InfoOutline } from '@retailmenot/anchor';
+
+const StyledMoreInfo = styled(InfoOutline)`
+    position:relative;
+
+    &:hover {
+        cursor:pointer;
+
+        &:after {
+            content:'I am an Action';
+            display:block;
+            padding:1rem;
+            background-color: ${colors.success.dark};
+            color: ${colors.white.base};
+            position:absolute;
+            right:1.75rem;
+            white-space:nowrap;
+            top:0;
+            z-index:1000;
+            border-radius:0.25rem;
+        }
+    }
+`;
+
+export const MoreInfo = () => (
+    <StyledMoreInfo
+        color={colors.success.dark}
+        scale="lg"
+    />
+);
+```
+
+<br />
+
+Next, we're going to build a component that will display a short message with a background color.
+
+###### BottomArea Component Example
+```jsx hideTitle
+import * as React from 'react';
+import styled from 'styled-components';
+import { colors, Typography } from '@retailmenot/anchor';
+
+const StyledBottomArea = styled('div')`
+    background-color: ${colors.silver.base};
+    color:${colors.charcoal.base};
+    padding:1rem;
+`;
+
+export const BottomArea = () => (
+    <StyledBottomArea>
+        <Typography weight="bolder">
+            I am an Action Area.
+        </Typography>
+    </StyledBottomArea>
+);
+```
+
+<br />
+
+Now that we've created these separate components, lets organize them into a `Card`!
+
+```jsx live
+<Card
+    actionArea={<BottomArea />}
+    action={<MoreInfo />}
+    gutter="medium"
+>
+    <Typography tag="h3" mt="1">
+        I am the content of the card.
+    </Typography>
+
+    <Typography tag="p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Proin semper leo sit amet nibh ornare, sed condimentum libero rutrum.
+    </Typography>
+</Card>
+```
+
+<br />
+
+---
+
+### API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>action</td>
+            <td>
+                Although this prop will accept any value, it makes the most sense to pass a
+                component. It will absolutely position this component in the upper-right corner of
+                the card and is unaffected by the gutter prop.
+            </td>
+            <td>
+                Any
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>actionArea</td>
+            <td>
+                Although this prop will accept any value, it makes the most sense to pass a
+                component. It will be placed flush against the bottom of the card and will be
+                unaffected by the gutter prop.
+            </td>
+            <td>Any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>gutter</td>
+            <td>
+                The padding of the card's content.
+            </td>
+            <td>'none' | 'small' | 'medium' | 'large'</td>
+            <td>medium</td>
+        </tr>
+    </tbody>
+</table>
+
+<br /><br />

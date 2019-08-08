@@ -1,4 +1,197 @@
+import { Link } from 'gatsby';
+
+<br />
+
 # Hero
 
+The `Hero` component is used to display a website hero which spans from edge to edge of available
+space while centering it's content. Graphics, buttons and any other element can be used inside of a
+`Hero`.
 
+Aside from the `Hero` component itself, it has two additional components that can be deconstructed
+from it.
 
+```jsx
+    import { Hero } from '@retailmenot/anchor';
+
+    const { Title, Subtitle } = Hero;
+```
+
+Depending on how your environment is set up, you could directly access these sub-components directly
+in your jsx as shown below. This example uses the `colors` export from **Anchor** which is the basis for <Link to="/theme">themes</Link>,
+as well as the <Link to="/components/button/">`Button`</Link> component.
+
+```tsx live
+    <Hero background={colors.grapePurchase.base} minHeight="12.5rem">
+        <Hero.Title weight="bolder">TITLE!</Hero.Title>
+
+        <Hero.Subtitle scale="16">SUBTITLE!</Hero.Subtitle>
+
+        <Typography tag="p" pt="3">
+            <Button
+                variant="outline"
+                reverse
+                onClick={() => alert('Hello!')}
+            >
+                A Button
+            </Button>
+        </Typography>
+    </Hero>
+```
+
+<br />
+
+## API's
+
+---
+
+### Hero
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>align</td>
+            <td>
+                The alignment of content within the Hero.
+            </td>
+            <td>
+                'center' | 'left' | 'right' | 'inherit' | 'justify'
+            </td>
+            <td>center</td>
+        </tr>
+        <tr>
+            <td>background</td>
+            <td>
+                Sets the background color of the Hero. Any valid css color value
+                (including gradients) can be used.
+            </td>
+            <td>
+                String
+            </td>
+            <td>transparent</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>
+                Sets the font color of the Hero. It uses Anchor's <Link to="/theme">theme</Link> colors
+                by default, but any valid css color value can be used.
+            </td>
+            <td>
+                String
+            </td>
+            <td>white.base</td>
+        </tr>
+        <tr>
+            <td>minHeight</td>
+            <td>
+                The minimum height that the Hero should be rendered at.
+            </td>
+            <td>
+                String
+            </td>
+            <td>7.5rem</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### Title
+
+`Title` is as a wrapper of the `Typography` component.
+Editable props are `tag`  and `weight`. Refer to `Typography`'s <Link to="/components/typography">documentation</Link> for
+more information.
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>scale</td>
+            <td>
+                Note that the default tag that is used, 'h1', will prevent scale from working. Any
+                Typography 'tag' using a heading has this limitation (h1, h2, h3, h4, h5, h6).
+            </td>
+            <td>
+                -
+            </td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>tag</td>
+            <td>
+                -
+            </td>
+            <td>
+                -
+            </td>
+            <td>h1</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>
+                -
+            </td>
+            <td>
+                -
+            </td>
+            <td>600</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### Subtitle
+
+`Subtitle` is as a wrapper of the `Typography` component. Editable props are `scale` and`weight`.
+Refer to `Typography`'s <Link to="/components/typography">documentation</Link> for more information.
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>scale</td>
+            <td>
+                -
+            </td>
+            <td>
+                -
+            </td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>weight</td>
+            <td>
+                -
+            </td>
+            <td>
+                -
+            </td>
+            <td>600</td>
+        </tr>
+    </tbody>
+</table>
+
+<br /><br />
