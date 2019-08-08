@@ -4,6 +4,12 @@ const { forwardRef } = React;
 
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
+import {
+    compose,
+    space as spaceStyles,
+    color as colorStyles,
+    backgroundColor as backgroundColorStyles,
+} from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
@@ -38,7 +44,13 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
             width: size,
             cursor: disabled ? 'default' : 'pointer',
             opacity: disabled ? 0.4 : 1,
-        })}
+        })};
+
+    ${compose(
+        spaceStyles,
+        colorStyles,
+        backgroundColorStyles
+    )}
 `;
 
 interface CheckboxProps {

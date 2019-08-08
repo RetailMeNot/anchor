@@ -43,6 +43,8 @@ exports[`Component: Checkbox can be checked 1`] = `
   width: 1.375rem;
   cursor: pointer;
   opacity: 1;
+  color: #602D6C;
+  background-color: white;
 }
 
 <label
@@ -119,6 +121,8 @@ exports[`Component: Checkbox should be defined 1`] = `
   width: 1.375rem;
   cursor: pointer;
   opacity: 1;
+  color: #602D6C;
+  background-color: white;
 }
 
 <label
@@ -169,6 +173,8 @@ exports[`Component: Checkbox should be disableable 1`] = `
   width: 1.375rem;
   cursor: default;
   opacity: 0.4;
+  color: #602D6C;
+  background-color: #F1F1F1;
 }
 
 <label
