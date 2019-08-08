@@ -50,7 +50,7 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
         spaceStyles,
         colorStyles,
         backgroundColorStyles
-    )}
+    )};
 `;
 
 interface CheckboxProps {
