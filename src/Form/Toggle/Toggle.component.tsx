@@ -6,7 +6,7 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
-import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
 const HiddenInput = styled('input')<ToggleProps>`
     visibility: hidden;

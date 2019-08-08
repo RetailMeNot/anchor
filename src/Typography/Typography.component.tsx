@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // ANCHOR
-import { space as spaceStyles, SpaceProps } from '../theme/system.theme';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { colors, Color } from '../theme';
 import { rem } from '../utils/rem/rem';
 
