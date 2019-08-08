@@ -1,6 +1,5 @@
 // VENDOR
 import { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
-// import { th } from '@xstyled/system';
 // THEME
 import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';

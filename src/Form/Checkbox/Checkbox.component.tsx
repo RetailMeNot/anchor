@@ -16,7 +16,7 @@ import {
     ColorProps,
     backgroundColor as backgroundColorStyles,
     BackgroundColorProps,
-} from '../../theme/system.theme';
+} from '@xstyled/system';
 
 const HiddenInput = styled('input')<CheckboxProps>`
     visibility: hidden;

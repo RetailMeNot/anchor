@@ -3,8 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
-// THEME
-import { colors } from '../../theme';
 
 export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
     onMouseOver?: (event: React.MouseEvent) => any;
@@ -21,7 +19,8 @@ const StyledDivider = styled('div')<DividerProps>`
     padding: 0.5rem 1rem;
     hr {
         border: none;
-        border-top: solid thin ${colors.ash.light};
+        border-top: solid thin;
+        border-top-color: neutrals.silver.dark;
     }
 `;
 

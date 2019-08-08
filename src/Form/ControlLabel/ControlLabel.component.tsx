@@ -11,7 +11,7 @@ import {
     Typography,
     TypographyProps,
 } from '../../Typography/Typography.component';
-import { space as spaceStyles, SpaceProps } from '../../theme/system.theme';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
 const StyledLabel = styled(Typography)<ControlLabelProps>`
     position: relative;

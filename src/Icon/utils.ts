@@ -1,6 +1,6 @@
 // VENDOR
 import styled from '@xstyled/styled-components';
-import { margin as marginStyles } from '../theme/system.theme';
+import { margin as marginStyles } from '@xstyled/system';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 

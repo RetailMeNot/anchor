@@ -14,7 +14,10 @@ export interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const StyledTitle = styled('div')`
     box-sizing: border-box;
-    padding: 0.75rem 1rem;
+    display: flex;
+    padding: 0 1rem 0;
+    align-items: center;
+    height: 2rem;
 `;
 
 export const Title = ({

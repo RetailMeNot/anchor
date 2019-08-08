@@ -16,7 +16,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 2.75rem;
-  margin-bottom: 0.25rem;
 }
 
 .c1:hover {
@@ -92,10 +91,12 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 .c2.lg {
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .c2.sm {
   font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .c0 {
@@ -196,7 +197,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 2.75rem;
-  margin-bottom: 0.25rem;
 }
 
 .c2:hover {
@@ -272,15 +272,28 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c3.lg {
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .c3.sm {
   font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .c1 {
   box-sizing: border-box;
-  padding-bottom: 1.25rem;
+}
+
+.c1 .anchor-list-title {
+  margin-top: 0.75rem;
+}
+
+.c1 .anchor-list-item {
+  margin-bottom: 0.25rem;
+}
+
+.c1 .anchor-list-item + .anchor-list-title {
+  margin-top: 0.5rem;
 }
 
 .c0 {
