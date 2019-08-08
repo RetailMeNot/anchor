@@ -4,19 +4,16 @@ const { forwardRef } = React;
 
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { compose } from '@xstyled/system';
+import {
+    compose,
+    space as spaceStyles,
+    color as colorStyles,
+    backgroundColor as backgroundColorStyles,
+} from '@xstyled/system';
 import classnames from 'classnames';
 
 // ANCHOR
 import { Check } from '../../Icon';
-import {
-    space as spaceStyles,
-    SpaceProps,
-    color as colorStyles,
-    ColorProps,
-    backgroundColor as backgroundColorStyles,
-    BackgroundColorProps,
-} from '@xstyled/system';
 
 const HiddenInput = styled('input')<CheckboxProps>`
     visibility: hidden;
@@ -41,25 +38,26 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
     // todo: may want to read from a theme value here
     border-radius: 2px;
 
-    ${compose(
-        spaceStyles,
-        colorStyles,
-        backgroundColorStyles
-    )}
-
     ${({ size, disabled }) =>
         css({
             height: size,
             width: size,
             cursor: disabled ? 'default' : 'pointer',
             opacity: disabled ? 0.4 : 1,
-        })}
+        })};
+
+    ${compose(
+        spaceStyles,
+        colorStyles,
+        backgroundColorStyles
+    )};
 `;
 
-interface CheckboxProps extends SpaceProps, ColorProps, BackgroundColorProps {
+interface CheckboxProps {
     className?: string;
     id?: string;
     htmlFor?: string;
+    backgroundColor?: string;
 
     checked?: boolean;
     disabled?: boolean;
