@@ -39,8 +39,6 @@ exports[`Component: Checkbox can be checked 1`] = `
   user-select: none;
   border: thin solid #808080;
   border-radius: 2px;
-  color: #602D6C;
-  background-color: white;
   height: 1.375rem;
   width: 1.375rem;
   cursor: pointer;
@@ -117,8 +115,6 @@ exports[`Component: Checkbox should be defined 1`] = `
   user-select: none;
   border: thin solid #808080;
   border-radius: 2px;
-  color: #602D6C;
-  background-color: white;
   height: 1.375rem;
   width: 1.375rem;
   cursor: pointer;
@@ -169,8 +165,6 @@ exports[`Component: Checkbox should be disableable 1`] = `
   user-select: none;
   border: thin solid #808080;
   border-radius: 2px;
-  color: #602D6C;
-  background-color: #F1F1F1;
   height: 1.375rem;
   width: 1.375rem;
   cursor: default;
