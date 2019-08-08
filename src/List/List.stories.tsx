@@ -30,11 +30,16 @@ storiesOf('Components/List', module)
                 <List>
                     <Title>Title 1</Title>
                     <Item>Item 1</Item>
-                    <Item>Item 1</Item>
-                    <Title>Title 1</Title>
-                    <Item>Item 1</Item>
-                    <Item>Item 1</Item>
+                    <Item>Item 2</Item>
                     <Item>Item 3</Item>
+                    <Item>Item 4</Item>
+                    <Item>Item 5</Item>
+                    <Title>Title 2</Title>
+                    <Item>Item 1</Item>
+                    <Item>Item 2</Item>
+                    <Item>Item 3</Item>
+                    <Item>Item 4</Item>
+                    <Item>Item 5</Item>
                     <Divider />
                     <Item>Item 4</Item>
                     <Item>Item 4</Item>

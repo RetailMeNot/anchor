@@ -16,7 +16,6 @@ exports[`Component: Item should be defined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 2.75rem;
-  margin-bottom: 0.25rem;
 }
 
 .c0:hover {
@@ -92,10 +91,12 @@ exports[`Component: Item should be defined 1`] = `
 
 .c1.lg {
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .c1.sm {
   font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .c2 {

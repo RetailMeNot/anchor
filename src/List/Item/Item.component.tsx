@@ -30,7 +30,6 @@ const StyledItem = styled('a')<ItemProps>`
     background-color: neutrals.white.base;
     text-decoration: none;
     height: 2.75rem;
-    margin-bottom: 0.25rem;
 
     &:hover {
         background-color: neutrals.silver.light;
@@ -67,9 +66,11 @@ const StyledTypography = styled(Typography)`
     }
     &.lg {
         font-size: 1rem;
+        font-weight: 400;
     }
     &.sm {
         font-size: 0.875rem;
+        font-weight: 500;
     }
 `;
 

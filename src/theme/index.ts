@@ -18,7 +18,7 @@ export const sizes = Sizes;
 export { NormalizeCSS, GlobalCSS } from './GlobalStyles';
 // TODO: ============================================================ move all of these ^ consts to a different location
 
-import { BUTTON_KEY, BUTTON_THEME } from '../Button/Button.component';
+import { BUTTON_KEY, BUTTON_THEME } from '../Button';
 
 export const RootTheme = {
     typography,
