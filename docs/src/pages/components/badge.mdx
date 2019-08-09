@@ -1,2 +1,231 @@
+import { Link } from 'gatsby';
+import { BadgeWithParentExample } from '../../components/BadgeWithParentExample';
+
 # Badge
 
+The Badge component displays a dot or a circle with a count. It is normally used to indicate pending items (items in cart, unread messages, etc.)
+
+## Usage
+
+There are three sizes: `dot` (default) and `small` are meant to be used with an icon (Anchor comes with <Link to="/components/icon">its own set of icons</Link>). `large` is meant to be used standalone.
+
+### Size dot with an icon
+```tsx live
+<div style={{ padding: '2rem 1rem' }}>
+    <Badge
+        borderColor={'white'}
+        borderColorHover={'white'}
+        count={1}
+        offsetBottom={1.2}
+        offsetLeft={0.9}
+    >
+        <Cart scale="lg" />
+    </Badge>
+</div>
+```
+
+### Size small with an icon
+
+To see how `showZero` works, try setting `count` to `{0}`. The badge should disappear. If you set `showZero` to `{true}`, however, the badge should display a `0`.
+
+
+```tsx live
+<div style={{ padding: '2rem 1rem' }}>
+    <Badge
+        borderColor={'white'}
+        borderColorHover={'white'}
+        count={1}
+        offsetBottom={1.1}
+        offsetLeft={0.6}
+        showZero={false}
+        size="small"
+    >
+        <Cart scale="lg" />
+    </Badge>
+</div>
+```
+
+### Size large standalone
+
+This is also an example of the `overflowCount` in action. Try decreasing `overflowCount` or updating `count` to be less than `overflowCount`.
+
+```tsx live
+<div style={{ padding: '2rem 1rem' }}>
+    <Badge
+        borderColor={'white'}
+        borderColorHover={'white'}
+        count={15}
+        overflowCount={9}
+        size="large"
+        standalone={true}
+    ></Badge>
+</div>
+```
+
+### Handling hover states
+
+If a Badge is placed within a component that changes color on hover, Badge needs to update its border color as well. The way this is currently handled is via the `isParentHovered` prop. Badge expects its parent component to communicate hover states by updating that prop.
+
+<BadgeWithParentExample />
+
+Here is an example of Badge with a parent component that uses the `isParentHovered` prop:
+
+```jsx hideTitle
+// REACT
+import * as React from 'react';
+// VENDOR
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+// COMPONENTS
+import { Badge, Cart } from '@retailmenot/anchor';
+// THEME
+import { colors, RootTheme } from '@retailmenot/anchor';
+
+const { useState } = React;
+
+const StyledBadgeWithParentExample = styled.div`
+    padding: 2rem 5rem;
+    background-color: ${colors.grapePurchase.base};
+    color: ${colors.white.base};
+    line-height: 1.5rem;
+
+    &:hover {
+        background-color: ${colors.grapePurchase.light};
+    }
+`;
+
+export const BadgeWithParentExample = () => {
+    const [isHovered, setIsHovered] = useState<boolean>(false);
+    const handleOnMouseEnter = () => {
+        setIsHovered(true);
+    };
+    const handleOnMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    return (
+        <ThemeProvider theme={RootTheme}>
+            <StyledBadgeWithParentExample
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={handleOnMouseLeave}
+            >
+                <Badge
+                    backgroundColor={colors.flashPink.base}
+                    borderColor={colors.grapePurchase.base}
+                    borderColorHover={colors.grapePurchase.light}
+                    count={1}
+                    isParentHovered={isHovered}
+                    offsetBottom={1.1}
+                    offsetLeft={0.6}
+                    overflowCount={9}
+                    showZero={false}
+                    size="small"
+                    textColor={colors.white.base}
+                >
+                    <Cart scale="lg" />
+                </Badge>
+            </StyledBadgeWithParentExample>
+        </ThemeProvider>
+    );
+};
+```
+
+<br />
+
+## API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>backgroundColor</td>
+            <td>The background color of the Badge</td>
+            <td>string | hex code | rgb</td>
+            <td>'error'</td>
+        </tr>
+        <tr>
+            <td>borderColor</td>
+            <td>The color of the border of the Badge</td>
+            <td>string | hex code | rgb</td>
+            <td>'error'</td>
+        </tr>
+        <tr>
+            <td>borderColorHover</td>
+            <td>The color of the border of the Badge on hover</td>
+            <td>string | hex code | rgb</td>
+            <td>'error'</td>
+        </tr>
+        <tr>
+            <td>children</td>
+            <td>Any elements inside the Badge tags. This is what we use to pass Icon components in.</td>
+            <td>Icon</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>className</td>
+            <td>Additional className to be added to the Badge element</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>count</td>
+            <td>The number to be displayed inside the badge</td>
+            <td>number</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>isParentHovered</td>
+            <td>Whether the parent element of the Badge is hovered</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>overflowCount</td>
+            <td>The maximum count to show in the Badge</td>
+            <td>number</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>offsetBottom</td>
+            <td>The absolute positioning in REM from the bottom</td>
+            <td>number</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>offsetLeft</td>
+            <td>The absolute positioning in REM from the left</td>
+            <td>number</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>showZero</td>
+            <td>Whether to show the badge if the `count` is 0</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>The size of the badge</td>
+            <td>'dot' | 'small' | 'large'</td>
+            <td>'dot'</td>
+        </tr>
+        <tr>
+            <td>standalone</td>
+            <td>Whether the Badge will be displayed alone</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>textColor</td>
+            <td>The color of the text of the `count`</td>
+            <td>string | hex code | rgb</td>
+            <td>'neutrals.white.base'</td>
+        </tr>
+    </tbody>
+</table>
