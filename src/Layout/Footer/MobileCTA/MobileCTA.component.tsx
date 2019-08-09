@@ -4,7 +4,6 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import classNames from 'classnames';
 // COMPONENTS
-import { Grid, Cell, CenteredCell } from '../../../Grid';
 import { Typography } from '../../../Typography';
 
 const StyledMobileCTAElement = styled('a')`
@@ -160,11 +159,11 @@ export const MobileCTA = ({
         target="_blank"
         rel="noreferrer nofollow"
     >
-        <Grid columns="4rem 11.25rem .5rem" gap=".5rem">
-            <Cell>
+        <div>
+            <div>
                 <MobileCTAImage />
-            </Cell>
-            <CenteredCell>
+            </div>
+            <div>
                 <div>
                     <Typography tag="p" className="cta-caption">
                         Get Savings on the go!
@@ -179,10 +178,10 @@ export const MobileCTA = ({
                         Download the App
                     </Typography>
                 </div>
-            </CenteredCell>
-            <CenteredCell>
+            </div>
+            <div>
                 <Chevron />
-            </CenteredCell>
-        </Grid>
+            </div>
+        </div>
     </StyledMobileCTAElement>
 );

@@ -7,7 +7,6 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { AutoComplete } from './AutoComplete.component';
 import { Search } from '../Icon';
-import { Grid, Cell } from '../Grid';
 import { Item } from '../List';
 import { Typography } from '../Typography';
 import { colors, RootTheme } from '../theme';
@@ -43,8 +42,8 @@ const StateBasedAutoCompleteStory = () => {
     return (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns={1}>
-                    <Cell width={1}>
+                <div>
+                    <div>
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
@@ -55,8 +54,8 @@ const StateBasedAutoCompleteStory = () => {
                             prefix={<Search color={colors.ash.base} />}
                             dataSource={tempData}
                         />
-                    </Cell>
-                </Grid>
+                    </div>
+                </div>
             </StyledStory>
         </ThemeProvider>
     );
@@ -86,8 +85,8 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
     return (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns={1}>
-                    <Cell width={1}>
+                <div>
+                    <div>
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
@@ -99,8 +98,8 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
                             dataSource={tempData}
                             resultTemplate={CustomResult}
                         />
-                    </Cell>
-                </Grid>
+                    </div>
+                </div>
             </StyledStory>
         </ThemeProvider>
     );
@@ -119,8 +118,8 @@ storiesOf('Components/AutoComplete', module)
     .add('Object Array Results', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns={1}>
-                    <Cell width={1}>
+                <div>
+                    <div>
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
@@ -158,8 +157,8 @@ storiesOf('Components/AutoComplete', module)
                                 { label: 'Item 11', id: 11, someBoolean: true },
                             ]}
                         />
-                    </Cell>
-                </Grid>
+                    </div>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ));

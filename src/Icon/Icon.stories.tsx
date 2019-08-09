@@ -6,7 +6,6 @@ import { color, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
-import { Grid, CenteredCell } from '../Grid';
 import { Typography } from '../Typography';
 import * as Icon from './';
 import { DefaultColor } from './utils';
@@ -32,18 +31,18 @@ storiesOf('Components/Icon', module)
     .add('All Icons', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns={5} minRowHeight="1.5rem" gap="1rem">
+                <div>
                     {Object.keys(Icon).map((iconKey: string) => (
-                        <CenteredCell key={iconKey}>
+                        <div key={iconKey}>
                             <div>
                                 <Typography tag="p" scale={12}>
                                     {iconKey}
                                 </Typography>
                                 {React.createElement(Icon[iconKey])}
                             </div>
-                        </CenteredCell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ))

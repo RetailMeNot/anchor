@@ -4,7 +4,6 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 // COMPONENTS
-import { Grid, Cell } from '../../Grid';
 import { NormalizeCSS } from '../../theme/GlobalStyles';
 
 // Constants
@@ -51,16 +50,10 @@ export const Page: React.FunctionComponent<PageProps> = ({
 }: PageProps): React.ReactElement<PageProps> => (
     <StyledPage className={classnames('anchor-page', className)} {...props}>
         <NormalizeCSS />
-        <Grid
-            columns={1}
-            rows={`minmax(${headerHeight},auto) 1fr minmax(${footerHeight},auto)`}
-            height={'100vh'}
-        >
-            {header && <Cell>{header}</Cell>}
-
-            <Cell>{children}</Cell>
-
-            {footer && <Cell>{footer}</Cell>}
-        </Grid>
+        <div>
+            {header && <div>{header}</div>}
+            <div>{children}</div>
+            {footer && <div>{footer}</div>}
+        </div>
     </StyledPage>
 );
