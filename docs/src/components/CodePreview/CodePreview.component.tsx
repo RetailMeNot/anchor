@@ -48,7 +48,8 @@ import * as Anchor from '../../../../src';
 // THEME
 // import { TableCSS } from '../Layout/Page/Page.component';
 import { colors } from '../../../../src/theme';
-import { BottomArea, MoreInfo } from '../CardExample';
+import { BottomArea, MoreInfo, CardExample } from '../CardExample';
+import { MouseOverMe, MyList } from '../DropDownExample';
 
 // TODO: add CDN Inconsolata font
 
@@ -61,8 +62,14 @@ const StyledErrorElement = styled(LiveError)`
     ${CodePreviewForcedStyles};
 `;
 
-const StyledContainerElement = styled.div`
-    margin: 2rem 0;
+interface StyledContainerElementProps {
+    // Hiding the title will reduce the amount of top padding, allowing for another title to be
+    // placed closer to the code block.
+    hideTitle?: boolean;
+}
+
+const StyledContainerElement = styled.div<StyledContainerElementProps>`
+    margin: ${props => (!props.hideTitle ? '0  0 2rem 0' : '2rem 0')};
     display: block;
 `;
 
@@ -149,9 +156,14 @@ const scope = {
     AutoComplete,
     Collapse,
     CollapseGroup,
-    // Example Components
+
+    // -Example Components-
+    // Card
     BottomArea,
     MoreInfo,
+    // DropDown
+    MouseOverMe,
+    MyList,
 };
 
 /*
@@ -163,6 +175,7 @@ export const CodePreview = ({
     className,
     live = false,
     hideTitle = false,
+    ...props
 }: CodePreviewProps): React.ReactElement<any> => {
     const language = className
         ? className.replace(/language-/, '')
@@ -171,7 +184,7 @@ export const CodePreview = ({
 
     if (live) {
         return (
-            <StyledContainerElement>
+            <StyledContainerElement {...props}>
                 {!hideTitle && (
                     <Typography tag="h6" pb="3" m="0" weight={600}>
                         {title}
