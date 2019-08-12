@@ -9,8 +9,8 @@
         "@xstyled/system": "1.8.4",
         "babel-plugin-styled-components": "^1.10.6",
         "classnames": "^2.2.6",
-        "gatsby": "^2.13.31",
-        "gatsby-image": "^2.0.41",
+        "gatsby": "^2.13.60",
+        "gatsby-image": "^2.2.8",
         "gatsby-mdx": "^0.4.4",
         "gatsby-plugin-google-analytics": "^2.0.19",
         "gatsby-plugin-manifest": "^2.1.1",
@@ -22,15 +22,15 @@
         "gatsby-source-filesystem": "^2.0.33",
         "gatsby-transformer-sharp": "^2.1.19",
         "prism-react-renderer": "^0.1.7",
-        "react": "^16.8.6",
+        "react": "^16.9.0",
         "react-copy-to-clipboard": "^5.0.1",
-        "react-dom": "^16.8.6",
+        "react-dom": "^16.9.0",
         "react-helmet": "^5.2.1",
         "react-live": "^2.0.1",
         "wcag-contrast": "^2.1.1"
     },
     "peerDependencies": {
-        "styled-components": "^4.2.0"
+        "styled-components": "^4.3.2"
     },
     "keywords": [
         "gatsby"
