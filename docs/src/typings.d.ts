@@ -9,7 +9,14 @@ declare module '@reach/component-component' {
 }
 declare module '@retailmenot/anchor' {
   const AutoComplete: any;
+  const Badge: any;
+  const Cart: any;
+  const colors: any;
+  const Collapse: any;
+  const CollapseGroup: any;
+  const DropDown: any;
   const Search: any;
+  const Typography: any;
 }
 
 declare module '@xstyled/styled-components' {
