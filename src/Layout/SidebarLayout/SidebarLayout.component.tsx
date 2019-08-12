@@ -4,8 +4,7 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
 // COMPONENTS
-import { Grid, Cell } from '../../Grid';
-import { CustomAdaptor, StandardBreakpoints } from '../../Grid';
+// import { CustomAdaptor, StandardBreakpoints } from '../../Grid';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
@@ -93,29 +92,27 @@ export const SidebarLayout = ({
             contentWidth={contentWidth}
             contentBackgroundColor={contentBackgroundColor}
         >
-            {sidebarAlign === RIGHT ? (
-                <Grid columns={`1fr ${sidebarWidth}`}>
-                    <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-                        <Cell width={2}>{children}</Cell>
-                    </CustomAdaptor>
-
-                    <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-                        <Cell>{children}</Cell>
-                        <Cell>{sidebar}</Cell>
-                    </CustomAdaptor>
-                </Grid>
-            ) : (
-                <Grid columns={`${sidebarWidth} 1fr `}>
-                    <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>
-                        <Cell width={2}>{children}</Cell>
-                    </CustomAdaptor>
-
-                    <CustomAdaptor minWidth={StandardBreakpoints.md.min}>
-                        <Cell>{sidebar}</Cell>
-                        <Cell>{children}</Cell>
-                    </CustomAdaptor>
-                </Grid>
-            )}
+            {/*{sidebarAlign === RIGHT ? (*/}
+            {/*    <Grid columns={`1fr ${sidebarWidth}`}>*/}
+            {/*        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>*/}
+            {/*            <Cell width={2}>{children}</Cell>*/}
+            {/*        </CustomAdaptor>*/}
+            {/*        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>*/}
+            {/*            <Cell>{children}</Cell>*/}
+            {/*            <Cell>{sidebar}</Cell>*/}
+            {/*        </CustomAdaptor>*/}
+            {/*    </Grid>*/}
+            {/*) : (*/}
+            {/*    <Grid columns={`${sidebarWidth} 1fr `}>*/}
+            {/*        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>*/}
+            {/*            <Cell width={2}>{children}</Cell>*/}
+            {/*        </CustomAdaptor>*/}
+            {/*        <CustomAdaptor minWidth={StandardBreakpoints.md.min}>*/}
+            {/*            <Cell>{sidebar}</Cell>*/}
+            {/*            <Cell>{children}</Cell>*/}
+            {/*        </CustomAdaptor>*/}
+            {/*    </Grid>*/}
+            {/*)}*/}
         </StyledContent>
     </StyledLayout>
 );

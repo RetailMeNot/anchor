@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import Responsive from 'react-responsive';
 import styled from '@xstyled/styled-components';
-import { Cell } from 'styled-css-grid';
 
 interface CustomAdaptorProps {
     children?: any;
@@ -163,7 +162,7 @@ export const XXL = ({ ...props }: FixedAdaptor) => (
     />
 );
 
-export const CenteredCell = styled(Cell)`
+export const CenteredCell = styled('div')`
     display: flex;
     align-items: center;
     justify-content: center;

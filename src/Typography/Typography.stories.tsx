@@ -6,7 +6,6 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from './Typography.component';
-import { Grid, Cell } from '../Grid';
 // README
 import * as README from './README.md';
 // THEME
@@ -44,25 +43,25 @@ storiesOf('Components/Typography', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Typography tag="h1">Scales</Typography>
-                <Grid columns="100%" minRowHeight="5rem" gap="1rem">
+                <div>
                     {scales.map((scale: any) => (
-                        <Cell key={scale}>
+                        <div key={scale}>
                             <Typography color="charcoal" scale={scale}>
                                 Font size is {scale}px | Scale value = {scale}
                             </Typography>
-                        </Cell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
                 <Typography tag="h1">Elements</Typography>
-                <Grid columns="100%" minRowHeight="5rem" gap="1rem">
+                <div>
                     {elements.map((element: any) => (
-                        <Cell key={element}>
+                        <div key={element}>
                             <Typography tag={element}>
                                 Element: {element}
                             </Typography>
-                        </Cell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ));

@@ -11,19 +11,13 @@ import { RootTheme } from '../../../../../src/theme';
 import { Footer } from '../';
 import { EnhancedSideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
-import {
-    Grid,
-    Cell,
-    CenteredCell,
-    Search,
-    Typography,
-} from '../../../../../src';
+import { Row, Col, Search, Typography } from '../../../../../src';
 // ASSETS
 import logo from './anchor-logo.svg';
 // THEME
 import { colors } from '../../../../../src/theme';
 
-const StyledPageElement = styled.div``;
+const StyledPageElement = styled('div')``;
 
 interface PageProps {
     className?: string;
@@ -43,9 +37,9 @@ const InlineCodeStyle = css`
     font-size: 85%;
 `;
 
-const StyledContentBody = styled.div`
+const StyledContentMain = styled('main')`
     box-sizing: border-box;
-    width: 90%;
+    width: 95%;
 
     table {
         width: 100%;
@@ -80,7 +74,7 @@ const StyledContentBody = styled.div`
         }
 
         pre {
-            ${InlineCodeStyle}
+            ${InlineCodeStyle};
         }
     }
 
@@ -91,19 +85,16 @@ const StyledContentBody = styled.div`
         }
     }
 `;
-const StyledContentMain = styled.main`
-    box-sizing: border-box;
-    padding-left: 1rem;
-`;
 
-const StyledLogoContainer = styled.a`
+const StyledLogoContainer = styled('a')`
+    box-sizing: border-box;
     border-right: solid thin ${colors.silver.base};
-    width: 100%;
     margin-left: 1rem;
     display: block;
+    flex: 0 0 auto;
 `;
 
-const StyledHeader = styled.header`
+const StyledHeader = styled('header')`
     z-index: 90; // Set high because of the code editor
     position: sticky;
     top: 0;
@@ -112,13 +103,13 @@ const StyledHeader = styled.header`
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
 `;
 
-const StyledSideNav = styled(Cell)`
+const StyledSideNav = styled('div')`
     box-sizing: border-box;
     background-color: ${colors.silver.light};
     border-right: solid thin ${colors.silver.base};
 `;
 
-const StyledPrimaryNav = styled.nav`
+const StyledPrimaryNav = styled('nav')`
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -136,13 +127,24 @@ const StyledPrimaryNav = styled.nav`
     }
 `;
 
-// These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
-// to the CodePreview component.
-const StyledInlineCode = styled.span`
-    ${InlineCodeStyle}
+const CenteredCol = styled(Col)`
+    display: flex;
+    justify-content: center;
 `;
 
-const StyledLi = styled.li`
+// These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
+// to the CodePreview component.
+const StyledInlineCode = styled('span')`
+    background-color: rgba(27, 31, 35, 0.05);
+    font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    ${InlineCodeStyle};
+`;
+
+const StyledLi = styled('li')`
     padding-bottom: 0.5rem;
 `;
 
@@ -237,26 +239,42 @@ Components.hr = (props: any) => <StyledHr {...props} />;
 // TODO: This only binds to MD tables, not HTML
 Components.table = (props: any) => <StyledTable {...props} />;
 
+const AnchorTheme = {
+    ...RootTheme,
+    awesomegrid: {
+        container: {
+            xs: 'full',
+            sm: 'full',
+            md: 'full',
+            lg: 'full',
+            xl: 'full',
+        },
+        paddingWidth: {
+            xs: 0,
+            sm: 0,
+            md: 0,
+            lg: 0,
+            xl: 0,
+        },
+    },
+};
+
 export const Page = ({
     children,
     className,
     enableFooter,
 }: PageProps): React.ReactElement<any> => (
-    <ThemeProvider theme={RootTheme}>
+    <ThemeProvider theme={AnchorTheme}>
         <StyledPageElement className={classNames(className)}>
             <NormalizeCSS />
             <StyledHeader>
-                <Grid
-                    columns="300px minmax(300px, 1fr) minmax(200px, 1fr)"
-                    columnGap="1rem"
-                    minRowHeight="4.625rem"
-                >
-                    <CenteredCell>
+                <Row>
+                    <CenteredCol lg={2}>
                         <StyledLogoContainer href="/">
                             <img alt="Anchor Logo Horizontal" src={logo} />
                         </StyledLogoContainer>
-                    </CenteredCell>
-                    <CenteredCell>
+                    </CenteredCol>
+                    <CenteredCol lg={6}>
                         <AutoComplete
                             placeholder="Search on Anchor"
                             prefix={<Search />}
@@ -264,8 +282,8 @@ export const Page = ({
                             border={false}
                             dataSource={['1', '1', '1', '1']}
                         />
-                    </CenteredCell>
-                    <Cell>
+                    </CenteredCol>
+                    <CenteredCol lg={4}>
                         <StyledPrimaryNav>
                             <Typography
                                 tag="a"
@@ -284,26 +302,25 @@ export const Page = ({
                                 Github
                             </Typography>
                         </StyledPrimaryNav>
-                    </Cell>
-                </Grid>
+                    </CenteredCol>
+                </Row>
             </StyledHeader>
-            <StyledContentBody>
-                <Grid columns="minmax(180px, 300px) 1fr">
+            <Row>
+                <Col lg={2}>
                     <StyledSideNav>
-                        <div>
-                            <EnhancedSideNavigation />
-                        </div>
+                        <EnhancedSideNavigation />
                     </StyledSideNav>
-                    <Cell>
-                        <StyledContentMain>
-                            <MDXProvider components={Components}>
-                                {children}
-                            </MDXProvider>
-                            {enableFooter && <Footer />}
-                        </StyledContentMain>
-                    </Cell>
-                </Grid>
-            </StyledContentBody>
+                </Col>
+                <Col lg={10}>
+                    <StyledContentMain>
+                        <br />
+                        <MDXProvider components={Components}>
+                            {children}
+                        </MDXProvider>
+                        {enableFooter && <Footer />}
+                    </StyledContentMain>
+                </Col>
+            </Row>
         </StyledPageElement>
     </ThemeProvider>
 );

@@ -1,4 +1,13 @@
-export { Grid, Cell } from './Grid/Grid.component';
+export {
+    Col,
+    Visible,
+    Hidden,
+    Row,
+    Container,
+    ScreenClass,
+    ScreenBadge,
+} from './Grid';
+
 export {
     LegacyDesktop,
     LegacyTablet,

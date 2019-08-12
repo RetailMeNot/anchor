@@ -2,17 +2,13 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // VENDOR
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 // COMPONENT
-import {
-    Page,
-    DEFAULT_HEADER_HEIGHT,
-    DEFAULT_FOOTER_HEIGHT,
-} from './Page.component';
+import { Page } from './Page.component';
 
 describe('Component: Page', () => {
     const subject = <Page />;
-    const wrapper = mount(subject);
+    // const wrapper = mount(subject);
     const component = shallow(subject);
 
     it('should be defined.', () => {
@@ -26,9 +22,6 @@ describe('Component: Page', () => {
 
     it('should render with default settings', () => {
         expect(component.find('.anchor-page').exists()).toBeTruthy();
-        expect(wrapper.find('Grid__Grid').prop('rows')).toEqual(
-            `minmax(${DEFAULT_HEADER_HEIGHT},auto) 1fr minmax(${DEFAULT_FOOTER_HEIGHT},auto)`
-        );
     });
 
     it('should render with passed props.', () => {

@@ -10,7 +10,6 @@ import { Typography } from '..';
 import { colors, RootTheme } from '../theme';
 import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
-import { Grid, Cell, CustomAdaptor, StandardBreakpoints } from '../Grid';
 import { Button } from '../Button';
 // SUBJECT
 import { Hero } from './Hero.component';
@@ -37,11 +36,11 @@ storiesOf('Components/Hero', module)
                     minHeight="9.375rem"
                 >
                     <Title>{text('Title', 'Baratheon')}</Title>
-                    <CustomAdaptor minWidth={StandardBreakpoints.sm.min}>
+                    <div>
                         <Subtitle>
                             {text('Subtitle', 'Ours is the Fury')}
                         </Subtitle>
-                    </CustomAdaptor>
+                    </div>
                 </Hero>
             </StyledStory>
         </ThemeProvider>
@@ -87,29 +86,22 @@ storiesOf('Components/Hero', module)
                         background={color('Hero Background', tealGradient)}
                         minHeight="12.5rem"
                     >
-                        <Grid
-                            gap="0.75rem"
-                            columns={1}
-                            justifyContent="center"
-                            alignContent="center"
-                        >
+                        <div>
                             <StyledImageWrapper>
                                 <SomeImage />
                             </StyledImageWrapper>
                             <Title scale={44}>
                                 {text('Title', 'House Lannister')}
                             </Title>
-                            <CustomAdaptor
-                                minWidth={StandardBreakpoints.sm.min}
-                            >
+                            <div>
                                 <Subtitle>
                                     {text(
                                         'Subtitle',
                                         'A Lannister always pays his debts'
                                     )}
                                 </Subtitle>
-                            </CustomAdaptor>
-                            <Cell>
+                            </div>
+                            <div>
                                 <Button
                                     variant="outline"
                                     reverse
@@ -118,8 +110,8 @@ storiesOf('Components/Hero', module)
                                 >
                                     {text('Button Text', 'Pay Debts Today')}
                                 </Button>
-                            </Cell>
-                        </Grid>
+                            </div>
+                        </div>
                     </Hero>
                 </StyledStory>
             </ThemeProvider>

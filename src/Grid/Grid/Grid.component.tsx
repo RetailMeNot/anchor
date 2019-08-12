@@ -1,58 +1,44 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import classNames from 'classnames';
-import { Grid as StyledGrid, Cell as StyledCell } from 'styled-css-grid';
+import classnames from 'classnames';
+import {
+    Col as ACol,
+    Visible as AVisible,
+    Row as ARow,
+    Container as AContainer,
+    ScreenClass as AScreenClass,
+    ScreenBadge as AScreenBadge,
+    Hidden as AHidden,
+} from 'react-awesome-styled-grid';
 
-type JustifyContent =
-    | 'start'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly'
-    | 'initial'
-    | 'inherit';
-type AlignContent =
-    | 'stretch'
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'space-between'
-    | 'space-around'
-    | 'initial'
-    | 'inherit';
-
-interface GridProps {
-    className?: string;
-    columns?: number | string;
-    gap?: string;
-    columnGap?: string;
-    rowGap?: string;
-    height?: string;
-    minRowHeight?: string;
-    flow?: 'column' | 'row';
-    rows?: number | string;
-    areas?: string[];
-    justifyContent?: JustifyContent;
-    alignContent?: AlignContent;
-    children: any;
-}
-
-interface CellProps {
-    className?: string;
-    width?: number;
-    height?: number;
-    top?: number | string;
-    left?: number | string;
-    middle?: boolean;
-    center?: boolean;
-    area?: string;
-    children: any;
-}
-
-export const Grid = ({ className, ...props }: GridProps) => (
-    <StyledGrid className={classNames('anchor-grid', className)} {...props} />
+export const Col = ({ className, ...props }: any) => (
+    <ACol className={classnames('anchor-col', className)} {...props} />
 );
-export const Cell = ({ className, ...props }: CellProps) => (
-    <StyledCell className={classNames('anchor-cell', className)} {...props} />
+export const Visible = ({ className, ...props }: any) => (
+    <AVisible className={classnames('anchor-visible', className)} {...props} />
+);
+export const Row = ({ className, ...props }: any) => (
+    <ARow className={classnames('anchor-row')} {...props} />
+);
+export const Container = ({ className, ...props }: any) => (
+    <AContainer
+        className={classnames('anchor-container', className)}
+        {...props}
+    />
+);
+export const ScreenClass = ({ className, ...props }: any) => (
+    <AScreenClass
+        className={classnames('anchor-screen-class', className)}
+        {...props}
+    />
+);
+export const ScreenBadge = ({ className, ...props }: any) => (
+    <AScreenBadge
+        className={classnames('anchor-screen-badge', className)}
+        {...props}
+    />
+);
+export const Hidden = ({ className, ...props }: any) => (
+    <AHidden className={classnames('anchor-hidden', className)} {...props} />
 );

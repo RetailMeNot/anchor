@@ -7,7 +7,6 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 // COMPONENTS
 import { Card } from './Card.component';
-import { Grid, CenteredCell, Cell } from '../Grid';
 import { DropDown } from '../DropDown';
 import { Ellipses } from '../Icon';
 import { colors, RootTheme } from '../theme';
@@ -39,8 +38,8 @@ const StyledStory = styled('div')`
 
 /* tslint:disable max-line-length */
 const TwoRowWithActionCardContent = () => (
-    <Grid minRowHeight="60px" columns="250px" flow="column" gap="0">
-        <CenteredCell top={1} left={1}>
+    <div>
+        <div>
             <svg width="180" height="90" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fillRule="evenodd">
                     <path
@@ -55,17 +54,17 @@ const TwoRowWithActionCardContent = () => (
                     />
                 </g>
             </svg>
-        </CenteredCell>
-        <Cell center={true} top={2} left={1}>
+        </div>
+        <div>
             <h2>Card Title</h2>
             <p>Brief summary section for card details.</p>
-        </Cell>
-    </Grid>
+        </div>
+    </div>
 );
 
 const BrandCardContent = ({ title }: { title: string }) => (
-    <Grid columns="165px" flow="column" rows="90px 48px" gap="0">
-        <CenteredCell center={true} top={1} left={1}>
+    <div>
+        <div>
             <svg width="120" height="60" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fillRule="evenodd">
                     <path
@@ -80,39 +79,39 @@ const BrandCardContent = ({ title }: { title: string }) => (
                     />
                 </g>
             </svg>
-        </CenteredCell>
-        <Cell center={true} top={2} left={1}>
+        </div>
+        <div>
             <h3>{title}</h3>
-        </Cell>
-    </Grid>
+        </div>
+    </div>
 );
 
 const WideCardContent = ({ title }: { title: string }) => (
-    <Grid columns="96px minmax(400px, 750px) 190px" flow="column" gap="16px">
-        <CenteredCell center={true} top={1} left={1}>
+    <div>
+        <div>
             <p>$1.00</p>
-        </CenteredCell>
-        <Cell top={1} left={2}>
+        </div>
+        <div>
             <div>
                 <h3>{title}</h3>
                 <p>Description of wide card</p>
             </div>
-        </Cell>
-        <CenteredCell top={1} left={3}>
+        </div>
+        <div>
             <Button>CTA</Button>
-        </CenteredCell>
-    </Grid>
+        </div>
+    </div>
 );
 
 const ActionArea = () => (
     <CardActionArea backgroundColor={colors.silver.light}>
-        <Grid columns={1}>
-            <Cell width={1}>
+        <div>
+            <div>
                 <Button variant="minimal" size="sm">
                     Some Action
                 </Button>
-            </Cell>
-        </Grid>
+            </div>
+        </div>
     </CardActionArea>
 );
 /* tslint:enable */
@@ -132,51 +131,51 @@ storiesOf('Components/Card', module)
     .add('Two Row With Action', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns="repeat(auto-fit, 290px)">
+                <div>
                     {[1, 2, 3, 4].map((index: number) => (
-                        <Cell width={1} key={index}>
+                        <div key={index}>
                             <Card action={CardAction}>
                                 <TwoRowWithActionCardContent />
                             </Card>
-                        </Cell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ))
     .add('Brand Cards', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns="repeat(auto-fit, 200px)">
+                <div>
                     {[1, 2, 3, 4, 5].map((index: number) => (
-                        <Cell key={index}>
+                        <div key={index}>
                             <Card>
                                 <BrandCardContent
                                     title={`Brand Name ${index}`}
                                     key={index}
                                 />
                             </Card>
-                        </Cell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ))
     .add('Wide Cards With ActionArea', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns="minmax(400px, 900px)">
+                <div>
                     {[1, 2, 3, 4, 5].map((index: number) => (
-                        <Cell key={index}>
+                        <div key={index}>
                             <Card actionArea={<ActionArea />}>
                                 <WideCardContent
                                     title={`Wide Card ${index}`}
                                     key={index}
                                 />
                             </Card>
-                        </Cell>
+                        </div>
                     ))}
-                </Grid>
+                </div>
             </StyledStory>
         </ThemeProvider>
     ));

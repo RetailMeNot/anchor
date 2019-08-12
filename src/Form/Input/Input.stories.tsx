@@ -7,7 +7,6 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Input } from './Input.component';
 import { Search, Mobile } from '../../Icon';
-import { Grid, Cell } from '../../Grid';
 import { colors, RootTheme } from '../../theme';
 import { Button } from '../../Button';
 // README
@@ -23,8 +22,8 @@ const InputStories = () => {
     return (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Grid columns="500px">
-                    <Cell>
+                <div>
+                    <div>
                         <Input
                             placeholder="Enter text here"
                             label="Enter text here"
@@ -40,29 +39,29 @@ const InputStories = () => {
                         >
                             Clear text input
                         </Button>
-                    </Cell>
-                    <Cell>
+                    </div>
+                    <div>
                         <Input
                             placeholder="Enter a number here"
                             type="number"
                             suffix={<Search color={colors.ash.dark} />}
                         />
-                    </Cell>
-                    <Cell>
+                    </div>
+                    <div>
                         <Input
                             placeholder="(512) 666-6666"
                             label="Enter a phone number here"
                             prefix={<Mobile color={colors.ash.dark} />}
                             type="tel"
                         />
-                    </Cell>
-                    <Cell>
+                    </div>
+                    <div>
                         <Input
                             prefix={<Search color={colors.ash.dark} />}
                             type="number"
                         />
-                    </Cell>
-                </Grid>
+                    </div>
+                </div>
             </StyledStory>
         </ThemeProvider>
     );

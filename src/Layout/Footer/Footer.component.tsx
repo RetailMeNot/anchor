@@ -2,13 +2,7 @@
 import * as React from 'react';
 // COMPONENTS
 import { MobileCTA } from './MobileCTA/MobileCTA.component';
-import {
-    Cell,
-    Grid,
-    CustomAdaptor,
-    StandardBreakpoints,
-    CenteredCell,
-} from '../../Grid';
+import { CustomAdaptor, StandardBreakpoints } from '../../Grid';
 import { FooterSection } from './FooterSection/FooterSection.component';
 // VENDOR
 import styled from '@xstyled/styled-components';
@@ -22,10 +16,6 @@ const StyledFooterElement = styled('footer')`
     color: text.body;
     font-weight: 500;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
-`;
-
-const CenteredGrid = styled(Grid)`
-    justify-items: center;
 `;
 
 const DesktopContainer = styled('div')`
@@ -227,9 +217,9 @@ const RenderLinks = ({
     items?: ItemsType[];
     columns: number;
 }) => (
-    <CenteredGrid columns={columns} gap="1rem">
+    <div>
         {items.map(({ title, key: sectionKey, children }: any) => (
-            <Cell key={sectionKey} width={1}>
+            <div key={sectionKey}>
                 <FooterSection title={title}>
                     <ul>
                         {children.map(({ key, href, label }: any) => (
@@ -239,9 +229,9 @@ const RenderLinks = ({
                         ))}
                     </ul>
                 </FooterSection>
-            </Cell>
+            </div>
         ))}
-    </CenteredGrid>
+    </div>
 );
 
 const LegalLinks = () => {
@@ -267,43 +257,39 @@ const LegalLinks = () => {
 
 const DesktopFooter = () => (
     <DesktopContainer>
-        <Grid
-            columns="12.5rem 1fr 18.75rem"
-            justifyContent="center"
-            alignContent="center"
-        >
-            <Cell>
+        <div>
+            <div>
                 <FooterLogo />
                 {/* TODO: uncomment once functional */}
                 {/* <SocialIcons /> */}
-            </Cell>
-            <Cell>
+            </div>
+            <div>
                 <RenderLinks columns={4} />
                 <LegalLinks />
-            </Cell>
-            <Cell>
+            </div>
+            <div>
                 <MobileCTA />
-            </Cell>
-        </Grid>
+            </div>
+        </div>
     </DesktopContainer>
 );
 
 const MobileFooter = () => (
     <MobileFooterContainer>
-        <Grid flow="column" columns={1} rowGap="1rem">
-            <Cell top={1} left={1}>
+        <div>
+            <div>
                 <RenderLinks columns={2} />
-            </Cell>
-            <Cell top={2} left={1}>
+            </div>
+            <div>
                 <hr />
-            </Cell>
-            <CenteredCell top={3} left={1}>
+            </div>
+            <div>
                 <FooterLogo />
-            </CenteredCell>
-            <Cell center={true} top={4} left={1}>
+            </div>
+            <div>
                 <LegalLinks />
-            </Cell>
-        </Grid>
+            </div>
+        </div>
     </MobileFooterContainer>
 );
 

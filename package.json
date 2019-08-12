@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "0.0.1-beta.12",
+  "version": "0.0.1-beta.14",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.js",
@@ -55,16 +55,16 @@
     "@types/styled-react-modal": "^1.2.0",
     "@xstyled/styled-components": "^1.5.0",
     "@xstyled/system": "^1.5.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.1"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-typescript": "^7.0.0",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
     "@storybook/addon-a11y": "^5.1.10",
     "@storybook/addon-actions": "^5.1.8",
     "@storybook/addon-info": "^5.1.8",
@@ -131,9 +131,9 @@
     "classnames": "^2.2.6",
     "core-js": "^3.0.0",
     "polished": "^3.2.0",
+    "react-awesome-styled-grid": "^2.2.7",
     "react-responsive": "^6.1.1",
     "rxjs": "^6.5.2",
-    "styled-css-grid": "^1.2.1",
     "styled-react-modal": "^1.2.1"
   },
   "engines": {
