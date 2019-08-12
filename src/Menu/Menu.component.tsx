@@ -15,7 +15,7 @@ interface MenuProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     size?: 'small' | 'large';
     // Color
-    bg?: string;
+    background?: string;
     color?: string;
     // Configuration
     justify?: 'flex-start' | 'flex-end';
@@ -28,9 +28,9 @@ const StyledMenu = styled('nav')<MenuProps>`
   width: 100%;
   min-width: 250px;
 
-  ${({ bg = 'primary.base' }) =>
+  ${({ background = 'primary.base' }) =>
       css({
-          backgroundColor: bg,
+          background: th.color(background),
       })};
   font-size: 0.875rem;
   font-family: ${th('typography.fontFamily')};

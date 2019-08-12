@@ -43,7 +43,8 @@ const StyledDropDown = styled('div')<DropDownProps>`
     /* Position from Reference */
     .down-down-container {
         top: ${(props: any) =>
-            `${get(props, 'forwardedRef.current.clientHeight', 16)}px`}
+            `${get(props, 'forwardedRef.current.clientHeight', 16)}px`};
+    }
 `;
 
 interface DropDownContainerProps {
@@ -61,10 +62,10 @@ const StyledDropDownContainer = styled(DropDownContainer)<
     position: absolute;
     padding: 0.25rem 0;
     z-index: 1;
-    background-color: neutrals.white.base;
+    background-color: ${th.color('neutrals.white.base')};
     box-shadow: 0 0.5rem 0.5rem 0 ${th.color('neutrals.ash.base')};
     border-radius: base;
-    border: thin solid neutrals.silver.dark;
+    border: thin solid ${th.color('neutrals.silver.dark')};
     /* Defined Position */
     top: ${({ position: { top } = {} }) =>
         top ? `${top}px !important` : 'inherit'};
@@ -175,6 +176,7 @@ export class DropDown extends React.Component<DropDownProps> {
 
     render(): React.ReactElement<DropDown> {
         const { children, className, overlay, position, ...props } = this.props;
+
         return (
             <StyledDropDown
                 ref={this.dropDownReference}
@@ -183,7 +185,7 @@ export class DropDown extends React.Component<DropDownProps> {
             >
                 {children}
                 <StyledDropDownContainer
-                    className="down-down-container"
+                    className="anchor-down-down-container"
                     position={position}
                     hidden={this.state.isHidden}
                 >

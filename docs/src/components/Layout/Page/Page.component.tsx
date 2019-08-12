@@ -4,7 +4,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import { AutoComplete } from '@retailmenot/anchor';
-import styled, { ThemeProvider } from '@xstyled/styled-components';
+import styled, { css, ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { RootTheme } from '../../../../../src/theme';
@@ -26,6 +26,20 @@ interface PageProps {
 }
 
 const StyledContentMain = styled('main')`
+
+// Defining this in one location so that it can be used both in the table styles for the pre tag,
+// and for the StyledInlineCode component fed to MDX's custom Components.
+const InlineCodeStyle = css`
+    display: inline;
+    background-color: rgba(27, 31, 35, 0.05);
+    font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
+        monospace;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+`;
+
+const StyledContentBody = styled('div')`
     box-sizing: border-box;
     width: 95%;
 
@@ -46,6 +60,8 @@ const StyledContentMain = styled('main')`
     }
     td {
         padding: 0.75rem 0.5rem;
+        line-height: 1.5rem;
+
         &:first-child {
             font-family: monospace;
             color: ${colors.flashPink.dark};
@@ -55,7 +71,12 @@ const StyledContentMain = styled('main')`
             color: ${colors.cyberMango.dark};
         }
         &:nth-child(4) {
-            text-align: center;
+            text-align: left;
+            font-family: monospace;
+        }
+
+        pre {
+            ${InlineCodeStyle}
         }
     }
 
@@ -122,6 +143,7 @@ const StyledInlineCode = styled('span')`
     border-radius: 3px;
     padding: 0.2em 0.4em;
     font-size: 85%;
+    ${InlineCodeStyle};
 `;
 
 const StyledLi = styled('li')`
