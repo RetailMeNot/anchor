@@ -1,1 +1,138 @@
+import { Link } from 'gatsby';
+import { CardExample } from '../../components/CardExample';
+
+<br />
+
 # Menu
+
+The `Menu` component pulls together links into a single horizontal menu bar with unified styling. It
+is composed of two components, `Menu` itself, and its child elements, `MenuItem`. `MenuItem` is a
+wrapper for the `a` tag, so any valid attribute for that element will be applied.
+
+```tsx live
+    <Menu
+        background={colors.savvyCyan.base}
+        color={colors.white.base}
+        justify="flex-start"
+        size="large"
+    >
+        <MenuItem label="RMN" href="//www.retailmenot.com" type="text/html" />
+        <MenuItem label="GitHub" href="//www.github.com" as="a" target="_blank" />
+        <MenuItem label="Anchor" href="//anchor.retailmenot.design/" active={true} />
+    </Menu>
+```
+
+<br />
+
+## API 's
+
+---
+
+### Menu
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>background</td>
+            <td>
+                Sets the background color of the <pre>Menu</pre>. Any valid css color value can be
+                used (including gradients).
+            </td>
+            <td>
+                String
+            </td>
+            <td>primary.base</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>
+                Sets the text color of the <pre>Menu</pre>. Any valid css color value can be used.
+            </td>
+            <td>String</td>
+            <td>white.base</td>
+        </tr>
+        <tr>
+            <td>justify</td>
+            <td>
+                Using css flexbox, aligns the menu items either to the left (<pre>flex-start</pre>)
+                or right (<pre>flex-end</pre>).
+            </td>
+            <td>'flex-start' | 'flex-end'</td>
+            <td>flex-start</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>
+                Alters the padding around the menu items, as well as their font weight and size.
+            </td>
+            <td>'small' | 'large'</td>
+            <td>large</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### MenuItem
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th width="60%">Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>active</td>
+            <td>
+                This adds the <pre>active</pre> class to the rendered <pre>MenuItem</pre>, and
+                styles it as such. <pre>Menu</pre> nor <pre>MenuItem</pre> determines what is
+                'active', giving the user full control.
+            </td>
+            <td>
+                Boolean
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>as</td>
+            <td>
+                Makes a <pre>MenuItem</pre> act as an element other than the <pre>a</pre> tag. Ex:
+                <pre>div</pre>, <pre>span</pre>, etc. Note that this will affect styling of the
+                <pre>MenuItem</pre>
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>label</td>
+            <td>
+                The text for the generated link.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>
+                Specifies the <a href="http://www.htmlquick.com/reference/mime-types.html" target="_blank">internet media type</a> of
+                the linked document.
+            </td>
+            <td>String</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+<br /><br />
