@@ -4,7 +4,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import { AutoComplete } from '@retailmenot/anchor';
-import styled, { css, ThemeProvider } from '@xstyled/styled-components';
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+import { css } from 'styled-components';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { RootTheme } from '../../../../../src/theme';
@@ -32,9 +33,9 @@ const InlineCodeStyle = css`
     background-color: rgba(27, 31, 35, 0.05);
     font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
         monospace;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     padding: 0.2em 0.4em;
-    font-size: 85%;
+    font-size: 0.85rem;
 `;
 
 const StyledContentMain = styled('main')`
