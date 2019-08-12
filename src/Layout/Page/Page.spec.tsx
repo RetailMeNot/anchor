@@ -4,9 +4,7 @@ import * as renderer from 'react-test-renderer';
 // VENDOR
 import { shallow } from 'enzyme';
 // COMPONENT
-import {
-    Page,
-} from './Page.component';
+import { Page } from './Page.component';
 
 describe('Component: Page', () => {
     const subject = <Page />;

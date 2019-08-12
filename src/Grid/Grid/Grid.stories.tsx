@@ -112,7 +112,7 @@ storiesOf('Components/Grid/Responsive', module)
             <StyledStory>
                 <Container>
                     <ScreenClass
-                        render={resolution => (
+                        render={(resolution: string) => (
                             <Typography>I'm {resolution}</Typography>
                         )}
                     />

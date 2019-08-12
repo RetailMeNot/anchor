@@ -43,7 +43,6 @@ describe('Component: SidebarLayout', () => {
         expect(
             component.find('StyledContent').prop('contentBackgroundColor')
         ).toEqual(TRANSPARENT);
-
     });
 
     it('should render with passed props.', () => {
