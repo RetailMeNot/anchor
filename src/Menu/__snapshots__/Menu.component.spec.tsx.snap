@@ -10,7 +10,7 @@ exports[`Component: Menu should be defined 1`] = `
   display: flex;
   width: 100%;
   min-width: 250px;
-  background-color: primary.base;
+  background: primary.base;
   font-size: 0.875rem;
   border-radius: base;
   -webkit-box-pack: start;

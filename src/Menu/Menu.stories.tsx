@@ -11,6 +11,7 @@ import { ChevronDown } from '../Icon';
 // README
 import * as README from './README.md';
 import { RootTheme } from '../theme';
+import { Typography } from '../Typography';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
@@ -25,7 +26,8 @@ storiesOf('Components/Menu', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <p>Large</p>
+                <Typography tag="p">Large</Typography>
+
                 <Menu>
                     <Item path="/">
                         Categories <ChevronDown color="white" />
@@ -35,8 +37,11 @@ storiesOf('Components/Menu', module)
                     </Item>
                     <Item path="/">More</Item>
                 </Menu>
+
                 <br />
-                <p>Small</p>
+
+                <Typography tag="p">Small</Typography>
+
                 <Menu size="small">
                     <Item path="/">Rx Saver</Item>
                     <Item path="/">Genie</Item>
@@ -44,9 +49,13 @@ storiesOf('Components/Menu', module)
                     <Item path="/">Real Deal</Item>
                     <Item path="/">Get the App</Item>
                 </Menu>
+
                 <br />
-                <p>Small, Custom Color, & Custom Position</p>
-                <Menu size="small" justify="flex-end" bg="#4B2354">
+                <Typography tag="p">
+                    Small, Custom Color, &amp; Custom Position
+                </Typography>
+
+                <Menu size="small" justify="flex-end" background="#4B2354">
                     <Item path="/">Rx Saver</Item>
                     <Item path="/">Genie</Item>
                     <Item path="/">Everyday</Item>
