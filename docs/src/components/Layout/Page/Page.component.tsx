@@ -25,8 +25,6 @@ interface PageProps {
     enableFooter?: boolean;
 }
 
-const StyledContentMain = styled('main')`
-
 // Defining this in one location so that it can be used both in the table styles for the pre tag,
 // and for the StyledInlineCode component fed to MDX's custom Components.
 const InlineCodeStyle = css`
@@ -39,7 +37,7 @@ const InlineCodeStyle = css`
     font-size: 85%;
 `;
 
-const StyledContentBody = styled('div')`
+const StyledContentMain = styled('main')`
     box-sizing: border-box;
     width: 95%;
 
@@ -76,7 +74,7 @@ const StyledContentBody = styled('div')`
         }
 
         pre {
-            ${InlineCodeStyle}
+            ${InlineCodeStyle};
         }
     }
 
