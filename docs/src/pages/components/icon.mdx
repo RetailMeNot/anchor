@@ -1,11 +1,12 @@
 import { IconList, IconCount, IconTextList } from '../../components/IconList';
 import { Collapse } from '@retailmenot/anchor';
+import { FormatTypes } from '../../components/Utils';
 
 # Icon
 
 All of the icons are `svg`'s, and can be colored and scaled as needed. **Anchor** does not group all
 of the icons together, rather they are individually imported in order to keep the bundle size small.
-All icons are rendered individually by their name, i.e. **`ArrowBack`** or **`Expand`**, as shown below.
+All icons are rendered individually by their name, i.e. `ArrowBack` or `Expand`, as shown below.
 
 #### Available Icons
 
@@ -20,7 +21,7 @@ There are currently <IconCount /> icons available. Note that you can try any of 
 ```tsx live
 <section>
     <div>
-        <Star color="red" />
+        <Star color={colors.savvyCyan.base} />
     </div>
 
     <div>
@@ -31,12 +32,41 @@ There are currently <IconCount /> icons available. Note that you can try any of 
 
 <br />
 
-### Props
+---
 
-* `color`: Defaults to **`currentColor`**, a SVG color property that will allow the icon to inherit its parent color.
-However, if a value is passed it will take whatever hex/rgb/rgba value provided.
-* `scale`: Defaults to **`md`**, which translates to 16px by 16px. The full range of options are **`'xs', 'sm', 'md', 'lg', 'xl', 'xxl'`**
-* `className`: An additional class name. All icons have the **`anchor-icon`** class name in addition to a more specific class.
-Ex: **`class="anchor-icon arrow-back"`**.
+## API
 
-<br /><br />
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>color</td>
+            <td>
+                The color of the icon. Accepts any valid CSS color proprty. It's default value,
+                <pre>currentColor</pre>, is an SVG property that will allow the icon to inherit its
+                parent color.
+            </td>
+            <td>
+                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
+            </td>
+            <td>currentColor</td>
+        </tr>
+        <tr>
+            <td>scale</td>
+            <td>
+                The scale/size of the icon. Enumerated values are in <pre>px</pre> and are as
+                follows: <pre>xs: 8</pre>, <pre>sm: 14</pre>, <pre>md: 16</pre>, <pre>lg: 24</pre>,
+                <pre>xl: 32</pre>, <pre>xxl: 48</pre>.
+            </td>
+            <td><FormatTypes types={['xs', 'sm', 'md', 'lg', 'xl', 'xxl']} /></td>
+            <td>md</td>
+        </tr>
+    </tbody>
+</table>

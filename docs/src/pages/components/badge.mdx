@@ -1,9 +1,10 @@
 import { Link } from 'gatsby';
 import { BadgeWithParentExample } from '../../components/BadgeWithParentExample';
+import { FormatTypes, ColorBlurb } from '../../components/Utils';
 
 # Badge
 
-The Badge component displays a dot or a circle with a count. It is normally used to indicate pending items (items in cart, unread messages, etc.)
+The `Badge` component displays a dot or a circle with a count. It is normally used to indicate pending items (items in cart, unread messages, etc.)
 
 ## Usage
 
@@ -131,6 +132,8 @@ export const BadgeWithParentExample = () => {
 
 <br />
 
+---
+
 ## API
 
 <table>
@@ -145,87 +148,82 @@ export const BadgeWithParentExample = () => {
     <tbody>
         <tr>
             <td>backgroundColor</td>
-            <td>The background color of the Badge</td>
-            <td>string | hex code | rgb</td>
-            <td>'error'</td>
+            <td><ColorBlurb background label="Badge" /></td>
+            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+            <td>error</td>
         </tr>
         <tr>
             <td>borderColor</td>
-            <td>The color of the border of the Badge</td>
-            <td>string | hex code | rgb</td>
-            <td>'error'</td>
+            <td>The color of the border of the <pre>Badge</pre></td>
+            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+            <td>error</td>
         </tr>
         <tr>
             <td>borderColorHover</td>
-            <td>The color of the border of the Badge on hover</td>
-            <td>string | hex code | rgb</td>
-            <td>'error'</td>
+            <td>The color of the border of the <pre>Badge</pre> on hover</td>
+            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+            <td>error</td>
         </tr>
         <tr>
             <td>children</td>
-            <td>Any elements inside the Badge tags. This is what we use to pass Icon components in.</td>
+            <td>Any elements inside the <pre>Badge</pre> tags. This is what we use to pass <Link to="/components/icon">Icon</Link> components
+                in.</td>
             <td>Icon</td>
             <td>-</td>
         </tr>
         <tr>
-            <td>className</td>
-            <td>Additional className to be added to the Badge element</td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
             <td>count</td>
-            <td>The number to be displayed inside the badge</td>
+            <td>The number to be displayed inside the <pre>Badge</pre></td>
             <td>number</td>
             <td>0</td>
         </tr>
         <tr>
             <td>isParentHovered</td>
-            <td>Whether the parent element of the Badge is hovered</td>
+            <td>Whether the parent element of the <pre>Badge</pre> is hovered</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr>
             <td>overflowCount</td>
-            <td>The maximum count to show in the Badge</td>
+            <td>The maximum count to show in the <pre>Badge</pre></td>
             <td>number</td>
             <td>9</td>
         </tr>
         <tr>
             <td>offsetBottom</td>
-            <td>The absolute positioning in REM from the bottom</td>
+            <td>The absolute positioning in <pre>rem</pre> from the bottom</td>
             <td>number</td>
             <td>-</td>
         </tr>
         <tr>
             <td>offsetLeft</td>
-            <td>The absolute positioning in REM from the left</td>
+            <td>The absolute positioning in <pre>rem</pre> from the left</td>
             <td>number</td>
             <td>-</td>
         </tr>
         <tr>
             <td>showZero</td>
-            <td>Whether to show the badge if the `count` is 0</td>
+            <td>Whether to show the badge if the <pre>count</pre> is <pre>0</pre>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr>
             <td>size</td>
-            <td>The size of the badge</td>
-            <td>'dot' | 'small' | 'large'</td>
-            <td>'dot'</td>
+            <td>The size of the <pre>Badge</pre>.</td>
+            <td><FormatTypes types={['dot', 'small', 'large']} /></td>
+            <td>dot</td>
         </tr>
         <tr>
             <td>standalone</td>
-            <td>Whether the Badge will be displayed alone</td>
+            <td>Whether the <pre>Badge</pre> will be displayed alone.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr>
             <td>textColor</td>
-            <td>The color of the text of the `count`</td>
-            <td>string | hex code | rgb</td>
-            <td>'neutrals.white.base'</td>
+            <td><ColorBlurb defaultTheme label="count" /></td>
+            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+            <td><Link to="/theme">white.base</Link></td>
         </tr>
     </tbody>
 </table>

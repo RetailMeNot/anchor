@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import { DropDownExample } from './../../components/DropDownExample';
+import { FormatTypes } from '../../components/Utils';
 
 <br />
 
@@ -99,13 +100,13 @@ together with `DropDown`!
 
 ---
 
-### API
+## API
 
 <table>
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -114,7 +115,7 @@ together with `DropDown`!
         <tr>
             <td>overlay</td>
             <td>
-                The overlay is the content that will be displayed when the child node is hovered
+                The content that will be displayed when the child node is hovered
                 over. This can be a single React element, or an array of React elements.
             </td>
             <td>
@@ -125,15 +126,12 @@ together with `DropDown`!
         <tr>
             <td>position</td>
             <td>
-                This positions the overlay relative to the top-left corner of the DropDown
+                This positions the overlay relative to the top-left corner of the <pre>DropDown</pre>
                 component. Parameters are passed via object allowing multiple parameters to be sent,
-                i.e. &#123; top: 10, left:20 &#125;. Values are treated as pixels.
+                i.e. <pre>&#123; top: 10, left: 20 &#125;</pre>. Values are treated as <pre>px</pre>.
             </td>
-            <td>Object, 'top' | 'right' | 'bottom' | 'left'</td>
+            <td>object, <FormatTypes types={['top', 'right', 'bottom', 'left']} /></td>
             <td>&#123; top: [outer height of DropDown], left: 0 &#125;</td>
         </tr>
     </tbody>
 </table>
-
-<br /><br />
-

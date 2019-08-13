@@ -1,12 +1,13 @@
 import { Link } from 'gatsby';
 import { CardExample } from '../../components/CardExample';
+import { FormatTypes, ColorBlurb } from '../../components/Utils';
 
 <br />
 
 # Menu
 
 The `Menu` component pulls together links into a single horizontal menu bar with unified styling. It
-is composed of two components, `Menu` itself, and its child elements, `MenuItem`. `MenuItem` is a
+is composed of two components: `Menu` and `MenuItem`. `MenuItem` is a
 wrapper for the `a` tag, so any valid attribute for that element will be applied.
 
 ```tsx live
@@ -34,7 +35,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -43,29 +44,28 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
         <tr>
             <td>background</td>
             <td>
-                Sets the background color of the <pre>Menu</pre>. Any valid css color value can be
-                used (including gradients).
+                <ColorBlurb background gradient label="Menu" />
             </td>
             <td>
-                String
+                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td>primary.base</td>
+            <td><Link to="/theme">primary.base</Link></td>
         </tr>
         <tr>
             <td>color</td>
             <td>
-                Sets the text color of the <pre>Menu</pre>. Any valid css color value can be used.
+                <ColorBlurb label="Menu" />
             </td>
-            <td>String</td>
-            <td>white.base</td>
+            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+            <td><Link to="/theme">white.base</Link></td>
         </tr>
         <tr>
             <td>justify</td>
             <td>
-                Using css flexbox, aligns the menu items either to the left (<pre>flex-start</pre>)
+                Using CSS flexbox, aligns the menu items either to the left (<pre>flex-start</pre>)
                 or right (<pre>flex-end</pre>).
             </td>
-            <td>'flex-start' | 'flex-end'</td>
+            <td><FormatTypes types={['flex-start', 'flex-end']} /></td>
             <td>flex-start</td>
         </tr>
         <tr>
@@ -73,7 +73,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
             <td>
                 Alters the padding around the menu items, as well as their font weight and size.
             </td>
-            <td>'small' | 'large'</td>
+            <td><FormatTypes types={['small', 'large']} /></td>
             <td>large</td>
         </tr>
     </tbody>
@@ -87,7 +87,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -101,7 +101,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
                 'active', giving the user full control.
             </td>
             <td>
-                Boolean
+                boolean
             </td>
             <td>-</td>
         </tr>
@@ -112,7 +112,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
                 <pre>div</pre>, <pre>span</pre>, etc. Note that this will affect styling of the
                 <pre>MenuItem</pre>
             </td>
-            <td>String</td>
+            <td>string</td>
             <td>-</td>
         </tr>
         <tr>
@@ -120,7 +120,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
             <td>
                 The text for the generated link.
             </td>
-            <td>String</td>
+            <td>string</td>
             <td>-</td>
         </tr>
         <tr>
@@ -129,10 +129,8 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
                 Specifies the <a href="http://www.htmlquick.com/reference/mime-types.html" target="_blank">internet media type</a> of
                 the linked document.
             </td>
-            <td>String</td>
+            <td>string</td>
             <td>-</td>
         </tr>
     </tbody>
 </table>
-
-<br /><br />
