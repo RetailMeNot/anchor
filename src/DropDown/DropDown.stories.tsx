@@ -6,8 +6,9 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { DropDown } from './DropDown.component';
-import { Menu, Item } from '../Menu';
 import { List, Item as ListItem } from '../List';
+import { Typography } from '../Typography';
+import { Container, Row, Col } from '../Grid';
 // README
 import * as README from './README.md';
 import { RootTheme } from '../theme';
@@ -17,13 +18,28 @@ const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
+const listItemArray = [
+    { key: 1, label: 'List Item 1' },
+    { key: 2, label: 'List Item 2' },
+    { key: 3, label: 'List Item 3' },
+    { key: 4, label: 'List Item 4' },
+    { key: 5, label: 'List Item 5' },
+];
+
 const MockList = () => (
     <List>
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 1</ListItem>
+        {listItemArray.map(({ key, label }: any) => (
+            <ListItem
+                key={key}
+                onClick={() => {
+                    /* tslint:disable no-console */
+                    console.log(`${label} has been clicked`);
+                    /* tslint:enable no-console */
+                }}
+            >
+                {label}
+            </ListItem>
+        ))}
     </List>
 );
 
@@ -36,28 +52,67 @@ storiesOf('Components/DropDown', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <p>DropDown 1</p>
-                <DropDown
-                    overlay={<MockList />}
-                    position={{ top: 35, left: 50 }}
-                >
-                    <a>
-                        DropDown Link <br /> big
-                    </a>
-                </DropDown>
-                <p>DropDown 2</p>
-                <DropDown overlay={<MockList />}>
-                    <a>DropDown Link</a>
-                </DropDown>
-                <p>Menu</p>
-                <Menu>
-                    <DropDown overlay={<MockList />}>
-                        <Item path="/">Categories</Item>
-                    </DropDown>
-                    <DropDown overlay={<MockList />}>
-                        <Item path="/">Stores</Item>
-                    </DropDown>
-                </Menu>
+                <Container>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">
+                                    DropDown Default
+                                </Typography>
+                                <DropDown overlay={<MockList />}>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                {/* deeply nested item */}
+                                                <a>DropDown Link</a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">DropDown Right</Typography>
+                                <DropDown
+                                    overlay={<MockList />}
+                                    position="right"
+                                >
+                                    <a>DropDown Link Right</a>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">DropDown Left</Typography>
+                                <DropDown
+                                    overlay={<MockList />}
+                                    position="left"
+                                >
+                                    <a>DropDown Link Left</a>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">DropDown Top</Typography>
+                                <DropDown
+                                    overlay={<MockList />}
+                                    position="top"
+                                    trigger="click"
+                                >
+                                    <a>DropDown Link Top</a>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </StyledStory>
         </ThemeProvider>
     ));
