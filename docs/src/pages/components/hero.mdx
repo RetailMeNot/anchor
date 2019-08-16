@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { FormatTypes, ColorBlurb } from '../../components/Utils';
 
 # Hero
 
@@ -19,8 +20,13 @@ Depending on how your environment is set up, you could directly access these sub
 in your jsx as shown below. This example uses the `colors` export from **Anchor** which is the basis for <Link to="/theme">themes</Link>,
 as well as the <Link to="/components/button/">`Button`</Link> component.
 
+<br />
+
 ```tsx live
-    <Hero background={colors.grapePurchase.base} minHeight="12.5rem">
+    <Hero
+        background={colors.grapePurchase.base}
+        minHeight="12.5rem"
+    >
         <Hero.Title weight="bolder">TITLE!</Hero.Title>
 
         <Hero.Subtitle scale="16">SUBTITLE!</Hero.Subtitle>
@@ -49,7 +55,7 @@ as well as the <Link to="/components/button/">`Button`</Link> component.
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -58,42 +64,41 @@ as well as the <Link to="/components/button/">`Button`</Link> component.
         <tr>
             <td>align</td>
             <td>
-                The alignment of content within the Hero.
+                The alignment of content within the <pre>Hero</pre>.
             </td>
             <td>
-                'center' | 'left' | 'right' | 'inherit' | 'justify'
+                <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />
             </td>
             <td>center</td>
         </tr>
         <tr>
             <td>background</td>
             <td>
-                Sets the background color of the Hero. Any valid css color value
-                (including gradients) can be used.
+                <ColorBlurb background gradient label="Hero" />
             </td>
             <td>
-                String
+                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
             <td>transparent</td>
         </tr>
         <tr>
             <td>color</td>
             <td>
-                Sets the font color of the Hero. It uses Anchor's <Link to="/theme">theme</Link> colors
-                by default, but any valid css color value can be used.
+                <ColorBlurb defaultTheme label="Hero" />
             </td>
             <td>
-                String
+                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td>white.base</td>
+            <td><Link to="/theme">white.base</Link></td>
         </tr>
         <tr>
             <td>minHeight</td>
             <td>
-                The minimum height that the Hero should be rendered at.
+                The minimum height that the Hero should be rendered at. This accepts any valid CSS
+                unit of measurement (<pre>px</pre>, <pre>%</pre>, <pre>rem</pre>, etc).
             </td>
             <td>
-                String
+                string
             </td>
             <td>7.5rem</td>
         </tr>
@@ -105,14 +110,14 @@ as well as the <Link to="/components/button/">`Button`</Link> component.
 ### Title
 
 `Title` is as a wrapper of the `Typography` component.
-Editable props are `tag`  and `weight`. Refer to `Typography`'s <Link to="/components/typography">documentation</Link> for
+Editable props are `tag`  and `weight`. Refer to <Link to="/components/typography">`Typography`</Link> for
 more information.
 
 <table>
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -121,8 +126,9 @@ more information.
         <tr>
             <td>scale</td>
             <td>
-                Note that the default tag that is used, 'h1', will prevent scale from working. Any
-                Typography 'tag' using a heading has this limitation (h1, h2, h3, h4, h5, h6).
+                Note that the default tag that is used, <pre>h1</pre>, will prevent scale from working. Any
+                <pre>Typography</pre> <pre>tag</pre> using a heading has this limitation
+                (<pre>h1</pre>, <pre>h2</pre>, <pre>h3</pre>, <pre>h4</pre>, <pre>h5</pre>, <pre>h6</pre>).
             </td>
             <td>
                 -
@@ -163,7 +169,7 @@ Refer to `Typography`'s <Link to="/components/typography">documentation</Link> f
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -191,5 +197,3 @@ Refer to `Typography`'s <Link to="/components/typography">documentation</Link> f
         </tr>
     </tbody>
 </table>
-
-<br /><br />
