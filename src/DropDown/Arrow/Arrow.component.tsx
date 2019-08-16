@@ -11,6 +11,7 @@ const ArrowBase = css`
     height: 0;
 `;
 
+// TODO: add shadow rotate(45deg)
 const CaretHeight = '0.4rem';
 const CaretIndent = '0.75rem';
 const CaretSize = '0.5rem';

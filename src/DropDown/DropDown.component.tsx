@@ -85,6 +85,7 @@ const StyledDropDownContainer = styled(DropDownContainer)<
     min-width: 10rem;
     position: absolute;
     padding: 0.25rem auto;
+    // TODO: make bg and padding composable; remember that the arrow will need to inherit these props
     z-index: 1;
     background-color: ${th.color('neutrals.white.base')};
     box-shadow: 0 0 0.5rem 0 ${th.color('neutrals.ash.base')};
