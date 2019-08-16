@@ -2,6 +2,8 @@
 
 The `Avatar` component renders a generic avatar graphic, or a stylized label.
 
+<br />
+
 ```tsx live
     <section>
         <div>
@@ -18,13 +20,15 @@ The `Avatar` component renders a generic avatar graphic, or a stylized label.
 
 <br />
 
-### API
+---
+
+## API
 
 <table>
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -32,11 +36,10 @@ The `Avatar` component renders a generic avatar graphic, or a stylized label.
     <tbody>
         <tr>
             <td>label</td>
-            <td>Displays the string rather than the avatar graphic. Although any length string can
-                be provided, only the first two characters will be displayed (such as initials) and
-                also capitalized.
+            <td>Replace the default avatar graphic with the first two characters of the provided
+                string.  Letters will be automatically capitalized.
             </td>
-            <td>String</td>
+            <td>string</td>
             <td>-</td>
         </tr>
     </tbody>

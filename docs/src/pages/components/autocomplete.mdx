@@ -1,3 +1,6 @@
+import { Link } from 'gatsby';
+import { FormatTypes, ColorBlurb } from '../../components/Utils';
+
 # AutoComplete
 
 Enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
@@ -115,7 +118,12 @@ a key-name to use that as the display text of the result). As well, the presence
         <tr>
             <td>dataSource</td>
             <td>A collection used to render the results that should conform to the List component API</td>
-            <td>Array&lt;string&gt; | Array&lt;&#123; name: string; &#125;&gt;</td>
+            <td>
+                <FormatTypes
+                    types={['Array&lt;string&gt;', 'Array&lt;&#123; name: string; &#125;&gt;']}
+                    noInterpret
+                />
+            </td>
             <td>-</td>
         </tr>
         <tr>
@@ -127,7 +135,7 @@ a key-name to use that as the display text of the result). As well, the presence
         <tr>
             <td>size</td>
             <td>The size of the AutoComplete</td>
-            <td>'sm' | 'md' | 'lg'</td>
+            <td><FormatTypes types={['sm', 'md', 'lg']} /></td>
             <td>-</td>
         </tr>
         <tr>
@@ -151,26 +159,26 @@ a key-name to use that as the display text of the result). As well, the presence
         <tr>
             <td>border</td>
             <td>Enable/Disable the border of the AutoComplete.</td>
-            <td>Boolean</td>
+            <td>boolean</td>
             <td>true</td>
         </tr>
         <tr>
         	<td>shadow</td>
         	<td>Enable/Disable the shadow of the AutoComplete.</td>
-        	<td>Boolean</td>
+        	<td>boolean</td>
         	<td>true</td>
         </tr>
         <tr>
         	<td>background</td>
-        	<td>Set the background of the autocomplete.</td>
-        	<td>string | rgb | rgba</td>
+        	<td><ColorBlurb label="AutoComplete" /></td>
+        	<td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
         	<td>white</td>
         </tr>
         <tr>
         	<td>color</td>
-        	<td>Set the font color of the autocomplete.</td>
-        	<td>string | rgb | rgba</td>
-        	<td>Charcoal Light</td>
+        	<td><ColorBlurb defaultTheme label="AutoComplete" /></td>
+        	<td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
+        	<td><Link to="/theme">charcoal.light</Link></td>
         </tr>
         <tr>
         	<td>resultTemplate</td>
@@ -222,3 +230,5 @@ a key-name to use that as the display text of the result). As well, the presence
         </tr>
     </tbody>
 </table>
+
+<br /><br />

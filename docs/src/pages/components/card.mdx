@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import { CardExample } from '../../components/CardExample';
+import { FormatTypes } from '../../components/Utils';
 
 # Card
 
@@ -34,17 +35,17 @@ const StyledMoreInfo = styled(InfoOutline)`
         cursor:pointer;
 
         &:after {
-            content:'I am an Action';
-            display:block;
-            padding:1rem;
+            content: 'I am an Action';
+            display: block;
+            padding: 1rem;
             background-color: ${colors.success.dark};
             color: ${colors.white.base};
-            position:absolute;
-            right:1.75rem;
-            white-space:nowrap;
-            top:0;
-            z-index:1000;
-            border-radius:0.25rem;
+            position: absolute;
+            right: 1.75rem;
+            white-space: nowrap;
+            top: 0;
+            z-index: 1000;
+            border-radius: 0.25rem;
         }
     }
 `;
@@ -69,8 +70,8 @@ import { colors, Typography } from '@retailmenot/anchor';
 
 const StyledBottomArea = styled('div')`
     background-color: ${colors.silver.base};
-    color:${colors.charcoal.base};
-    padding:1rem;
+    color: ${colors.charcoal.base};
+    padding: 1rem;
 `;
 
 export const BottomArea = () => (
@@ -107,13 +108,13 @@ Now that we've created these separate components, lets organize them into a `Car
 
 ---
 
-### API
+## API
 
 <table>
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -124,10 +125,10 @@ Now that we've created these separate components, lets organize them into a `Car
             <td>
                 Although this prop will accept any value, it makes the most sense to pass a
                 component. It will absolutely position this component in the upper-right corner of
-                the card and is unaffected by the gutter prop.
+                the <pre>Card</pre> and is unaffected by the <pre>gutter</pre> prop.
             </td>
             <td>
-                Any
+                any
             </td>
             <td>-</td>
         </tr>
@@ -135,21 +136,19 @@ Now that we've created these separate components, lets organize them into a `Car
             <td>actionArea</td>
             <td>
                 Although this prop will accept any value, it makes the most sense to pass a
-                component. It will be placed flush against the bottom of the card and will be
-                unaffected by the gutter prop.
+                component. It will be placed flush against the bottom of the <pre>Card</pre> and will
+                be unaffected by the <pre>gutter</pre> prop.
             </td>
-            <td>Any</td>
+            <td>any</td>
             <td>-</td>
         </tr>
         <tr>
             <td>gutter</td>
             <td>
-                The padding of the card's content.
+                The padding of the <pre>Card</pre>'s content.
             </td>
-            <td>'none' | 'small' | 'medium' | 'large'</td>
+            <td><FormatTypes types={['none', 'small', 'medium', 'large']} /></td>
             <td>medium</td>
         </tr>
     </tbody>
 </table>
-
-<br /><br />

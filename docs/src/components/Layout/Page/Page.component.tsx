@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/tag';
 import { AutoComplete } from '@retailmenot/anchor';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { css } from 'styled-components';
+import Helmet from 'react-helmet';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { RootTheme } from '../../../../../src/theme';
@@ -41,6 +42,9 @@ const InlineCodeStyle = css`
 const StyledContentMain = styled('main')`
     box-sizing: border-box;
     width: 95%;
+    max-width: 80rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 
     table {
         width: 100%;
@@ -50,10 +54,11 @@ const StyledContentMain = styled('main')`
     th {
         text-align: left;
         padding: 0.75rem 0.5rem;
-        border-bottom: solid thin ${colors.silver.dark};
+        border-bottom: solid thin ${colors.ash.light};
+        background-color: ${colors.white.base};
     }
     tr {
-        &:nth-child(even) {
+        &:nth-child(odd) {
             background-color: ${colors.silver.light};
         }
     }
@@ -64,14 +69,20 @@ const StyledContentMain = styled('main')`
         &:first-child {
             font-family: monospace;
             color: ${colors.flashPink.dark};
+            width: 10%;
+        }
+        &:nth-child(2) {
+            width: 60%;
         }
         &:nth-child(3) {
             font-family: monospace;
             color: ${colors.cyberMango.dark};
+            width: 20%;
         }
         &:nth-child(4) {
             text-align: left;
             font-family: monospace;
+            width: 10%;
         }
 
         pre {
@@ -136,12 +147,6 @@ const CenteredCol = styled(Col)`
 // These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
 // to the CodePreview component.
 const StyledInlineCode = styled('span')`
-    background-color: rgba(27, 31, 35, 0.05);
-    font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
-        monospace;
-    border-radius: 3px;
-    padding: 0.2em 0.4em;
-    font-size: 85%;
     ${InlineCodeStyle};
 `;
 
@@ -151,6 +156,8 @@ const StyledLi = styled('li')`
 
 const StyledHr = styled('hr')`
     margin: 2rem 0;
+    color: ${colors.ash.base};
+    border-style: solid;
 `;
 
 const StyledTable = styled.table``;
@@ -267,7 +274,10 @@ export const Page = ({
 }: PageProps): React.ReactElement<any> => (
     <ThemeProvider theme={AnchorTheme}>
         <StyledPageElement className={classNames(className)}>
+            <Helmet htmlAttributes={{ lang: 'en' }} />
+
             <NormalizeCSS />
+
             <StyledHeader>
                 <Row>
                     <CenteredCol lg={2}>

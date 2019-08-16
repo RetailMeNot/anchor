@@ -1,13 +1,16 @@
 import { Link } from 'gatsby';
+import { FormatTypes } from '../../components/Utils';
 
 # Collapse
 
-The Collapse component allows a user to click on a button and toggle the rendering of its child.
+The `Collapse` component allows a user to click on a button and toggle the rendering of its child.
 This site uses this component and the `CollapseGroup` component for its side navigation. Note that it
 does not simply show/hide content, it re-renders it.
 
-When using the **Live Code Editor**, you can use any <Link to="/components/icon">Icon component</Link>
+When using the **Live Code Editor**, you can use any <Link to="/components/icon">Icon</Link> component
 available in **Anchor** for the `openedIcon` and `closedIcon` props.
+
+<br />
 
 ```tsx live
 <Collapse
@@ -26,6 +29,8 @@ available in **Anchor** for the `openedIcon` and `closedIcon` props.
 ## CollapseGroup
 
 The **`CollapseGroup`** component combines multiple **`Collapse`** components together, allowing a single component to apply props to all children, unifying their appearance, and adding the ability to have accordion functionality.
+
+<br />
 
 ```tsx live
 <CollapseGroup
@@ -75,19 +80,21 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
         <tr>
             <td>closedText</td>
             <td>The text that appears on the button as a CTA when the component is closed.</td>
-            <td>String</td>
+            <td>string</td>
             <td>Open</td>
         </tr>
         <tr>
             <td>hasBottomBorder</td>
             <td>Shows/hides the bottom border.</td>
-            <td>Boolean</td>
+            <td>boolean</td>
             <td>true</td>
         </tr>
         <tr>
             <td>isOpen</td>
-            <td>Determines whether the Collapse component is open or not. Changing the value of this prop will programatticaly open/close the component, thusly not requiring a click event.</td>
-            <td>Boolean</td>
+            <td>Determines whether the <pre>Collapse</pre> component is open or not. Changing the
+                value of this prop will programatticaly open/close the component, thusly not
+                requiring a click event.</td>
+            <td>boolean</td>
             <td>false</td>
         </tr>
         <tr>
@@ -99,15 +106,15 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
         <tr>
             <td>openedText</td>
             <td>The text that appears on the button as a CTA when the component is opened.</td>
-            <td>String</td>
+            <td>string</td>
             <td>Close</td>
         </tr>
         <tr>
             <td>variant</td>
-            <td>Several variants of collapse. Comfortable has considerable spacing, compact has
-                much tighter spacing, and none removes all styling.
+            <td>Several variants of collapse. <pre>comfortable</pre> has considerable spacing,
+                <pre>compact</pre> has much tighter spacing, and <pre>none</pre> removes all styling.
             </td>
-            <td>'comfortable' | 'compact' | 'none'</td>
+            <td><FormatTypes types={['comfortable', 'compact', 'none']} /></td>
             <td>comfortable</td>
         </tr>
     </tbody>
@@ -121,7 +128,7 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
     <thead>
         <tr>
             <th>Property</th>
-            <th width="60%">Description</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
         </tr>
@@ -129,40 +136,39 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
     <tbody>
         <tr>
             <td>accordion</td>
-            <td>Enables accordion functionality, where only one Collapse component can be open at a time.</td>
-            <td>Boolean</td>
+            <td>Enables accordion functionality, where only one <pre>Collapse</pre> component can be
+                open at a time.</td>
+            <td>boolean</td>
             <td>false</td>
         </tr>
         <tr>
             <td>closedIcon</td>
-            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
-                its functionality is as noted above for Collapse.
+            <td>Using this prop will apply the setting to all child <pre>Collapse</pre> components.
+                Otherwise its functionality is as noted above for <pre>Collapse</pre>.
             </td>
             <td>ReactElement</td>
             <td>-</td>
         </tr>
         <tr>
             <td>openedIcon</td>
-            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
-                its functionality is as noted above for Collapse.</td>
+            <td>Using this prop will apply the setting to all child <pre>Collapse</pre> components.
+                Otherwise its functionality is as noted above for <pre>Collapse</pre>.</td>
             <td>ReactElement</td>
             <td>-</td>
         </tr>
         <tr>
             <td>openIndex</td>
-            <td>If accordion is set to true, this determines which Collapse component will start in
-                the open state based on index.</td>
-            <td>Number</td>
+            <td>If <pre>accordion</pre> is set to true, this determines which <pre>Collapse</pre>
+                component will start in the open state based on index.</td>
+            <td>number</td>
             <td>0</td>
         </tr>
         <tr>
             <td>variant</td>
             <td>Using this prop will apply the setting to all child Collapse components. Otherwise
-                its functionality is as noted above for Collapse.</td>
-            <td>'comfortable' | 'compact' | 'none'</td>
+                its functionality is as noted above for <pre>Collapse</pre>.</td>
+            <td><FormatTypes types={['comfortable', 'compact', 'none']} /></td>
             <td>-</td>
         </tr>
     </tbody>
 </table>
-
-<br /><br />
