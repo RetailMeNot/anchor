@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: DropDown Component: Arrow should render in the DOM 1`] = `
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -0.4rem;
+  left: 0.75rem;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid white;
+}
+
+.c0 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -0.4rem;
+  left: 0.75rem;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid white;
+}
+
+.c2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0.75rem;
+  right: -0.4rem;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid white;
+}
+
+.c3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0.75rem;
+  left: -0.4rem;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.5rem solid white;
+}
+
+<div>
+  <div
+    className="c0"
+  />
+  <br />
+  <div
+    className="c1"
+  />
+  <br />
+  <div
+    className="c2"
+  />
+  <br />
+  <div
+    className="c3"
+  />
+</div>
+`;
