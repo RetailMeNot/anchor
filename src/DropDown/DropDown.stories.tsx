@@ -4,6 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
+import { text, select } from '@storybook/addon-knobs';
 // COMPONENTS
 import { DropDown } from './DropDown.component';
 import { List, Item as ListItem } from '../List';
@@ -108,6 +109,38 @@ storiesOf('Components/DropDown', module)
                                     trigger="click"
                                 >
                                     <a>DropDown Link Top</a>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </StyledStory>
+        </ThemeProvider>
+    ))
+    .add('Knobs Demo', () => (
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Container>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">DropDown</Typography>
+                                <DropDown
+                                    overlay={<MockList />}
+                                    position={select<
+                                        'top' | 'bottom' | 'right' | 'left'
+                                    >(
+                                        'Dropdown Position',
+                                        ['top', 'bottom', 'right', 'left'],
+                                        'top'
+                                    )}
+                                    trigger={select<'click' | 'hover'>(
+                                        'Dropdown Trigger',
+                                        ['click', 'hover'],
+                                        'hover'
+                                    )}
+                                >
+                                    <a>{text('Dropdown Label', 'Dropdown')}</a>
                                 </DropDown>
                             </div>
                         </Col>

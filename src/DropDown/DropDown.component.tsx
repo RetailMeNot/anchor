@@ -6,8 +6,11 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
 import { filter } from 'rxjs/operators';
+// COMPONENTS
+import { get } from '../utils/get/get';
+import { renderArrow } from './Arrow/Arrow.component';
 
-type Position = 'top' | 'bottom' | 'left' | 'right';
+export type Position = 'top' | 'bottom' | 'left' | 'right';
 
 interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
@@ -115,74 +118,6 @@ const StyledDropDownContainer = styled(DropDownContainer)<
     }};
 `;
 
-const ArrowBase = css`
-    position: absolute;
-    width: 0;
-    height: 0;
-`;
-
-const CaretHeight = '0.4rem';
-const CaretIndent = '0.75rem';
-const CaretSize = '0.5rem';
-
-const ArrowUp = styled('div')`
-    ${ArrowBase};
-    top: -${CaretHeight};
-    left: ${CaretIndent};
-    border-left: ${CaretSize} solid transparent;
-    border-right: ${CaretSize} solid transparent;
-    border-bottom: ${CaretSize} solid white;
-`;
-
-const ArrowDown = styled('div')`
-    ${ArrowBase};
-    bottom: -${CaretHeight};
-    left: ${CaretIndent};
-    border-left: ${CaretSize} solid transparent;
-    border-right: ${CaretSize} solid transparent;
-    border-top: ${CaretSize} solid white;
-`;
-const ArrowRight = styled('div')`
-    ${ArrowBase};
-    top: ${CaretIndent};
-    right: -${CaretHeight};
-    border-top: ${CaretSize} solid transparent;
-    border-bottom: ${CaretSize} solid transparent;
-    border-left: ${CaretSize} solid white;
-`;
-
-const ArrowLeft = styled('div')`
-    ${ArrowBase};
-    top: ${CaretIndent};
-    left: -${CaretHeight};
-    border-top: ${CaretSize} solid transparent;
-    border-bottom: ${CaretSize} solid transparent;
-    border-right: ${CaretSize} solid white;
-`;
-
-const renderArrow = (position: Position, isShown?: boolean) => {
-    let arrowElement;
-    if (isShown) {
-        switch (position) {
-            case 'bottom':
-                arrowElement = <ArrowUp />;
-                break;
-            case 'top':
-                arrowElement = <ArrowDown />;
-                break;
-            case 'right':
-                arrowElement = <ArrowLeft />;
-                break;
-            case 'left':
-                arrowElement = <ArrowRight />;
-                break;
-            default:
-                break;
-        }
-    }
-    return arrowElement;
-};
-
 export class DropDown extends React.Component<DropDownProps> {
     static defaultProps = {
         trigger: 'hover',
@@ -205,10 +140,11 @@ export class DropDown extends React.Component<DropDownProps> {
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
-        const { clientHeight: height, clientWidth: width } = dropDown;
+        const height = get(dropDown, 'clientHeight', 0);
+        const width = get(dropDown, 'clientWidth', 0);
         this.setState({ height, width });
         // Dropdown Instance
-        this.rootElement = dropDown.getRootNode();
+        this.rootElement = dropDown ? dropDown.getRootNode() : null;
         this.domClick$ = merge(
             fromEvent(this.rootElement, 'click'),
             fromEvent(this.rootElement, 'touchstart')
