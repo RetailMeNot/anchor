@@ -10,7 +10,8 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     // Configuration
     label?: string;
-    src?: string | React.ReactElement<any> | React.FunctionComponent;
+    src?: string;
+    alt?: string;
 }
 
 /* tslint:disable max-line-length */
@@ -59,18 +60,25 @@ const InnerBorder = styled('div')`
     align-items: center;
     border-radius: circular;
     overflow: hidden;
+
+    img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 `;
 
 export const Avatar = ({
     className,
     src,
     label,
+    alt,
     ...props
 }: AvatarProps): React.ReactElement<AvatarProps> => (
     <StyledAvatar className={classNames('anchor-avatar', className)} {...props}>
-        <InnerBorder className="avatar-container">
-            {/* TODO: handle image src */}
-            {label ? label.substr(0, 2).toUpperCase() : <DefaultAvatar />}
+        <InnerBorder className="anchor-avatar-container">
+            {label && label.substr(0, 2).toUpperCase()}
+            {src && <img src={src} alt={alt ? alt : 'Anchor Avatar'} />}
+            {!label && !src && <DefaultAvatar />}
         </InnerBorder>
     </StyledAvatar>
 );
