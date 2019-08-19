@@ -31,8 +31,8 @@ describe('Component: Avatar', () => {
     it('should render the first two characters of any label passed in', () => {
         const testLabel = 'TT';
         const subjectWithInitials = mount(<Avatar label={testLabel} />);
-        expect(subjectWithInitials.find('div.avatar-container').text()).toBe(
-            testLabel
-        );
+        expect(
+            subjectWithInitials.find('div.anchor-avatar-container').text()
+        ).toBe(testLabel);
     });
 });
