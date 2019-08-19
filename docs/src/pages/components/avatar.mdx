@@ -18,12 +18,16 @@ The `Avatar` component renders a generic avatar graphic, or a stylized label.
 
     <div>
         <Typography tag="h3">Avatar with an image...</Typography>
-        <Avatar src="https://avatars3.githubusercontent.com/u/24923730?s=460&v=4" />
+        <Avatar alt="User Avatar" src="https://avatars3.githubusercontent.com/u/24923730?s=460&v=4" />
     </div>
 </section>
 ```
 
 <br />
+
+The props `src` and `label` are not intended to be used simultaneously. 
+
+<br  />
 
 ---
 
@@ -52,6 +56,12 @@ The `Avatar` component renders a generic avatar graphic, or a stylized label.
         <tr>
             <td>src</td>
             <td>Replace the default avatar graphic with an image.</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>Replace the default avatar alt tag when a `src` is provided.</td>
             <td>string</td>
             <td>-</td>
         </tr>
