@@ -64,7 +64,7 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
   className="anchor-avatar c0"
 >
   <div
-    className="avatar-container c1"
+    className="anchor-avatar-container c1"
   >
     <svg
       height="36"

@@ -33,7 +33,12 @@ storiesOf('Components/Avatar', module)
                 <Typography tag="h1">Avatar With Initials</Typography>
                 <Avatar label={text('Avatar Initials', 'CC')} />
                 <Typography tag="h1">Avatar With Picture</Typography>
-                <Avatar src="https://avatars3.githubusercontent.com/u/24923730?s=460&v=4" />
+                <Avatar
+                    src={text(
+                        'Avatar Url',
+                        'https://avatars3.githubusercontent.com/u/24923730?s=460&v=4'
+                    )}
+                />
             </StyledStory>
         </ThemeProvider>
     ));

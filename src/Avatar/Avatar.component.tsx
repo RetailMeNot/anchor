@@ -11,6 +11,7 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     // Configuration
     label?: string;
     src?: string;
+    alt?: string;
 }
 
 /* tslint:disable max-line-length */
@@ -70,13 +71,13 @@ export const Avatar = ({
     className,
     src,
     label,
+    alt,
     ...props
 }: AvatarProps): React.ReactElement<AvatarProps> => (
     <StyledAvatar className={classNames('anchor-avatar', className)} {...props}>
-        <InnerBorder className="avatar-container">
-            {/* TODO: handle image src */}
+        <InnerBorder className="anchor-avatar-container">
             {label && label.substr(0, 2).toUpperCase()}
-            {src && <img src={src} alt="Anchor Avatar" />}
+            {src && <img src={src} alt={alt ? alt : 'Anchor Avatar'} />}
             {!label && !src && <DefaultAvatar />}
         </InnerBorder>
     </StyledAvatar>
