@@ -1,64 +1,302 @@
+import { Link } from 'gatsby';
+import { FormatTypes } from '../../components/Utils';
+
 # Button
 
-#### Usage
+Buttons are used to complete an action or make a choice. Some examples include Add, Save, Delete,
+Sign up. As a general rule, each page should have one primary button. Any remaining calls-to-action
+are represented as outline buttons (e.g. Cancel).
 
-Buttons are used to complete an action or make a choice. Some examples include Add, Save, Delete, Sign up. As a general
-rule, each page should have one primary button. Any remaining calls-to-action are represented as outline buttons
-(e.g. Cancel).
+*NOTE! The example in the live code editor below is using the default `variant`, `filled`.
+Editing this field can cause the live code editor to crash, so examples of those variants are provided
+below. Also included is an example of an icon button*
 
-#### Filled Button
+<br />
+
 ```tsx live
 <Component initialState={{ size: 'md' }}>
   {({ state, setState }) =>
     <div>
       <Button
+        block={false}
+        circular={false}
+        colorTheme={colors.savvyCyan}
+        disabled={false}
+        flip={false}
+        forceActive={false}
+        forceFocus={false}
+        forceHover={false}
+        minWidth="20rem"
+        onClick={() => setState(({ size }) => ({
+          size: size === 'sm' ? 'md' : 'sm'
+        }))}
+        outline={true}
+        prefix={<AddEvent />}
+        reverse={false}
+        size={state.size}
+        suffix={false}
+      >
+        Button Text
+      </Button>
+    </div>
+  }
+</Component>
+```
+
+<br />
+
+### Variants
+
+###### Filled Button
+```tsx live hideTitle
+<Component initialState={{ size: 'md' }}>
+  {({ state, setState }) =>
+    <div>
+      <Button
+        onClick={() => setState(({ size }) => ({
+          size: size === 'md' ? 'xs' : 'md'
+        }))}
+        size={state.size}
         variant="filled"
-        size={state.size}
-        onClick={() => setState(({ size }) => ({
-          size: size === 'sm' ? 'md' : 'sm'
-        }))}
       >
-        Button Text
+        I'm size '{state.size}'!
       </Button>
     </div>
   }
 </Component>
 ```
 
-#### Outline Button
-```tsx live
+<br />
+
+###### Outline Button
+```tsx live hideTitle
 <Component initialState={{ size: 'md' }}>
   {({ state, setState }) =>
     <div>
       <Button
+        onClick={() => setState(({ size }) => ({
+          size: size === 'md' ? 'lg' : 'md'
+        }))}
+        size={state.size}
         variant="outline"
-        size={state.size}
-        onClick={() => setState(({ size }) => ({
-          size: size === 'sm' ? 'md' : 'sm'
-        }))}
       >
-        Button Text
+        I'm size '{state.size}'!
       </Button>
     </div>
   }
 </Component>
 ```
 
-#### Minimal Button
-```tsx live
+<br />
+
+###### Minimal Button
+```tsx live hideTitle
 <Component initialState={{ size: 'md' }}>
   {({ state, setState }) =>
     <div>
       <Button
-        variant="minimal"
-        size={state.size}
         onClick={() => setState(({ size }) => ({
-          size: size === 'sm' ? 'md' : 'sm'
+          size: size === 'md' ? 'sm' : 'md'
         }))}
+        size={state.size}
+        variant="minimal"
       >
-        Button Text
+        I'm size '{state.size}'!
       </Button>
     </div>
   }
 </Component>
 ```
+
+<br />
+
+###### Icon Button
+```tsx live hideTitle
+<Component initialState={{ size: 'md' }}>
+  {({ state, setState }) =>
+    <div>
+      <Button
+        circular={true}
+        onClick={() => setState(({ size }) => ({
+          size: size === 'sm' ? 'md' : 'sm'
+        }))}
+        prefix={<Heart />}
+        size={state.size}
+      />
+    </div>
+  }
+</Component>
+```
+
+<br />
+
+---
+
+## API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>block</td>
+            <td>If set to true, the <pre>Button</pre> will fill up 100% of available horiztonal
+              space.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>circular</td>
+            <td>If set to true, the <pre>Button</pre>'s corners will be curved to a pill-like shape.
+              If <pre>iconOnly</pre> is set to <pre>true</pre>, the button will be a circle.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>colorTheme</td>
+            <td>Uses the specified color from <strong>Anchor</strong>'s theme to specify colors to be
+              used for the <pre>Button</pre>.
+            </td>
+            <td><Link to="/theme">colors</Link></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td>
+              If set to true, disables the <pre>Button</pre> preventing the user from interacting
+              with it.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>flip</td>
+            <td>
+              If set to true, makes the upper-right corner of the <pre>Button</pre> look as if it is
+              flipped over. Note that this does not work correctly if <pre>circular</pre> is set to
+              <pre>true</pre>.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>forceActive</td>
+            <td>
+              If set to true, forces the <pre>Button</pre> to its active state. This is generally
+              only used for debugging.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>forceFocus</td>
+            <td>
+              If set to true, forces the <pre>Button</pre> to appear in its state as if it had
+              focus. This is generally only used for debugging.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>forceHover</td>
+            <td>
+              If set to true, forces the <pre>Button</pre> to appear in its state as if it was being
+              hovered. This is generally only used for debugging.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>minWidth</td>
+            <td>
+              Sets a minimum width for the <pre>Button</pre>. The value can be in any valid css unit,
+              <pre>px</pre>, <pre>rem</pre>, <pre>%</pre>, etc. This prop will be ignored if
+              <pre>block</pre> is set to true, or if the <pre>Button</pre> has no text and has a
+              <pre>prefix</pre> or <pre>suffix</pre> specified.
+            </td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onClick</td>
+            <td>
+              The function to execute when the button is clicked.
+            </td>
+            <td>() => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>outline</td>
+            <td>
+              If set to true, outlines the <pre>Button</pre>. Note that depending on the
+              <pre>variant</pre> and <pre>colorTheme</pre> settings this may not appear to do
+              anything.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>prefix</td>
+            <td>
+              Although this can be of any value it makes the most sense to pass a component, such
+              as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
+              place the passed element in front of the <pre>Button</pre>'s text. Setting this prop
+              will set the icon to be used for an icon-only button when no text is specified.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>revealed</td>
+            <td>
+              -
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>reverse</td>
+            <td>
+              Uses the reverse color scheme noted in <pre>colorTheme</pre>.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>The different sizes of the <pre>Button</pre>.</td>
+            <td><FormatTypes types={['lg', 'md', 'sm', 'xs']} /></td>
+            <td>md</td>
+        </tr>
+        <tr>
+            <td>suffix</td>
+            <td>
+              Although this can be of any value it makes the most sense to pass a component, such
+              as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
+              place the passed element after the <pre>Button</pre>'s text. Setting this prop
+              will set the icon to be used for an icon-only button when no text is specified.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>variant</td>
+            <td>
+              The <pre>Button</pre> has several variants, each of which applies new colors based on
+              the selected <pre>colorTheme</pre>. <pre>filled</pre> will fill in the background,
+              <pre>outline</pre> will only outline the button, and <pre>minimal</pre> will neither
+              have a background or outline.
+            </td>
+            <td><FormatTypes types={[ 'filled', 'outline', 'minimal']} /></td>
+            <td>filled</td>
+        </tr>
+    </tbody>
+</table>
