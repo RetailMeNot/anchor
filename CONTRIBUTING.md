@@ -105,10 +105,10 @@ brew install watchman
 
 ## Folder Structure
 
-New components should be placed in the `src/components` directory. Each new component should (at a minimum) have the following files:
+New components should be placed in the `src` directory. Each new component should (at a minimum) have the following files:
 
 ```
-	components/
+	src/
 		<COMPONENT_NAME>/
 			<COMPONENT_NAME>.tsx
 			<COMPONENT_NAME>.spec.tsx
