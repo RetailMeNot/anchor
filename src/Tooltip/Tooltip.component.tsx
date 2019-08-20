@@ -173,11 +173,8 @@ const TooltipElement = styled('div')<TooltipElementProps>`
         visibility: visible;
     }
 
-    ${({ wrap = true }) =>
-        wrap ? css({ whiteSpace: 'normal' }) : css({ whiteSpace: 'nowrap' })};
-
+    ${({ wrap = true }) => css({ whiteSpace: wrap ? 'normal' : 'nowrap' })};
     ${({ maxWidth = 'auto' }) => css({ width: maxWidth })};
-
     ${({ position, height, width, toolTipHeight, toolTipWidth }) =>
         positionVariants(position, height, width, toolTipHeight, toolTipWidth)};
 `;

@@ -28,7 +28,7 @@ storiesOf('Components/Tooltip', module)
         <StyledStory>
             <ThemeProvider theme={RootTheme}>
                 <>
-                    <Typography tag="h1">Top Right</Typography>
+                    <Typography tag="h1">Tool Tip Demo</Typography>
                     <Tooltip
                         wrap={boolean('Tooltip wrap', false)}
                         position={select<
