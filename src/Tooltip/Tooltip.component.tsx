@@ -79,13 +79,6 @@ const positionVariants = (
                     toolTipWidth / 2}px, -${toolTipHeight +
                     tooltipMargin}px, 0)`,
             });
-        case 'topEnd':
-            return css({
-                right: 0,
-                top: 0,
-                transform: `translate3d(0, -${toolTipHeight +
-                    tooltipMargin}px, 0)`,
-            });
         case 'rightStart':
             return css({
                 left: 0,
@@ -146,11 +139,13 @@ const positionVariants = (
                 transform: `translate3d(-${toolTipWidth +
                     tooltipMargin}px, 0, 0)`,
             });
+        case 'topEnd':
         default:
             return css({
                 right: 0,
                 top: 0,
-                transform: `translate3d(0, -${height + tooltipMargin}px, 0)`,
+                transform: `translate3d(0, -${toolTipHeight +
+                    tooltipMargin}px, 0)`,
             });
     }
 };
