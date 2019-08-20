@@ -1,0 +1,69 @@
+// REACT
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
+// VENDOR
+import { ThemeProvider } from '@xstyled/styled-components';
+// COMPONENT
+import { RootTheme } from '../theme';
+import { Tooltip, Position } from './Tooltip.component';
+// ENZYME
+import { mount, shallow } from 'enzyme';
+
+const subject = (
+    <ThemeProvider theme={RootTheme}>
+        <Tooltip content="This is a tooltip">
+            <button>Hover</button>
+        </Tooltip>
+    </ThemeProvider>
+);
+
+describe('Component: Tooltip', () => {
+    it('should be defined and match its snapshot.', () => {
+        const component = shallow(subject);
+        const tree = renderer.create(subject).toJSON();
+
+        expect(subject).toBeDefined();
+        expect(component).toBeDefined();
+        expect(tree).toMatchSnapshot();
+    });
+    it('should show a tooltip on hover.', () => {
+        const wrapper = mount(subject);
+        expect(wrapper.find(Tooltip).state().hidden).toBeTruthy();
+        wrapper.find(Tooltip).simulate('mouseenter');
+        wrapper.update();
+        expect(wrapper.find(Tooltip).state().hidden).toBeFalsy();
+        wrapper.find(Tooltip).simulate('mouseleave');
+        wrapper.update();
+        expect(wrapper.find(Tooltip).state().hidden).toBeTruthy();
+    });
+    it('should render all the different tooltip positions.', () => {
+        [
+            'topStart',
+            'top',
+            'topEnd',
+            'rightStart',
+            'right',
+            'rightEnd',
+            'bottomEnd',
+            'bottom',
+            'bottomStart',
+            'leftEnd',
+            'left',
+            'leftStart',
+        ].map((option: Position) => {
+            const subjectInstance = (
+                <ThemeProvider theme={RootTheme}>
+                    <Tooltip content="This is a tooltip" position={option}>
+                        <button>Hover</button>
+                    </Tooltip>
+                </ThemeProvider>
+            );
+            const component = shallow(subjectInstance);
+            const tree = renderer.create(subjectInstance).toJSON();
+
+            expect(subjectInstance).toBeDefined();
+            expect(component).toBeDefined();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});

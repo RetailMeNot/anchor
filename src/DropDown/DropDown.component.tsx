@@ -126,18 +126,15 @@ export class DropDown extends React.Component<DropDownProps> {
     // State
     state: DropDownState = { showDropdown: false };
     // Instance Reference
-    private readonly dropDownReference: React.RefObject<DropDown>;
+    private readonly dropDownReference: React.RefObject<
+        DropDown
+    > = React.createRef();
     private rootElement: any;
     // Observables
     private mouseOver$: Subscription;
     private mouseOut$: Subscription;
     private escapeKey$: Subscription;
     private domClick$: Subscription;
-
-    constructor(props: DropDownProps) {
-        super(props);
-        this.dropDownReference = React.createRef();
-    }
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
