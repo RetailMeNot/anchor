@@ -24,7 +24,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled, { css } from 'styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import {
     LiveEditor,
     LiveProvider,
@@ -42,6 +42,7 @@ import {
     Collapse,
     CollapseGroup,
     Typography,
+    Input,
 } from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
@@ -68,8 +69,8 @@ interface StyledContainerElementProps {
     hideTitle?: boolean;
 }
 
-const StyledContainerElement = styled.div<StyledContainerElementProps>`
-    margin: ${props => (!props.hideTitle ? '0  0 2rem 0' : '2rem 0')};
+const StyledContainerElement = styled('div')<StyledContainerElementProps>`
+    margin: ${props => (props.hideTitle ? '0 0 3rem 0' : '2.3rem 0 3rem')};
     display: block;
 `;
 
@@ -156,6 +157,7 @@ const scope = {
     AutoComplete,
     Collapse,
     CollapseGroup,
+    Input,
 
     // -Example Components-
     // Card
@@ -184,7 +186,7 @@ export const CodePreview = ({
 
     if (live) {
         return (
-            <StyledContainerElement {...props}>
+            <StyledContainerElement hideTitle={hideTitle}>
                 {!hideTitle && (
                     <Typography tag="h6" pb="3" m="0" weight={600}>
                         {title}
@@ -203,7 +205,7 @@ export const CodePreview = ({
     // This is code taken from MDX's own documentation on rendering a code block
     // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
     return (
-        <StyledContainerElement>
+        <StyledContainerElement hideTitle={hideTitle}>
             {!hideTitle && (
                 <Typography tag="h6" pb="0" m="0" weight={600}>
                     {title}

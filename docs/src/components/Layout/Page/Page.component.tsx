@@ -157,7 +157,9 @@ const StyledLi = styled('li')`
 const StyledHr = styled('hr')`
     margin: 2rem 0;
     color: ${colors.ash.base};
-    border-style: solid;
+    background-color: ${colors.ash.base};
+    border-style: none;
+    height: 1px;
 `;
 
 const StyledTable = styled.table``;
