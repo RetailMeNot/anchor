@@ -16,6 +16,7 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -25,6 +26,11 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
   -webkit-transform: translate3d(0,-8px,0);
   -ms-transform: translate3d(0,-8px,0);
   transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -39,11 +45,6 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -67,6 +68,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -76,6 +78,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   -webkit-transform: translate3d(0,-8px,0);
   -ms-transform: translate3d(0,-8px,0);
   transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -90,11 +97,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -118,6 +120,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -127,6 +130,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
   -webkit-transform: translate3d(0px,-8px,0);
   -ms-transform: translate3d(0px,-8px,0);
   transform: translate3d(0px,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -141,11 +149,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -169,6 +172,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -178,6 +182,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
   -webkit-transform: translate3d(0,-8px,0);
   -ms-transform: translate3d(0,-8px,0);
   transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -192,11 +201,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -220,6 +224,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -229,6 +234,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
   -webkit-transform: translate3d(8px,0,0);
   -ms-transform: translate3d(8px,0,0);
   transform: translate3d(8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -243,11 +253,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -271,6 +276,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -280,6 +286,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
   -webkit-transform: translate3d(8px,0px,0);
   -ms-transform: translate3d(8px,0px,0);
   transform: translate3d(8px,0px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -294,11 +305,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -322,6 +328,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -331,6 +338,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
   -webkit-transform: translate3d(8px,0,0);
   -ms-transform: translate3d(8px,0,0);
   transform: translate3d(8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -345,11 +357,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -373,6 +380,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -382,6 +390,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
   -webkit-transform: translate3d(0,8px,0);
   -ms-transform: translate3d(0,8px,0);
   transform: translate3d(0,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -396,11 +409,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -424,6 +432,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -433,6 +442,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
   -webkit-transform: translate3d(0px,8px,0);
   -ms-transform: translate3d(0px,8px,0);
   transform: translate3d(0px,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -447,11 +461,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -475,6 +484,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -484,6 +494,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
   -webkit-transform: translate3d(0,8px,0);
   -ms-transform: translate3d(0,8px,0);
   transform: translate3d(0,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -498,11 +513,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -526,6 +536,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -535,6 +546,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   -webkit-transform: translate3d(-8px,0,0);
   -ms-transform: translate3d(-8px,0,0);
   transform: translate3d(-8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -549,11 +565,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -577,6 +588,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -586,6 +598,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   -webkit-transform: translate3d(-8px,0px,0);
   -ms-transform: translate3d(-8px,0px,0);
   transform: translate3d(-8px,0px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -600,11 +617,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip
@@ -628,6 +640,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   font-size: 0.8rem;
   padding: 0.5rem;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 250ms ease-in-out;
   transition: opacity 250ms ease-in-out;
   white-space: normal;
@@ -637,6 +650,11 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   -webkit-transform: translate3d(-8px,0,0);
   -ms-transform: translate3d(-8px,0,0);
   transform: translate3d(-8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 <div
@@ -651,11 +669,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   <div
     className="anchor-tooltip-element c1"
     height={0}
-    style={
-      Object {
-        "opacity": 0,
-      }
-    }
     width={0}
   >
     This is a tooltip

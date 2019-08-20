@@ -164,7 +164,13 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     font-size: 0.8rem;
     padding: 0.5rem;
     opacity: 0;
+    visibility: hidden;
     transition: opacity 250ms ease-in-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
 
     ${({ wrap = true }) =>
         wrap ? css({ whiteSpace: 'normal' }) : css({ whiteSpace: 'nowrap' })};
@@ -235,7 +241,9 @@ export class Tooltip extends React.Component<
             >
                 {children}
                 <TooltipElement
-                    className="anchor-tooltip-element"
+                    className={classNames('anchor-tooltip-element', {
+                        active: !this.state.hidden,
+                    })}
                     ref={this.tooltipRef}
                     position={position || 'topEnd'}
                     height={height}
@@ -247,7 +255,6 @@ export class Tooltip extends React.Component<
                     background={background}
                     color={color}
                     maxWidth={maxWidth}
-                    style={{ opacity: this.state.hidden ? 0 : 1 }}
                 />
             </ToolTipContainer>
         );
