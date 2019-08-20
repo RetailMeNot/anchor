@@ -63,6 +63,7 @@ storiesOf('Components/Tooltip', module)
                             'topEnd'
                         )}
                         content={text('Tooltip Text', 'Text')}
+                        maxWidth={text('Tooltip width', 'auto')}
                     >
                         <Button size="lg">Hover over me</Button>
                     </Tooltip>

@@ -20,11 +20,11 @@ export type Position =
     | 'leftStart';
 
 interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+    content: string;
     position?: Position;
-    width?: string;
+    maxWidth?: string;
     background?: string;
     color?: string;
-    content?: any;
     wrap?: boolean;
 }
 
@@ -50,6 +50,7 @@ interface TooltipElementProps {
     wrap?: boolean;
     background?: string;
     color?: string;
+    maxWidth?: string;
 }
 
 const tooltipMargin = 8;
@@ -166,7 +167,9 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     transition: opacity 250ms ease-in-out;
 
     ${({ wrap = true }) =>
-        wrap ? css({ whiteSpace: 'normal' }) : css({ whiteSpace: 'nowrap' })}
+        wrap ? css({ whiteSpace: 'normal' }) : css({ whiteSpace: 'nowrap' })};
+
+    ${({ maxWidth = 'auto' }) => css({ width: maxWidth })};
 
     ${({ position, height, width, toolTipHeight, toolTipWidth }) =>
         positionVariants(position, height, width, toolTipHeight, toolTipWidth)};
@@ -193,6 +196,7 @@ export class Tooltip extends React.Component<
     componentDidMount(): void {
         const { current: toolTipContainer } = this.tooltipContainerRef;
         const { current: toolTip } = this.tooltipRef;
+        // TODO: instead of setting state, what about using the render fxn?
         if (toolTipContainer) {
             this.setState({
                 height: toolTipContainer.clientHeight,
@@ -216,19 +220,22 @@ export class Tooltip extends React.Component<
             wrap,
             background,
             color,
+            maxWidth,
             ...props
         } = this.props;
         const { height, width, toolTipHeight, toolTipWidth } = this.state;
         return (
             <ToolTipContainer
+                content={content}
                 onMouseEnter={() => this.setState({ hidden: false })}
                 onMouseLeave={() => this.setState({ hidden: true })}
                 ref={this.tooltipContainerRef}
-                className={classNames('anchor-badge', className)}
+                className={classNames('anchor-tooltip', className)}
                 {...props}
             >
                 {children}
                 <TooltipElement
+                    className="anchor-tooltip-element"
                     ref={this.tooltipRef}
                     position={position || 'topEnd'}
                     height={height}
@@ -239,6 +246,7 @@ export class Tooltip extends React.Component<
                     wrap={wrap}
                     background={background}
                     color={color}
+                    maxWidth={maxWidth}
                     style={{ opacity: this.state.hidden ? 0 : 1 }}
                 />
             </ToolTipContainer>
