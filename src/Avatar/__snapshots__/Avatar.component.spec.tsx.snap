@@ -53,11 +53,18 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
   overflow: hidden;
 }
 
+.c1 img {
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
 <div
   className="anchor-avatar c0"
 >
   <div
-    className="avatar-container c1"
+    className="anchor-avatar-container c1"
   >
     <svg
       height="36"
