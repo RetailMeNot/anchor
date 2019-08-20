@@ -1,1 +1,340 @@
+import { Link } from 'gatsby';
+import { FormatTypes } from '../../components/Utils';
+
 # List
+
+The `List` component organizes a number of other **Anchor** components (`ListDivider`, `ListItem` &
+`ListTitle`) into a vertical list. This list can then be utilized by other components,
+such as <Link to="/components/card/">`Card`</Link> or <Link to="/components/dropdown/">`DropDown`</Link>.
+
+<br />
+
+###### Basic List Example (Live Editor)
+```tsx live hideTitle
+<List>
+    <ListTitle>I am a Title</ListTitle>
+    <ListItem active={true}>Item 1</ListItem>
+    <ListItem>Item 2</ListItem>
+    <ListDivider />
+    <ListItem>Item 3</ListItem>
+</List>
+```
+
+<br />
+
+Alternatively, it is possible to pass an array via the `items` prop to the `List` component and let
+it generate the requested components. This has the advantage of allowing dynamic updating of `List`
+elements.
+
+*NOTE! The Live Code Editor does not correctly apply colors to the example below, but it is
+syntactically correct.*
+
+<br />
+
+###### Dynamic List Example (Live Editor)
+```tsx live hideTitle
+<Component initialState={{items: [
+    {
+        label: 'I am a Title',
+        value: {
+            listItemType: 'title',
+            id: 'unique-id-1'
+        },
+    },
+    {
+        label: 'Item 1',
+        value: {
+            listItemType: 'item',
+            id: 'unique-id-2'
+        },
+    },
+    {
+        label: 'Item 2',
+        value: {
+            // The default for listItemType is 'item'
+            id: 'unique-id-3'
+        },
+    },
+    {
+        // Divider's don't have labels
+        value: {
+            listItemType: 'divider',
+            id: 'unique-id-3'
+        },
+    },
+    {
+        label: 'Item 3',
+        value: {
+            id: 'unique-id-5'
+        },
+    }
+]}}>
+    {({ state, setState }) =>
+        <div>
+            <Button size="sm" onClick={ () => {
+                const anotherItem = {
+                    label: `Item ${state.items.length - 1}`,
+                    value: {
+                        id: `unique-id-${state.items.length}`
+                    },
+                };
+
+                setState( prevState => ({
+                    items: [ ...prevState.items,  anotherItem]
+                }));
+            } }>
+                Add More
+            </Button>
+
+            <List items={state.items} />
+        </div>
+    }
+</Component>
+```
+
+<br />
+
+## ListDivider, ListItem and ListTitle
+
+The `ListDivider`, `ListItem` and `ListTitle` components are the child elements to use when adding
+to a `List`. Unlike `ListDivider` and `ListTitle`, `ListItem` renders as an `a` tag, whereas the
+other two render `div` tags with a child `hr` and `span` tag, respectively.
+
+When using the `items` prop for `List`, any of the props for `ListDivider` and`ListItem` can be
+included in the passed object as a property of `value`. `ListTitle`, as noted in the API's section,
+has no additional props to pass.
+
+###### List Props Example
+```jsx hideTitle
+const myItems = [
+    {
+        label: 'My Link is Great',
+        value: {
+            id: 'unique-id-1',
+            listItemType: 'title',
+        },
+    },
+    {
+        value: {
+            id: 'unique-id-2',
+            listItemType: 'divider',
+            onMouseOver: () => console.log('Hello There'),
+        },
+    },
+   {
+        label: 'Go to Reddit',
+        value: {
+            active: true,
+            href: '//reddit.com',
+            id: 'unique-id-3',
+            listItemType: 'item',
+            suffix: <Heart />,
+        },
+    },
+];
+```
+
+<br />
+
+## API's
+
+---
+
+### List
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>items</td>
+            <td>
+                The items to render into the <pre>List</pre>. This provides a programmatic way to
+                add/remove elements to the list as opposed to providing the <pre>ListItem</pre>, <pre>ListDivider</pre>
+                or <pre>ListTitle</pre> components as children.
+            </td>
+            <td>Array&lt;&#123; label: string, value: &#123;
+                item | divider | title,
+                [key:string] : any
+                &#125; &#125;&gt;</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### ListDivider
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>onSelect</td>
+            <td>
+                An event handler for when a <pre>ListDivider</pre> is selected.
+            </td>
+            <td>(value?: string | number, item?: any) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onMouseOut</td>
+            <td>
+                An event handler for mouse out events.
+            </td>
+            <td>(event?: React.MouseEvent) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onMouseOver</td>
+            <td>
+                An event handler for mouse over events.
+            </td>
+            <td>(event?: React.MouseEvent) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>
+                Whatever is assigned to <pre>value</pre> will be sent to the <pre>onSelect</pre>
+                event when a <pre>ListDivider</pre> is selected.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### ListItem
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>active</td>
+            <td>
+                This adds the <pre>active</pre> class to the rendered <pre>ListItem</pre>, and
+                styles it as such. <pre>List</pre> nor <pre>ListItem</pre> determines what is
+                'active', giving the user full control.
+            </td>
+            <td>boolean</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td>
+                Specifies the URL of the page the link goes to.
+            </td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onSelect</td>
+            <td>
+                An event handler for when a <pre>ListItem</pre> is selected.
+            </td>
+            <td>(value?: string | number, item?: any) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onMouseOut</td>
+            <td>
+                An event handler for mouse out events.
+            </td>
+            <td>(event?: React.MouseEvent) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>onMouseOver</td>
+            <td>
+                An event handler for mouse over events.
+            </td>
+            <td>(event?: React.MouseEvent) => void</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>prefix</td>
+            <td>
+                Although this can be of any value it makes the most sense to pass a component, such
+                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
+                place the passed element in front of the <pre>ListItem</pre>'s text.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>size</td>
+            <td>
+                The size of the <pre>ListItem</pre>
+            </td>
+            <td>
+                <FormatTypes types={['sm', 'lg']} noInterpret />
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>suffix</td>
+            <td>
+                Although this can be of any value it makes the most sense to pass a component, such
+                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
+                place the passed element to the right side of the <pre>ListItem</pre>.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>
+                Whatever is assigned to <pre>value</pre> will be sent to the <pre>onSelect</pre>
+                event when a <pre>ListItem</pre> is selected.
+            </td>
+            <td>any</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+### ListTitle
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
