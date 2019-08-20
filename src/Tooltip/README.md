@@ -34,4 +34,5 @@ const advancedExample = props => (
   * **`background = 'rgba(0, 0, 0, 0.8)`:** CSS property for the background.
   * **`color = 'white'`:** CSS property for the text color.
   * **`content`:** Property for the text of the Tooltip.
+  * **`display`:** Property for the display of the tooltip container.
 

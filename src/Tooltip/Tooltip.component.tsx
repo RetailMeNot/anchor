@@ -26,6 +26,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     background?: string;
     color?: string;
     wrap?: boolean;
+    display?: string;
 }
 
 interface TooltipContainerState {
@@ -38,7 +39,7 @@ interface TooltipContainerState {
 
 const ToolTipContainer = styled('div')<TooltipContainerProps>`
     position: relative;
-    display: inline-block;
+    ${({ display = 'inline-block' }) => css({ display })};
 `;
 
 interface TooltipElementProps {
