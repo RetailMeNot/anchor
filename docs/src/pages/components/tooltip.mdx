@@ -1,0 +1,107 @@
+import { FormatTypes } from '../../components/Utils';
+
+# Tooltip
+
+The `Tooltip` component is used to display a hint to a user.
+
+```jsx
+import { Tooltip } from '@retailmenot/anchor';
+```
+
+<br />
+
+```tsx live
+<Tooltip content="Tooltip">
+    <Button>Hover over me</Button>
+</Tooltip>
+```
+
+<br />
+
+## API's
+
+---
+
+### Tooltip
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>position</td>
+            <td>Property for the position of the Tooltip.</td>
+            <td>
+                <FormatTypes
+                    types={[
+                        'topStart',
+                        'top',
+                        'topEnd',
+                        'rightStart',
+                        'right',
+                        'rightEnd',
+                        'bottomEnd',
+                        'bottom',
+                        'bottomStart',
+                        'leftEnd',
+                        'left',
+                        'leftStart',
+                    ]}
+                />
+            </td>
+            <td>
+                <pre>topEnd</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>maxWidth</td>
+            <td>Property for the maximum width of the Tooltip.</td>
+            <td>string</td>
+            <td>
+                <pre>auto</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>wrap</td>
+            <td>Property to control the text wrap of the Tooltip.</td>
+            <td>boolean</td>
+            <td>
+                <pre>false</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>background</td>
+            <td>CSS property for the background.</td>
+            <td>string</td>
+            <td>
+                <pre>rgba(0, 0, 0, 0.8)</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>CSS property for the text color.</td>
+            <td>string</td>
+            <td>
+                <pre>white</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>Property for the text of the Tooltip.</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>Property for the display of the tooltip container.</td>
+            <td>string</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>

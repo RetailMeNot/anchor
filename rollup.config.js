@@ -41,6 +41,7 @@ const componentList = {
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
     typography: './src/Typography/index.ts',
+    tooltip: './src/Tooltip/index.ts',
     // THEME
     theme: './src/theme/index.ts',
     // ICONS
