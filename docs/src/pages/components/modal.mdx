@@ -24,8 +24,6 @@ import { ThemeProvider } from 'styled-components';
 const { Header, Footer, Close, Content } = Modal;
 ```
 
-<br />
-
 * `Modal` is the key component, and without it there is no modal.
 * `Header` **is not required**. It creates a header at the top of the modal that allows for a title,
 with configurable background color and font color. If using the `Close` component (noted below) it's
@@ -77,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(Root, wrapper);
 });
 ```
-
-<br />
 
 By wrapping our application in these providers, we don't have to do anything else except build the
 modal and the button to open it.
@@ -136,8 +132,6 @@ export const ModalAndButton = () => {
 };
 ```
 
-<br />
-
 Now that we have the providers declared at the top of our application and we've created our `ModalAndButton`
 component above, it's time to use it. Below is an example page that exists within our application.
 It's as simple as dropping in our `ModalAndButton` into the page to have it work!
@@ -176,8 +170,6 @@ export const PageExample = () => (
     </StyledPageExample>
 );
 ```
-
-<br />
 
 And voila! Here is our `PageExample` component rendered with our `ModalAndButton`!
 

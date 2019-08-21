@@ -15,6 +15,7 @@ declare module '@retailmenot/anchor' {
   const Collapse: any;
   const CollapseGroup: any;
   const DropDown: any;
+  const Input: any;
   const Search: any;
   const Typography: any;
 }
