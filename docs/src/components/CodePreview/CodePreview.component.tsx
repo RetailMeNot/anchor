@@ -41,8 +41,8 @@ import {
     AutoComplete,
     Collapse,
     CollapseGroup,
-    Typography,
     Input,
+    Typography,
 } from '@retailmenot/anchor';
 // COMPONENTS
 import * as Anchor from '../../../../src';
