@@ -35,6 +35,7 @@ export {
 } from './List';
 export { Menu, Item as MenuItem } from './Menu';
 export { Typography } from './Typography';
+export { Tooltip } from './Tooltip';
 export {
     colors,
     fonts,

@@ -34,7 +34,7 @@ import {
     LiveError,
 } from 'react-live';
 import Component from '@reach/component-component';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 // tslint:disable-next-line: no-submodule-imports
 import github from 'prism-react-renderer/themes/github';
 import {
@@ -49,7 +49,7 @@ import * as Anchor from '../../../../src';
 // THEME
 // import { TableCSS } from '../Layout/Page/Page.component';
 import { colors } from '../../../../src/theme';
-import { BottomArea, MoreInfo, CardExample } from '../CardExample';
+import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 
 // TODO: add CDN Inconsolata font
@@ -179,7 +179,7 @@ export const CodePreview = ({
     hideTitle = false,
     ...props
 }: CodePreviewProps): React.ReactElement<any> => {
-    const language = className
+    const language: Language | any = className
         ? className.replace(/language-/, '')
         : 'javascript';
     const title = live ? 'Live Code Editor' : 'Example';
@@ -218,8 +218,8 @@ export const CodePreview = ({
                 language={language}
                 theme={github}
             >
-                {({ className, tokens, getLineProps, getTokenProps }) => (
-                    <StyledCodeBlock className={className}>
+                {({ className: subClassName, tokens, getLineProps, getTokenProps }) => (
+                    <StyledCodeBlock className={subClassName}>
                         {tokens.map((line, i) => (
                             <div key={i} {...getLineProps({ line, key: i })}>
                                 {line.map((token, key) => (

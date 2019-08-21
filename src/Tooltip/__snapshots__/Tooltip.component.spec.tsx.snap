@@ -1,0 +1,677 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0,-8px,0);
+  -ms-transform: translate3d(0,-8px,0);
+  transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0,-8px,0);
+  -ms-transform: translate3d(0,-8px,0);
+  transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 2`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0px,-8px,0);
+  -ms-transform: translate3d(0px,-8px,0);
+  transform: translate3d(0px,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 3`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0,-8px,0);
+  -ms-transform: translate3d(0,-8px,0);
+  transform: translate3d(0,-8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 4`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(8px,0,0);
+  -ms-transform: translate3d(8px,0,0);
+  transform: translate3d(8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 5`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(8px,0px,0);
+  -ms-transform: translate3d(8px,0px,0);
+  transform: translate3d(8px,0px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 6`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(8px,0,0);
+  -ms-transform: translate3d(8px,0,0);
+  transform: translate3d(8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 7`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0,8px,0);
+  -ms-transform: translate3d(0,8px,0);
+  transform: translate3d(0,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 8`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0px,8px,0);
+  -ms-transform: translate3d(0px,8px,0);
+  transform: translate3d(0px,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 9`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0,8px,0);
+  -ms-transform: translate3d(0,8px,0);
+  transform: translate3d(0,8px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 10`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(-8px,0,0);
+  -ms-transform: translate3d(-8px,0,0);
+  transform: translate3d(-8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 11`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(-8px,0px,0);
+  -ms-transform: translate3d(-8px,0px,0);
+  transform: translate3d(-8px,0px,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;
+
+exports[`Component: Tooltip should render all the different tooltip positions. 12`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  white-space: normal;
+  width: auto;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(-8px,0,0);
+  -ms-transform: translate3d(-8px,0,0);
+  transform: translate3d(-8px,0,0);
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+<div
+  className="anchor-tooltip c0"
+  content="This is a tooltip"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <button>
+    Hover
+  </button>
+  <div
+    className="anchor-tooltip-element c1"
+    height={0}
+    width={0}
+  >
+    This is a tooltip
+  </div>
+</div>
+`;

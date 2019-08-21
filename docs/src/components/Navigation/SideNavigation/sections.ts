@@ -79,6 +79,10 @@ export const sections = [
                 path: '/components/modal/',
             },
             {
+                title: 'Tooltip',
+                path: '/components/tooltip/',
+            },
+            {
                 title: 'Typography',
                 path: '/components/typography/',
             },
