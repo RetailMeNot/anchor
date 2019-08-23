@@ -218,7 +218,12 @@ export const CodePreview = ({
                 language={language}
                 theme={github}
             >
-                {({ className: subClassName, tokens, getLineProps, getTokenProps }) => (
+                {({
+                    className: subClassName,
+                    tokens,
+                    getLineProps,
+                    getTokenProps,
+                }) => (
                     <StyledCodeBlock className={subClassName}>
                         {tokens.map((line, i) => (
                             <div key={i} {...getLineProps({ line, key: i })}>

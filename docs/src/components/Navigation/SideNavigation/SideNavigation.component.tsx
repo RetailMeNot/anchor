@@ -61,35 +61,37 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
     render() {
         const { mainOpenIndex } = this.state;
 
-        return (mainOpenIndex && (
-            <StyledCollapseGroup
-                variant="compact"
-                openIndex={mainOpenIndex}
-                accordion
-            >
-                {sections.map((section: SectionProperties, i: number) => (
-                    <Collapse
-                        openedText={section.title}
-                        key={`collapse-key-${i}`}
-                    >
-                        <ul>
-                            {section.links.map(
-                                (link: LinkProperties, j: number) => (
-                                    <li key={`link-key-${j}`}>
-                                        <Link
-                                            to={link.path}
-                                            activeClassName="active"
-                                        >
-                                            {link.title}
-                                        </Link>
-                                    </li>
-                                )
-                            )}
-                        </ul>
-                    </Collapse>
-                ))}
-            </StyledCollapseGroup>
-        ));
+        return (
+            mainOpenIndex && (
+                <StyledCollapseGroup
+                    variant="compact"
+                    openIndex={mainOpenIndex}
+                    accordion
+                >
+                    {sections.map((section: SectionProperties, i: number) => (
+                        <Collapse
+                            openedText={section.title}
+                            key={`collapse-key-${i}`}
+                        >
+                            <ul>
+                                {section.links.map(
+                                    (link: LinkProperties, j: number) => (
+                                        <li key={`link-key-${j}`}>
+                                            <Link
+                                                to={link.path}
+                                                activeClassName="active"
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        </li>
+                                    )
+                                )}
+                            </ul>
+                        </Collapse>
+                    ))}
+                </StyledCollapseGroup>
+            )
+        );
     }
 }
 

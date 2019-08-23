@@ -5,7 +5,7 @@ export const sections = [
         links: [
             {
                 title: 'Introduction',
-                path: '/'
+                path: '/',
             },
         ],
     },
@@ -94,8 +94,12 @@ export const sections = [
         pattern: '/theme',
         links: [
             {
-                title: 'RMN',
-                path: '/theme/',
+                title: 'colors',
+                path: '/theme/colors',
+            },
+            {
+                title: 'ThemeProvider',
+                path: '/theme/theme-provider',
             },
         ],
     },

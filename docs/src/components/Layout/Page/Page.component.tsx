@@ -3,21 +3,25 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
-import { AutoComplete } from '@retailmenot/anchor';
-import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { css } from 'styled-components';
+import {
+    AutoComplete,
+    Col,
+    colors,
+    RootTheme,
+    Row,
+    Search,
+    ThemeProvider,
+    Typography,
+} from '@retailmenot/anchor';
+import styled, { css } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
-import { RootTheme } from '../../../../../src/theme';
 import { Footer } from '../';
 import { EnhancedSideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
-import { Row, Col, Search, Typography } from '../../../../../src';
 // ASSETS
 import logo from './anchor-logo.svg';
-// THEME
-import { colors } from '../../../../../src/theme';
 
 const StyledPageElement = styled('div')``;
 
@@ -180,52 +184,97 @@ Components.h1 = ({ children, ...props }: any) => (
     />
 );
 Components.h2 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h2"
-        lineHeight={2.3}
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h2"
+            lineHeight={2.3}
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h3 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h3"
-        lineHeight={2.5}
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h3"
+            lineHeight={2.5}
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h4 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h4"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h4"
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h5 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h5"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h5"
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h6 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h6"
-        mb="1"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h6"
+            mb="1"
+            {...props}
+            children={children}
+        />
+    </>
 );
 
 Components.p = (props: any) => <Typography tag="p" {...props} />;
