@@ -4,9 +4,10 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { text, select } from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 // COMPONENTS
 import { DropDown } from './DropDown.component';
+import { Button } from '../Button';
 import { List, Item as ListItem } from '../List';
 import { Typography } from '../Typography';
 import { Container, Row, Col } from '../Grid';
@@ -132,15 +133,18 @@ storiesOf('Components/DropDown', module)
                                     >(
                                         'Dropdown Position',
                                         ['top', 'bottom', 'right', 'left'],
-                                        'top'
+                                        'bottom'
                                     )}
                                     trigger={select<'click' | 'hover'>(
                                         'Dropdown Trigger',
                                         ['click', 'hover'],
                                         'hover'
                                     )}
+                                    showArrow={boolean('showArrow', false)}
+                                    shadow={text('shadow', '') || undefined}
+                                    background={text('background', '') || undefined}
                                 >
-                                    <a>{text('Dropdown Label', 'Dropdown')}</a>
+                                    <Button>{text('Dropdown Text', 'Dropdown')}</Button>
                                 </DropDown>
                             </div>
                         </Col>

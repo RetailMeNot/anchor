@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, mapTo, distinctUntilChanged } from 'rxjs/operators';
 // COMPONENTS
 import { get } from '../utils/get/get';
 import { renderArrow } from './Arrow/Arrow.component';
@@ -20,17 +20,27 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     // Configuration
     ref?: any;
     position?: Position;
+    shadow?: string;
+    showArrow?: boolean;
+    background?: string;
     // TODO: v2 considerations:
     // offset?: string;
 }
 
 interface DropDownState {
     showDropdown: boolean;
+    hovered: boolean;
+    clicked: boolean;
     height?: number;
     width?: number;
 }
 
-const StyledDropDown = styled('div')<DropDownProps>`
+interface StyledDropDownProps extends DropDownProps {
+    // make nonnullable
+    position: Position;
+}
+
+const StyledDropDown = styled('div')<StyledDropDownProps>`
     box-sizing: border-box;
     font-family: ${th('typography.fontFamily')};
     position: relative;
@@ -41,9 +51,9 @@ const StyledDropDown = styled('div')<DropDownProps>`
     min-height: 1rem;
     min-width: 1rem;
 
-    ${({ position }) => {
+    ${({ position, showArrow }) => {
         const CSS: any = {};
-        const offset = '0.75rem';
+        const offset = showArrow ? '0.75rem' : 0;
         switch (position) {
             case 'bottom':
                 CSS.paddingBottom = offset;
@@ -72,6 +82,9 @@ interface DropDownContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     height: number;
     width: number;
     position: Position;
+    showArrow?: boolean;
+    shadow?: string;
+    background?: string;
     hidden?: boolean;
     children?: any;
     className?: string;
@@ -79,21 +92,21 @@ interface DropDownContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 const DropDownContainer = (props: DropDownContainerProps) => <div {...props} />;
 
-const StyledDropDownContainer = styled(DropDownContainer)<
-    DropDownContainerProps
->`
+const StyledDropDownContainer = styled(DropDownContainer)<DropDownContainerProps>`
     min-width: 10rem;
     position: absolute;
     padding: 0.25rem auto;
     // TODO: make bg and padding composable; remember that the arrow will need to inherit these props
     z-index: 1;
-    background-color: ${th.color('neutrals.white.base')};
-    box-shadow: 0 0 0.5rem 0 ${th.color('neutrals.ash.base')};
+    ${({ shadow, background }) => css({
+        background: th.color(background),
+        boxShadow: shadow,
+    })};
     border-radius: base;
     border: thin solid ${th.color('neutrals.silver.dark')};
 
     /* Defined Position */
-    ${({ position, height, width, offset = '0.5rem' }) => {
+    ${({ position, height, width, offset = '0.5rem', showArrow }) => {
         const CSS: any = {};
         switch (position) {
             case 'bottom':
@@ -124,17 +137,23 @@ export class DropDown extends React.Component<DropDownProps> {
         trigger: 'hover',
     };
     // State
-    state: DropDownState = { showDropdown: false };
+    state: DropDownState = {
+        showDropdown: false,
+        hovered: false,
+        clicked: false,
+    };
     // Instance Reference
     private readonly dropDownReference: React.RefObject<
         DropDown
     > = React.createRef();
     private rootElement: any;
     // Observables
-    private mouseOver$: Subscription;
-    private mouseOut$: Subscription;
-    private escapeKey$: Subscription;
-    private domClick$: Subscription;
+    // private mouseOver$: Subscription;
+    // private mouseOut$: Subscription;
+    // private escapeKey$: Subscription;
+    // private domClick$: Subscription;
+    private hovered$: Subscription;
+    private unclicked$: Subscription;
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
@@ -143,71 +162,89 @@ export class DropDown extends React.Component<DropDownProps> {
         this.setState({ height, width });
         // Dropdown Instance
         this.rootElement = dropDown ? dropDown.getRootNode() : null;
-        this.domClick$ = merge(
+        const domClick$ = merge(
             fromEvent(this.rootElement, 'click'),
             fromEvent(this.rootElement, 'touchstart')
         )
-            .pipe(filter(() => this.state.showDropdown))
-            .subscribe(({ target }: MouseEvent | TouchEvent) => {
-                if (!dropDown.contains(target)) {
-                    this.setState({ showDropdown: false });
-                }
-            });
-        // Subscribe to keyboard escape
-        this.escapeKey$ = fromEvent(this.rootElement, 'keyup')
             .pipe(
-                filter(() => this.state.showDropdown),
-                filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape')
-            )
-            .subscribe(() => this.setState({ showDropdown: false }));
+                filter(() => this.state.clicked),
+                filter(({ target }) => !dropDown.contains(target)),
+                mapTo(false),
+            );
 
-        // Subscribe to element mouseenter
-        this.mouseOver$ = fromEvent(dropDown, 'mouseenter')
+        // Subscribe to keyboard escape
+        const escapeKey$ = fromEvent(this.rootElement, 'keyup')
             .pipe(
-                filter(() => this.props.trigger === 'hover'),
-                filter(() => !this.state.showDropdown)
-            )
-            .subscribe(() => this.setState({ showDropdown: true }));
-        // Subscribe to element mouseleave
-        this.mouseOut$ = fromEvent(dropDown, 'mouseleave')
-            .pipe(
-                filter(() => this.props.trigger === 'hover'),
-                filter(() => this.state.showDropdown)
-            )
-            .subscribe(() => this.setState({ showDropdown: false }));
+                filter(() => this.state.clicked || this.state.hovered),
+                filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape'),
+                mapTo(false),
+            );
+
+        const mouseEnter$ = fromEvent(dropDown, 'mouseenter').pipe(mapTo(true));
+        const mouseLeave$ = fromEvent(dropDown, 'mouseleave').pipe(mapTo(false));
+        const unclick$ = merge(domClick$, escapeKey$);
+
+        this.unclicked$ = unclick$
+            .subscribe((clicked) => {
+                console.log('unclicked$', clicked)
+                this.setState({ clicked })
+            });
+
+        this.hovered$ = merge(mouseEnter$, mouseLeave$, unclick$)
+            .pipe(distinctUntilChanged())
+            .subscribe((hovered) => {
+                console.log('hovered$', hovered)
+                this.setState({ hovered })
+            });
     }
 
     componentWillUnmount(): void {
-        this.mouseOver$.unsubscribe();
-        this.mouseOut$.unsubscribe();
-        this.domClick$.unsubscribe();
-        this.escapeKey$.unsubscribe();
+        this.hovered$.unsubscribe();
+        this.unclicked$.unsubscribe();
     }
 
     render(): React.ReactElement<DropDown> {
-        const { children, className, overlay, position, ...props } = this.props;
+        const {
+            children,
+            className,
+            overlay,
+            showArrow = true,
+            position = 'bottom',
+            shadow = '0 0 0.5rem 0 rgba(0,0,0,0.2)',
+            background = 'white',
+            trigger,
+            ...props
+        } = this.props;
+
+        const { clicked, hovered } = this.state;
+        const showDropdown = clicked || (trigger === "hover" && hovered);
 
         return (
             <StyledDropDown
                 ref={this.dropDownReference}
                 className={classNames('anchor-drop-down', className)}
-                position={position || 'bottom'}
+                showArrow={showArrow}
+                shadow={shadow}
+                position={position}
                 onClick={() =>
                     this.setState({
-                        showDropdown: !this.state.showDropdown,
+                        clicked: !clicked,
+                        hovered: clicked ? false : hovered,
                     })
                 }
                 {...props}
             >
                 {children}
                 <StyledDropDownContainer
+                    shadow={shadow}
+                    background={background}
                     className="anchor-down-down-container"
-                    position={position || 'bottom'}
-                    hidden={!this.state.showDropdown}
+                    position={position}
+                    hidden={!showDropdown}
                     height={this.state.height || 0}
                     width={this.state.width || 0}
                 >
-                    {renderArrow(position || 'bottom', true)}
+                    {showArrow && renderArrow(position, true)}
                     {overlay}
                 </StyledDropDownContainer>
             </StyledDropDown>
