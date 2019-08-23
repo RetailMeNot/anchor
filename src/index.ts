@@ -43,6 +43,7 @@ export {
     GlobalCSS,
     NormalizeCSS,
     RootTheme,
+    ThemeProvider,
     variables,
 } from './theme';
 export { Card } from './Card';
