@@ -37,3 +37,5 @@ export const RootTheme = {
         dark: `thin solid ${colors.ash.dark}`,
     },
 };
+
+export { ThemeProvider } from '@xstyled/styled-components';
