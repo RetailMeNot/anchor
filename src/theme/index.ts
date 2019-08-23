@@ -1,6 +1,7 @@
 // Theme Files
 import { typography } from './typography.theme';
 import { ColorsTheme, colors } from './colors.theme';
+import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
 
 // TODO: ============================================================ move all of these v consts to a different location
 
@@ -38,4 +39,5 @@ export const RootTheme = {
     },
 };
 
-export { ThemeProvider } from '@xstyled/styled-components';
+// Exporting out @xstyled's ThemeProvider. Only way I could get it to work w/o issues.
+export class ThemeProvider extends XstyledThemeProvider {}
