@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { text, select, boolean } from '@storybook/addon-knobs';
 // COMPONENTS
-import { DropDown } from './DropDown.component';
+import { DropDown, Position } from './DropDown.component';
 import { Button } from '../Button';
 import { List, Item as ListItem } from '../List';
 import { Typography } from '../Typography';
@@ -118,38 +118,67 @@ storiesOf('Components/DropDown', module)
             </StyledStory>
         </ThemeProvider>
     ))
-    .add('Knobs Demo', () => (
-        <ThemeProvider theme={RootTheme}>
-            <StyledStory>
-                <Container>
-                    <Row>
-                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
-                            <div>
-                                <Typography tag="h1">DropDown</Typography>
-                                <DropDown
-                                    overlay={<MockList />}
-                                    position={select<
-                                        'top' | 'bottom' | 'right' | 'left'
-                                    >(
-                                        'Dropdown Position',
-                                        ['top', 'bottom', 'right', 'left'],
-                                        'bottom'
-                                    )}
-                                    trigger={select<'click' | 'hover'>(
-                                        'Dropdown Trigger',
-                                        ['click', 'hover'],
-                                        'hover'
-                                    )}
-                                    showArrow={boolean('showArrow', false)}
-                                    shadow={text('shadow', '') || undefined}
-                                    background={text('background', '') || undefined}
-                                >
-                                    <Button>{text('Dropdown Text', 'Dropdown')}</Button>
-                                </DropDown>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </StyledStory>
-        </ThemeProvider>
-    ));
+
+    .add('Knobs Demo', () => {
+        // Using "text" so that we can distinguish between
+        // `undefined` spacing and `0` (for default behavior)
+        const spacing = text('spacing', '');
+
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <StyledStory>
+                    <Container>
+                        <Row>
+                            <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                                <div>
+                                    <Typography tag="h1">DropDown</Typography>
+                                    <DropDown
+                                        overlay={<MockList />}
+                                        position={select<Position>(
+                                            'Dropdown Position',
+                                            [
+                                                'topStart',
+                                                'top',
+                                                'topEnd',
+                                                'rightStart',
+                                                'right',
+                                                'rightEnd',
+                                                'bottomEnd',
+                                                'bottom',
+                                                'bottomStart',
+                                                'leftEnd',
+                                                'left',
+                                                'leftStart',
+                                            ],
+                                            'bottom'
+                                        )}
+                                        trigger={select<'click' | 'hover'>(
+                                            'Dropdown Trigger',
+                                            ['click', 'hover'],
+                                            'hover'
+                                        )}
+                                        showArrow={boolean('showArrow', true)}
+                                        shadow={text('shadow', '') || undefined}
+                                        background={
+                                            text('background', '') || undefined
+                                        }
+                                        border={text('border', '') || undefined}
+                                        indent={text('indent', '') || undefined}
+                                        spacing={
+                                            spacing
+                                                ? parseInt(spacing)
+                                                : undefined
+                                        }
+                                    >
+                                        <Button>
+                                            {text('Dropdown Text', 'Dropdown')}
+                                        </Button>
+                                    </DropDown>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </StyledStory>
+            </ThemeProvider>
+        );
+    });

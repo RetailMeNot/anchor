@@ -6,11 +6,11 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
 import { filter, mapTo, distinctUntilChanged } from 'rxjs/operators';
-// COMPONENTS
+// ANCHOR
 import { get } from '../utils/get/get';
-import { renderArrow } from './Arrow/Arrow.component';
-
-export type Position = 'top' | 'bottom' | 'left' | 'right';
+import { Arrow } from './Arrow/Arrow.component';
+import { positionVariants, Position } from '../utils/position/position';
+export { Position } from '../utils/position/position';
 
 interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
@@ -22,9 +22,10 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     position?: Position;
     shadow?: string;
     showArrow?: boolean;
+    border?: string;
     background?: string;
-    // TODO: v2 considerations:
-    // offset?: string;
+    spacing?: number;
+    indent?: string;
 }
 
 interface DropDownState {
@@ -33,6 +34,8 @@ interface DropDownState {
     clicked: boolean;
     height?: number;
     width?: number;
+    containerHeight?: number;
+    containerWidth?: number;
 }
 
 interface StyledDropDownProps extends DropDownProps {
@@ -51,85 +54,100 @@ const StyledDropDown = styled('div')<StyledDropDownProps>`
     min-height: 1rem;
     min-width: 1rem;
 
-    ${({ position, showArrow }) => {
-        const CSS: any = {};
-        const offset = showArrow ? '0.75rem' : 0;
+    ${({ position, spacing }) => {
+        if (!spacing) {
+            return null;
+        }
         switch (position) {
             case 'bottom':
-                CSS.paddingBottom = offset;
-                CSS.marginBottom = `-${offset}`;
-                break;
+            case 'bottomStart':
+            case 'bottomEnd':
+                return css({
+                    paddingBottom: spacing,
+                    marginBottom: `-${spacing}`,
+                });
             case 'right':
-                CSS.paddingRight = offset;
-                CSS.marginRight = `-${offset}`;
-                break;
+            case 'rightStart':
+            case 'rightEnd':
+                return css({
+                    paddingRight: spacing,
+                    marginRight: `-${spacing}`,
+                });
             case 'left':
-                CSS.paddingLeft = offset;
-                CSS.marginLeft = `-${offset}`;
-                break;
+            case 'leftStart':
+            case 'leftEnd':
+                return css({
+                    paddingLeft: spacing,
+                    marginLeft: `-${spacing}`,
+                });
             case 'top':
-                CSS.paddingTop = offset;
-                CSS.marginTop = `-${offset}`;
-                break;
-            default:
-                break;
+            case 'topStart':
+            case 'topEnd':
+                return css({
+                    paddingTop: spacing,
+                    marginTop: `-${spacing}`,
+                });
         }
-        return css(CSS);
+        return null;
     }};
 `;
 
 interface DropDownContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+    ref?: any;
     height: number;
     width: number;
+    containerHeight: number;
+    containerWidth: number;
     position: Position;
     showArrow?: boolean;
     shadow?: string;
+    border?: string;
     background?: string;
-    hidden?: boolean;
+    active?: boolean;
     children?: any;
     className?: string;
     offset?: string;
 }
-const DropDownContainer = (props: DropDownContainerProps) => <div {...props} />;
 
-const StyledDropDownContainer = styled(DropDownContainer)<DropDownContainerProps>`
-    min-width: 10rem;
+const StyledDropDownContainer = styled('div')<DropDownContainerProps>`
     position: absolute;
-    padding: 0.25rem auto;
-    // TODO: make bg and padding composable; remember that the arrow will need to inherit these props
+    box-sizing: border-box;
+    display: flex;
     z-index: 1;
-    ${({ shadow, background }) => css({
-        background: th.color(background),
-        boxShadow: shadow,
-    })};
-    border-radius: base;
-    border: thin solid ${th.color('neutrals.silver.dark')};
+    min-width: 10rem;
 
-    /* Defined Position */
-    ${({ position, height, width, offset = '0.5rem', showArrow }) => {
-        const CSS: any = {};
-        switch (position) {
-            case 'bottom':
-                CSS.top = `${height}px`;
-                CSS.left = 0;
-                break;
-            case 'right':
-                CSS.left = `${width}px`;
-                CSS.top = '-0.75rem';
-                break;
-            case 'left':
-                CSS.right = `${width}px`;
-                CSS.top = '-0.75rem';
-                break;
-            case 'top':
-                CSS.bottom = `${height}px`;
-                CSS.left = 0;
-                break;
-            default:
-                break;
-        }
-        return css(CSS);
-    }};
+    ${({ border, shadow, active }) =>
+        css({
+            border,
+            boxShadow: shadow,
+            visibility: active ? 'visible' : 'hidden',
+        })};
+    border-radius: base;
+
+    ${({ position, height, width, containerHeight, containerWidth }) =>
+        positionVariants(
+            position,
+            height,
+            width,
+            containerHeight,
+            containerWidth
+        )};
+`;
+
+interface BackgroundProps {
+    background?: string;
+}
+
+const Background = styled('div')<BackgroundProps>`
+    box-sizing: border-box;
+    border-radius: inherit;
+    width: 100%
+    z-index: 2;
+
+    ${({ background }) =>
+        css({
+            background: th.color(background),
+        })};
 `;
 
 export class DropDown extends React.Component<DropDownProps> {
@@ -146,55 +164,65 @@ export class DropDown extends React.Component<DropDownProps> {
     private readonly dropDownReference: React.RefObject<
         DropDown
     > = React.createRef();
+    private readonly containerReference: React.RefObject<
+        DropDown
+    > = React.createRef();
     private rootElement: any;
     // Observables
-    // private mouseOver$: Subscription;
-    // private mouseOut$: Subscription;
-    // private escapeKey$: Subscription;
-    // private domClick$: Subscription;
     private hovered$: Subscription;
     private unclicked$: Subscription;
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
+        const {
+            current: container,
+        }: { current: any } = this.containerReference;
+
+        // TODO: instead of setting state, what about using the render fxn?
+        if (container) {
+            this.setState({
+                containerHeight: get(container, 'clientHeight', 0),
+                containerWidth: get(container, 'clientWidth', 0),
+            });
+        }
         const height = get(dropDown, 'clientHeight', 0);
         const width = get(dropDown, 'clientWidth', 0);
         this.setState({ height, width });
+
         // Dropdown Instance
         this.rootElement = dropDown ? dropDown.getRootNode() : null;
         const domClick$ = merge(
             fromEvent(this.rootElement, 'click'),
             fromEvent(this.rootElement, 'touchstart')
-        )
-            .pipe(
-                filter(() => this.state.clicked),
-                filter(({ target }) => !dropDown.contains(target)),
-                mapTo(false),
-            );
+        ).pipe(
+            filter(() => this.state.clicked),
+            filter(({ target }) => !dropDown.contains(target)),
+            mapTo(false)
+        );
 
         // Subscribe to keyboard escape
-        const escapeKey$ = fromEvent(this.rootElement, 'keyup')
-            .pipe(
-                filter(() => this.state.clicked || this.state.hovered),
-                filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape'),
-                mapTo(false),
-            );
+        const escapeKey$ = fromEvent(this.rootElement, 'keyup').pipe(
+            filter(() => this.state.clicked || this.state.hovered),
+            filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape'),
+            mapTo(false)
+        );
 
         const mouseEnter$ = fromEvent(dropDown, 'mouseenter').pipe(mapTo(true));
-        const mouseLeave$ = fromEvent(dropDown, 'mouseleave').pipe(mapTo(false));
+        const mouseLeave$ = fromEvent(dropDown, 'mouseleave').pipe(
+            mapTo(false)
+        );
         const unclick$ = merge(domClick$, escapeKey$);
 
-        this.unclicked$ = unclick$
-            .subscribe((clicked) => {
-                console.log('unclicked$', clicked)
-                this.setState({ clicked })
-            });
+        this.unclicked$ = unclick$.subscribe(clicked => {
+            console.log('unclicked$', clicked);
+            this.setState({ clicked });
+        });
 
         this.hovered$ = merge(mouseEnter$, mouseLeave$, unclick$)
             .pipe(distinctUntilChanged())
-            .subscribe((hovered) => {
-                console.log('hovered$', hovered)
-                this.setState({ hovered })
+            .subscribe(hovered => {
+                console.log('hovered$', hovered);
+                this.setState({ hovered });
             });
     }
 
@@ -203,21 +231,67 @@ export class DropDown extends React.Component<DropDownProps> {
         this.unclicked$.unsubscribe();
     }
 
+    componentDidUpdate(prevProps: DropDownProps) {
+        const {
+            showArrow: prevShowArrow,
+            position: prevPosition,
+            spacing: prevSpacing,
+        } = prevProps;
+        const { showArrow, position, spacing } = this.props;
+
+        if (
+            showArrow !== prevShowArrow ||
+            position !== prevPosition ||
+            spacing !== prevSpacing
+        ) {
+            const {
+                current: dropDown,
+            }: { current: any } = this.dropDownReference;
+            const {
+                current: container,
+            }: { current: any } = this.containerReference;
+
+            if (container) {
+                this.setState({
+                    height: get(dropDown, 'clientHeight', 0),
+                    width: get(dropDown, 'clientWidth', 0),
+                    containerHeight: get(container, 'clientHeight', 0),
+                    containerWidth: get(container, 'clientWidth', 0),
+                });
+            }
+        }
+    }
+
     render(): React.ReactElement<DropDown> {
         const {
             children,
             className,
             overlay,
+            spacing,
+            indent = '0.75rem',
             showArrow = true,
             position = 'bottom',
             shadow = '0 0 0.5rem 0 rgba(0,0,0,0.2)',
+            border = 'light',
             background = 'white',
             trigger,
             ...props
         } = this.props;
+        const {
+            clicked,
+            hovered,
+            height = 0,
+            width = 0,
+            containerHeight = 0,
+            containerWidth = 0,
+        } = this.state;
 
-        const { clicked, hovered } = this.state;
-        const showDropdown = clicked || (trigger === "hover" && hovered);
+        const showDropdown = clicked || (trigger === 'hover' && hovered);
+
+        // if they don't specify a spacing then we'll default
+        // based on whether the arrow is there or not
+        const spacingWithDefault =
+            typeof spacing === 'undefined' ? (showArrow ? 12 : 0) : spacing;
 
         return (
             <StyledDropDown
@@ -226,6 +300,7 @@ export class DropDown extends React.Component<DropDownProps> {
                 showArrow={showArrow}
                 shadow={shadow}
                 position={position}
+                spacing={spacingWithDefault}
                 onClick={() =>
                     this.setState({
                         clicked: !clicked,
@@ -236,16 +311,27 @@ export class DropDown extends React.Component<DropDownProps> {
             >
                 {children}
                 <StyledDropDownContainer
+                    className="anchor-drop-down-container"
+                    ref={this.containerReference}
                     shadow={shadow}
-                    background={background}
-                    className="anchor-down-down-container"
+                    border={border}
                     position={position}
-                    hidden={!showDropdown}
-                    height={this.state.height || 0}
-                    width={this.state.width || 0}
+                    active={showDropdown}
+                    height={height}
+                    width={width}
+                    containerHeight={containerHeight}
+                    containerWidth={containerWidth}
                 >
-                    {showArrow && renderArrow(position, true)}
-                    {overlay}
+                    <Background background={background}>{overlay}</Background>
+                    {showArrow && (
+                        <Arrow
+                            position={position}
+                            indent={indent}
+                            background={background}
+                            shadow={shadow}
+                            border={border}
+                        />
+                    )}
                 </StyledDropDownContainer>
             </StyledDropDown>
         );
