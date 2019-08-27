@@ -1,0 +1,136 @@
+import { Typography } from '@retailmenot/anchor';
+import { Link } from 'gatsby';
+
+# Theme Provider
+
+**Anchor** components depend on the `ThemeProvider` to read values from, providing theme context to
+all styled components. `ThemeProvider` is an exported module from **Anchor**, but it is the same
+module found in <a target="_blank" href="https://www.smooth-code.com/open-source/xstyled/">`@xstyled/styled-components`</a> and
+`styled-components`, so any of them will work interchangably.
+
+Of course without a theme, `ThemeProvider` isn't very useful. **Anchor** ships with a `RootTheme`
+which is passed via the `theme` prop. When wrapped around an application, the colors, fonts and
+other settings in the `theme` are made available to any child component.
+
+```jsx
+import { ThemeProvider, RootTheme } from '@retailmenot/anchor';
+import { App } from '/components/App';  // An example path
+
+const Root = () => (
+    <ThemeProvider theme={RootTheme}>
+        <App />
+    </ThemeProvider>
+);
+
+ReactDOM.render(Root, document.getElementById('app'));
+```
+
+## RootTheme
+
+As noted above, `RootTheme` contains properties for a number of component settings. Below is a
+high-level output of `RootTheme`.
+
+###### console.log(RootTheme)
+```jsx hideTitle
+{
+  "borders": { ... }
+  "breakpoints": { ... },
+  "buttons": { ... },
+  "colors": { ... },
+  "radii": { ... },
+  "typography": { ... },
+}
+```
+
+### borders
+
+Basic border settings for components.
+
+### breakpoints
+
+Currently **Anchor** doesn't make extensive use of this setting. It only has a single
+property, `xs`. This may be re-evaluated in a future update.
+
+### buttons
+
+The <Link to="/components/button">`Button`</Link> component is one of the most configurable, so much
+so that it relies on the settings defined here to function correctly. Most of these properties
+actually come from module exports from <Link to="/components/button">`Button`</Link>, so it is not
+recommended to alter these values.
+
+### colors
+
+The `colors` property is arguably one of the most important. `RootTheme` provides a structure for
+the various color swatches available from the <Link to="/theme/colors/">`colors`</Link> object, a
+structure from which **Anchor** components rely on to properly render their styles. As a matter of
+fact, the fastest way to realize that `ThemeProvider` and/or `RootTheme` are not being correctly
+applied to an application is because of a lack of color.
+
+The properties of `color` are important enough that within the code for generating `RootTheme`, it
+is referred to as a `ColorTheme`. Notice that the properties of this `ColorTheme` are abstracted
+(for the most part). This is an intentional choice, because ultimately the point of any theme is to
+apply very different colors but with a similar naming scheme. Consider Google's use of terms such
+as, `comfortable`, `cozy`, `light` and `dark` as an example of this approach.
+
+**Anchor** components will always refer to color usage via the properties of this `ColorTheme`. In
+other words, if a component wanted to use the `light` hue of `grapePurchase`, it would refer to it
+as `primary.light`.
+
+It's important to note that the <Link to="/theme/colors/">`colors`</Link> object that ships
+with **Anchor** is not the same thing as the `RootTheme`. <Link to="/theme/colors/">`colors`</Link> is
+intended to be used when one has a very specific need for a color swatch. Most of the examples of the
+components on this site use the <Link to="/theme/colors/">`colors`</Link> object in cases where the
+`RootTheme` didn't apply a color.
+
+###### ColorTheme Example
+```jsx hideTitle
+...
+colors: {
+    primary: colors.grapePurchase,
+    accent: colors.savvyCyan,
+    secondary: colors.dealEnvy,
+    neutrals: {
+        white: colors.white,
+        ash: colors.ash,
+        silver: colors.silver,
+        charcoal: colors.charcoal,
+    },
+    borders: {
+        // PRAGMATIC
+        light: colors.silver.base,
+        base: colors.ash.light,
+        dark: colors.ash.dark,
+        // SEMANTIC
+        error: colors.ash.dark,
+        success: colors.ash.dark,
+    },
+    text: {
+        body: colors.charcoal.base,
+        link: {
+            base: colors.savvyCyan.dark,
+            hover: colors.savvyCyan.dark,
+            focus: colors.savvyCyan.dark,
+            visited: colors.savvyCyan.dark,
+        },
+        disabled: colors.ash.light,
+        placeholder: colors.ash.dark,
+    },
+    background: {
+        body: colors.silver.base,
+        content: colors.white.base,
+    },
+    error: colors.fireSale.dark,
+    success: colors.dealEnvy.dark,
+};
+...
+```
+
+### radii
+
+The properties here will determine the `border-radius` applied to components.
+
+### typography
+
+As the name implies, `typography` holds properties dealing with font settings. The
+actual <Link to="/components/typography">`Typography`</Link> component relies on the properties
+defined here, but any component that has text displayed will tap into this as well.

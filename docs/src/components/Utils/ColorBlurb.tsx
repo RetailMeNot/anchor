@@ -30,7 +30,7 @@ export const ColorBlurb = ({
         <pre>{label}</pre>.
         {defaultTheme ? (
             <Typography pl="1">
-                It uses Anchor's <Link to="/theme">theme</Link> colors by
+                It uses <Link to="/theme/colors"><pre>colors</pre></Link> from <strong>Anchor</strong> by
                 default, but any valid CSS color value can be provided
                 {background && gradient && ', including gradients'}.
             </Typography>

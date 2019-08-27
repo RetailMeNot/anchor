@@ -1,11 +1,13 @@
 import { Link } from 'gatsby';
-import { FormatTypes, ColorBlurb } from '../../components/Utils';
+import {
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
+} from '../../components/Utils';
 
 # Hero
 
-The `Hero` component is used to display a website hero which spans from edge to edge of available
-space while centering it's content. Graphics, buttons and any other element can be used inside of a
-`Hero`.
+<ComponentInfo title="Hero" mode="description" />
 
 Aside from the `Hero` component itself, it has two additional components that can be deconstructed
 from it.
@@ -17,8 +19,8 @@ from it.
 ```
 
 Depending on how your environment is set up, you could directly access these sub-components directly
-in your jsx as shown below. This example uses the `colors` export from **Anchor** which is the basis for <Link to="/theme">themes</Link>,
-as well as the <Link to="/components/button/">`Button`</Link> component.
+in your jsx as shown below. This example uses the <Link to="/theme/colors/">`colors`</Link> export
+from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> component.
 
 ```tsx live
     <Hero
@@ -85,7 +87,7 @@ as well as the <Link to="/components/button/">`Button`</Link> component.
             <td>
                 <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td><Link to="/theme">white.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
         </tr>
         <tr>
             <td>minHeight</td>

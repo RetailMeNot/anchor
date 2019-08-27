@@ -3,21 +3,24 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
-import { AutoComplete } from '@retailmenot/anchor';
-import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { css } from 'styled-components';
+import {
+    Col,
+    colors,
+    RootTheme,
+    Row,
+    ThemeProvider,
+    Typography,
+} from '@retailmenot/anchor';
+import styled, { css } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
-import { RootTheme } from '../../../../../src/theme';
 import { Footer } from '../';
 import { EnhancedSideNavigation } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
-import { Row, Col, Search, Typography } from '../../../../../src';
 // ASSETS
 import logo from './anchor-logo.svg';
-// THEME
-import { colors } from '../../../../../src/theme';
 
 const StyledPageElement = styled('div')``;
 
@@ -98,7 +101,7 @@ const StyledContentMain = styled('main')`
     }
 `;
 
-const StyledLogoContainer = styled('a')`
+const StyledLogoContainer = styled(Link)`
     box-sizing: border-box;
     border-right: solid thin ${colors.silver.base};
     margin-left: 1rem;
@@ -180,52 +183,97 @@ Components.h1 = ({ children, ...props }: any) => (
     />
 );
 Components.h2 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h2"
-        lineHeight={2.3}
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h2"
+            lineHeight={2.3}
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h3 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h3"
-        lineHeight={2.5}
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h3"
+            lineHeight={2.5}
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h4 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h4"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h4"
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h5 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h5"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h5"
+            {...props}
+            children={children}
+        />
+    </>
 );
 Components.h6 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children.split(' ').join('-')}`.toLowerCase()}
-        weight={600}
-        tag="h6"
-        mb="1"
-        {...props}
-        children={children}
-    />
+    <>
+        <Typography
+            tag="a"
+            name={children
+                .split(' ')
+                .join('-')
+                .toLowerCase()}
+        />
+        <Typography
+            id={`${children.split(' ').join('-')}`.toLowerCase()}
+            weight={600}
+            tag="h6"
+            mb="1"
+            {...props}
+            children={children}
+        />
+    </>
 );
 
 Components.p = (props: any) => <Typography tag="p" {...props} />;
@@ -283,18 +331,12 @@ export const Page = ({
             <StyledHeader>
                 <Row>
                     <CenteredCol lg={2}>
-                        <StyledLogoContainer href="/">
+                        <StyledLogoContainer to="/">
                             <img alt="Anchor Logo Horizontal" src={logo} />
                         </StyledLogoContainer>
                     </CenteredCol>
                     <CenteredCol lg={6}>
-                        <AutoComplete
-                            placeholder="Search on Anchor"
-                            prefix={<Search />}
-                            shadow={false}
-                            border={false}
-                            dataSource={['1', '1', '1', '1']}
-                        />
+                        {/* TODO: Search will go here */}
                     </CenteredCol>
                     <CenteredCol lg={4}>
                         <StyledPrimaryNav>
@@ -302,15 +344,7 @@ export const Page = ({
                                 tag="a"
                                 weight={600}
                                 className="active"
-                                href="/support"
-                            >
-                                Support
-                            </Typography>
-                            <Typography
-                                tag="a"
-                                weight={600}
-                                className="active"
-                                href="/support"
+                                href="https://github.com/RetailMeNot/anchor"
                             >
                                 Github
                             </Typography>

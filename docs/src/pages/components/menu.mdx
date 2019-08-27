@@ -1,12 +1,12 @@
 import { Link } from 'gatsby';
 import { CardExample } from '../../components/CardExample';
-import { FormatTypes, ColorBlurb } from '../../components/Utils';
+import { ComponentInfo, FormatTypes, ColorBlurb } from '../../components/Utils';
 
 # Menu
 
-The `Menu` component pulls together links into a single horizontal menu bar with unified styling. It
-is composed of two components: `Menu` and `MenuItem`. `MenuItem` is a
-wrapper for the `a` tag, so any valid attribute for that element will be applied.
+<ComponentInfo title="Menu" mode="description" />
+
+`MenuItem` is a wrapper for the `a` tag, so any valid attribute for that element will be applied.
 
 ```tsx live
     <Menu
@@ -45,7 +45,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
             <td>
                 <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td><Link to="/theme">primary.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">primary.base</Link></td>
         </tr>
         <tr>
             <td>color</td>
@@ -53,7 +53,7 @@ wrapper for the `a` tag, so any valid attribute for that element will be applied
                 <ColorBlurb label="Menu" />
             </td>
             <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme">white.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
         </tr>
         <tr>
             <td>justify</td>

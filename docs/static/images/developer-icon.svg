@@ -1,0 +1,14 @@
+<svg viewBox="0 0 77 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#222" offset="0%"/>
+      <stop stop-color="#4F4F4F" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M8 2h61c4.415 0 8 3.585 8 8v47.18c0 4.416-3.585 8-8 8H8c-4.415 0-8-3.584-8-8V10c0-4.415 3.585-8 8-8z" fill="url(#a)" fill-rule="nonzero" transform="translate(0 -2)"/>
+    <text font-family="AvenirNext-Heavy, Avenir Next" font-size="34" font-weight="600" fill="#00FF1A" transform="translate(0 -2)">
+      <tspan x="9.356" y="34">&gt;_</tspan>
+    </text>
+  </g>
+</svg>

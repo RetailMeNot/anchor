@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import { BadgeWithParentExample } from '../../components/BadgeWithParentExample';
-import { FormatTypes, ColorBlurb } from '../../components/Utils';
+import { FormatTypes, ColorBlurb, ComponentInfo } from '../../components/Utils';
 
 # Badge
 
-The `Badge` component displays a dot or a circle with a count. It is normally used to indicate pending items (items in cart, unread messages, etc.)
+<ComponentInfo title="Badge" mode="description" />
 
 ## Usage
 
@@ -223,7 +223,7 @@ export const BadgeWithParentExample = () => {
             <td>textColor</td>
             <td><ColorBlurb defaultTheme label="count" /></td>
             <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme">white.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
         </tr>
     </tbody>
 </table>
