@@ -2,7 +2,8 @@
 import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system'
 // COMPONENTS
 import { Typography } from '../../Typography';
 
@@ -18,6 +19,7 @@ export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
     prefix?: any;
     suffix?: any;
     size?: 'sm' | 'lg';
+    background?: string;
 }
 
 const StyledItem = styled('a')<ItemProps>`
@@ -26,17 +28,19 @@ const StyledItem = styled('a')<ItemProps>`
     border-radius: base;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    transition: background-color 500ms;
-    background-color: neutrals.white.base;
+    transition: background 500ms;
+    ${({ background = 'white' }) => css({
+        background: th.color(background),
+    })}
     text-decoration: none;
     height: 2.75rem;
 
     &:hover {
-        background-color: neutrals.silver.light;
+        background: ${th.color('neutrals.silver.light')};
     }
 
     &.active {
-        background-color: neutrals.silver.base;
+        background: ${th.color('neutrals.silver.base')};
     }
 `;
 
