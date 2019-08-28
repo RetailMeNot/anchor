@@ -16,6 +16,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     color?: string;
     wrap?: boolean;
     display?: string;
+    delay?: string;
 }
 
 interface TooltipContainerState {
@@ -41,13 +42,17 @@ interface TooltipElementProps {
     background?: string;
     color?: string;
     maxWidth?: string;
+    delay?: string;
 }
 
 const TooltipElement = styled('div')<TooltipElementProps>`
     position: absolute;
     box-sizing: border-box;
     ${({ background = 'rgba(0, 0, 0, 0.8)', color = 'white' }) =>
-        css({ background, color })};
+        css({
+            background: th.color(background),
+            color,
+        })};
     border-radius: base;
     font-family: ${th('typography.fontFamily')};
     font-size: 0.8rem;
@@ -57,6 +62,9 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     transition: opacity 250ms ease-in-out;
 
     &.active {
+        ${({ delay }) => css({
+            transitionDelay: delay,
+        })}
         opacity: 1;
         visibility: visible;
     }
@@ -120,6 +128,7 @@ export class Tooltip extends React.Component<
             background,
             color,
             maxWidth,
+            delay,
             ...props
         } = this.props;
         const {
@@ -143,6 +152,7 @@ export class Tooltip extends React.Component<
                     className={classNames('anchor-tooltip-element', {
                         active: !hidden,
                     })}
+                    delay={delay}
                     ref={this.tooltipRef}
                     position={position}
                     height={height}
