@@ -25,7 +25,8 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     border?: string;
     background?: string;
     spacing?: number;
-    indent?: string;
+    arrowIndent?: string;
+    arrowSize?: string;
 }
 
 interface DropDownState {
@@ -214,14 +215,12 @@ export class DropDown extends React.Component<DropDownProps> {
         const unclick$ = merge(domClick$, escapeKey$);
 
         this.unclicked$ = unclick$.subscribe(clicked => {
-            console.log('unclicked$', clicked);
             this.setState({ clicked });
         });
 
         this.hovered$ = merge(mouseEnter$, mouseLeave$, unclick$)
             .pipe(distinctUntilChanged())
             .subscribe(hovered => {
-                console.log('hovered$', hovered);
                 this.setState({ hovered });
             });
     }
@@ -268,7 +267,8 @@ export class DropDown extends React.Component<DropDownProps> {
             className,
             overlay,
             spacing,
-            indent = '0.75rem',
+            arrowIndent = '0.75rem',
+            arrowSize,
             showArrow = true,
             position = 'bottom',
             shadow = '0 0 0.5rem 0 rgba(0,0,0,0.2)',
@@ -326,7 +326,8 @@ export class DropDown extends React.Component<DropDownProps> {
                     {showArrow && (
                         <Arrow
                             position={position}
-                            indent={indent}
+                            size={arrowSize}
+                            indent={arrowIndent}
                             background={background}
                             shadow={shadow}
                             border={border}
