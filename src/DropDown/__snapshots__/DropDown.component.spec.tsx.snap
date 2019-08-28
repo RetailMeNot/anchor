@@ -1,15 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: DropDown should render in the DOM 1`] = `
-.c2 {
+.c3 {
   position: absolute;
-  width: 0;
-  height: 0;
-  top: -0.4rem;
-  left: 0.75rem;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid white;
+  box-sizing: border-box;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: light;
+  background: white;
+  box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: calc(-0.625rem / 2);
+  left: calc(50% - 0.625rem / 2);
 }
 
 .c0 {
@@ -30,40 +35,58 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   align-items: center;
   min-height: 1rem;
   min-width: 1rem;
-  padding-bottom: 0.75rem;
-  margin-bottom: -0.75rem;
+  padding-bottom: 12px;
+  margin-bottom: -12px;
 }
 
 .c1 {
-  min-width: 10rem;
   position: absolute;
-  padding: 0.25rem auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   z-index: 1;
-  background-color: neutrals.white.base;
-  box-shadow: 0 0 0.5rem 0 neutrals.ash.base;
+  min-width: 10rem;
+  border: light;
+  box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
+  visibility: hidden;
   border-radius: base;
-  border: thin solid neutrals.silver.dark;
-  top: 0px;
   left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0px,0px,0);
+  -ms-transform: translate3d(0px,0px,0);
+  transform: translate3d(0px,0px,0);
+}
+
+.c2 {
+  box-sizing: border-box;
+  border-radius: inherit;
+  width: 100%;
+  z-index: 2;
+  background: white;
 }
 
 <div
   className="anchor-drop-down c0"
   onClick={[Function]}
+  spacing={12}
 >
   <div
-    className="anchor-down-down-container c1"
-    height={0}
-    hidden={true}
-    position="bottom"
-    width={0}
+    className="anchor-drop-down-container c1"
+    height={null}
+    width={null}
   >
     <div
       className="c2"
-    />
-    <div>
-      1
+    >
+      <div>
+        1
+      </div>
     </div>
+    <div
+      className="c3"
+    />
   </div>
 </div>
 `;
