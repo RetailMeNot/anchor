@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system'
+import { th } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
@@ -29,9 +29,10 @@ const StyledItem = styled('a')<ItemProps>`
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background 500ms;
-    ${({ background = 'white' }) => css({
-        background: th.color(background),
-    })}
+    ${({ background = 'white' }) =>
+        css({
+            background: th.color(background),
+        })}
     text-decoration: none;
     height: 2.75rem;
 

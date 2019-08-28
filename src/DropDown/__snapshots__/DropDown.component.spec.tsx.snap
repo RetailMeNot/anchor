@@ -49,9 +49,9 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   z-index: 1;
   min-width: 10rem;
   border: light;
+  border-radius: base;
   box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
   visibility: hidden;
-  border-radius: base;
   left: 0;
   top: 0;
   -webkit-transform: translate3d(0px,0px,0);

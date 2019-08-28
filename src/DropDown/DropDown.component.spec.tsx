@@ -24,7 +24,9 @@ describe('Component: DropDown', () => {
         // I'm creating a variable here to cast to any and avoid
         // a "toHaveStyleRule" type def error.
         // todo: include the type def
-        let expectation: any = expect(wrapper.find('div.anchor-drop-down-container'));
+        let expectation: any = expect(
+            wrapper.find('div.anchor-drop-down-container')
+        );
         expectation.toHaveStyleRule('visibility', 'visible');
 
         wrapper.find('div.anchor-drop-down').simulate('click');

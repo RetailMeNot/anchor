@@ -62,9 +62,10 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     transition: opacity 250ms ease-in-out;
 
     &.active {
-        ${({ delay }) => css({
-            transitionDelay: delay,
-        })}
+        ${({ delay }) =>
+            css({
+                transitionDelay: delay,
+            })}
         opacity: 1;
         visibility: visible;
     }

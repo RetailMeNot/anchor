@@ -10,20 +10,20 @@ exports[`Component: Item should be defined 1`] = `
   border-radius: 4px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  -webkit-transition: background-color 500ms;
-  transition: background-color 500ms;
-  background-color: #FFFFFF;
+  -webkit-transition: background 500ms;
+  transition: background 500ms;
+  background: white;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 2.75rem;
 }
 
 .c0:hover {
-  background-color: #FAFAFA;
+  background: #FAFAFA;
 }
 
 .c0.active {
-  background-color: #F1F1F1;
+  background: #F1F1F1;
 }
 
 .c1 {

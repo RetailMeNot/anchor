@@ -23,6 +23,7 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     shadow?: string;
     showArrow?: boolean;
     border?: string;
+    borderRadius?: string;
     background?: string;
     spacing?: number;
     arrowIndent?: string;
@@ -104,6 +105,7 @@ interface DropDownContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     shadow?: string;
     border?: string;
     background?: string;
+    borderRadius?: string;
     active?: boolean;
     children?: any;
     className?: string;
@@ -117,13 +119,13 @@ const StyledDropDownContainer = styled('div')<DropDownContainerProps>`
     z-index: 1;
     min-width: 10rem;
 
-    ${({ border, shadow, active }) =>
+    ${({ border, borderRadius, shadow, active }) =>
         css({
             border,
+            borderRadius,
             boxShadow: shadow,
             visibility: active ? 'visible' : 'hidden',
         })};
-    border-radius: base;
 
     ${({ position, height, width, containerHeight, containerWidth }) =>
         positionVariants(
@@ -273,6 +275,7 @@ export class DropDown extends React.Component<DropDownProps> {
             position = 'bottom',
             shadow = '0 0 0.5rem 0 rgba(0,0,0,0.2)',
             border = 'light',
+            borderRadius = 'base',
             background = 'white',
             trigger,
             ...props
@@ -315,6 +318,7 @@ export class DropDown extends React.Component<DropDownProps> {
                     ref={this.containerReference}
                     shadow={shadow}
                     border={border}
+                    borderRadius={borderRadius}
                     position={position}
                     active={showDropdown}
                     height={height}

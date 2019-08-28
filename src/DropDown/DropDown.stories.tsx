@@ -32,7 +32,7 @@ const MockList = () => (
     <List>
         {listItemArray.map(({ key, label }: any) => (
             <ListItem
-                background='transparent'
+                background="transparent"
                 key={key}
                 onClick={() => {
                     /* tslint:disable no-console */
@@ -164,11 +164,19 @@ storiesOf('Components/DropDown', module)
                                             text('background', '') || undefined
                                         }
                                         border={text('border', '') || undefined}
-                                        arrowIndent={text('arrowIndent', '') || undefined}
-                                        arrowSize={text('arrowSize', '') || undefined}
+                                        borderRadius={
+                                            text('borderRadius', '') ||
+                                            undefined
+                                        }
+                                        arrowIndent={
+                                            text('arrowIndent', '') || undefined
+                                        }
+                                        arrowSize={
+                                            text('arrowSize', '') || undefined
+                                        }
                                         spacing={
                                             spacing
-                                                ? parseInt(spacing)
+                                                ? parseInt(spacing, 10)
                                                 : undefined
                                         }
                                     >
