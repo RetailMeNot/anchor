@@ -35,8 +35,8 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   align-items: center;
   min-height: 1rem;
   min-width: 1rem;
-  padding-bottom: 12px;
-  margin-bottom: -12px;
+  padding-bottom: 0.75rem;
+  margin-bottom: -0.75rem;
 }
 
 .c1 {
@@ -69,8 +69,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 
 <div
   className="anchor-drop-down c0"
-  onClick={[Function]}
-  spacing={12}
+  spacing="0.75rem"
 >
   <div
     className="anchor-drop-down-container c1"

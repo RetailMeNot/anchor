@@ -119,76 +119,64 @@ storiesOf('Components/DropDown', module)
             </StyledStory>
         </ThemeProvider>
     ))
-
-    .add('Knobs Demo', () => {
-        // Using "text" so that we can distinguish between
-        // `undefined` spacing and `0` (for default behavior)
-        const spacing = text('spacing', '');
-
-        return (
-            <ThemeProvider theme={RootTheme}>
-                <StyledStory>
-                    <Container>
-                        <Row>
-                            <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
-                                <div>
-                                    <Typography tag="h1">DropDown</Typography>
-                                    <DropDown
-                                        overlay={<MockList />}
-                                        position={select<Position>(
-                                            'Dropdown Position',
-                                            [
-                                                'topStart',
-                                                'top',
-                                                'topEnd',
-                                                'rightStart',
-                                                'right',
-                                                'rightEnd',
-                                                'bottomEnd',
-                                                'bottom',
-                                                'bottomStart',
-                                                'leftEnd',
-                                                'left',
-                                                'leftStart',
-                                            ],
-                                            'bottom'
-                                        )}
-                                        trigger={select<'click' | 'hover'>(
-                                            'Dropdown Trigger',
-                                            ['click', 'hover'],
-                                            'hover'
-                                        )}
-                                        showArrow={boolean('showArrow', true)}
-                                        shadow={text('shadow', '') || undefined}
-                                        background={
-                                            text('background', '') || undefined
-                                        }
-                                        border={text('border', '') || undefined}
-                                        borderRadius={
-                                            text('borderRadius', '') ||
-                                            undefined
-                                        }
-                                        arrowIndent={
-                                            text('arrowIndent', '') || undefined
-                                        }
-                                        arrowSize={
-                                            text('arrowSize', '') || undefined
-                                        }
-                                        spacing={
-                                            spacing
-                                                ? parseInt(spacing, 10)
-                                                : undefined
-                                        }
-                                    >
-                                        <Button>
-                                            {text('Dropdown Text', 'Dropdown')}
-                                        </Button>
-                                    </DropDown>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </StyledStory>
-            </ThemeProvider>
-        );
-    });
+    .add('Knobs Demo', () => (
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Container>
+                    <Row>
+                        <Col offset={{ xs: 3, sm: 3, md: 3, lg: 3 }} lg={4}>
+                            <div>
+                                <Typography tag="h1">DropDown</Typography>
+                                <DropDown
+                                    overlay={<MockList />}
+                                    position={select<Position>(
+                                        'Dropdown Position',
+                                        [
+                                            'topStart',
+                                            'top',
+                                            'topEnd',
+                                            'rightStart',
+                                            'right',
+                                            'rightEnd',
+                                            'bottomEnd',
+                                            'bottom',
+                                            'bottomStart',
+                                            'leftEnd',
+                                            'left',
+                                            'leftStart',
+                                        ],
+                                        'bottom'
+                                    )}
+                                    trigger={select<'click' | 'hover' | 'both'>(
+                                        'Dropdown Trigger',
+                                        ['click', 'hover', 'both'],
+                                        'hover'
+                                    )}
+                                    showArrow={boolean('showArrow', true)}
+                                    shadow={text('shadow', '') || undefined}
+                                    background={
+                                        text('background', '') || undefined
+                                    }
+                                    border={text('border', '') || undefined}
+                                    borderRadius={
+                                        text('borderRadius', '') || undefined
+                                    }
+                                    arrowIndent={
+                                        text('arrowIndent', '') || undefined
+                                    }
+                                    arrowSize={
+                                        text('arrowSize', '') || undefined
+                                    }
+                                    spacing={text('spacing', '') || undefined}
+                                >
+                                    <Button>
+                                        {text('Dropdown Text', 'Dropdown')}
+                                    </Button>
+                                </DropDown>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </StyledStory>
+        </ThemeProvider>
+    ));

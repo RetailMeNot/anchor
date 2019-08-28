@@ -19,7 +19,7 @@ describe('Component: DropDown', () => {
     });
     test('should toggle when clicked', () => {
         const wrapper = mount(subject);
-        wrapper.find('div.anchor-drop-down').simulate('click');
+        wrapper.setState({ clicked: true });
 
         // I'm creating a variable here to cast to any and avoid
         // a "toHaveStyleRule" type def error.
@@ -29,7 +29,9 @@ describe('Component: DropDown', () => {
         );
         expectation.toHaveStyleRule('visibility', 'visible');
 
-        wrapper.find('div.anchor-drop-down').simulate('click');
+        // enzyme's simulate('click') calls the onClick prop directly
+        // which we're no longer using
+        wrapper.setState({ clicked: false });
 
         expectation = expect(wrapper.find('div.anchor-drop-down-container'));
         expectation.toHaveStyleRule('visibility', 'hidden');
