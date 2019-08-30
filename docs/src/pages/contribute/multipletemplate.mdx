@@ -1,0 +1,149 @@
+import { Link } from 'gatsby';
+import { Button, colors } from '@retailmenot/anchor';
+import { ExampleHeader, ExampleLink } from '../../components/TemplateExample';
+import { ApiTable, ComponentInfo } from '../../components/Utils';
+
+*This is a template for documenting a component that has one or more
+sub-components. <Link to="/components/collapse/">`Collapse`</Link> and <Link to="/components/hero/">`Hero`</Link> documentation
+follow this pattern.*
+
+*Note that Markdown files are interpreted on GitHub so the below link shows the `blame` view which is
+pre-rendered.*
+
+<Button
+    onClick={() => {
+        window.open('//github.com/RetailMeNot/anchor/blame/docs/contributing/docs/src/pages/contribute/multipletemplate.mdx');
+    }}
+    colorTheme={colors.dealEnvy}
+>
+    View Source with Comments
+</Button>
+
+---
+
+# Name of Component
+
+<!--
+This component pulls the description of a page/component from the 'sections' object located in
+the '/docs/src/components/Utils' folder.
+-->
+<ComponentInfo title="ComponentInfo" mode="description" />
+
+<!--
+This template assumes that all that is needed to show the initial example is the Live Code Editor.
+If that is not the case, please refer to the 'Example Component' template. The below example is
+using the 'Collapse' component.
+-->
+Nulla eros risus, `scelerisque` eget erat id, pharetra blandit erat. Suspendisse iaculis augue ut
+magna sodales, eu molestie ex lobortis. Mauris ultricies euismod facilisis. Praesent volutpat diam
+leo, in aliquet eros cursus sit amet. Aliquam rutrum ligula in malesuada tincidunt. Nam eget ipsum
+non est aliquet euismod in eu sem.
+
+<!--
+It's a good idea to put all props in the code editor so the user can try them all immediately.
+Documentation on how to use the code block and live code editor are available in
+'/docs/src/components/CodePreview/CodePreview.component.tsx'.
+-->
+```tsx live
+<Collapse
+    closedIcon={<ArrowForward />}
+    closedText={'Open Me'}
+    hasBottomBorder={true}
+    isOpen={false}
+    openedIcon={<ArrowBack />}
+    openedText={'Close Me'}
+    variant={'comfortable'}
+>
+    <div>Hello world.</div>
+</Collapse>
+```
+
+## Name of Second Component
+
+<!--
+Give an exanation what this component is for and how it relates to the main component above. Then
+provide another example of its usage.
+-->
+Maecenas sapien mi, gravida eu imperdiet vel, facilisis et nisl. Nullam massa elit, facilisis
+gravida nisl venenatis, aliquam feugiat ex. Donec dictum justo quis elementum vestibulum. Etiam nisl
+velit, varius bibendum semper in, egestas vel ex.
+
+<!--
+It's a good idea to put all props in the code editor so the user can try them all immediately.
+Documentation on how to use the code block and live code editor are available in
+'/docs/src/components/CodePreview/CodePreview.component.tsx'.
+-->
+```tsx live
+<CollapseGroup
+    accordion={true}
+    closedIcon={<ArrowForward />}
+    openedIcon={<ArrowBack />}
+    openIndex={1}
+    variant="compact"
+>
+    <Collapse>
+        <Typography pl="5">
+            I will appear and disappear when the rendered button is clicked!
+        </Typography>
+    </Collapse>
+    <Collapse>
+        <Typography pl="5">
+            I will also appear and disappear when the rendered button is clicked!
+        </Typography>
+    </Collapse>
+</CollapseGroup>
+```
+
+## API's
+
+---
+
+<!--
+    The 'ApiTable' component accepts an array of objects and uses them to draw the API. For more
+    information on its use, refer to '/src/docs/components/Utils/ApiTable.component.tsx'.
+-->
+### Name of First Component
+<ApiTable data={[
+    {
+        property: 'propertyName',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName2',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName3',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+]} />
+
+---
+
+### Name of Second Component
+<ApiTable data={[
+    {
+        property: 'propertyName',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName2',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName3',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+]} />

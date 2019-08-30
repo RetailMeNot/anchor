@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import { Typography } from '@retailmenot/anchor';
-import { Link } from 'gatsby';
 // COMPONENTS
 import { sections, SiteLink } from '../Utils';
 
@@ -45,7 +44,7 @@ export const ComponentInfo = ({
             <>
                 {components.map(
                     component =>
-                        !component.hide && (
+                        !component.hide && component.description && (
                             <StyledArticle key={component.title.toLowerCase()}>
                                 <Typography tag="h3" weight="600">
                                     {component.title}
