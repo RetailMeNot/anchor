@@ -1,0 +1,158 @@
+import { Link } from 'gatsby';
+import { Button, colors } from '@retailmenot/anchor';
+import { ExampleHeader, ExampleLink } from '../../components/TemplateExample';
+import { ApiTable, ComponentInfo } from '../../components/Utils';
+
+*This is a template for documenting a component where it was necessary to create 'Example'
+components. <Link to="/components/card/">`Card`</Link> and <Link to="/components/card/">`Modal`</Link> documentation
+follow this pattern.*
+
+*Note that Markdown files are interpreted on GitHub so the below link shows the `blame` view which is
+pre-rendered.*
+
+<Button
+    onClick={() => {
+        window.open('//github.com/RetailMeNot/anchor/blame/docs/contributing/docs/src/pages/contribute/exampletemplate.mdx');
+    }}
+    colorTheme={colors.dealEnvy}
+>
+    View Source with Comments
+</Button>
+
+---
+
+# Name of Component
+
+<!--
+This component pulls the description of a page/component from the 'sections' object located in
+the '/docs/src/components/Utils' folder.
+-->
+<ComponentInfo title="ComponentInfo" mode="description" />
+
+<!--
+The template assumes your example needed the creation of other components in order to effectively
+document them. In those instances, example components should be placed in '/docs/src/components'.
+
+Linking to other pages within the doc site should use the 'Link' component from 'gatsby'. Links to
+external sites should use the standard 'a' tag.
+-->
+Nulla eros risus, `scelerisque` eget erat id, pharetra blandit erat. Suspendisse iaculis augue ut
+magna sodales, eu molestie ex lobortis. Mauris ultricies euismod facilisis. Praesent volutpat diam
+leo, in aliquet eros cursus sit amet. Aliquam rutrum ligula in malesuada tincidunt. Nam eget ipsum
+non est aliquet euismod in eu sem.
+
+Aenean a lorem id risus pellentesque elementum. Integer
+pellentesque sem sed mollis consectetur. Pellentesque purus ligula, vulputate posuere vulputate nec,
+porta vitae mi. Duis in nunc lectus. Quisque finibus nunc tellus, vitae ultrices nisi sodales at.
+
+<!--
+Because this site uses MDX (https://mdxjs.com/), any component can be imported and used in a
+`.mdx` file along with markdown.
+-->
+<ExampleHeader vertical>
+    <ExampleLink href="//www.cnn.com">CNN</ExampleLink>
+    <ExampleLink href="//www.bbc.com">BBC</ExampleLink>
+</ExampleHeader>
+
+---
+
+<!--
+This title must appear here.
+-->
+## Putting it Together
+
+<!--
+Explain the steps that need to be taken to construct the component, and provide the code for the
+components that were created using a code block. Documentation on how to use the code block is
+available in '/docs/src/components/CodePreview/CodePreview.component.tsx'.
+-->
+Maecenas sapien mi, gravida eu imperdiet vel, facilisis et nisl. Nullam massa elit, facilisis
+gravida nisl venenatis, aliquam feugiat ex. Donec dictum justo quis elementum vestibulum. Etiam nisl
+velit, varius bibendum semper in, egestas vel ex.
+
+```jsx
+import * as React from 'react';
+import styled from '@xstyled/styled-components';
+import { colors } from '@retailmenot/anchor';
+
+interface ExampleHeaderProps {
+    children?: any;
+    vertical?: boolean;
+}
+
+const StyledExampleHeader = styled('header')<ExampleHeaderProps>`
+    background-color: ${colors.savvyCyan.dark};
+    color: ${colors.white.base};
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    display:flex;
+    max-width:10rem;
+
+    ${({vertical}) => vertical ? 'flex-direction: column' : null}
+`;
+
+export const ExampleHeader = ({ children, vertical }: ExampleHeaderProps): React.ReactElement<any> =>
+    <StyledExampleHeader vertical={vertical}>{children}</StyledExampleHeader>;
+```
+
+<!--
+If there are more than 1 example components built, continue explaining the steps and what each of
+them are for. Always make sure there is a title for the code block like below.
+-->
+Sed vestibulum, neque a pellentesque dictum, lorem nibh condimentum velit, at tristique nisi mauris
+consectetur ligula. Sed vel elit faucibus, egestas est vel, malesuada augue. Integer tellus quam,
+posuere eget ultricies varius, pellentesque ultrices nibh.
+
+###### ExampleLink
+```jsx hideTitle
+import * as React from 'react';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+
+const StyledExampleLink = styled('a')`
+    color: neutrals.white.base;
+    border-radius: 0.25rem;
+    padding:0 1rem;
+    font-weight:bold;
+    font-size:1.25rem;
+    text-decoration:none;
+    font-family: ${th('typography.fontFamily')}
+`;
+
+export const ExampleLink = (props: any): React.ReactElement<any> =>
+    <StyledExampleLink target="_blank" {...props}>{props.children}</StyledExampleLink>;
+```
+
+<!--
+Finally, use the live code editor to actually pull together the final example.  The example
+components will have to be imported and then added to the 'CodePreview' component. To do this,
+search the file for '// EXAMPLE COMPONENTS <-' to see where the components should be both imported
+and then added.
+-->
+Vivamus laoreet sapien porta ex sagittis pellentesque. Pellentesque quis posuere turpis, nec
+condimentum massa.
+
+```tsx live
+<ExampleHeader vertical>
+    <ExampleLink href="//www.cnn.com">CNN</ExampleLink>
+    <ExampleLink href="//www.bbc.com">BBC</ExampleLink>
+</ExampleHeader>
+```
+
+---
+
+## API
+
+<!--
+    The 'ApiTable' component accepts an array of objects and uses them to draw the API. For more
+    information on its use, refer to '/src/docs/components/Utils/ApiTable.component.tsx'.
+-->
+<ApiTable data={[
+    {
+        property: 'vertical',
+        description: `Indicates if the <pre>Example Menu</pre> is vertical in orientation.`,
+        type: 'boolean',
+        default: 'false',
+    },
+]} />

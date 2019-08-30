@@ -1,0 +1,147 @@
+import { Link } from 'gatsby';
+import { Button } from '@retailmenot/anchor';
+
+# Contributing to Anchor
+
+You've decided to take the plunge and contribute to **Anchor**. That's great! There are three routes
+to help contribute, developing **Anchor** components, developing documentation for those components,
+or both. There is a detailed guide on how to contribute components in the **Anchor** repository
+which you can access by clicking the button below.
+
+<br />
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/CONTRIBUTING.md")}>
+    How to Contribute to Anchor
+</Button>
+
+---
+
+## Contributing to the Doc Site
+
+> In general, if you've submitted a component to **Anchor**, it's necessary to also provide
+documentation for this doc site as well, even if its only a basic stub. This section will explain
+the environment, available tools, templates and file locations in order to do that.
+
+<br />
+
+### Environment
+
+This documentation site is built on <a href="//www.gatsbyjs.org/" target="_blank">Gatsby</a>
+(currently `2.13.60`) and largely uses <a href="//mdxjs.com/" target="_blank">MDX</a> for the layout
+of content. This gives a great deal of flexibility when writing documentation as it provides the
+simplicity of <a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a>
+with the added benefit of being able to add React components.
+
+<br />
+
+### Folder Structure & Navigation
+
+New documentation on components should be placed in the `components` sub-folder as noted below:
+
+```txt hideTitle
+docs/src/pages/components/
+    <COMPONENT_NAME>.mdx
+```
+
+When adding a new component it's also necessary to add an entry to the `sections.ts` file in order
+for the site navigation to render it. The file can be found here:
+
+```txt hideTitle
+docs/src/components/Utils/
+    sections.ts
+```
+
+The `sections.ts` file is an exported array of objects which is used by multiple components on the site.
+Any new component entries should be placed within the array associated to the `links` property. Currently
+the listing of components is in alphabetical order.
+
+<br />
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/sections.ts#L16")}>
+    sections.ts
+</Button>
+
+<br /><br />
+
+Below is an example of the format a new entry should take.
+
+* `title`: The title of the new component and what appears in both the side navigation
+and the listing of components found <Link to="/components">here</Link>.
+* `path`: Where the component lives in the folder structure. Paths are all lowercase with no
+underscores, dashes, etc.  A correctly formed path will enable a change in appearance when visiting
+that link.
+* `description`: A short description of the component. Plain text only, no HTML tags, no markdown.
+
+<br />
+
+```txt hideTitle
+{
+    title: 'ExampleComponent',
+    path: '/components/examplecomponent/',
+    description: `An example description.`,
+}
+```
+
+<br />
+
+### Available Tools
+
+There are many components used to make formatting and developing the documentation a little easier.
+A forth-coming section on components will be made available in the near future to further explain,
+but until then most of the following components have example usage noted at the top of the file.
+
+##### ApiTable
+Renders the API section at the bottom of the page. Accepts both strings, components and arrays of
+both for the description section. HTML tags may be used within the strings.
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/ApiTable.component.tsx")}>
+    ApiTable
+</Button>
+
+<br /><br />
+
+##### ColorBlurb
+One intent of the doc site is to try and replace commonly used terms and explanations with
+components. `ColorBlurb` is the first such component. It is used to explain the frequently used
+props, `color` and `background`.
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/ColorBlurb.component.tsx")}>
+    ColorBlurb
+</Button>
+
+<br /><br />
+
+##### ComponentInfo
+To try and keep from repeating the same information, this component appears at the top of all `.mdx`
+files within `/src/docs/pages/components`. It pulls the description of a component from `sections`
+and renders it at the top of the page.
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/ComponentInfo.component.tsx")}>
+    ComponentInfo
+</Button>
+
+<br /><br />
+
+##### FormatTypes
+This component formats the text in the `type` column in the `ApiTable`.
+
+<Button onClick={() => window.open("//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/FormatTypes.component.tsx")}>
+    FormatTypes
+</Button>
+
+<br /><br />
+
+### Templates
+
+There are 3 templates available to help a contributor get started. They are meant as a starting
+point, as there is no perfect one-size-fits-all template as many components have their own nuances.
+Each template has a considerable amount of comments made within them to help point out components
+and stylistic choices.
+
+* <Link to="/contribute/basictemplate">Basic Component</Link>: Documenting a
+basic component; typically it has no sub-components and no examples outside of the live code editor
+are needed.
+* <Link to="/contribute/exampletemplate">Example Component</Link>: Documenting a component where it
+was necessary to create 'Example' components.
+* <Link to="/contribute/multipletemplate">Multiple Component</Link>: Documenting a component that
+has one or more sub-components..

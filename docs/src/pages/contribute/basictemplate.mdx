@@ -1,0 +1,87 @@
+import { Link } from 'gatsby';
+import { Button, colors } from '@retailmenot/anchor';
+import { ExampleHeader, ExampleLink } from '../../components/TemplateExample';
+import { ApiTable, ComponentInfo } from '../../components/Utils';
+
+*This is a template for documenting a basic component; typically it has no sub-components and no
+examples outside of the live code editor are needed. <Link to="/components/avatar/">`Avatar`</Link> and <Link to="/components/typography/">`Typography`</Link> documentation
+follow this pattern.*
+
+*Note that Markdown files are interpreted on GitHub so the below link shows the `blame` view which is
+pre-rendered.*
+
+<Button
+    onClick={() => {
+        window.open('//github.com/RetailMeNot/anchor/blame/docs/contributing/docs/src/pages/contribute/basictemplate.mdx');
+    }}
+    colorTheme={colors.dealEnvy}
+>
+    View Source with Comments
+</Button>
+
+---
+
+# Name of Component
+
+<!--
+This component pulls the description of a page/component from the 'sections' object located in
+the '/docs/src/components/Utils' folder.
+-->
+<ComponentInfo title="ComponentInfo" mode="description" />
+
+<!--
+This template assumes that all that is needed to show the example is the Live Code Editor.
+If that is not the case, please refer to the 'Example Component' template. The below example is
+using the 'Typography' component.
+-->
+Nulla eros risus, `scelerisque` eget erat id, pharetra blandit erat. Suspendisse iaculis augue ut
+magna sodales, eu molestie ex lobortis. Mauris ultricies euismod facilisis. Praesent volutpat diam
+leo, in aliquet eros cursus sit amet. Aliquam rutrum ligula in malesuada tincidunt. Nam eget ipsum
+non est aliquet euismod in eu sem.
+
+<!--
+It's a good idea to put all props in the code editor so the user can try them all immediately.
+Documentation on how to use the code block and live code editor are available in
+'/docs/src/components/CodePreview/CodePreview.component.tsx'.
+-->
+```tsx live
+<div>
+    <Typography tag="p">
+        The quick <Typography tag="span" transform="uppercase" color="#ff0000" weight="bolder">red</Typography> fox
+    </Typography>
+    <Typography tag="h2" color="charcoal" hue="light">
+        jumped
+    </Typography>
+    <Typography tag="p">
+        over the <Typography tag="span" scale="28" color="brown">brown</Typography> lazy dog.
+    </Typography>
+</div>
+```
+---
+
+## API
+
+<!--
+    The 'ApiTable' component accepts an array of objects and uses them to draw the API. For more
+    information on its use, refer to '/src/docs/components/Utils/ApiTable.component.tsx'.
+-->
+<ApiTable data={[
+    {
+        property: 'propertyName',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName2',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName3',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+]} />

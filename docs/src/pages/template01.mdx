@@ -1,0 +1,124 @@
+import { Link } from 'gatsby';
+import { ExampleHeader, ExampleLink } from '../components/TemplateExample';
+
+*This is an example of documenting a component where it was necessary to create 'Example'
+components. <Link to="/components/card/">`Card`</Link> and <Link to="/components/card/">`Modal`</Link> documentation
+follow this pattern.*
+
+# Name of Component
+
+Description of component. Use the `ComponentInfo` component to display this information from
+`sections` (both are from the `Utils` component: `/docs/src/components/Utils`).
+
+Then provide an immediate example of that component. The template assumes your example needed the
+creation of other components in order to effectively document them. In those instances, example
+components should be placed in `/docs/src/components`.
+
+Linking to other pages within the doc site should use the `Link` component from `gatsby`. Links to
+external sites should use the standard `a` tag.
+
+Because this site uses <a href="https://mdxjs.com/" target="_blank">`MDX`</a>, any component can be
+imported and used in a `.mdx` file along with markdown like
+this:
+
+<ExampleHeader vertical>
+    <ExampleLink href="//www.cnn.com">CNN</ExampleLink>
+    <ExampleLink href="//www.bbc.com">BBC</ExampleLink>
+</ExampleHeader>
+
+---
+
+## Putting it Together
+
+Explain the steps that need to be taken to construct the component, and provide the code for the
+components that were created using a code block. Documentation on how to use the code block is
+available in `/docs/src/components/CodePreview/CodePreview.component.tsx`.
+
+```jsx
+import * as React from 'react';
+import styled from '@xstyled/styled-components';
+import { colors } from '@retailmenot/anchor';
+
+interface ExampleHeaderProps {
+    children?: any;
+    vertical?: boolean;
+}
+
+const StyledExampleHeader = styled('header')<ExampleHeaderProps>`
+    background-color: ${colors.savvyCyan.dark};
+    color: ${colors.white.base};
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    display:flex;
+    max-width:10rem;
+
+    ${({vertical}) => vertical ? 'flex-direction: column' : null}
+`;
+
+export const ExampleHeader = ({ children, vertical }: ExampleHeaderProps): React.ReactElement<any> =>
+    <StyledExampleHeader vertical={vertical}>{children}</StyledExampleHeader>;
+
+```
+
+If there are more than 1 example components built, continue explaining the steps and what each of
+them are for. Always make sure there is a title for the code block like below.
+
+###### ExampleLink
+```jsx hideTitle
+import * as React from 'react';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+
+const StyledExampleLink = styled('a')`
+    color: neutrals.white.base;
+    border-radius: 0.25rem;
+    padding:0 1rem;
+    font-weight:bold;
+    font-size:1.25rem;
+    text-decoration:none;
+    font-family: ${th('typography.fontFamily')}
+`;
+
+export const ExampleLink = (props: any): React.ReactElement<any> =>
+    <StyledExampleLink target="_blank" {...props}>{props.children}</StyledExampleLink>;
+```
+
+Finally, use the live code editor to actually pull together the final example.  The example
+components will have to be imported and then added to the `CodePreview` component. To do this,
+search the file for `// EXAMPLE COMPONENTS <-` to see where the components should be both imported
+and then added.
+
+```tsx live
+<ExampleHeader vertical>
+    <ExampleLink href="//www.cnn.com">CNN</ExampleLink>
+    <ExampleLink href="//www.bbc.com">BBC</ExampleLink>
+</ExampleHeader>
+```
+
+---
+
+## API
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>vertical</td>
+            <td>
+                Indicates if the <pre>Example Menu</pre> is vertical in orientation.
+            </td>
+            <td>
+                boolean
+            </td>
+            <td>false</td>
+        </tr>
+    </tbody>
+</table>

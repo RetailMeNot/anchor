@@ -48,10 +48,7 @@ export const FormatTypes = ({
             types.map(type => {
                 if (noInterpret) {
                     return (
-                        <span
-                            key={type}
-                            className="type"
-                        >
+                        <span key={type} className="type">
                             {parse(type)}
                         </span>
                     );

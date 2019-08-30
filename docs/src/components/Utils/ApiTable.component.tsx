@@ -136,9 +136,7 @@ export const ApiTable = ({ data }: ApiTableProps): React.ReactElement<any> => (
                                               <React.Fragment key={`key-${i}`}>
                                                   {typeof description ===
                                                   'string'
-                                                      ? parse(
-                                                            description
-                                                        )
+                                                      ? parse(description)
                                                       : description}
                                               </React.Fragment>
                                           )
@@ -149,9 +147,7 @@ export const ApiTable = ({ data }: ApiTableProps): React.ReactElement<any> => (
                             </td>
                             <td>{rowData.type}</td>
                             <td>
-                                {rowData.default
-                                    ? parse(rowData.default)
-                                    : '-'}
+                                {rowData.default ? parse(rowData.default) : '-'}
                             </td>
                         </tr>
                     )

@@ -47,11 +47,12 @@ import {
 // COMPONENTS
 import * as Anchor from '../../../../src';
 // THEME
-// import { TableCSS } from '../Layout/Page/Page.component';
 import { colors } from '../../../../src/theme';
+// EXAMPLE COMPONENTS <-
 import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 import { CustomResults } from '../AutoCompleteExample';
+import { ExampleHeader, ExampleLink } from '../TemplateExample';
 
 // TODO: add CDN Inconsolata font
 
@@ -154,13 +155,13 @@ interface CodePreviewProps {
 const scope = {
     ...Anchor,
     Component,
-    // Overrides
+    // OVERRIDES
     AutoComplete,
     Collapse,
     CollapseGroup,
     Input,
 
-    // -Example Components-
+    // EXAMPLE COMPONENTS <-
     // Card
     BottomArea,
     MoreInfo,
@@ -169,6 +170,9 @@ const scope = {
     MyList,
     // AutoComplete
     CustomResults,
+    // TemplateExample
+    ExampleHeader,
+    ExampleLink,
 };
 
 /*

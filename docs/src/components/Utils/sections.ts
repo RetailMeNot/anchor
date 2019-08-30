@@ -1,4 +1,20 @@
-export const sections = [
+export interface LinkProperties {
+    description?: string;
+    hide?: boolean;
+    path?: string;
+    title: string;
+    type?: string;
+}
+
+export interface SectionProperties {
+    links: LinkProperties[];
+    pattern: string;
+    title: string;
+}
+
+interface Sections extends Array<SectionProperties> {}
+
+export const sections: Sections = [
     {
         title: 'OVERVIEW',
         pattern: '/overview',
@@ -17,7 +33,7 @@ export const sections = [
             {
                 title: 'All',
                 path: '/components/',
-                hide: true,
+                hide: false,
             },
             {
                 title: 'Autocomplete',
@@ -55,7 +71,7 @@ export const sections = [
             },
             {
                 title: 'Collapse',
-                path: '/components/collapse//',
+                path: '/components/collapse/',
                 description: `The Collapse component allows a user to click on a button and toggle
                 the rendering of its child. This site uses this component and the CollapseGroup
                 component for its side navigation. Note that it does not simply show/hide content,
@@ -69,10 +85,11 @@ export const sections = [
                 hovered over/left. This can be used to create a standard DropDown menu, although
                 it's not limited that usage.`,
             },
-            // {
-            //     title: 'Grid',
-            //     path: '/components/grid/',
-            // },
+            {
+                title: 'Grid',
+                path: '/components/grid/',
+                hide: true,
+            },
             {
                 title: 'Hero',
                 path: '/components/hero/',
@@ -95,10 +112,11 @@ export const sections = [
                 customization options, and accessibility standards. It can be configured to by of any
                 of the following types: email, number, tel and text.`,
             },
-            // {
-            //     title: 'Layout',
-            //     path: '/components/layout/',
-            // },
+            {
+                title: 'Layout',
+                path: '/components/layout/',
+                hide: true,
+            },
             {
                 title: 'List',
                 path: '/components/list/',
@@ -128,6 +146,14 @@ export const sections = [
                 description: `The Typography component lets you easily add unified text styles to the
                 page without having to create a lot of extra CSS.`,
             },
+            {
+                title: 'ComponentInfo',
+                path: '',
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia
+                    condimentum elit, id aliquet sapien sollicitudin eget. Fusce semper dapibus nisl
+                    non blandit.`,
+                hide: true,
+            },
         ],
     },
 
@@ -146,25 +172,30 @@ export const sections = [
         ],
     },
 
-    // {
-    //     title: 'UTILITIES',
-    //     pattern: '/utilities',
-    //     links: [
-    //         {
-    //             title: '[In Development]',
-    //             path: '/utilities/',
-    //         },
-    //     ],
-    // },
-
-    // {
-    //     title: 'SUPPORT',
-    //     pattern: '/support',
-    //     links: [
-    //         {
-    //             title: '[In Development]',
-    //             path: '/support',
-    //         },
-    //     ],
-    // },
+    {
+        title: 'CONTRIBUTE',
+        pattern: '/contribute',
+        links: [
+            {
+                title: 'Introduction',
+                path: '/contribute',
+            },
+            {
+                title: 'Templates',
+                type: 'title',
+            },
+            {
+                title: 'Basic Component',
+                path: '/contribute/basictemplate',
+            },
+            {
+                title: 'Example Component',
+                path: '/contribute/exampletemplate',
+            },
+            {
+                title: 'Multiple Components',
+                path: '/contribute/multipletemplate',
+            },
+        ],
+    },
 ];
