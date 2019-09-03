@@ -11,12 +11,18 @@ declare module '@retailmenot/anchor' {
   const AutoComplete: any;
   const Badge: any;
   const Cart: any;
+  const Col: any;
   const colors: any;
   const Collapse: any;
   const CollapseGroup: any;
   const DropDown: any;
   const Input: any;
+  const ModalProvider: any;
+  const Row: any;
   const Search: any;
+  const sizes: any;
+  const RootTheme: any;
+  const ThemeProvider: any;
   const Typography: any;
 }
 

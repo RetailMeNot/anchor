@@ -1,10 +1,9 @@
 import { Link } from 'gatsby';
-import { FormatTypes } from '../../components/Utils';
+import { ComponentInfo, FormatTypes } from '../../components/Utils';
 
 # Typography
 
-The `Typography` component lets you easily add unified text styles to the page without having to create
-a lot of extra CSS.
+<ComponentInfo title="Typography" mode="description" />
 
 One of the principal features of this component is the concept of **`scale`**.
 Although it's possible to alter the `line-height` (`lineHeight` prop) and `font-size` (`size` prop)
@@ -65,7 +64,7 @@ These are the default styles for Typography:
             <td>color</td>
             <td>
                 Sets the font color. Accepts any valid CSS color value. If
-                you use one of <strong>Anchor</strong>'s <Link to="/theme">theme</Link> colors,
+                you use one of <strong>Anchor</strong>'s <Link to="/theme/colors/">theme</Link> colors,
                 you'll be able to control its hue via a prop noted below.
             </td>
             <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
@@ -112,7 +111,7 @@ These are the default styles for Typography:
         <tr>
             <td>hue</td>
             <td>
-                If the <pre>color</pre> prop is set to one of <strong>Anchor</strong>'s <Link to="/theme">theme</Link> colors,
+                If the <pre>color</pre> prop is set to one of <strong>Anchor</strong>'s <Link to="/theme/colors/">theme</Link> colors,
                 allows changing that color's hue.
             </td>
             <td>

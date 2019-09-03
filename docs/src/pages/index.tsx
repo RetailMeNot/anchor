@@ -1,8 +1,18 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import styled, { css, createGlobalStyle } from 'styled-components';
-import { withPrefix } from 'gatsby';
+import styled, { createGlobalStyle } from '@xstyled/styled-components';
+import { Link, withPrefix } from 'gatsby';
+import {
+    ThemeProvider,
+    RootTheme,
+} from '@retailmenot/anchor';
+// COMPONENTS
+import { HomeTopNav } from '../components/Navigation/HomeTopNav';
+import { Wave } from '../components/Wave';
+import { HomeCard } from '../components/HomeCard';
+
+const CONTENT_WIDTH = 940;
 
 // TODO: Delete this override when migrated over to Page
 const TempOverride = createGlobalStyle`
@@ -10,130 +20,153 @@ const TempOverride = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+
+    * {
+        box-sizing: border-box;
+    }
 `;
 
-const StyledIndexPage = styled.div`
+const StyledIndexPage = styled('div')`
     overflow-y: hidden;
     overflow-x: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 55rpx;
 `;
 
-const StyledLogo = styled.img`
-    flex: 1 1 auto;
-    padding: 12.5rem 2rem 0;
+const StyledIntro = styled('div')`
+    width: 100%;
+    max-width: ${CONTENT_WIDTH}px;
+    margin: 0 auto;
+    padding-top: 100rpx;
 `;
 
-const StyledCaption = styled.p`
+const StyledLogo = styled('img')`
     flex: 1 1 auto;
-    padding: 1rem 2rem 0;
+`;
+
+const StyledCaption = styled('p')`
+    padding: 1rem 0;
     font-family: AvenirNext-Medium, Avenir, sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #222222;
-    text-align: center;
+    text-align: left;
     line-height: 1.5rem;
+    max-width: 610rpx;
 `;
 
-const StyledOcean = styled.div`
+const StyledCards = styled('section')`
+    width: 100%;
+    max-width: ${CONTENT_WIDTH}px;
+    margin: 0 auto;
+    display: flex;
+    padding-top:4rem;
+`;
+
+const Column = styled('div')`
+    width: 50%;
+
+    &:nth-child(0) {
+        margin-left: 2.5%;
+    }
+
+    &:nth-child(1) {
+        margin-right: 2.5%;
+    }
+`;
+
+const StyledOcean = styled('div')`
     margin-top: 3rem;
     height: 28rem;
     width: 100%;
-    position: relative;
-`;
-
-const WaveAnimations = css`
-    @keyframes wave {
-        0% {
-            margin-left: 0;
-        }
-        100% {
-            margin-left: -1600px;
-        }
-    }
-
-    @keyframes swell {
-        0%,
-        100% {
-            transform: translate3d(0, -25px, 0);
-        }
-        50% {
-            transform: translate3d(0, 5px, 0);
-        }
-    }
-`;
-
-const StyledWave = css`
     position: absolute;
-    width: 6400px;
-    transform: translate3d(0, 0, 0);
-    height: 500px;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
 `;
 
-const StyledWaveSix = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    background: url(${withPrefix('/images/waves/wave-1.svg')}) repeat-x;
-    top: 120px;
-    animation: wave 67s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-`;
+const StyledFooter = styled('footer')`
+    width: 100%;
+    display:block;
+    position: absolute;
+    bottom:2rem;
+    left:0;
+    right:0;
+    text-align:center;
+    z-index:30;
 
-const StyledWaveFive = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    top: 80px;
-    background: url(${withPrefix('/images/waves/wave-2.svg')}) repeat-x;
-    animation: wave 65s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-`;
+    img {
+        display:block;
+    }
 
-const StyledWaveFour = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    top: 50px;
-    background: url(${withPrefix('/images/waves/wave-3.svg')}) repeat-x;
-    animation: wave 62s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-`;
-
-const StyledWaveThree = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    top: 20px;
-    background: url(${withPrefix('/images/waves/wave-4.svg')}) repeat-x;
-    animation: wave 85s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-`;
-
-const StyledWaveTwo = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    top: 10px;
-    background: url(${withPrefix('/images/waves/wave-5.svg')}) repeat-x;
-    animation: wave 88s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-`;
-
-const StyledWaveOne = styled.div`
-    ${StyledWave};
-    ${WaveAnimations};
-    top: 0;
-    background: url(${withPrefix('/images/waves/wave-6.svg')}) repeat-x;
-    animation: wave 89s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    a {
+        display:inline-block;
+        padding: 0 1rem;
+    }
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
-    <StyledIndexPage>
-        <TempOverride />
-        <StyledLogo src={withPrefix('/images/anchor-logo.svg')} />
-        <StyledCaption>
-            A design system by <strong>RetailMeNot</strong>. Coming soon.
-        </StyledCaption>
-        <StyledOcean>
-            <StyledWaveOne />
-            <StyledWaveTwo />
-            <StyledWaveThree />
-            <StyledWaveFour />
-            <StyledWaveFive />
-            <StyledWaveSix />
-        </StyledOcean>
-    </StyledIndexPage>
+    <ThemeProvider theme={RootTheme}>
+        <StyledIndexPage>
+            <TempOverride />
+
+            <HomeTopNav contentWidth={CONTENT_WIDTH} />
+
+            <StyledIntro>
+                <Link to="/overview">
+                    <StyledLogo
+                        src={withPrefix('/images/anchor-logo-horizontal.svg')}
+                    />
+                </Link>
+
+                <StyledCaption>
+                    Anchor is a design system by <strong>RetailMeNot</strong>,
+                    fostered with a sense of collaboration, community, and
+                    scalability. We hope it's as useful for you as it is for us.
+                </StyledCaption>
+            </StyledIntro>
+
+            <StyledCards>
+                <Column>
+                    <HomeCard
+                        description="Take a look at our design philosophy & human interface guidelines."
+                        imgSrc="/images/designer-icon.svg"
+                        title="Designers"
+                        disabled
+                    />
+                </Column>
+                <Column>
+                    <HomeCard
+                        description="Check out our components & documentation."
+                        imgSrc="/images/developer-icon.svg"
+                        title="Developers"
+                        to="/components"
+                    />
+                </Column>
+            </StyledCards>
+
+            <StyledOcean>
+                <Wave duration="89s" top="0" image={1} />
+                <Wave duration="88s" top="10px" image={5} />
+                <Wave duration="85s" top="20px" image={4} />
+                <Wave duration="62s" top="50px" image={3} />
+                <Wave duration="65s" top="80px" image={2} />
+                <Wave duration="67s" top="120px" image={1} />
+            </StyledOcean>
+
+            <StyledFooter>
+                    <a href="//retailmenot.com" target="_blank">
+                        <img src={withPrefix('/images/r-mark.svg')} />
+                    </a>
+                    <a href="//github.com/RetailMeNot/anchor" target="_blank">
+                        <img src={withPrefix('/images/octocat.svg')} />
+                    </a>
+                </StyledFooter>
+        </StyledIndexPage>
+    </ThemeProvider>
 );
 
 export default IndexPage;

@@ -1,12 +1,17 @@
 import { Link } from 'gatsby';
 import { Typography } from '@retailmenot/anchor';
 import { ModalExample } from '../../components/ModalExample';
-import { FormatTypes, ColorBlurb } from '../../components/Utils';
+import {
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
+} from '../../components/Utils';
 
 # Modal
 
-The `Modal` component is an overlay over all content on the page, presenting its own content area
-for the user to interact with. Here is an example of the modal:
+<ComponentInfo title="Modal" mode="description" />
+
+Here is an example of the modal:
 
 <br />
 
@@ -18,8 +23,12 @@ There are several components to `Modal` that interact with each other to provide
 experience. As noted after the code sample below some are not required.
 
 ```js
-import { Modal, RootTheme, ModalProvider } from '@retailmenot/anchor';
-import { ThemeProvider } from 'styled-components';
+import {
+    Modal,
+    ModalProvider,
+    RootTheme,
+    ThemeProvider
+} from '@retailmenot/anchor';
 
 const { Header, Footer, Close, Content } = Modal;
 ```
@@ -37,10 +46,10 @@ functionality. A function to close the modal will have to be assigned as an `onC
 show up in the modal. It has no props and serves only to correctly position the content within the
 modal. Content has a set amount of padding on all sides, however it will lose its top padding if
 used with `Header`, and it will lose it's bottom padding if used with `Footer`.
-* `RootTheme` provides a number of CSS styles that the modal will use.
+* The <Link to="/theme/theme-provider#roottheme">`RootTheme`</Link> provides a number of CSS styles that the modal
+will use.
 * `ModalProvider` will set the root portal where `Modal`s will be rendered.
-* `ThemeProvider` comes from the <a href="https://www.styled-components.com/" target="_blank">`styled-components`</a> library
-and will apply the `RootTheme` to the modal.
+* The <Link to="theme/theme-provider">`ThemeProvider`</Link> will apply the `RootTheme` to the modal.
 
 *NOTE! It's best to put `ThemeProvider`  and `ModalProvider` components higher up in the application
 tree. `ThemeProvider` will make the styles from `RootTheme` available to any Anchor component in the
@@ -59,8 +68,7 @@ gets attached to the **DOM** is the perfect place to initialize `ThemeProvider` 
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App'; // This path is just an example
-import { ThemeProvider } from 'styled-components';
-import { RootTheme, ModalProvider} from '@retailmenot/anchor';
+import { ModalProvider, RootTheme, ThemeProvider } from '@retailmenot/anchor';
 
 const Root = (
     <ThemeProvider theme={RootTheme}>
@@ -139,7 +147,7 @@ It's as simple as dropping in our `ModalAndButton` into the page to have it work
 ###### Page Example
 ```jsx hideTitle
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
 import { Typography } from '@retailmenot/anchor';
 import { ModalAndButton } from './components/ModalAndButton'; // This path is just an example
 
@@ -205,7 +213,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
             <td>
                 <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td><Link to="/theme">white.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
         </tr>
         <tr>
             <td>color</td>
@@ -286,7 +294,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
             <td>
                 <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
             </td>
-            <td><Link to="/theme">white.base</Link></td>
+            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
         </tr>
         <tr>
             <td>color</td>
@@ -294,7 +302,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
                 <ColorBlurb defaultTheme label="header" />
             </td>
             <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme">charcoal.light</Link></td>
+            <td><Link to="/theme/theme-provider#colors">charcoal.light</Link></td>
         </tr>
         <tr>
             <td>title</td>

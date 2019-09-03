@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 // TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
-import { sections } from './sections';
+import { sections } from '../../Utils';
 import { AddLocation } from '../AddLocation';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
@@ -47,6 +47,7 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
         const mainOpenIndex = sections.reduce(
             (openIndex: number, section: SectionProperties, index: number) => {
                 const { pattern } = section;
+
                 // Compares the current url with the path associated to a section and gets its index if it matches.
                 return pattern.length && pathname.includes(pattern)
                     ? index
@@ -61,35 +62,37 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
     render() {
         const { mainOpenIndex } = this.state;
 
-        return (mainOpenIndex && (
-            <StyledCollapseGroup
-                variant="compact"
-                openIndex={mainOpenIndex}
-                accordion
-            >
-                {sections.map((section: SectionProperties, i: number) => (
-                    <Collapse
-                        openedText={section.title}
-                        key={`collapse-key-${i}`}
-                    >
-                        <ul>
-                            {section.links.map(
-                                (link: LinkProperties, j: number) => (
-                                    <li key={`link-key-${j}`}>
-                                        <Link
-                                            to={link.path}
-                                            activeClassName="active"
-                                        >
-                                            {link.title}
-                                        </Link>
-                                    </li>
-                                )
-                            )}
-                        </ul>
-                    </Collapse>
-                ))}
-            </StyledCollapseGroup>
-        ));
+        return (
+            mainOpenIndex !== false && (
+                <StyledCollapseGroup
+                    variant="compact"
+                    openIndex={mainOpenIndex}
+                    accordion
+                >
+                    {sections.map((section: SectionProperties, i: number) => (
+                        <Collapse
+                            openedText={section.title}
+                            key={`collapse-key-${i}`}
+                        >
+                            <ul>
+                                {section.links.map(
+                                    (link: LinkProperties, j: number) => (
+                                        <li key={`link-key-${j}`}>
+                                            <Link
+                                                to={link.path}
+                                                activeClassName="active"
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        </li>
+                                    )
+                                )}
+                            </ul>
+                        </Collapse>
+                    ))}
+                </StyledCollapseGroup>
+            )
+        );
     }
 }
 
