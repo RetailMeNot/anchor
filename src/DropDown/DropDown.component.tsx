@@ -10,11 +10,13 @@ import { filter, map, mapTo, distinctUntilChanged } from 'rxjs/operators';
 import { get } from '../utils/get/get';
 import { Arrow } from './Arrow/Arrow.component';
 import { positionVariants, Position } from '../utils/position/position';
+
 export { Position } from '../utils/position/position';
+export type Trigger = 'hover' | 'click' | 'both';
 
 interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
-    trigger?: 'hover' | 'click' | 'both';
+    trigger?: Trigger;
     className?: string;
     children?: any;
     // Configuration

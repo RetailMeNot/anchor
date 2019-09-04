@@ -6,15 +6,15 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { text, select, boolean } from '@storybook/addon-knobs';
 // COMPONENTS
-import { DropDown, Position } from './DropDown.component';
+import { DropDown, Position, Trigger } from './DropDown.component';
 import { Button } from '../Button';
 import { List, Item as ListItem } from '../List';
 import { Typography } from '../Typography';
 import { Container, Row, Col } from '../Grid';
+// THEME
+import { RootTheme } from '../theme';
 // README
 import * as README from './README.md';
-import { RootTheme } from '../theme';
-// THEME
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
@@ -130,7 +130,7 @@ storiesOf('Components/DropDown', module)
                                 <DropDown
                                     overlay={<MockList />}
                                     position={select<Position>(
-                                        'Dropdown Position',
+                                        'position',
                                         [
                                             'topStart',
                                             'top',
@@ -147,8 +147,8 @@ storiesOf('Components/DropDown', module)
                                         ],
                                         'bottom'
                                     )}
-                                    trigger={select<'click' | 'hover' | 'both'>(
-                                        'Dropdown Trigger',
+                                    trigger={select<Trigger>(
+                                        'trigger',
                                         ['click', 'hover', 'both'],
                                         'hover'
                                     )}
@@ -170,7 +170,8 @@ storiesOf('Components/DropDown', module)
                                     spacing={text('spacing', '') || undefined}
                                 >
                                     <Button>
-                                        {text('Dropdown Text', 'Dropdown')}
+                                        {/* Not a prop, just for testing various widths */}
+                                        {text('Text', 'Dropdown')}
                                     </Button>
                                 </DropDown>
                             </div>
