@@ -2,20 +2,17 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 // COMPONENT
-import { renderArrow } from './Arrow.component';
+import { Arrow } from './Arrow.component';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
 // TEST SETUP
 const subject = (
     <div>
-        {renderArrow('top', true)}
-        <br />
-        {renderArrow('bottom', true)}
-        <br />
-        {renderArrow('left', true)}
-        <br />
-        {renderArrow('right', true)}
+        <Arrow position="top" />
+        <Arrow position="bottom" />
+        <Arrow position="left" />
+        <Arrow position="right" />
     </div>
 );
 const wrapper = mount(subject);
