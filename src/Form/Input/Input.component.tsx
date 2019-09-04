@@ -3,9 +3,10 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, variant } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
+import { INPUT_THEME, INPUT_KEY } from './utils';
 // UTILS
 import { get } from '../../utils/get/get';
 
@@ -77,41 +78,12 @@ interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
     onFocus?: InputEventHandler;
 }
 
-const InputSizeDimensions = {
-    sm: css`
-        height: 2.5rem;
-
-        input {
-            height: 1rem;
-            font-size: 0.875rem;
-        }
-    `,
-    md: css`
-        height: 3.125rem;
-        padding: 0.25rem;
-
-        input {
-            height: 1rem;
-            font-size: 0.875rem;
-        }
-    `,
-    lg: css`
-        height: 3.125rem;
-        padding: 0.25rem;
-
-        input {
-            height: 1rem;
-            font-size: 1rem;
-        }
-    `,
-};
-
 const StyledInputWrapper = styled('div')<InputProps>`
     // Input Display Size
     display: block;
     position: relative;
     border: solid thin ${th.color('borders.base')};
-    border-radius: 0.25rem;
+    border-radius: base;
     cursor: text;
     box-sizing: border-box;
     min-width: 5rem;
@@ -120,15 +92,13 @@ const StyledInputWrapper = styled('div')<InputProps>`
     // TODO: delete
     overflow: hidden;
 
-    ${({ size = 'md' }: InputProps) => InputSizeDimensions[size]};
-
     ::placeholder {
         font-family: ${th('typography.fontFamily')};
         color: text.placeholder;
     }
 
     &.focus {
-        border-color: ${th.color('borders.dark')};
+        border-color: borders.dark;
     }
 
     label {
@@ -139,6 +109,13 @@ const StyledInputWrapper = styled('div')<InputProps>`
             transform: translate(0, 0) scale(1);
         }
     }
+
+    ${variant({
+        key: `${INPUT_KEY}.sizes`,
+        prop: 'size',
+        default: 'md',
+        variants: INPUT_THEME.sizes,
+    })}
 `;
 
 const StyledReversedInputContainer = styled('div')`

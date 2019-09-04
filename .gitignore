@@ -11,7 +11,7 @@ node_modules
 
 # Editors
 .idea
-# .vscode
+.vscode
 
 # Folders
 .cache
