@@ -3,10 +3,7 @@ import * as React from 'react';
 // VENDOR
 import styled, { createGlobalStyle } from '@xstyled/styled-components';
 import { Link, withPrefix } from 'gatsby';
-import {
-    ThemeProvider,
-    RootTheme,
-} from '@retailmenot/anchor';
+import { ThemeProvider, RootTheme } from '@retailmenot/anchor';
 // COMPONENTS
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
 import { Wave } from '../components/Wave';
@@ -61,7 +58,7 @@ const StyledCards = styled('section')`
     max-width: ${CONTENT_WIDTH}px;
     margin: 0 auto;
     display: flex;
-    padding-top:4rem;
+    padding-top: 4rem;
 `;
 
 const Column = styled('div')`
@@ -81,29 +78,29 @@ const StyledOcean = styled('div')`
     height: 28rem;
     width: 100%;
     position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    z-index:-1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
 `;
 
 const StyledFooter = styled('footer')`
     width: 100%;
-    display:block;
+    display: block;
     position: absolute;
-    bottom:2rem;
-    left:0;
-    right:0;
-    text-align:center;
-    z-index:30;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 30;
 
     img {
-        display:block;
+        display: block;
     }
 
     a {
-        display:inline-block;
+        display: inline-block;
         padding: 0 1rem;
     }
 `;
@@ -158,13 +155,13 @@ export const IndexPage = (): React.ReactElement<any> => (
             </StyledOcean>
 
             <StyledFooter>
-                    <a href="//retailmenot.com" target="_blank">
-                        <img src={withPrefix('/images/r-mark.svg')} />
-                    </a>
-                    <a href="//github.com/RetailMeNot/anchor" target="_blank">
-                        <img src={withPrefix('/images/octocat.svg')} />
-                    </a>
-                </StyledFooter>
+                <a href="//retailmenot.com" target="_blank">
+                    <img src={withPrefix('/images/r-mark.svg')} />
+                </a>
+                <a href="//github.com/RetailMeNot/anchor" target="_blank">
+                    <img src={withPrefix('/images/octocat.svg')} />
+                </a>
+            </StyledFooter>
         </StyledIndexPage>
     </ThemeProvider>
 );

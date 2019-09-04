@@ -14,7 +14,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     maxWidth?: string;
     background?: string;
     color?: string;
-    wrap?: boolean;
+    wrapContent?: boolean;
     display?: string;
     delay?: string;
 }
@@ -38,7 +38,7 @@ interface TooltipElementProps {
     width: number;
     toolTipHeight: number;
     toolTipWidth: number;
-    wrap?: boolean;
+    wrapContent?: boolean;
     background?: string;
     color?: string;
     maxWidth?: string;
@@ -70,7 +70,8 @@ const TooltipElement = styled('div')<TooltipElementProps>`
         visibility: visible;
     }
 
-    ${({ wrap = true }) => css({ whiteSpace: wrap ? 'normal' : 'nowrap' })};
+    ${({ wrapContent = true }) =>
+        css({ whiteSpace: wrapContent ? 'normal' : 'nowrap' })};
     ${({ maxWidth = 'auto' }) => css({ width: maxWidth })};
     ${({ position, height, width, toolTipHeight, toolTipWidth }) =>
         positionVariants(
@@ -125,7 +126,7 @@ export class Tooltip extends React.Component<
             children,
             content,
             position = 'topEnd',
-            wrap,
+            wrapContent,
             background,
             color,
             maxWidth,
@@ -161,7 +162,7 @@ export class Tooltip extends React.Component<
                     toolTipHeight={toolTipHeight}
                     toolTipWidth={toolTipWidth}
                     children={content}
-                    wrap={wrap}
+                    wrapContent={wrapContent}
                     background={background}
                     color={color}
                     maxWidth={maxWidth}

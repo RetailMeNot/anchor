@@ -24,13 +24,11 @@ interface SiteLinkProps {
     to: string;
 }
 
-export const SiteLink = ({children, to}: SiteLinkProps): React.ReactElement<any> => (
+export const SiteLink = ({
+    children,
+    to,
+}: SiteLinkProps): React.ReactElement<any> => (
     <StyledSiteLink to={to}>
-        {children
-        ?
-            children
-        :
-            <span>View &raquo;</span>
-        }
+        {children ? children : <span>View &raquo;</span>}
     </StyledSiteLink>
 );

@@ -10,9 +10,23 @@ import { MyList } from './MyList.component';
 import { MouseOverMe } from './MouseOverMe.component';
 
 export const DropDownExample = () => (
-    <DropDown overlay={<MyList />} position={{ left: 0 }}>
-        <MouseOverMe color={colors.white.base}>
-            Seriously, Mouse Over Me
-        </MouseOverMe>
-    </DropDown>
+    <div>
+        <DropDown
+            arrowIndent="0.75rem"
+            arrowSize="0.625rem"
+            background="white"
+            border="light"
+            borderRadius="base"
+            shadow="0 0 0.5rem 0 rgba(0,0,0,0.2)"
+            overlay={<MyList />}
+            position="bottom"
+            showArrow={true}
+            spacing="0.75rem"
+            trigger="hover"
+        >
+            <MouseOverMe color={colors.white.base}>
+                Seriously, Mouse Over Me
+            </MouseOverMe>
+        </DropDown>
+    </div>
 );
