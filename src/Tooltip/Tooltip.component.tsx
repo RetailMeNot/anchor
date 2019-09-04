@@ -4,20 +4,9 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
-
-export type Position =
-    | 'topStart'
-    | 'top'
-    | 'topEnd'
-    | 'rightStart'
-    | 'right'
-    | 'rightEnd'
-    | 'bottomEnd'
-    | 'bottom'
-    | 'bottomStart'
-    | 'leftEnd'
-    | 'left'
-    | 'leftStart';
+// ANCHOR
+import { positionVariants, Position } from '../utils/position/position';
+export { Position } from '../utils/position/position';
 
 interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     content: string;
@@ -27,6 +16,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     color?: string;
     wrap?: boolean;
     display?: string;
+    delay?: string;
 }
 
 interface TooltipContainerState {
@@ -52,109 +42,17 @@ interface TooltipElementProps {
     background?: string;
     color?: string;
     maxWidth?: string;
+    delay?: string;
 }
-
-const tooltipMargin = 8;
-
-const positionVariants = (
-    position: Position,
-    height: number,
-    width: number,
-    toolTipHeight: number,
-    toolTipWidth: number
-) => {
-    switch (position) {
-        case 'topStart':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(0, -${toolTipHeight +
-                    tooltipMargin}px, 0)`,
-            });
-        case 'top':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(${width / 2 -
-                    toolTipWidth / 2}px, -${toolTipHeight +
-                    tooltipMargin}px, 0)`,
-            });
-        case 'rightStart':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(${width + tooltipMargin}px, 0, 0)`,
-            });
-        case 'right':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(${width + tooltipMargin}px, ${height /
-                    2 -
-                    toolTipHeight / 2}px, 0)`,
-            });
-        case 'rightEnd':
-            return css({
-                left: 0,
-                bottom: 0,
-                transform: `translate3d(${width + tooltipMargin}px, 0, 0)`,
-            });
-        case 'bottomEnd':
-            return css({
-                right: 0,
-                top: 0,
-                transform: `translate3d(0, ${height + tooltipMargin}px, 0)`,
-            });
-        case 'bottom':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(${width / 2 -
-                    toolTipWidth / 2}px, ${height + tooltipMargin}px, 0)`,
-            });
-        case 'bottomStart':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(0, ${height + tooltipMargin}px, 0)`,
-            });
-        case 'leftEnd':
-            return css({
-                left: 0,
-                bottom: 0,
-                transform: `translate3d(-${toolTipWidth +
-                    tooltipMargin}px, 0, 0)`,
-            });
-        case 'left':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(-${toolTipWidth +
-                    tooltipMargin}px, ${height / 2 - toolTipHeight / 2}px, 0)`,
-            });
-        case 'leftStart':
-            return css({
-                left: 0,
-                top: 0,
-                transform: `translate3d(-${toolTipWidth +
-                    tooltipMargin}px, 0, 0)`,
-            });
-        case 'topEnd':
-        default:
-            return css({
-                right: 0,
-                top: 0,
-                transform: `translate3d(0, -${toolTipHeight +
-                    tooltipMargin}px, 0)`,
-            });
-    }
-};
 
 const TooltipElement = styled('div')<TooltipElementProps>`
     position: absolute;
     box-sizing: border-box;
     ${({ background = 'rgba(0, 0, 0, 0.8)', color = 'white' }) =>
-        css({ background, color })};
+        css({
+            background: th.color(background),
+            color,
+        })};
     border-radius: base;
     font-family: ${th('typography.fontFamily')};
     font-size: 0.8rem;
@@ -164,6 +62,10 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     transition: opacity 250ms ease-in-out;
 
     &.active {
+        ${({ delay }) =>
+            css({
+                transitionDelay: delay,
+            })}
         opacity: 1;
         visibility: visible;
     }
@@ -171,7 +73,14 @@ const TooltipElement = styled('div')<TooltipElementProps>`
     ${({ wrap = true }) => css({ whiteSpace: wrap ? 'normal' : 'nowrap' })};
     ${({ maxWidth = 'auto' }) => css({ width: maxWidth })};
     ${({ position, height, width, toolTipHeight, toolTipWidth }) =>
-        positionVariants(position, height, width, toolTipHeight, toolTipWidth)};
+        positionVariants(
+            position,
+            height,
+            width,
+            toolTipHeight,
+            toolTipWidth,
+            8
+        )};
 `;
 
 export class Tooltip extends React.Component<
@@ -215,14 +124,21 @@ export class Tooltip extends React.Component<
             className,
             children,
             content,
-            position,
+            position = 'topEnd',
             wrap,
             background,
             color,
             maxWidth,
+            delay,
             ...props
         } = this.props;
-        const { height, width, toolTipHeight, toolTipWidth } = this.state;
+        const {
+            height,
+            width,
+            hidden,
+            toolTipHeight,
+            toolTipWidth,
+        } = this.state;
         return (
             <ToolTipContainer
                 content={content}
@@ -235,10 +151,11 @@ export class Tooltip extends React.Component<
                 {children}
                 <TooltipElement
                     className={classNames('anchor-tooltip-element', {
-                        active: !this.state.hidden,
+                        active: !hidden,
                     })}
+                    delay={delay}
                     ref={this.tooltipRef}
-                    position={position || 'topEnd'}
+                    position={position}
                     height={height}
                     width={width}
                     toolTipHeight={toolTipHeight}

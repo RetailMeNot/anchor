@@ -1,63 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: DropDown Component: Arrow should render in the DOM 1`] = `
-.c1 {
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: -0.4rem;
-  left: 0.75rem;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid white;
-}
-
 .c0 {
   position: absolute;
-  width: 0;
-  height: 0;
-  bottom: -0.4rem;
-  left: 0.75rem;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  border-top: 0.5rem solid white;
+  box-sizing: border-box;
+  width: 0.625rem;
+  height: 0.625rem;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  bottom: calc(-0.625rem / 2);
+  right: calc(50% - 0.625rem / 2);
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 0.625rem;
+  height: 0.625rem;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: calc(-0.625rem / 2);
+  left: calc(50% - 0.625rem / 2);
 }
 
 .c2 {
   position: absolute;
-  width: 0;
-  height: 0;
-  top: 0.75rem;
-  right: -0.4rem;
-  border-top: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent;
-  border-left: 0.5rem solid white;
+  box-sizing: border-box;
+  width: 0.625rem;
+  height: 0.625rem;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: calc(50% - 0.625rem / 2);
+  right: calc(-0.625rem / 2);
 }
 
 .c3 {
   position: absolute;
-  width: 0;
-  height: 0;
-  top: 0.75rem;
-  left: -0.4rem;
-  border-top: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent;
-  border-right: 0.5rem solid white;
+  box-sizing: border-box;
+  width: 0.625rem;
+  height: 0.625rem;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: calc(50% - 0.625rem / 2);
+  left: calc(-0.625rem / 2);
 }
 
 <div>
   <div
     className="c0"
   />
-  <br />
   <div
     className="c1"
   />
-  <br />
   <div
     className="c2"
   />
-  <br />
   <div
     className="c3"
   />

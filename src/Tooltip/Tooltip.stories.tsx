@@ -64,6 +64,8 @@ storiesOf('Components/Tooltip', module)
                         )}
                         content={text('Tooltip Text', 'Text')}
                         maxWidth={text('Tooltip width', 'auto')}
+                        delay={text('Tooltip delay', '') || undefined}
+                        background={text('Tooltip background', '') || undefined}
                     >
                         <Button size="lg">Hover over me</Button>
                     </Tooltip>

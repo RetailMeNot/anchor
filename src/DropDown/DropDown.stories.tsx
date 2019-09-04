@@ -4,16 +4,17 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { text, select } from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 // COMPONENTS
-import { DropDown } from './DropDown.component';
+import { DropDown, Position, Trigger } from './DropDown.component';
+import { Button } from '../Button';
 import { List, Item as ListItem } from '../List';
 import { Typography } from '../Typography';
 import { Container, Row, Col } from '../Grid';
+// THEME
+import { RootTheme } from '../theme';
 // README
 import * as README from './README.md';
-import { RootTheme } from '../theme';
-// THEME
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
@@ -31,6 +32,7 @@ const MockList = () => (
     <List>
         {listItemArray.map(({ key, label }: any) => (
             <ListItem
+                background="transparent"
                 key={key}
                 onClick={() => {
                     /* tslint:disable no-console */
@@ -127,20 +129,50 @@ storiesOf('Components/DropDown', module)
                                 <Typography tag="h1">DropDown</Typography>
                                 <DropDown
                                     overlay={<MockList />}
-                                    position={select<
-                                        'top' | 'bottom' | 'right' | 'left'
-                                    >(
-                                        'Dropdown Position',
-                                        ['top', 'bottom', 'right', 'left'],
-                                        'top'
+                                    position={select<Position>(
+                                        'position',
+                                        [
+                                            'topStart',
+                                            'top',
+                                            'topEnd',
+                                            'rightStart',
+                                            'right',
+                                            'rightEnd',
+                                            'bottomEnd',
+                                            'bottom',
+                                            'bottomStart',
+                                            'leftEnd',
+                                            'left',
+                                            'leftStart',
+                                        ],
+                                        'bottom'
                                     )}
-                                    trigger={select<'click' | 'hover'>(
-                                        'Dropdown Trigger',
-                                        ['click', 'hover'],
+                                    trigger={select<Trigger>(
+                                        'trigger',
+                                        ['click', 'hover', 'both'],
                                         'hover'
                                     )}
+                                    showArrow={boolean('showArrow', true)}
+                                    shadow={text('shadow', '') || undefined}
+                                    background={
+                                        text('background', '') || undefined
+                                    }
+                                    border={text('border', '') || undefined}
+                                    borderRadius={
+                                        text('borderRadius', '') || undefined
+                                    }
+                                    arrowIndent={
+                                        text('arrowIndent', '') || undefined
+                                    }
+                                    arrowSize={
+                                        text('arrowSize', '') || undefined
+                                    }
+                                    spacing={text('spacing', '') || undefined}
                                 >
-                                    <a>{text('Dropdown Label', 'Dropdown')}</a>
+                                    <Button>
+                                        {/* Not a prop, just for testing various widths */}
+                                        {text('Text', 'Dropdown')}
+                                    </Button>
                                 </DropDown>
                             </div>
                         </Col>
