@@ -1,0 +1,1 @@
+export { CustomResults } from './CustomResults.component';
