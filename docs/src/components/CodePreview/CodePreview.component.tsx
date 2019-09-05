@@ -51,6 +51,7 @@ import * as Anchor from '../../../../src';
 import { colors } from '../../../../src/theme';
 import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
+import { CustomResults } from '../AutoCompleteExample';
 
 // TODO: add CDN Inconsolata font
 
@@ -166,6 +167,8 @@ const scope = {
     // DropDown
     MouseOverMe,
     MyList,
+    // AutoComplete
+    CustomResults,
 };
 
 /*
