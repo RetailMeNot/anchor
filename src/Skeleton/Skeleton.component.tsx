@@ -112,24 +112,34 @@ export const Skeleton = ({
     // or make further calculations to improve it.
     const blockToAverageCharQuotient = 2.15;
 
+    // This is the unicode block character that put together looks like one
+    // long bar. There are shorter and taller characters that could be used
+    // or a fatter or thinner bar. Therefore the bar thickness chould be made
+    // a prop in the future, mapping to different block characters.
+    const blockChar = '▆';
+
     const onlyChild =
         React.Children.count(children) === 1 &&
         React.Children.toArray(children)[0];
 
-    const textOnly = !!textLength || typeof onlyChild === 'string';
-    const length =
-        textLength || (typeof onlyChild === 'string' && onlyChild.length);
+    // We're removing duplicate white space because they don't show up in html
+    const childText =
+        typeof onlyChild === 'string' && onlyChild.replace(/\s\s+/g, ' ');
+
+    const length = textLength || (childText && childText.length);
     const blockText =
         length &&
-        Array(Math.ceil(length / blockToAverageCharQuotient) + 1).join('▆');
+        Array(Math.ceil(length / blockToAverageCharQuotient) + 1).join(
+            blockChar
+        );
 
     return (
         <StyledSkeleton
             className={classNames('anchor-skeleton', className)}
-            textOnly={textOnly}
+            textOnly={!!blockText}
             {...props}
         >
-            {textOnly ? blockText : children}
+            {blockText || children}
         </StyledSkeleton>
     );
 };

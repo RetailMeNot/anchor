@@ -81,9 +81,15 @@ storiesOf('Components/Skeleton', module)
     })
     .add('Text', () => {
         const loading = boolean('loading', true);
-        const defaultText =
-            // tslint:disable-next-line: max-line-length
-            'For a long time in software companies the practice of building software as one-off initiatives at has been called into question and deemed insular. Its no longer acceptable to deliver a piece of software that solves a particular problem and call it a solution. As new requirements emerge, narrowing our focus just to a particular challenges requirements results in organizational tension, substandard solutions, churn, code rot, technical debt, etc.';
+        const defaultText = `For a long time in software companies the practice
+                             of building software as one-off initiatives at has
+                             been called into question and deemed insular. Its
+                             no longer acceptable to deliver a piece of software
+                             that solves a particular problem and call it a
+                             solution. As new requirements emerge, narrowing our
+                             focus just to a particular challenges requirements
+                             results in organizational tension, substandard
+                             solutions, churn, code rot, technical debt, etc.`;
 
         const textLength = parseInt(text('textLength', ''), 10) || undefined;
         const tag = select<TagSelect>('Typography tag', Tags, '');
