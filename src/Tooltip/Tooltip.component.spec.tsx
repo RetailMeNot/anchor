@@ -5,7 +5,9 @@ import * as renderer from 'react-test-renderer';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { RootTheme } from '../theme';
-import { Tooltip, Position } from './Tooltip.component';
+import { Tooltip } from './Tooltip.component';
+import { Position } from '../utils/position/position';
+
 // ENZYME
 import { mount, shallow } from 'enzyme';
 

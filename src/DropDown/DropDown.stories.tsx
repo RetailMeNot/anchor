@@ -6,7 +6,8 @@ import { storiesOf } from '@storybook/react';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { text, select, boolean } from '@storybook/addon-knobs';
 // COMPONENTS
-import { DropDown, Position, Trigger } from './DropDown.component';
+import { Position } from '../utils/position/position';
+import { DropDown, Trigger } from './DropDown.component';
 import { Button } from '../Button';
 import { List, Item as ListItem } from '../List';
 import { Typography } from '../Typography';

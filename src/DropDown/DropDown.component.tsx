@@ -11,7 +11,6 @@ import { get } from '../utils/get/get';
 import { Arrow } from './Arrow/Arrow.component';
 import { positionVariants, Position } from '../utils/position/position';
 
-export { Position } from '../utils/position/position';
 export type Trigger = 'hover' | 'click' | 'both';
 
 interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
