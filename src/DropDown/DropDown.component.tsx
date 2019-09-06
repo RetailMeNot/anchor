@@ -9,9 +9,9 @@ import { filter, map, mapTo, distinctUntilChanged } from 'rxjs/operators';
 // ANCHOR
 import { get } from '../utils/get/get';
 import { Arrow } from './Arrow/Arrow.component';
-import { positionVariants, Position } from '../utils/position/position';
+import { positionVariants, Position } from '../utils/position';
 
-export { Position } from '../utils/position/position';
+export type Position = Position;
 export type Trigger = 'hover' | 'click' | 'both';
 
 interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
