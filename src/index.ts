@@ -48,6 +48,7 @@ export {
 } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
+export { Skeleton } from './Skeleton';
 export { Modal, BaseModalBackground, ModalProvider } from './Modal';
 export { Input, Toggle, Radio, Checkbox, ControlLabel } from './Form';
 export * from './Icon';

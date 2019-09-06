@@ -6,6 +6,7 @@ import { select, boolean, text } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
+import { Position } from '../utils/position/position';
 import { Tooltip } from './Tooltip.component';
 import { Button } from '../Button';
 import { Typography } from '../Typography';
@@ -30,21 +31,8 @@ storiesOf('Components/Tooltip', module)
                 <>
                     <Typography tag="h1">Tool Tip Demo</Typography>
                     <Tooltip
-                        wrapContent={boolean('Tooltip wrap', false)}
-                        position={select<
-                            | 'topStart'
-                            | 'top'
-                            | 'topEnd'
-                            | 'rightStart'
-                            | 'right'
-                            | 'rightEnd'
-                            | 'bottomEnd'
-                            | 'bottom'
-                            | 'bottomStart'
-                            | 'leftEnd'
-                            | 'left'
-                            | 'leftStart'
-                        >(
+                        wrapContent={boolean('Tooltip wrapContent', false)}
+                        position={select<Position>(
                             'Tooltip Position',
                             [
                                 'topStart',

@@ -40,6 +40,7 @@ const componentList = {
     layout: './src/Layout/index.ts',
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
+    skeleton: './src/Skeleton/index.ts',
     typography: './src/Typography/index.ts',
     tooltip: './src/Tooltip/index.ts',
     // THEME

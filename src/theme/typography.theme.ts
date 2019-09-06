@@ -4,7 +4,7 @@ import { css, FlattenSimpleInterpolation } from '@xstyled/styled-components';
 import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';
 
-type TypographyTags =
+export type TypographyTags =
     | 'a'
     | 'p'
     | 'span'
@@ -21,6 +21,8 @@ type TypographyTags =
     | 'strong'
     | 'label';
 
+export type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
+
 export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES
     fontFamily: string;
@@ -28,9 +30,7 @@ export interface TypographyTheme {
     fontWeight: string;
     lineHeight: string;
     // FONT TREATMENTS
-    scale: {
-        [key: number]: FlattenSimpleInterpolation;
-    };
+    scale: { [T in Scale]: FlattenSimpleInterpolation };
     tag: { [K in TypographyTags]: FlattenSimpleInterpolation };
 }
 

@@ -6,7 +6,6 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 // ANCHOR
 import { positionVariants, Position } from '../utils/position/position';
-export { Position } from '../utils/position/position';
 
 interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     content: string;
