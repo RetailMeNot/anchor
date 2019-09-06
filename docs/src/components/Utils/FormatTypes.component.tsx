@@ -7,11 +7,15 @@
     Requires an array of values to iterate over. It's smart enough to render single quotes around
     strings and no quotes around numbers. If the 'noInterpret' prop is passed, it won't make any
     assumptions and will output exactly what is in the array without escaping content using
-    dangerouslySetInnerHTML.
+    html-react-parser.
 */
 
+// REACT
 import * as React from 'react';
+// VENDOR
 import styled from '@xstyled/styled-components';
+import parse from 'html-react-parser';
+// ANCHOR
 import { colors } from '@retailmenot/anchor';
 
 const StyledFormatTypes = styled('div')`
@@ -47,8 +51,9 @@ export const FormatTypes = ({
                         <span
                             key={type}
                             className="type"
-                            dangerouslySetInnerHTML={{ __html: type }}
-                        />
+                        >
+                            {parse(type)}
+                        </span>
                     );
                 }
 

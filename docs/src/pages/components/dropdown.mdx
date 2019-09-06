@@ -1,6 +1,12 @@
 import { Link } from 'gatsby';
 import { DropDownExample } from './../../components/DropDownExample';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
+    PositionGrid
+} from '../../components/Utils';
 
 # DropDown
 
@@ -10,7 +16,12 @@ import { ComponentInfo, FormatTypes } from '../../components/Utils';
 
 <DropDownExample />
 
-<br />
+<br /><br />
+
+The `DropDown` has 12 possible placements via the `position` prop. These placements are based on the
+motion and direction of the content and less about exact positioning. The diagram below illustrates:
+
+<PositionGrid />
 
 ---
 
@@ -19,7 +30,8 @@ import { ComponentInfo, FormatTypes } from '../../components/Utils';
 Since this component is designed to show/hide other components lets go ahead and make a couple of
 components to give us some styling and and a 'menu' that will appear. First, lets make the component
 that will be hovered over to show the `overlay`. This is a simple styled component that's extending
-**Anchor**'s <Link to="/components/typography/">`Typography`</Link> component to give it a little more pop.
+**Anchor**'s <Link to="/components/typography/">`Typography`</Link> component to give it a little
+more pop.
 
 Note that we're importing **Anchor**'s `colors` object for all of the examples to follow.
 Refer to the <Link to="/theme/colors">colors</Link> section for more information.
@@ -78,8 +90,17 @@ together with `DropDown`!
 
 ```jsx live
 <DropDown
+    arrowIndent="0.75rem"
+    arrowSize="0.625rem"
+    background="white"
+    border="light"
+    borderRadius="base"
+    shadow="0 0 0.5rem 0 rgba(0,0,0,0.2)"
     overlay={<MyList />}
-    position={{ top:40, left: 0 }}
+    position="bottom"
+    showArrow={true}
+    spacing="0.75rem"
+    trigger="hover"
 >
     <MouseOverMe color={colors.white.base}>
         Seriously, Mouse Over Me
@@ -91,36 +112,101 @@ together with `DropDown`!
 
 ## API
 
-<table>
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>overlay</td>
-            <td>
-                The content that will be displayed when the child node is hovered
-                over. This can be a single React element, or an array of React elements.
-            </td>
-            <td>
-                React Element | Array
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>position</td>
-            <td>
-                This positions the overlay relative to the top-left corner of the <pre>DropDown</pre>
-                component. Parameters are passed via object allowing multiple parameters to be sent,
-                i.e. <pre>&#123; top: 10, left: 20 &#125;</pre>. Values are treated as <pre>px</pre>.
-            </td>
-            <td>object, <FormatTypes types={['top', 'right', 'bottom', 'left']} /></td>
-            <td>&#123; top: [outer height of DropDown], left: 0 &#125;</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'arrowIndent',
+        description: `How far the arrow should be indented relative to the <pre>DropDown</pre> content.
+            This setting works with all <pre>position</pre>'s
+            except <pre>bottom</pre>, <pre>top</pre>, <pre>right</pre> or <pre>left</pre>. Any valid
+            CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.75rem',
+    },
+    {
+        property: 'arrowSize',
+        description: `How large the arrow will be. Note that extremely large values will distort the
+            arrow. Any valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.625rem',
+    },
+    {
+        property: 'background',
+        description: [
+            <ColorBlurb label="DropDown" background gradient />,
+            ` Note that changing this value changes both the arrow color and the background color of
+            the <pre>DropDown</pre>, so using anything other than solid colors can have unexpected
+            results.`
+        ],
+        type: 'string',
+        default: 'white',
+    },
+    {
+        property: 'border',
+        description: `The border that appears around the <pre>DropDown</pre>. This prop uses values
+            from RootTheme, <pre>base</pre>, <pre>light</pre> or <pre>dark</pre>, but it also can
+            accept any CSS border shorthand, ex: <pre>solid green 0.25rem</pre>`,
+        type: 'string',
+        default: 'light',
+    },
+    {
+        property: 'borderRadius',
+        description: `The radius of the border around the <pre>DropDown</pre>. This prop uses values
+            from RootTheme, <pre>base</pre>, <pre>circular</pre>, <pre>none</pre> or <pre>modal</pre>,
+            but it also can accept any CSS <pre>border-radius</pre> shorthand, ex: <pre>1rem 0.5rem</pre>`,
+        type: 'string',
+        default: 'base',
+    },
+    {
+        property: 'overlay',
+        description: `The content that will be displayed when the child node is hovered
+            over. This can be a single React element, or an array of React elements.`,
+        type: 'React Element | Array',
+    },
+    {
+        property: 'position',
+        description: `This positions the overlay based on the diagram provided at the top of this
+            document`,
+        type: <FormatTypes
+                types={[
+                    'topStart',
+                    'top',
+                    'topEnd',
+                    'rightStart',
+                    'right',
+                    'rightEnd',
+                    'bottomEnd',
+                    'bottom',
+                    'bottomStart',
+                    'leftEnd',
+                    'left',
+                    'leftStart',
+                ]} />,
+        default: 'bottom'
+    },
+    {
+        property: 'shadow',
+        description: `The dropshadow that appears beneath the <pre>DropDown</pre>.`,
+        type: 'string',
+        default: '0 0 0.5rem 0 rgba(0,0,0,0.2)',
+    },
+    {
+        property: 'showArrow',
+        description: `Whether or not the arrow should be displayed.`,
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'spacing',
+        description: `The distance the <pre>DropDown</pre> will be from the contained element. Any
+            valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted. If <pre>showArrow</pre> is
+            set to false, the default value is <pre>0</pre>.`,
+        type: 'string',
+        default: '0.75rem',
+    },
+    {
+        property: 'trigger',
+        description: `What triggers the show/hide of the <pre>DropDown</pre>.`,
+        type: <FormatTypes types={['both', 'click', 'hover']} />,
+        default: 'both',
+    },
+]} />

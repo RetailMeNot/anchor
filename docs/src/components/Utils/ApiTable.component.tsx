@@ -1,0 +1,161 @@
+/*
+    This component is used to render a formatted html table with API information for a given
+    component. The user can opt to either use this table, or simply use semantic table tags to draw
+    the page.
+
+    If a table cell is left empty it will cause a crash in Gatsby, which is why all fields are
+    enforced via typescript. The exception is default, which if left out a '-' will be entered into
+    the td that would be rendered.
+
+    The description field can accept strings (which can contain html tags interpreted with
+    html-react-parser), a React component, or an array with a mix of both. The last option is useful
+    in situations where a combination of components and custom text is needed as html-react-parser
+    will end up rendering passed components as [Object, object].
+
+    Ex:
+
+    <ApiTable data={[
+        {
+            property: 'background',
+            description: [
+                <ColorBlurb label="DropDown" background gradient />,
+                ` Note that changing this value changes both the arrow color and the background
+                color of the <pre>DropDown</pre>, so using anything other than solid colors can have
+                unexpected results.`
+            ],
+            type: 'string',
+            default: 'light',
+        },
+        {
+            property: 'color',
+            description: <ColorBlurb label="Example Component" />,
+            type: 'string',
+            default: 'black',
+        },
+        {
+            property: 'title',
+            description: 'Title for this <pre>Component</pre>.',
+            type: 'string',
+        },
+    ]} />
+
+    TODO: Eventually remove the semantic table option from the site and the styles associated with
+    it.
+*/
+
+// REACT
+import * as React from 'react';
+// VENDOR
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+import parse from 'html-react-parser';
+// ANCHOR & COMPONENTS
+import { colors } from '@retailmenot/anchor';
+import { InlineCodeStyle } from '../Layout/Page/Page.component';
+
+const Table = styled('table')`
+    width: 100%;
+    font-family: ${th('typography.fontFamily')};
+    margin: 1rem 0;
+
+    th {
+        text-align: left;
+        padding: 0.75rem 0.5rem;
+        border-bottom: solid thin ${colors.ash.light};
+        background-color: ${colors.white.base};
+    }
+    tr {
+        &:nth-child(odd) {
+            background-color: ${colors.silver.light};
+        }
+    }
+    td {
+        padding: 0.75rem 0.5rem;
+        line-height: 1.5rem;
+
+        &:first-child {
+            font-family: monospace;
+            color: ${colors.flashPink.dark};
+            width: 10%;
+        }
+        &:nth-child(2) {
+            width: 60%;
+        }
+        &:nth-child(3) {
+            font-family: monospace;
+            color: ${colors.cyberMango.dark};
+            width: 20%;
+        }
+        &:nth-child(4) {
+            text-align: left;
+            font-family: monospace;
+            width: 10%;
+            white-space: nowrap;
+        }
+
+        pre {
+            ${InlineCodeStyle};
+        }
+    }
+`;
+
+interface ApiTableProps {
+    data: [];
+}
+
+interface RowData {
+    property: string;
+    /* There are several utility components that could be passed as a description in addition to a
+    plain string. Also an option is to pass an array of values in order to combine both plain text
+    and components.  */
+    description: string | [] | React.ReactElement;
+    type: string;
+    default?: string;
+}
+
+export const ApiTable = ({ data }: ApiTableProps): React.ReactElement<any> => (
+    <Table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Default</th>
+            </tr>
+        </thead>
+        <tbody>
+            {data &&
+                data.map(
+                    (rowData: RowData): React.ReactElement<any> => (
+                        <tr key={`key-${rowData.property}`}>
+                            <td>{rowData.property}</td>
+                            <td>
+                                {Array.isArray(rowData.description)
+                                    ? rowData.description.map(
+                                          (description, i) => (
+                                              <React.Fragment key={`key-${i}`}>
+                                                  {typeof description ===
+                                                  'string'
+                                                      ? parse(
+                                                            description
+                                                        )
+                                                      : description}
+                                              </React.Fragment>
+                                          )
+                                      )
+                                    : typeof rowData.description === 'string'
+                                    ? parse(rowData.description)
+                                    : rowData.description}
+                            </td>
+                            <td>{rowData.type}</td>
+                            <td>
+                                {rowData.default
+                                    ? parse(rowData.default)
+                                    : '-'}
+                            </td>
+                        </tr>
+                    )
+                )}
+        </tbody>
+    </Table>
+);

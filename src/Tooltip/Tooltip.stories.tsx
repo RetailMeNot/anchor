@@ -30,7 +30,7 @@ storiesOf('Components/Tooltip', module)
                 <>
                     <Typography tag="h1">Tool Tip Demo</Typography>
                     <Tooltip
-                        wrap={boolean('Tooltip wrap', false)}
+                        wrapContent={boolean('Tooltip wrap', false)}
                         position={select<
                             | 'topStart'
                             | 'top'

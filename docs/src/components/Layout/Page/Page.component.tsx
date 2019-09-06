@@ -32,7 +32,7 @@ interface PageProps {
 
 // Defining this in one location so that it can be used both in the table styles for the pre tag,
 // and for the StyledInlineCode component fed to MDX's custom Components.
-const InlineCodeStyle = css`
+export const InlineCodeStyle = css`
     display: inline;
     background-color: rgba(27, 31, 35, 0.05);
     font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
@@ -49,47 +49,48 @@ const StyledContentMain = styled('main')`
     padding-top: 1rem;
     padding-bottom: 3rem;
 
-    table {
+    table.api {
         width: 100%;
         font-family: ${fonts.fontFamily};
         margin: 1rem 0;
-    }
-    th {
-        text-align: left;
-        padding: 0.75rem 0.5rem;
-        border-bottom: solid thin ${colors.ash.light};
-        background-color: ${colors.white.base};
-    }
-    tr {
-        &:nth-child(odd) {
-            background-color: ${colors.silver.light};
-        }
-    }
-    td {
-        padding: 0.75rem 0.5rem;
-        line-height: 1.5rem;
 
-        &:first-child {
-            font-family: monospace;
-            color: ${colors.flashPink.dark};
-            width: 10%;
-        }
-        &:nth-child(2) {
-            width: 60%;
-        }
-        &:nth-child(3) {
-            font-family: monospace;
-            color: ${colors.cyberMango.dark};
-            width: 20%;
-        }
-        &:nth-child(4) {
+        th {
             text-align: left;
-            font-family: monospace;
-            width: 10%;
+            padding: 0.75rem 0.5rem;
+            border-bottom: solid thin ${colors.ash.light};
+            background-color: ${colors.white.base};
         }
+        tr {
+            &:nth-child(odd) {
+                background-color: ${colors.silver.light};
+            }
+        }
+        td {
+            padding: 0.75rem 0.5rem;
+            line-height: 1.5rem;
 
-        pre {
-            ${InlineCodeStyle};
+            &:first-child {
+                font-family: monospace;
+                color: ${colors.flashPink.dark};
+                width: 10%;
+            }
+            &:nth-child(2) {
+                width: 60%;
+            }
+            &:nth-child(3) {
+                font-family: monospace;
+                color: ${colors.cyberMango.dark};
+                width: 20%;
+            }
+            &:nth-child(4) {
+                text-align: left;
+                font-family: monospace;
+                width: 10%;
+            }
+
+            pre {
+                ${InlineCodeStyle};
+            }
         }
     }
 
