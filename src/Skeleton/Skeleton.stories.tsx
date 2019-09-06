@@ -40,6 +40,10 @@ const CardHeader = styled('div')`
         top: 0.5rem;
         right: 0.5rem;
     }
+
+    .anchor-avatar {
+        background-color: #ec5673;
+    }
 `;
 
 const CardInfo = styled('div')`
@@ -112,11 +116,13 @@ storiesOf('Components/Skeleton', module)
             initials: text('initials', 'KR'),
         };
         const placeholderData = {
-            title: 'Just a test title',
-            subtitle: 'This is the subtitle',
-            description:
-                "This is some generic text for the card, not sure where it's going but oh well. How is your day today?",
-            initials: undefined,
+            title: text('loading.title', 'Just a test title'),
+            subtitle: text('loading.subtitle', 'This is the subtitle'),
+            description: text(
+                'loading.description',
+                "The text here doesn't actually matter, its just used to determine how long to make the skeleton text."
+            ),
+            initials: text('loading.initials', '') || undefined,
         };
 
         const { title, subtitle, initials, description } = loading
@@ -128,12 +134,12 @@ storiesOf('Components/Skeleton', module)
                 <StyledStory>
                     <Card>
                         <CardHeader>
-                            {/* <Skeleton loading={loading} borderRadius="circular"> */}
-                            <Avatar label={initials} />
-                            {/* </Skeleton> */}
+                            <Skeleton loading={loading} borderRadius="circular">
+                                <Avatar label={initials} />
+                            </Skeleton>
 
                             <CardInfo>
-                                <Typography scale={14} weight={500}>
+                                <Typography scale={16} weight={500}>
                                     <Skeleton loading={loading}>
                                         {title}
                                     </Skeleton>

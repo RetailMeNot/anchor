@@ -47,7 +47,7 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
 
                   // hide all children
                   * {
-                      visibility: none;
+                      visibility: hidden;
                       opacity: 0;
                   }
               `}
