@@ -20,11 +20,13 @@ export { NormalizeCSS, GlobalCSS } from './GlobalStyles';
 // TODO: ============================================================ move all of these ^ consts to a different location
 
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
+import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
 
 export const RootTheme = {
     typography,
     radii: { none: '0', base: '4px', modal: '8px', circular: '1000px' },
     [BUTTON_KEY]: BUTTON_THEME,
+    [INPUT_KEY]: INPUT_THEME,
     colors: ColorsTheme,
     breakpoints: {
         xs: 0,

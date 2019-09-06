@@ -5,7 +5,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
   display: block;
   position: relative;
   border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: text;
   box-sizing: border-box;
   min-width: 5rem;
@@ -14,11 +14,6 @@ exports[`Component: AutoComplete should be defined 1`] = `
   overflow: hidden;
   height: 3.125rem;
   padding: 0.25rem;
-}
-
-.c1 input {
-  height: 1rem;
-  font-size: 1rem;
 }
 
 .c1::-webkit-input-placeholder {
@@ -59,6 +54,11 @@ exports[`Component: AutoComplete should be defined 1`] = `
   -webkit-transform: translate(0,0) scale(1);
   -ms-transform: translate(0,0) scale(1);
   transform: translate(0,0) scale(1);
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
 }
 
 .c3 {
@@ -183,7 +183,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   display: block;
   position: relative;
   border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: text;
   box-sizing: border-box;
   min-width: 5rem;
@@ -192,11 +192,6 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   overflow: hidden;
   height: 3.125rem;
   padding: 0.25rem;
-}
-
-.c1 input {
-  height: 1rem;
-  font-size: 1rem;
 }
 
 .c1::-webkit-input-placeholder {
@@ -237,6 +232,11 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   -webkit-transform: translate(0,0) scale(1);
   -ms-transform: translate(0,0) scale(1);
   transform: translate(0,0) scale(1);
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
 }
 
 .c3 {
@@ -361,7 +361,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   display: block;
   position: relative;
   border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: text;
   box-sizing: border-box;
   min-width: 5rem;
@@ -370,11 +370,6 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   overflow: hidden;
   height: 3.125rem;
   padding: 0.25rem;
-}
-
-.c1 input {
-  height: 1rem;
-  font-size: 1rem;
 }
 
 .c1::-webkit-input-placeholder {
@@ -415,6 +410,11 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   -webkit-transform: translate(0,0) scale(1);
   -ms-transform: translate(0,0) scale(1);
   transform: translate(0,0) scale(1);
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
 }
 
 .c3 {
@@ -548,7 +548,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   display: block;
   position: relative;
   border: solid thin #D3D3D3;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: text;
   box-sizing: border-box;
   min-width: 5rem;
@@ -557,11 +557,6 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   overflow: hidden;
   height: 3.125rem;
   padding: 0.25rem;
-}
-
-.c1 input {
-  height: 1rem;
-  font-size: 1rem;
 }
 
 .c1::-webkit-input-placeholder {
@@ -602,6 +597,11 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   -webkit-transform: translate(0,0) scale(1);
   -ms-transform: translate(0,0) scale(1);
   transform: translate(0,0) scale(1);
+}
+
+.c1 input {
+  height: 1rem;
+  font-size: 1rem;
 }
 
 .c3 {
