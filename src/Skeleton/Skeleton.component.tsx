@@ -14,6 +14,11 @@ interface SkeletonProps
     display?: string;
     height?: string;
     width?: string;
+    maxHeight?: string;
+    maxWidth?: string;
+    minHeight?: string;
+    minWidth?: string;
+    textLength?: number;
 }
 
 interface StyledSkeletonProps extends SkeletonProps {
@@ -23,12 +28,26 @@ interface StyledSkeletonProps extends SkeletonProps {
 const StyledSkeleton = styled('div')<StyledSkeletonProps>`
     box-sizing: border-box;
 
-    ${({ display, borderRadius, height, width, textOnly }) =>
+    ${({
+        display,
+        borderRadius,
+        height,
+        width,
+        maxHeight,
+        maxWidth,
+        minHeight,
+        minWidth,
+        textOnly,
+    }) =>
         css({
             borderRadius,
             display: display || (textOnly ? 'inherit' : 'inline-block'),
             width,
             height,
+            maxWidth,
+            maxHeight,
+            minHeight,
+            minWidth,
         })}
     ${spaceStyles}
 
@@ -41,12 +60,12 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
                   animation: color-change 2s ease-in-out infinite;
               `
             : css`
-                  background: ${th.color('neutrals.silver.dark')};
                   pointer-events: none;
+                  background: ${th.color('neutrals.silver.dark')};
                   animation: background-change 2s ease-in-out infinite;
 
                   // hide all children
-                  * {
+                  && * {
                       visibility: hidden;
                       opacity: 0;
                   }
@@ -79,36 +98,38 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
 export const Skeleton = ({
     className,
     children,
+    textLength,
     loading = true,
     ...props
 }: SkeletonProps): React.ReactElement<StyledSkeletonProps> | any => {
     if (!loading) {
-        return children;
+        return typeof children === 'undefined' ? null : children;
     }
 
     // This is the conversion from block width to the average width of
     // a normal distribution of letters. We came up with it by eyeballing it
     // for the Avenir Next font. We should make it configurable via theme/prop
-    // or do some more precise math to make it better.
+    // or make further calculations to improve it.
     const blockToAverageCharQuotient = 2.15;
 
     const onlyChild =
         React.Children.count(children) === 1 &&
         React.Children.toArray(children)[0];
 
-    const onlyText =
-        typeof onlyChild === 'string' &&
-        Array(Math.ceil(onlyChild.length / blockToAverageCharQuotient)).join(
-            '▆'
-        );
+    const textOnly = !!textLength || typeof onlyChild === 'string';
+    const length =
+        textLength || (typeof onlyChild === 'string' && onlyChild.length);
+    const blockText =
+        length &&
+        Array(Math.ceil(length / blockToAverageCharQuotient) + 1).join('▆');
 
     return (
         <StyledSkeleton
             className={classNames('anchor-skeleton', className)}
-            textOnly={!!onlyText}
+            textOnly={textOnly}
             {...props}
         >
-            {onlyText || children}
+            {textOnly ? blockText : children}
         </StyledSkeleton>
     );
 };

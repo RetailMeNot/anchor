@@ -85,6 +85,7 @@ storiesOf('Components/Skeleton', module)
             // tslint:disable-next-line: max-line-length
             'For a long time in software companies the practice of building software as one-off initiatives at has been called into question and deemed insular. Its no longer acceptable to deliver a piece of software that solves a particular problem and call it a solution. As new requirements emerge, narrowing our focus just to a particular challenges requirements results in organizational tension, substandard solutions, churn, code rot, technical debt, etc.';
 
+        const textLength = parseInt(text('textLength', ''), 10) || undefined;
         const tag = select<TagSelect>('Typography tag', Tags, '');
         const scale = select<ScaleSelect>('Typography scale', Scales, '');
 
@@ -95,10 +96,36 @@ storiesOf('Components/Skeleton', module)
                         tag={tag || undefined}
                         scale={scale || undefined}
                     >
-                        <Skeleton loading={loading}>
+                        <Skeleton loading={loading} textLength={textLength}>
                             {text('Text', defaultText)}
                         </Skeleton>
                     </Typography>
+                </StyledStory>
+            </ThemeProvider>
+        );
+    })
+    .add('Custom Shape', () => {
+        const loading = boolean('loading', true);
+
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <StyledStory>
+                    <Skeleton
+                        loading={loading}
+                        display={text('display', '') || undefined}
+                        borderRadius={text('borderRadius', 'circular')}
+                        width={text('width', '10rem') || undefined}
+                        height={text('height', '2rem') || undefined}
+                        maxWidth={text('maxWidth', '') || undefined}
+                        maxHeight={text('maxHeight', '') || undefined}
+                        minWidth={text('minWidth', '') || undefined}
+                        minHeight={text('minHeight', '') || undefined}
+                        margin={text('margin', '') || undefined}
+                        padding={text('padding', '') || undefined}
+                        textLength={
+                            parseInt(text('textLength', ''), 10) || undefined
+                        }
+                    />
                 </StyledStory>
             </ThemeProvider>
         );
@@ -116,8 +143,8 @@ storiesOf('Components/Skeleton', module)
             initials: text('initials', 'KR'),
         };
         const placeholderData = {
-            title: text('loading.title', 'Just a test title'),
-            subtitle: text('loading.subtitle', 'This is the subtitle'),
+            title: text('loading.title', 'Friendly title'),
+            subtitle: text('loading.subtitle', 'Lovely subtitle'),
             description: text(
                 'loading.description',
                 "The text here doesn't actually matter, its just used to determine how long to make the skeleton text."
