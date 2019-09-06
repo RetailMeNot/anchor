@@ -2136,40 +2136,40 @@ storiesOf('Components/Button', module)
         const Suffix = chosenSuffix === 'none' ? undefined : Icon[chosenSuffix];
 
         return (
-            // <ThemeProvider theme={RootTheme}>
-            <StoryComponent>
-                <Typography tag="h2" weight={'bold'}>
-                    Configure me
-                </Typography>
-                {Array.from(Array(numberOfButtons)).map((x, i) => (
-                    <Button
-                        key={`button${i}`}
-                        variant={chosenVariant}
-                        size={chosenSize}
-                        forceActive={boolean('force-state: active', false)}
-                        forceFocus={boolean('force-state: focus', false)}
-                        forceHover={boolean('force-state: hover', false)}
-                        reverse={isReversed}
-                        block={boolean('block', false)}
-                        flip={boolean('flip', false)}
-                        circular={boolean('circular', false)}
-                        disabled={boolean('disabled', false)}
-                        revealed={boolean('revealed', false)}
-                        minWidth={minWidth ? minWidth : undefined}
-                        margin={margin ? margin : undefined}
-                        colorTheme={
-                            chosenColor === 'default'
-                                ? undefined
-                                : colors[chosenColor]
-                        }
-                        prefix={Prefix && <Prefix />}
-                        suffix={Suffix && <Suffix />}
-                    >
-                        {buttonText ? buttonText : undefined}
-                    </Button>
-                ))}
-            </StoryComponent>
-            // </ThemeProvider>
+            <ThemeProvider theme={RootTheme}>
+                <StoryComponent>
+                    <Typography tag="h2" weight={'bold'}>
+                        Configure me
+                    </Typography>
+                    {Array.from(Array(numberOfButtons)).map((x, i) => (
+                        <Button
+                            key={`button${i}`}
+                            variant={chosenVariant}
+                            size={chosenSize}
+                            forceActive={boolean('force-state: active', false)}
+                            forceFocus={boolean('force-state: focus', false)}
+                            forceHover={boolean('force-state: hover', false)}
+                            reverse={isReversed}
+                            block={boolean('block', false)}
+                            flip={boolean('flip', false)}
+                            circular={boolean('circular', false)}
+                            disabled={boolean('disabled', false)}
+                            revealed={boolean('revealed', false)}
+                            minWidth={minWidth ? minWidth : undefined}
+                            margin={margin ? margin : undefined}
+                            colorTheme={
+                                chosenColor === 'default'
+                                    ? undefined
+                                    : colors[chosenColor]
+                            }
+                            prefix={Prefix && <Prefix />}
+                            suffix={Suffix && <Suffix />}
+                        >
+                            {buttonText ? buttonText : undefined}
+                        </Button>
+                    ))}
+                </StoryComponent>
+            </ThemeProvider>
         );
     })
     .add('Button with Custom Theme', () => {
