@@ -7,23 +7,24 @@ import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { colors, Color } from '../theme';
+import { TypographyTags, Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
-type TextElements =
-    | 'a'
-    | 'p'
-    | 'span'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
-    | 'blockquote'
-    | 'address'
-    | 'code'
-    | 'label'
-    | 'pre';
+// export type TypographyTags =
+//     | 'a'
+//     | 'p'
+//     | 'span'
+//     | 'h1'
+//     | 'h2'
+//     | 'h3'
+//     | 'h4'
+//     | 'h5'
+//     | 'h6'
+//     | 'blockquote'
+//     | 'address'
+//     | 'code'
+//     | 'label'
+//     | 'pre';
 
 type FontWeights =
     | 'normal'
@@ -77,7 +78,7 @@ type DisplayValues =
 
 export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
 
-type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
+// type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
 
 export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     className?: string;
@@ -87,7 +88,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     htmlFor?: string;
     href?: string;
     children?: any;
-    tag?: TextElements;
+    tag?: TypographyTags;
     weight?: FontWeights;
     color?: 'inherit' | 'initial' | Color | string;
     hue?: 'light' | 'base' | 'dark';
@@ -96,7 +97,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     lineHeight?: number;
 }
 
-const StyledTypography = (tag: TextElements) => styled(tag)<TypographyProps>`
+const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
     box-sizing: border-box;
     // Global Font Properties
     font-family: ${th('typography.fontFamily')};

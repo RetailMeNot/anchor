@@ -4,7 +4,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
-import { transparentize } from 'polished';
 
 interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
@@ -31,7 +30,7 @@ const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
 /* tslint:enable max-line-length */
 
 const StyledAvatar = styled('div')<AvatarProps>`
-    border: solid 0.1875rem ${transparentize(0.6, 'white')};
+    border: solid 0.1875rem rgba(255, 255, 255, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;

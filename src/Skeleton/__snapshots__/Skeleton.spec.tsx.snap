@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Skeleton should be defined. 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  background: #E7E7E7;
+  pointer-events: none;
+  -webkit-animation: background-change 2s ease-in-out infinite;
+  animation: background-change 2s ease-in-out infinite;
+}
+
+.c0 * {
+  visibility: none;
+  opacity: 0;
+}
+
+<div
+  className="anchor-skeleton c0"
+/>
+`;
+
+exports[`Component: Skeleton should display just the children when not loading 1`] = `
+<div>
+  show me!
+</div>
+`;
+
+exports[`Component: Skeleton should render in textOnly mode when given only text 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: inherit;
+  word-break: break-all;
+  color: #E7E7E7;
+  -webkit-animation: color-change 2s ease-in-out infinite;
+  animation: color-change 2s ease-in-out infinite;
+}
+
+<div
+  className="anchor-skeleton c0"
+>
+  ▆▆▆▆▆▆▆▆▆▆▆
+</div>
+`;
+
+exports[`Component: Skeleton should wrap over nontext children and hide them 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  background: #E7E7E7;
+  pointer-events: none;
+  -webkit-animation: background-change 2s ease-in-out infinite;
+  animation: background-change 2s ease-in-out infinite;
+}
+
+.c0 * {
+  visibility: none;
+  opacity: 0;
+}
+
+<div
+  className="anchor-skeleton c0"
+>
+  <div>
+    hide me!
+  </div>
+</div>
+`;
