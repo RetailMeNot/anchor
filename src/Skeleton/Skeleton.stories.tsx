@@ -20,10 +20,10 @@ const StyledStory = styled('div')`
 `;
 
 const Card = styled('div')`
-    width: 330px;
+    width: 20.5rem;
     background-color: white;
     border-radius: base;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 `;
@@ -37,7 +37,7 @@ const CardHeader = styled('div')`
 
     button {
         position: absolute;
-        top: 0.5rem;
+        top: 0.75rem;
         right: 0.5rem;
     }
 
@@ -56,7 +56,7 @@ const CardInfo = styled('div')`
 
 const CardImage = styled('div')`
     width: 100%;
-    height: 190px;
+    height: 12rem;
     background: linear-gradient(170deg, #df206c 0%, #f16667 100%);
 `;
 const CardContent = styled('div')`
