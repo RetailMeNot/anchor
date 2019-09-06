@@ -4,14 +4,14 @@ exports[`Component: Skeleton should be defined. 1`] = `
 .c0 {
   box-sizing: border-box;
   display: inline-block;
-  background: #E7E7E7;
   pointer-events: none;
+  background: #E7E7E7;
   -webkit-animation: background-change 2s ease-in-out infinite;
   animation: background-change 2s ease-in-out infinite;
 }
 
-.c0 * {
-  visibility: none;
+.c0.c0 * {
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -39,7 +39,7 @@ exports[`Component: Skeleton should render in textOnly mode when given only text
 <div
   className="anchor-skeleton c0"
 >
-  ▆▆▆▆▆▆▆▆▆▆▆
+  ▆▆▆▆▆▆▆▆▆▆▆▆
 </div>
 `;
 
@@ -47,14 +47,14 @@ exports[`Component: Skeleton should wrap over nontext children and hide them 1`]
 .c0 {
   box-sizing: border-box;
   display: inline-block;
-  background: #E7E7E7;
   pointer-events: none;
+  background: #E7E7E7;
   -webkit-animation: background-change 2s ease-in-out infinite;
   animation: background-change 2s ease-in-out infinite;
 }
 
-.c0 * {
-  visibility: none;
+.c0.c0 * {
+  visibility: hidden;
   opacity: 0;
 }
 
