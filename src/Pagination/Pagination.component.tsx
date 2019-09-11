@@ -3,7 +3,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 // ANCHOR
-// import { colors } from '../theme';
 import { ButtonProps } from '../Button/Button.component';
 import { Goto } from './Goto';
 import {
@@ -30,6 +29,14 @@ const Button = ({
 type Size = 'sm' | 'xs';
 type Variant = 'pager' | 'minimal';
 
+interface RenderProps {
+    current: number;
+    totalPages: number;
+    totalResults?: number;
+    pageSize: number;
+    range: [number, number];
+}
+
 interface PaginationProps {
     className?: string;
     current?: number;
@@ -43,6 +50,10 @@ interface PaginationProps {
     size?: Size;
     variant?: Variant;
 
+    prefix?: (props: RenderProps) => any;
+    suffix?: (props: RenderProps) => any;
+    children?: (props: RenderProps) => any;
+
     onChange?: (page: number) => any;
 }
 
@@ -51,6 +62,11 @@ const StyledPagination = styled('div')`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+`;
+
+const AffixWrapper = styled('div')`
+    display: inline;
+    margin: 0 1rem;
 `;
 
 interface PaginationState {
@@ -84,14 +100,20 @@ function reducer(state: PaginationState, action: any) {
     }
 }
 
+// We could improve this component by adding ways to show the total number of results,
+// allowing "Next" and "Prev" text instead of arrows, and having the Ellipses buttons
+// dropdown a Goto or decrement/increment the current page by 5, for instance.
 export const Pagination = ({
-    showGoto,
-    showArrows = true,
     className,
+    prefix,
+    suffix,
+    children,
     totalPages,
     totalResults,
     pageSize = 10,
     current: controlledCurrent,
+    showGoto,
+    showArrows = true,
     size = 'sm',
     onChange,
     variant = 'pager',
@@ -140,84 +162,107 @@ export const Pagination = ({
 
     const iconSize = size === 'sm' ? 'lg' : undefined;
 
+    const renderProps: RenderProps = {
+        current,
+        totalPages: total,
+        totalResults,
+        pageSize,
+        range: [
+            (current - 1) * pageSize + 1,
+            Math.min(pageSize * current, totalResults || Infinity),
+        ],
+    };
+
     return (
-        <StyledPagination
-            className={classNames('anchor-pagination', className)}
-            {...props}
-        >
-            {showArrows && (
-                <Button
-                    size={size}
-                    disabled={current <= 1}
-                    prefix={<ChevronLeft scale={iconSize} />}
-                    onClick={() => dispatch({ type: 'decrement', total })}
-                />
-            )}
+        <>
+            <StyledPagination
+                className={classNames('anchor-pagination', className)}
+                {...props}
+            >
+                {prefix && <AffixWrapper>{prefix(renderProps)}</AffixWrapper>}
 
-            {variant === 'minimal' && (
-                <Typography scale={20} margin="0 0.5rem">
-                    {current} / {total}
-                </Typography>
-            )}
+                {showArrows && (
+                    <Button
+                        size={size}
+                        disabled={current <= 1}
+                        prefix={<ChevronLeft scale={iconSize} />}
+                        onClick={() => dispatch({ type: 'decrement', total })}
+                    />
+                )}
 
-            {variant === 'pager' &&
-                (total <= numButtonSlots ? (
-                    Array.from(Array(total)).map((_, i) =>
-                        pageButton({ page: i + 1, slot: i })
-                    )
-                ) : (
-                    <>
-                        {pageButton({ page: 1, slot: 1 })}
+                {variant === 'minimal' && (
+                    <Typography scale={20} margin="0 0.5rem">
+                        {current} / {total}
+                    </Typography>
+                )}
 
-                        {/* If this slot would normally show page 2, display a 2,
+                {variant === 'pager' &&
+                    (total <= numButtonSlots ? (
+                        Array.from(Array(total)).map((_, i) =>
+                            pageButton({ page: i + 1, slot: i })
+                        )
+                    ) : (
+                        <>
+                            {pageButton({ page: 1, slot: 1 })}
+
+                            {/* If this slot would normally show page 2, display a 2,
                         otherwise display an ellipses */}
-                        {constrain(2, current - 2, total - 5) === 2 ? (
-                            pageButton({ page: 2, slot: 2 })
-                        ) : (
-                            <Button size={size} prefix={<Ellipses />} />
-                        )}
+                            {constrain(2, current - 2, total - 5) === 2 ? (
+                                pageButton({ page: 2, slot: 2 })
+                            ) : (
+                                <Button size={size} prefix={<Ellipses />} />
+                            )}
 
-                        {pageButton({
-                            page: constrain(3, current - 1, total - 4),
-                            slot: 3,
-                        })}
-                        {pageButton({
-                            page: constrain(4, current, total - 3),
-                            slot: 4,
-                        })}
-                        {pageButton({
-                            page: constrain(5, current + 1, total - 2),
-                            slot: 5,
-                        })}
+                            {pageButton({
+                                page: constrain(3, current - 1, total - 4),
+                                slot: 3,
+                            })}
+                            {pageButton({
+                                page: constrain(4, current, total - 3),
+                                slot: 4,
+                            })}
+                            {pageButton({
+                                page: constrain(5, current + 1, total - 2),
+                                slot: 5,
+                            })}
 
-                        {/* If this slot would normally show the second to last page, display
+                            {/* If this slot would normally show the second to last page, display
                         the second to last page, otherwise display an ellipses */}
-                        {constrain(6, current + 2, total - 1) === total - 1 ? (
-                            pageButton({ page: total - 1, slot: 6 })
-                        ) : (
-                            <Button size={size} prefix={<Ellipses />} />
-                        )}
+                            {constrain(6, current + 2, total - 1) ===
+                            total - 1 ? (
+                                pageButton({ page: total - 1, slot: 6 })
+                            ) : (
+                                <Button size={size} prefix={<Ellipses />} />
+                            )}
 
-                        {pageButton({ page: total, slot: 7 })}
-                    </>
-                ))}
+                            {pageButton({ page: total, slot: 7 })}
+                        </>
+                    ))}
 
-            {showArrows && (
-                <Button
-                    size={size}
-                    disabled={current === total}
-                    prefix={<ChevronRight scale={iconSize} />}
-                    onClick={() => dispatch({ type: 'increment', total })}
-                />
-            )}
+                {showArrows && (
+                    <Button
+                        size={size}
+                        disabled={current === total}
+                        prefix={<ChevronRight scale={iconSize} />}
+                        onClick={() => dispatch({ type: 'increment', total })}
+                    />
+                )}
 
-            {showGoto && (
-                <Goto
-                    onSubmit={(page: number) =>
-                        dispatch({ type: 'setCurrent', payload: page, total })
-                    }
-                />
-            )}
-        </StyledPagination>
+                {suffix && <AffixWrapper>{suffix(renderProps)}</AffixWrapper>}
+
+                {showGoto && (
+                    <Goto
+                        onSubmit={(page: number) =>
+                            dispatch({
+                                type: 'setCurrent',
+                                payload: page,
+                                total,
+                            })
+                        }
+                    />
+                )}
+            </StyledPagination>
+            {children && children(renderProps)}
+        </>
     );
 };

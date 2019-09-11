@@ -96,10 +96,27 @@ storiesOf('Components/Pagination', module)
                 items.slice(0, pageSize)
             );
 
+            const showPrefix = boolean('prefix?', true) || undefined;
+            const showSuffix = boolean('suffix?', false) || undefined;
+
             return (
                 <ThemeProvider theme={RootTheme}>
                     <StyledStory>
                         <Pagination
+                            prefix={
+                                showPrefix &&
+                                (({
+                                    totalResults: resultTotal,
+                                    range: [low, high],
+                                }) => `${low}-${high} of ${resultTotal} items`)
+                            }
+                            suffix={
+                                showSuffix &&
+                                (({
+                                    totalResults: resultTotal,
+                                    range: [low, high],
+                                }) => `${low}-${high} of ${resultTotal} items`)
+                            }
                             current={current}
                             pageSize={pageSize}
                             totalResults={totalResults}
