@@ -39,6 +39,7 @@ interface PaginationProps {
     pageSize?: number;
 
     showGoto?: boolean;
+    showArrows?: boolean;
     size?: Size;
     variant?: Variant;
 
@@ -85,6 +86,7 @@ function reducer(state: PaginationState, action: any) {
 
 export const Pagination = ({
     showGoto,
+    showArrows = true,
     className,
     totalPages,
     totalResults,
@@ -143,12 +145,14 @@ export const Pagination = ({
             className={classNames('anchor-pagination', className)}
             {...props}
         >
-            <Button
-                size={size}
-                disabled={current <= 1}
-                prefix={<ChevronLeft scale={iconSize} />}
-                onClick={() => dispatch({ type: 'decrement', total })}
-            />
+            {showArrows && (
+                <Button
+                    size={size}
+                    disabled={current <= 1}
+                    prefix={<ChevronLeft scale={iconSize} />}
+                    onClick={() => dispatch({ type: 'decrement', total })}
+                />
+            )}
 
             {variant === 'minimal' && (
                 <Typography scale={20} margin="0 0.5rem">
@@ -198,12 +202,14 @@ export const Pagination = ({
                     </>
                 ))}
 
-            <Button
-                size={size}
-                disabled={current === total}
-                prefix={<ChevronRight scale={iconSize} />}
-                onClick={() => dispatch({ type: 'increment', total })}
-            />
+            {showArrows && (
+                <Button
+                    size={size}
+                    disabled={current === total}
+                    prefix={<ChevronRight scale={iconSize} />}
+                    onClick={() => dispatch({ type: 'increment', total })}
+                />
+            )}
 
             {showGoto && (
                 <Goto

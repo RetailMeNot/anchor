@@ -12,7 +12,8 @@ import { RootTheme } from '../../src/theme';
 import { Pagination } from './Pagination.component';
 
 const StyledStory = styled('div')`
-    padding: 2rem;
+    width: 95%;
+    padding: 0.5rem;
     color: text.body;
     font-family: ${th('typography.fontFamily')};
 `;
@@ -20,7 +21,7 @@ const StyledStory = styled('div')`
 const ResultsContainer = styled('div')`
     border: light;
     background-color: white;
-    margin: 1rem;
+    margin: 1rem 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -58,6 +59,7 @@ storiesOf('Components/Pagination', module)
                     totalResults={number('totalResults', 0) || undefined}
                     pageSize={number('pageSize', 10) || undefined}
                     showGoto={boolean('showGoto', false)}
+                    showArrows={boolean('showArrows', true)}
                     variant={select<'pager' | 'minimal'>(
                         'variant',
                         ['pager', 'minimal'],
@@ -113,6 +115,7 @@ storiesOf('Components/Pagination', module)
                                 'sm'
                             )}
                             showGoto={boolean('showGoto', false)}
+                            showArrows={boolean('showArrows', true)}
                             variant={select<'pager' | 'minimal'>(
                                 'variant',
                                 ['pager', 'minimal'],
@@ -155,6 +158,7 @@ storiesOf('Components/Pagination', module)
                             }
                             pageSize={number('pageSize', 10) || undefined}
                             showGoto={boolean('showGoto', false)}
+                            showArrows={boolean('showArrows', true)}
                             variant={select<'pager' | 'minimal'>(
                                 'variant',
                                 ['pager', 'minimal'],
