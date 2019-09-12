@@ -118,6 +118,8 @@ New components should be placed in the `src` directory. Each new component shoul
 
 Nested components can recursively follow this pattern (see the `Avatar` component for reference).
 
+To make this easy for you, we've included a generate component command `yarn generate ComponentName`.
+
 ## Available Scripts
 
 In the project directory, you can run the following:
@@ -166,6 +168,9 @@ Runs prettier over the entire project to make all the code uniform.
 
 There's also a pre-commit hook if you're committing from the command line.
 
+### `yarn generate ComponentName`
+
+Generates the Component file structure for a new component in the `src/` directory with the given component name. Also works for nested folders, e.g. `yarn generate Form/CustomInput`
 
 ## Testing
 
@@ -190,12 +195,12 @@ You can refer [to the React documentation](https://reactjs.org/docs/react-dom.ht
 This project uses [Babel](https://babeljs.io) which gives us the ability to support a superset of the latest JavaScript standard.
 In addition to [ES6](https://github.com/lukehoban/es6features) syntax features, it also supports:
 
-* [Exponentiation Operator](https://github.com/rwaldron/exponentiation-operator) (ES2016).
-* [Async/await](https://github.com/tc39/ecmascript-asyncawait) (ES2017).
-* [Object Rest/Spread Properties](https://github.com/sebmarkbage/ecmascript-rest-spread) (stage 3 proposal).
-* [Dynamic import()](https://github.com/tc39/proposal-dynamic-import) (stage 3 proposal)
-* [Class Fields and Static Properties](https://github.com/tc39/proposal-class-public-fields) (part of stage 3 proposal).
-* [JSX](https://facebook.github.io/react/docs/introducing-jsx.html) and [Flow](https://flowtype.org/) syntax.
+-   [Exponentiation Operator](https://github.com/rwaldron/exponentiation-operator) (ES2016).
+-   [Async/await](https://github.com/tc39/ecmascript-asyncawait) (ES2017).
+-   [Object Rest/Spread Properties](https://github.com/sebmarkbage/ecmascript-rest-spread) (stage 3 proposal).
+-   [Dynamic import()](https://github.com/tc39/proposal-dynamic-import) (stage 3 proposal)
+-   [Class Fields and Static Properties](https://github.com/tc39/proposal-class-public-fields) (part of stage 3 proposal).
+-   [JSX](https://facebook.github.io/react/docs/introducing-jsx.html) and [Flow](https://flowtype.org/) syntax.
 
 Learn more about [different proposal stages](https://babeljs.io/docs/plugins/#presets-stage-x-experimental-presets-).
 
@@ -211,7 +216,6 @@ depends on ES6 runtime features and might not work without a polyfill. When in d
 To configure the syntax highlighting in your favorite text editor, head to the
 [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most
 popular editors are covered.
-
 
 ## Formatting Code Automatically
 
@@ -244,8 +248,8 @@ export const Button = () => (
 );
 
 ```
-### `DangerButton.js`
 
+### `DangerButton.js`
 
 ```js
 import * as React, { Component } from 'react';
@@ -267,10 +271,9 @@ and as many named exports as you like.
 
 Learn more about ES6 modules:
 
-* [When to use the curly braces?](http://stackoverflow.com/questions/36795819/react-native-es-6-when-should-i-use-curly-braces-for-import/36796281#36796281)
-* [Exploring ES6: Modules](http://exploringjs.com/es6/ch_modules.html)
-* [Understanding ES6: Modules](https://leanpub.com/understandinges6/read#leanpub-auto-encapsulating-code-with-modules)
-
+-   [When to use the curly braces?](http://stackoverflow.com/questions/36795819/react-native-es-6-when-should-i-use-curly-braces-for-import/36796281#36796281)
+-   [Exploring ES6: Modules](http://exploringjs.com/es6/ch_modules.html)
+-   [Understanding ES6: Modules](https://leanpub.com/understandinges6/read#leanpub-auto-encapsulating-code-with-modules)
 
 ## Adding Images, Fonts, and Files
 
@@ -322,7 +325,7 @@ deployed or consuming sensitive data that lives outside of version control.
 ## Proxying API Requests in Development
 
 > More on this later as this project matures. We do have an API gateway project for this (rx-saver-gw) that runs on port
-3006 and the render server is already configured to use that for API proxies.
+> 3006 and the render server is already configured to use that for API proxies.
 
 ## Running Tests
 
@@ -339,7 +342,7 @@ components rather than the DOM quirks.
 
 Jest will look for test files with any of the following popular naming conventions:
 
-* Files with `.spec.tsx` suffix.
+-   Files with `.spec.tsx` suffix.
 
 ### Command Line Interface
 
@@ -372,8 +375,8 @@ Jest provides a built-in `expect()` global function for making assertions. A bas
 import { sum } from './sum';
 
 it('sums numbers', () => {
-  expect(sum(1, 2)).toEqual(3);
-  expect(sum(2, 2)).toEqual(4);
+    expect(sum(1, 2)).toEqual(3);
+    expect(sum(2, 2)).toEqual(4);
 });
 ```
 
@@ -425,7 +428,7 @@ import { App } from './App';
 
 describe('Component: App', () => {
     it('renders without crashing', () => {
-      shallow(<App />);
+        shallow(<App />);
     });
 });
 ```
@@ -448,10 +451,10 @@ import { shallow } from 'enzyme';
 import { App } from './App';
 
 it('renders welcome message', () => {
-  const wrapper = shallow(<App />);
-  const welcome = <h2>Welcome to React</h2>;
-  // expect(wrapper.contains(welcome)).to.equal(true);
-  expect(wrapper.contains(welcome)).toEqual(true);
+    const wrapper = shallow(<App />);
+    const welcome = <h2>Welcome to React</h2>;
+    // expect(wrapper.contains(welcome)).to.equal(true);
+    expect(wrapper.contains(welcome)).toEqual(true);
 });
 ```
 
@@ -461,7 +464,7 @@ Additionally, you might find [jest-enzyme](https://github.com/blainekasten/enzym
 tests with readable matchers. The above `contains` code can be written more simply with jest-enzyme.
 
 ```js
-expect(wrapper).toContainReact(welcome)
+expect(wrapper).toContainReact(welcome);
 ```
 
 ### Snapshot Testing
@@ -487,27 +490,23 @@ which should be extremely familiar to open source developers.
 Different types of branches correspond to different types of work. The following is a list of the different types of work captured on Jira:
 
 1. Feature Implemented
-	* Without a Feature Flag/Not a Test (`feature`)
-		- Brownfield
-		- Greenfield
-	* With Feature Flag (`flag`)
-	* As A Test (`test`)
-		- A/B
-		- Multi-variant
+    - Without a Feature Flag/Not a Test (`feature`) - Brownfield - Greenfield
+    - With Feature Flag (`flag`)
+    - As A Test (`test`) - A/B - Multi-variant
 1. Bug Fix (`bug`)
-	* Design
-	* Functionality
-	* Compatibility
-	* Localization
-	* Usability
+    - Design
+    - Functionality
+    - Compatibility
+    - Localization
+    - Usability
 1. Developer Chore (`chore`)
-	* Refactor
-	* Dependency Updates
-	* Hygiene
-	* Testing
-	* Performance
-	* Security
-	* Documentation
+    - Refactor
+    - Dependency Updates
+    - Hygiene
+    - Testing
+    - Performance
+    - Security
+    - Documentation
 
 ### Branch Names
 
