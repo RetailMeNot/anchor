@@ -36,7 +36,7 @@ export const sections: Sections = [
                 hide: false,
             },
             {
-                title: 'Autocomplete',
+                title: 'AutoComplete',
                 path: '/components/autocomplete/',
                 description: `Enables users to quickly find and select from a pre-populated list of
                 values as they type, leveraging searching and filtering.`,
@@ -88,7 +88,9 @@ export const sections: Sections = [
             {
                 title: 'Grid',
                 path: '/components/grid/',
-                hide: true,
+                description: `Grid itself is actually not a component, but a collection of
+                    components that interact with one another to provide a responsive layout.`,
+                hide: false,
             },
             {
                 title: 'Hero',

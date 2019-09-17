@@ -1,0 +1,851 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Alert should match its snapshot. 1`] = `
+Array [
+  .c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(255,199,97,0.25);
+  border: solid thin;
+  border-color: rgba(255,199,97,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #faa100;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <p
+      className="anchor-typography c1"
+      color="charcoal"
+    >
+      Test Description
+    </p>
+  </div>,
+  .c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(255,199,97,0.25);
+  border: solid thin;
+  border-color: rgba(255,199,97,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #faa100;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .anchor-alert-content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 .anchor-icon {
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  padding: 0 0.5rem 0 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <div
+      className="c1"
+    >
+      <span
+        className="anchor-icon info anchor-alert-icon c2"
+        scale="md"
+      >
+        <svg
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <circle
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              r="8"
+            />
+            <path
+              d="M7.292 7.5h1.416a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5H7.292a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5zM6.75 5.255a1.259 1.259 0 0 1 .371-.883c.115-.113.25-.204.403-.27a1.21 1.21 0 0 1 .962 0c.147.066.278.157.393.27.115.114.205.247.272.4.066.152.099.313.099.483a1.228 1.228 0 0 1-.764 1.15 1.267 1.267 0 0 1-.962 0 1.3 1.3 0 0 1-.403-.261 1.228 1.228 0 0 1-.371-.888z"
+              fill="#FFF"
+              fillRule="nonzero"
+            />
+          </g>
+        </svg>
+      </span>
+      <div
+        className="anchor-alert-content"
+      >
+        <p
+          className="anchor-typography c3"
+          color="charcoal"
+        >
+          Test Description
+        </p>
+      </div>
+    </div>
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(102,204,255,0.25);
+  border: solid thin;
+  border-color: rgba(102,204,255,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #0af;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <p
+      className="anchor-typography c1"
+      color="charcoal"
+    >
+      Test Description
+    </p>
+  </div>,
+  .c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(102,204,255,0.25);
+  border: solid thin;
+  border-color: rgba(102,204,255,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #0af;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .anchor-alert-content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 .anchor-icon {
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  padding: 0 0.5rem 0 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <div
+      className="c1"
+    >
+      <span
+        className="anchor-icon info anchor-alert-icon c2"
+        scale="md"
+      >
+        <svg
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <circle
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              r="8"
+            />
+            <path
+              d="M7.292 7.5h1.416a.5.5 0 0 1 .5.5v3.5a.5.5 0 0 1-.5.5H7.292a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5zM6.75 5.255a1.259 1.259 0 0 1 .371-.883c.115-.113.25-.204.403-.27a1.21 1.21 0 0 1 .962 0c.147.066.278.157.393.27.115.114.205.247.272.4.066.152.099.313.099.483a1.228 1.228 0 0 1-.764 1.15 1.267 1.267 0 0 1-.962 0 1.3 1.3 0 0 1-.403-.261 1.228 1.228 0 0 1-.371-.888z"
+              fill="#FFF"
+              fillRule="nonzero"
+            />
+          </g>
+        </svg>
+      </span>
+      <div
+        className="anchor-alert-content"
+      >
+        <p
+          className="anchor-typography c3"
+          color="charcoal"
+        >
+          Test Description
+        </p>
+      </div>
+    </div>
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(20,163,130,0.25);
+  border: solid thin;
+  border-color: rgba(20,163,130,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #09483a;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <p
+      className="anchor-typography c1"
+      color="charcoal"
+    >
+      Test Description
+    </p>
+  </div>,
+  .c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(20,163,130,0.25);
+  border: solid thin;
+  border-color: rgba(20,163,130,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #09483a;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .anchor-alert-content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 .anchor-icon {
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  padding: 0 0.5rem 0 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <div
+      className="c1"
+    >
+      <span
+        className="anchor-icon check anchor-alert-icon c2"
+        scale="md"
+      >
+        <svg
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <path
+              d="M0 0h16v16H0z"
+            />
+            <path
+              d="M14.627 5.133l-7.637 7.5a1.282 1.282 0 0 1-1.8 0l-3.817-3.75a1.235 1.235 0 0 1 0-1.768 1.288 1.288 0 0 1 1.799 0L6.09 9.982l6.737-6.617a1.291 1.291 0 0 1 1.8 0c.496.488.496 1.28 0 1.768"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </span>
+      <div
+        className="anchor-alert-content"
+      >
+        <p
+          className="anchor-typography c3"
+          color="charcoal"
+        >
+          Test Description
+        </p>
+      </div>
+    </div>
+  </div>,
+  .c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(204,59,59,0.25);
+  border: solid thin;
+  border-color: rgba(204,59,59,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #802121;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <p
+      className="anchor-typography c1"
+      color="charcoal"
+    >
+      Test Description
+    </p>
+  </div>,
+  .c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(204,59,59,0.25);
+  border: solid thin;
+  border-color: rgba(204,59,59,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #802121;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .anchor-alert-content {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c1 .anchor-icon {
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  padding: 0 0.5rem 0 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: inherit;
+  text-transform: none;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
+<div
+    className="anchor-alert c0"
+    title="Test Title"
+  >
+    <div
+      className="c1"
+    >
+      <span
+        className="anchor-icon error anchor-alert-icon c2"
+        scale="md"
+      >
+        <svg
+          height={16}
+          viewBox="0 0 16 16"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <path
+              d="M0 0h16v16H0z"
+            />
+            <path
+              d="M15.797 12.757c.133.23.203.49.203.756 0 .821-.652 1.487-1.457 1.487H1.457c-.271 0-.537-.077-.768-.223a1.504 1.504 0 0 1-.47-2.047L6.921 1.703a1.44 1.44 0 0 1 2.493.027l6.383 11.027z"
+              fill="currentColor"
+            />
+            <path
+              d="M7.133 9.377V5.5a.5.5 0 0 1 .5-.5h.723a.5.5 0 0 1 .5.5v3.877a.5.5 0 0 1-.5.5h-.723a.5.5 0 0 1-.5-.5zM9 11.451a.983.983 0 0 1-.077.388.902.902 0 0 1-.215.311c-.093.086-.2.155-.323.207a.995.995 0 0 1-.39.078c-.137 0-.265-.024-.385-.073a.92.92 0 0 1-.313-.207 1.095 1.095 0 0 1-.215-.31.958.958 0 0 1-.005-.761.973.973 0 0 1 .528-.528.995.995 0 0 1 .39-.078c.137 0 .267.026.39.077.123.052.23.121.323.208a.958.958 0 0 1 .292.689z"
+              fill="#FFF"
+              fillRule="nonzero"
+            />
+          </g>
+        </svg>
+      </span>
+      <div
+        className="anchor-alert-content"
+      >
+        <p
+          className="anchor-typography c3"
+          color="charcoal"
+        >
+          Test Description
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

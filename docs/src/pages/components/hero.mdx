@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import {
+    ApiTable,
     ColorBlurb,
     ComponentInfo,
     FormatTypes,
@@ -49,59 +50,33 @@ from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> co
 
 ### Hero
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>align</td>
-            <td>
-                The alignment of content within the <pre>Hero</pre>.
-            </td>
-            <td>
-                <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />
-            </td>
-            <td>center</td>
-        </tr>
-        <tr>
-            <td>background</td>
-            <td>
-                <ColorBlurb background gradient label="Hero" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td>transparent</td>
-        </tr>
-        <tr>
-            <td>color</td>
-            <td>
-                <ColorBlurb defaultTheme label="Hero" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
-        </tr>
-        <tr>
-            <td>minHeight</td>
-            <td>
-                The minimum height that the Hero should be rendered at. This accepts any valid CSS
-                unit of measurement (<pre>px</pre>, <pre>%</pre>, <pre>rem</pre>, etc).
-            </td>
-            <td>
-                string
-            </td>
-            <td>7.5rem</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'align',
+        description: `The alignment of content within the <pre>Hero</pre>.`,
+        type: <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />,
+        default: 'center',
+    },
+    {
+        property: 'background',
+        description: <ColorBlurb background gradient label="Hero" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'transparent',
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb defaultTheme label="Hero" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+    {
+        property: 'minHeight',
+        description: `The minimum height that the Hero should be rendered at. This accepts any valid
+            CSS unit of measurement (<pre>px</pre>, <pre>%</pre>, <pre>rem</pre>, etc).`,
+        type: 'string',
+        default: '7.5rem',
+    },
+]} />
 
 ---
 
@@ -111,50 +86,29 @@ from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> co
 Editable props are `tag`  and `weight`. Refer to <Link to="/components/typography">`Typography`</Link> for
 more information.
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>scale</td>
-            <td>
-                Note that the default tag that is used, <pre>h1</pre>, will prevent scale from working. Any
-                <pre>Typography</pre> <pre>tag</pre> using a heading has this limitation
-                (<pre>h1</pre>, <pre>h2</pre>, <pre>h3</pre>, <pre>h4</pre>, <pre>h5</pre>, <pre>h6</pre>).
-            </td>
-            <td>
-                -
-            </td>
-            <td>32</td>
-        </tr>
-        <tr>
-            <td>tag</td>
-            <td>
-                -
-            </td>
-            <td>
-                -
-            </td>
-            <td>h1</td>
-        </tr>
-        <tr>
-            <td>weight</td>
-            <td>
-                -
-            </td>
-            <td>
-                -
-            </td>
-            <td>600</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'scale',
+        description: `Note that the default tag that is used, <pre>h1</pre>, will prevent scale from
+            working. Any <pre>Typography</pre> <pre>tag</pre> using a heading has this limitation
+            (<pre>h1</pre>, <pre>h2</pre>, <pre>h3</pre>, <pre>h4</pre>, <pre>h5</pre>,
+            <pre>h6</pre>).`,
+        type: '-',
+        default: '32',
+    },
+    {
+        property: 'tag',
+        description: `-`,
+        type: '-',
+        default: 'h1',
+    },
+    {
+        property: 'weight',
+        description: `-`,
+        type: '-',
+        default: '600',
+    },
+]} />
 
 ---
 
@@ -163,35 +117,17 @@ more information.
 `Subtitle` is as a wrapper of the `Typography` component. Editable props are `scale` and`weight`.
 Refer to `Typography`'s <Link to="/components/typography">documentation</Link> for more information.
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>scale</td>
-            <td>
-                -
-            </td>
-            <td>
-                -
-            </td>
-            <td>18</td>
-        </tr>
-        <tr>
-            <td>weight</td>
-            <td>
-                -
-            </td>
-            <td>
-                -
-            </td>
-            <td>600</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'scale',
+        description: `-`,
+        type: '-',
+        default: '18',
+    },
+    {
+        property: 'weight',
+        description: `-`,
+        type: '-',
+        default: '600',
+    },
+]} />

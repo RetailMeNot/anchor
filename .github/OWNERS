@@ -14,6 +14,7 @@
 *.tsx    @sharkparty
 
 # Component Owners
+/src/Alert @sharkparty
 /src/AutoComplete @sharkparty
 /src/Avatar @sharkparty
 /src/Dropdown @sharkparty
@@ -30,6 +31,7 @@
 /src/Hero @brandonlilly
 /src/Button @brandonlilly
 /src/Modal @brandonlilly
+/src/Pagination @brandonlilly
 /src/Form/Checkbox @brandonlilly
 /src/Form/Toggle @brandonlilly
 /src/Form/Radio @brandonlilly

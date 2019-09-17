@@ -1,6 +1,11 @@
 import { Link } from 'gatsby';
 import { BadgeWithParentExample } from '../../components/BadgeWithParentExample';
-import { FormatTypes, ColorBlurb, ComponentInfo } from '../../components/Utils';
+import {
+    ApiTable,
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
+} from '../../components/Utils';
 
 # Badge
 
@@ -136,94 +141,85 @@ export const BadgeWithParentExample = () => {
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>backgroundColor</td>
-            <td><ColorBlurb background label="Badge" /></td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td>error</td>
-        </tr>
-        <tr>
-            <td>borderColor</td>
-            <td>The color of the border of the <pre>Badge</pre></td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td>error</td>
-        </tr>
-        <tr>
-            <td>borderColorHover</td>
-            <td>The color of the border of the <pre>Badge</pre> on hover</td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td>error</td>
-        </tr>
-        <tr>
-            <td>children</td>
-            <td>Any elements inside the <pre>Badge</pre> tags. This is what we use to pass <Link to="/components/icon">Icon</Link> components
-                in.</td>
-            <td>Icon</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>count</td>
-            <td>The number to be displayed inside the <pre>Badge</pre></td>
-            <td>number</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>isParentHovered</td>
-            <td>Whether the parent element of the <pre>Badge</pre> is hovered</td>
-            <td>boolean</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>overflowCount</td>
-            <td>The maximum count to show in the <pre>Badge</pre></td>
-            <td>number</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>offsetBottom</td>
-            <td>The absolute positioning in <pre>rem</pre> from the bottom</td>
-            <td>number</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>offsetLeft</td>
-            <td>The absolute positioning in <pre>rem</pre> from the left</td>
-            <td>number</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>showZero</td>
-            <td>Whether to show the badge if the <pre>count</pre> is <pre>0</pre>.</td>
-            <td>boolean</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>The size of the <pre>Badge</pre>.</td>
-            <td><FormatTypes types={['dot', 'small', 'large']} /></td>
-            <td>dot</td>
-        </tr>
-        <tr>
-            <td>standalone</td>
-            <td>Whether the <pre>Badge</pre> will be displayed alone.</td>
-            <td>boolean</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>textColor</td>
-            <td><ColorBlurb defaultTheme label="count" /></td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'backgroundColor',
+        description: <ColorBlurb background label="Badge" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'error',
+    },
+    {
+        property: 'borderColor',
+        description: 'The color of the border of the <pre>Badge</pre>.',
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'error',
+    },
+    {
+        property: 'borderColorHover',
+        description: 'The color of the border of the <pre>Badge</pre> on hover.',
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'error',
+    },
+    {
+        property: 'children',
+        description: [
+            'Any elements inside the <pre>Badge</pre> tags. This is what we use to pass ',
+            <Link to="/components/icon">Icon</Link>,
+            ' components in.',
+        ],
+        type: 'Icon',
+    },
+    {
+        property: 'count',
+        description: 'The number to be displayed inside the <pre>Badge</pre>.',
+        type: 'number',
+        default: '0',
+    },
+    {
+        property: 'isParentHovered',
+        description: 'Whether the parent element of the <pre>Badge</pre> is hovered.',
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'overflowCount',
+        description: 'The maximum count to show in the <pre>Badge</pre>.',
+        type: 'number',
+        default: '9',
+    },
+    {
+        property: 'offsetBottom',
+        description: 'The absolute positioning in <pre>rem</pre> from the bottom.',
+        type: 'number',
+    },
+    {
+        property: 'offsetLeft',
+        description: 'The absolute positioning in <pre>rem</pre> from the left.',
+        type: 'number',
+    },
+    {
+        property: 'showZero',
+        description: 'Whether to show the badge if the <pre>count</pre> is <pre>0</pre>.',
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'size',
+        description: 'The size of the <pre>Badge</pre>.',
+        type: <FormatTypes types={['dot', 'small', 'large']} />,
+        default: 'dot',
+    },
+    {
+        property: 'standalone',
+        description: 'Whether the <pre>Badge</pre> will be displayed alone.',
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'textColor',
+        description: <ColorBlurb defaultTheme label="count" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+]} />
+

@@ -1,19 +1,620 @@
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
+
 # Grid
 
+<ComponentInfo title="Grid" mode="description" />
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget turpis scelerisque, euismod turpis eget,
-pretium tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris
-hendrerit lorem erat, quis pellentesque leo facilisis et. Nam bibendum eros non lectus efficitur, nec mattis
-enim molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam et lorem sodales convallis
-quis in massa. Etiam ut lacus et massa gravida condimentum. Sed sodales pulvinar sem in fringilla. Cras interdum
-orci non malesuada pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet
-viverra nulla, in varius nulla sodales eu. Phasellus varius nulla id leo ultricies, vel semper urna ultricies.
-Integer nisl ante, varius vitae venenatis eu, suscipit in leo. Duis imperdiet posuere elit, a malesuada tortor
-ullamcorper eu. Nam vestibulum mauris quis mi commodo semper. Praesent volutpat, urna ut blandit aliquet, magna
-turpis pretium ex, vel eleifend nulla diam ac nibh.
+Grid can be broken out into 2 groups of components, those for **Layout**, and those for
+**Breakpoints**.
 
-```jsx
-  // none
+###### Grid Components
+```jsx hideTitle
+import {
+    // Layout
+    CenteredCell,
+    Col,
+    Container,
+    Hidden,
+    Row,
+    ScreenBadge,
+    ScreenClass,
+    Visible,
+
+    // Breakpoints
+    CustomAdaptor,
+    LegacyDesktop,
+    LegacyTablet,
+    LegacyPhone,
+    XS,
+    SM,
+    MD,
+    LG,
+    XL,
+    XXL,
+    LegacyBreakpoints,
+    StandardBreakpoints,
+} from '@retailmenot/anchor';
 ```
+
+---
+
+## Layout Components
+
+These are components that are built using
+<a href="https://awesome-styled-grid.netlify.com/" target="_blank">react-awesome-styled-grid</a>,
+which in itself is based off of
+<a href="//material.io/design/layout/responsive-layout-grid.html#columns-gutters-margins" target="_blank">Google's Material Design</a>.
+They provide structure to content and layout with utilities for responsive design. The components
+that fit into this category are noted in the list below.
+
+* `CenteredCell`: This layout component is not part of `react-awesome-styled-grid`. It can still be
+used within the `Container` component as noted in the example below. It provides a column that
+centers its children.
+* `Col`: A column. Has the most options and props.
+* `Container`: Containing element. All other layout components should be a child of this one.
+* `Hidden`: Children of this component will be hidden by default unless at a specific breakpoint.
+* `Row`: A row.
+* `ScreenBadge`: This is strictly for debugging. It shows the breakpoint in the bottom-right corner
+of the page.
+* `ScreenClass`: A component whose render method exposes the breakpoint.
+* `Visible`: Children of this component will be visible by default unless at a specific breakpoint.
+
+The `debug` prop is assigned to nearly every component in the example. This shows the purple
+background for each component and makes it easier to plan a layout.
+
+###### Layout Components (Live Code Editor)
+```tsx live hideTitle
+<Container debug>
+    <CenteredCell>
+        <ScreenClass render={(screen) => <>{screen}</>} />
+    </CenteredCell>
+    <Row debug>
+        <Col
+            debug
+            md={4}
+            lg={6}
+            xl={8}
+            offset={{
+                md: 2,
+                lg: 3,
+                xl: 2
+            }}
+        >
+            Hello!
+        </Col>
+    </Row>
+    <Row debug>
+        <Hidden xs xl>
+            <Col debug>
+                1
+            </Col>
+        </Hidden>
+        <Col debug>2</Col>
+        <Visible md xs>
+            <Col debug>
+                3
+            </Col>
+        </Visible>
+    </Row>
+    <Row debug>
+        <Col debug>
+            4
+        </Col>
+        <Col debug>
+            5
+        </Col>
+        <Col debug>
+            6
+        </Col>
+    </Row>
+    <ScreenBadge />
+</Container>
+```
+
+---
+
+## Breakpoint Components
+
+These components are designed to help make changes to a layout on an even more granular level than
+the Layout components can via breakpoints. The components that fit into this category are noted in
+the list below.
+
+* `CustomAdaptor`: Lets the user specify their own breakpoints at which point content should be
+shown.
+* `LegacyDesktop`: Uses the `LegacyBreakpoints` object to define at which point content should be
+shown for desktop.
+* `LegacyTablet`: Uses the `LegacyBreakpoints` object to define at which point content should be
+shown for tablet.
+* `LegacyPhone`: Uses the `LegacyBreakpoints` object to define at which point content should be
+shown for tablet.
+* `XS`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *xs*.
+* `SM`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *sm*.
+* `MD`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *md*.
+* `LG`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *lg*.
+* `XL`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *xl*.
+* `XXL`: Uses the `StandardBreakpoints` object to define at which point content should be
+shown for *xxl*.
+* `LegacyBreakpoints`: An object containing min-max breakpoint values based on RetailMeNot's
+legacy website.
+* `StandardBreakpoints`: An object containing min-max breakpoint values based on newer standards.
+
+<br />
+
+### StandardBreakpoints
+
+The components, `XS`, `SM`, `MD`, `LG`, `XL` and `XXL` are all based on the `StandardBreakpoints`
+object. Below are the min and max values for each of those breakpoints, and an example of them in
+use.
+
+###### StandardBreakpoints
+```jsx hideTitle
+{
+    xs: {
+        max: 575,
+    },
+    sm: {
+        min: 576,
+        max: 767,
+    },
+    md: {
+        min: 768,
+        max: 991,
+    },
+    lg: {
+        min: 992,
+        max: 1199,
+    },
+    xl: {
+        min: 1200,
+        max: 1599,
+    },
+    xxl: {
+        min: 1600,
+    },
+}
+```
+
+```tsx live
+<div>
+    <XS>
+        XS
+    </XS>
+    <SM>
+        SM
+    </SM>
+    <MD>
+        MD
+    </MD>
+    <LG>
+        LG
+    </LG>
+    <XL>
+        XL
+    </XL>
+    <XXL>
+        XXL
+    </XXL>
+</div>
+```
+
+<br />
+
+### LegacyBreakpoints
+
+The components, `LegacyDesktop`, `LegacyTablet`, and `LegacyPhone` are all based on the
+`LegacyBreakpoints` object. Below are the min and max values for each of those breakpoints, and an
+example of them in use.
+
+###### LegacyBreakpoints
+```jsx hideTitle
+{
+    desktop: {
+        min: 1000,
+    },
+    tablet: {
+        min: 899,
+        max: 999,
+    },
+    phone: {
+        max: 898,
+    },
+}
+```
+
+```tsx live
+<div>
+    <LegacyPhone>
+        LegacyPhone
+    </LegacyPhone>
+    <LegacyTablet>
+        LegacyTablet
+    </LegacyTablet>
+    <LegacyDesktop>
+        LegacyDesktop
+    </LegacyDesktop>
+</div>
+```
+
+<br />
+
+### CustomAdaptor
+
+The `CustomAdaptor` allows for custom maximum and minimum widths per the example below.
+
+```tsx live
+<div>
+    <CustomAdaptor
+        maxWidth={399}
+        onChange={(matches) => console.log(`onChange ${matches}`)}
+    >
+        Up to 399
+    </CustomAdaptor>
+
+    <CustomAdaptor
+        minWidth={400}
+        maxWidth={1000}
+    >
+        Between 400 & 1000
+    </CustomAdaptor>
+
+    <CustomAdaptor
+        minWidth={1001}
+    >
+        Above 1001
+    </CustomAdaptor>
+</div>
+```
+
+<br />
+
+## API's for Layout
+
+It is recommended to refer to
+<a href="https://awesome-styled-grid.netlify.com/" target="_blank">react-awesome-styled-grid</a>'s
+documentation for advanced usage of the `Col`, `Container`, `Hidden`, `Row`, `ScreenBadge`,
+`ScreenClass` and `Visible` components.
+
+---
+
+### CenteredCell
+
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+### Col
+
+<ApiTable
+    sort={false}
+    data={[
+        {
+            property: 'xs',
+            description: 'Sets the number of columns on screen for the <em>xs</em> breakpoint.',
+            type: <FormatTypes types={['number', 'string']} noInterpret />,
+        },
+        {
+            property: 'sm',
+            description: 'Sets the number of columns on screen for the <em>sm</em> breakpoint.',
+            type: <FormatTypes types={['number', 'string']} noInterpret />,
+        },
+        {
+            property: 'md',
+            description: 'Sets the number of columns on screen for the <em>md</em> breakpoint.',
+            type: <FormatTypes types={['number', 'string']} noInterpret />,
+        },
+        {
+            property: 'lg',
+            description: 'Sets the number of columns on screen for the <em>lg</em> breakpoint.',
+            type: <FormatTypes types={['number', 'string']} noInterpret />,
+        },
+        {
+            property: 'xl',
+            description: 'Sets the number of columns on screen for the <em>xl</em> breakpoint.',
+            type: <FormatTypes types={['number', 'string']} noInterpret />,
+        },
+        {
+            property: 'debug',
+            description: `Gives the <pre>Container</pre> a purple background to visually indicate its
+                boundaries.`,
+            type: 'boolean',
+        },
+        {
+            property: 'noGutter',
+            description: `Removes the gutter around the <pre>Col</pre>.`,
+            type: 'boolean',
+            default: false,
+        },
+        {
+            property: 'offset',
+            description: `Sets the number of the offset columns.`,
+            type: <FormatTypes types={['number', 'object']} noInterpret />,
+        },
+        {
+            property: 'reverse',
+            description: `Reverses the direction of the columns.`,
+            type: <FormatTypes types={['number', '[]']} noInterpret />,
+        },
+    ]}
+/>
+
+---
+
+### Container
+
+<ApiTable data={[
+    {
+        property: 'fluid',
+        description: 'If the container is full width.',
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'debug',
+        description: `Gives the <pre>Container</pre> a purple background to visually indicate its
+            boundaries.`,
+        type: 'boolean',
+    },
+]} />
+
+---
+
+### Hidden
+
+<ApiTable
+    sort={false}
+    data={[
+        {
+            property: 'xs',
+            description: 'When at the <em>xs</em> breakpoint, content will be hidden.',
+            type: 'boolean',
+        },
+        {
+            property: 'sm',
+            description: 'When at the <em>sm</em> breakpoint, content will be hidden.',
+            type: 'boolean',
+        },
+        {
+            property: 'md',
+            description: 'When at the <em>md</em> breakpoint, content will be hidden.',
+            type: 'boolean',
+        },
+        {
+            property: 'lg',
+            description: 'When at the <em>lg</em> breakpoint, content will be hidden.',
+            type: 'boolean',
+        },
+        {
+            property: 'xl',
+            description: 'When at the <em>xl</em> breakpoint, content will be hidden.',
+            type: 'boolean',
+        },
+    ]}
+/>
+
+---
+
+### Row
+
+<ApiTable data={[
+    {
+        property: 'reverse',
+        description: `Reverses the direction of the row.`,
+        type: <FormatTypes types={['number', '[]']} noInterpret />,
+    },
+    {
+        property: 'debug',
+        description: `Gives the <pre>Container</pre> a purple background to visually indicate its
+            boundaries.`,
+        type: 'boolean',
+    },
+]} />
+
+---
+
+### ScreenBadge
+
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### ScreenClass
+
+<ApiTable data={[
+    {
+        property: 'render',
+        description: `A function that outputs the current breakpoint, i.e. <pre>xs</pre>,
+        <pre>sm</pre>, <pre>md</pre>, <pre>lg</pre>, <pre>xl</pre>.`,
+        type: '(value: string) => void',
+    },
+]} />
+
+---
+
+### Visible
+
+<ApiTable
+    sort={false}
+    data={[
+        {
+            property: 'xs',
+            description: 'When at the <em>xs</em> breakpoint, content will be visible.',
+            type: 'boolean',
+        },
+        {
+            property: 'sm',
+            description: 'When at the <em>sm</em> breakpoint, content will be visible.',
+            type: 'boolean',
+        },
+        {
+            property: 'md',
+            description: 'When at the <em>md</em> breakpoint, content will be visible.',
+            type: 'boolean',
+        },
+        {
+            property: 'lg',
+            description: 'When at the <em>lg</em> breakpoint, content will be visible.',
+            type: 'boolean',
+        },
+        {
+            property: 'xl',
+            description: 'When at the <em>xl</em> breakpoint, content will be visible.',
+            type: 'boolean',
+        },
+    ]}
+/>
+
+<br /><br /><br />
+
+## API's for Breakpoints
+
+---
+
+### CustomAdaptor
+
+It is recommended to refer to
+<a href="https://github.com/contra/react-responsive" target="_blank">react-responsive</a>'s
+documentation for advanced usage of the `CustomAdaptor`.
+
+<ApiTable data={[
+    {
+        property: 'minHeight',
+        description: `The minimum document height at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'maxHeight',
+        description: `The maximum document height at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'minDeviceHeight',
+        description: `The minimum device height at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'maxDeviceHeight',
+        description: `The maximum device height at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'minWidth',
+        description: `The minimum document width at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'maxWidth',
+        description: `The maximum document width at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'minDeviceWidth',
+        description: `The minimum device width at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'maxDeviceWidth',
+        description: `The maximum device width at which the children of the
+            <pre>CustomAdaptor</pre> should be displayed.`,
+        type: <FormatTypes types={['number', 'string']} noInterpret />,
+    },
+    {
+        property: 'onChange',
+        description: `An event which fires just as the parameters for the <pre>CustomAdapator</pre>
+            are met.`,
+        type: `(matches: boolean) => void`,
+    },
+]} />
+
+---
+
+### XS
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### SM
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### MD
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### LG
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### XL
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
+
+---
+
+### XXL
+<ApiTable data={[
+    {
+        property: '-',
+        description: '-',
+        type: '-',
+    },
+]} />
 
 

@@ -26,6 +26,7 @@ const commonPlugins = [
 const componentList = {
     // COMPONENTS
     index: './src/index.ts',
+    alert: './src/Alert/index.ts',
     autocomplete: './src/AutoComplete/index.ts',
     avatar: './src/Avatar/index.ts',
     badge: './src/Badge/index.ts',
@@ -41,6 +42,7 @@ const componentList = {
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
     skeleton: './src/Skeleton/index.ts',
+    pagination: './src/Pagination/index.ts',
     typography: './src/Typography/index.ts',
     tooltip: './src/Tooltip/index.ts',
     // THEME

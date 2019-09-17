@@ -12,17 +12,17 @@ import { Link } from 'gatsby';
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
+interface SiteLinkProps {
+    children?: any;
+    to: string;
+}
+
 const StyledSiteLink = styled(Link)`
     color: #007ecd;
     font-family: ${th('typography.fontFamily')};
     text-decoration: none;
     font-weight: 600;
 `;
-
-interface SiteLinkProps {
-    children?: any;
-    to: string;
-}
 
 export const SiteLink = ({
     children,
