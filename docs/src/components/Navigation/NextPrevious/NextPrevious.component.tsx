@@ -41,6 +41,11 @@ interface State {
 }
 
 class NextPrevious extends React.PureComponent<NextPreviousProps> {
+    state = {
+        next: undefined,
+        previous: undefined,
+    };
+
     constructor(props: NextPreviousProps) {
         super(props);
         // Received from the AddLocation HOC
@@ -51,7 +56,7 @@ class NextPrevious extends React.PureComponent<NextPreviousProps> {
         });
 
         if (currentSection) {
-            const { links } = currentSection;
+            const { links }: LinkProperties = currentSection;
             // Gets the index of the this page's link entry in the section
             const indexOfLink = links.reduce(
                 (currentIndex: number, link: LinkProperties, index: number) => {
