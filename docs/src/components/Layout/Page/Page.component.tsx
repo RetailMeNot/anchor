@@ -17,7 +17,7 @@ import { Link } from 'gatsby';
 // COMPONENTS
 import { fonts, NormalizeCSS } from '../../../../../src/theme';
 import { Footer } from '../';
-import { EnhancedSideNavigation } from '../../Navigation';
+import { EnhancedSideNavigation, EnhancedNextPrevious } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
 // ASSETS
 import logo from './anchor-logo.svg';
@@ -365,6 +365,8 @@ export const Page = ({
                         <MDXProvider components={Components}>
                             {children}
                         </MDXProvider>
+
+                        <EnhancedNextPrevious section="components" />
                         {enableFooter && <Footer />}
                     </StyledContentMain>
                 </Col>

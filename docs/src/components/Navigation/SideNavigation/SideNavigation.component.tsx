@@ -6,7 +6,11 @@ import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
 // TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
-import { sections } from '../../Utils';
+import {
+    LinkProperties,
+    SectionProperties,
+    sections,
+} from '../../Utils';
 import { AddLocation } from '../AddLocation';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
@@ -21,19 +25,13 @@ const StyledCollapseGroup = styled(CollapseGroup)`
     }
 `;
 
+const LinkTitle = styled('div')`
+    font-weight:bold;
+    padding: 1rem  2.75rem 0.5rem;
+`;
+
 interface SideNavigationProps {
     location?: object;
-}
-
-interface SectionProperties {
-    title: string;
-    pattern: string;
-    links: object[];
-}
-
-interface LinkProperties {
-    title: string;
-    path: string;
 }
 
 class SideNavigation extends React.PureComponent<SideNavigationProps> {
@@ -76,16 +74,25 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
                         >
                             <ul>
                                 {section.links.map(
-                                    (link: LinkProperties, j: number) => (
-                                        <li key={`link-key-${j}`}>
-                                            <Link
-                                                to={link.path}
-                                                activeClassName="active"
-                                            >
-                                                {link.title}
-                                            </Link>
-                                        </li>
-                                    )
+                                    (link: LinkProperties, j: number) => {
+                                        return(!link.hide ?
+                                            <li key={`link-key-${j}`}>
+                                                {
+                                                    link.type === 'title' ?
+                                                        <LinkTitle>{link.title}</LinkTitle>
+                                                    : (
+                                                        <Link
+                                                            to={link.path}
+                                                            activeClassName="active"
+                                                        >
+                                                            {link.title}
+                                                        </Link>
+                                                    )
+                                                }
+                                            </li>
+                                        : null
+                                        );
+                                    }
                                 )}
                             </ul>
                         </Collapse>
