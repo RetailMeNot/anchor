@@ -13,7 +13,9 @@ import {
     Typography,
 } from '..';
 
-// Constrain a value between a min and max
+// Constrain a value between a min and max.
+// Used primarily here to keep the current page
+// value between the first page and last page
 const constrain = (min: number, value: number, max: number) =>
     Math.min(Math.max(value, min), max);
 
@@ -26,8 +28,8 @@ const Button = ({
     <AnchorButton variant={variant} size={size} outline={outline} {...props} />
 );
 
-type Size = 'sm' | 'xs';
-type Variant = 'pager' | 'minimal';
+export type Size = 'sm' | 'xs';
+export type Variant = 'expanded' | 'minimal';
 
 interface RenderProps {
     current: number;
@@ -116,7 +118,7 @@ export const Pagination = ({
     showArrows = true,
     size = 'sm',
     onChange,
-    variant = 'pager',
+    variant = 'expanded',
     ...props
 }: PaginationProps): React.ReactElement<PaginationProps> => {
     const [state, dispatch] = React.useReducer(reducer, {
@@ -196,7 +198,7 @@ export const Pagination = ({
                     </Typography>
                 )}
 
-                {variant === 'pager' &&
+                {variant === 'expanded' &&
                     (total <= numButtonSlots ? (
                         Array.from(Array(total)).map((_, i) =>
                             pageButton({ page: i + 1, slot: i })

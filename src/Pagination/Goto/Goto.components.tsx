@@ -3,7 +3,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 // ANCHOR
-import { Input } from '../..';
+import { Input } from '../../Form';
 
 // Todo: this component needs work for mobile and for accessibility.
 
@@ -11,10 +11,17 @@ const EventKeyCodes = {
     ENTER: 13,
 };
 
-interface GotoProps {
+// This is a workaround to overwrite instead of extend, to avoid
+// an incompatible extension (for onSubmit)
+type Spread<L, R> = R & Pick<L, Exclude<keyof L, keyof R>>;
+
+interface ExtraProps {
     className?: string;
     onSubmit: (arg: number) => any;
 }
+
+interface GotoProps
+    extends Spread<React.HTMLAttributes<HTMLDivElement>, ExtraProps> {}
 
 const StyledGoto = styled('div')`
     width: 6rem;

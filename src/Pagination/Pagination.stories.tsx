@@ -9,7 +9,7 @@ import { th } from '@xstyled/system';
 // ANCHOR
 import * as Icon from '../Icon';
 import { RootTheme } from '../../src/theme';
-import { Pagination } from './Pagination.component';
+import { Pagination, Size, Variant } from './Pagination.component';
 
 const StyledStory = styled('div')`
     width: 95%;
@@ -54,16 +54,16 @@ storiesOf('Components/Pagination', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Pagination
-                    size={select<'sm' | 'xs'>('size', ['sm', 'xs'], 'sm')}
+                    size={select<Size>('size', ['sm', 'xs'], 'sm')}
                     totalPages={number('totalPages', 15) || undefined}
                     totalResults={number('totalResults', 0) || undefined}
                     pageSize={number('pageSize', 10) || undefined}
                     showGoto={boolean('showGoto', false)}
                     showArrows={boolean('showArrows', true)}
-                    variant={select<'pager' | 'minimal'>(
+                    variant={select<Variant>(
                         'variant',
-                        ['pager', 'minimal'],
-                        'pager'
+                        ['expanded', 'minimal'],
+                        'expanded'
                     )}
                 />
             </StyledStory>
@@ -126,17 +126,13 @@ storiesOf('Components/Pagination', module)
                                     setResults(data)
                                 );
                             }}
-                            size={select<'sm' | 'xs'>(
-                                'size',
-                                ['sm', 'xs'],
-                                'sm'
-                            )}
+                            size={select<Size>('size', ['sm', 'xs'], 'sm')}
                             showGoto={boolean('showGoto', false)}
                             showArrows={boolean('showArrows', true)}
-                            variant={select<'pager' | 'minimal'>(
+                            variant={select<Variant>(
                                 'variant',
-                                ['pager', 'minimal'],
-                                'pager'
+                                ['expanded', 'minimal'],
+                                'expanded'
                             )}
                         />
                         <ResultsContainer>
@@ -162,11 +158,7 @@ storiesOf('Components/Pagination', module)
                 <ThemeProvider theme={RootTheme}>
                     <StyledStory>
                         <Pagination
-                            size={select<'sm' | 'xs'>(
-                                'size',
-                                ['sm', 'xs'],
-                                'sm'
-                            )}
+                            size={select<Size>('size', ['sm', 'xs'], 'sm')}
                             onChange={page => setCurrent(page)}
                             current={current}
                             totalPages={number('totalPages', 10) || undefined}
@@ -176,10 +168,10 @@ storiesOf('Components/Pagination', module)
                             pageSize={number('pageSize', 10) || undefined}
                             showGoto={boolean('showGoto', false)}
                             showArrows={boolean('showArrows', true)}
-                            variant={select<'pager' | 'minimal'>(
+                            variant={select<Variant>(
                                 'variant',
-                                ['pager', 'minimal'],
-                                'pager'
+                                ['expanded', 'minimal'],
+                                'expanded'
                             )}
                         />
                     </StyledStory>
