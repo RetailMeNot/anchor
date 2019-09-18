@@ -25,8 +25,8 @@ storiesOf('Components/Form/Radio', module)
                 setSelectedValue(event.target.value);
             }
 
-            const size = text('size', null) || undefined;
-            const fillSize = text('fillSize', null) || undefined;
+            const size = text('size', '') || undefined;
+            const fillSize = text('fillSize', '') || undefined;
             const fillColor = color('fillColor', '') || undefined;
             const disabled = boolean('disabled', false);
 

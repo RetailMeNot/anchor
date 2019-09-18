@@ -31,7 +31,7 @@ storiesOf('Components/Form/Toggle', module)
                         <Toggle
                             checked={checked}
                             showText={showText}
-                            knobSize={text('knobSize', null) || undefined}
+                            knobSize={text('knobSize', '') || undefined}
                             disabled={boolean('disabled', false)}
                             onChange={() => setChecked(!checked)}
                         />
