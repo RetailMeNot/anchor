@@ -98,7 +98,9 @@ function reducer(state: PaginationState, action: any) {
                 current: constrain(1, state.current, action.total),
             };
         default:
-            throw new Error();
+            throw new Error(
+                `Unrecognized reducer action type: ${action && action.type}`
+            );
     }
 }
 
@@ -146,6 +148,7 @@ export const Pagination = ({
 
     const pageButton = ({ page, slot }: { page: number; slot?: number }) => (
         <Button
+            className={current === page ? 'active' : undefined}
             size={size}
             key={`page${page}:${slot}`}
             onClick={() =>
