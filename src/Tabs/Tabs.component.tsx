@@ -99,7 +99,7 @@ export const Tabs = ({
         active?: boolean;
     }> = [];
     React.Children.forEach(children, (child, index) => {
-        if (!React.isValidElement(child)) {
+        if (!child || !React.isValidElement(child)) {
             return;
         }
 
@@ -110,7 +110,7 @@ export const Tabs = ({
     const initialTab =
         defaultActiveKey || defaultActiveKey === 0
             ? defaultActiveKey
-            : tabInfo[0].key;
+            : tabInfo[0] && tabInfo[0].key;
     const [stateCurrent, setCurrent] = React.useState(initialTab);
 
     const current = activeKey || activeKey === 0 ? activeKey : stateCurrent;

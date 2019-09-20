@@ -4,9 +4,12 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 
-interface PaneProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+export interface PaneProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     key?: any;
     active?: boolean;
+    title: string;
 
     background?: string;
     border?: string;

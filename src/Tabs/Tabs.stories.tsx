@@ -35,6 +35,7 @@ storiesOf('Components/Tabs', module)
                         'top'
                     )}
                     activeKey={text('activeKey', '') || undefined}
+                    defaultActiveKey={text('defaultActiveKey', '') || undefined}
                 >
                     <Pane title="Banana" key="banana">
                         Best when just starting to brown.

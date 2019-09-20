@@ -7,11 +7,17 @@ import { shallow, mount } from 'enzyme';
 import { RootTheme } from '../../src/theme';
 import { Tabs } from './Tabs.component';
 
+const { Pane } = Tabs;
+
 describe('Component: Tabs', () => {
     it('should be defined.', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
-                <Tabs />
+                <Tabs>
+                    <Pane title="Tab 1">Content 1</Pane>
+                    <Pane title="Tab 2">Content 2</Pane>
+                    <Pane title="Tab 3">Content 3</Pane>
+                </Tabs>
             </ThemeProvider>
         );
         const wrapper = mount(subject);
