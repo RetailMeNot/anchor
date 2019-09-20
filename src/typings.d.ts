@@ -17,6 +17,7 @@ declare module '@xstyled/styled-components' {
         createGlobalStyle,
         FlattenInterpolation,
         ThemeProps,
+        ThemeContext,
     } from 'styled-components';
 
     export const ThemeProvider: any;
