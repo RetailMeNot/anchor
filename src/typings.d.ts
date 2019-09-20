@@ -12,6 +12,8 @@ declare module '@xstyled/styled-components' {
 
     export {
         FlattenSimpleInterpolation,
+        FlattenInterpolation,
+        ThemeProps,
         createGlobalStyle,
     } from 'styled-components';
 

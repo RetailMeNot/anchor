@@ -129,6 +129,8 @@ export interface ColorsThemeSchema {
 
     error: string;
     success: string;
+    info: string;
+    warning: string;
 }
 
 export const ColorsTheme: ColorsThemeSchema = {
@@ -166,5 +168,7 @@ export const ColorsTheme: ColorsThemeSchema = {
         content: colors.white.base,
     },
     error: colors.fireSale.dark,
-    success: colors.dealEnvy.dark,
+    success: colors.dealEnvy.base,
+    info: colors.savvyCyan.light,
+    warning: colors.goldMine.light,
 };
