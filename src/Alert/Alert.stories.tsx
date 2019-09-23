@@ -56,9 +56,7 @@ storiesOf('Components/Alert', module)
                     closable={boolean('Closable', true)}
                     message={text('Message', 'This is a message')}
                     description={text('Description', 'This is a description')}
-                    icon={
-                        <InfoOutline scale="md" />
-                    }
+                    icon={<InfoOutline scale="md" />}
                 />
             </StyledStory>
         </ThemeProvider>

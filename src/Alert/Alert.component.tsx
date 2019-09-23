@@ -92,7 +92,7 @@ const StyledAlert = styled('div')<AlertProps>`
 
     h4,
     p {
-        line-height: 1em;
+        line-height: 1.2em;
         margin: 0;
         padding: 0;
     }
