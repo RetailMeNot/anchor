@@ -5,16 +5,18 @@ declare module '*.md' {
 
 declare module '@xstyled/styled-components' {
     import {
+        ThemedCssFunction,
+        DefaultTheme,
+        StyledInterface,
+    } from 'styled-components';
+    export {
         StyledInterface,
         ThemedCssFunction,
         DefaultTheme,
-    } from 'styled-components';
-
-    export {
         FlattenSimpleInterpolation,
+        createGlobalStyle,
         FlattenInterpolation,
         ThemeProps,
-        createGlobalStyle,
     } from 'styled-components';
 
     export const ThemeProvider: any;

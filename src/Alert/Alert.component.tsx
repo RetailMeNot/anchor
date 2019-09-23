@@ -14,6 +14,7 @@ import { Close } from '../Icon';
 import { Typography } from '../Typography';
 import { Button } from '../Button';
 import { get } from '../utils/get/get';
+import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 
 export enum AlertTypes {
     success = 'SUCCESS',
@@ -163,7 +164,7 @@ export const Alert = ({
             )}
             {icon ? (
                 <StyledIconContainer>
-                    {React.cloneElement(icon, {
+                    {cloneWithProps(icon, {
                         className: 'anchor-alert-icon',
                     })}
                     <div className="anchor-alert-content">
