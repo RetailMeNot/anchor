@@ -9,7 +9,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(255,199,97,0.25);
-  border: solid thin rgba(255,199,97,0.6);
+  border: solid thin;
+  border-color: rgba(255,199,97,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -89,7 +90,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(255,199,97,0.25);
-  border: solid thin rgba(255,199,97,0.6);
+  border: solid thin;
+  border-color: rgba(255,199,97,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -219,7 +221,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(102,204,255,0.25);
-  border: solid thin rgba(102,204,255,0.6);
+  border: solid thin;
+  border-color: rgba(102,204,255,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -299,7 +302,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(102,204,255,0.25);
-  border: solid thin rgba(102,204,255,0.6);
+  border: solid thin;
+  border-color: rgba(102,204,255,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -429,7 +433,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(20,163,130,0.25);
-  border: solid thin rgba(20,163,130,0.6);
+  border: solid thin;
+  border-color: rgba(20,163,130,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -509,7 +514,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(20,163,130,0.25);
-  border: solid thin rgba(20,163,130,0.6);
+  border: solid thin;
+  border-color: rgba(20,163,130,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -635,7 +641,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(204,59,59,0.25);
-  border: solid thin rgba(204,59,59,0.6);
+  border: solid thin;
+  border-color: rgba(204,59,59,0.6);
 }
 
 .c0 .anchor-alert-icon {
@@ -715,7 +722,8 @@ Array [
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background-color: rgba(204,59,59,0.25);
-  border: solid thin rgba(204,59,59,0.6);
+  border: solid thin;
+  border-color: rgba(204,59,59,0.6);
 }
 
 .c0 .anchor-alert-icon {

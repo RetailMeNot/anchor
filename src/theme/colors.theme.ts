@@ -1,3 +1,6 @@
+// VENDOR
+import { transparentize } from 'polished';
+
 export type Color =
     | 'charcoal'
     | 'ash'
@@ -108,6 +111,8 @@ export interface ColorsThemeSchema {
         dark: string;
         error: string;
         success: string;
+        info: string;
+        warning: string;
     };
 
     text: {
@@ -125,6 +130,10 @@ export interface ColorsThemeSchema {
     background: {
         body: string;
         content: string;
+        error: string;
+        success: string;
+        info: string;
+        warning: string;
     };
 
     error: string;
@@ -149,8 +158,10 @@ export const ColorsTheme: ColorsThemeSchema = {
         base: colors.ash.light,
         dark: colors.ash.dark,
         // SEMANTIC
-        error: colors.ash.dark,
-        success: colors.ash.dark,
+        error: transparentize(0.4, colors.fireSale.dark),
+        success: transparentize(0.4, colors.dealEnvy.base),
+        info: transparentize(0.4, colors.savvyCyan.light),
+        warning: transparentize(0.4, colors.goldMine.light),
     },
     text: {
         body: colors.charcoal.base,
@@ -166,6 +177,10 @@ export const ColorsTheme: ColorsThemeSchema = {
     background: {
         body: colors.silver.base,
         content: colors.white.base,
+        error: transparentize(0.75, colors.fireSale.dark),
+        success: transparentize(0.75, colors.dealEnvy.base),
+        info: transparentize(0.75, colors.savvyCyan.light),
+        warning: transparentize(0.75, colors.goldMine.light),
     },
     error: colors.fireSale.dark,
     success: colors.dealEnvy.base,

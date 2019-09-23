@@ -8,7 +8,7 @@ import styled, {
     ThemeProps,
 } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
-import { transparentize, darken } from 'polished';
+import { darken } from 'polished';
 // COMPONENTS
 import { Close } from '../Icon';
 import { Typography } from '../Typography';
@@ -46,18 +46,6 @@ const renderAlertTheme = (
     variant: AlertType
 ): FlattenInterpolation<ThemeProps<AlertProps>> => {
     return css`
-        ${({ theme }: any) =>
-            css({
-                backgroundColor: transparentize(
-                    0.75,
-                    get(theme, `colors.${variant.toLowerCase()}`)
-                ),
-                border: `solid thin ${transparentize(
-                    0.4,
-                    get(theme, `colors.${variant.toLowerCase()}`)
-                )}`,
-            })};
-
         .anchor-alert-icon {
             ${({ theme }) =>
                 css({
@@ -76,6 +64,12 @@ const StyledAlert = styled('div')<AlertProps>`
     border-radius: base;
     font-family: ${th('typography.fontFamily')};
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    ${({ variant }) =>
+        css({
+            backgroundColor: `background.${variant.toLowerCase()}`,
+            border: 'solid thin',
+            borderColor: `borders.${variant.toLowerCase()}`,
+        })};
     ${({ variant }) => renderAlertTheme(variant)};
 
     .anchor-alert-close {
