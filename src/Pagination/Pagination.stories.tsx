@@ -76,6 +76,7 @@ storiesOf('Components/Pagination', module)
 
             const items = Array.from(Array(totalResults)).map((_, i) => ({
                 name: `Result ${i + 1}`,
+                key: `result-${i + 1}`,
                 color: `hsla(${Math.sin(i) * 356}, 69%, 66%, 1)`,
                 icon: iconNames[i % iconNames.length],
             }));
@@ -136,8 +137,8 @@ storiesOf('Components/Pagination', module)
                             )}
                         />
                         <ResultsContainer>
-                            {results.map(({ name, color, icon }) => (
-                                <Result color={color}>
+                            {results.map(({ name, color, icon, key }) => (
+                                <Result color={color} key={key}>
                                     {name}
                                     {React.createElement(Icon[icon], {
                                         scale: 'xl',

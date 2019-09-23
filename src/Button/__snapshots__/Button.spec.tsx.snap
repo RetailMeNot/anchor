@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Button Icon Only should render a circular icon 1`] = `
+.c2 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -193,13 +200,6 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c2 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
-}
-
 <button
   className="anchor-button c0 c1"
 >
@@ -232,6 +232,13 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 `;
 
 exports[`Component: Button Icon Only should render icon-only using a prefix 1`] = `
+.c2 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -418,13 +425,6 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
-}
-
-.c2 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <button
@@ -459,6 +459,13 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
 `;
 
 exports[`Component: Button Icon Only should render icon-only using a suffix 1`] = `
+.c2 {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 0;
+}
+
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -645,13 +652,6 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   bottom: calc(-1px - 2px);
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
-}
-
-.c2 {
-  display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
-  line-height: 0;
 }
 
 <button
@@ -5933,6 +5933,14 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 `;
 
 exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
+.c2 {
+  margin: 0 0.5rem 0 0;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -6011,14 +6019,6 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 
 .c8 + .c0 {
   margin-left: 1rem;
-}
-
-.c2 {
-  margin: 0 0.5rem 0 0;
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  line-height: 0;
 }
 
 <button
@@ -6054,6 +6054,14 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 `;
 
 exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
+.c2 {
+  margin: 0 0 0 0.5rem;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+}
+
 .c3 + .c0 {
   margin-left: 1rem;
 }
@@ -6132,14 +6140,6 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
 
 .c8 + .c0 {
   margin-left: 1rem;
-}
-
-.c2 {
-  margin: 0 0 0 0.5rem;
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  line-height: 0;
 }
 
 <button

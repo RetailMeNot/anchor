@@ -1,3 +1,4 @@
+export { Alert, AlertTypes } from './Alert';
 export { Avatar } from './Avatar';
 export { AutoComplete } from './AutoComplete';
 export { Button } from './Button/Button.component';
