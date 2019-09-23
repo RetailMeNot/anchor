@@ -6,19 +6,22 @@ import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
 export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
-    path: string;
+    path?: string;
     label?: string;
     children?: any;
     className?: string;
     active?: boolean;
     // TODO: do I need this?
-    size?: 'small' | 'large';
+    size?: 'sm' | 'lg';
     // TODO: tag to allow element overrides
     as?: any;
     type?: any;
 }
 
 const StyledItem = styled('a')<ItemProps>`
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     text-align: center;
     font-family: ${th('typography.fontFamily')};
@@ -29,12 +32,6 @@ const StyledItem = styled('a')<ItemProps>`
     // Disable Select
     user-select: none;
     -webkit-touch-callout: none;
-
-    // TODO: this doesn't go here (Law of Demeter)
-    /* Icons */
-    svg {
-        max-width: 8px;
-    }
 `;
 
 export const Item: React.FunctionComponent<ItemProps> = ({
@@ -47,6 +44,7 @@ export const Item: React.FunctionComponent<ItemProps> = ({
 }: ItemProps): React.ReactElement<ItemProps> => (
     <StyledItem
         className={classNames('anchor-menu-item', className, { active })}
+        active={active}
         {...props}
     >
         {label ? label : children}
