@@ -33,7 +33,7 @@ type AlertType =
     | AlertTypes.error;
 
 interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
-    type: AlertType;
+    variant: AlertType;
     className?: string;
     message?: string;
     description?: string;
@@ -43,18 +43,18 @@ interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const renderAlertTheme = (
-    type: AlertType
+    variant: AlertType
 ): FlattenInterpolation<ThemeProps<AlertProps>> => {
     return css`
         ${({ theme }: any) =>
             css({
                 backgroundColor: transparentize(
                     0.75,
-                    get(theme, `colors.${type.toLowerCase()}`)
+                    get(theme, `colors.${variant.toLowerCase()}`)
                 ),
                 border: `solid thin ${transparentize(
                     0.4,
-                    get(theme, `colors.${type.toLowerCase()}`)
+                    get(theme, `colors.${variant.toLowerCase()}`)
                 )}`,
             })};
 
@@ -63,7 +63,7 @@ const renderAlertTheme = (
                 css({
                     color: darken(
                         0.2,
-                        get(theme, `colors.${type.toLowerCase()}`)
+                        get(theme, `colors.${variant.toLowerCase()}`)
                     ),
                 })}
         }
@@ -76,7 +76,7 @@ const StyledAlert = styled('div')<AlertProps>`
     border-radius: base;
     font-family: ${th('typography.fontFamily')};
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-    ${({ type }) => renderAlertTheme(type)};
+    ${({ variant }) => renderAlertTheme(variant)};
 
     .anchor-alert-close {
         position: absolute;
@@ -164,7 +164,7 @@ export const Alert = ({
                     circular={true}
                     variant="minimal"
                     prefix={<Close color="rgba(0, 0, 0, 0.3)" scale="sm" />}
-                    onClick={() => handleClose()}
+                    onClick={handleClose}
                 />
             )}
             {icon ? (

@@ -67,7 +67,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="warning"
   >
     <p
       className="anchor-typography c1"
@@ -169,7 +168,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="warning"
   >
     <div
       className="c1"
@@ -279,7 +277,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="info"
   >
     <p
       className="anchor-typography c1"
@@ -381,7 +378,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="info"
   >
     <div
       className="c1"
@@ -491,7 +487,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="success"
   >
     <p
       className="anchor-typography c1"
@@ -593,7 +588,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="success"
   >
     <div
       className="c1"
@@ -699,7 +693,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="error"
   >
     <p
       className="anchor-typography c1"
@@ -801,7 +794,6 @@ Array [
 <div
     className="anchor-alert c0"
     title="Test Title"
-    type="error"
   >
     <div
       className="c1"

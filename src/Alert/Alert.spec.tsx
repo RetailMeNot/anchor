@@ -13,7 +13,7 @@ describe('Component: Alert', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
                 <Alert
-                    type="warning"
+                    variant="warning"
                     title="Test Title"
                     description="Test Description"
                     closable={true}
@@ -31,45 +31,45 @@ describe('Component: Alert', () => {
             <ThemeProvider theme={RootTheme}>
                 <>
                     <Alert
-                        type="warning"
+                        variant="warning"
                         title="Test Title"
                         description="Test Description"
                     />
                     <Alert
-                        type="warning"
-                        title="Test Title"
-                        description="Test Description"
-                        icon={<Info />}
-                    />
-                    <Alert
-                        type="info"
-                        title="Test Title"
-                        description="Test Description"
-                    />
-                    <Alert
-                        type="info"
+                        variant="warning"
                         title="Test Title"
                         description="Test Description"
                         icon={<Info />}
                     />
                     <Alert
-                        type="success"
+                        variant="info"
                         title="Test Title"
                         description="Test Description"
                     />
                     <Alert
-                        type="success"
+                        variant="info"
+                        title="Test Title"
+                        description="Test Description"
+                        icon={<Info />}
+                    />
+                    <Alert
+                        variant="success"
+                        title="Test Title"
+                        description="Test Description"
+                    />
+                    <Alert
+                        variant="success"
                         title="Test Title"
                         description="Test Description"
                         icon={<Check />}
                     />
                     <Alert
-                        type="error"
+                        variant="error"
                         title="Test Title"
                         description="Test Description"
                     />
                     <Alert
-                        type="error"
+                        variant="error"
                         title="Test Title"
                         description="Test Description"
                         icon={<Error />}

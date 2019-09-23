@@ -22,8 +22,8 @@ storiesOf('Components/Alert', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Alert
-                    type={select(
-                        'Type',
+                    variant={select(
+                        'Variant',
                         [
                             AlertTypes.warning,
                             AlertTypes.error,
@@ -48,8 +48,8 @@ storiesOf('Components/Alert', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Alert
-                    type={select(
-                        'Type',
+                    variant={select(
+                        'Variant',
                         [
                             AlertTypes.warning,
                             AlertTypes.error,

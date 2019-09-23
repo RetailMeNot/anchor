@@ -7,14 +7,14 @@ The alert component is an inline element to communicate the status of an event.
     import { Alert } from '@retailmenot/anchor';
 
     const example = () => (
-        <Alert type="info" message="This is an alert" />
+        <Alert variant="info" message="This is an alert" />
     );
 
 ## Settings/Props
 
 The component can accept the following `props`:
 
-* `type` *('success' | 'info' | warning' | 'error')*: Required. Determines the color treatment of the Alert.
+* `variant` *('success' | 'info' | warning' | 'error')*: Required. Determines the color treatment of the Alert.
 * `className` *(string)*: Sets a top-level class on the Alert component.
 * `message` *(string)*: Sets the main message of the Alert.
 * `description` *(string)*: Sets the secondary content of the Alert.
