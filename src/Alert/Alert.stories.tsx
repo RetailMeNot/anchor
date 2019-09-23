@@ -35,6 +35,11 @@ storiesOf('Components/Alert', module)
                     closable={boolean('Closable', true)}
                     message={text('Message', 'This is a message')}
                     description={text('Description', 'This is a description')}
+                    onClose={() => {
+                        /* tslint:disable no-console */
+                        console.log('Alert has closed!');
+                        /* tslint:enable no-console */
+                    }}
                 />
             </StyledStory>
         </ThemeProvider>

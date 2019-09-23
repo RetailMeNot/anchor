@@ -39,7 +39,7 @@ interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
     description?: string;
     closable?: boolean;
     icon?: JSX.Element;
-    onClose?: (event: Event) => void;
+    onClose?: (event?: Event) => void;
 }
 
 const renderAlertTheme = (
@@ -147,6 +147,11 @@ export const Alert = ({
 }: AlertProps): React.ReactElement<AlertProps> | null => {
     const [isHidden, setIsHidden] = React.useState<boolean>(false);
 
+    const handleClose = () => {
+        setIsHidden(true);
+        onClose();
+    };
+
     return !isHidden ? (
         <StyledAlert
             className={classNames('anchor-alert', className)}
@@ -159,7 +164,7 @@ export const Alert = ({
                     circular={true}
                     variant="minimal"
                     prefix={<Close color="rgba(0, 0, 0, 0.3)" scale="sm" />}
-                    onClick={() => setIsHidden(true)}
+                    onClick={() => handleClose()}
                 />
             )}
             {icon ? (
