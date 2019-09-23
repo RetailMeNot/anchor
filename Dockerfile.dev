@@ -3,12 +3,11 @@ FROM node:dubnium as builder
 WORKDIR /usr/app
 
 COPY . .
-RUN npm i -g yarn
-RUN yarn
-RUN yarn test
-RUN yarn lint
+RUN npm i
+RUN npm run test
+RUN npm run lint
 
 WORKDIR /usr/app/docs
 
-RUN yarn
-CMD ["yarn", "run", "build"]
+RUN npm
+CMD ["npm", "run", "build"]
