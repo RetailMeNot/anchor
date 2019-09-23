@@ -3,12 +3,13 @@ FROM node:dubnium as builder
 WORKDIR /usr/app
 
 COPY . .
-RUN npm i
+RUN npm i -g yarn
+RUN yarn
 
 WORKDIR /usr/app/docs
 
-RUN npm i
-RUN npm run build
+RUN yarn
+RUN yarn build
 
 
 FROM mesosphere/aws-cli
