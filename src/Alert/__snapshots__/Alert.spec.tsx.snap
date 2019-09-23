@@ -12,7 +12,7 @@ Array [
   border: solid thin rgba(255,199,97,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #faa100;
 }
 
@@ -92,7 +92,7 @@ Array [
   border: solid thin rgba(255,199,97,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #faa100;
 }
 
@@ -173,7 +173,7 @@ Array [
       className="c1"
     >
       <span
-        className="anchor-icon info c2"
+        className="anchor-icon info anchor-alert-icon c2"
         scale="md"
       >
         <svg
@@ -222,7 +222,7 @@ Array [
   border: solid thin rgba(102,204,255,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #0af;
 }
 
@@ -302,7 +302,7 @@ Array [
   border: solid thin rgba(102,204,255,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #0af;
 }
 
@@ -383,7 +383,7 @@ Array [
       className="c1"
     >
       <span
-        className="anchor-icon info c2"
+        className="anchor-icon info anchor-alert-icon c2"
         scale="md"
       >
         <svg
@@ -432,7 +432,7 @@ Array [
   border: solid thin rgba(20,163,130,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #09483a;
 }
 
@@ -512,7 +512,7 @@ Array [
   border: solid thin rgba(20,163,130,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #09483a;
 }
 
@@ -593,7 +593,7 @@ Array [
       className="c1"
     >
       <span
-        className="anchor-icon check c2"
+        className="anchor-icon check anchor-alert-icon c2"
         scale="md"
       >
         <svg
@@ -638,7 +638,7 @@ Array [
   border: solid thin rgba(204,59,59,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #802121;
 }
 
@@ -718,7 +718,7 @@ Array [
   border: solid thin rgba(204,59,59,0.6);
 }
 
-.c0 .anchor-icon {
+.c0 .anchor-alert-icon {
   color: #802121;
 }
 
@@ -799,7 +799,7 @@ Array [
       className="c1"
     >
       <span
-        className="anchor-icon error c2"
+        className="anchor-icon error anchor-alert-icon c2"
         scale="md"
       >
         <svg

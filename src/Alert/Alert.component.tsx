@@ -58,7 +58,7 @@ const renderAlertTheme = (
                 )}`,
             })};
 
-        .anchor-icon {
+        .anchor-alert-icon {
             ${({ theme }) =>
                 css({
                     color: darken(
@@ -169,7 +169,9 @@ export const Alert = ({
             )}
             {icon ? (
                 <StyledIconContainer>
-                    {React.cloneElement(icon)}
+                    {React.cloneElement(icon, {
+                        className: 'anchor-alert-icon',
+                    })}
                     <div className="anchor-alert-content">
                         {renderMessageAndDescription({ message, description })}
                     </div>
