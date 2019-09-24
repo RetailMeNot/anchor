@@ -1,13 +1,12 @@
-FROM node:dubnium as builder
+FROM node:lts as builder
 
 WORKDIR /usr/app
 
 COPY . .
-RUN npm i
-RUN npm run test
-RUN npm run lint
+RUN npm i -g yarn
+RUN yarn
 
 WORKDIR /usr/app/docs
 
-RUN npm
-CMD ["npm", "run", "build"]
+RUN yarn
+CMD ["yarn", "build"]
