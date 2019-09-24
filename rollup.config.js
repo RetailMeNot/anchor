@@ -26,6 +26,7 @@ const commonPlugins = [
 const componentList = {
     // COMPONENTS
     index: './src/index.ts',
+    alert: './src/Alert/index.ts',
     autocomplete: './src/AutoComplete/index.ts',
     avatar: './src/Avatar/index.ts',
     badge: './src/Badge/index.ts',

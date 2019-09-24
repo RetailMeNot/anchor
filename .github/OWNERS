@@ -14,6 +14,7 @@
 *.tsx    @sharkparty
 
 # Component Owners
+/src/Alert @sharkparty
 /src/AutoComplete @sharkparty
 /src/Avatar @sharkparty
 /src/Dropdown @sharkparty
