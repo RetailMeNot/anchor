@@ -25,6 +25,6 @@ exports[`Component: CardAction should be defined 1`] = `
 }
 
 <div
-  className="anchor-card-action c0"
+  className="c0 anchor-card-action"
 />
 `;

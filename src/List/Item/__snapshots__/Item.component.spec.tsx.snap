@@ -26,7 +26,7 @@ exports[`Component: Item should be defined 1`] = `
   background: #F1F1F1;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,7 +42,7 @@ exports[`Component: Item should be defined 1`] = `
   height: 100%;
 }
 
-.c1 .item-prefix {
+.c2 .item-prefix {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +56,7 @@ exports[`Component: Item should be defined 1`] = `
   flex: 0 0 0;
 }
 
-.c1 .item-main {
+.c2 .item-main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +70,7 @@ exports[`Component: Item should be defined 1`] = `
   flex: 4 1 auto;
 }
 
-.c1 .item-suffix {
+.c2 .item-suffix {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -89,17 +89,17 @@ exports[`Component: Item should be defined 1`] = `
   justify-content: flex-end;
 }
 
-.c1.lg {
+.c2.lg {
   font-size: 1rem;
   font-weight: 400;
 }
 
-.c1.sm {
+.c2.sm {
   font-size: 0.875rem;
   font-weight: 500;
 }
 
-.c2 {
+.c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -112,18 +112,18 @@ exports[`Component: Item should be defined 1`] = `
   color: #595959;
 }
 
-.c2 small {
+.c1 small {
   font-size: 87.5%;
 }
 
 <a
-  className="anchor-list-item c0"
+  className="c0 anchor-list-item"
   onMouseDown={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
   <span
-    className="anchor-typography lg c1 c2"
+    className="c1 anchor-typography c2 lg"
     color="charcoal"
   >
     Item

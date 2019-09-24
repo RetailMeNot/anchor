@@ -55,7 +55,7 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
 }
 
 <div
-  className="anchor-collapse comfortable c0"
+  className="c0 anchor-collapse comfortable"
 >
   <button
     className="anchor-collapse-button"
@@ -64,7 +64,7 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
     Open
      
     <span
-      className="anchor-icon chevron-up c1"
+      className="c1 anchor-icon chevron-up"
       scale="md"
     >
       <svg

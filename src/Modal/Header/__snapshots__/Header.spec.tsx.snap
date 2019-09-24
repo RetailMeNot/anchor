@@ -42,10 +42,10 @@ exports[`Component: Modal.Header should render with title 1`] = `
 }
 
 <div
-  className="anchor-modal-header c0"
+  className="c0 anchor-modal-header"
 >
   <span
-    className="anchor-typography c1"
+    className="c1 anchor-typography"
     scale={20}
   >
     Header Title

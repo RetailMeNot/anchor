@@ -30,7 +30,7 @@ exports[`Component: Modal.Footer should match snapshot with padding 1`] = `
 }
 
 <div
-  className="anchor-modal-footer c0"
+  className="c0 anchor-modal-footer"
 >
   Text
 </div>
@@ -62,7 +62,7 @@ exports[`Component: Modal.Footer should render 1`] = `
 }
 
 <div
-  className="anchor-modal-footer c0"
+  className="c0 anchor-modal-footer"
 >
   Text
 </div>

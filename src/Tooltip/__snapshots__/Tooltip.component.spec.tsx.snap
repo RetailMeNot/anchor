@@ -34,7 +34,7 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -43,7 +43,7 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -86,7 +86,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -95,7 +95,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -138,7 +138,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -147,7 +147,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -190,7 +190,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -199,7 +199,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -242,7 +242,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -251,7 +251,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -294,7 +294,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -303,7 +303,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -346,7 +346,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -355,7 +355,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -398,7 +398,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -407,7 +407,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -450,7 +450,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -459,7 +459,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -502,7 +502,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -511,7 +511,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -554,7 +554,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -563,7 +563,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -606,7 +606,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -615,7 +615,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >
@@ -658,7 +658,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 <div
-  className="anchor-tooltip c0"
+  className="c0 anchor-tooltip"
   content="This is a tooltip"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -667,7 +667,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     Hover
   </button>
   <div
-    className="anchor-tooltip-element c1"
+    className="c1 anchor-tooltip-element"
     height={0}
     width={0}
   >

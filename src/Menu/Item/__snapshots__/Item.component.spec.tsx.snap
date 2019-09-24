@@ -21,7 +21,7 @@ exports[`Component: Item should be defined 1`] = `
 }
 
 <a
-  className="anchor-menu-item c0"
+  className="c0 anchor-menu-item"
 />
 `;
 
@@ -46,7 +46,7 @@ exports[`Component: Item should render with label 1`] = `
 }
 
 <a
-  className="anchor-menu-item c0"
+  className="c0 anchor-menu-item"
 >
   label
 </a>
