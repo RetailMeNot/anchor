@@ -20,6 +20,7 @@ interface TabsProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     position?: Position;
     activeKey?: TabKey;
     defaultActiveKey?: TabKey;
+    spacing?: string;
 }
 
 interface TabHeaderProps {
@@ -89,6 +90,7 @@ export const Tabs = ({
     variant = 'regular',
     activeKey,
     defaultActiveKey,
+    spacing,
     onChange,
     ...props
 }: TabsProps): React.ReactElement<TabsProps> => {
@@ -146,6 +148,7 @@ export const Tabs = ({
                                     onChange(key);
                                 }
                             }}
+                            spacing={spacing}
                         >
                             {title}
                         </Tab>

@@ -29,7 +29,7 @@ const TabVariants: {
             }),
         tab: {
             activeBorderColor: 'transparent',
-            spacing: '0.125rem',
+            spacing: '0.25rem',
             styles: ({ active }: any) =>
                 css({
                     border: 'light',
@@ -48,22 +48,23 @@ const TabVariants: {
             css({
                 padding: ['left', 'right'].includes(position)
                     ? '1rem 0'
-                    : '0 1.5rem',
-                background: th.color('neutrals.silver.light'),
+                    : '0 1rem',
+                background: th.color('white'),
             }),
         tab: {
             activeBorderColor: 'primary.base',
-            spacing: '0.75rem',
+            spacing: '2rem',
             styles: ({ position, active }: any) =>
                 css({
                     border: 'solid transparent',
                     padding: ['left', 'right'].includes(position)
-                        ? '0.5rem 1rem'
-                        : '1rem 0',
+                        ? '0.625rem'
+                        : '0.625rem 0',
                     borderWidth: ['left', 'right'].includes(position)
                         ? '0 3px'
                         : '3px 0',
-                    fontWeight: active ? 600 : 500,
+                    fontWeight: active ? 600 : undefined,
+                    color: active ? undefined : 'neutrals.ash.dark',
                 }),
         },
         pane: css({}),

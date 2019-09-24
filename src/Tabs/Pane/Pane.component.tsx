@@ -29,7 +29,7 @@ const StyledPane = styled('div')<PaneProps>`
 export const Pane = ({
     className,
     children,
-    padding = '1rem',
+    padding = '2rem',
     active = false,
     ...props
 }: any): React.ReactElement<any> => (

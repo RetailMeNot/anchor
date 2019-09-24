@@ -64,15 +64,11 @@ const StyledTab = styled('div')<StyledTabProps>`
             left: css({
                 borderRight: active ? activeBorder : undefined,
                 borderRightColor: active ? activeBorderColor : undefined,
-                marginTop: spacing,
                 marginBottom: spacing,
                 borderTopRightRadius: 0,
                 borderBottomRightRadius: 0,
                 textAlign: 'right',
                 justifyContent: 'flex-end',
-                '&:first-of-type': {
-                    marginTop: 0,
-                },
                 '&:last-of-type': {
                     marginBottom: 0,
                 },
@@ -80,13 +76,9 @@ const StyledTab = styled('div')<StyledTabProps>`
             top: css({
                 borderBottom: active ? activeBorder : undefined,
                 borderBottomColor: active ? activeBorderColor : undefined,
-                marginLeft: spacing,
                 marginRight: spacing,
                 borderBottomLeftRadius: 0,
                 borderBottomRightRadius: 0,
-                '&:first-of-type': {
-                    marginLeft: 0,
-                },
                 '&:last-of-type': {
                     marginRight: 0,
                 },
@@ -94,13 +86,9 @@ const StyledTab = styled('div')<StyledTabProps>`
             bottom: css({
                 borderTop: active ? activeBorder : undefined,
                 borderTopColor: active ? activeBorderColor : undefined,
-                marginLeft: spacing,
                 marginRight: spacing,
                 borderTopLeftRadius: 0,
                 borderTopRightRadius: 0,
-                '&:first-of-type': {
-                    marginLeft: 0,
-                },
                 '&:last-of-type': {
                     marginRight: 0,
                 },
@@ -108,14 +96,10 @@ const StyledTab = styled('div')<StyledTabProps>`
             right: css({
                 borderLeft: active ? activeBorder : undefined,
                 borderLeftColor: active ? activeBorderColor : undefined,
-                marginTop: spacing,
                 marginBottom: spacing,
                 borderTopLeftRadius: 0,
                 borderBottomLeftRadius: 0,
                 textAlign: 'left',
-                '&:first-of-type': {
-                    marginTop: 0,
-                },
                 '&:last-of-type': {
                     marginBottom: 0,
                 },
