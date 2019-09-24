@@ -145,11 +145,11 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 <div
-  className="c0 anchor-auto-complete"
+  className="anchor-auto-complete c0"
   color="neutrals.charcoal.light"
 >
   <div
-    className="c1 anchor-input auto-complete-input"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
@@ -324,11 +324,11 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 <div
-  className="c0 anchor-auto-complete"
+  className="anchor-auto-complete c0"
   color="neutrals.charcoal.light"
 >
   <div
-    className="c1 anchor-input auto-complete-input"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
@@ -501,11 +501,11 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 <div
-  className="c0 anchor-auto-complete"
+  className="anchor-auto-complete c0"
   color="neutrals.charcoal.light"
 >
   <div
-    className="c1 anchor-input auto-complete-input"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >
@@ -688,11 +688,11 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 <div
-  className="c0 anchor-auto-complete"
+  className="anchor-auto-complete c0"
   color="neutrals.charcoal.light"
 >
   <div
-    className="c1 anchor-input auto-complete-input"
+    className="anchor-input auto-complete-input c1"
     onClick={[Function]}
     size="lg"
   >

@@ -9,7 +9,7 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
 }
 
 <span
-  className="c0 anchor-icon add-event"
+  className="anchor-icon add-event c0"
   scale="md"
 >
   <svg
@@ -36,7 +36,7 @@ exports[`Component: Icon should render out a ArrowBack 1`] = `
 }
 
 <span
-  className="c0 anchor-icon arrow-back"
+  className="anchor-icon arrow-back c0"
   scale="md"
 >
   <svg
@@ -80,7 +80,7 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
 }
 
 <span
-  className="c0 anchor-icon arrow-forward"
+  className="anchor-icon arrow-forward c0"
   scale="md"
 >
   <svg
@@ -124,7 +124,7 @@ exports[`Component: Icon should render out a AvatarIcon 1`] = `
 }
 
 <span
-  className="c0 anchor-icon avatar"
+  className="anchor-icon avatar c0"
   scale="md"
 >
   <svg
@@ -168,7 +168,7 @@ exports[`Component: Icon should render out a AvatarOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon avatar-outline"
+  className="anchor-icon avatar-outline c0"
   scale="md"
 >
   <svg
@@ -212,7 +212,7 @@ exports[`Component: Icon should render out a BarCode 1`] = `
 }
 
 <span
-  className="c0 anchor-icon bar-code"
+  className="anchor-icon bar-code c0"
   scale="md"
 >
   <svg
@@ -254,7 +254,7 @@ exports[`Component: Icon should render out a BulletList 1`] = `
 }
 
 <span
-  className="c0 anchor-icon bullet-list"
+  className="anchor-icon bullet-list c0"
   scale="md"
 >
   <svg
@@ -292,7 +292,7 @@ exports[`Component: Icon should render out a Calendar 1`] = `
 }
 
 <span
-  className="c0 anchor-icon calendar"
+  className="anchor-icon calendar c0"
   scale="md"
 >
   <svg
@@ -326,7 +326,7 @@ exports[`Component: Icon should render out a Camera 1`] = `
 }
 
 <span
-  className="c0 anchor-icon camera"
+  className="anchor-icon camera c0"
   scale="md"
 >
   <svg
@@ -366,7 +366,7 @@ exports[`Component: Icon should render out a Cart 1`] = `
 }
 
 <span
-  className="c0 anchor-icon cart"
+  className="anchor-icon cart c0"
   scale="md"
 >
   <svg
@@ -404,7 +404,7 @@ exports[`Component: Icon should render out a CashBack 1`] = `
 }
 
 <span
-  className="c0 anchor-icon cash-back"
+  className="anchor-icon cash-back c0"
   scale="md"
 >
   <svg
@@ -445,7 +445,7 @@ exports[`Component: Icon should render out a Cells 1`] = `
 }
 
 <span
-  className="c0 anchor-icon cells"
+  className="anchor-icon cells c0"
   scale="md"
 >
   <svg
@@ -479,7 +479,7 @@ exports[`Component: Icon should render out a Chat 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chat"
+  className="anchor-icon chat c0"
   scale="md"
 >
   <svg
@@ -520,7 +520,7 @@ exports[`Component: Icon should render out a Check 1`] = `
 }
 
 <span
-  className="c0 anchor-icon check"
+  className="anchor-icon check c0"
   scale="md"
 >
   <svg
@@ -554,7 +554,7 @@ exports[`Component: Icon should render out a CheckSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon check-small"
+  className="anchor-icon check-small c0"
   scale="md"
 >
   <svg
@@ -589,7 +589,7 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-down"
+  className="anchor-icon chevron-down c0"
   scale="md"
 >
   <svg
@@ -616,7 +616,7 @@ exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-down-small"
+  className="anchor-icon chevron-down-small c0"
   scale="md"
 >
   <svg
@@ -643,7 +643,7 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-left"
+  className="anchor-icon chevron-left c0"
   scale="md"
 >
   <svg
@@ -670,7 +670,7 @@ exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-left-small"
+  className="anchor-icon chevron-left-small c0"
   scale="md"
 >
   <svg
@@ -705,7 +705,7 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-right"
+  className="anchor-icon chevron-right c0"
   scale="md"
 >
   <svg
@@ -732,7 +732,7 @@ exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-right-small"
+  className="anchor-icon chevron-right-small c0"
   scale="md"
 >
   <svg
@@ -767,7 +767,7 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-up"
+  className="anchor-icon chevron-up c0"
   scale="md"
 >
   <svg
@@ -794,7 +794,7 @@ exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon chevron-up-small"
+  className="anchor-icon chevron-up-small c0"
   scale="md"
 >
   <svg
@@ -829,7 +829,7 @@ exports[`Component: Icon should render out a Clock 1`] = `
 }
 
 <span
-  className="c0 anchor-icon clock"
+  className="anchor-icon clock c0"
   scale="md"
 >
   <svg
@@ -874,7 +874,7 @@ exports[`Component: Icon should render out a Close 1`] = `
 }
 
 <span
-  className="c0 anchor-icon close"
+  className="anchor-icon close c0"
   scale="md"
 >
   <svg
@@ -915,7 +915,7 @@ exports[`Component: Icon should render out a CloseSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon close-small"
+  className="anchor-icon close-small c0"
   scale="md"
 >
   <svg
@@ -956,7 +956,7 @@ exports[`Component: Icon should render out a CommentMore 1`] = `
 }
 
 <span
-  className="c0 anchor-icon comment-more"
+  className="anchor-icon comment-more c0"
   scale="md"
 >
   <svg
@@ -997,7 +997,7 @@ exports[`Component: Icon should render out a CreditCard 1`] = `
 }
 
 <span
-  className="c0 anchor-icon credit-card"
+  className="anchor-icon credit-card c0"
   scale="md"
 >
   <svg
@@ -1039,7 +1039,7 @@ exports[`Component: Icon should render out a CrossHairs 1`] = `
 }
 
 <span
-  className="c0 anchor-icon cross-hairs"
+  className="anchor-icon cross-hairs c0"
   scale="md"
 >
   <svg
@@ -1074,7 +1074,7 @@ exports[`Component: Icon should render out a Cut 1`] = `
 }
 
 <span
-  className="c0 anchor-icon cut"
+  className="anchor-icon cut c0"
   scale="md"
 >
   <svg
@@ -1115,7 +1115,7 @@ exports[`Component: Icon should render out a Disabled 1`] = `
 }
 
 <span
-  className="c0 anchor-icon disabled"
+  className="anchor-icon disabled c0"
   scale="md"
 >
   <svg
@@ -1156,7 +1156,7 @@ exports[`Component: Icon should render out a Dislike 1`] = `
 }
 
 <span
-  className="c0 anchor-icon dislike"
+  className="anchor-icon dislike c0"
   scale="md"
 >
   <svg
@@ -1197,7 +1197,7 @@ exports[`Component: Icon should render out a Download 1`] = `
 }
 
 <span
-  className="c0 anchor-icon download"
+  className="anchor-icon download c0"
   scale="md"
 >
   <svg
@@ -1238,7 +1238,7 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
 }
 
 <span
-  className="c0 anchor-icon ellipses"
+  className="anchor-icon ellipses c0"
   scale="md"
 >
   <svg
@@ -1279,7 +1279,7 @@ exports[`Component: Icon should render out a EllipsesVertical 1`] = `
 }
 
 <span
-  className="c0 anchor-icon ellipses-vertical"
+  className="anchor-icon ellipses-vertical c0"
   scale="md"
 >
   <svg
@@ -1321,7 +1321,7 @@ exports[`Component: Icon should render out a Envelope 1`] = `
 }
 
 <span
-  className="c0 anchor-icon envelope"
+  className="anchor-icon envelope c0"
   scale="md"
 >
   <svg
@@ -1362,7 +1362,7 @@ exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
 }
 
 <span
-  className="c0 anchor-icon envelope-open"
+  className="anchor-icon envelope-open c0"
   scale="md"
 >
   <svg
@@ -1403,7 +1403,7 @@ exports[`Component: Icon should render out a Error 1`] = `
 }
 
 <span
-  className="c0 anchor-icon error"
+  className="anchor-icon error c0"
   scale="md"
 >
   <svg
@@ -1442,7 +1442,7 @@ exports[`Component: Icon should render out a Expand 1`] = `
 }
 
 <span
-  className="c0 anchor-icon expand"
+  className="anchor-icon expand c0"
   scale="md"
 >
   <svg
@@ -1483,7 +1483,7 @@ exports[`Component: Icon should render out a Gear 1`] = `
 }
 
 <span
-  className="c0 anchor-icon gear"
+  className="anchor-icon gear c0"
   scale="md"
 >
   <svg
@@ -1524,7 +1524,7 @@ exports[`Component: Icon should render out a GiftCard 1`] = `
 }
 
 <span
-  className="c0 anchor-icon gift-card"
+  className="anchor-icon gift-card c0"
   scale="md"
 >
   <svg
@@ -1571,7 +1571,7 @@ exports[`Component: Icon should render out a Hamburger 1`] = `
 }
 
 <span
-  className="c0 anchor-icon hamburger"
+  className="anchor-icon hamburger c0"
   scale="md"
 >
   <svg
@@ -1611,7 +1611,7 @@ exports[`Component: Icon should render out a Heart 1`] = `
 }
 
 <span
-  className="c0 anchor-icon heart"
+  className="anchor-icon heart c0"
   scale="md"
 >
   <svg
@@ -1652,7 +1652,7 @@ exports[`Component: Icon should render out a HeartOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon heart-outline"
+  className="anchor-icon heart-outline c0"
   scale="md"
 >
   <svg
@@ -1693,7 +1693,7 @@ exports[`Component: Icon should render out a Home 1`] = `
 }
 
 <span
-  className="c0 anchor-icon home"
+  className="anchor-icon home c0"
   scale="md"
 >
   <svg
@@ -1726,7 +1726,7 @@ exports[`Component: Icon should render out a Info 1`] = `
 }
 
 <span
-  className="c0 anchor-icon info"
+  className="anchor-icon info c0"
   scale="md"
 >
   <svg
@@ -1764,7 +1764,7 @@ exports[`Component: Icon should render out a InfoOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon info-outline"
+  className="anchor-icon info-outline c0"
   scale="md"
 >
   <svg
@@ -1797,7 +1797,7 @@ exports[`Component: Icon should render out a Laptop 1`] = `
 }
 
 <span
-  className="c0 anchor-icon laptop"
+  className="anchor-icon laptop c0"
   scale="md"
 >
   <svg
@@ -1838,7 +1838,7 @@ exports[`Component: Icon should render out a Lightning 1`] = `
 }
 
 <span
-  className="c0 anchor-icon lightning"
+  className="anchor-icon lightning c0"
   scale="md"
 >
   <svg
@@ -1880,7 +1880,7 @@ exports[`Component: Icon should render out a Like 1`] = `
 }
 
 <span
-  className="c0 anchor-icon like"
+  className="anchor-icon like c0"
   scale="md"
 >
   <svg
@@ -1921,7 +1921,7 @@ exports[`Component: Icon should render out a ListIcon 1`] = `
 }
 
 <span
-  className="c0 anchor-icon list"
+  className="anchor-icon list c0"
   scale="md"
 >
   <svg
@@ -1961,7 +1961,7 @@ exports[`Component: Icon should render out a Lock 1`] = `
 }
 
 <span
-  className="c0 anchor-icon lock"
+  className="anchor-icon lock c0"
   scale="md"
 >
   <svg
@@ -2016,7 +2016,7 @@ exports[`Component: Icon should render out a Map 1`] = `
 }
 
 <span
-  className="c0 anchor-icon map"
+  className="anchor-icon map c0"
   scale="md"
 >
   <svg
@@ -2049,7 +2049,7 @@ exports[`Component: Icon should render out a Marker 1`] = `
 }
 
 <span
-  className="c0 anchor-icon marker"
+  className="anchor-icon marker c0"
   scale="md"
 >
   <svg
@@ -2090,7 +2090,7 @@ exports[`Component: Icon should render out a MarkerOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon marker-outline"
+  className="anchor-icon marker-outline c0"
   scale="md"
 >
   <svg
@@ -2131,7 +2131,7 @@ exports[`Component: Icon should render out a Mobile 1`] = `
 }
 
 <span
-  className="c0 anchor-icon mobile"
+  className="anchor-icon mobile c0"
   scale="md"
 >
   <svg
@@ -2172,7 +2172,7 @@ exports[`Component: Icon should render out a News 1`] = `
 }
 
 <span
-  className="c0 anchor-icon news"
+  className="anchor-icon news c0"
   scale="md"
 >
   <svg
@@ -2213,7 +2213,7 @@ exports[`Component: Icon should render out a Pencil 1`] = `
 }
 
 <span
-  className="c0 anchor-icon pencil"
+  className="anchor-icon pencil c0"
   scale="md"
 >
   <svg
@@ -2254,7 +2254,7 @@ exports[`Component: Icon should render out a Play 1`] = `
 }
 
 <span
-  className="c0 anchor-icon play"
+  className="anchor-icon play c0"
   scale="md"
 >
   <svg
@@ -2288,7 +2288,7 @@ exports[`Component: Icon should render out a Plus 1`] = `
 }
 
 <span
-  className="c0 anchor-icon plus"
+  className="anchor-icon plus c0"
   scale="md"
 >
   <svg
@@ -2329,7 +2329,7 @@ exports[`Component: Icon should render out a PlusSmall 1`] = `
 }
 
 <span
-  className="c0 anchor-icon plus-small"
+  className="anchor-icon plus-small c0"
   scale="md"
 >
   <svg
@@ -2370,7 +2370,7 @@ exports[`Component: Icon should render out a Print 1`] = `
 }
 
 <span
-  className="c0 anchor-icon print"
+  className="anchor-icon print c0"
   scale="md"
 >
   <svg
@@ -2397,7 +2397,7 @@ exports[`Component: Icon should render out a Question 1`] = `
 }
 
 <span
-  className="c0 anchor-icon question"
+  className="anchor-icon question c0"
   scale="md"
 >
   <svg
@@ -2435,7 +2435,7 @@ exports[`Component: Icon should render out a QuestionOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon question-outline"
+  className="anchor-icon question-outline c0"
   scale="md"
 >
   <svg
@@ -2468,7 +2468,7 @@ exports[`Component: Icon should render out a Refresh 1`] = `
 }
 
 <span
-  className="c0 anchor-icon refresh"
+  className="anchor-icon refresh c0"
   scale="md"
 >
   <svg
@@ -2509,7 +2509,7 @@ exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
 }
 
 <span
-  className="c0 anchor-icon retail-me-not-logo"
+  className="anchor-icon retail-me-not-logo c0"
   scale="md"
 >
   <svg
@@ -2550,7 +2550,7 @@ exports[`Component: Icon should render out a SadFace 1`] = `
 }
 
 <span
-  className="c0 anchor-icon sad-face"
+  className="anchor-icon sad-face c0"
   scale="md"
 >
   <svg
@@ -2601,7 +2601,7 @@ exports[`Component: Icon should render out a Search 1`] = `
 }
 
 <span
-  className="c0 anchor-icon search"
+  className="anchor-icon search c0"
   scale="md"
 >
   <svg
@@ -2628,7 +2628,7 @@ exports[`Component: Icon should render out a Share 1`] = `
 }
 
 <span
-  className="c0 anchor-icon share"
+  className="anchor-icon share c0"
   scale="md"
 >
   <svg
@@ -2669,7 +2669,7 @@ exports[`Component: Icon should render out a Sliders 1`] = `
 }
 
 <span
-  className="c0 anchor-icon sliders"
+  className="anchor-icon sliders c0"
   scale="md"
 >
   <svg
@@ -2707,7 +2707,7 @@ exports[`Component: Icon should render out a Star 1`] = `
 }
 
 <span
-  className="c0 anchor-icon star"
+  className="anchor-icon star c0"
   scale="md"
 >
   <svg
@@ -2742,7 +2742,7 @@ exports[`Component: Icon should render out a StarHalf 1`] = `
 }
 
 <span
-  className="c0 anchor-icon star-half"
+  className="anchor-icon star-half c0"
   scale="md"
 >
   <svg
@@ -2782,7 +2782,7 @@ exports[`Component: Icon should render out a StarOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon star-outline"
+  className="anchor-icon star-outline c0"
   scale="md"
 >
   <svg
@@ -2817,7 +2817,7 @@ exports[`Component: Icon should render out a Success 1`] = `
 }
 
 <span
-  className="c0 anchor-icon success"
+  className="anchor-icon success c0"
   scale="md"
 >
   <svg
@@ -2860,7 +2860,7 @@ exports[`Component: Icon should render out a SuccessOutline 1`] = `
 }
 
 <span
-  className="c0 anchor-icon success-outline"
+  className="anchor-icon success-outline c0"
   scale="md"
 >
   <svg
@@ -2901,7 +2901,7 @@ exports[`Component: Icon should render out a Tag 1`] = `
 }
 
 <span
-  className="c0 anchor-icon tag"
+  className="anchor-icon tag c0"
   scale="md"
 >
   <svg
@@ -2942,7 +2942,7 @@ exports[`Component: Icon should render out a TagAdd 1`] = `
 }
 
 <span
-  className="c0 anchor-icon tag-add"
+  className="anchor-icon tag-add c0"
   scale="md"
 >
   <svg
@@ -2983,7 +2983,7 @@ exports[`Component: Icon should render out a Upload 1`] = `
 }
 
 <span
-  className="c0 anchor-icon upload"
+  className="anchor-icon upload c0"
   scale="md"
 >
   <svg

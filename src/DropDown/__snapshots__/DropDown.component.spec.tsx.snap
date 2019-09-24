@@ -68,11 +68,11 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 }
 
 <div
-  className="c0 anchor-drop-down"
+  className="anchor-drop-down c0"
   spacing="0.75rem"
 >
   <div
-    className="c1 anchor-drop-down-container"
+    className="anchor-drop-down-container c1"
     height={null}
     width={null}
   >

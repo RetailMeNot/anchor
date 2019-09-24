@@ -14,7 +14,7 @@ exports[`Component: Layout should match its snapshot. 1`] = `
 }
 
 <section
-  className="c0 anchor-layout"
+  className="anchor-layout c0"
 >
   <div
     className="c1"

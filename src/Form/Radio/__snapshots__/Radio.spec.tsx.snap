@@ -52,7 +52,7 @@ exports[`Component: Radio can be checked 1`] = `
 
 <label
   checked={true}
-  className="c0 anchor-radio"
+  className="anchor-radio c0"
   size="1.375rem"
 >
   <input
@@ -115,7 +115,7 @@ exports[`Component: Radio should be defined 1`] = `
 }
 
 <label
-  className="c0 anchor-radio"
+  className="anchor-radio c0"
   size="1.375rem"
 >
   <input
@@ -177,7 +177,7 @@ exports[`Component: Radio should be disableable 1`] = `
 }
 
 <label
-  className="c0 anchor-radio"
+  className="anchor-radio c0"
   disabled={true}
   size="1.375rem"
 >

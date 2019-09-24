@@ -15,7 +15,7 @@ exports[`Component: Page should be defined. 1`] = `
 }
 
 <main
-  className="c0 anchor-page"
+  className="anchor-page c0"
 >
   <div>
     <div />

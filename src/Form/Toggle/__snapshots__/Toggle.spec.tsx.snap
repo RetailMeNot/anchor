@@ -82,7 +82,7 @@ exports[`Component: Toggle can be checked 1`] = `
 }
 
 <label
-  className="c0 anchor-toggle"
+  className="anchor-toggle c0"
   height="1.375rem"
 >
   <span
@@ -180,7 +180,7 @@ exports[`Component: Toggle should be defined 1`] = `
 }
 
 <label
-  className="c0 anchor-toggle"
+  className="anchor-toggle c0"
   height="1.375rem"
 >
   <span
@@ -276,7 +276,7 @@ exports[`Component: Toggle should be disableable 1`] = `
 }
 
 <label
-  className="c0 anchor-toggle"
+  className="anchor-toggle c0"
   disabled={true}
   height="1.375rem"
 >

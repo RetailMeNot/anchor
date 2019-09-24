@@ -139,11 +139,11 @@ exports[`Component: Goto should be defined. 1`] = `
 }
 
 <div
-  className="c0 anchor-pagination-goto"
+  className="anchor-pagination-goto c0"
 >
   Goto
   <div
-    className="c1 anchor-input"
+    className="anchor-input c1"
     onClick={[Function]}
   >
     <div

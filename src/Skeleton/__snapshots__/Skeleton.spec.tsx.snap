@@ -16,7 +16,7 @@ exports[`Component: Skeleton should be defined. 1`] = `
 }
 
 <div
-  className="c0 anchor-skeleton"
+  className="anchor-skeleton c0"
 />
 `;
 
@@ -37,7 +37,7 @@ exports[`Component: Skeleton should render in textOnly mode when given only text
 }
 
 <div
-  className="c0 anchor-skeleton"
+  className="anchor-skeleton c0"
 >
   ▆▆▆▆▆▆▆▆▆▆▆▆
 </div>
@@ -59,7 +59,7 @@ exports[`Component: Skeleton should wrap over nontext children and hide them 1`]
 }
 
 <div
-  className="c0 anchor-skeleton"
+  className="anchor-skeleton c0"
 >
   <div>
     hide me!

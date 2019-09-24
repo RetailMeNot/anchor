@@ -9,6 +9,6 @@ exports[`Component: CardContent should be defined 1`] = `
 }
 
 <div
-  className="c0 anchor-card-content"
+  className="anchor-card-content c0"
 />
 `;

@@ -13,7 +13,7 @@ exports[`Component: Divider should be defined 1`] = `
 }
 
 <div
-  className="c0 anchor-list-divider"
+  className="anchor-list-divider c0"
 >
   <hr />
 </div>

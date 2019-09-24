@@ -55,10 +55,10 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
 }
 
 <div
-  className="anchor-collapse-group"
+  className="anchor-collapse-group "
 >
   <div
-    className="c0 anchor-collapse comfortable no-bottom-border"
+    className="anchor-collapse comfortable no-bottom-border c0"
   >
     <button
       className="anchor-collapse-button"
@@ -67,7 +67,7 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
       Open
        
       <span
-        className="c1 anchor-icon chevron-up"
+        className="anchor-icon chevron-up c1"
         scale="md"
       >
         <svg
@@ -86,7 +86,7 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
     </button>
   </div>
   <div
-    className="c0 anchor-collapse comfortable no-bottom-border"
+    className="anchor-collapse comfortable no-bottom-border c0"
   >
     <button
       className="anchor-collapse-button"
@@ -95,7 +95,7 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
       Open
        
       <span
-        className="c1 anchor-icon chevron-up"
+        className="anchor-icon chevron-up c1"
         scale="md"
       >
         <svg
@@ -114,7 +114,7 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
     </button>
   </div>
   <div
-    className="c0 anchor-collapse comfortable"
+    className="anchor-collapse comfortable c0"
   >
     <button
       className="anchor-collapse-button"
@@ -123,7 +123,7 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
       Open
        
       <span
-        className="c1 anchor-icon chevron-up"
+        className="anchor-icon chevron-up c1"
         scale="md"
       >
         <svg
