@@ -116,7 +116,7 @@ interface RowData {
     default?: string;
 }
 
-const sortFn = (a: RowData, b: RowData) => {
+const sortDataAlphabetically = (a: RowData, b: RowData) => {
     const compareA = a.property.toUpperCase();
     const compareB = b.property.toUpperCase();
 
@@ -131,7 +131,7 @@ export const ApiTable = ({
 
     React.useEffect(() => {
         // Sort the data alphabetically descending by property, unless the sort prop is false
-        setData(sort ? sortedData.sort(sortFn) : sortedData);
+        setData(sort ? sortedData.sort(sortDataAlphabetically) : sortedData);
     }, []);
 
     return (
