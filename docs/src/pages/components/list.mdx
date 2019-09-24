@@ -1,5 +1,9 @@
 import { Link } from 'gatsby';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
 
 # List
 
@@ -135,199 +139,122 @@ const myItems = [
 
 ### List
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>items</td>
-            <td>
-                The items to render into the <pre>List</pre>. This provides a programmatic way to
-                add/remove elements to the list as opposed to providing the <pre>ListItem</pre>, <pre>ListDivider</pre>
-                or <pre>ListTitle</pre> components as children.
-            </td>
-            <td>Array&lt;&#123; label: string, value: &#123;
+<ApiTable data={[
+    {
+        property: 'items',
+        description: `The items to render into the <pre>List</pre>. This provides a programmatic way
+            to add/remove elements to the list as opposed to providing the <pre>ListItem</pre>,
+            <pre>ListDivider</pre> or <pre>ListTitle</pre> components as children.`,
+        type: `Array&lt;&#123; label: string, value: &#123;
                 item | divider | title,
                 [key:string] : any
-                &#125; &#125;&gt;</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+                &#125; &#125;&gt;`,
+    },
+]} />
 
 ---
 
 ### ListDivider
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>onSelect</td>
-            <td>
-                An event handler for when a <pre>ListDivider</pre> is selected.
-            </td>
-            <td>(value?: string | number, item?: any) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onMouseOut</td>
-            <td>
-                An event handler for mouse out events.
-            </td>
-            <td>(event?: React.MouseEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onMouseOver</td>
-            <td>
-                An event handler for mouse over events.
-            </td>
-            <td>(event?: React.MouseEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td>
-                Whatever is assigned to <pre>value</pre> will be sent to the <pre>onSelect</pre>
-                event when a <pre>ListDivider</pre> is selected.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'onSelect',
+        description: `An event handler for when a <pre>ListDivider</pre> is selected.`,
+        type: `(value?: string | number, item?: any) => void`,
+    },
+    {
+        property: 'onMouseOut',
+        description: `An event handler for mouse out events.`,
+        type: `(event?: React.MouseEvent) => void`,
+    },
+    {
+        property: 'onMouseOver',
+        description: `An event handler for mouse over events.`,
+        type: `(event?: React.MouseEvent) => void`,
+    },
+    {
+        property: 'value',
+        description: `Whatever is assigned to <pre>value</pre> will be sent to the
+            <pre>onSelect</pre> event when a <pre>ListDivider</pre> is selected.`,
+        type: `any`,
+    },
+]} />
 
 ---
 
 ### ListItem
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>active</td>
-            <td>
-                This adds the <pre>active</pre> class to the rendered <pre>ListItem</pre>, and
-                styles it as such. <pre>List</pre> nor <pre>ListItem</pre> determines what is
-                'active', giving the user full control.
-            </td>
-            <td>boolean</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>href</td>
-            <td>
-                Specifies the URL of the page the link goes to.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onSelect</td>
-            <td>
-                An event handler for when a <pre>ListItem</pre> is selected.
-            </td>
-            <td>(value?: string | number, item?: any) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onMouseOut</td>
-            <td>
-                An event handler for mouse out events.
-            </td>
-            <td>(event?: React.MouseEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onMouseOver</td>
-            <td>
-                An event handler for mouse over events.
-            </td>
-            <td>(event?: React.MouseEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>prefix</td>
-            <td>
-                Although this can be of any value it makes the most sense to pass a component, such
-                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element in front of the <pre>ListItem</pre>'s text.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>
-                The size of the <pre>ListItem</pre>
-            </td>
-            <td>
-                <FormatTypes types={['sm', 'lg']} noInterpret />
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>suffix</td>
-            <td>
-                Although this can be of any value it makes the most sense to pass a component, such
-                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element to the right side of the <pre>ListItem</pre>.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td>
-                Whatever is assigned to <pre>value</pre> will be sent to the <pre>onSelect</pre>
-                event when a <pre>ListItem</pre> is selected.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+   {
+        property: 'active',
+        description: `This adds the <pre>active</pre> class to the rendered <pre>ListItem</pre>, and
+            styles it as such. <pre>List</pre> nor <pre>ListItem</pre> determines what is
+            'active', giving the user full control.`,
+        type: `any`,
+    },
+    {
+        property: 'href',
+        description: `Specifies the URL of the page the link goes to.`,
+        type: `string`,
+    },
+    {
+        property: 'onSelect',
+        description: `An event handler for when a <pre>ListItem</pre> is selected.`,
+        type: `(value?: string | number, item?: any) => void`,
+    },
+    {
+        property: 'onMouseOut',
+        description: `An event handler for mouse out events.`,
+        type: `(event?: React.MouseEvent) => void`,
+    },
+    {
+        property: 'onMouseOver',
+        description: `An event handler for mouse over events.`,
+        type: `(event?: React.MouseEvent) => void`,
+    },
+    {
+        property: 'prefix',
+        description: [
+            `Although this can be of any value it makes the most sense to pass a component, such
+            as an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will place the passed element in front of the
+            <pre>ListItem</pre>'s text.`,
+        ],
+        type: 'any',
+    },
+    {
+        property: 'size',
+        description: `The size of the <pre>ListItem</pre>.`,
+        type: <FormatTypes types={['sm', 'lg']} noInterpret />,
+    },
+    {
+        property: 'suffix',
+        description: [
+            `Although this can be of any value it makes the most sense to pass a component, such
+            as an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will
+            place the passed element to the right side of the <pre>ListItem</pre>.`
+        ],
+        type: 'any',
+    },
+    {
+        property: 'value',
+        description: `Whatever is assigned to <pre>value</pre> will be sent to the
+            <pre>onSelect</pre> event when a <pre>ListItem</pre> is selected.`,
+        type: 'any',
+    },
+]} />
 
 ---
 
 ### ListTitle
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: '-',
+        description: `-`,
+        type: '-',
+    },
+]} />

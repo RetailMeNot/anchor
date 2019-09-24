@@ -1,5 +1,9 @@
 import { Link } from 'gatsby';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
 
 # Input
 
@@ -50,157 +54,104 @@ The below example shows a way in which you can attach your own methods to these 
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>ariaLabel</td>
-            <td>
-                Setting this prop will add the <pre>aria-label</pre> attribute to
-                the <pre>Input</pre> and assign the passed value to it.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>id</td>
-            <td>Sets the unique <pre>id</pre> attribute for the <pre>Input</pre>.</td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>label</td>
-            <td>
-                Adds a <pre>label</pre> element inside the <pre>Input</pre>. When
-                the <pre>Input</pre> receives focus, the label will shift upwards and reduce in
-                size. Assigning a <pre>name</pre> will associate the <pre>label</pre> to
-                that <pre>name</pre>.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>name</td>
-            <td>
-                Adds a <pre>name</pre> attribute to the rendered <pre>Input</pre>.
-            </td>
-            <td>string</td>
-            <td>input</td>
-        </tr>
-        <tr>
-            <td>onBlur</td>
-            <td>
-                An event handler for when the <pre>Input</pre> loses focus.
-            </td>
-            <td>
-                (value?: string | number | any, event?: KeyboardEvent) => any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onChange</td>
-            <td>
-                An event handler for when the content of the <pre>Input</pre> changes.
-            </td>
-            <td>
-                (value?: string | number | any, event?: KeyboardEvent) => any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onFocus</td>
-            <td>
-                An event handler for when the <pre>Input</pre> gains focus.
-            </td>
-            <td>
-                (value?: string | number | any, event?: KeyboardEvent) => any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onKeyDown</td>
-            <td>
-                An event handler for when a key is pressed while the <pre>Input</pre> has focus.
-            </td>
-            <td>
-                (value?: string | number | any, event?: KeyboardEvent) => any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onKeyUp</td>
-            <td>
-                An event handler for when a key is released while the <pre>Input</pre> has focus.
-            </td>
-            <td>
-                (value?: string | number | any, event?: KeyboardEvent) => any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>placeholder</td>
-            <td>
-                Placeholder text that will be removed once the user beings typing into the <pre>Input</pre>.
-                Note that <pre>label</pre> takes precedence. The <pre>placeholder</pre> text will
-                appear once the <pre>Input</pre> receives focus if the <pre>label</pre> is also set.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>prefix</td>
-            <td>
-                Although this can be of any value it makes the most sense to pass a component, such
-                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element within the <pre>Input</pre> on the left.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>The size of the <pre>Input</pre> field.</td>
-            <td>
-                <FormatTypes types={['sm', 'md', 'lg']} />
-            </td>
-            <td>md</td>
-        </tr>
-        <tr>
-            <td>suffix</td>
-            <td>
-                Although this can be of any value it makes the most sense to pass a component, such
-                as an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element within the <pre>Input</pre> on the right.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>type</td>
-            <td>
-                What <pre>type</pre> the <pre>Input</pre> component should render as.
-            </td>
-            <td>
-                <FormatTypes types={['email', 'number', 'tel', 'text']} />
-            </td>
-            <td>text</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td>
-                The <pre>value</pre> of the rendered <pre>Input</pre>.
-            </td>
-            <td>
-                <FormatTypes types={['string', 'number', 'any']} noInterpret />
-            </td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'ariaLabel',
+        description: `Setting this prop will add the <pre>aria-label</pre> attribute to
+            the <pre>Input</pre> and assign the passed value to it.`,
+        type: 'string',
+    },
+    {
+        property: 'id',
+        description: `Sets the unique <pre>id</pre> attribute for the <pre>Input</pre>.`,
+        type: 'string',
+    },
+    {
+        property: 'label',
+        description: `Adds a <pre>label</pre> element inside the <pre>Input</pre>. When
+            the <pre>Input</pre> receives focus, the label will shift upwards and reduce in
+            size. Assigning a <pre>name</pre> will associate the <pre>label</pre> to
+            that <pre>name</pre>.`,
+        type: 'string',
+    },
+    {
+        property: 'name',
+        description: `Adds a <pre>name</pre> attribute to the rendered <pre>Input</pre>.`,
+        type: 'string',
+        default: 'input',
+    },
+    {
+        property: 'onBlur',
+        description: `An event handler for when the <pre>Input</pre> loses focus.`,
+        type: '(value?: string | number | any, event?: KeyboardEvent) => any',
+    },
+    {
+        property: 'onChange',
+        description: `An event handler for when the content of the <pre>Input</pre> changes.`,
+        type: '(value?: string | number | any, event?: KeyboardEvent) => any',
+    },
+    {
+        property: 'onFocus',
+        description: `An event handler for when the <pre>Input</pre> gains focus.`,
+        type: '(value?: string | number | any, event?: KeyboardEvent) => any',
+    },
+    {
+        property: 'onKeyDown',
+        description: `An event handler for when a key is pressed while the <pre>Input</pre> has
+            focus.`,
+        type: '(value?: string | number | any, event?: KeyboardEvent) => any',
+    },
+    {
+        property: 'onKeyUp',
+        description: `An event handler for when a key is released while the <pre>Input</pre> has
+            focus.`,
+        type: '(value?: string | number | any, event?: KeyboardEvent) => any',
+    },
+    {
+        property: 'placeholder',
+        description: `Placeholder text that will be removed once the user beings typing into the
+            <pre>Input</pre>. Note that <pre>label</pre> takes precedence. The
+            <pre>placeholder</pre> text will appear once the <pre>Input</pre> receives focus if the
+            <pre>label</pre> is also set.`,
+        type: 'string',
+    },
+    {
+        property: 'prefix',
+        description: [
+            `Although this can be of any value it makes the most sense to pass a component, such
+            as an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will place the passed element within the
+            <pre>Input</pre> on the left.`
+        ],
+        type: 'any',
+    },
+    {
+        property: 'size',
+        description: `The size of the <pre>Input</pre> field.`,
+        type: <FormatTypes types={['sm', 'md', 'lg']} />,
+        default: 'md',
+    },
+    {
+        property: 'suffix',
+        description: [
+            `Although this can be of any value it makes the most sense to pass a component, such
+            as an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will place the passed element within the
+            <pre>Input</pre> on the right.`
+        ],
+        type: 'any',
+    },
+    {
+        property: 'type',
+        description: `What <pre>type</pre> the <pre>Input</pre> component should render as.`,
+        type: <FormatTypes types={['email', 'number', 'tel', 'text']} />,
+        default: 'text',
+    },
+    {
+        property: 'value',
+        description: `The <pre>value</pre> of the rendered <pre>Input</pre>.`,
+        type: <FormatTypes types={['string', 'number', 'any']} noInterpret />,
+    },
+]} />

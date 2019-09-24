@@ -4,14 +4,8 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 // COMPONENTS & ANCHOR
 import { AddLocation } from '../AddLocation';
-import {
-    getLink,
-    LinkProperties,
-    NEXT,
-    PREVIOUS,
-    sections,
-    SiteLink,
-} from '../../Utils';
+import { getLink, NEXT, PREVIOUS, sections, SiteLink } from '../../Utils';
+import { LinkProperties } from '../../Utils/sections';
 
 interface StyledNextPreviousProps {
     justifyContent: string;
@@ -20,8 +14,8 @@ interface StyledNextPreviousProps {
 const StyledNextPrevious = styled('nav')<StyledNextPreviousProps>`
     display: flex;
     flext-flow: row nowrap;
-    justify-content: ${({justifyContent}) => justifyContent};
-    padding:1rem;
+    justify-content: ${({ justifyContent }) => justifyContent};
+    padding: 1rem;
     margin-top: 5rem;
     background-color: #fafafa;
     border-radius: 4px;
@@ -29,7 +23,7 @@ const StyledNextPrevious = styled('nav')<StyledNextPreviousProps>`
 
 interface Location {
     [key: string]: string;
-  }
+}
 
 interface NextPreviousProps {
     location: Location;
@@ -60,9 +54,12 @@ class NextPrevious extends React.PureComponent<NextPreviousProps> {
             // Gets the index of the this page's link entry in the section
             const indexOfLink = links.reduce(
                 (currentIndex: number, link: LinkProperties, index: number) => {
-                    return link.path === location.pathname ? index : currentIndex;
+                    return link.path === location.pathname
+                        ? index
+                        : currentIndex;
                 },
-            0);
+                0
+            );
             // Uses getLink helper method to find the previous/next link entries relative to where
             // the user is.
             const previous = getLink(links, indexOfLink, PREVIOUS);
@@ -77,9 +74,10 @@ class NextPrevious extends React.PureComponent<NextPreviousProps> {
 
     render() {
         const { previous, next }: State = this.state;
-        const justifyContent = next && previous === undefined ? 'flex-end' : 'space-between';
+        const justifyContent =
+            next && previous === undefined ? 'flex-end' : 'space-between';
 
-        return( (previous || next) ? (
+        return previous || next ? (
             <StyledNextPrevious justifyContent={justifyContent}>
                 {previous !== undefined && (
                     <span>
@@ -89,15 +87,13 @@ class NextPrevious extends React.PureComponent<NextPreviousProps> {
                     </span>
                 )}
 
-                {next !== undefined &&
+                {next !== undefined && (
                     <span>
-                        <SiteLink to={next.path}>
-                            {next.title} &raquo;
-                        </SiteLink>
+                        <SiteLink to={next.path}>{next.title} &raquo;</SiteLink>
                     </span>
-                }
+                )}
             </StyledNextPrevious>
-        ) : null);
+        ) : null;
     }
 }
 

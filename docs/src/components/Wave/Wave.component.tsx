@@ -1,3 +1,8 @@
+/*
+    Used on the introductory page to the site, renders wave graphics with limited settings for
+    position and animation speed. Currently pulls SVG graphics from /static/images/waves/
+*/
+
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { withPrefix } from 'gatsby';
