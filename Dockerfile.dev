@@ -5,6 +5,7 @@ WORKDIR /usr/app
 COPY . .
 RUN npm i -g yarn
 RUN yarn
+RUN yarn lint
 
 WORKDIR /usr/app/docs
 
