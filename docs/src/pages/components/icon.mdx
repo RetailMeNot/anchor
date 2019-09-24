@@ -1,10 +1,14 @@
 import { IconList, IconCount, IconTextList } from '../../components/IconList';
 import { Collapse } from '@retailmenot/anchor';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
 
 # Icon
 
-<ComponentInfo title="Icon" mode="description" />
+<ComponentInfo title="Icon" />
 
 #### Available Icons
 
@@ -34,37 +38,21 @@ There are currently <IconCount /> icons available. Note that you can try any of 
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>color</td>
-            <td>
-                The color of the icon. Accepts any valid CSS color proprty. It's default value,
-                <pre>currentColor</pre>, is an SVG property that will allow the icon to inherit its
-                parent color.
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td>currentColor</td>
-        </tr>
-        <tr>
-            <td>scale</td>
-            <td>
-                The scale/size of the icon. Enumerated values are in <pre>px</pre> and are as
-                follows: <pre>xs: 8</pre>, <pre>sm: 14</pre>, <pre>md: 16</pre>, <pre>lg: 24</pre>,
-                <pre>xl: 32</pre>, <pre>xxl: 48</pre>.
-            </td>
-            <td><FormatTypes types={['xs', 'sm', 'md', 'lg', 'xl', 'xxl']} /></td>
-            <td>md</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'color',
+        description: `The color of the icon. Accepts any valid CSS color proprty. It's default value,
+            <pre>currentColor</pre>, is an SVG property that will allow the icon to inherit its
+            parent color.`,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'currentColor',
+    },
+    {
+        property: 'scale',
+        description: `The scale/size of the icon. Enumerated values are in <pre>px</pre> and are as
+            follows: <pre>xs: 8</pre>, <pre>sm: 14</pre>, <pre>md: 16</pre>, <pre>lg: 24</pre>,
+            <pre>xl: 32</pre>, <pre>xxl: 48</pre>.`,
+        type: <FormatTypes data={['xs', 'sm', 'md', 'lg', 'xl', 'xxl']} />,
+        default: 'md',
+    },
+]} />

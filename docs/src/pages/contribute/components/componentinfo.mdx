@@ -1,0 +1,37 @@
+import { ApiTable, FormatTypes } from '../../../components/Utils';
+
+# ComponentInfo
+
+This component is designed to read from the <a
+target="blank"
+href="//github.com/RetailMeNot/anchor/blob/master/docs/src/components/Utils/sections.ts#L30">`sections`</a>
+object that is also part of `Utils`.  It accepts the name of an Anchor component, then uses that to
+pull the description property of that component and render it to the page.
+
+It has two modes, `all` and `description`. When set to `all`, the entire list of components are
+rendered including links to their full documentation entries on this site, and their code on
+GitHub.
+
+```tsx live
+<ComponentInfo title="Avatar" />
+```
+
+API
+
+---
+
+<ApiTable data={[
+    {
+        property: 'title',
+        description: `Per the sections file, the <pre>title</pre> of the component whose description
+            is to be output`,
+        type: 'string',
+    },
+    {
+        property: 'mode',
+        description: `Whether or not to display all of the components descriptions/names, or just
+            the description of a specific component.`,
+        type: <FormatTypes data={['all', 'description']} />,
+        default: 'description',
+    }
+]} />

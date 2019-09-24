@@ -1,13 +1,14 @@
 import { Link } from 'gatsby';
 import {
-    FormatTypes,
+    ApiTable,
     ColorBlurb,
-    ComponentInfo
+    ComponentInfo,
+    FormatTypes,
 } from '../../components/Utils';
 
 # AutoComplete
 
-<ComponentInfo title="Autocomplete" mode="description" />
+<ComponentInfo title="AutoComplete" />
 
 The `AutoComplete` component encapsulates the <Link to="/components/input/">`Input`</Link> and
 provides a results list as the user enters a search query. By default, the search results component
@@ -155,138 +156,109 @@ props.
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        	<td>background</td>
-        	<td><ColorBlurb label="AutoComplete" /></td>
-        	<td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-        	<td>white</td>
-        </tr>
-        <tr>
-            <td>border</td>
-            <td>Enable/Disable the border of the <pre>AutoComplete</pre>.</td>
-            <td>boolean</td>
-            <td>true</td>
-        </tr>
-        <tr>
-        	<td>color</td>
-        	<td><ColorBlurb defaultTheme label="AutoComplete" /></td>
-        	<td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-        	<td><Link to="/theme">charcoal.light</Link></td>
-        </tr>
-        <tr>
-            <td>dataSource</td>
-            <td>
-                A collection used to render the results that should conform to the <Link to="/components/list/"><pre>List</pre></Link> component
-                API.
-            </td>
-            <td>
-                <FormatTypes
-                    types={['Array&lt;string&gt;', 'Array&lt;&#123; name: string; &#125;&gt;']}
-                    noInterpret
-                />
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onBlur</td>
-            <td>An event handler for blur events.</td>
-            <td>(event?: React.FocusEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onChange</td>
-            <td>An event handler for when the value changes.</td>
-            <td>(value?: string | number, item?: any) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onFilter</td>
-            <td>An event handler for when the input value changes.</td>
-            <td>(term: string | number) => void;</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onFocus</td>
-            <td>An event handler for focus events.</td>
-            <td>(event?: React.FocusEvent) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>onSelect</td>
-            <td>An event handler for when a result is selected.</td>
-            <td>(value?: string | number, item?: any) => void</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>placeholder</td>
-            <td>
-                Placeholder text that will be removed once the user beings typing into
-                the <pre>AutoComplete</pre>.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-        	<td>prefix</td>
-        	<td>
-                Although this can be any JSX, it makes the most sense to pass
-                an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element within the <pre>AutoComplete</pre> on the left.
-            </td>
-        	<td>JSX</td>
-        	<td>-</td>
-        </tr>
-        <tr>
-        	<td>resultTemplate</td>
-        	<td>A custom template to render as a result item.</td>
-        	<td>JSX</td>
-        	<td>-</td>
-        </tr>
-        <tr>
-        	<td>shadow</td>
-        	<td>
-                Enable/Disable the shadow of the <pre>AutoComplete</pre>.
-            </td>
-        	<td>boolean</td>
-        	<td>true</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>
-                The size of the <pre>AutoComplete</pre>.
-            </td>
-            <td><FormatTypes types={['sm', 'md', 'lg']} /></td>
-            <td>-</td>
-        </tr>
-        <tr>
-        	<td>suffix</td>
-        	<td>
-                Although this can be any JSX, it makes the most sense to pass
-                an <Link to="/components/icon">Icon</Link> from <strong>Anchor</strong>. This will
-                place the passed element within the <pre>AutoComplete</pre> on the right.
-            </td>
-        	<td>JSX</td>
-        	<td>-</td>
-        </tr>
-        <tr>
-            <td>value</td>
-            <td>
-                The initial value of the <pre>AutoComplete</pre>.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'background',
+        description: <ColorBlurb label="AutoComplete" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'white',
+    },
+    {
+        property: 'border',
+        description: 'Enable/Disable the border of the <pre>AutoComplete</pre>.',
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb defaultTheme label="AutoComplete" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme">charcoal.light</Link>,
+    },
+    {
+        property: 'dataSource',
+        description: [
+            'A collection used to render the results that should conform to the ',
+            <Link to="/components/list/"><pre>List</pre></Link>,
+            ' component api.'
+        ],
+        type: <FormatTypes
+                data={['Array&lt;string&gt;', 'Array&lt;&#123; name: string; &#125;&gt;']}
+                noInterpret
+                />,
+    },
+    {
+        property: 'onBlur',
+        description: 'An event handler for blur events.',
+        type: '(event?: React.FocusEvent) => void',
+    },
+    {
+        property: 'onChange',
+        description: 'An event handler for when the value changes.',
+        type: '(value?: string | number, item?: any) => void',
+    },
+    {
+        property: 'onFilter',
+        description: 'An event handler for when the input value changes.',
+        type: '(term: string | number) => void',
+    },
+    {
+        property: 'onFocus',
+        description: 'An event handler for focus events.',
+        type: '(event?: React.FocusEvent) => void',
+    },
+    {
+        property: 'onSelect',
+        description: 'An event handler for when a result is selected.',
+        type: '(value?: string | number, item?: any) => void',
+    },
+    {
+        property: 'placeholder',
+        description: `Placeholder text that will be removed once the user beings typing into
+            the <pre>AutoComplete</pre>.`,
+        type: 'string',
+    },
+    {
+        property: 'prefix',
+        description: [
+            `Although this can be any JSX, it makes the most sense to pass an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will place the passed element within the
+            <pre>AutoComplete</pre> on the left.`
+        ],
+        type: 'JSX',
+    },
+    {
+        property: 'resultTemplate',
+        description: `A custom template to render as a result item.`,
+        type: 'JSX',
+    },
+    {
+        property: 'shadow',
+        description: `Enable/Disable the shadow of the <pre>AutoComplete</pre>.`,
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'size',
+        description: `The size of the <pre>AutoComplete</pre>.`,
+        type: <FormatTypes data={['sm', 'md', 'lg']} />,
+    },
+    {
+        property: 'suffix',
+        description: [
+            `Although this can be any JSX, it makes the most sense to pass an `,
+            <Link to="/components/icon">Icon</Link>,
+            ` from <strong>Anchor</strong>. This will place the passed element within the
+            <pre>AutoComplete</pre> on the right.`
+        ],
+        type: 'JSX',
+    },
+    {
+        property: 'value',
+        description: `The initial value of the <pre>AutoComplete</pre>.`,
+        type: 'any',
+    },
+]} />
 
 <br /><br />

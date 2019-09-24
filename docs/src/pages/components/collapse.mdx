@@ -1,9 +1,13 @@
 import { Link } from 'gatsby';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
 
 # Collapse
 
-<ComponentInfo title="Collapse" mode="description" />
+<ComponentInfo title="Collapse" />
 
 When using the **Live Code Editor**, you can use any <Link to="/components/icon">Icon</Link> component
 available in **Anchor** for the `openedIcon` and `closedIcon` props.
@@ -53,114 +57,90 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
 
 ### Collapse
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th width="60%">Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>closedIcon</td>
-            <td>The icon that appears when the component is closed.</td>
-            <td>JSX</td>
-            <td>ChevronUp from <strong>Anchor</strong></td>
-        </tr>
-        <tr>
-            <td>closedText</td>
-            <td>The text that appears on the button as a CTA when the component is closed.</td>
-            <td>string</td>
-            <td>Open</td>
-        </tr>
-        <tr>
-            <td>hasBottomBorder</td>
-            <td>Shows/hides the bottom border.</td>
-            <td>boolean</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td>isOpen</td>
-            <td>Determines whether the <pre>Collapse</pre> component is open or not. Changing the
-                value of this prop will programatticaly open/close the component, thusly not
-                requiring a click event.</td>
-            <td>boolean</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>openedIcon</td>
-            <td>The icon that appears when the component is opened.</td>
-            <td>JSX</td>
-            <td>ChevronDown from <strong>Anchor</strong></td>
-        </tr>
-        <tr>
-            <td>openedText</td>
-            <td>The text that appears on the button as a CTA when the component is opened.</td>
-            <td>string</td>
-            <td>Close</td>
-        </tr>
-        <tr>
-            <td>variant</td>
-            <td>Several variants of collapse. <pre>comfortable</pre> has considerable spacing,
-                <pre>compact</pre> has much tighter spacing, and <pre>none</pre> removes all styling.
-            </td>
-            <td><FormatTypes types={['comfortable', 'compact', 'none']} /></td>
-            <td>comfortable</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'closedIcon',
+        description: 'The icon that appears when the component is closed.',
+        type: 'JSX',
+        default: 'ChevronUp from <strong>Anchor</strong>',
+    },
+    {
+        property: 'closedText',
+        description: 'The text that appears on the button as a CTA when the component is closed.',
+        type: 'string',
+        default: 'Open',
+    },
+    {
+        property: 'hasBottomBorder',
+        description: 'Shows/hides the bottom border.',
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'isOpen',
+        description: `Determines whether the <pre>Collapse</pre> component is open or not. Changing
+            the value of this prop will programatticaly open/close the component, thusly not
+            requiring a click event.`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'openedIcon',
+        description: 'The icon that appears when the component is opened.',
+        type: 'JSX',
+        default: 'ChevronDown from <strong>Anchor</strong>',
+    },
+    {
+        property: 'openedText',
+        description: 'The text that appears on the button as a CTA when the component is opened.',
+        type: 'string',
+        default: 'Close',
+    },
+    {
+        property: 'variant',
+        description: `Several variants of collapse. <pre>comfortable</pre> has considerable spacing,
+            <pre>compact</pre> has much tighter spacing, and <pre>none</pre> removes all styling.`,
+        type: <FormatTypes data={['comfortable', 'compact', 'none']} />,
+        default: 'comfortable',
+    },
+]} />
 
 ---
 
 ### CollapseGroup
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>accordion</td>
-            <td>Enables accordion functionality, where only one <pre>Collapse</pre> component can be
-                open at a time.</td>
-            <td>boolean</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>closedIcon</td>
-            <td>Using this prop will apply the setting to all child <pre>Collapse</pre> components.
-                Otherwise its functionality is as noted above for <pre>Collapse</pre>.
-            </td>
-            <td>JSX</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>openedIcon</td>
-            <td>Using this prop will apply the setting to all child <pre>Collapse</pre> components.
-                Otherwise its functionality is as noted above for <pre>Collapse</pre>.</td>
-            <td>JSX</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>openIndex</td>
-            <td>If <pre>accordion</pre> is set to true, this determines which <pre>Collapse</pre>
-                component will start in the open state based on index.</td>
-            <td>number</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>variant</td>
-            <td>Using this prop will apply the setting to all child Collapse components. Otherwise
-                its functionality is as noted above for <pre>Collapse</pre>.</td>
-            <td><FormatTypes types={['comfortable', 'compact', 'none']} /></td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'accordion',
+        description: `Enables accordion functionality, where only one <pre>Collapse</pre> component
+            can be open at a time.`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'closedIcon',
+        description: `Using this prop will apply the setting to all child <pre>Collapse</pre>
+            components. Otherwise its functionality is as noted above for <pre>Collapse</pre>.`,
+        type: 'JSX',
+    },
+    {
+        property: 'openedIcon',
+        description: `Using this prop will apply the setting to all child <pre>Collapse</pre>
+            components. Otherwise its functionality is as noted above for <pre>Collapse</pre>.`,
+        type: 'JSX',
+    },
+    {
+        property: 'openIndex',
+        description: `If <pre>accordion</pre> is set to true, this determines which
+            <pre>Collapse</pre> component will start in the open state based on index.`,
+        type: 'number',
+        default: '0',
+    },
+    {
+        property: 'variant',
+        description: `Using this prop will apply the setting to all child <pre>Collapse</pre>
+            components. Otherwise its functionality is as noted above for <pre>Collapse</pre>.`,
+        type: <FormatTypes data={['comfortable', 'compact', 'none']} />,
+    },
+]} />
+

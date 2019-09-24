@@ -1,9 +1,13 @@
 import { Link } from 'gatsby';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
 
 # Typography
 
-<ComponentInfo title="Typography" mode="description" />
+<ComponentInfo title="Typography" />
 
 One of the principal features of this component is the concept of **`scale`**.
 Although it's possible to alter the `line-height` (`lineHeight` prop) and `font-size` (`size` prop)
@@ -39,158 +43,104 @@ These are the default styles for Typography:
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>align</td>
-            <td>
-                Changes the alignment of text within the component.
-                As this is the application of a CSS property, standard CSS rules apply.
-            </td>
-            <td>
-                <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />
-            </td>
-            <td>inherit</td>
-        </tr>
-        <tr>
-            <td>color</td>
-            <td>
-                Sets the font color. Accepts any valid CSS color value. If
-                you use one of <strong>Anchor</strong>'s <Link to="/theme/colors/">theme</Link> colors,
-                you'll be able to control its hue via a prop noted below.
-            </td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td>inherit</td>
-        </tr>
-        <tr>
-            <td>display</td>
-            <td>
-                Controls the CSS <pre>display</pre> property of the tag.
-            </td>
-            <td>
-                <FormatTypes types={['inline', 'block', 'contents', 'flex', 'grid', 'inline-block',
+<ApiTable data={[
+    {
+        property: 'align',
+        description: `Changes the alignment of text within the component. As this is the application
+            of a CSS property, standard CSS rules apply.`,
+        type: <FormatTypes data={['center', 'left', 'right', 'inherit', 'justify']} />,
+        default: 'inherit',
+    },
+    {
+        property: 'color',
+        description: [
+            `Sets the font color. Accepts any valid CSS color value. If you use one of
+            <strong>Anchor</strong>'s `,
+            <Link to="/theme/colors/">theme</Link>,
+            ` colors, you'll be able to control its hue via a prop noted below.`
+        ],
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'inherit',
+    },
+    {
+        property: 'display',
+        description: `Controls the CSS <pre>display</pre> property of the tag.`,
+        type: <FormatTypes data={['inline', 'block', 'contents', 'flex', 'grid', 'inline-block',
                     'inline-flex', 'inline-grid', 'inline-table', 'list-item', 'run-in', 'table',
                     'table-caption', 'table-column-group', 'table-header-group',
                     'table-footer-group', 'table-row-group', 'table-cell', 'table-column',
                     'table-row', 'none', 'initial', 'inherit']}
-                />
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>href</td>
-            <td>
-                When used in conjunction with setting the <pre>tag</pre> prop to <pre>a</pre>,
-                creates a link to the specified page/resource.
-            </td>
-            <td>
-                string
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>htmlFor</td>
-            <td>
-                When used in conjuction setting the <pre>tag</pre> prop to <pre>label</pre>, adds
-                the <pre><a href="https://www.w3schools.com/tags/att_for.asp" target="_blank">for</a></pre> html
-                attribute in order to associate the label to a form element.
-            </td>
-            <td>
-                string
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>hue</td>
-            <td>
-                If the <pre>color</pre> prop is set to one of <strong>Anchor</strong>'s <Link to="/theme/colors/">theme</Link> colors,
-                allows changing that color's hue.
-            </td>
-            <td>
-                <FormatTypes types={['light', 'base', 'dark']} />
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>lineHeight</td>
-            <td>
-                Changes the <pre>line-height</pre> CSS property. It is not recommended to edit this
-                value, as the <pre>scale</pre> prop will adjust both <pre>size</pre> and <pre>lineHeight</pre> accordingly.
-                This value is in <pre>px</pre>.
-            </td>
-            <td>
-                number
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>scale</td>
-            <td>
-                This value directly affects the <pre>size</pre> and <pre>lineHeight</pre> props
-                directly, ensuring that there is no overlap of text between lines no matter what
-                value is input. This value is in <pre>px</pre>.
-            </td>
-            <td>
-                <FormatTypes types={[62 , 52 , 44 , 36 , 32 , 28 , 24 , 20 , 18 , 16 , 14 , 12]} />
-            </td>
-            <td>16</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>
-                Changes the <pre>font-size</pre> CSS property. It is not recommended to edit this
-                value, as the scale prop will adjust both <pre>size</pre> and <pre>lineHeight</pre> accordingly.
-                This value is in <pre>px</pre>.
-            </td>
-            <td>
-                -
-            </td>
-            <td>16</td>
-        </tr>
-        <tr>
-            <td>tag</td>
-            <td>
-                Changing this prop will let the component render as the specified html tag.
-            </td>
-            <td>
-                <FormatTypes types={['a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5',
+                />,
+    },
+    {
+        property: 'href',
+        description: `When used in conjunction with setting the <pre>tag</pre> prop to <pre>a</pre>,
+            creates a link to the specified page/resource.`,
+        type: <FormatTypes data={['center', 'left', 'right', 'inherit', 'justify']} />,
+        default: 'string',
+    },
+    {
+        property: 'htmlFor',
+        description: `When used in conjuction setting the <pre>tag</pre> prop to <pre>label</pre>,
+            adds the
+            <pre><a href="https://www.w3schools.com/tags/att_for.asp" target="_blank">for</a></pre>
+            html attribute in order to associate the label to a form element.`,
+        type: 'string',
+    },
+    {
+        property: 'hue',
+        description: [
+            `If the <pre>color</pre> prop is set to one of <strong>Anchor</strong>'s `,
+            <Link to="/theme/colors/">theme</Link>,
+            ` colors, allows changing that color's hue.`
+        ],
+        type: <FormatTypes data={['light', 'base', 'dark']} />,
+    },
+    {
+        property: 'lineHeight',
+        description: `Changes the <pre>line-height</pre> CSS property. It is not recommended to edit
+            this value, as the <pre>scale</pre> prop will adjust both <pre>size</pre> and
+            <pre>lineHeight</pre> accordingly. This value is in <pre>px</pre>.`,
+        type: 'number',
+    },
+    {
+        property: 'scale',
+        description: `This value directly affects the <pre>size</pre> and <pre>lineHeight</pre>
+            props directly, ensuring that there is no overlap of text between lines no matter what
+            value is input. This value is in <pre>px</pre>.`,
+        type: <FormatTypes data={[62 , 52 , 44 , 36 , 32 , 28 , 24 , 20 , 18 , 16 , 14 , 12]} />,
+        default: '16',
+    },
+    {
+        property: 'size',
+        description: `Changes the <pre>font-size</pre> CSS property. It is not recommended to edit
+            this value, as the scale prop will adjust both <pre>size</pre> and <pre>lineHeight</pre>
+            accordingly. This value is in <pre>px</pre>.`,
+        type: '-',
+        default: '16',
+    },
+    {
+        property: 'tag',
+        description: `Changing this prop will let the component render as the specified html tag.`,
+        type: <FormatTypes data={['a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5',
                     'h6', 'blockquote', 'address', 'code', 'label', 'pre']}
-                />
-            </td>
-            <td>span</td>
-        </tr>
-        <tr>
-            <td>transform</td>
-            <td>
-                Changes the <pre>text-transform</pre> CSS property.
-            </td>
-            <td>
-                <FormatTypes types={['none', 'capitalize', 'uppercase', 'lowercase',
+                />,
+        default: 'span',
+    },
+    {
+        property: 'transform',
+        description: `Changes the <pre>text-transform</pre> CSS property.`,
+        type: <FormatTypes data={['none', 'capitalize', 'uppercase', 'lowercase',
                     'initial', 'inherit']}
-                />
-            </td>
-            <td>none</td>
-        </tr>
-        <tr>
-            <td>weight</td>
-            <td>
-                Changes the <pre>font-weight</pre> CSS property.
-            </td>
-            <td>
-                <FormatTypes types={[
+                />,
+        default: 'none',
+    },
+    {
+        property: 'weight',
+        description: `Changes the <pre>font-weight</pre> CSS property.`,
+        type: <FormatTypes data={[
                     'normal' , 'bold' , 'bolder' , 'lighter' , '100' , '200' , '300' ,
                     '400' , '500' , '600' , '700' , '800' , '900' , 'initial' , 'inherit'
-                ]} />
-            </td>
-            <td>none</td>
-        </tr>
-    </tbody>
-</table>
+                ]} />,
+    },
+]} />

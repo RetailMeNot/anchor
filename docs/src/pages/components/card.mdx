@@ -1,10 +1,14 @@
 import { Link } from 'gatsby';
 import { CardExample } from '../../components/CardExample';
-import { ComponentInfo, FormatTypes } from '../../components/Utils';
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes,
+} from '../../components/Utils';
 
 # Card
 
-<ComponentInfo title="Card" mode="description" />
+<ComponentInfo title="Card" />
 
 <br />
 
@@ -103,45 +107,26 @@ Now that we've created these separate components, lets organize them into a `Car
 
 ## API
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>action</td>
-            <td>
-                Although this prop will accept any value, it makes the most sense to pass a
-                component. It will absolutely position this component in the upper-right corner of
-                the <pre>Card</pre> and is unaffected by the <pre>gutter</pre> prop.
-            </td>
-            <td>
-                any
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>actionArea</td>
-            <td>
-                Although this prop will accept any value, it makes the most sense to pass a
-                component. It will be placed flush against the bottom of the <pre>Card</pre> and will
-                be unaffected by the <pre>gutter</pre> prop.
-            </td>
-            <td>any</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>gutter</td>
-            <td>
-                The padding of the <pre>Card</pre>'s content.
-            </td>
-            <td><FormatTypes types={['none', 'small', 'medium', 'large']} /></td>
-            <td>medium</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'action',
+        description: `Although this prop will accept any value, it makes the most sense to pass a
+            component. It will absolutely position this component in the upper-right corner of
+            the <pre>Card</pre> and is unaffected by the <pre>gutter</pre> prop.`,
+        type: 'any',
+    },
+    {
+        property: 'actionArea',
+        description: `Although this prop will accept any value, it makes the most sense to pass a
+            component. It will be placed flush against the bottom of the <pre>Card</pre> and will
+            be unaffected by the <pre>gutter</pre> prop.`,
+        type: 'any',
+    },
+    {
+        property: 'gutter',
+        description: `The padding of the <pre>Card</pre>'s content.`,
+        type: <FormatTypes data={['none', 'small', 'medium', 'large']} />,
+        default: 'medium',
+    },
+]} />
+

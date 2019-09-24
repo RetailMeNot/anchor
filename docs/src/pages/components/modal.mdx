@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import { Typography } from '@retailmenot/anchor';
 import { ModalExample } from '../../components/ModalExample';
 import {
+    ApiTable,
     ColorBlurb,
     ComponentInfo,
     FormatTypes,
@@ -9,7 +10,7 @@ import {
 
 # Modal
 
-<ComponentInfo title="Modal" mode="description" />
+<ComponentInfo title="Modal" />
 
 Here is an example of the modal:
 
@@ -195,184 +196,109 @@ And voila! Here is our `PageExample` component rendered with our `ModalAndButton
 
 The `Modal` component is based off of `styled-react-modal` and as such accepts any of those <Typography tag="a" href="https://github.com/AlexanderRichey/styled-react-modal#modal" target="_blank">props</Typography>.
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>background</td>
-            <td>
-                <ColorBlurb background gradient defaultTheme label="Modal" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
-        </tr>
-        <tr>
-            <td>color</td>
-            <td>
-                <ColorBlurb defaultTheme label="Modal" />
-            </td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>height</td>
-            <td>
-                A specific height of the modal. Accepts any standard CSS unit, i.e. 500px, 50%, etc.
-            </td>
-            <td>string</td>
-            <td>42.375rem</td>
-        </tr>
-        <tr>
-            <td>margin</td>
-            <td>
-                Applies a margin to the Modal container. It is not recommended to change this value
-                unless you do not want the modal centered. Accepts any standard margin shorthand
-                value, i.e. '5px 10px 8px'.
-            </td>
-            <td>string</td>
-            <td>auto</td>
-        </tr>
-        <tr>
-            <td>shadow</td>
-            <td>
-                Applies a box-shadow to the Modal container. Accepts any standard box-shadow shorthand
-                value.
-            </td>
-            <td>string</td>
-            <td><pre>0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)</pre></td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>
-                Changes the size of the modal.
-            </td>
-            <td>
-                <FormatTypes types={['lg', 'sm']} />
-            </td>
-            <td>lg</td>
-        </tr>
-        <tr>
-            <td>width</td>
-            <td>
-                A specific width of the modal. Accepts any standard CSS unit, i.e. 500px, 50%, etc.
-                If no width is specified, the size is used instead.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'background',
+        description: <ColorBlurb background gradient defaultTheme label="Modal" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb defaultTheme label="Modal" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+    },
+    {
+        property: 'height',
+        description: `A specific height of the modal. Accepts any standard CSS unit, i.e. 500px, 50%,
+            etc.`,
+        type: 'string',
+        default: '42.375rem',
+    },
+    {
+        property: 'margin',
+        description: `Applies a margin to the Modal container. It is not recommended to change this
+            value unless you do not want the modal centered. Accepts any standard margin shorthand
+            value, i.e. '5px 10px 8px'.`,
+        type: 'string',
+        default: 'auto',
+    },
+    {
+        property: 'shadow',
+        description: `Applies a box-shadow to the Modal container. Accepts any standard box-shadow
+            shorthand value.`,
+        type: 'string',
+        default: '<pre>0 0.375rem 0.5rem 0.25rem rgba(0,0,0,0.13)</pre>',
+    },
+    {
+        property: 'size',
+        description: `Changes the size of the modal.`,
+        type: <FormatTypes data={['lg', 'sm']} />,
+        default: 'lg',
+    },
+    {
+        property: 'width',
+        description: `A specific width of the modal. Accepts any standard CSS unit, i.e. 500px, 50%,
+            etc. If no width is specified, the size is used instead.`,
+        type: 'string',
+    },
+]} />
 
 ---
 
 ### Header
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>background</td>
-            <td>
-                <ColorBlurb defaultTheme background label="Header" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
-        </tr>
-        <tr>
-            <td>color</td>
-            <td>
-                <ColorBlurb defaultTheme label="header" />
-            </td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme/theme-provider#colors">charcoal.light</Link></td>
-        </tr>
-        <tr>
-            <td>title</td>
-            <td>
-                Renders the supplied text with Anchor's <Link to="/components/typography">Typography</Link> component with a scale of
-                20 and a weight of bold.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'background',
+        description: <ColorBlurb defaultTheme background label="Header" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb defaultTheme label="header" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">charcoal.light</Link>,
+    },
+    {
+        property: 'title',
+        description: [
+            `Renders the supplied text with Anchor's `,
+            <Link to="/components/typography">Typography</Link>,
+            ` component with a scale of 20 and a weight of bold.`
+        ],
+        type: 'string',
+    },
+]} />
 
 ---
 
 ### Footer
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>background</td>
-            <td>
-                <ColorBlurb background label="Footer" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td>transparent</td>
-        </tr>
-        <tr>
-            <td>padding</td>
-            <td>
-                Sets the padding for the footer. Any valid css padding shorthand is accepted, ex:
-                <pre>1rem</pre>, or <pre>1rem 32px</pre>, etc.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'background',
+        description: <ColorBlurb background label="Footer" />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
+        default: 'transparent',
+    },
+    {
+        property: 'padding',
+        description: `Sets the padding for the footer. Any valid css padding shorthand is accepted,
+            ex: <pre>1rem</pre>, or <pre>1rem 32px</pre>, etc.`,
+        type: 'string',
+    },
+]} />
 
 ---
 
 ### Close
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>align</td>
-            <td>
-                Aligns the close button to the left or right corner of its parent element.
-            </td>
-            <td><FormatTypes types={['right', 'left']} /></td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'align',
+        description: `Aligns the close button to the left or right corner of its parent element.`,
+        type: <FormatTypes data={['right', 'left']} />,
+    },
+]} />
