@@ -5,12 +5,11 @@ import { Link } from 'gatsby';
 import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Collapse, CollapseGroup } from '@retailmenot/anchor';
-// TODO: Change the config to allow ts extensions. This works, but tsconfig is having a snit.
 import {
     LinkProperties,
     SectionProperties,
     sections,
-} from '../../Utils';
+} from '../../Utils/sections';
 import { AddLocation } from '../AddLocation';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
@@ -26,21 +25,28 @@ const StyledCollapseGroup = styled(CollapseGroup)`
 `;
 
 const LinkTitle = styled('div')`
-    font-weight:bold;
-    padding: 1rem  2.75rem 0.5rem;
+    font-weight: bold;
+    padding: 1rem 2.75rem 0.5rem;
 `;
+interface Location {
+    [key: string]: string;
+}
 
 interface SideNavigationProps {
-    location?: object;
+    location?: Location;
 }
 
 class SideNavigation extends React.PureComponent<SideNavigationProps> {
     state = {
-        mainOpenIndex: false,
+        mainOpenIndex: -1,
     };
 
-    componentDidMount() {
-        const { pathname } = this.props.location;
+    constructor(props: SideNavigationProps) {
+        super(props);
+        // Received from the AddLocation HOC
+        const {
+            location: { pathname },
+        } = props;
 
         const mainOpenIndex = sections.reduce(
             (openIndex: number, section: SectionProperties, index: number) => {
@@ -54,14 +60,14 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
             0
         );
 
-        this.setState({ mainOpenIndex });
+        this.state = { mainOpenIndex };
     }
 
     render() {
         const { mainOpenIndex } = this.state;
 
         return (
-            mainOpenIndex !== false && (
+            mainOpenIndex >= 0 && (
                 <StyledCollapseGroup
                     variant="compact"
                     openIndex={mainOpenIndex}
@@ -75,23 +81,22 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
                             <ul>
                                 {section.links.map(
                                     (link: LinkProperties, j: number) => {
-                                        return(!link.hide ?
+                                        return !link.hide ? (
                                             <li key={`link-key-${j}`}>
-                                                {
-                                                    link.type === 'title' ?
-                                                        <LinkTitle>{link.title}</LinkTitle>
-                                                    : (
-                                                        <Link
-                                                            to={link.path}
-                                                            activeClassName="active"
-                                                        >
-                                                            {link.title}
-                                                        </Link>
-                                                    )
-                                                }
+                                                {link.type === 'title' ? (
+                                                    <LinkTitle>
+                                                        {link.title}
+                                                    </LinkTitle>
+                                                ) : (
+                                                    <Link
+                                                        to={link.path}
+                                                        activeClassName="active"
+                                                    >
+                                                        {link.title}
+                                                    </Link>
+                                                )}
                                             </li>
-                                        : null
-                                        );
+                                        ) : null;
                                     }
                                 )}
                             </ul>

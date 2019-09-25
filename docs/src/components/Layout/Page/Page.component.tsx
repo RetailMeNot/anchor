@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/tag';
 import {
     Col,
     colors,
+    Container,
     RootTheme,
     Row,
     ThemeProvider,
@@ -15,7 +16,7 @@ import styled, { css } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 // COMPONENTS
-import { fonts, NormalizeCSS } from '../../../../../src/theme';
+import { NormalizeCSS } from '../../../../../src/theme';
 import { Footer } from '../';
 import { EnhancedSideNavigation, EnhancedNextPrevious } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
@@ -48,51 +49,6 @@ const StyledContentMain = styled('main')`
     max-width: 80rem;
     padding-top: 1rem;
     padding-bottom: 3rem;
-
-    table.api {
-        width: 100%;
-        font-family: ${fonts.fontFamily};
-        margin: 1rem 0;
-
-        th {
-            text-align: left;
-            padding: 0.75rem 0.5rem;
-            border-bottom: solid thin ${colors.ash.light};
-            background-color: ${colors.white.base};
-        }
-        tr {
-            &:nth-child(odd) {
-                background-color: ${colors.silver.light};
-            }
-        }
-        td {
-            padding: 0.75rem 0.5rem;
-            line-height: 1.5rem;
-
-            &:first-child {
-                font-family: monospace;
-                color: ${colors.flashPink.dark};
-                width: 10%;
-            }
-            &:nth-child(2) {
-                width: 60%;
-            }
-            &:nth-child(3) {
-                font-family: monospace;
-                color: ${colors.cyberMango.dark};
-                width: 20%;
-            }
-            &:nth-child(4) {
-                text-align: left;
-                font-family: monospace;
-                width: 10%;
-            }
-
-            pre {
-                ${InlineCodeStyle};
-            }
-        }
-    }
 
     blockquote {
         padding-bottom: 0;
@@ -330,36 +286,38 @@ export const Page = ({
             <NormalizeCSS />
 
             <StyledHeader>
-                <Row>
-                    <CenteredCol lg={2}>
-                        <StyledLogoContainer to="/">
-                            <img alt="Anchor Logo Horizontal" src={logo} />
-                        </StyledLogoContainer>
-                    </CenteredCol>
-                    <CenteredCol lg={6}>
-                        {/* TODO: Search will go here */}
-                    </CenteredCol>
-                    <CenteredCol lg={4}>
-                        <StyledPrimaryNav>
-                            <Typography
-                                tag="a"
-                                weight={600}
-                                className="active"
-                                href="https://github.com/RetailMeNot/anchor"
-                            >
-                                Github
-                            </Typography>
-                        </StyledPrimaryNav>
-                    </CenteredCol>
-                </Row>
+                <Container>
+                    <Row>
+                        <CenteredCol md={2}>
+                            <StyledLogoContainer to="/">
+                                <img alt="Anchor Logo Horizontal" src={logo} />
+                            </StyledLogoContainer>
+                        </CenteredCol>
+                        <CenteredCol md={2}>
+                            {/* TODO: Search will go here */}
+                        </CenteredCol>
+                        <CenteredCol md={4}>
+                            <StyledPrimaryNav>
+                                <Typography
+                                    tag="a"
+                                    weight={600}
+                                    className="active"
+                                    href="https://github.com/RetailMeNot/anchor"
+                                >
+                                    Github
+                                </Typography>
+                            </StyledPrimaryNav>
+                        </CenteredCol>
+                    </Row>
+                </Container>
             </StyledHeader>
             <Row>
-                <Col lg={2}>
+                <Col md={2} lg={2}>
                     <StyledSideNav>
                         <EnhancedSideNavigation />
                     </StyledSideNav>
                 </Col>
-                <Col lg={10}>
+                <Col md={6} lg={10}>
                     <StyledContentMain>
                         <br />
                         <MDXProvider components={Components}>

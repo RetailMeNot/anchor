@@ -2,12 +2,26 @@
 import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import { Typography } from '@retailmenot/anchor';
 // COMPONENTS
-import { sections, SiteLink } from '../Utils';
+import { COMPONENTS, sections, SiteLink } from '../Utils';
 
 const StyledArticle = styled('article')`
     padding: 1rem;
+`;
+
+const TitleLink = styled('a')`
+    font-size: 1.25rem;
+    text-decoration: none;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: inherit;
+    font-family: ${th('typography.fontFamily')};
+
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 const MODES = {
@@ -26,8 +40,9 @@ export const ComponentInfo = ({
     title,
     mode,
 }: ComponentInfoProps): React.ReactElement<any> => {
-    // TODO: This is fragile. Need to rethink how sections is structured.
-    const components = sections[1].links;
+    const [{ links: components }] = sections.filter(
+        section => section.title === COMPONENTS
+    );
 
     if (title && mode === MODES.description) {
         const component = components.filter(obj => obj.title === title);
@@ -44,17 +59,23 @@ export const ComponentInfo = ({
             <>
                 {components.map(
                     component =>
-                        !component.hide && component.description && (
+                        !component.hide &&
+                        component.description && (
                             <StyledArticle key={component.title.toLowerCase()}>
-                                <Typography tag="h3" weight="600">
+                                <TitleLink
+                                    href={`//github.com/RetailMeNot/anchor/tree/master/src/${component.title}`}
+                                    target="_blank"
+                                >
                                     {component.title}
-                                </Typography>
+                                </TitleLink>
 
                                 <Typography tag="p">
                                     {component.description}
                                 </Typography>
 
-                                <SiteLink to={component.path} />
+                                {component.path && (
+                                    <SiteLink to={component.path} />
+                                )}
                             </StyledArticle>
                         )
                 )}

@@ -1,11 +1,13 @@
 /*
     This component is used to render a formatted html table with API information for a given
-    component. The user can opt to either use this table, or simply use semantic table tags to draw
-    the page.
+    component.
 
     If a table cell is left empty it will cause a crash in Gatsby, which is why all fields are
     enforced via typescript. The exception is default, which if left out a '-' will be entered into
     the td that would be rendered.
+
+    The passed data is sorted alphabetically by the property field, but the sorting can be disabled
+    by passing false to the sort prop.
 
     The description field can accept strings (which can contain html tags interpreted with
     html-react-parser), a React component, or an array with a mix of both. The last option is useful
@@ -101,6 +103,7 @@ const Table = styled('table')`
 
 interface ApiTableProps {
     data: [];
+    sort?: boolean;
 }
 
 interface RowData {
@@ -113,45 +116,75 @@ interface RowData {
     default?: string;
 }
 
-export const ApiTable = ({ data }: ApiTableProps): React.ReactElement<any> => (
-    <Table>
-        <thead>
-            <tr>
-                <th>Property</th>
-                <th>Description</th>
-                <th>Type</th>
-                <th>Default</th>
-            </tr>
-        </thead>
-        <tbody>
-            {data &&
-                data.map(
-                    (rowData: RowData): React.ReactElement<any> => (
-                        <tr key={`key-${rowData.property}`}>
-                            <td>{rowData.property}</td>
-                            <td>
-                                {Array.isArray(rowData.description)
-                                    ? rowData.description.map(
-                                          (description, i) => (
-                                              <React.Fragment key={`key-${i}`}>
-                                                  {typeof description ===
-                                                  'string'
-                                                      ? parse(description)
-                                                      : description}
-                                              </React.Fragment>
+const sortDataAlphabetically = (a: RowData, b: RowData) => {
+    const compareA = a.property.toUpperCase();
+    const compareB = b.property.toUpperCase();
+
+    return compareA < compareB ? -1 : compareA > compareB ? 1 : 0;
+};
+
+export const ApiTable = ({
+    data,
+    sort = true,
+}: ApiTableProps): React.ReactElement<any> => {
+    const [sortedData, setData] = React.useState<[]>(data);
+
+    React.useEffect(() => {
+        // Sort the data alphabetically descending by property, unless the sort prop is false
+        setData(sort ? sortedData.sort(sortDataAlphabetically) : sortedData);
+    }, []);
+
+    return (
+        <Table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                {sortedData &&
+                    sortedData.map(
+                        (rowData: RowData): React.ReactElement<any> => (
+                            <tr key={`key-${rowData.property}`}>
+                                <td>{rowData.property}</td>
+                                <td>
+                                    {Array.isArray(rowData.description)
+                                        ? rowData.description.map(
+                                              (description, i) => (
+                                                  <React.Fragment
+                                                      key={`key-${i}`}
+                                                  >
+                                                      {typeof description ===
+                                                      'string'
+                                                          ? parse(description)
+                                                          : description}
+                                                  </React.Fragment>
+                                              )
                                           )
-                                      )
-                                    : typeof rowData.description === 'string'
-                                    ? parse(rowData.description)
-                                    : rowData.description}
-                            </td>
-                            <td>{rowData.type}</td>
-                            <td>
-                                {rowData.default ? parse(rowData.default) : '-'}
-                            </td>
-                        </tr>
-                    )
-                )}
-        </tbody>
-    </Table>
-);
+                                        : typeof rowData.description ===
+                                          'string'
+                                        ? parse(rowData.description)
+                                        : rowData.description}
+                                </td>
+                                <td>
+                                    {typeof rowData.type === 'string'
+                                        ? parse(rowData.type)
+                                        : rowData.type}
+                                </td>
+                                <td>
+                                    {rowData.default
+                                        ? typeof rowData.default === 'string'
+                                            ? parse(rowData.default)
+                                            : rowData.default
+                                        : '-'}
+                                </td>
+                            </tr>
+                        )
+                    )}
+            </tbody>
+        </Table>
+    );
+};

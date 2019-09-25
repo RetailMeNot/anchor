@@ -1,6 +1,11 @@
 import { Link } from 'gatsby';
 import { CardExample } from '../../components/CardExample';
-import { ComponentInfo, FormatTypes, ColorBlurb } from '../../components/Utils';
+import {
+    ApiTable,
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
+} from '../../components/Utils';
 
 # Menu
 
@@ -27,106 +32,64 @@ import { ComponentInfo, FormatTypes, ColorBlurb } from '../../components/Utils';
 
 ### Menu
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>background</td>
-            <td>
-                <ColorBlurb background gradient label="Menu" />
-            </td>
-            <td>
-                <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />
-            </td>
-            <td><Link to="/theme/theme-provider#colors">primary.base</Link></td>
-        </tr>
-        <tr>
-            <td>color</td>
-            <td>
-                <ColorBlurb label="Menu" />
-            </td>
-            <td><FormatTypes types={['string', 'rgb', 'rgba']} noInterpret /></td>
-            <td><Link to="/theme/theme-provider#colors">white.base</Link></td>
-        </tr>
-        <tr>
-            <td>justify</td>
-            <td>
-                Using CSS flexbox, aligns the menu items either to the left (<pre>flex-start</pre>)
-                or right (<pre>flex-end</pre>).
-            </td>
-            <td><FormatTypes types={['flex-start', 'flex-end']} /></td>
-            <td>flex-start</td>
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>
-                Alters the padding around the menu items, as well as their font weight and size.
-            </td>
-            <td><FormatTypes types={['small', 'large']} /></td>
-            <td>large</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'background',
+        description: <ColorBlurb background gradient label="Menu" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">primary.base</Link>,
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb label="Menu" />,
+        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+    {
+        property: 'justify',
+        description: `Using CSS flexbox, aligns the menu items either to the left
+            (<pre>flex-start</pre>) or right (<pre>flex-end</pre>).`,
+        type: <FormatTypes types={['flex-start', 'flex-end']} />,
+        default: 'flex-start',
+    },
+    {
+        property: 'size',
+        description: `Alters the padding around the menu items, as well as their font weight and
+            size.`,
+        type: <FormatTypes types={['small', 'large']} />,
+        default: 'large',
+    },
+]} />
 
 ---
 
 ### MenuItem
 
-<table class="api">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>active</td>
-            <td>
-                This adds the <pre>active</pre> class to the rendered <pre>MenuItem</pre>, and
-                styles it as such. <pre>Menu</pre> nor <pre>MenuItem</pre> determines what is
-                'active', giving the user full control.
-            </td>
-            <td>
-                boolean
-            </td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>as</td>
-            <td>
-                Makes a <pre>MenuItem</pre> act as an element other than the <pre>a</pre> tag. Ex:
-                <pre>div</pre>, <pre>span</pre>, etc. Note that this will affect styling of the
-                <pre>MenuItem</pre>
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>label</td>
-            <td>
-                The text for the generated link.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>type</td>
-            <td>
-                Specifies the <a href="http://www.htmlquick.com/reference/mime-types.html" target="_blank">internet media type</a> of
-                the linked document.
-            </td>
-            <td>string</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+<ApiTable data={[
+    {
+        property: 'active',
+        description: `This adds the <pre>active</pre> class to the rendered <pre>MenuItem</pre>, and
+            styles it as such. <pre>Menu</pre> nor <pre>MenuItem</pre> determines what is
+            'active', giving the user full control.`,
+        type: 'boolean',
+    },
+    {
+        property: 'as',
+        description: `Makes a <pre>MenuItem</pre> act as an element other than the <pre>a</pre> tag.
+            Ex: <pre>div</pre>, <pre>span</pre>, etc. Note that this will affect styling of the
+            <pre>MenuItem</pre>.`,
+        type: 'string',
+    },
+    {
+        property: 'label',
+        description: `The text for the generated link.`,
+        type: 'string',
+    },
+    {
+        property: 'type',
+        description: `Specifies the
+            <a href="http://www.htmlquick.com/reference/mime-types.html" target="_blank">internet
+            media type</a> of the linked document.`,
+        type: 'string',
+    },
+]} />
