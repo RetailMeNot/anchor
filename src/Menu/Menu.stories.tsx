@@ -7,7 +7,7 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Menu } from './Menu.component';
 import { Item } from './Item';
-import { ChevronDown } from '../Icon';
+import { ChevronDown, ChevronUp } from '../Icon';
 // README
 import * as README from './README.md';
 import { RootTheme } from '../theme';
@@ -40,6 +40,50 @@ const MockList = () => (
     </List>
 );
 
+const renderDemoMenu = () => {
+    const [isItemHovered, setIsItemHovered] = React.useState<boolean>(false);
+    const [isItem2Hovered, setIsItem2Hovered] = React.useState<boolean>(false);
+    return (
+        <>
+            <Menu>
+                <DropDown
+                    overlay={<MockList />}
+                    position="bottomStart"
+                    showArrow={false}
+                    trigger="click"
+                    onTriggered={setIsItemHovered}
+                >
+                    <Item>
+                        DropDown Link
+                        {isItemHovered ? (
+                            <ChevronUp color="white" />
+                        ) : (
+                            <ChevronDown color="white" />
+                        )}
+                    </Item>
+                </DropDown>
+                <DropDown
+                    overlay={<MockList />}
+                    position="bottomStart"
+                    showArrow={false}
+                    trigger="click"
+                    onTriggered={setIsItem2Hovered}
+                >
+                    <Item>
+                        Stores
+                        {isItem2Hovered ? (
+                            <ChevronUp color="white" />
+                        ) : (
+                            <ChevronDown color="white" />
+                        )}
+                    </Item>
+                </DropDown>
+                <Item path="/">More</Item>
+            </Menu>
+        </>
+    );
+};
+
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
@@ -54,33 +98,17 @@ storiesOf('Components/Menu', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Typography tag="p">Large</Typography>
-
-                <Menu>
-                    <DropDown
-                        overlay={<MockList />}
-                        position="bottomStart"
-                        showArrow={false}
-                        trigger="both"
-                    >
-                        <Item>
-                            DropDown Link <ChevronDown color="white" />
-                        </Item>
-                    </DropDown>
-                    <DropDown
-                        overlay={<MockList />}
-                        position="bottomStart"
-                        showArrow={false}
-                        trigger="both"
-                    >
-                        <Item>
-                            Stores <ChevronDown color="white" />
-                        </Item>
-                    </DropDown>
-                    <Item path="/">More</Item>
+                <Menu size="lg">
+                    <Item path="/">Item 1</Item>
+                    <Item path="/">Item 2</Item>
+                    <Item path="/">Item 3</Item>
+                    <Item path="/">Item 4</Item>
+                    <Item path="/">Item 5</Item>
+                    <Item path="/">Item 6</Item>
                 </Menu>
-
+                <Typography tag="p">Medium</Typography>
+                {renderDemoMenu()}
                 <br />
-
                 <Typography tag="p">Small</Typography>
 
                 <Menu size="sm">

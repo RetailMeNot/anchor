@@ -9,12 +9,20 @@ import { lighten } from 'polished';
 import { ItemProps } from './Item/Item.component';
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
+enum MenuSizes {
+    sm = 'sm',
+    md = 'md',
+    lg = 'lg',
+}
+
+export type MenuSizeProps = MenuSizes | 'sm' | 'md' | 'lg';
+
 interface MenuProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     children?:
         | Array<React.ReactElement<ItemProps>>
         | React.ReactElement<ItemProps>;
     className?: string;
-    size?: 'sm' | 'lg';
+    size?: MenuSizeProps;
     // Color
     background?: string;
     color?: string;
@@ -22,7 +30,7 @@ interface MenuProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     justify?: 'flex-start' | 'flex-end';
 }
 
-const MenuSizes = {
+const MenuSizeStyles = {
     sm: {
         menu: css``,
         items: css`
@@ -32,7 +40,7 @@ const MenuSizes = {
             padding: 0.5rem 0.75rem;
         `,
     },
-    lg: {
+    md: {
         menu: css``,
         items: css`
             border-radius: base;
@@ -40,19 +48,27 @@ const MenuSizes = {
             padding: 1rem 0.75rem;
         `,
     },
+    lg: {
+        menu: css``,
+        items: css`
+            border-radius: base;
+            font-weight: 600;
+            padding: 1.5rem 1.25rem;
+        `,
+    },
 };
 
 const sizeVariant = variant({
     key: 'menu.sizes',
     prop: 'size',
-    default: 'lg',
-    variants: MenuSizes,
+    default: 'md',
+    variants: MenuSizeStyles,
 });
 
 const StyledMenu = styled('nav')<MenuProps>`
     display: flex;
     width: 100%;
-    ${spaceStyles}
+    ${spaceStyles};
     min-width: 15.625rem;
     margin: 0;
     padding: 0;
@@ -65,7 +81,6 @@ const StyledMenu = styled('nav')<MenuProps>`
     font-family: ${th('typography.fontFamily')};
     border-radius: base;
 
-    /* TODO: use React.clone to append a run-time class here instead of using a * selector */
     .anchor-menu-item {
         line-height: 1.125rem;
         ${({ color = 'neutrals.white.base' }) => css({ color })};
@@ -105,7 +120,7 @@ const StyledMenu = styled('nav')<MenuProps>`
             margin-right: 0;
         }
 
-        ${props => sizeVariant(props).items}
+        ${props => sizeVariant(props).items};
     }
 
     /* Positioning */
@@ -115,13 +130,13 @@ const StyledMenu = styled('nav')<MenuProps>`
         })};
 
     /* Menu Sizes */
-    ${props => sizeVariant(props).menu}
+    ${props => sizeVariant(props).menu};
 `;
 
 export const Menu: React.FunctionComponent<MenuProps> = ({
     className,
     children,
-    size = 'lg',
+    size = 'md',
     ...props
 }: MenuProps): React.ReactElement<MenuProps> => (
     <StyledMenu
@@ -129,7 +144,6 @@ export const Menu: React.FunctionComponent<MenuProps> = ({
         className={classNames('anchor-menu', className)}
         {...props}
     >
-        {/* TODO: Need to solve the container issue */}
         {children}
     </StyledMenu>
 );

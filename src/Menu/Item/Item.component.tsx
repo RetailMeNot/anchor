@@ -4,6 +4,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
+// COMPONENTS
+import { MenuSizeProps } from '../Menu.component';
 
 export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
     path?: string;
@@ -12,7 +14,7 @@ export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
     className?: string;
     active?: boolean;
     // TODO: do I need this?
-    size?: 'sm' | 'lg';
+    size?: MenuSizeProps;
     // TODO: tag to allow element overrides
     as?: any;
     type?: any;
