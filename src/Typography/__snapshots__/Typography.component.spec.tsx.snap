@@ -4,6 +4,7 @@ exports[`Component: Typography match its snapshot 1`] = `
 .c0 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -26,6 +27,7 @@ exports[`Component: Typography should accept a custom display 1`] = `
 .c0 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -50,6 +52,7 @@ exports[`Component: Typography should accept a custom lineHeight 1`] = `
 .c0 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -73,6 +76,7 @@ exports[`Component: Typography should accept a custom size 1`] = `
 .c0 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;

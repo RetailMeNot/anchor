@@ -92,6 +92,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
 const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
     box-sizing: border-box;
     font-family: base;
+    margin: 0;
 
     // Variant styles
     ${props =>

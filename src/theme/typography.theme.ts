@@ -93,7 +93,6 @@ export const typography: TypographyTheme = {
     },
     tag: {
         a: {
-            fontWeight: 'normal',
             fontSize: '1rem',
             lineHeight: '1.5rem',
             textDecoration: 'none',
@@ -112,43 +111,33 @@ export const typography: TypographyTheme = {
             },
         },
         p: {
-            fontWeight: 'normal',
             fontSize: '1rem',
             lineHeight: '1.5rem',
-            marginBottom: '1rem',
         },
         span: {
             // TODO
         },
         h1: {
-            fontWeight: 'normal',
             fontSize: '1.75rem',
             lineHeight: '2rem',
-            margin: '1rem 0',
         },
         h2: {
-            margin: '1rem 0',
-            fontWeight: 'normal',
             fontSize: '1.5rem',
             lineHeight: '2rem',
         },
         h3: {
-            fontWeight: 'normal',
             fontSize: '1.25rem',
             lineHeight: '1.5rem',
         },
         h4: {
-            fontWeight: 'normal',
             fontSize: '1.125rem',
             lineHeight: '1.5rem',
         },
         h5: {
-            fontWeight: 'normal',
             fontSize: '1rem',
             lineHeight: '1.5rem',
         },
         h6: {
-            fontWeight: 'normal',
             fontSize: '0.875rem',
             lineHeight: '1.125rem',
         },
@@ -179,7 +168,6 @@ export const typography: TypographyTheme = {
             fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
         },
         label: {
-            fontWeight: 'normal',
             lineHeight: '1.5rem',
         },
         strong: {
