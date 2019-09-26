@@ -107,9 +107,9 @@ exports[`Component: Item should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c1 small {
@@ -124,7 +124,7 @@ exports[`Component: Item should be defined 1`] = `
 >
   <span
     className="c1 anchor-typography c2 lg"
-    color="charcoal"
+    color="neutrals.charcoal.light"
   >
     Item
   </span>

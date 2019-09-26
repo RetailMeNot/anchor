@@ -110,7 +110,7 @@ const renderMessageAndDescription = ({
     <>
         {message && <Typography tag="h4">{message}</Typography>}
         {description && (
-            <Typography tag="p" color="charcoal" hue="light">
+            <Typography tag="p" color="neutrals.charcoal.light">
                 {description}
             </Typography>
         )}

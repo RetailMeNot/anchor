@@ -6,7 +6,7 @@ import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
-import { colors, Color } from '../theme';
+// import { colors, Color } from '../theme';
 import { TypographyTags, Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
@@ -72,8 +72,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     children?: any;
     tag?: TypographyTags;
     weight?: FontWeights;
-    color?: 'inherit' | 'initial' | Color | string;
-    hue?: 'light' | 'base' | 'dark';
+    color?: 'inherit' | 'initial' | string;
     scale?: Scale;
     size?: number;
     lineHeight?: number;
@@ -81,6 +80,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
 
 const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
     box-sizing: border-box;
+
     // Global Font Properties
     font-family: ${th('typography.fontFamily')};
     font-size: ${th('typography.fontSize')};
@@ -101,17 +101,21 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
         prop: 'tag',
     })}
 
-    // CSS Overrides
-    ${({ align = 'inherit', display, transform = 'none' }) =>
+    // Prop overrides
+    ${({
+        color = 'inherit',
+        align = 'inherit',
+        display,
+        transform = 'none',
+        lineHeight,
+        size,
+        weight,
+    }) =>
         css({
+            color,
             textAlign: align,
-            display: display,
+            display,
             textTransform: transform,
-        })};
-
-    // Override Size & Line Height
-    ${({ lineHeight, size, weight }) =>
-        css({
             lineHeight: rem(lineHeight),
             fontSize: rem(size),
             fontWeight: weight,
@@ -119,10 +123,6 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
 
     // Spacing
     ${spaceStyles}
-
-    // TODO: colors when theme colors are defined
-    ${({ color = 'inherit', hue = 'base' }) =>
-        css({ color: colors[color] ? colors[color][hue] : color })};
 
     small {
         font-size: 87.5%;

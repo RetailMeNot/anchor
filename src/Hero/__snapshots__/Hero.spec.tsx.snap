@@ -126,10 +126,10 @@ exports[`Component: Hero should render with custom content 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
-  color: inherit;
 }
 
 .c1 small {
@@ -144,9 +144,9 @@ exports[`Component: Hero should render with custom content 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
-  color: inherit;
 }
 
 .c3 small {
@@ -216,10 +216,10 @@ exports[`Component: Hero should render with title 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
-  color: inherit;
 }
 
 .c1 small {
@@ -285,10 +285,10 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   margin: 1rem 0;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
-  color: inherit;
 }
 
 .c1 small {
@@ -303,10 +303,10 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   line-height: 1.5rem;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   font-weight: 600;
-  color: inherit;
 }
 
 .c3 small {

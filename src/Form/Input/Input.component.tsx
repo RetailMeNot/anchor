@@ -300,8 +300,7 @@ export const Input = forwardRef(
                         />
                         {label && (
                             <Typography
-                                color="ash"
-                                hue="dark"
+                                color="neutrals.ash.dark"
                                 scale={
                                     focus ||
                                     (inputValue && `${inputValue}`.length)

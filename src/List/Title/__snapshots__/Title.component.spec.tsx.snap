@@ -24,10 +24,10 @@ exports[`Component: Title should be defined 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
+  color: #808080;
   text-align: inherit;
   text-transform: none;
   font-weight: 700;
-  color: #808080;
 }
 
 .c1 small {
@@ -39,7 +39,7 @@ exports[`Component: Title should be defined 1`] = `
 >
   <span
     className="c1 anchor-typography"
-    color="ash"
+    color="neutrals.ash.dark"
     scale={12}
   >
     Title

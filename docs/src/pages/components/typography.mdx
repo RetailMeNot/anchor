@@ -30,7 +30,7 @@ These are the default styles for Typography:
     <Typography tag="p">
         The quick <Typography tag="span" transform="uppercase" color="#ff0000" weight="bolder">red</Typography> fox
     </Typography>
-    <Typography tag="h2" color="charcoal" hue="light">
+    <Typography tag="h2" color="neutrals.charcoal.light">
         jumped
     </Typography>
     <Typography tag="p">
@@ -54,10 +54,8 @@ These are the default styles for Typography:
     {
         property: 'color',
         description: [
-            `Sets the font color. Accepts any valid CSS color value. If you use one of
-            <strong>Anchor</strong>'s `,
-            <Link to="/theme/colors/">theme</Link>,
-            ` colors, you'll be able to control its hue via a prop noted below.`
+            `Sets the font color. Accepts any valid CSS color value. Will use values present in the colors
+            <Link to="/theme/colors/">theme</Link>.`
         ],
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'inherit',
@@ -86,15 +84,6 @@ These are the default styles for Typography:
             <pre><a href="https://www.w3schools.com/tags/att_for.asp" target="_blank">for</a></pre>
             html attribute in order to associate the label to a form element.`,
         type: 'string',
-    },
-    {
-        property: 'hue',
-        description: [
-            `If the <pre>color</pre> prop is set to one of <strong>Anchor</strong>'s `,
-            <Link to="/theme/colors/">theme</Link>,
-            ` colors, allows changing that color's hue.`
-        ],
-        type: <FormatTypes data={['light', 'base', 'dark']} />,
     },
     {
         property: 'lineHeight',

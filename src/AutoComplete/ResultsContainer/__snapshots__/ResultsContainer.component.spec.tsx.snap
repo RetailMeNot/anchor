@@ -119,9 +119,9 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c2 small {
@@ -136,9 +136,9 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c4 small {
@@ -159,7 +159,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c2 anchor-typography c3 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -172,7 +172,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c4 anchor-typography c3 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>
@@ -316,9 +316,9 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c3 small {
@@ -333,9 +333,9 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c5 small {
@@ -357,7 +357,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c3 anchor-typography c4 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -371,7 +371,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c5 anchor-typography c4 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>

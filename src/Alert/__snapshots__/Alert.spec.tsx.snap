@@ -56,9 +56,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c1 small {
@@ -71,7 +71,7 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="charcoal"
+      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -158,9 +158,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c3 small {
@@ -207,7 +207,7 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="charcoal"
+          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -268,9 +268,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c1 small {
@@ -283,7 +283,7 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="charcoal"
+      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -370,9 +370,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c3 small {
@@ -419,7 +419,7 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="charcoal"
+          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -480,9 +480,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c1 small {
@@ -495,7 +495,7 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="charcoal"
+      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -582,9 +582,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c3 small {
@@ -627,7 +627,7 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="charcoal"
+          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -688,9 +688,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c1 small {
@@ -703,7 +703,7 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="charcoal"
+      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -790,9 +790,9 @@ Array [
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 1rem;
+  color: #595959;
   text-align: inherit;
   text-transform: none;
-  color: #595959;
 }
 
 .c3 small {
@@ -840,7 +840,7 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="charcoal"
+          color="neutrals.charcoal.light"
         >
           Test Description
         </p>

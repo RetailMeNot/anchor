@@ -24,11 +24,11 @@ exports[`Component: ControlLabel should be defined 1`] = `
   line-height: 1.5rem;
   font-weight: normal;
   line-height: 1.5rem;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   line-height: 1.375rem;
   margin-bottom: 1rem;
-  color: inherit;
 }
 
 .c0 small {

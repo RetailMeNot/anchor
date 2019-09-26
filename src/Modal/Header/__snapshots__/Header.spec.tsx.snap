@@ -31,10 +31,10 @@ exports[`Component: Modal.Header should render with title 1`] = `
   line-height: 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: inherit;
   text-align: inherit;
   text-transform: none;
   font-weight: bold;
-  color: inherit;
 }
 
 .c1 small {
