@@ -4,13 +4,11 @@ import * as renderer from 'react-test-renderer';
 // COMPONENT
 import { Menu } from './Menu.component';
 import { Item } from './Item';
-// ENZYME
-import { shallow, mount } from 'enzyme';
 
 describe('Component: Menu', () => {
     it('should match its snapshot and render items.', () => {
         const subject = (
-            <>
+            <div>
                 <Menu>
                     <Item path="/">Test Item</Item>
                 </Menu>
@@ -20,13 +18,8 @@ describe('Component: Menu', () => {
                 <Menu size="lg">
                     <Item path="/">Test Item</Item>
                 </Menu>
-                </>
+                </div>
         );
-        const wrapper = mount(subject);
-        const component = shallow(subject);
-        expect(subject).toBeDefined();
-        expect(wrapper).toBeDefined();
-        expect(component).toBeDefined();
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });

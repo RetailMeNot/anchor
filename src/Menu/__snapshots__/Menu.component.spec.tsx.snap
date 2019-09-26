@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Menu should be defined 1`] = `
+exports[`Component: Menu should match its snapshot and render items. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,6 +53,111 @@ exports[`Component: Menu should be defined 1`] = `
   margin-right: 0;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 15.625rem;
+  margin: 0;
+  padding: 0;
+  background: primary.base;
+  font-size: 0.875rem;
+  border-radius: base;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 .anchor-menu-item {
+  line-height: 1.125rem;
+  color: neutrals.white.base;
+  -webkit-transition: background-color 250ms,color 250ms;
+  transition: background-color 250ms,color 250ms;
+  margin: 0 0.125rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+
+.c2 .anchor-menu-item:hover {
+  color: neutrals.white.base;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c2 .anchor-menu-item:active,
+.c2 .anchor-menu-item.active {
+  color: color:neutrals.white.base;
+  background-color: rgba( 255, 255, 255, 0.1 );
+}
+
+.c2 .anchor-menu-item:focus {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c2 .anchor-menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.c2 .anchor-menu-item:last-of-type {
+  margin-right: 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 15.625rem;
+  margin: 0;
+  padding: 0;
+  background: primary.base;
+  font-size: 0.875rem;
+  border-radius: base;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c3 .anchor-menu-item {
+  line-height: 1.125rem;
+  color: neutrals.white.base;
+  -webkit-transition: background-color 250ms,color 250ms;
+  transition: background-color 250ms,color 250ms;
+  margin: 0 0.125rem;
+  border-radius: base;
+  font-weight: 600;
+  padding: 1.5rem 1.25rem;
+}
+
+.c3 .anchor-menu-item:hover {
+  color: neutrals.white.base;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c3 .anchor-menu-item:active,
+.c3 .anchor-menu-item.active {
+  color: color:neutrals.white.base;
+  background-color: rgba( 255, 255, 255, 0.1 );
+}
+
+.c3 .anchor-menu-item:focus {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c3 .anchor-menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.c3 .anchor-menu-item:last-of-type {
+  margin-right: 0;
+}
+
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -80,14 +185,36 @@ exports[`Component: Menu should be defined 1`] = `
   -webkit-touch-callout: none;
 }
 
-<nav
-  className="anchor-menu c0"
-  size="lg"
->
-  <a
-    className="anchor-menu-item c1"
+<div>
+  <nav
+    className="anchor-menu c0"
+    size="md"
   >
-    Derp
-  </a>
-</nav>
+    <a
+      className="anchor-menu-item c1"
+    >
+      Test Item
+    </a>
+  </nav>
+  <nav
+    className="anchor-menu c2"
+    size="sm"
+  >
+    <a
+      className="anchor-menu-item c1"
+    >
+      Test Item
+    </a>
+  </nav>
+  <nav
+    className="anchor-menu c3"
+    size="lg"
+  >
+    <a
+      className="anchor-menu-item c1"
+    >
+      Test Item
+    </a>
+  </nav>
+</div>
 `;
