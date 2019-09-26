@@ -17,7 +17,6 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
-import parse from 'html-react-parser';
 // ANCHOR & COMPONENTS
 import { Typography } from '@retailmenot/anchor';
 import { COMPONENTS, sections, SiteLink } from '../index';
