@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // COMPONENTS
 import { MenuSizeProps } from '../Menu.component';
 
@@ -26,7 +25,7 @@ const StyledItem = styled('a')<ItemProps>`
     align-items: center;
     cursor: pointer;
     text-align: center;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     color: text.body;
     text-decoration: none;
     transition: color 250ms;

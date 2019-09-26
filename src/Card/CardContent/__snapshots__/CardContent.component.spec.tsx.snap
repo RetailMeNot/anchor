@@ -6,6 +6,7 @@ exports[`Component: CardContent should be defined 1`] = `
   position: relative;
   display: block;
   padding: 1rem;
+  font-family: base;
 }
 
 <div

@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // ANCHOR
 import * as README from './README.md';
 import { Typography, Avatar, Button, Close } from '..';
@@ -16,7 +15,7 @@ import { Skeleton } from './Skeleton.component';
 const StyledStory = styled('div')`
     padding: 2rem 4rem;
     color: text.body;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 `;
 
 const Card = styled('div')`

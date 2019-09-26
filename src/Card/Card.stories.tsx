@@ -4,7 +4,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // COMPONENTS
 import { Card } from './Card.component';
 import { DropDown } from '../DropDown';
@@ -19,7 +18,7 @@ import * as README from './README.md';
 const StyledStory = styled('div')`
     h2,
     h3 {
-        font-family: ${th('typography.fontFamily')};
+        font-family: base;
         font-weight: normal;
         color: text.body;
         margin-bottom: 0.5rem;

@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
@@ -49,7 +48,7 @@ const InnerBorder = styled('div')`
     flex: 0 0 1.625rem;
     width: 1.625rem;
     height: 1.625rem;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     font-size: 0.75rem;
     font-weight: bold;
     color: text.body;

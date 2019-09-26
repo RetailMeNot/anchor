@@ -3,7 +3,6 @@ import * as React from 'react';
 const { forwardRef } = React;
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
@@ -25,7 +24,7 @@ const StyledToggle = styled('label')<ToggleProps>`
     ${spaceStyles}
 
     // Styles for the ON/OFF
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 500;

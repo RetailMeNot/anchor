@@ -19,7 +19,7 @@ interface SiteLinkProps {
 
 const StyledSiteLink = styled(Link)`
     color: #007ecd;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     text-decoration: none;
     font-weight: 600;
 `;

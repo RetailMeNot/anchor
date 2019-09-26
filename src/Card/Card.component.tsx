@@ -23,7 +23,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 const StyledCard = styled('div')<CardProps>`
     position: relative;
     width: 100%;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     box-sizing: border-box;
     border-radius: base;
     border: solid thin ${th.color('borders.base')};

@@ -19,6 +19,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 
 .c0 {
   box-sizing: border-box;
+  font-family: base;
   position: relative;
   cursor: pointer;
   display: -webkit-inline-box;

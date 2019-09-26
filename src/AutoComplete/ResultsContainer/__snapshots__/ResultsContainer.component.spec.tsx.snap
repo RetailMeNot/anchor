@@ -115,13 +115,11 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #595959;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
+  color: #595959;
 }
 
 .c2 small {
@@ -132,13 +130,11 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #595959;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
+  color: #595959;
 }
 
 .c4 small {
@@ -312,13 +308,11 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #595959;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
+  color: #595959;
 }
 
 .c3 small {
@@ -329,13 +323,11 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #595959;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
+  color: #595959;
 }
 
 .c5 small {

@@ -53,7 +53,7 @@ const TooltipElement = styled('div')<TooltipElementProps>`
             color,
         })};
     border-radius: base;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     font-size: 0.8rem;
     padding: 0.5rem;
     opacity: 0;

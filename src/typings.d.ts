@@ -38,7 +38,7 @@ declare module '@xstyled/system' {
         prop,
     }: {
         key?: string;
-        default: string | number;
+        default?: string | number;
         variants?: {
             [key: string]: T;
             [key: number]: T;

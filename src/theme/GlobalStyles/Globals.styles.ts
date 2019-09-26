@@ -5,7 +5,7 @@ import { th } from '@xstyled/system';
 export const GlobalCSS = createGlobalStyle`
   html,
   body {
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     color: text.body;
     font-size: ${th('typography.fontSize')};
     letter-spacing: 0;

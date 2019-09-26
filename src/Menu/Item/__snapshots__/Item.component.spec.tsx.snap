@@ -16,6 +16,7 @@ exports[`Component: Item should be defined 1`] = `
   align-items: center;
   cursor: pointer;
   text-align: center;
+  font-family: base;
   color: text.body;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -49,6 +50,7 @@ exports[`Component: Item should render with label 1`] = `
   align-items: center;
   cursor: pointer;
   text-align: center;
+  font-family: base;
   color: text.body;
   -webkit-text-decoration: none;
   text-decoration: none;

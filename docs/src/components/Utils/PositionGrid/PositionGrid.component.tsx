@@ -27,7 +27,7 @@ const StyledTable = styled('table')`
     td {
         width: 10rem;
         padding: 0.75rem 0.25rem;
-        font-family: ${th('typography.fontFamily')};
+        font-family: base;
         font-size: 1.25rem;
     }
 `;

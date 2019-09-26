@@ -47,18 +47,13 @@ Array [
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c1 small {
@@ -149,18 +144,13 @@ Array [
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c3 small {
@@ -259,18 +249,13 @@ Array [
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c1 small {
@@ -361,18 +346,13 @@ Array [
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c3 small {
@@ -471,18 +451,13 @@ Array [
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c1 small {
@@ -573,18 +548,13 @@ Array [
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c3 small {
@@ -679,18 +649,13 @@ Array [
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c1 small {
@@ -781,18 +746,13 @@ Array [
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: inherit;
+  color: inherit;
   margin-bottom: 1rem;
   color: #595959;
-  text-align: inherit;
-  text-transform: none;
 }
 
 .c3 small {

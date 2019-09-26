@@ -138,7 +138,7 @@ const variantStyles = createVariant({
 const StyledCollapse = styled('div')<StyledCollapseProps>`
     display: block;
     box-sizing: border-box;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 
     ${variantStyles}
 

@@ -93,7 +93,7 @@ const StyledInputWrapper = styled('div')<InputProps>`
     overflow: hidden;
 
     ::placeholder {
-        font-family: ${th('typography.fontFamily')};
+        font-family: base;
         color: text.placeholder;
     }
 
@@ -160,7 +160,7 @@ const StyledInput = styled('input')<StyledInputProps>`
     color: text.body;
     // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
     //transition: all 250ms;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     // Disable Number Spinners
     &[type='number']::-webkit-inner-spin-button,
     &[type='number']::-webkit-outer-spin-button {

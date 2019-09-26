@@ -4,7 +4,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import { select, boolean, text } from '@storybook/addon-knobs';
 // ANCHOR
 import { RootTheme } from '../../src/theme';
@@ -14,7 +13,7 @@ import { InfoOutline } from '../Icon';
 const StyledStory = styled('div')`
     padding: 2rem;
     color: text.body;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 `;
 
 storiesOf('Components/Alert', module)

@@ -5,13 +5,10 @@ exports[`Component: Typography match its snapshot 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: inherit;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
 }
 
 .c0 small {
@@ -30,14 +27,11 @@ exports[`Component: Typography should accept a custom display 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: inherit;
   text-align: inherit;
+  color: inherit;
   display: block;
-  text-transform: none;
 }
 
 .c0 small {
@@ -57,13 +51,10 @@ exports[`Component: Typography should accept a custom lineHeight 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: inherit;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   line-height: 3rem;
 }
 
@@ -83,13 +74,10 @@ exports[`Component: Typography should accept a custom size 1`] = `
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: inherit;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   font-size: 2rem;
 }
 

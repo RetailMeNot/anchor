@@ -2,7 +2,6 @@
 import * as React from 'react';
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 const reset = css`
     margin: 0;
@@ -11,7 +10,7 @@ const reset = css`
 
 const StyledFooterSectionElement = styled('section')`
     width: 6.875rem;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     font-size: 0.75rem;
 
     h4 {

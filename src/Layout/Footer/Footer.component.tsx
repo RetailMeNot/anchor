@@ -9,7 +9,7 @@ import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
 const StyledFooterElement = styled('footer')`
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     font-size: 0.75rem;
     background-color: neutrals.white.base;
     border-bottom: solid 1rem ${th.color('primary.base')};

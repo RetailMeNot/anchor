@@ -48,7 +48,7 @@ interface StyledDropDownProps extends DropDownProps {
 
 const StyledDropDown = styled('div')<StyledDropDownProps>`
     box-sizing: border-box;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     position: relative;
     cursor: pointer;
     display: inline-flex;

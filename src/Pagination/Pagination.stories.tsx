@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react';
 import { boolean, number, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // ANCHOR
 import * as Icon from '../Icon';
 import { RootTheme } from '../../src/theme';
@@ -15,7 +14,7 @@ const StyledStory = styled('div')`
     width: 95%;
     padding: 0.5rem;
     color: text.body;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 `;
 
 const ResultsContainer = styled('div')`

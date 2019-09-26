@@ -54,7 +54,7 @@ import { InlineCodeStyle } from '../../Layout/Page/Page.component';
 
 const Table = styled('table')`
     width: 100%;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     margin: 1rem 0;
 
     th {
