@@ -14,7 +14,7 @@ exports[`Component: SidebarLayout should be defined. 1`] = `
 }
 
 <section
-  className="anchor-sidebar-layout c0"
+  className="c0 anchor-sidebar-layout"
 >
   <div
     className="c1"

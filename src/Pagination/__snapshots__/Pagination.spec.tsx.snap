@@ -165,10 +165,10 @@ exports[`Component: Pagination should be defined. 1`] = `
 }
 
 <div
-  className="anchor-pagination c0"
+  className="c0 anchor-pagination"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     disabled={true}
     onClick={[Function]}
   >
@@ -176,7 +176,7 @@ exports[`Component: Pagination should be defined. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-left anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -194,7 +194,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     </span>
   </button>
   <button
-    className="anchor-button active c1 c5"
+    className="c1 c5 anchor-button active"
     onClick={[Function]}
   >
     <div
@@ -203,7 +203,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     1
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -212,7 +212,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     2
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -221,7 +221,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     3
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -230,7 +230,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     4
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -239,7 +239,7 @@ exports[`Component: Pagination should be defined. 1`] = `
     5
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     disabled={false}
     onClick={[Function]}
   >
@@ -247,7 +247,7 @@ exports[`Component: Pagination should be defined. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-right anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -267,11 +267,11 @@ exports[`Component: Pagination should be defined. 1`] = `
 </div>
 `;
 
-exports[`Component: Pagination should behave properly when uncontrolled. 1`] = `"<div class=\\"anchor-pagination sc-bEjcJn dRaKBp\\"><button class=\\"anchor-button sc-emmjRN Zxont\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-left anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"anchor-button active sc-emmjRN juCONG\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon ellipses anchor-button-prefix sc-CtfFt cAHrQG\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-right anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
+exports[`Component: Pagination should behave properly when uncontrolled. 1`] = `"<div class=\\"sc-bEjcJn dRaKBp anchor-pagination\\"><button class=\\"sc-emmjRN Zxont anchor-button\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN juCONG anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt cAHrQG anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
 
-exports[`Component: Pagination should behave properly when uncontrolled. 2`] = `"<div class=\\"anchor-pagination sc-bEjcJn dRaKBp\\"><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-left anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"anchor-button active sc-emmjRN juCONG\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon ellipses anchor-button-prefix sc-CtfFt cAHrQG\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-right anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
+exports[`Component: Pagination should behave properly when uncontrolled. 2`] = `"<div class=\\"sc-bEjcJn dRaKBp anchor-pagination\\"><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN juCONG anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt cAHrQG anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
 
-exports[`Component: Pagination should behave properly when uncontrolled. 3`] = `"<div class=\\"anchor-pagination sc-bEjcJn dRaKBp\\"><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-left anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon ellipses anchor-button-prefix sc-CtfFt cAHrQG\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>16</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>17</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>18</button><button class=\\"anchor-button sc-emmjRN gRSoVn\\"><div class=\\"sc-eerKOB gUivrk\\"></div>19</button><button class=\\"anchor-button active sc-emmjRN juCONG\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"anchor-button sc-emmjRN Zxont\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"anchor-icon chevron-right anchor-button-prefix sc-CtfFt fauNcJ\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
+exports[`Component: Pagination should behave properly when uncontrolled. 3`] = `"<div class=\\"sc-bEjcJn dRaKBp anchor-pagination\\"><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt cAHrQG anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>16</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>17</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>18</button><button class=\\"sc-emmjRN gRSoVn anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>19</button><button class=\\"sc-emmjRN juCONG anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN Zxont anchor-button\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt fauNcJ anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
 
 exports[`Component: Pagination should render on the last page. 1`] = `
 .c3 {
@@ -445,10 +445,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
 }
 
 <div
-  className="anchor-pagination c0"
+  className="c0 anchor-pagination"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     disabled={false}
     onClick={[Function]}
   >
@@ -456,7 +456,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-left anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -474,7 +474,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     </span>
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -483,13 +483,13 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     1
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
   >
     <div
       className="c3"
     />
     <span
-      className="anchor-icon ellipses anchor-button-prefix c5"
+      className="c5 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -521,7 +521,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     </span>
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -530,7 +530,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     16
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -539,7 +539,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     17
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -548,7 +548,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     18
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -557,7 +557,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     19
   </button>
   <button
-    className="anchor-button active c1 c6"
+    className="c1 c6 anchor-button active"
     onClick={[Function]}
   >
     <div
@@ -566,7 +566,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     20
   </button>
   <button
-    className="anchor-button c1 c7"
+    className="c1 c7 anchor-button"
     disabled={true}
     onClick={[Function]}
   >
@@ -574,7 +574,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-right anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -731,10 +731,10 @@ exports[`Component: Pagination should render with current page in the middle. 1`
 }
 
 <div
-  className="anchor-pagination c0"
+  className="c0 anchor-pagination"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     disabled={false}
     onClick={[Function]}
   >
@@ -742,7 +742,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
       className="c3"
     />
     <span
-      className="anchor-icon chevron-left anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -760,7 +760,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -769,13 +769,13 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     1
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
   >
     <div
       className="c3"
     />
     <span
-      className="anchor-icon ellipses anchor-button-prefix c5"
+      className="c5 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -807,7 +807,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -816,7 +816,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     9
   </button>
   <button
-    className="anchor-button active c1 c6"
+    className="c1 c6 anchor-button active"
     onClick={[Function]}
   >
     <div
@@ -825,7 +825,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     10
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -834,13 +834,13 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     11
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
   >
     <div
       className="c3"
     />
     <span
-      className="anchor-icon ellipses anchor-button-prefix c5"
+      className="c5 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -872,7 +872,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -881,7 +881,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     20
   </button>
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     disabled={false}
     onClick={[Function]}
   >
@@ -889,7 +889,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
       className="c3"
     />
     <span
-      className="anchor-icon chevron-right anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -1081,10 +1081,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
 }
 
 <div
-  className="anchor-pagination c0"
+  className="c0 anchor-pagination"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
     disabled={true}
     onClick={[Function]}
   >
@@ -1092,7 +1092,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-left anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -1110,7 +1110,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     </span>
   </button>
   <button
-    className="anchor-button active c1 c5"
+    className="c1 c5 anchor-button active"
     onClick={[Function]}
   >
     <div
@@ -1119,7 +1119,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     1
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -1128,7 +1128,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     2
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -1137,7 +1137,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     3
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -1146,7 +1146,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     4
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -1155,13 +1155,13 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     5
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
   >
     <div
       className="c3"
     />
     <span
-      className="anchor-icon ellipses anchor-button-prefix c7"
+      className="c7 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -1193,7 +1193,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     </span>
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     onClick={[Function]}
   >
     <div
@@ -1202,7 +1202,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     100
   </button>
   <button
-    className="anchor-button c1 c6"
+    className="c1 c6 anchor-button"
     disabled={false}
     onClick={[Function]}
   >
@@ -1210,7 +1210,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
       className="c3"
     />
     <span
-      className="anchor-icon chevron-right anchor-button-prefix c4"
+      className="c4 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg

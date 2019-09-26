@@ -187,31 +187,31 @@ exports[`Component: Menu should match its snapshot and render items. 1`] = `
 
 <div>
   <nav
-    className="anchor-menu c0"
+    className="c0 anchor-menu"
     size="md"
   >
     <a
-      className="anchor-menu-item c1"
+      className="c1 anchor-menu-item"
     >
       Test Item
     </a>
   </nav>
   <nav
-    className="anchor-menu c2"
+    className="c2 anchor-menu"
     size="sm"
   >
     <a
-      className="anchor-menu-item c1"
+      className="c1 anchor-menu-item"
     >
       Test Item
     </a>
   </nav>
   <nav
-    className="anchor-menu c3"
+    className="c3 anchor-menu"
     size="lg"
   >
     <a
-      className="anchor-menu-item c1"
+      className="c1 anchor-menu-item"
     >
       Test Item
     </a>

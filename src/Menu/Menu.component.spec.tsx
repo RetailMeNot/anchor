@@ -18,7 +18,7 @@ describe('Component: Menu', () => {
                 <Menu size="lg">
                     <Item path="/">Test Item</Item>
                 </Menu>
-                </div>
+            </div>
         );
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();

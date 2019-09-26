@@ -35,10 +35,10 @@ exports[`Component: Title should be defined 1`] = `
 }
 
 <div
-  className="anchor-list-title c0"
+  className="c0 anchor-list-title"
 >
   <span
-    className="anchor-typography c1"
+    className="c1 anchor-typography"
     color="ash"
     scale={12}
   >

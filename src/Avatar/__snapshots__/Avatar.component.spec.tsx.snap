@@ -61,10 +61,10 @@ exports[`Component: Avatar should match its snapshot. 1`] = `
 }
 
 <div
-  className="anchor-avatar c0"
+  className="c0 anchor-avatar"
 >
   <div
-    className="anchor-avatar-container c1"
+    className="c1 anchor-avatar-container"
   >
     <svg
       height="36"
