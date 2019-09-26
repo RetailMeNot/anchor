@@ -1,0 +1,132 @@
+import { Link, withPrefix } from 'gatsby';
+import { ApiTable, ComponentInfo } from '../../components/Utils';
+
+# Skeleton
+
+<ComponentInfo title="Skeleton" mode="description" />
+
+If the Skeleton's `loading` prop is set to `false` it  renders its children, but when set to `true`
+it hides all of its children and shows the skeleton elements.
+
+---
+
+### Text
+
+If the `Skeleton` component's child is a string (or `textLength` is defined) then it displays
+long gray bars in place of the text. This is to simulate a line of impending text or a paragraph.
+The longer the child text (or `textLength`), the longer the skeleton text.
+
+Skeleton text observes font styles (`font-size`, `line-height`, etc) because it is implemented via
+text characters. This means it's a good idea to give it the same styles that you would give to the
+text it's meant to simulate.
+
+In practice that means you'll probably want to use it with the `Skeleton` inside your typographical
+element like so:
+
+*NOTE: Trying removing the `textLength` prop on the `Skeleton` in the example and see how it
+will more accurately cover the hidden text.*
+
+```tsx live
+<Component initialState={{ loading: true }}>
+    {({state, setState}) =>
+        <section>
+            <div style={{paddingBottom: '1rem'}}>
+                <Typography style={{whiteSpace: 'normal'}}>
+                    <Skeleton loading={state.loading} textLength={250}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus
+                        vehicula libero. Nam efficitur eu tellus et condimentum. Donec egestas
+                        venenatis malesuada. Vestibulum sit amet turpis et lacus tempor finibus sit
+                        amet eget lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nulla tincidunt, diam quis vulputate finibus, eros turpis mollis odio,
+                        posuere bibendum lectus nulla ultricies tellus. Mauris tincidunt tellus at
+                        ligula hendrerit posuere.
+                    </Skeleton>
+                </Typography>
+            </div>
+
+            <Button onClick={() => setState({loading: !state.loading})}>
+                Toggle Skeleton
+            </Button>
+        </section>
+    }
+</Component>
+```
+
+Text Skeletons inherit their `display` property because in some situations it is needed to format
+the text properly (e.g. `h1`'s are `block`s, and spans are `inline` and this makes a difference to
+text's `line-height`). If the parent isn't a typographical element, you may need to define the
+`display` prop manually to get it to look just the way you want.
+
+---
+
+### Wrapping
+
+The second way to use the `Skeleton` is by wrapping an element that you want to cover. For instance,
+if you had a fixed size `img` that was still loading, you could wrap it with a Skeleton and it'd
+simply take the shape of your image and hide it.
+
+```tsx live
+<Component initialState={{ loading: true }}>
+    {({state, setState}) =>
+        <section>
+            <div style={{paddingBottom: '1rem'}}>
+                <Skeleton loading={state.loading}>
+                    <img src={withPrefix('/images/anchor-logo.svg')} />
+                </Skeleton>
+            </div>
+
+            <Button onClick={() => setState({loading: !state.loading})}>
+                Toggle Skeleton
+            </Button>
+        </section>
+    }
+</Component>
+```
+
+If the wrapped child has a `border-radius`, you'll probably want to give the the `Skeleton` the same
+`border-radius` (especially if the child is circular, like
+an <Link to="/components/avatar">`Avatar`</Link>).
+
+The `Skeleton` does not know the `display` setting of the child it's wrapping, so you may need to
+set it manually (i.e. if the child is a `block` you'll probably want to set the `Skeleton` to a
+`block` as well, so that it fits in the DOM the same way).
+
+---
+
+### Custom Shape
+
+You might just want to give the Skeleton specific dimensions to make it take the exact shape you desire.
+
+```tsx live
+<section style={{whiteSpace: 'normal'}}>
+    <Skeleton width="100%" height="0.5rem" borderRadius="circular" marginBottom="1rem" />
+    <Skeleton width="100%" height="0.5rem" borderRadius="circular" marginBottom="1rem" />
+    <Skeleton width="80%" height="0.5rem" borderRadius="circular" marginBottom="1rem" />
+</section>
+```
+
+<br />
+
+---
+
+## API
+
+<ApiTable data={[
+    {
+        property: 'loading',
+        description: `It is assumed that the <pre>Skeleton</pre> is being used as content is being
+            loaded. As such, if <pre>loading</pre> is set to <pre>true</pre> then the
+            <pre>Skeleton</pre> is visible. When <pre>loading</pre> is set to <pre>false</pre> the
+            <pre>Skeleton</pre> is hidden and its children are revealed.`,
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'textLength',
+        description: `The amount of text to replace with Skeleton blocks. This is useful for when
+            you don't know how long the text will be, or if you don't have dummy-text ala Lorem
+            Ipsum. Note that settings this prop will give it precedence over the content it
+            contains.`,
+        type: 'number',
+    }
+]} />

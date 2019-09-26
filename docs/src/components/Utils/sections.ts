@@ -138,6 +138,13 @@ export const sections: Sections = [
                 presenting its own content area for the user to interact with. `,
             },
             {
+                title: 'Skeleton',
+                path: '/components/skeleton/',
+                description: `The Skeleton component is intended to show placeholder shapes while a
+                    component loads so that the user knows about what to expect and understands that
+                    the content is loading.`,
+            },
+            {
                 title: 'Tooltip',
                 path: '/components/tooltip/',
                 description: `The Tooltip component is used to display a hint to a user.`,

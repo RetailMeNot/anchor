@@ -24,6 +24,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import { withPrefix } from 'gatsby';
 import styled, { css } from '@xstyled/styled-components';
 import {
     LiveEditor,
@@ -153,6 +154,7 @@ interface CodePreviewProps {
 }
 
 const scope = {
+    withPrefix,
     ...Anchor,
     Component,
     // OVERRIDES
