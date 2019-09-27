@@ -7,7 +7,7 @@ import {
 
 # Input
 
-<ComponentInfo title="Input" mode="description" />
+<ComponentInfo title="Input" />
 
 ```tsx live
     <Input
@@ -129,7 +129,7 @@ The below example shows a way in which you can attach your own methods to these 
     {
         property: 'size',
         description: `The size of the <pre>Input</pre> field.`,
-        type: <FormatTypes types={['sm', 'md', 'lg']} />,
+        type: <FormatTypes data={['sm', 'md', 'lg']} />,
         default: 'md',
     },
     {
@@ -146,12 +146,12 @@ The below example shows a way in which you can attach your own methods to these 
     {
         property: 'type',
         description: `What <pre>type</pre> the <pre>Input</pre> component should render as.`,
-        type: <FormatTypes types={['email', 'number', 'tel', 'text']} />,
+        type: <FormatTypes data={['email', 'number', 'tel', 'text']} />,
         default: 'text',
     },
     {
         property: 'value',
         description: `The <pre>value</pre> of the rendered <pre>Input</pre>.`,
-        type: <FormatTypes types={['string', 'number', 'any']} noInterpret />,
+        type: <FormatTypes data={['string', 'number', 'any']} noInterpret />,
     },
 ]} />

@@ -10,6 +10,7 @@ declare module '@reach/component-component' {
 declare module '@retailmenot/anchor' {
   const AutoComplete: any;
   const Badge: any;
+  const Button: any;
   const Cart: any;
   const Check: any;
   const Col: any;
@@ -20,6 +21,7 @@ declare module '@retailmenot/anchor' {
   const DropDown: any;
   const Input: any;
   const ListItem: any;
+  const Modal: any;
   const ModalProvider: any;
   const RootTheme: any;
   const Row: any;

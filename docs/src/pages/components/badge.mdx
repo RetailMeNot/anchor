@@ -9,7 +9,7 @@ import {
 
 # Badge
 
-<ComponentInfo title="Badge" mode="description" />
+<ComponentInfo title="Badge" />
 
 ## Usage
 
@@ -145,19 +145,19 @@ export const BadgeWithParentExample = () => {
     {
         property: 'backgroundColor',
         description: <ColorBlurb background label="Badge" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'error',
     },
     {
         property: 'borderColor',
         description: 'The color of the border of the <pre>Badge</pre>.',
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'error',
     },
     {
         property: 'borderColorHover',
         description: 'The color of the border of the <pre>Badge</pre> on hover.',
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'error',
     },
     {
@@ -206,7 +206,7 @@ export const BadgeWithParentExample = () => {
     {
         property: 'size',
         description: 'The size of the <pre>Badge</pre>.',
-        type: <FormatTypes types={['dot', 'small', 'large']} />,
+        type: <FormatTypes data={['dot', 'small', 'large']} />,
         default: 'dot',
     },
     {
@@ -218,7 +218,7 @@ export const BadgeWithParentExample = () => {
     {
         property: 'textColor',
         description: <ColorBlurb defaultTheme label="count" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
     },
 ]} />

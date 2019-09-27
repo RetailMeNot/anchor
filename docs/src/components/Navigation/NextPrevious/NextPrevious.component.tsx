@@ -44,11 +44,11 @@ class NextPrevious extends React.PureComponent<NextPreviousProps> {
         super(props);
         // Received from the AddLocation HOC
         const { location } = props;
-        // Finds the section that the current page is in
+        // Uses the pattern property of a section to match what page the user is currently at.
         const [currentSection] = sections.filter(section => {
-            return location.pathname.includes(section.pattern);
+            const regex = new RegExp(`^${section.pattern}`);
+            return regex.test(location.pathname);
         });
-
         if (currentSection) {
             const { links }: LinkProperties = currentSection;
             // Gets the index of the this page's link entry in the section

@@ -35,17 +35,17 @@ const StyledFormatTypes = styled('div')`
 `;
 
 interface FormatTypesProps {
-    types: [];
+    data: [];
     noInterpret?: boolean;
 }
 
 export const FormatTypes = ({
-    types,
+    data,
     noInterpret,
 }: FormatTypesProps): React.ReactElement<any> => (
     <StyledFormatTypes>
-        {types.length &&
-            types.map(type => {
+        {data.length &&
+            data.map(type => {
                 if (noInterpret) {
                     return (
                         <span key={type} className="type">

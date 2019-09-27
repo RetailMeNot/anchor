@@ -9,7 +9,7 @@ import {
 
 # Menu
 
-<ComponentInfo title="Menu" mode="description" />
+<ComponentInfo title="Menu" />
 
 `MenuItem` is a wrapper for the `a` tag, so any valid attribute for that element will be applied.
 
@@ -36,27 +36,27 @@ import {
     {
         property: 'background',
         description: <ColorBlurb background gradient label="Menu" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">primary.base</Link>,
     },
     {
         property: 'color',
         description: <ColorBlurb label="Menu" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
     },
     {
         property: 'justify',
         description: `Using CSS flexbox, aligns the menu items either to the left
             (<pre>flex-start</pre>) or right (<pre>flex-end</pre>).`,
-        type: <FormatTypes types={['flex-start', 'flex-end']} />,
+        type: <FormatTypes data={['flex-start', 'flex-end']} />,
         default: 'flex-start',
     },
     {
         property: 'size',
         description: `Alters the padding around the menu items, as well as their font weight and
             size.`,
-        type: <FormatTypes types={['small', 'large']} />,
+        type: <FormatTypes data={['small', 'large']} />,
         default: 'large',
     },
 ]} />

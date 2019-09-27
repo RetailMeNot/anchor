@@ -7,7 +7,7 @@ import {
 
 # Button
 
-<ComponentInfo title="Button" mode="description" />
+<ComponentInfo title="Button" />
 
 *NOTE! The example in the live code editor below is using the default `variant`, `filled`.
 Editing this field can cause the live code editor to crash, so examples of those variants are provided
@@ -220,7 +220,7 @@ below. Also included is an example of an icon button*
     {
         property: 'size',
         description: `The different sizes of the <pre>Button</pre>.`,
-        type: <FormatTypes types={['lg', 'md', 'sm', 'xs']} />,
+        type: <FormatTypes data={['lg', 'md', 'sm', 'xs']} />,
         default: 'md',
     },
     {
@@ -241,7 +241,7 @@ below. Also included is an example of an icon button*
             based on the selected <pre>colorTheme</pre>. <pre>filled</pre> will fill in the
             background, <pre>outline</pre> will only outline the button, and <pre>minimal</pre> will
             neither have a background or outline.`,
-        type: <FormatTypes types={[ 'filled', 'outline', 'minimal']} />,
+        type: <FormatTypes data={[ 'filled', 'outline', 'minimal']} />,
         default: 'filled',
     },
 ]} />

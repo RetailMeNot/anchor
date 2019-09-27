@@ -4,9 +4,13 @@
     place.
 */
 
+// REACT
 import * as React from 'react';
-import { Typography } from '@retailmenot/anchor';
+// VENDOR
+import styled from '@xstyled/styled-components';
 import { Link } from 'gatsby';
+// ANCHOR & COMPONENTS
+import { Typography } from '@retailmenot/anchor';
 
 interface ColorBlurbProps {
     /* If the text is referring to background or font color */
@@ -19,13 +23,27 @@ interface ColorBlurbProps {
     label: string;
 }
 
+// TODO: Tried to import the InlineCodeStyle module from Page so it wouldn't be necessary to
+// duplicate this css but getting 'undefined' from it which has me stumped. Need to fix that.
+const StyledTypography = styled(Typography)`
+    pre {
+        display: inline;
+        background-color: rgba(27, 31, 35, 0.05);
+        font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
+            monospace;
+        border-radius: 0.1875rem;
+        padding: 0.2em 0.4em;
+        font-size: 0.85rem;
+    }
+`;
+
 export const ColorBlurb = ({
     background,
     gradient,
     defaultTheme,
     label,
 }: ColorBlurbProps): React.ReactElement<any> => (
-    <Typography>
+    <StyledTypography>
         Sets the {background ? 'background' : 'font'} color of the{' '}
         <pre>{label}</pre>.
         {defaultTheme ? (
@@ -44,5 +62,5 @@ export const ColorBlurb = ({
                 {background && gradient && ', including gradients'}.
             </Typography>
         )}
-    </Typography>
+    </StyledTypography>
 );

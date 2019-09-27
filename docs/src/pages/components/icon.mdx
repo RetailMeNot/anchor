@@ -8,7 +8,7 @@ import {
 
 # Icon
 
-<ComponentInfo title="Icon" mode="description" />
+<ComponentInfo title="Icon" />
 
 #### Available Icons
 
@@ -44,7 +44,7 @@ There are currently <IconCount /> icons available. Note that you can try any of 
         description: `The color of the icon. Accepts any valid CSS color proprty. It's default value,
             <pre>currentColor</pre>, is an SVG property that will allow the icon to inherit its
             parent color.`,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'currentColor',
     },
     {
@@ -52,7 +52,7 @@ There are currently <IconCount /> icons available. Note that you can try any of 
         description: `The scale/size of the icon. Enumerated values are in <pre>px</pre> and are as
             follows: <pre>xs: 8</pre>, <pre>sm: 14</pre>, <pre>md: 16</pre>, <pre>lg: 24</pre>,
             <pre>xl: 32</pre>, <pre>xxl: 48</pre>.`,
-        type: <FormatTypes types={['xs', 'sm', 'md', 'lg', 'xl', 'xxl']} />,
+        type: <FormatTypes data={['xs', 'sm', 'md', 'lg', 'xl', 'xxl']} />,
         default: 'md',
     },
 ]} />
