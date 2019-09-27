@@ -1,0 +1,45 @@
+import { Link } from 'gatsby';
+import { ApiTable, FormatTypes } from '../../../components/Utils';
+
+# FormatTypes
+
+Used to format the listing of all the different possible options for Types in the api sections
+using flexbox and different colors to make the various options stand apart from each other. This
+component is intended only to be used within <Link to="/contribute/components/apitable">`ApiTable`</Link>, however it is not dependent on it for
+anything other than additional styling.
+
+Requires an array of values to iterate over. It's smart enough to render single quotes around
+strings and no quotes around numbers. If the `noInterpret` prop is passed, it won't make any
+assumptions and will output exactly what is in the array without escaping content using
+<a href="https://www.npmjs.com/package/html-react-parser" target="_blank">`html-react-parser`</a>.
+
+*(Based on https://codepen.io/impirator/pen/gVzrxW)*
+
+###### Basic Usage
+```tsx live hideTitle
+    <FormatTypes data={['all', 'description', 10, 20]} />
+```
+
+###### Using noInterpret
+```tsx live hideTitle
+    <FormatTypes data={['string', 'number']} noInterpret />
+```
+
+## API
+
+---
+
+<ApiTable data={[
+    {
+        property: 'data',
+        description: 'The values to be displayed as types',
+        type: '[string | number]',
+    },
+    {
+        property: 'noInterpret',
+        description: `Whether or not the values should be interpreted, or if they should be output
+            exactly as entered.`,
+        type: 'boolean',
+        default: 'false',
+    }
+]} />

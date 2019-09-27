@@ -7,7 +7,7 @@ import {
 
 # List
 
-<ComponentInfo title="List" mode="description" />
+<ComponentInfo title="List" />
 
 This list can then be utilized by other components,
 such as <Link to="/components/card/">`Card`</Link> or <Link to="/components/dropdown/">`DropDown`</Link>.
@@ -226,7 +226,7 @@ const myItems = [
     {
         property: 'size',
         description: `The size of the <pre>ListItem</pre>.`,
-        type: <FormatTypes types={['sm', 'lg']} noInterpret />,
+        type: <FormatTypes data={['sm', 'lg']} noInterpret />,
     },
     {
         property: 'suffix',

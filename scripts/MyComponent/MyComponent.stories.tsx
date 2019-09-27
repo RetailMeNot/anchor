@@ -15,7 +15,7 @@ const StyledStory = styled('div')`
     font-family: ${th('typography.fontFamily')};
 `;
 
-storiesOf('Components/MyComponent', module).add('Default', () => (
+storiesOf('Components/MyComponentPath', module).add('Default', () => (
     <ThemeProvider theme={RootTheme}>
         <StyledStory>
             <MyComponent />

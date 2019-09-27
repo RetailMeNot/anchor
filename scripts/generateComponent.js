@@ -33,6 +33,11 @@ try {
     // replace text in files
     replace.sync({
         files,
+        from: /MyComponentPath/g,
+        to: componentPath,
+    });
+    replace.sync({
+        files,
         from: /MyComponent/g,
         to: componentName,
     });

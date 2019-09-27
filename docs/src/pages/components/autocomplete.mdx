@@ -8,7 +8,7 @@ import {
 
 # AutoComplete
 
-<ComponentInfo title="AutoComplete" mode="description" />
+<ComponentInfo title="AutoComplete" />
 
 The `AutoComplete` component encapsulates the <Link to="/components/input/">`Input`</Link> and
 provides a results list as the user enters a search query. By default, the search results component
@@ -160,7 +160,7 @@ props.
     {
         property: 'background',
         description: <ColorBlurb label="AutoComplete" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'white',
     },
     {
@@ -172,7 +172,7 @@ props.
     {
         property: 'color',
         description: <ColorBlurb defaultTheme label="AutoComplete" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme">charcoal.light</Link>,
     },
     {
@@ -183,7 +183,7 @@ props.
             ' component api.'
         ],
         type: <FormatTypes
-                types={['Array&lt;string&gt;', 'Array&lt;&#123; name: string; &#125;&gt;']}
+                data={['Array&lt;string&gt;', 'Array&lt;&#123; name: string; &#125;&gt;']}
                 noInterpret
                 />,
     },
@@ -242,7 +242,7 @@ props.
     {
         property: 'size',
         description: `The size of the <pre>AutoComplete</pre>.`,
-        type: <FormatTypes types={['sm', 'md', 'lg']} />,
+        type: <FormatTypes data={['sm', 'md', 'lg']} />,
     },
     {
         property: 'suffix',

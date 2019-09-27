@@ -8,7 +8,7 @@ import {
 
 # Card
 
-<ComponentInfo title="Card" mode="description" />
+<ComponentInfo title="Card" />
 
 <br />
 
@@ -125,7 +125,7 @@ Now that we've created these separate components, lets organize them into a `Car
     {
         property: 'gutter',
         description: `The padding of the <pre>Card</pre>'s content.`,
-        type: <FormatTypes types={['none', 'small', 'medium', 'large']} />,
+        type: <FormatTypes data={['none', 'small', 'medium', 'large']} />,
         default: 'medium',
     },
 ]} />

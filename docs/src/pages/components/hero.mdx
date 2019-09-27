@@ -8,7 +8,7 @@ import {
 
 # Hero
 
-<ComponentInfo title="Hero" mode="description" />
+<ComponentInfo title="Hero" />
 
 Aside from the `Hero` component itself, it has two additional components that can be deconstructed
 from it.
@@ -54,19 +54,19 @@ from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> co
     {
         property: 'align',
         description: `The alignment of content within the <pre>Hero</pre>.`,
-        type: <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />,
+        type: <FormatTypes data={['center', 'left', 'right', 'inherit', 'justify']} />,
         default: 'center',
     },
     {
         property: 'background',
         description: <ColorBlurb background gradient label="Hero" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'transparent',
     },
     {
         property: 'color',
         description: <ColorBlurb defaultTheme label="Hero" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
     },
     {

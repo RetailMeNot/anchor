@@ -10,7 +10,7 @@ import {
 
 # Modal
 
-<ComponentInfo title="Modal" mode="description" />
+<ComponentInfo title="Modal" />
 
 Here is an example of the modal:
 
@@ -200,13 +200,13 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     {
         property: 'background',
         description: <ColorBlurb background gradient defaultTheme label="Modal" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
     },
     {
         property: 'color',
         description: <ColorBlurb defaultTheme label="Modal" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
     },
     {
         property: 'height',
@@ -233,7 +233,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     {
         property: 'size',
         description: `Changes the size of the modal.`,
-        type: <FormatTypes types={['lg', 'sm']} />,
+        type: <FormatTypes data={['lg', 'sm']} />,
         default: 'lg',
     },
     {
@@ -252,13 +252,13 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     {
         property: 'background',
         description: <ColorBlurb defaultTheme background label="Header" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
     },
     {
         property: 'color',
         description: <ColorBlurb defaultTheme label="header" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">charcoal.light</Link>,
     },
     {
@@ -280,7 +280,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     {
         property: 'background',
         description: <ColorBlurb background label="Footer" />,
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'transparent',
     },
     {
@@ -299,6 +299,6 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     {
         property: 'align',
         description: `Aligns the close button to the left or right corner of its parent element.`,
-        type: <FormatTypes types={['right', 'left']} />,
+        type: <FormatTypes data={['right', 'left']} />,
     },
 ]} />

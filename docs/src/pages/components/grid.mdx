@@ -6,7 +6,7 @@ import {
 
 # Grid
 
-<ComponentInfo title="Grid" mode="description" />
+<ComponentInfo title="Grid" />
 
 Grid can be broken out into 2 groups of components, those for **Layout**, and those for
 **Breakpoints**.
@@ -303,27 +303,27 @@ documentation for advanced usage of the `Col`, `Container`, `Hidden`, `Row`, `Sc
         {
             property: 'xs',
             description: 'Sets the number of columns on screen for the <em>xs</em> breakpoint.',
-            type: <FormatTypes types={['number', 'string']} noInterpret />,
+            type: <FormatTypes data={['number', 'string']} noInterpret />,
         },
         {
             property: 'sm',
             description: 'Sets the number of columns on screen for the <em>sm</em> breakpoint.',
-            type: <FormatTypes types={['number', 'string']} noInterpret />,
+            type: <FormatTypes data={['number', 'string']} noInterpret />,
         },
         {
             property: 'md',
             description: 'Sets the number of columns on screen for the <em>md</em> breakpoint.',
-            type: <FormatTypes types={['number', 'string']} noInterpret />,
+            type: <FormatTypes data={['number', 'string']} noInterpret />,
         },
         {
             property: 'lg',
             description: 'Sets the number of columns on screen for the <em>lg</em> breakpoint.',
-            type: <FormatTypes types={['number', 'string']} noInterpret />,
+            type: <FormatTypes data={['number', 'string']} noInterpret />,
         },
         {
             property: 'xl',
             description: 'Sets the number of columns on screen for the <em>xl</em> breakpoint.',
-            type: <FormatTypes types={['number', 'string']} noInterpret />,
+            type: <FormatTypes data={['number', 'string']} noInterpret />,
         },
         {
             property: 'debug',
@@ -340,12 +340,12 @@ documentation for advanced usage of the `Col`, `Container`, `Hidden`, `Row`, `Sc
         {
             property: 'offset',
             description: `Sets the number of the offset columns.`,
-            type: <FormatTypes types={['number', 'object']} noInterpret />,
+            type: <FormatTypes data={['number', 'object']} noInterpret />,
         },
         {
             property: 'reverse',
             description: `Reverses the direction of the columns.`,
-            type: <FormatTypes types={['number', '[]']} noInterpret />,
+            type: <FormatTypes data={['number', '[]']} noInterpret />,
         },
     ]}
 />
@@ -412,7 +412,7 @@ documentation for advanced usage of the `Col`, `Container`, `Hidden`, `Row`, `Sc
     {
         property: 'reverse',
         description: `Reverses the direction of the row.`,
-        type: <FormatTypes types={['number', '[]']} noInterpret />,
+        type: <FormatTypes data={['number', '[]']} noInterpret />,
     },
     {
         property: 'debug',
@@ -499,49 +499,49 @@ documentation for advanced usage of the `CustomAdaptor`.
         property: 'minHeight',
         description: `The minimum document height at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'maxHeight',
         description: `The maximum document height at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'minDeviceHeight',
         description: `The minimum device height at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'maxDeviceHeight',
         description: `The maximum device height at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'minWidth',
         description: `The minimum document width at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'maxWidth',
         description: `The maximum document width at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'minDeviceWidth',
         description: `The minimum device width at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'maxDeviceWidth',
         description: `The maximum device width at which the children of the
             <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes types={['number', 'string']} noInterpret />,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
     {
         property: 'onChange',

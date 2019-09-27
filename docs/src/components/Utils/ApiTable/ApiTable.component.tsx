@@ -40,9 +40,6 @@
             type: 'string',
         },
     ]} />
-
-    TODO: Eventually remove the semantic table option from the site and the styles associated with
-    it.
 */
 
 // REACT
@@ -53,7 +50,7 @@ import { th } from '@xstyled/system';
 import parse from 'html-react-parser';
 // ANCHOR & COMPONENTS
 import { colors } from '@retailmenot/anchor';
-import { InlineCodeStyle } from '../Layout/Page/Page.component';
+import { InlineCodeStyle } from '../../Layout/Page/Page.component';
 
 const Table = styled('table')`
     width: 100%;
@@ -127,12 +124,7 @@ export const ApiTable = ({
     data,
     sort = true,
 }: ApiTableProps): React.ReactElement<any> => {
-    const [sortedData, setData] = React.useState<[]>(data);
-
-    React.useEffect(() => {
-        // Sort the data alphabetically descending by property, unless the sort prop is false
-        setData(sort ? sortedData.sort(sortDataAlphabetically) : sortedData);
-    }, []);
+    const sortedData = sort ? data.sort(sortDataAlphabetically) : data;
 
     return (
         <Table>

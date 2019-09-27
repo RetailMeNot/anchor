@@ -10,7 +10,7 @@ import {
 
 # DropDown
 
-<ComponentInfo title="DropDown" mode="description" />
+<ComponentInfo title="DropDown" />
 
 <br />
 
@@ -167,7 +167,7 @@ together with `DropDown`!
         description: `This positions the overlay based on the diagram provided at the top of this
             document`,
         type: <FormatTypes
-                types={[
+                data={[
                     'topStart',
                     'top',
                     'topEnd',
@@ -206,7 +206,7 @@ together with `DropDown`!
     {
         property: 'trigger',
         description: `What triggers the show/hide of the <pre>DropDown</pre>.`,
-        type: <FormatTypes types={['both', 'click', 'hover']} />,
+        type: <FormatTypes data={['both', 'click', 'hover']} />,
         default: 'both',
     },
 ]} />

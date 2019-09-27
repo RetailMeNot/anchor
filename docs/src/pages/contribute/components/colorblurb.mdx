@@ -1,0 +1,64 @@
+import { Link } from 'gatsby';
+import { ApiTable, ColorBlurb } from '../../../components/Utils';
+
+
+# ColorBlurb
+
+Many of the components have props for colors, and most of them have very similar descriptions
+in the api table. This component tries to consolidate variations of those descriptions in one
+place.
+
+###### ColorBlurb, Basic
+```tsx live hideTitle
+<ColorBlurb label="Example Component" />
+```
+
+###### ColorBlurb, background color
+```tsx live hideTitle
+<ColorBlurb background label="Example Component" />
+```
+
+###### ColorBlurb, background color & gradients
+```tsx live hideTitle
+<ColorBlurb background gradient label="Example Component" />
+```
+
+###### ColorBlurb, theme colors
+```tsx live hideTitle
+<ColorBlurb defaultTheme gradient label="Example Component" />
+```
+
+## API
+
+<ApiTable sort={true} data={[
+    {
+        property: 'background',
+        description: `Changes the message to be about background color rather than font color, font
+            color being the default. This prop must be present in order for <pre>gradient</pre> to
+            work.`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'gradient',
+        description: `If <pre>background</pre> is also set, updates the message to note that
+            gradients are possible in addition to a background color.`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'defaultTheme',
+        description: [
+            `Notes that the colors used are those from Anchor's `,
+            <Link to="/theme/colors">color</Link>,
+            ` pallete.`],
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'label',
+        description: `The name of the component that the <pre>ColorBlurb</pre> is referencing. This
+            is the only required field, as without it the message doesn't make sense.`,
+        type: 'string',
+    },
+]} />
