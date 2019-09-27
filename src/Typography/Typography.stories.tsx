@@ -109,11 +109,9 @@ storiesOf('Components/Typography', module)
     ))
     .add('Knobus Propus', () => {
         const content = text(
-            'text',
+            'content',
             'The quick brown fox jumps over the lazy dog.'
         );
-        const size = text('size', '');
-        const lineHeight = text('lineHeight', '');
 
         return (
             <ThemeProvider theme={RootTheme}>
@@ -122,10 +120,8 @@ storiesOf('Components/Typography', module)
                         tag={select('tag', Tags, '') || undefined}
                         scale={select('scale', Scales, '') || undefined}
                         color={text('color', '') || undefined}
-                        size={size ? parseFloat(size) : undefined}
-                        lineHeight={
-                            lineHeight ? parseFloat(lineHeight) : undefined
-                        }
+                        size={text('size', '') || undefined}
+                        lineHeight={text('lineHeight', '') || undefined}
                         align={select('align', Alignments, '') || undefined}
                         weight={select('weight', Weights, '') || undefined}
                         transform={

@@ -80,8 +80,8 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     weight?: FontWeights;
     color?: 'inherit' | 'initial' | string;
     scale?: Scale;
-    size?: number;
-    lineHeight?: number;
+    size?: number | string;
+    lineHeight?: number | string;
 }
 
 const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
