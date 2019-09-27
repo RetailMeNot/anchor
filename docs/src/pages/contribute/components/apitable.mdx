@@ -1,0 +1,110 @@
+import { Link } from 'gatsby';
+import {
+    ApiTable,
+    ColorBlurb,
+    FormatTypes
+} from '../../../components/Utils';
+
+# ApiTable
+
+This component is used to render a formatted html `table` with API information for a given
+component.
+
+If a table cell is left empty it will cause a crash in Gatsby, which is why all required fields are
+enforced via typescript. The exception is `default`,` which if left out of an object a '-' will be
+entered into the td that would be rendered.
+
+The passed data is sorted alphabetically by the `property` field, but the sorting can be disabled
+by passing `false` to the `sort` prop.
+
+The description field can accept strings (which can contain html tags interpreted with
+html-react-parser), a React component, or an array with a mix of both. The last option is useful
+in situations where a combination of components and custom text is needed.
+
+###### ApiTable Example Usage
+```jsx hideTitle
+<ApiTable data={[
+    {
+        property: 'propertyName',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName2',
+        description: [
+            `Here is an example of using both strings and `,
+            <Link to="/components">components</Link>,
+            ` together.`
+        ],
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName3',
+        description: [`This is a common use case, using `,
+            <Link to="/contribute/components/formattypes">FormatTypes</Link>,
+            ` for the <pre>type</pre> property, and html tags.`
+        ],
+        type: <FormatTypes data={['string', 'number']} noInterpret />,
+        default: 'false',
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb label="Example Component" />,
+        type: 'string',
+    },
+]} />
+```
+## Result
+
+<ApiTable data={[
+    {
+        property: 'propertyName',
+        description: `Description of property.`,
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName2',
+        description: [
+            `Here is an example of using both strings and `,
+            <Link to="/components">components</Link>,
+            ` together.`
+        ],
+        type: 'string',
+        default: 'false',
+    },
+    {
+        property: 'propertyName3',
+        description: [`This is a common use case, using `,
+            <Link to="/contribute/components/formattypes">FormatTypes</Link>,
+            ` for the <pre>type</pre> property, and html tags.`
+        ],
+        type: <FormatTypes data={['string', 'number']} noInterpret />,
+        default: 'false',
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb label="Example Component" />,
+        type: 'string',
+    },
+]} />
+
+---
+
+## API
+
+<ApiTable data={[
+    {
+        property: 'data',
+        description: 'An array of objects, each representing a row in the table.',
+        type: `[<Object>{ property: string, description: [] | string | React.ReactElement, default?: string | React.ReactElement }]`,
+    },
+    {
+        property: 'sort',
+        description: 'Whether or not the data should be sorted alphabetically by <pre>property</pre>.',
+        type: 'boolean',
+        default: 'true',
+    }
+]} />

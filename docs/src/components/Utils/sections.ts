@@ -190,6 +190,26 @@ export const sections: Sections = [
                 path: '/contribute',
             },
             {
+                title: 'Components',
+                type: 'title',
+            },
+            {
+                title: 'ApiTable',
+                path: '/contribute/components/apitable',
+            },
+            {
+                title: 'ColorBlurb',
+                path: '/contribute/components/colorblurb',
+            },
+            {
+                title: 'ComponentInfo',
+                path: '/contribute/components/componentinfo',
+            },
+            {
+                title: 'FormatTypes',
+                path: '/contribute/components/formattypes',
+            },
+            {
                 title: 'Templates',
                 type: 'title',
             },

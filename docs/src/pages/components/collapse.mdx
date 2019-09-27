@@ -7,7 +7,7 @@ import {
 
 # Collapse
 
-<ComponentInfo title="Collapse" mode="description" />
+<ComponentInfo title="Collapse" />
 
 When using the **Live Code Editor**, you can use any <Link to="/components/icon">Icon</Link> component
 available in **Anchor** for the `openedIcon` and `closedIcon` props.
@@ -100,7 +100,7 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
         property: 'variant',
         description: `Several variants of collapse. <pre>comfortable</pre> has considerable spacing,
             <pre>compact</pre> has much tighter spacing, and <pre>none</pre> removes all styling.`,
-        type: <FormatTypes types={['comfortable', 'compact', 'none']} />,
+        type: <FormatTypes data={['comfortable', 'compact', 'none']} />,
         default: 'comfortable',
     },
 ]} />
@@ -140,7 +140,7 @@ The **`CollapseGroup`** component combines multiple **`Collapse`** components to
         property: 'variant',
         description: `Using this prop will apply the setting to all child <pre>Collapse</pre>
             components. Otherwise its functionality is as noted above for <pre>Collapse</pre>.`,
-        type: <FormatTypes types={['comfortable', 'compact', 'none']} />,
+        type: <FormatTypes data={['comfortable', 'compact', 'none']} />,
     },
 ]} />
 

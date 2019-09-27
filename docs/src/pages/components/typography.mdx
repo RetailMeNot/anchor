@@ -7,7 +7,7 @@ import {
 
 # Typography
 
-<ComponentInfo title="Typography" mode="description" />
+<ComponentInfo title="Typography" />
 
 One of the principal features of this component is the concept of **`scale`**.
 Although it's possible to alter the `line-height` (`lineHeight` prop) and `font-size` (`size` prop)
@@ -48,7 +48,7 @@ These are the default styles for Typography:
         property: 'align',
         description: `Changes the alignment of text within the component. As this is the application
             of a CSS property, standard CSS rules apply.`,
-        type: <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />,
+        type: <FormatTypes data={['center', 'left', 'right', 'inherit', 'justify']} />,
         default: 'inherit',
     },
     {
@@ -59,13 +59,13 @@ These are the default styles for Typography:
             <Link to="/theme/colors/">theme</Link>,
             ` colors, you'll be able to control its hue via a prop noted below.`
         ],
-        type: <FormatTypes types={['string', 'rgb', 'rgba']} noInterpret />,
+        type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'inherit',
     },
     {
         property: 'display',
         description: `Controls the CSS <pre>display</pre> property of the tag.`,
-        type: <FormatTypes types={['inline', 'block', 'contents', 'flex', 'grid', 'inline-block',
+        type: <FormatTypes data={['inline', 'block', 'contents', 'flex', 'grid', 'inline-block',
                     'inline-flex', 'inline-grid', 'inline-table', 'list-item', 'run-in', 'table',
                     'table-caption', 'table-column-group', 'table-header-group',
                     'table-footer-group', 'table-row-group', 'table-cell', 'table-column',
@@ -76,7 +76,7 @@ These are the default styles for Typography:
         property: 'href',
         description: `When used in conjunction with setting the <pre>tag</pre> prop to <pre>a</pre>,
             creates a link to the specified page/resource.`,
-        type: <FormatTypes types={['center', 'left', 'right', 'inherit', 'justify']} />,
+        type: <FormatTypes data={['center', 'left', 'right', 'inherit', 'justify']} />,
         default: 'string',
     },
     {
@@ -94,7 +94,7 @@ These are the default styles for Typography:
             <Link to="/theme/colors/">theme</Link>,
             ` colors, allows changing that color's hue.`
         ],
-        type: <FormatTypes types={['light', 'base', 'dark']} />,
+        type: <FormatTypes data={['light', 'base', 'dark']} />,
     },
     {
         property: 'lineHeight',
@@ -108,7 +108,7 @@ These are the default styles for Typography:
         description: `This value directly affects the <pre>size</pre> and <pre>lineHeight</pre>
             props directly, ensuring that there is no overlap of text between lines no matter what
             value is input. This value is in <pre>px</pre>.`,
-        type: <FormatTypes types={[62 , 52 , 44 , 36 , 32 , 28 , 24 , 20 , 18 , 16 , 14 , 12]} />,
+        type: <FormatTypes data={[62 , 52 , 44 , 36 , 32 , 28 , 24 , 20 , 18 , 16 , 14 , 12]} />,
         default: '16',
     },
     {
@@ -122,7 +122,7 @@ These are the default styles for Typography:
     {
         property: 'tag',
         description: `Changing this prop will let the component render as the specified html tag.`,
-        type: <FormatTypes types={['a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5',
+        type: <FormatTypes data={['a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5',
                     'h6', 'blockquote', 'address', 'code', 'label', 'pre']}
                 />,
         default: 'span',
@@ -130,7 +130,7 @@ These are the default styles for Typography:
     {
         property: 'transform',
         description: `Changes the <pre>text-transform</pre> CSS property.`,
-        type: <FormatTypes types={['none', 'capitalize', 'uppercase', 'lowercase',
+        type: <FormatTypes data={['none', 'capitalize', 'uppercase', 'lowercase',
                     'initial', 'inherit']}
                 />,
         default: 'none',
@@ -138,7 +138,7 @@ These are the default styles for Typography:
     {
         property: 'weight',
         description: `Changes the <pre>font-weight</pre> CSS property.`,
-        type: <FormatTypes types={[
+        type: <FormatTypes data={[
                     'normal' , 'bold' , 'bolder' , 'lighter' , '100' , '200' , '300' ,
                     '400' , '500' , '600' , '700' , '800' , '900' , 'initial' , 'inherit'
                 ]} />,

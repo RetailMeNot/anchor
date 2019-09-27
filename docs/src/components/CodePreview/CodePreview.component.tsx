@@ -54,6 +54,11 @@ import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 import { CustomResults } from '../AutoCompleteExample';
 import { ExampleHeader, ExampleLink } from '../TemplateExample';
+// TODO: ApiTable is throwing an error when used in the live editor, have to look into it
+// import { ApiTable } from '../Utils/ApiTable';
+import { ColorBlurb } from '../Utils/ColorBlurb';
+import { ComponentInfo } from '../Utils/ComponentInfo';
+import { FormatTypes } from '../Utils/FormatTypes';
 
 // TODO: add CDN Inconsolata font
 
@@ -175,6 +180,11 @@ const scope = {
     // TemplateExample
     ExampleHeader,
     ExampleLink,
+
+    // DOCUMENTATION COMPONENTS
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
 };
 
 /*

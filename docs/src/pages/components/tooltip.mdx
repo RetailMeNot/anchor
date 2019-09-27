@@ -8,7 +8,7 @@ import {
 
 # Tooltip
 
-<ComponentInfo title="Tooltip" mode="description" />
+<ComponentInfo title="Tooltip" />
 
 The `Tooltip` has 12 possible placements via the `position` prop. These placements are based on the
 motion and direction of the content and less about exact positioning. The diagram below illustrates:
@@ -67,7 +67,7 @@ motion and direction of the content and less about exact positioning. The diagra
         property: 'position',
         description: `Where the tooltip should appear when the child element is hovered.`,
         type: <FormatTypes
-                types={[
+                data={[
                     'topStart',
                     'top',
                     'topEnd',
