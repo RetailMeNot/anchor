@@ -113,6 +113,14 @@ You might just want to give the Skeleton specific dimensions to make it take the
 
 <ApiTable data={[
     {
+        property: 'children',
+        description: `In this particular instance, the <pre>children</pre> of <pre>Skeleton</pre>
+            are very important as they determine the size/shape. Note that using
+            <pre>textLength</pre> will override the size of any child element, or the length of any
+            text.`,
+        type: 'any',
+    },
+    {
         property: 'loading',
         description: `It is assumed that the <pre>Skeleton</pre> is being used as content is being
             loaded. As such, if <pre>loading</pre> is set to <pre>true</pre> then the
