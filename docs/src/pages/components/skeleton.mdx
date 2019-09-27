@@ -1,5 +1,5 @@
 import { Link, withPrefix } from 'gatsby';
-import { ApiTable, ComponentInfo } from '../../components/Utils';
+import { ApiTable, ComponentInfo, FormatTypes } from '../../components/Utils';
 
 # Skeleton
 
@@ -156,10 +156,12 @@ You might just want to give the Skeleton specific dimensions to make it take the
     {
         property: 'children',
         description: `In this particular instance, the <pre>children</pre> of <pre>Skeleton</pre>
-            are very important as they determine the size/shape. Note that using
-            <pre>textLength</pre> will override the size of any child element, or the length of any
-            text.`,
-        type: 'any',
+            are very important as they determine the size/shape. If text is the child,
+            <pre>Skeleton</pre> will replace every character with <pre>Skeleton</pre> blocks. If the
+            text is an HTML element such as an <pre>img</pre>, it will match the height/width of
+            that element. Note that using <pre>textLength</pre> will override the size of any child
+            element, or the length of any text.`,
+        type: <FormatTypes data={['string', 'any']} noInterpret />,
     },
     {
         property: 'loading',
@@ -172,9 +174,9 @@ You might just want to give the Skeleton specific dimensions to make it take the
     },
     {
         property: 'textLength',
-        description: `The amount of text to replace with Skeleton blocks. This is useful for when
-            you don't know how long the text will be, or if you don't have dummy-text ala Lorem
-            Ipsum. Note that settings this prop will give it precedence over the content it
+        description: `The amount of text to replace with <pre>Skeleton</pre> blocks. This is useful
+            for when you don't know how long the text will be, or if you don't have dummy-text ala
+            Lorem Ipsum. Note that settings this prop will give it precedence over the content it
             contains.`,
         type: 'number',
     }
