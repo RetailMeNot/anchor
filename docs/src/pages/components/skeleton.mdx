@@ -111,48 +111,7 @@ You might just want to give the Skeleton specific dimensions to make it take the
 
 ## API
 
-<ApiTable data={[
-    {
-        property: 'width',
-        description: `Sets the CSS <pre>width</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'height',
-        description: `Sets the CSS <pre>height</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'maxWidth',
-        description: `Sets the CSS <pre>max-width</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'maxHeight',
-        description: `Sets the CSS <pre>max-height</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'minHeight',
-        description: `Sets the CSS <pre>min-height</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'minWidth',
-        description: `Sets the CSS <pre>min-width</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'borderRadius',
-        description: `Sets the CSS <pre>border-radius</pre> property.`,
-        type: 'string',
-    },
-    {
-        property: 'display',
-        description: `Sets the CSS <pre>display</pre> property.`,
-        type: 'string',
-        default: 'inherit',
-    },
+<ApiTable sort={false} data={[
     {
         property: 'children',
         description: `In this particular instance, the <pre>children</pre> of <pre>Skeleton</pre>
@@ -179,5 +138,47 @@ You might just want to give the Skeleton specific dimensions to make it take the
             Lorem Ipsum. Note that settings this prop will give it precedence over the content it
             contains.`,
         type: 'number',
-    }
+    },
+    {
+        property: 'borderRadius',
+        description: `Sets the CSS <pre>border-radius</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'display',
+        description: `Sets the CSS <pre>display</pre> property. Defaults to <pre>inherit</pre> if
+            its children are text, and <pre>inline-block</pre> for all other elements.`,
+        type: 'string',
+        default: 'inherit | inline-block',
+    },
+    {
+        property: 'height',
+        description: `Sets the CSS <pre>height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'maxHeight',
+        description: `Sets the CSS <pre>max-height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'maxWidth',
+        description: `Sets the CSS <pre>max-width</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'minHeight',
+        description: `Sets the CSS <pre>min-height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'minWidth',
+        description: `Sets the CSS <pre>min-width</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'width',
+        description: `Sets the CSS <pre>width</pre> property.`,
+        type: 'string',
+    },
 ]} />
