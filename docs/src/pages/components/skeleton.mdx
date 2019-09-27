@@ -71,7 +71,7 @@ simply take the shape of your image and hide it.
         <section>
             <div style={{paddingBottom: '1rem'}}>
                 <Skeleton loading={state.loading}>
-                    <img src={withPrefix('/images/anchor-logo.svg')} />
+                    <img src={withPrefix('/images/anchor-01.jpg')} />
                 </Skeleton>
             </div>
 
@@ -112,6 +112,47 @@ You might just want to give the Skeleton specific dimensions to make it take the
 ## API
 
 <ApiTable data={[
+    {
+        property: 'width',
+        description: `Sets the CSS <pre>width</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'height',
+        description: `Sets the CSS <pre>height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'maxWidth',
+        description: `Sets the CSS <pre>max-width</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'maxHeight',
+        description: `Sets the CSS <pre>max-height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'minHeight',
+        description: `Sets the CSS <pre>min-height</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'minWidth',
+        description: `Sets the CSS <pre>min-width</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'borderRadius',
+        description: `Sets the CSS <pre>border-radius</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'display',
+        description: `Sets the CSS <pre>display</pre> property.`,
+        type: 'string',
+        default: 'inherit',
+    },
     {
         property: 'children',
         description: `In this particular instance, the <pre>children</pre> of <pre>Skeleton</pre>
