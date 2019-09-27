@@ -32,16 +32,16 @@ interface Location {
     [key: string]: string;
 }
 
-interface SideNavigationProps {
+interface SectionNavigationProps {
     location?: Location;
 }
 
-class SideNavigation extends React.PureComponent<SideNavigationProps> {
+class SectionNavigation extends React.PureComponent<SectionNavigationProps> {
     state = {
         mainOpenIndex: -1,
     };
 
-    constructor(props: SideNavigationProps) {
+    constructor(props: SectionNavigationProps) {
         super(props);
         // Received from the AddLocation HOC
         const {
@@ -108,5 +108,5 @@ class SideNavigation extends React.PureComponent<SideNavigationProps> {
     }
 }
 
-// HOC adds the location prop to SideNavigation
-export const EnhancedSideNavigation = AddLocation(SideNavigation);
+// HOC adds the location prop to SectionNavigation
+export const EnhancedSectionNavigation = AddLocation(SectionNavigation);

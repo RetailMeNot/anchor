@@ -6,3 +6,6 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+
+# TODO: remove this once the scraper finds a permanent home
+docsearch-scraper

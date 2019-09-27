@@ -18,7 +18,7 @@ const StyledNextPrevious = styled('nav')<StyledNextPreviousProps>`
     padding: 1rem;
     margin-top: 5rem;
     background-color: #fafafa;
-    border-radius: 4px;
+    border-radius: base;
 `;
 
 interface Location {

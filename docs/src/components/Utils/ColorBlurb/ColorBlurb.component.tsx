@@ -31,7 +31,7 @@ const StyledTypography = styled(Typography)`
         background-color: rgba(27, 31, 35, 0.05);
         font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
             monospace;
-        border-radius: 0.1875rem;
+        border-radius: base;
         padding: 0.2em 0.4em;
         font-size: 0.85rem;
     }
