@@ -3,14 +3,9 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import {
-    //
-    th,
-    variant,
-} from '@xstyled/system';
+import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
-// import { colors, Color } from '../theme';
 import { TypographyTags, Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
