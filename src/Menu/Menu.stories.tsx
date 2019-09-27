@@ -44,43 +44,41 @@ const renderDemoMenu = () => {
     const [isItemHovered, setIsItemHovered] = React.useState<boolean>(false);
     const [isItem2Hovered, setIsItem2Hovered] = React.useState<boolean>(false);
     return (
-        <>
-            <Menu>
-                <DropDown
-                    overlay={<MockList />}
-                    position="bottomStart"
-                    showArrow={false}
-                    trigger="click"
-                    onTriggered={setIsItemHovered}
-                >
-                    <Item>
-                        DropDown Link
-                        {isItemHovered ? (
-                            <ChevronUp color="white" />
-                        ) : (
-                            <ChevronDown color="white" />
-                        )}
-                    </Item>
-                </DropDown>
-                <DropDown
-                    overlay={<MockList />}
-                    position="bottomStart"
-                    showArrow={false}
-                    trigger="click"
-                    onTriggered={setIsItem2Hovered}
-                >
-                    <Item>
-                        Stores
-                        {isItem2Hovered ? (
-                            <ChevronUp color="white" />
-                        ) : (
-                            <ChevronDown color="white" />
-                        )}
-                    </Item>
-                </DropDown>
-                <Item path="/">More</Item>
-            </Menu>
-        </>
+        <Menu>
+            <DropDown
+                overlay={<MockList />}
+                position="bottomStart"
+                showArrow={false}
+                trigger="click"
+                onTriggered={setIsItemHovered}
+            >
+                <Item>
+                    DropDown Link
+                    {isItemHovered ? (
+                        <ChevronUp color="white" />
+                    ) : (
+                        <ChevronDown color="white" />
+                    )}
+                </Item>
+            </DropDown>
+            <DropDown
+                overlay={<MockList />}
+                position="bottomStart"
+                showArrow={false}
+                trigger="click"
+                onTriggered={setIsItem2Hovered}
+            >
+                <Item>
+                    Stores
+                    {isItem2Hovered ? (
+                        <ChevronUp color="white" />
+                    ) : (
+                        <ChevronDown color="white" />
+                    )}
+                </Item>
+            </DropDown>
+            <Item path="/">More</Item>
+        </Menu>
     );
 };
 
