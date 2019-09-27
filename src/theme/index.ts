@@ -35,7 +35,7 @@ export const RootTheme = {
     // or find a way to reference the colors.border colors here
     // e.g. `thin solid borders.base`
     borders: {
-        light: `thin solid ${colors.silver.base}`,
+        light: `thin solid ${colors.silver.dark}`,
         base: `thin solid ${colors.ash.light}`,
         dark: `thin solid ${colors.ash.dark}`,
     },

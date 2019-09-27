@@ -10,14 +10,11 @@ import classNames from 'classnames';
 // overriding them
 
 interface Props {
-    className?: string;
+    className?: any;
     [key: string]: any;
 }
 
-export const cloneWithProps = (
-    element: React.ReactElement<any>,
-    props: Props = {}
-) => {
+export const cloneWithProps = (element: any, props: Props = {}) => {
     const { className, ...rest } = props;
     return React.cloneElement(element, {
         ...rest,
