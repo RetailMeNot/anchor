@@ -6,7 +6,7 @@ import styled from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
 export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
-    path: string;
+    path?: string;
     label?: string;
     children?: any;
     className?: string;

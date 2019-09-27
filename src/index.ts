@@ -49,6 +49,7 @@ export {
 } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
+export { Tabs } from './Tabs';
 export { Skeleton } from './Skeleton';
 export { Pagination } from './Pagination';
 export { Modal, BaseModalBackground, ModalProvider } from './Modal';

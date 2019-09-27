@@ -154,7 +154,7 @@ export const ColorsTheme: ColorsThemeSchema = {
     },
     borders: {
         // PRAGMATIC
-        light: colors.silver.base,
+        light: colors.silver.dark,
         base: colors.ash.light,
         dark: colors.ash.dark,
         // SEMANTIC
