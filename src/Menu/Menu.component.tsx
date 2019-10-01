@@ -97,7 +97,7 @@ const StyledMenu = styled('nav')<MenuProps>`
 
         &:active,
         &.active {
-            color: ${({ color }) =>
+            ${({ color }) =>
                 css({
                     color: color ? lighten(20, color) : 'neutrals.white.base',
                 })};
