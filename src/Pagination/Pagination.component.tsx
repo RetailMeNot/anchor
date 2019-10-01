@@ -22,11 +22,8 @@ const constrain = (min: number, value: number, max: number) =>
 const Button = ({
     variant = 'minimal',
     size = 'sm',
-    outline = false,
     ...props
-}: ButtonProps) => (
-    <AnchorButton variant={variant} size={size} outline={outline} {...props} />
-);
+}: ButtonProps) => <AnchorButton variant={variant} size={size} {...props} />;
 
 export type Size = 'sm' | 'xs';
 export type Variant = 'expanded' | 'minimal';
