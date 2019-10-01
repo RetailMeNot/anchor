@@ -6,6 +6,7 @@ import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 import { lighten } from 'polished';
 // ANCHOR
+import { get } from '../utils/get/get';
 import { ItemProps } from './Item/Item.component';
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
@@ -68,10 +69,10 @@ const sizeVariant = variant({
 const StyledMenu = styled('nav')<MenuProps>`
     display: flex;
     width: 100%;
+    ${spaceStyles};
     min-width: 15.625rem;
     margin: 0;
     padding: 0;
-    ${spaceStyles};
 
     ${({ background = 'primary.base' }) =>
         css({
@@ -120,7 +121,7 @@ const StyledMenu = styled('nav')<MenuProps>`
             margin-right: 0;
         }
 
-        ${props => sizeVariant(props).items};
+        ${props => get(sizeVariant(props), 'items')};
     }
 
     /* Positioning */
@@ -130,7 +131,7 @@ const StyledMenu = styled('nav')<MenuProps>`
         })};
 
     /* Menu Sizes */
-    ${props => sizeVariant(props).menu};
+    ${props => get(sizeVariant(props), 'menu')};
 `;
 
 export const Menu: React.FunctionComponent<MenuProps> = ({
