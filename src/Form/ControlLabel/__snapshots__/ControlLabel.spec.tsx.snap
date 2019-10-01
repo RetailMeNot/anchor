@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: ControlLabel should be defined 1`] = `
-.c0 {
+.c1 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -14,7 +14,7 @@ exports[`Component: ControlLabel should be defined 1`] = `
   cursor: pointer;
 }
 
-.c1 {
+.c0 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -31,12 +31,12 @@ exports[`Component: ControlLabel should be defined 1`] = `
   color: inherit;
 }
 
-.c1 small {
+.c0 small {
   font-size: 87.5%;
 }
 
 <label
-  className="anchor-typography anchor-control-label c0 c1"
+  className="c0 anchor-typography c1 anchor-control-label"
   label="label"
   value="value"
 >

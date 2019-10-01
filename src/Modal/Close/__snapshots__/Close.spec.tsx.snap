@@ -76,13 +76,13 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
 }
 
 <div
-  className="anchor-modal-close c0"
+  className="c0 anchor-modal-close"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
   >
     <span
-      className="anchor-icon close anchor-button-prefix c3"
+      className="c3 anchor-icon close anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -192,13 +192,13 @@ exports[`Component: Modal.Close should render 1`] = `
 }
 
 <div
-  className="anchor-modal-close c0"
+  className="c0 anchor-modal-close"
 >
   <button
-    className="anchor-button c1 c2"
+    className="c1 c2 anchor-button"
   >
     <span
-      className="anchor-icon close anchor-button-prefix c3"
+      className="c3 anchor-icon close anchor-button-prefix"
       scale="lg"
     >
       <svg

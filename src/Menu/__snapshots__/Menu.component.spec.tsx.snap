@@ -1,74 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Menu should be defined 1`] = `
-.c0 {
-  margin: 0;
-  padding: 0;
+exports[`Component: Menu should match its snapshot and render items. 1`] = `
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  min-width: 250px;
-  background: primary.base;
+  min-width: 15.625rem;
+  margin: 0;
+  padding: 0;
+  background: #602D6C;
   font-size: 0.875rem;
-  border-radius: base;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  border-radius: 4px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
-.c0 > * > a,
-.c0 > a {
-  display: inline-block;
+.c0 .anchor-menu-item {
   line-height: 1.125rem;
-  color: neutrals.white.base;
-  -webkit-transition: background-color 500ms,color:500ms;
-  transition: background-color 500ms,color:500ms;
+  color: #FFFFFF;
+  -webkit-transition: background-color 250ms,color 250ms;
+  transition: background-color 250ms,color 250ms;
   margin: 0 0.125rem;
-}
-
-.c0 > * > a:hover,
-.c0 > a:hover {
-  color: neutrals.white.base;
-  background-color: rgba(255,255,255,.1);
-}
-
-.c0 > * > a:active,
-.c0 > a:active,
-.c0 > * > a.active,
-.c0 > a.active {
-  color: color:neutrals.white.base;
-  background-color: rgba(255,255,255,.1);
-}
-
-.c0 > * > a:focus,
-.c0 > a:focus {
-  background-color: rgba(255,255,255,.1);
-}
-
-.c0 > * > a:first-of-type,
-.c0 > a:first-of-type {
-  margin-left: 0;
-}
-
-.c0 > * > a:last-of-type,
-.c0 > a:last-of-type {
-  margin-right: 0;
-}
-
-.c0 > * > a,
-.c0 > a {
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   padding: 1rem 0.75rem;
 }
 
+.c0 .anchor-menu-item:hover {
+  color: #FFFFFF;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:active,
+.c0 .anchor-menu-item.active {
+  color: color:#FFFFFF;
+  background-color: rgba( 255, 255, 255, 0.1 );
+}
+
+.c0 .anchor-menu-item:focus {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.c0 .anchor-menu-item:last-of-type {
+  margin-right: 0;
+}
+
 .c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   text-align: center;
-  color: text.body;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #323232;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;
@@ -80,17 +83,198 @@ exports[`Component: Menu should be defined 1`] = `
   -webkit-touch-callout: none;
 }
 
-.c1 svg {
-  max-width: 8px;
+<nav
+    className="c0 anchor-menu"
+    size="md"
+  >
+    <a
+      className="c1 anchor-menu-item"
+    >
+      Test Item
+    </a>
+  </nav>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 15.625rem;
+  margin: 0;
+  padding: 0;
+  background: #602D6C;
+  font-size: 0.875rem;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  border-radius: 4px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c0 .anchor-menu-item {
+  line-height: 1.125rem;
+  color: #FFFFFF;
+  -webkit-transition: background-color 250ms,color 250ms;
+  transition: background-color 250ms,color 250ms;
+  margin: 0 0.125rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+
+.c0 .anchor-menu-item:hover {
+  color: #FFFFFF;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:active,
+.c0 .anchor-menu-item.active {
+  color: color:#FFFFFF;
+  background-color: rgba( 255, 255, 255, 0.1 );
+}
+
+.c0 .anchor-menu-item:focus {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.c0 .anchor-menu-item:last-of-type {
+  margin-right: 0;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #323232;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 <nav
-  className="anchor-menu c0"
->
-  <a
-    className="anchor-menu-item c1"
+    className="c0 anchor-menu"
+    size="sm"
   >
-    Derp
-  </a>
-</nav>
+    <a
+      className="c1 anchor-menu-item"
+    >
+      Test Item
+    </a>
+  </nav>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 15.625rem;
+  margin: 0;
+  padding: 0;
+  background: #602D6C;
+  font-size: 0.875rem;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  border-radius: 4px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c0 .anchor-menu-item {
+  line-height: 1.125rem;
+  color: #FFFFFF;
+  -webkit-transition: background-color 250ms,color 250ms;
+  transition: background-color 250ms,color 250ms;
+  margin: 0 0.125rem;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 1.5rem 1.25rem;
+}
+
+.c0 .anchor-menu-item:hover {
+  color: #FFFFFF;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:active,
+.c0 .anchor-menu-item.active {
+  color: color:#FFFFFF;
+  background-color: rgba( 255, 255, 255, 0.1 );
+}
+
+.c0 .anchor-menu-item:focus {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.c0 .anchor-menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.c0 .anchor-menu-item:last-of-type {
+  margin-right: 0;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #323232;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+<nav
+    className="c0 anchor-menu"
+    size="lg"
+  >
+    <a
+      className="c1 anchor-menu-item"
+    >
+      Test Item
+    </a>
+  </nav>,
+]
 `;

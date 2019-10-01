@@ -29,6 +29,7 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     spacing?: string;
     arrowIndent?: string;
     arrowSize?: string;
+    onTriggered?: (state: boolean) => void;
 }
 
 interface DropDownState {
@@ -146,7 +147,7 @@ interface BackgroundProps {
 const Background = styled('div')<BackgroundProps>`
     box-sizing: border-box;
     border-radius: inherit;
-    width: 100%
+    width: 100%;
     z-index: 2;
 
     ${({ background }) =>
@@ -170,8 +171,8 @@ export class DropDown extends React.Component<DropDownProps> {
     > = React.createRef();
     private rootElement: any;
     // Observable Subscriptions
-    private hoveredSub: Subscription;
-    private clickedSub: Subscription;
+    private hoveredSub$: Subscription;
+    private clickedSub$: Subscription;
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
@@ -179,7 +180,6 @@ export class DropDown extends React.Component<DropDownProps> {
             current: container,
         }: { current: any } = this.containerReference;
 
-        // TODO: instead of setting state, what about using the render fxn?
         this.setState({
             height: get(dropDown, 'clientHeight', 0),
             width: get(dropDown, 'clientWidth', 0),
@@ -207,15 +207,18 @@ export class DropDown extends React.Component<DropDownProps> {
         const mouseEnter$ = fromEvent(dropDown, 'mouseenter');
         const mouseLeave$ = fromEvent(dropDown, 'mouseleave');
 
-        this.clickedSub = merge(
+        this.clickedSub$ = merge(
             outsideClick$.pipe(mapTo(false)),
             escapeKey$.pipe(mapTo(false)),
             dropDownClick$.pipe(map(() => !this.state.clicked))
         ).subscribe(clicked => {
             this.setState({ clicked });
+            if (this.props.onTriggered) {
+                this.props.onTriggered(clicked);
+            }
         });
 
-        this.hoveredSub = merge(
+        this.hoveredSub$ = merge(
             mouseEnter$.pipe(mapTo(true)),
             mouseLeave$.pipe(mapTo(false)),
             escapeKey$.pipe(mapTo(false)),
@@ -231,12 +234,15 @@ export class DropDown extends React.Component<DropDownProps> {
             )
             .subscribe(hovered => {
                 this.setState({ hovered });
+                if (this.props.onTriggered) {
+                    this.props.onTriggered(hovered);
+                }
             });
     }
 
     componentWillUnmount(): void {
-        this.hoveredSub.unsubscribe();
-        this.clickedSub.unsubscribe();
+        this.hoveredSub$.unsubscribe();
+        this.clickedSub$.unsubscribe();
     }
 
     componentDidUpdate(prevProps: DropDownProps) {
@@ -285,6 +291,7 @@ export class DropDown extends React.Component<DropDownProps> {
             border = 'light',
             borderRadius = 'base',
             background = 'white',
+            onTriggered = () => null,
             ...props
         } = this.props;
         const {

@@ -117,28 +117,28 @@ exports[`Component: Tabs should be defined. 1`] = `
 }
 
 <div
-  className="anchor-tabs c0"
+  className="c0 anchor-tabs"
 >
   <div
     className="c1"
   >
     <div
-      className="anchor-tabs-header c2"
+      className="c2 anchor-tabs-header"
     >
       <div
-        className="anchor-tabs-header-item active c3"
+        className="c3 anchor-tabs-header-item active"
         onClick={[Function]}
       >
         Tab 1
       </div>
       <div
-        className="anchor-tabs-header-item c4"
+        className="c4 anchor-tabs-header-item"
         onClick={[Function]}
       >
         Tab 2
       </div>
       <div
-        className="anchor-tabs-header-item c4"
+        className="c4 anchor-tabs-header-item"
         onClick={[Function]}
       >
         Tab 3
@@ -146,19 +146,19 @@ exports[`Component: Tabs should be defined. 1`] = `
     </div>
   </div>
   <div
-    className="anchor-tabs-pane anchor-tabs-panel active c5"
+    className="c5 anchor-tabs-pane anchor-tabs-panel active"
     title="Tab 1"
   >
     Content 1
   </div>
   <div
-    className="anchor-tabs-pane anchor-tabs-panel c6"
+    className="c6 anchor-tabs-pane anchor-tabs-panel"
     title="Tab 2"
   >
     Content 2
   </div>
   <div
-    className="anchor-tabs-pane anchor-tabs-panel c6"
+    className="c6 anchor-tabs-pane anchor-tabs-panel"
     title="Tab 3"
   >
     Content 3

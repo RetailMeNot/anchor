@@ -25,7 +25,7 @@ exports[`Component: Hero should be defined 1`] = `
 }
 
 <section
-  className="anchor-hero c0"
+  className="c0 anchor-hero"
 />
 `;
 
@@ -109,12 +109,12 @@ exports[`Component: Hero should render with custom content 1`] = `
   justify-content: center;
 }
 
-.c1 {
+.c2 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
 }
 
-.c2 {
+.c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -132,7 +132,7 @@ exports[`Component: Hero should render with custom content 1`] = `
   color: inherit;
 }
 
-.c2 small {
+.c1 small {
   font-size: 87.5%;
 }
 
@@ -154,21 +154,21 @@ exports[`Component: Hero should render with custom content 1`] = `
 }
 
 <section
-  className="anchor-hero c0"
+  className="c0 anchor-hero"
 >
   <h1
-    className="anchor-typography anchor-hero-title c1 c2"
+    className="c1 anchor-typography c2 anchor-hero-title"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="anchor-typography c3"
+    className="c3 anchor-typography"
   >
     Some Typography text
   </span>
   <button
-    className="anchor-button c4 c5"
+    className="c4 c5 anchor-button"
   >
     CTA
   </button>
@@ -199,12 +199,12 @@ exports[`Component: Hero should render with title 1`] = `
   justify-content: center;
 }
 
-.c1 {
+.c2 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
 }
 
-.c2 {
+.c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -222,15 +222,15 @@ exports[`Component: Hero should render with title 1`] = `
   color: inherit;
 }
 
-.c2 small {
+.c1 small {
   font-size: 87.5%;
 }
 
 <section
-  className="anchor-hero c0"
+  className="c0 anchor-hero"
 >
   <h1
-    className="anchor-typography anchor-hero-title c1 c2"
+    className="c1 anchor-typography c2 anchor-hero-title"
     scale={32}
   >
     Hero Title
@@ -262,18 +262,18 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   justify-content: center;
 }
 
-.c1 {
+.c2 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
 }
 
-.c3 {
+.c4 {
   text-shadow: 0 0.125rem 0.125rem rgba(0,0,0,0.04);
   position: relative;
   display: block;
 }
 
-.c2 {
+.c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -291,11 +291,11 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   color: inherit;
 }
 
-.c2 small {
+.c1 small {
   font-size: 87.5%;
 }
 
-.c4 {
+.c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
@@ -309,21 +309,21 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   color: inherit;
 }
 
-.c4 small {
+.c3 small {
   font-size: 87.5%;
 }
 
 <section
-  className="anchor-hero c0"
+  className="c0 anchor-hero"
 >
   <h1
-    className="anchor-typography anchor-hero-title c1 c2"
+    className="c1 anchor-typography c2 anchor-hero-title"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="anchor-typography anchor-hero-subtitle c3 c4"
+    className="c3 anchor-typography c4 anchor-hero-subtitle"
     scale={18}
   >
     Hero Subtitle

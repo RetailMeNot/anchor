@@ -17,10 +17,10 @@ exports[`Component: Card should match its snapshot. 1`] = `
 }
 
 <div
-  className="anchor-card c0"
+  className="c0 anchor-card"
 >
   <div
-    className="anchor-card-content c1"
+    className="c1 anchor-card-content"
   >
     <p>
       Test

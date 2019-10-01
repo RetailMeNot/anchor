@@ -2,6 +2,18 @@
 
 exports[`Component: Item should be defined 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   text-align: center;
   color: text.body;
@@ -16,17 +28,25 @@ exports[`Component: Item should be defined 1`] = `
   -webkit-touch-callout: none;
 }
 
-.c0 svg {
-  max-width: 8px;
-}
-
 <a
-  className="anchor-menu-item c0"
+  className="c0 anchor-menu-item"
 />
 `;
 
 exports[`Component: Item should render with label 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   text-align: center;
   color: text.body;
@@ -41,12 +61,8 @@ exports[`Component: Item should render with label 1`] = `
   -webkit-touch-callout: none;
 }
 
-.c0 svg {
-  max-width: 8px;
-}
-
 <a
-  className="anchor-menu-item c0"
+  className="c0 anchor-menu-item"
 >
   label
 </a>

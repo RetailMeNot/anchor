@@ -18,6 +18,6 @@ exports[`Component: List should be defined 1`] = `
 }
 
 <div
-  className="anchor-list c0"
+  className="c0 anchor-list"
 />
 `;

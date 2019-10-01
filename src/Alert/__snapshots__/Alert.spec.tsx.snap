@@ -66,11 +66,11 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <p
-      className="anchor-typography c1"
+      className="c1 anchor-typography"
       color="charcoal"
     >
       Test Description
@@ -168,14 +168,14 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <div
       className="c1"
     >
       <span
-        className="anchor-icon info anchor-alert-icon c2"
+        className="c2 anchor-icon info anchor-alert-icon"
         scale="md"
       >
         <svg
@@ -206,7 +206,7 @@ Array [
         className="anchor-alert-content"
       >
         <p
-          className="anchor-typography c3"
+          className="c3 anchor-typography"
           color="charcoal"
         >
           Test Description
@@ -278,11 +278,11 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <p
-      className="anchor-typography c1"
+      className="c1 anchor-typography"
       color="charcoal"
     >
       Test Description
@@ -380,14 +380,14 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <div
       className="c1"
     >
       <span
-        className="anchor-icon info anchor-alert-icon c2"
+        className="c2 anchor-icon info anchor-alert-icon"
         scale="md"
       >
         <svg
@@ -418,7 +418,7 @@ Array [
         className="anchor-alert-content"
       >
         <p
-          className="anchor-typography c3"
+          className="c3 anchor-typography"
           color="charcoal"
         >
           Test Description
@@ -490,11 +490,11 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <p
-      className="anchor-typography c1"
+      className="c1 anchor-typography"
       color="charcoal"
     >
       Test Description
@@ -592,14 +592,14 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <div
       className="c1"
     >
       <span
-        className="anchor-icon check anchor-alert-icon c2"
+        className="c2 anchor-icon check anchor-alert-icon"
         scale="md"
       >
         <svg
@@ -626,7 +626,7 @@ Array [
         className="anchor-alert-content"
       >
         <p
-          className="anchor-typography c3"
+          className="c3 anchor-typography"
           color="charcoal"
         >
           Test Description
@@ -698,11 +698,11 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <p
-      className="anchor-typography c1"
+      className="c1 anchor-typography"
       color="charcoal"
     >
       Test Description
@@ -800,14 +800,14 @@ Array [
 }
 
 <div
-    className="anchor-alert c0"
+    className="c0 anchor-alert"
     title="Test Title"
   >
     <div
       className="c1"
     >
       <span
-        className="anchor-icon error anchor-alert-icon c2"
+        className="c2 anchor-icon error anchor-alert-icon"
         scale="md"
       >
         <svg
@@ -839,7 +839,7 @@ Array [
         className="anchor-alert-content"
       >
         <p
-          className="anchor-typography c3"
+          className="c3 anchor-typography"
           color="charcoal"
         >
           Test Description
