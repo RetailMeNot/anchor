@@ -68,10 +68,10 @@ const sizeVariant = variant({
 const StyledMenu = styled('nav')<MenuProps>`
     display: flex;
     width: 100%;
-    ${spaceStyles};
     min-width: 15.625rem;
     margin: 0;
     padding: 0;
+    ${spaceStyles};
 
     ${({ background = 'primary.base' }) =>
         css({

@@ -40,7 +40,7 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
                 box-sizing: border-box;
                 content: 'Coming Soon';
                 display: block;
-                font-family: ${th('typography.fontFamily')};
+                font-family: base;
                 padding: 0.5rem 1rem 0.5rem 2.4rem;
                 position: absolute;
                 right: -2.75rem;

@@ -26,15 +26,13 @@ exports[`Component: Modal.Header should render with title 1`] = `
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  font-weight: normal;
   text-align: inherit;
-  text-transform: none;
-  font-weight: bold;
   color: inherit;
+  font-weight: bold;
 }
 
 .c1 small {

@@ -103,8 +103,7 @@ export const Item = ({
     >
         <StyledTypography
             tag="span"
-            color="charcoal"
-            hue="light"
+            color="neutrals.charcoal.light"
             className={size}
         >
             {prefix && React.cloneElement(prefix, { className: 'item-prefix' })}

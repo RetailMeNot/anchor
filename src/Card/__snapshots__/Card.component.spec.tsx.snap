@@ -6,11 +6,13 @@ exports[`Component: Card should match its snapshot. 1`] = `
   position: relative;
   display: block;
   padding: 1rem;
+  font-family: base;
 }
 
 .c0 {
   position: relative;
   width: 100%;
+  font-family: base;
   box-sizing: border-box;
   border-radius: base;
   border: solid thin borders.base;

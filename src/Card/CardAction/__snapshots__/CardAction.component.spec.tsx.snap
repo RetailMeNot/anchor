@@ -16,6 +16,7 @@ exports[`Component: CardAction should be defined 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: base;
   top: 0;
   right: 0;
   width: 2.5rem;

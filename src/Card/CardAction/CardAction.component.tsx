@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 export interface CardActionProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
@@ -16,7 +15,7 @@ const StyledCard = styled('div')<CardActionProps>`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     top: 0;
     right: 0;
     width: 2.5rem;

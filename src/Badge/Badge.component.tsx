@@ -51,7 +51,7 @@ const BadgeSizeStyles: BadgeStylesGroup = {
 // TODO: this encapsulation may be redundant
 const StyledBadgeContainer = styled('div')<BadgeProps>`
     position: relative;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     display: inline-block;
 `;
 

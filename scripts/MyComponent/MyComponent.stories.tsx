@@ -12,7 +12,7 @@ import { MyComponent } from './MyComponent.component';
 const StyledStory = styled('div')`
     padding: 2rem;
     color: text.body;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 `;
 
 storiesOf('Components/MyComponentPath', module).add('Default', () => (

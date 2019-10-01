@@ -114,13 +114,12 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 .c2 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   color: #595959;
 }
 
@@ -131,13 +130,12 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 .c4 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   color: #595959;
 }
 
@@ -159,7 +157,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c2 anchor-typography c3 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -172,7 +170,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c4 anchor-typography c3 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>
@@ -311,13 +309,12 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   color: #595959;
 }
 
@@ -328,13 +325,12 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 .c5 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
   text-align: inherit;
-  text-transform: none;
+  color: inherit;
   color: #595959;
 }
 
@@ -357,7 +353,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c3 anchor-typography c4 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -371,7 +367,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c5 anchor-typography c4 lg"
-        color="charcoal"
+        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>

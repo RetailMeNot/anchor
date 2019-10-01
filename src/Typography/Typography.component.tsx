@@ -6,11 +6,10 @@ import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
-import { colors, Color } from '../theme';
 import { TypographyTags, Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
-type FontWeights =
+export type FontWeights =
     | 'normal'
     | 'bold'
     | 'bolder'
@@ -27,7 +26,7 @@ type FontWeights =
     | 'initial'
     | 'inherit';
 
-type TextTransforms =
+export type TextTransforms =
     | 'none'
     | 'capitalize'
     | 'uppercase'
@@ -60,7 +59,14 @@ type DisplayValues =
     | 'initial'
     | 'inherit';
 
-export type TextAlign = 'center' | 'left' | 'right' | 'inherit' | 'justify';
+export type TextAlign =
+    | 'center'
+    | 'left'
+    | 'right'
+    | 'inherit'
+    | 'justify'
+    | 'start'
+    | 'end';
 
 export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     className?: string;
@@ -72,46 +78,45 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     children?: any;
     tag?: TypographyTags;
     weight?: FontWeights;
-    color?: 'inherit' | 'initial' | Color | string;
-    hue?: 'light' | 'base' | 'dark';
+    color?: 'inherit' | 'initial' | string;
     scale?: Scale;
-    size?: number;
-    lineHeight?: number;
+    size?: number | string;
+    lineHeight?: number | string;
 }
 
 const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
     box-sizing: border-box;
-    // Global Font Properties
-    font-family: ${th('typography.fontFamily')};
-    font-size: ${th('typography.fontSize')};
-    font-weight: ${th('typography.fontWeight')};
-    line-height: ${th('typography.lineHeight')};
+    font-family: base;
+    margin: 0;
 
-    // Use a scale to set size & line-height
-    ${variant({
-        key: 'typography.scale',
-        default: 16,
-        prop: 'scale',
-    })}
-
-    // Apply default styles for element
-    ${variant({
-        key: 'typography.tag',
-        default: 'span',
-        prop: 'tag',
-    })}
-
-    // CSS Overrides
-    ${({ align = 'inherit', display, transform = 'none' }) =>
+    // Variant styles
+    ${props =>
         css({
+            fontSize: th('typography.fontSize'),
+            lineHeight: th('typography.lineHeight'),
+            fontWeight: th('typography.fontWeight'),
+            textAlign: 'inherit',
+            color: 'inherit',
+            ...variant({
+                key: 'typography.tag',
+                default: 'none',
+                prop: 'tag',
+            })(props),
+            ...variant({
+                key: 'typography.scale',
+                default: 'none',
+                prop: 'scale',
+            })(props),
+        })}
+
+    // Prop overrides. We don't have any defaults here because then they
+    // would always override the variants above.
+    ${({ color, align, display, transform, lineHeight, size, weight }) =>
+        css({
+            color,
             textAlign: align,
-            display: display,
+            display,
             textTransform: transform,
-        })};
-
-    // Override Size & Line Height
-    ${({ lineHeight, size, weight }) =>
-        css({
             lineHeight: rem(lineHeight),
             fontSize: rem(size),
             fontWeight: weight,
@@ -119,10 +124,6 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
 
     // Spacing
     ${spaceStyles}
-
-    // TODO: colors when theme colors are defined
-    ${({ color = 'inherit', hue = 'base' }) =>
-        css({ color: colors[color] ? colors[color][hue] : color })};
 
     small {
         font-size: 87.5%;

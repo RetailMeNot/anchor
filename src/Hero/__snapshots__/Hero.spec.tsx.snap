@@ -117,19 +117,13 @@ exports[`Component: Hero should render with custom content 1`] = `
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
+  margin: 0;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin: 1rem 0;
   text-align: inherit;
-  text-transform: none;
-  font-weight: 600;
   color: inherit;
+  font-weight: 600;
 }
 
 .c1 small {
@@ -139,13 +133,11 @@ exports[`Component: Hero should render with custom content 1`] = `
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-weight: normal;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
   text-align: inherit;
-  text-transform: none;
   color: inherit;
 }
 
@@ -207,19 +199,13 @@ exports[`Component: Hero should render with title 1`] = `
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
+  margin: 0;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin: 1rem 0;
   text-align: inherit;
-  text-transform: none;
-  font-weight: 600;
   color: inherit;
+  font-weight: 600;
 }
 
 .c1 small {
@@ -276,19 +262,13 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 .c1 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
+  margin: 0;
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: normal;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  margin: 1rem 0;
   text-align: inherit;
-  text-transform: none;
-  font-weight: 600;
   color: inherit;
+  font-weight: 600;
 }
 
 .c1 small {
@@ -298,15 +278,13 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 .c3 {
   box-sizing: border-box;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
+  margin: 0;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  font-weight: normal;
   text-align: inherit;
-  text-transform: none;
-  font-weight: 600;
   color: inherit;
+  font-weight: 600;
 }
 
 .c3 small {

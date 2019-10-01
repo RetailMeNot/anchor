@@ -31,7 +31,7 @@ const TitleLink = styled('a')`
     line-height: 1.5rem;
     font-weight: 600;
     color: inherit;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 
     &:hover {
         text-decoration: underline;

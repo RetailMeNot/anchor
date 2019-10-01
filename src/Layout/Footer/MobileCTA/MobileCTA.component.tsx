@@ -172,8 +172,7 @@ export const MobileCTA = ({
                         tag="p"
                         className="cta-caption"
                         weight={600}
-                        color="savvyCyan"
-                        hue="dark"
+                        color="accent.dark"
                     >
                         Download the App
                     </Typography>

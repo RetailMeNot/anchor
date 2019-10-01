@@ -7,7 +7,6 @@ import styled, {
     FlattenInterpolation,
     ThemeProps,
 } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import { darken } from 'polished';
 // COMPONENTS
 import { Close } from '../Icon';
@@ -63,7 +62,7 @@ const StyledAlert = styled('div')<AlertProps>`
     box-sizing: border-box;
     position: relative;
     border-radius: base;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     padding: 0.5rem 1.5rem 0.5rem 0.5rem;
     ${({ variant }) =>
         css({
@@ -110,7 +109,7 @@ const renderMessageAndDescription = ({
     <>
         {message && <Typography tag="h4">{message}</Typography>}
         {description && (
-            <Typography tag="p" color="charcoal" hue="light">
+            <Typography tag="p" color="neutrals.charcoal.light">
                 {description}
             </Typography>
         )}

@@ -2,7 +2,7 @@
 import { typography } from './typography.theme';
 import { ColorsTheme, colors } from './colors.theme';
 import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
-
+import { fonts } from './fonts.theme';
 // TODO: ============================================================ move all of these v consts to a different location
 
 // When re-exporting an interface its type must be explicitly defined
@@ -28,6 +28,9 @@ export const RootTheme = {
     [BUTTON_KEY]: BUTTON_THEME,
     [INPUT_KEY]: INPUT_THEME,
     colors: ColorsTheme,
+    fonts: {
+        base: fonts.fontFamily,
+    },
     breakpoints: {
         xs: 0,
     },
