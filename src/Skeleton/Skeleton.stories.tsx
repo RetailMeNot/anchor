@@ -101,7 +101,12 @@ storiesOf('Components/Skeleton', module)
                         tag={tag || undefined}
                         scale={scale || undefined}
                     >
-                        <Skeleton loading={loading} textLength={textLength}>
+                        <Skeleton
+                            loading={loading}
+                            textLength={textLength}
+                            colorA={text('colorA', '') || undefined}
+                            colorB={text('colorB', '') || undefined}
+                        >
                             {text('Text', defaultText)}
                         </Skeleton>
                     </Typography>
@@ -130,6 +135,8 @@ storiesOf('Components/Skeleton', module)
                         textLength={
                             parseInt(text('textLength', ''), 10) || undefined
                         }
+                        colorA={text('colorA', '') || undefined}
+                        colorB={text('colorB', '') || undefined}
                     />
                 </StyledStory>
             </ThemeProvider>
