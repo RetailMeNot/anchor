@@ -12,12 +12,6 @@ describe('Component: Divider', () => {
         const wrapper = mount(subject);
         const component = shallow(subject);
 
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
-
-        /* tslint:enable */
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();
