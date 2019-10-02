@@ -1,13 +1,18 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// COMPONENT
-import { CardContent } from './CardContent.component';
-// ENZYME
 import { shallow, mount } from 'enzyme';
+import { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
+import { RootTheme } from '../../theme';
+import { CardContent } from './CardContent.component';
 
 // TEST SETUP
-const subject = <CardContent />;
+const subject = (
+    <ThemeProvider theme={RootTheme}>
+        <CardContent />
+    </ThemeProvider>
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 

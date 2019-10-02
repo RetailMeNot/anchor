@@ -1,13 +1,18 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// COMPONENT
-import { CardActionArea } from './CardActionArea.component';
-// ENZYME
 import { shallow, mount } from 'enzyme';
+import { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
+import { CardActionArea } from './CardActionArea.component';
+import { RootTheme } from '../../theme';
 
 // TEST SETUP
-const subject = <CardActionArea />;
+const subject = (
+    <ThemeProvider theme={RootTheme}>
+        <CardActionArea />
+    </ThemeProvider>
+);
 const wrapper = mount(subject);
 const component = shallow(subject);
 
