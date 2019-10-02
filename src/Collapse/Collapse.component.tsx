@@ -78,7 +78,7 @@ const variants = {
         color: neutrals.charcoal.light;
 
         .anchor-collapse-button {
-            background-color: neutrals.white.base;
+            background-color: white;
             border-style: none;
             border-bottom: solid thin ${th.color('borders.light')};
             border-top: solid thin ${th.color('borders.light')};

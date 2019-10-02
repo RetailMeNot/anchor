@@ -19,7 +19,7 @@ const StyledCardActionArea = styled('div')<CardActionAreaProps>`
     font-family: base;
     width: 100%;
     border-top: solid thin ${th.color('neutrals.silver.dark')};
-    ${({ backgroundColor = 'neutrals.white.base' }: CardActionAreaProps) =>
+    ${({ backgroundColor = 'white' }: CardActionAreaProps) =>
         css({ backgroundColor })};
 `;
 

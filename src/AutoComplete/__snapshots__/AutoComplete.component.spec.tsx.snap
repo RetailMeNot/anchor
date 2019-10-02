@@ -126,7 +126,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background-color: #FFFFFF;
+  background-color: white;
   color: #595959;
 }
 
@@ -304,7 +304,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background-color: #FFFFFF;
+  background-color: white;
   color: #595959;
   box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0,0,0,0.12);
 }
@@ -482,7 +482,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background-color: #FFFFFF;
+  background-color: white;
   color: #595959;
 }
 
@@ -669,7 +669,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 250ms;
   transition: border-color 250ms;
-  background-color: #FFFFFF;
+  background-color: white;
   color: #595959;
 }
 

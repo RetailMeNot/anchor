@@ -16,7 +16,7 @@ exports[`Component: Modal.Header should render with title 1`] = `
   -ms-flex-order: -1;
   order: -1;
   color: #595959;
-  background-color: #FFFFFF;
+  background-color: white;
 }
 
 .c0 ~ .c2.c2 {

@@ -13,7 +13,7 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -98,7 +98,7 @@ exports[`Component: Badge should be defined and match its snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -148,7 +148,7 @@ exports[`Component: Badge should hide the count by default if \`count\` is 0 1`]
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -197,7 +197,7 @@ exports[`Component: Badge should render \`count\` if \`count\` is less than \`ov
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -249,7 +249,7 @@ exports[`Component: Badge should render \`overflowCount\`+ if \`count\` is more 
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -301,7 +301,7 @@ exports[`Component: Badge should render a count with the border color of \`borde
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid palevioletred;
   box-sizing: border-box;
   font-weight: 700;
@@ -351,7 +351,7 @@ exports[`Component: Badge should render a dot as the default \`size\` 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -401,7 +401,7 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -488,7 +488,7 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -575,7 +575,7 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -662,7 +662,7 @@ exports[`Component: Badge should render the count with absolute positioning if \
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -747,7 +747,7 @@ exports[`Component: Badge should render the count without absolute positioning i
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;
@@ -794,7 +794,7 @@ exports[`Component: Badge should show the count if \`showZero\` is true, even if
   -ms-flex-align: center;
   align-items: center;
   background-color: #CC3B3B;
-  color: #FFFFFF;
+  color: white;
   border: 0.125rem solid #CC3B3B;
   box-sizing: border-box;
   font-weight: 700;

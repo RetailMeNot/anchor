@@ -8,7 +8,7 @@ exports[`Component: CardActionArea should be defined 1`] = `
   font-family: base;
   width: 100%;
   border-top: solid thin neutrals.silver.dark;
-  background-color: neutrals.white.base;
+  background-color: white;
 }
 
 <div

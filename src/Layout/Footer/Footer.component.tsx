@@ -11,7 +11,7 @@ import { th } from '@xstyled/system';
 const StyledFooterElement = styled('footer')`
     font-family: base;
     font-size: 0.75rem;
-    background-color: neutrals.white.base;
+    background-color: white;
     border-bottom: solid 1rem ${th.color('primary.base')};
     color: text.body;
     font-weight: 500;
