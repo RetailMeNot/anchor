@@ -10,7 +10,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 interface SiteLinkProps {
     children?: any;
