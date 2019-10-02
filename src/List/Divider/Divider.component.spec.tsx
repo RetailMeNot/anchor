@@ -1,14 +1,19 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// VENDOR
 import { shallow, mount } from 'enzyme';
-// COMPONENT
+import { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
+import { RootTheme } from '../../theme';
 import { Divider } from './Divider.component';
 
 describe('Component: Divider', () => {
     it('should be defined', () => {
-        const subject = <Divider />;
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Divider />
+            </ThemeProvider>
+        );
         const wrapper = mount(subject);
         const component = shallow(subject);
 

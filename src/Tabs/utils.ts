@@ -64,7 +64,7 @@ const TabVariants: {
                         ? '0 3px'
                         : '3px 0',
                     fontWeight: active ? 600 : undefined,
-                    color: active ? undefined : 'neutrals.ash.dark',
+                    color: active ? undefined : 'text.meta',
                 }),
         },
         pane: css({}),

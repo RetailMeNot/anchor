@@ -37,7 +37,7 @@ exports[`Component: Title should be defined 1`] = `
 >
   <span
     className="c1 anchor-typography"
-    color="neutrals.ash.dark"
+    color="text.meta"
     scale={12}
   >
     Title

@@ -37,16 +37,13 @@ const StyledLabel = styled('label')<RadioProps>`
         z-index: 1;
         border-radius: circular;
         background-color: white;
+        border: base;
 
         ${({ size }) =>
             css({
                 width: size,
                 height: size,
             })}
-        ${({ disabled }) => css`
-            border: 1px solid
-                ${th.color(disabled ? 'text.disabled' : 'neutrals.ash.light')};
-        `}
     }
 
     &:after {

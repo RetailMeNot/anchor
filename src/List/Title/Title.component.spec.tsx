@@ -1,11 +1,10 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// VENDOR
 import { shallow, mount } from 'enzyme';
-import { RootTheme } from '../../theme';
 import { ThemeProvider } from '@xstyled/styled-components';
-// COMPONENT
+// ANCHOR
+import { RootTheme } from '../../theme';
 import { Title } from './Title.component';
 
 // TEST SETUP

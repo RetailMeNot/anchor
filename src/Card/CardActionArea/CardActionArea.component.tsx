@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 export interface CardActionAreaProps
     extends React.HTMLAttributes<HTMLDivElement> {
@@ -18,7 +17,7 @@ const StyledCardActionArea = styled('div')<CardActionAreaProps>`
     display: inline-block;
     font-family: base;
     width: 100%;
-    border-top: solid thin ${th.color('neutrals.silver.dark')};
+    border-top: light;
     ${({ backgroundColor = 'white' }: CardActionAreaProps) =>
         css({ backgroundColor })};
 `;

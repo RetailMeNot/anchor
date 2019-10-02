@@ -19,8 +19,7 @@ const StyledDivider = styled('div')<DividerProps>`
     padding: 0.5rem 1rem;
     hr {
         border: none;
-        border-top: solid thin;
-        border-top-color: neutrals.silver.dark;
+        border-top: light;
     }
 `;
 

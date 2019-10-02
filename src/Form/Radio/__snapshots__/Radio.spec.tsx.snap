@@ -33,9 +33,9 @@ exports[`Component: Radio can be checked 1`] = `
   z-index: 1;
   border-radius: 1000px;
   background-color: white;
+  border: thin solid #D3D3D3;
   width: 1.375rem;
   height: 1.375rem;
-  border: 1px solid #D3D3D3;
 }
 
 .c0:after {
@@ -96,9 +96,9 @@ exports[`Component: Radio should be defined 1`] = `
   z-index: 1;
   border-radius: 1000px;
   background-color: white;
+  border: thin solid #D3D3D3;
   width: 1.375rem;
   height: 1.375rem;
-  border: 1px solid #D3D3D3;
 }
 
 .c0:after {
@@ -158,9 +158,9 @@ exports[`Component: Radio should be disableable 1`] = `
   z-index: 1;
   border-radius: 1000px;
   background-color: white;
+  border: thin solid #D3D3D3;
   width: 1.375rem;
   height: 1.375rem;
-  border: 1px solid #D3D3D3;
 }
 
 .c0:after {

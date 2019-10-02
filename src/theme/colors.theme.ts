@@ -117,6 +117,7 @@ export interface ColorsThemeSchema {
 
     text: {
         body: string;
+        meta: string;
         link: {
             base: string;
             hover: string;
@@ -165,6 +166,7 @@ export const ColorsTheme: ColorsThemeSchema = {
     },
     text: {
         body: colors.charcoal.base,
+        meta: colors.ash.dark,
         link: {
             base: colors.savvyCyan.dark,
             hover: colors.savvyCyan.dark,

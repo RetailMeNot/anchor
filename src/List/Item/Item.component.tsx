@@ -41,7 +41,7 @@ const StyledItem = styled('a')<ItemProps>`
     }
 
     &.active {
-        background: ${th.color('neutrals.silver.base')};
+        background: ${th.color('background.body')};
     }
 `;
 

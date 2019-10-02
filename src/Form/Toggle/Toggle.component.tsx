@@ -85,8 +85,6 @@ const Switch = styled('span')<ToggleProps>`
             height: ${knobSize};
         `}
         border-radius: circular;
-
-        // background-color: neutrals.ash.dark;
         transform: translate(0, -50%);
 
         ${({ checked, disabled, knobSize, trackWidth, toggleColor }) =>

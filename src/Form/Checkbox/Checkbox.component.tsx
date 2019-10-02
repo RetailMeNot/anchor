@@ -92,7 +92,7 @@ export const Checkbox = forwardRef(
             htmlFor={id}
             color={color}
             backgroundColor={
-                backgroundColor || (disabled ? 'neutrals.silver.base' : 'white')
+                backgroundColor || (disabled ? 'background.body' : 'white')
             }
             size={size}
             checked={checked}
