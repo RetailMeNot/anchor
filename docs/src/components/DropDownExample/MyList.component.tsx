@@ -5,31 +5,14 @@
  */
 
 import * as React from 'react';
-import styled from '@xstyled/styled-components';
-import { colors } from '@retailmenot/anchor';
-
-const StyledMyList = styled('ul')`
-    width: 100%;
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-        margin: 0;
-        padding: 0.5rem 2rem;
-        border-bottom: solid ${colors.savvyCyan.base} 1px;
-
-        &:last-child {
-            border-bottom-style: none;
-        }
-    }
-`;
+import { List, ListDivider, ListItem, ListTitle } from '@retailmenot/anchor';
 
 export const MyList = () => (
-    <StyledMyList>
-        <li>Not Actually A Link,</li>
-        <li>But An Example of Possibilities,</li>
-        <li>Because Anything Could be Here...</li>
-    </StyledMyList>
+    <List>
+        <ListTitle>I Am a Title</ListTitle>
+        <ListItem>I Am Item #1</ListItem>
+        <ListItem>I Am Item #2</ListItem>
+        <ListDivider />
+        <ListItem>I Am Item #3</ListItem>
+    </List>
 );
