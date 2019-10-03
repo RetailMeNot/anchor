@@ -157,7 +157,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c2 anchor-typography c3 lg"
-        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -170,7 +169,6 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
     >
       <span
         className="c4 anchor-typography c3 lg"
-        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>
@@ -353,7 +351,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c3 anchor-typography c4 lg"
-        color="neutrals.charcoal.light"
       >
         Result Item 1
       </span>
@@ -367,7 +364,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
     >
       <span
         className="c5 anchor-typography c4 lg"
-        color="neutrals.charcoal.light"
       >
         Result Item 2
       </span>

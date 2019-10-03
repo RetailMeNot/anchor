@@ -85,7 +85,7 @@ storiesOf('Components/Typography', module)
                 <div>
                     {scales.map((scale: any) => (
                         <div key={scale}>
-                            <Typography color="text.body" scale={scale}>
+                            <Typography scale={scale}>
                                 Font size is {scale}px | Scale value = {scale}
                             </Typography>
                         </div>

@@ -84,7 +84,13 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     lineHeight?: number | string;
 }
 
-const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
+export interface StyledTypographyProps extends TypographyProps {
+    $color?: 'inherit' | 'initial' | string;
+}
+
+const StyledTypography = (tag: TypographyTags) => styled(tag)<
+    StyledTypographyProps
+>`
     box-sizing: border-box;
     font-family: base;
     margin: 0;
@@ -111,9 +117,9 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<TypographyProps>`
 
     // Prop overrides. We don't have any defaults here because then they
     // would always override the variants above.
-    ${({ color, align, display, transform, lineHeight, size, weight }) =>
+    ${({ $color, align, display, transform, lineHeight, size, weight }) =>
         css({
-            color,
+            color: $color,
             textAlign: align,
             display,
             textTransform: transform,
@@ -134,11 +140,13 @@ export const Typography = ({
     className,
     children,
     tag = 'span',
+    color,
     ...props
 }: TypographyProps): JSX.Element =>
     React.createElement(StyledTypography(tag), {
         children,
         tag,
+        $color: color,
         className: classNames('anchor-typography', className),
         ...props,
     });

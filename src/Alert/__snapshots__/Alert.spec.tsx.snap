@@ -53,7 +53,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c1 small {
@@ -66,7 +66,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -150,7 +149,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c3 small {
@@ -197,7 +196,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -255,7 +253,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c1 small {
@@ -268,7 +266,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -352,7 +349,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c3 small {
@@ -399,7 +396,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -457,7 +453,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c1 small {
@@ -470,7 +466,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -554,7 +549,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c3 small {
@@ -597,7 +592,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -655,7 +649,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c1 small {
@@ -668,7 +662,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -752,7 +745,7 @@ Array [
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
+  color: #808080;
 }
 
 .c3 small {
@@ -800,7 +793,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>

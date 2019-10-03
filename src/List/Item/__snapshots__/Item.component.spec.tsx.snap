@@ -123,7 +123,6 @@ exports[`Component: Item should be defined 1`] = `
 >
   <span
     className="c1 anchor-typography c2 lg"
-    color="neutrals.charcoal.light"
   >
     Item
   </span>

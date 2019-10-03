@@ -34,9 +34,7 @@ storiesOf('Components/Tabs', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <GlobalStyle
-                    background={
-                        text('html bg', 'neutrals.silver.light') || undefined
-                    }
+                    background={text('html bg', 'background.body') || undefined}
                 />
                 <Tabs
                     variant={select<Variant>(
