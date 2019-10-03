@@ -1,6 +1,6 @@
 // Theme Files
 import { typography } from './typography.theme';
-import { ColorsTheme, colors } from './colors.theme';
+import { ColorsTheme } from './colors.theme';
 import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
 import { fonts } from './fonts.theme';
 // TODO: ============================================================ move all of these v consts to a different location
@@ -37,9 +37,9 @@ export const RootTheme = {
     // or find a way to reference the colors.border colors here
     // e.g. `thin solid borders.base`
     borders: {
-        light: `thin solid ${colors.silver.dark}`,
-        base: `thin solid ${colors.ash.light}`,
-        dark: `thin solid ${colors.ash.dark}`,
+        light: `thin solid ${ColorsTheme.borders.light}`,
+        base: `thin solid ${ColorsTheme.borders.base}`,
+        dark: `thin solid ${ColorsTheme.borders.dark}`,
     },
 };
 
