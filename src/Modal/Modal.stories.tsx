@@ -207,7 +207,7 @@ storiesOf('Components/Modal', module)
                         width={text('width', '30rem')}
                         margin={text('margin', 'auto')}
                         background="linear-gradient(170deg, #DF206C 0%, #F16667 50%, white calc(50% + 1.25px))"
-                        color={text('color', colors.white.base)}
+                        color={text('color', 'white')}
                         backgroundProps={{
                             opacity: number('backgroundProps.opacity', 0.2),
                         }}

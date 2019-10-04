@@ -8,7 +8,7 @@ exports[`Component: Hero should be defined 1`] = `
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   min-height: 7.5rem;
   display: -webkit-box;
@@ -93,7 +93,7 @@ exports[`Component: Hero should render with custom content 1`] = `
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   min-height: 7.5rem;
   display: -webkit-box;
@@ -178,7 +178,7 @@ exports[`Component: Hero should render with title 1`] = `
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   min-height: 7.5rem;
   display: -webkit-box;
@@ -235,7 +235,7 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   min-height: 7.5rem;
   display: -webkit-box;

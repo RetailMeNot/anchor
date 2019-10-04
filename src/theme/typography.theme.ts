@@ -1,7 +1,6 @@
 // VENDOR
 import { FlattenSimpleInterpolation } from '@xstyled/styled-components';
 // THEME
-import { colors } from './colors.theme';
 import { fonts } from './fonts.theme';
 
 export type TypographyTags =
@@ -155,7 +154,7 @@ export const typography: TypographyTheme = {
         },
         code: {
             fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
-            background: colors.charcoal.base,
+            backgroundColor: 'text.body',
             display: 'block',
             padding: '1rem',
             borderRadius: 'base',

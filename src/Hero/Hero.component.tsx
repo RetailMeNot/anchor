@@ -10,7 +10,6 @@ import {
     TypographyProps,
     TextAlign,
 } from '../Typography/Typography.component';
-import { colors } from '../theme';
 
 // Hero
 // ------------------------------------------------------------------------------------------------------------------
@@ -29,7 +28,7 @@ const StyledHero = styled('section')<StyledHeroProps>`
     width: 100%;
     margin: 0 auto;
     display: block;
-    color: ${({ color = colors.white.base }) => color};
+    color: ${({ color = 'white' }) => color};
     text-align: ${props => props.align};
     min-height: ${props => props.minHeight};
     display: flex;

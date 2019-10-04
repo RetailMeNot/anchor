@@ -8,7 +8,7 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 import { Card } from './Card.component';
 import { DropDown } from '../DropDown';
 import { Ellipses } from '../Icon';
-import { colors, RootTheme } from '../theme';
+import { RootTheme } from '../theme';
 import { Button } from '../Button';
 import { CardActionArea } from './CardActionArea';
 // README
@@ -42,8 +42,8 @@ const TwoRowWithActionCardContent = () => (
             <svg width="180" height="90" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fillRule="evenodd">
                     <path
-                        stroke="#979797"
-                        fill="#D8D8D8"
+                        stroke="#E7E7E7"
+                        fill="#F1F1F1"
                         d="M.5.5h179v89H.5z"
                     />
                     <path
@@ -68,7 +68,7 @@ const BrandCardContent = ({ title }: { title: string }) => (
                 <g fill="none" fillRule="evenodd">
                     <path
                         stroke="#979797"
-                        fill="#D8D8D8"
+                        fill="#F1F1F1"
                         d="M.5.5h119v59H.5z"
                     />
                     <path
@@ -103,7 +103,7 @@ const WideCardContent = ({ title }: { title: string }) => (
 );
 
 const ActionArea = () => (
-    <CardActionArea backgroundColor={colors.silver.light}>
+    <CardActionArea backgroundColor="background.light">
         <div>
             <div>
                 <Button variant="minimal" size="sm">
@@ -116,8 +116,8 @@ const ActionArea = () => (
 /* tslint:enable */
 
 const CardAction = (
-    <DropDown overlay={<div>123</div>}>
-        <Ellipses color={colors.ash.light} />
+    <DropDown overlay={<div>123</div>} position="bottomEnd">
+        <Button variant="minimal" circular prefix={<Ellipses />}></Button>
     </DropDown>
 );
 

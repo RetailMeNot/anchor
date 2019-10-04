@@ -11,11 +11,11 @@ import { Typography } from '../Typography';
 // README
 import * as README from './README.md';
 // THEME
-import { colors, RootTheme } from '../theme';
+import { RootTheme } from '../theme';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
-    background-color: ${colors.grapePurchase.base};
+    background-color: primary.base;
     color: white;
 `;
 

@@ -7,7 +7,7 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Input } from './Input.component';
 import { Search, Mobile } from '../../Icon';
-import { colors, RootTheme } from '../../theme';
+import { RootTheme } from '../../theme';
 import { Button } from '../../Button';
 // README
 import * as README from './README.md';
@@ -44,20 +44,20 @@ const InputStories = () => {
                         <Input
                             placeholder="Enter a number here"
                             type="number"
-                            suffix={<Search color={colors.ash.dark} />}
+                            suffix={<Search color="text.placeholder" />}
                         />
                     </div>
                     <div>
                         <Input
                             placeholder="(512) 666-6666"
                             label="Enter a phone number here"
-                            prefix={<Mobile color={colors.ash.dark} />}
+                            prefix={<Mobile color="text.placeholder" />}
                             type="tel"
                         />
                     </div>
                     <div>
                         <Input
-                            prefix={<Search color={colors.ash.dark} />}
+                            prefix={<Search color="text.placeholder" />}
                             type="number"
                         />
                     </div>

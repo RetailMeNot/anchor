@@ -8,7 +8,7 @@ import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { CardActionArea } from './CardActionArea.component';
 // THEME
-import { colors, RootTheme } from '../../theme';
+import { RootTheme } from '../../theme';
 // README
 import * as README from './README.md';
 
@@ -28,7 +28,7 @@ storiesOf('Components/Card/CardActionArea', module)
                 <CardActionArea
                     backgroundColor={color(
                         'Background Color',
-                        colors.silver.light
+                        'background.body'
                     )}
                 >
                     The action area is a large section dedicated for card

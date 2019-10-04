@@ -62,6 +62,12 @@ const ShowHitbox = styled('div')`
     }
 `;
 
+const BlockBox = styled('div')`
+    border: light;
+    width: 375px;
+    padding: 1rem;
+`;
+
 storiesOf('Components/Button', module)
     .addParameters({
         readme: {
@@ -338,7 +344,7 @@ storiesOf('Components/Button', module)
                     <Heading>Block Buttons</Heading>
                     <div
                         style={{
-                            border: `2px solid ${colors.silver.base}`,
+                            border: 'light',
                             width: '375px',
                             padding: '1rem',
                         }}
@@ -596,13 +602,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button variant="outline" block>
@@ -615,7 +615,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledStoryPrime>
         </ThemeProvider>
     ))
@@ -864,13 +864,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button variant="minimal" size="md" block>
@@ -883,7 +877,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledStoryPrime>
         </ThemeProvider>
     ))
@@ -1329,13 +1323,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse block>
@@ -1348,7 +1336,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
@@ -1578,13 +1566,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse variant="outline" size="md" block>
@@ -1603,7 +1585,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
@@ -1833,13 +1815,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse variant="minimal" size="md" block>
@@ -1858,7 +1834,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
