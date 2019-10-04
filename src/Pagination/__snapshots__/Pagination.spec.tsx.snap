@@ -87,7 +87,7 @@ exports[`Component: Pagination should be defined. 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
@@ -322,12 +322,6 @@ exports[`Component: Pagination should be defined. 1`] = `
 </div>
 `;
 
-exports[`Component: Pagination should behave properly when uncontrolled. 1`] = `"<div class=\\"sc-fgfRvd lalOmR anchor-pagination\\"><button class=\\"sc-emmjRN bQpYWe anchor-button\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN bDhhVq anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt Gcupa anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
-
-exports[`Component: Pagination should behave properly when uncontrolled. 2`] = `"<div class=\\"sc-fgfRvd lalOmR anchor-pagination\\"><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN bDhhVq anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>2</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>3</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>4</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>5</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt Gcupa anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
-
-exports[`Component: Pagination should behave properly when uncontrolled. 3`] = `"<div class=\\"sc-fgfRvd lalOmR anchor-pagination\\"><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-left anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>1</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt Gcupa anchor-icon ellipses anchor-button-prefix\\" scale=\\"md\\"><svg width=\\"16\\" height=\\"16\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><path d=\\"M3.5 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 10a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\\" id=\\"ellipsis-a\\"></path></defs><g fill=\\"none\\" fill-rule=\\"evenodd\\"><path d=\\"M0 0h16v16H0z\\"></path><use fill=\\"currentColor\\" xlink:href=\\"#ellipsis-a\\"></use></g></svg></span></button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>16</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>17</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>18</button><button class=\\"sc-emmjRN hEmChG anchor-button\\"><div class=\\"sc-eerKOB gUivrk\\"></div>19</button><button class=\\"sc-emmjRN bDhhVq anchor-button active\\"><div class=\\"sc-eerKOB gUivrk\\"></div>20</button><button class=\\"sc-emmjRN bQpYWe anchor-button\\" disabled=\\"\\"><div class=\\"sc-eerKOB gUivrk\\"></div><span class=\\"sc-CtfFt gISVeu anchor-icon chevron-right anchor-button-prefix\\" scale=\\"lg\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 16 16\\" xmlns=\\"http://www.w3.org/2000/svg\\"><path d=\\"M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z\\" fill=\\"currentColor\\" fill-rule=\\"nonzero\\"></path></svg></span></button></div>"`;
-
 exports[`Component: Pagination should render on the last page. 1`] = `
 .c3 {
   position: absolute;
@@ -415,7 +409,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
@@ -752,7 +746,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
@@ -1164,7 +1158,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
