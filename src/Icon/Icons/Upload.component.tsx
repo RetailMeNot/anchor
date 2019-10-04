@@ -19,6 +19,7 @@ export const Upload = ({
     <StyledIcon
         className={classNames('anchor-icon upload', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Upload = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#upload-a" />
+                <use fill="currentColor" xlinkHref="#upload-a" />
             </g>
         </svg>
     </StyledIcon>

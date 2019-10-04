@@ -19,6 +19,7 @@ export const RetailMeNotLogo = ({
     <StyledIcon
         className={classNames('anchor-icon retail-me-not-logo', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const RetailMeNotLogo = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#retail-me-not-logo-a" />
+                <use fill="currentColor" xlinkHref="#retail-me-not-logo-a" />
             </g>
         </svg>
     </StyledIcon>

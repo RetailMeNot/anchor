@@ -19,6 +19,7 @@ export const Laptop = ({
     <StyledIcon
         className={classNames('anchor-icon laptop', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Laptop = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#laptop-a" />
+                <use fill="currentColor" xlinkHref="#laptop-a" />
             </g>
         </svg>
     </StyledIcon>

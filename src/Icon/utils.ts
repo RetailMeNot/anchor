@@ -1,5 +1,5 @@
 // VENDOR
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import { margin as marginStyles } from '@xstyled/system';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -9,6 +9,10 @@ export interface IconSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
     color?: string;
     className?: string;
     children?: any;
+}
+
+interface StyledIconSVGProps extends IconSVGProps {
+    $color?: string;
 }
 
 export const Scale = {
@@ -23,12 +27,13 @@ export const Scale = {
 export const DefaultColor = 'currentColor';
 export const DefaultScale = 'md';
 
-export const StyledIcon = styled('span')<IconSVGProps>`
+export const StyledIcon = styled('span')<StyledIconSVGProps>`
     ${marginStyles};
     display: inline-block;
-    height: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};
-    width: ${({ scale = 'md' }: IconSVGProps) => `${Scale[scale] / 16}rem`};
+    height: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
+    width: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
     line-height: 0;
+    ${({ $color }) => css({ color: $color })}
 `;
 
 StyledIcon.displayName = 'AnchorIcon';

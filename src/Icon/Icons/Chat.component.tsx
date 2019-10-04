@@ -19,6 +19,7 @@ export const Chat = ({
     <StyledIcon
         className={classNames('anchor-icon chat', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const Chat = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#chat-a" />
+                <use fill="currentColor" xlinkHref="#chat-a" />
             </g>
         </svg>
     </StyledIcon>

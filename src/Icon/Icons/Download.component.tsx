@@ -19,6 +19,7 @@ export const Download = ({
     <StyledIcon
         className={classNames('anchor-icon download', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const Download = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#download-a" />
+                <use fill="currentColor" xlinkHref="#download-a" />
             </g>
         </svg>
     </StyledIcon>

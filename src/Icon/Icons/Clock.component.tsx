@@ -19,6 +19,7 @@ export const Clock = ({
     <StyledIcon
         className={classNames('anchor-icon clock', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,10 +38,10 @@ export const Clock = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#clock-a" />
+                <use fill="currentColor" xlinkHref="#clock-a" />
                 <path
                     d="M10.328 8.667h-2v-3c0-.367-.3-.667-.667-.667-.366 0-.666.3-.666.667v3.667c0 .366.3.666.666.666h2.667c.367 0 .667-.3.667-.666 0-.367-.3-.667-.667-.667z"
-                    fill={color}
+                    fill="currentColor"
                 />
             </g>
         </svg>

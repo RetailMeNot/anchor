@@ -43,6 +43,7 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <div
@@ -433,6 +434,7 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <div
@@ -520,6 +522,7 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <div
@@ -607,6 +610,7 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <div
@@ -692,6 +696,7 @@ exports[`Component: Badge should render the count with absolute positioning if \
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <div

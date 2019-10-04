@@ -19,6 +19,7 @@ export const Ellipses = ({
     <StyledIcon
         className={classNames('anchor-icon ellipses', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const Ellipses = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#ellipsis-a" />
+                <use fill="currentColor" xlinkHref="#ellipsis-a" />
             </g>
         </svg>
     </StyledIcon>

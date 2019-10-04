@@ -19,6 +19,7 @@ export const Pencil = ({
     <StyledIcon
         className={classNames('anchor-icon pencil', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Pencil = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#pencil-a" />
+                <use fill="currentColor" xlinkHref="#pencil-a" />
             </g>
         </svg>
     </StyledIcon>

@@ -8,9 +8,11 @@ import { withKnobs } from '@storybook/addon-knobs';
 // TODO: Add this back when the library supports the newest storybook build
 // import { addReadme } from 'storybook-readme';
 
-addDecorator(withInfo({
-  source:false,
-}));
+addDecorator(
+    withInfo({
+        source: false,
+    })
+);
 // addDecorator(addReadme);
 addDecorator(withA11y);
 addDecorator(withKnobs);
@@ -18,7 +20,7 @@ addDecorator(withKnobs);
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.tsx?$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+    req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);

@@ -19,6 +19,7 @@ export const CloseSmall = ({
     <StyledIcon
         className={classNames('anchor-icon close-small', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const CloseSmall = ({
                 />
                 <path
                     d="M10.017 6.591L6.59 10.017c-.225.226-.594.276-.81.057l-.025-.022c-.24-.24-.189-.608.037-.834l3.425-3.425c.225-.226.595-.277.811-.058l.025.023c.24.24.188.607-.037.833l-.283-.282.05.05-3.426 3.425c.058-.058.076-.185-.06-.319l.025.023c-.112-.112-.24-.095-.297-.037L9.45 6.026l.283.283-.283-.283c-.058.058-.075.185.06.318l-.025-.023c.112.113.24.095.298.037l.233.233z"
-                    fill={color}
+                    fill="currentColor"
                     fillRule="nonzero"
                 />
             </g>

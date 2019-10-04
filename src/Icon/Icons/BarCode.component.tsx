@@ -19,6 +19,7 @@ export const BarCode = ({
     <StyledIcon
         className={classNames('anchor-icon bar-code', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -38,7 +39,7 @@ export const BarCode = ({
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
                 <use
-                    fill={color}
+                    fill="currentColor"
                     xlinkHref="#bar-code-a"
                     transform="translate(0 2)"
                 />

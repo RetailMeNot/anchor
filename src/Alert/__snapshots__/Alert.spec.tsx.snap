@@ -75,6 +75,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -275,6 +276,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -475,6 +477,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -671,6 +674,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {

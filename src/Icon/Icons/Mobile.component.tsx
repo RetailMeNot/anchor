@@ -19,6 +19,7 @@ export const Mobile = ({
     <StyledIcon
         className={classNames('anchor-icon mobile', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Mobile = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#mobile-a" />
+                <use fill="currentColor" xlinkHref="#mobile-a" />
             </g>
         </svg>
     </StyledIcon>

@@ -19,6 +19,7 @@ export const SuccessOutline = ({
     <StyledIcon
         className={classNames('anchor-icon success-outline', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const SuccessOutline = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#success-outline-a" />
+                <use fill="currentColor" xlinkHref="#success-outline-a" />
             </g>
         </svg>
     </StyledIcon>

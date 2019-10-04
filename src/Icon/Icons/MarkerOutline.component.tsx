@@ -19,6 +19,7 @@ export const MarkerOutline = ({
     <StyledIcon
         className={classNames('anchor-icon marker-outline', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const MarkerOutline = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#marker-outline-a" />
+                <use fill="currentColor" xlinkHref="#marker-outline-a" />
             </g>
         </svg>
     </StyledIcon>

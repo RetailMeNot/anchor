@@ -6,6 +6,7 @@ exports[`Component: Checkbox can be checked 1`] = `
   height: 0.875rem;
   width: 0.875rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c2 {

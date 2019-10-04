@@ -19,6 +19,7 @@ export const Dislike = ({
     <StyledIcon
         className={classNames('anchor-icon dislike', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Dislike = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#dislike-a" />
+                <use fill="currentColor" xlinkHref="#dislike-a" />
             </g>
         </svg>
     </StyledIcon>

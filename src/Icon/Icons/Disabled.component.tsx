@@ -19,6 +19,7 @@ export const Disabled = ({
     <StyledIcon
         className={classNames('anchor-icon disabled', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const Disabled = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#disabled-a" />
+                <use fill="currentColor" xlinkHref="#disabled-a" />
             </g>
         </svg>
     </StyledIcon>

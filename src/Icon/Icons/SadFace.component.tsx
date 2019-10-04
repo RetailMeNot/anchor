@@ -19,6 +19,7 @@ export const SadFace = ({
     <StyledIcon
         className={classNames('anchor-icon sad-face', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -29,7 +30,7 @@ export const SadFace = ({
         >
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <g transform="translate(2 3)" fill={color}>
+                <g transform="translate(2 3)" fill="currentColor">
                     <circle opacity=".9" cx="2.75" cy="1.25" r="1.25" />
                     <circle opacity=".9" cx="9.25" cy="1.25" r="1.25" />
                     <path

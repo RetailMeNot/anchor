@@ -6,6 +6,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c3 + .c0 {
@@ -240,6 +241,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c3 + .c0 {
@@ -470,6 +472,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   height: 1.5rem;
   width: 1.5rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c3 + .c0 {
@@ -6062,6 +6065,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c3 + .c0 {
@@ -6186,6 +6190,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c3 + .c0 {

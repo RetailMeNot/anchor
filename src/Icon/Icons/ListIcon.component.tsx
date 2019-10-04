@@ -19,6 +19,7 @@ export const ListIcon = ({
     <StyledIcon
         className={classNames('anchor-icon list', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg

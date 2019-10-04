@@ -19,6 +19,7 @@ export const Lock = ({
     <StyledIcon
         className={classNames('anchor-icon lock', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -29,7 +30,7 @@ export const Lock = ({
         >
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <g transform="translate(1 .333)" fill={color}>
+                <g transform="translate(1 .333)" fill="currentColor">
                     <path
                         d="M10.4 6.367V4A2.4 2.4 0 0 0 8 1.6H6A2.4 2.4 0 0 0 3.6 4v2.367h6.8zM6 .4h2A3.6 3.6 0 0 1 11.6 4v3.567H2.4V4A3.6 3.6 0 0 1 6 .4z"
                         fillRule="nonzero"
