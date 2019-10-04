@@ -15,7 +15,7 @@ import {
 } from './SidebarLayout.component';
 import { Footer } from '../Footer';
 import { Sider } from '../Sider';
-import { colors, RootTheme } from '../../theme/index';
+import { RootTheme } from '../../theme/index';
 import { Page } from '../Page';
 // README
 import * as README from './README.md';
@@ -23,7 +23,7 @@ import * as README from './README.md';
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
 `;
 
 // Stories

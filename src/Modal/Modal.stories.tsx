@@ -20,7 +20,7 @@ const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
 
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
     width: 100vw;
     height: 120vh;
 `;
@@ -206,11 +206,7 @@ storiesOf('Components/Modal', module)
                         height={text('height', '25rem')}
                         width={text('width', '30rem')}
                         margin={text('margin', 'auto')}
-                        background={`linear-gradient(
-                                170deg, ${colors.flashPink.base} 0%,
-                                ${colors.fireSale.light} 50%,
-                                ${colors.white.base} calc(50% + 1.25px))
-                            `}
+                        background="linear-gradient(170deg, #DF206C 0%, #F16667 50%, white calc(50% + 1.25px))"
                         color={text('color', colors.white.base)}
                         backgroundProps={{
                             opacity: number('backgroundProps.opacity', 0.2),

@@ -146,7 +146,6 @@ export const typography: TypographyTheme = {
             padding: '0.5rem 0 0.5rem 1rem',
             borderLeft: 'light',
             borderLeftWidth: '0.25rem',
-            color: `${colors.charcoal.base}`,
             fontStyle: 'italic',
             lineHeight: '1.5rem',
         },
@@ -156,12 +155,12 @@ export const typography: TypographyTheme = {
         },
         code: {
             fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
-            background: `${colors.charcoal.base}`,
+            background: colors.charcoal.base,
             display: 'block',
             padding: '1rem',
             borderRadius: 'base',
             margin: '2rem 0',
-            color: `${colors.white.base}`,
+            color: 'white',
             fontSize: '0.875rem',
         },
         pre: {

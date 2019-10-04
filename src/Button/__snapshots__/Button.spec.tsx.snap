@@ -172,7 +172,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 1rem;
   height: 3rem;
@@ -403,7 +403,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 1rem;
   height: 3rem;
@@ -634,7 +634,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0;
   font-size: 1rem;
   height: 3rem;
@@ -2522,8 +2522,8 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
   opacity: 0.5;
   cursor: not-allowed;
@@ -2649,8 +2649,8 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -2671,13 +2671,13 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 }
 
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus:after {
@@ -2796,8 +2796,8 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -2821,13 +2821,13 @@ Array [
 }
 
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus:after {
@@ -2954,8 +2954,8 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -2964,8 +2964,8 @@ Array [
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1 + .c0 {
@@ -2981,13 +2981,13 @@ Array [
 }
 
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus:after {
@@ -3114,8 +3114,8 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -3124,8 +3124,8 @@ Array [
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1 + .c0 {
@@ -3141,13 +3141,13 @@ Array [
 }
 
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:focus {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
 }
 
 .c1:after {
@@ -3215,7 +3215,7 @@ exports[`Component: Button Sizes should render a md button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -3518,7 +3518,7 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 2rem;
   font-size: 1rem;
   height: 3.5rem;
@@ -3718,7 +3718,7 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1rem;
   font-size: 0.875rem;
   height: 2.5rem;
@@ -3925,7 +3925,7 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 0.5rem;
   font-size: 0.75rem;
   height: 2rem;
@@ -4135,7 +4135,7 @@ exports[`Component: Button Theme Provided should use custom size variants from t
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 4rem;
   font-size: 1.5rem;
   height: 8rem;
@@ -4973,7 +4973,7 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 .c1:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1:focus:after {
@@ -5069,7 +5069,7 @@ Array [
   min-width: 12.5rem;
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1 + .c0 {
@@ -5081,7 +5081,7 @@ Array [
 .c1:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1:focus:after {
@@ -5177,7 +5177,7 @@ Array [
   min-width: 12.5rem;
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1 + .c0 {
@@ -5189,7 +5189,7 @@ Array [
 .c1:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1:focus:after {
@@ -5289,7 +5289,7 @@ Array [
   min-width: 12.5rem;
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1 + .c0 {
@@ -5301,7 +5301,7 @@ Array [
 .c1:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
-  color: #FFFFFF;
+  color: white;
 }
 
 .c1:after {
@@ -5393,7 +5393,7 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #14A382;
   background-color: #14A382;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -5546,7 +5546,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -5614,7 +5614,7 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -5702,7 +5702,7 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -5792,7 +5792,7 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -5886,7 +5886,7 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -6007,7 +6007,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -6099,7 +6099,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -6224,7 +6224,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -6340,7 +6340,7 @@ exports[`Component: Button should be defined 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;

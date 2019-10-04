@@ -12,7 +12,7 @@ import {
     DEFAULT_CONTENT_WIDTH,
     TRANSPARENT,
 } from './Layout.component';
-import { colors, RootTheme } from '../theme';
+import { RootTheme } from '../theme';
 import { Footer } from './Footer';
 import { Page } from './Page';
 // README
@@ -21,7 +21,7 @@ import * as README from './README.md';
 // Styled Components
 // ------------------------------------------------------------------------------------------------------------------
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
 `;
 
 // Stories

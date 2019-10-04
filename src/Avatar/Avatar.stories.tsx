@@ -16,7 +16,7 @@ import { colors, RootTheme } from '../theme';
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
     background-color: ${colors.grapePurchase.base};
-    color: ${colors.white.base};
+    color: white;
 `;
 
 storiesOf('Components/Avatar', module)

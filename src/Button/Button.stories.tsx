@@ -26,8 +26,8 @@ const StyledStoryPrime = styled(StyledStory)`
 
 const StyledReverseStory = styled(StyledStory)`
     width: 1200px;
-    background-color: ${colors.grapePurchase.base};
-    color: ${colors.white.base};
+    background-color: primary.base;
+    color: white;
 `;
 
 const Label = styled(Typography)`
@@ -43,7 +43,7 @@ const Label = styled(Typography)`
 
 const ReverseLabel = styled(Label)`
     && {
-        color: ${colors.white.base};
+        color: white;
     }
 `;
 

@@ -16,11 +16,11 @@ import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
     width: 100vw;
 `;
 
-const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
+const tealGradient = `linear-gradient(224deg, #00CCCD, #00E0D1)`;
 
 storiesOf('Components/Hero', module)
     .addParameters({

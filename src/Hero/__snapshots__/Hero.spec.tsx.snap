@@ -57,7 +57,7 @@ exports[`Component: Hero should render with custom content 1`] = `
   -moz-osx-font-smoothing: grayscale;
   border: solid thin #0998D6;
   background-color: #0998D6;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;

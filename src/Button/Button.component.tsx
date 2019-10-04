@@ -135,37 +135,33 @@ export const BUTTON_THEME = {
             base: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          border: solid thin ${colors.white.base};
-                          background-color: ${colors.white.base};
+                          border: solid thin white;
+                          background-color: white;
                           color: ${colorTheme.base};
                       `
                     : css`
                           border: solid thin ${colorTheme.base};
                           background-color: ${colorTheme.base};
-                          color: ${colors.white.base};
+                          color: white;
                       `,
             disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          border: solid thin ${colors.white.base};
-                          background-color: ${colors.white.base};
+                          border: solid thin white;
+                          background-color: white;
                           color: ${colorTheme.base};
                           opacity: 0.5;
                       `
                     : css`
                           border: solid thin ${colors.ash.light};
                           background-color: ${colors.ash.light};
-                          color: ${colors.ash.dark};
+                          color: text.meta;
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          border: solid thin
-                              ${transparentize(0.15, colors.white.base)};
-                          background-color: ${transparentize(
-                              0.15,
-                              colors.white.base
-                          )};
+                          border: solid thin rgba(255, 255, 255, 0.85);
+                          background-color: rgba(255, 255, 255, 0.85);
                           color: ${colorTheme.base};
                       `
                     : css`
@@ -175,22 +171,21 @@ export const BUTTON_THEME = {
             active: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          border: solid thin ${colors.white.base};
-                          background-color: ${colors.white.base};
+                          border: solid thin white;
+                          background-color: white;
                       `
                     : undefined,
             focus: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          border: solid thin ${colors.white.base};
-                          background-color: ${colors.white.base};
+                          border: solid thin white;
+                          background-color: white;
                       `
                     : undefined,
             focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          box-shadow: 0 0 0 2px
-                              ${transparentize(0.6, colors.white.base)};
+                          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
                       `
                     : css`
                           box-shadow: 0 0 0 2px
@@ -215,7 +210,7 @@ export const BUTTON_THEME = {
                     : css`
                           border: solid thin ${colors.ash.dark};
                           background-color: transparent;
-                          color: ${colors.ash.dark};
+                          color: text.meta;
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -227,13 +222,12 @@ export const BUTTON_THEME = {
                     : css`
                           background-color: ${colorTheme.dark};
                           border: solid thin ${colorTheme.dark};
-                          color: ${colors.white.base};
+                          color: white;
                       `,
             focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          box-shadow: 0 0 0 2px
-                              ${transparentize(0.6, colors.white.base)};
+                          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
                       `
                     : css`
                           box-shadow: 0 0 0 2px
@@ -252,12 +246,12 @@ export const BUTTON_THEME = {
                     ? css`
                           border: solid thin transparent;
                           background-color: transparent;
-                          color: ${colors.ash.dark};
+                          color: text.meta;
                       `
                     : css`
                           border: solid thin ${colors.ash.light};
                           background-color: ${colors.ash.light};
-                          color: ${colors.ash.dark};
+                          color: text.meta;
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -278,8 +272,7 @@ export const BUTTON_THEME = {
             focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
-                          box-shadow: 0 0 0 2px
-                              ${transparentize(0.6, colors.white.base)};
+                          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
                       `
                     : css`
                           box-shadow: 0 0 0 2px
