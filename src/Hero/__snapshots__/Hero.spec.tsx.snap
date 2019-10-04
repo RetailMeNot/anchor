@@ -161,6 +161,9 @@ exports[`Component: Hero should render with custom content 1`] = `
   </span>
   <button
     className="c4 c5 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     CTA
   </button>
