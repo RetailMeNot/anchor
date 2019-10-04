@@ -35,7 +35,11 @@ export const Calendar = ({
                     id="calendar-a"
                 />
             </defs>
-            <use fill="currentColor" xlinkHref="#calendar-a" fillRule="evenodd" />
+            <use
+                fill="currentColor"
+                xlinkHref="#calendar-a"
+                fillRule="evenodd"
+            />
         </svg>
     </StyledIcon>
 );

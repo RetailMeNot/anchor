@@ -37,7 +37,11 @@ export const Lightning = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill="currentColor" fillRule="nonzero" xlinkHref="#lightning-a" />
+                <use
+                    fill="currentColor"
+                    fillRule="nonzero"
+                    xlinkHref="#lightning-a"
+                />
             </g>
         </svg>
     </StyledIcon>

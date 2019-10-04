@@ -117,7 +117,7 @@ const ActionArea = () => (
 
 const CardAction = (
     <DropDown overlay={<div>123</div>} position="bottomEnd">
-        <Button variant="minimal" circular prefix={<Ellipses />}></Button>
+        <Button variant="minimal" circular prefix={<Ellipses />} />
     </DropDown>
 );
 
