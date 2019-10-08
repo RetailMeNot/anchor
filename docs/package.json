@@ -30,6 +30,7 @@
         "react-dom": "^16.10.2",
         "react-helmet": "^5.2.1",
         "react-live": "^2.0.1",
+        "react-load-script": "^0.0.6",
         "wcag-contrast": "^2.1.1"
     },
     "peerDependencies": {
@@ -44,7 +45,8 @@
         "develop": "gatsby develop",
         "start": "npm run develop",
         "lint": "prettier --write \"./?(src|components)/**/*.tsx\"",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scrape": "docker run -it --env-file=\"./docsearch-scraper/.env\" -e \"CONFIG=$(cat ./docsearch-scraper/config.json | jq -r tostring)\" algolia/docsearch-scraper"
     },
     "devDependencies": {
         "@mdx-js/loader": "^0.20.3",

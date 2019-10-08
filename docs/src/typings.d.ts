@@ -147,3 +147,15 @@ declare module 'react-awesome-styled-grid' {
 
     export function config(props: object): ConfigKeys;
 }
+
+declare module 'react-load-script' {
+    import * as React from 'react';
+    interface ScriptProps {
+        url: string;
+        onCreate?: () => void;
+        onLoad?: () => void;
+        onError?: () => void;
+    }
+
+    export default class extends React.Component<ScriptProps> {}
+}
