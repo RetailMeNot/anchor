@@ -9,3 +9,9 @@ export enum TEXT_ALIGNMENT {
     left = 'left',
     right = 'right',
 }
+
+export enum ITEM_TYPES {
+    divider = 'divider',
+    item = 'item',
+    title = 'title',
+}
