@@ -7,5 +7,5 @@ yarn-error.log
 /public
 .DS_Store
 
-# TODO: remove this once the scraper finds a permanent home
+# Temporary exclusion until I decide where this repo and its docker image live
 docsearch-scraper
