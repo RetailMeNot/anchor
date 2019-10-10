@@ -9,7 +9,7 @@ import styled from '@xstyled/styled-components';
 import { colors, Typography } from '@retailmenot/anchor';
 
 export const MouseOverMe = styled(Typography)`
-    background-color: ${colors.savvyCyan.base};
+    background-color: accent.base;
     width: 20rem;
     padding: 0.5rem 1rem;
 `;

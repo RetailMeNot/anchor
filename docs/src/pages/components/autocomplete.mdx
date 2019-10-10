@@ -29,7 +29,7 @@ property. This is an array of strings or objects with a **label** property that 
             'Result 4',
         ]}
         placeholder="Search here..."
-        prefix={<Search color={colors.ash.base} />}
+        prefix={<Search color="text.placeholder" />}
     />
 </div>
 ```
@@ -46,7 +46,7 @@ tells the <Link to="/components/list/">`List`</Link> component what child node t
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
         placeholder="Search here..."
-        prefix={<Search color={colors.ash.base} />}
+        prefix={<Search color="text.placeholder" />}
         dataSource={[
             {
                 label: 'Title of a section 1',
@@ -146,7 +146,7 @@ props.
             { label: 'Item 5', id: 5, someBoolean: true },
         ]}
         placeholder="Search here..."
-        prefix={<Search color={colors.ash.base} />}
+        prefix={<Search color="text.placeholder" />}
         resultTemplate={CustomResults}
     />
 </div>

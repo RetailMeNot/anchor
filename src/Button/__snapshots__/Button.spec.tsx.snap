@@ -1732,9 +1732,9 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 0.5;
-  border: solid thin #FFFFFF;
+  border: solid thin white;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   cursor: not-allowed;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -1878,9 +1878,9 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
+  border: solid thin white;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
@@ -1894,8 +1894,8 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 .c1:hover,
 .c1:focus,
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2035,15 +2035,15 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
+  border: solid thin white;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2054,8 +2054,8 @@ Array [
 .c1:hover,
 .c1:focus,
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2195,15 +2195,15 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
+  border: solid thin white;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2214,8 +2214,8 @@ Array [
 .c1:hover,
 .c1:focus,
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2359,15 +2359,15 @@ Array [
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #FFFFFF;
+  border: solid thin white;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 
@@ -2378,8 +2378,8 @@ Array [
 .c1:hover,
 .c1:focus,
 .c1:active {
-  border: solid thin #FFFFFF;
-  background-color: #FFFFFF;
+  border: solid thin white;
+  background-color: white;
   color: #595959;
 }
 

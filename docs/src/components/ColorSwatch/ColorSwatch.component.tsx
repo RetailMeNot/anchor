@@ -41,7 +41,7 @@ const StyledColorSwatch = styled.div<{
         right: 2rem;
         z-index: 10;
         color: ${colors.success.base};
-        background: ${colors.white.base};
+        background: white;
         border: 0.1rem solid ${colors.success.base};
     }
 `;

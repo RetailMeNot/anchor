@@ -166,8 +166,8 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
     ...props
 }: CollapseProps): React.ReactElement<CollapseProps> => {
     const [open, toggleOpen] = React.useState<boolean>(isOpen);
-    const IconOpened = openedIcon || <ChevronDown />;
-    const IconClosed = closedIcon || <ChevronUp />;
+    const IconOpened = openedIcon || <ChevronUp />;
+    const IconClosed = closedIcon || <ChevronDown />;
 
     // If the user provides custom openedText but not custom closedText
     // then use openedText for closedText as well

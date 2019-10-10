@@ -22,10 +22,11 @@
         "gatsby-source-filesystem": "^2.0.33",
         "gatsby-transformer-sharp": "^2.1.19",
         "html-react-parser": "^0.9.1",
+        "lodash.merge": "^4.6.2",
         "prism-react-renderer": "^0.1.7",
-        "react": "^16.9.0",
+        "react": "^16.10.2",
         "react-copy-to-clipboard": "^5.0.1",
-        "react-dom": "^16.9.0",
+        "react-dom": "^16.10.2",
         "react-helmet": "^5.2.1",
         "react-live": "^2.0.1",
         "wcag-contrast": "^2.1.1"
@@ -47,6 +48,7 @@
     "devDependencies": {
         "@mdx-js/loader": "^0.20.3",
         "@mdx-js/mdx": "^0.20.3",
+        "@types/lodash.merge": "^4.6.6",
         "@types/react-copy-to-clipboard": "^4.2.6",
         "@types/react-helmet": "^5.0.11",
         "@types/wcag-contrast": "^2.1.0",

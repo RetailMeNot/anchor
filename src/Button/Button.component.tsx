@@ -86,8 +86,8 @@ const reverseDefaults = {
         dark: colors.charcoal.dark,
     },
     outline: {
-        base: colors.white.base,
-        light: colors.white.base,
+        base: 'white',
+        light: 'white',
         dark: colors.charcoal.light,
     },
     minimal: colors.white,

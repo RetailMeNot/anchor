@@ -33,17 +33,14 @@ that will be hovered over to show the `overlay`. This is a simple styled compone
 **Anchor**'s <Link to="/components/typography/">`Typography`</Link> component to give it a little
 more pop.
 
-Note that we're importing **Anchor**'s `colors` object for all of the examples to follow.
-Refer to the <Link to="/theme/colors">colors</Link> section for more information.
-
 ###### MouseOverMe Component
 ```jsx hideTitle
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
-import { colors, Typography } from '@retailmenot/anchor';
+import { Typography } from '@retailmenot/anchor';
 
 export const MouseOverMe = styled(Typography)`
-    background-color: ${colors.savvyCyan.base};
+    background-color: accent.base;
     width: 20rem;
     padding:0.5rem 1rem;
 `;
@@ -99,7 +96,7 @@ together with `DropDown`!
     spacing="0.75rem"
     trigger="hover"
 >
-    <MouseOverMe color={colors.white.base}>
+    <MouseOverMe color="white">
         Seriously, Mouse Over Me
     </MouseOverMe>
 </DropDown>

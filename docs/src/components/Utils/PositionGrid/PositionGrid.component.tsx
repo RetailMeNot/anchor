@@ -45,7 +45,7 @@ const TdRight = styled('td')`
 `;
 
 const TdColoredBlock = styled('td')`
-    background-color: ${th('colors.neutrals.ash.light')};
+    background-color: background.body;
 `;
 
 interface EasyTooltipProps {

@@ -2,15 +2,11 @@
 
 exports[`Component: Hero should be defined 1`] = `
 .c0 {
-  background: transparent;
   box-sizing: border-box;
   position: relative;
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: white;
-  text-align: center;
-  min-height: 7.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,6 +18,10 @@ exports[`Component: Hero should be defined 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background: transparent;
+  color: white;
+  min-height: 7.5rem;
+  text-align: center;
 }
 
 <section
@@ -87,15 +87,11 @@ exports[`Component: Hero should render with custom content 1`] = `
 }
 
 .c0 {
-  background: transparent;
   box-sizing: border-box;
   position: relative;
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: white;
-  text-align: center;
-  min-height: 7.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,6 +103,10 @@ exports[`Component: Hero should render with custom content 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background: transparent;
+  color: white;
+  min-height: 7.5rem;
+  text-align: center;
 }
 
 .c2 {
@@ -172,15 +172,11 @@ exports[`Component: Hero should render with custom content 1`] = `
 
 exports[`Component: Hero should render with title 1`] = `
 .c0 {
-  background: transparent;
   box-sizing: border-box;
   position: relative;
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: white;
-  text-align: center;
-  min-height: 7.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,6 +188,10 @@ exports[`Component: Hero should render with title 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background: transparent;
+  color: white;
+  min-height: 7.5rem;
+  text-align: center;
 }
 
 .c2 {
@@ -229,15 +229,11 @@ exports[`Component: Hero should render with title 1`] = `
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
 .c0 {
-  background: transparent;
   box-sizing: border-box;
   position: relative;
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: white;
-  text-align: center;
-  min-height: 7.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,6 +245,10 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background: transparent;
+  color: white;
+  min-height: 7.5rem;
+  text-align: center;
 }
 
 .c2 {

@@ -25,14 +25,13 @@ from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> co
 
 ```tsx live
     <Hero
-        background={colors.grapePurchase.base}
+        background="primary.dark"
         minHeight="12.5rem"
     >
-        <Hero.Title weight="bolder">TITLE!</Hero.Title>
+        <Hero.Title weight="bolder">Hero Title!</Hero.Title>
+        <Hero.Subtitle scale="16" mb="0.5rem">Hero Subtitle!</Hero.Subtitle>
 
-        <Hero.Subtitle scale="16">SUBTITLE!</Hero.Subtitle>
-
-        <Typography tag="p" pt="3">
+        <div>
             <Button
                 variant="outline"
                 reverse
@@ -40,7 +39,7 @@ from **Anchor** as well as the <Link to="/components/button/">`Button`</Link> co
             >
                 A Button
             </Button>
-        </Typography>
+        </div>
     </Hero>
 ```
 

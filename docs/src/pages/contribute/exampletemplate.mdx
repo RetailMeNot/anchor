@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { Button, colors } from '@retailmenot/anchor';
+import { Button } from '@retailmenot/anchor';
 import { ExampleHeader, ExampleLink } from '../../components/TemplateExample';
 import { ApiTable, ComponentInfo } from '../../components/Utils';
 
@@ -14,7 +14,6 @@ pre-rendered.*
     onClick={() => {
         window.open('//github.com/RetailMeNot/anchor/blame/master/docs/src/pages/contribute/exampletemplate.mdx');
     }}
-    colorTheme={colors.dealEnvy}
 >
     View Source with Comments
 </Button>
@@ -81,13 +80,13 @@ interface ExampleHeaderProps {
 }
 
 const StyledExampleHeader = styled('header')<ExampleHeaderProps>`
-    background-color: ${colors.savvyCyan.dark};
-    color: ${colors.white.base};
-    border-radius: 0.25rem;
+    background-color: accent.dark;
+    color: white;
+    border-radius: base;
     padding: 0.5rem 1rem;
     text-align: center;
-    display:flex;
-    max-width:10rem;
+    display: flex;
+    max-width: 10rem;
 
     ${({vertical}) => vertical ? 'flex-direction: column' : null}
 `;
@@ -112,12 +111,12 @@ import { th } from '@xstyled/system';
 
 const StyledExampleLink = styled('a')`
     color: white;
-    border-radius: 0.25rem;
-    padding:0 1rem;
-    font-weight:bold;
-    font-size:1.25rem;
-    text-decoration:none;
-    font-family: base
+    border-radius: base;
+    padding: 0 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-family: base;
 `;
 
 export const ExampleLink = (props: any): React.ReactElement<any> =>

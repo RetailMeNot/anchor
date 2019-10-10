@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
-import { colors } from '@retailmenot/anchor';
 
 interface ExampleHeaderProps {
     children?: any;
@@ -8,8 +7,8 @@ interface ExampleHeaderProps {
 }
 
 const StyledExampleHeader = styled('header')<ExampleHeaderProps>`
-    background-color: ${colors.savvyCyan.dark};
-    color: ${colors.white.base};
+    background-color: accent.dark;
+    color: white;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     text-align: center;

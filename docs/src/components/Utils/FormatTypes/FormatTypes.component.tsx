@@ -15,15 +15,13 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import parse from 'html-react-parser';
-// ANCHOR
-import { colors } from '@retailmenot/anchor';
 
 const StyledFormatTypes = styled('div')`
     display: flex;
     flex-flow: row wrap;
 
     .type:after {
-        color: ${colors.ash.base};
+        color: text.meta;
         content: '|';
         dispay: inline-block;
         padding: 0 0.5rem;

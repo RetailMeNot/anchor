@@ -1,8 +1,8 @@
 // REACT
 import * as React from 'react';
-
 // VENDOR
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
 import {
@@ -22,18 +22,21 @@ interface StyledHeroProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const StyledHero = styled('section')<StyledHeroProps>`
-    background: ${props => props.background};
     box-sizing: border-box;
     position: relative;
     width: 100%;
     margin: 0 auto;
     display: block;
-    color: ${({ color = 'white' }) => color};
-    text-align: ${props => props.align};
-    min-height: ${props => props.minHeight};
     display: flex;
     flex-direction: column;
     justify-content: center;
+    ${({ background, color = 'white', align, minHeight }) =>
+        css({
+            background: th.color(background),
+            color,
+            minHeight,
+            textAlign: align,
+        })}
 `;
 
 interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {

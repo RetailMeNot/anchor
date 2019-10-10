@@ -29,6 +29,7 @@ export const RootTheme = {
     colors: ColorsTheme,
     fonts: {
         base: fonts.fontFamily,
+        mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
     breakpoints: {
         xs: 0,

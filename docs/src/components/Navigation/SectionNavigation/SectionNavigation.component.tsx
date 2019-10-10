@@ -19,7 +19,7 @@ const StyledCollapseGroup = styled(CollapseGroup)`
         &.active {
             /* TODO: When we have a dedicated theme provider these colors should be moved into it. */
             background-color: #e3eef6;
-            color: #007ecd;
+            color: accent.base;
         }
     }
 `;

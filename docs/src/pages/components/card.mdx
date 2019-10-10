@@ -30,13 +30,12 @@ follow. Refer to the <Link to="/theme/colors">colors</Link> section for more inf
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import {
-    colors,
     DropDown,
     InfoOutline
 } from '@retailmenot/anchor';
 
 const StyledMessage = styled('div')`
-    color: ${colors.white.base};
+    color: white;
     padding: 0.5rem 1rem;
 `;
 
@@ -49,11 +48,11 @@ export const MoreInfo = () => (
         )}
         trigger="both"
         position="leftStart"
-        background={colors.grapePurchase.light}
+        background="primary.light"
     >
         <InfoOutline
             scale="lg"
-            color={colors.grapePurchase.light}
+            color="primary.light"
         />
     </DropDown>
 );
@@ -69,8 +68,8 @@ import styled from 'styled-components';
 import { colors, Typography } from '@retailmenot/anchor';
 
 const StyledBottomArea = styled('div')`
-    background-color: ${colors.silver.base};
-    color: ${colors.charcoal.base};
+    background-color: background.body;
+    color: text.body;
     padding: 1rem;
 `;
 

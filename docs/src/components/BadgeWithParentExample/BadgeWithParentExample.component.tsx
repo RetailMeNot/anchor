@@ -8,19 +8,17 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 // COMPONENTS
 import { Badge, Cart } from '@retailmenot/anchor';
-// THEME
-import { colors } from '@retailmenot/anchor';
 
 const { useState } = React;
 
 const StyledBadgeWithParentExample = styled.div`
     padding: 2rem 5rem;
-    background-color: ${colors.grapePurchase.base};
-    color: ${colors.white.base};
+    background-color: accent.dark;
+    color: white;
     line-height: 1.5rem;
 
     &:hover {
-        background-color: ${colors.grapePurchase.light};
+        background-color: accent.base;
     }
 `;
 
@@ -39,9 +37,9 @@ export const BadgeWithParentExample = () => {
             onMouseLeave={handleOnMouseLeave}
         >
             <Badge
-                backgroundColor={colors.flashPink.base}
-                borderColor={colors.grapePurchase.base}
-                borderColorHover={colors.grapePurchase.light}
+                backgroundColor="primary.base"
+                borderColor="accent.dark"
+                borderColorHover="accent.base"
                 count={1}
                 isParentHovered={isHovered}
                 offsetBottom={1.1}
@@ -49,7 +47,7 @@ export const BadgeWithParentExample = () => {
                 overflowCount={9}
                 showZero={false}
                 size="small"
-                textColor={colors.white.base}
+                textColor="white"
             >
                 <Cart scale="lg" />
             </Badge>

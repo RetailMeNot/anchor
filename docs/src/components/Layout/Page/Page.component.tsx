@@ -76,7 +76,7 @@ const StyledContentMain = styled('main')<StyledContentMainProps>`
 
 const StyledLogoContainer = styled(Link)`
     box-sizing: border-box;
-    border-right: solid thin ${colors.silver.base};
+    border-right: light;
     margin-left: 1rem;
     display: block;
     flex: 0 0 auto;
@@ -102,8 +102,8 @@ interface StyledSectionNavProps {
 
 const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     box-sizing: border-box;
-    background-color: ${colors.silver.light};
-    border-right: solid thin ${colors.silver.base};
+    background-color: background.body;
+    border-right: light;
     ${({ breakpoint }) => responsiveCSS(breakpoint, [
         breakpoints.xs,
         breakpoints.sm,
@@ -138,9 +138,9 @@ const StyledPrimaryNav = styled('nav')`
         display: inline-flex;
         height: 100%;
         min-width: 4rem;
-        color: ${colors.charcoal.base};
+        color: text.body;
         &:hover {
-            color: ${colors.flashPink.base};
+            color: text.link.hover;
         }
     }
 `;
@@ -154,11 +154,29 @@ const HamburgerCol = styled(CenteredCol)`
     max-width: 3rem;
 `;
 
-const AnchorTheme = {
-    ...RootTheme,
-    fonts: {
-        ...RootTheme.fonts,
-        mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
+const AnchorDocsTheme = merge({}, RootTheme, {
+    colors: {
+        primary: colors.flashPink,
+        secondary: colors.cyberMango,
+        borders: {
+            light: '#F1F1F1',
+            base: '#E7E7E7',
+            dark: '#D3D3D3',
+        },
+        background: {
+            body: '#FAFAFA',
+            code: '#F1F1F1',
+        },
+        text: {
+            link: {
+                hover: '#DF206C',
+            },
+        },
+    },
+    borders: {
+        light: 'solid thin #F1F1F1',
+        base: 'solid thin #E7E7E7',
+        dark: 'solid thin #D3D3D3',
     },
     awesomegrid: {
         container: {
@@ -176,7 +194,7 @@ const AnchorTheme = {
             xl: 0,
         },
     },
-};
+});
 
 export const Page = ({
     children,
@@ -186,7 +204,7 @@ export const Page = ({
     const [sectionNavOpen, setSectionNavOpen] = React.useState<boolean>(false);
 
     return (
-        <ThemeProvider theme={AnchorTheme}>
+        <ThemeProvider theme={AnchorDocsTheme}>
             <ScreenClass
                 render={(breakpoint: BreakpointsType) => (
                     <StyledPageElement className={classNames(className)}>

@@ -6,10 +6,10 @@
 
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
-import { colors, DropDown, InfoOutline } from '@retailmenot/anchor';
+import { DropDown, InfoOutline } from '@retailmenot/anchor';
 
 const StyledMessage = styled('div')`
-    color: ${colors.white.base};
+    color: white;
     padding: 0.5rem 1rem;
 `;
 
@@ -18,8 +18,8 @@ export const MoreInfo = () => (
         overlay={<StyledMessage>I am an 'action'.</StyledMessage>}
         trigger="both"
         position="leftStart"
-        background={colors.grapePurchase.light}
+        background="primary.light"
     >
-        <InfoOutline scale="lg" color={colors.grapePurchase.light} />
+        <InfoOutline scale="lg" color="primary.light" />
     </DropDown>
 );
