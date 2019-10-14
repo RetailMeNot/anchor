@@ -86,7 +86,6 @@
     "@types/react-test-renderer": "^16.0.3",
     "@types/storybook__addon-actions": "^3.4.3",
     "@types/storybook__addon-info": "^4.1.2",
-    "@types/storybook__addon-knobs": "^5.0.4",
     "@types/storybook__addon-links": "^3.3.5",
     "@types/storybook__addon-options": "^4.0.2",
     "@types/storybook__react": "^4.0.2",
