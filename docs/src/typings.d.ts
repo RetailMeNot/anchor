@@ -7,35 +7,6 @@ declare module '@mdx-js/tag' {
 declare module '@reach/component-component' {
   const Component: any;
 }
-declare module '@retailmenot/anchor' {
-  const AutoComplete: any;
-  const Badge: any;
-  const Button: any;
-  const Card: any;
-  const Cart: any;
-  const Check: any;
-  const Col: any;
-  const Collapse: any;
-  const CollapseGroup: any;
-  const colors: any;
-  const Container: any;
-  const DropDown: any;
-  const InfoOutline: any;
-  const Input: any;
-  const List: any;
-  const ListDivider: any;
-  const ListItem: any;
-  const ListTitle: any;
-  const Modal: any;
-  const ModalProvider: any;
-  const RootTheme: any;
-  const Row: any;
-  const Search: any;
-  const sizes: any;
-  const ThemeProvider: any;
-  const Tooltip: any;
-  const Typography: any;
-}
 
 declare module '@xstyled/styled-components' {
     import {
