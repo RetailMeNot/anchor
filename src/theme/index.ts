@@ -42,6 +42,11 @@ export const RootTheme = {
         base: `thin solid ${ColorsTheme.borders.base}`,
         dark: `thin solid ${ColorsTheme.borders.dark}`,
     },
+
+    skeleton: {
+        colorStart: '#E7E7E7',
+        colorEnd: '#D3D3D3',
+    },
 };
 
 // Exporting out @xstyled's ThemeProvider. Only way I could get it to work w/o issues.

@@ -104,8 +104,8 @@ storiesOf('Components/Skeleton', module)
                         <Skeleton
                             loading={loading}
                             textLength={textLength}
-                            colorA={text('colorA', '') || undefined}
-                            colorB={text('colorB', '') || undefined}
+                            colorStart={text('colorStart', '') || undefined}
+                            colorEnd={text('colorEnd', '') || undefined}
                         >
                             {text('Text', defaultText)}
                         </Skeleton>
@@ -135,8 +135,8 @@ storiesOf('Components/Skeleton', module)
                         textLength={
                             parseInt(text('textLength', ''), 10) || undefined
                         }
-                        colorA={text('colorA', '') || undefined}
-                        colorB={text('colorB', '') || undefined}
+                        colorStart={text('colorStart', '') || undefined}
+                        colorEnd={text('colorEnd', '') || undefined}
                     />
                 </StyledStory>
             </ThemeProvider>

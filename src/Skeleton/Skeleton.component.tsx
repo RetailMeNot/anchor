@@ -19,8 +19,8 @@ interface SkeletonProps
     minHeight?: string;
     minWidth?: string;
     textLength?: number;
-    colorA?: string;
-    colorB?: string;
+    colorStart?: string;
+    colorEnd?: string;
 }
 
 interface StyledSkeletonProps extends SkeletonProps {
@@ -53,17 +53,17 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
         })}
     ${spaceStyles}
 
-    ${({ textOnly, colorA }) =>
+    ${({ textOnly, colorStart }) =>
         textOnly
             ? css`
                   word-break: break-all;
 
-                  color: ${colorA};
+                  color: ${colorStart};
                   animation: color-change 2s ease-in-out infinite;
               `
             : css`
                   pointer-events: none;
-                  background: ${th.color(colorA)};
+                  background: ${th.color(colorStart)};
                   animation: background-change 2s ease-in-out infinite;
 
                   // hide all children
@@ -73,27 +73,27 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
                   }
               `}
 
-    ${({ colorA, colorB }) => css`
+    ${({ colorStart, colorEnd }) => css`
         @keyframes background-change {
             0% {
-                background: ${th.color(colorA)};
+                background: ${th.color(colorStart)};
             }
             50% {
-                background: ${th.color(colorB)};
+                background: ${th.color(colorEnd)};
             }
             100% {
-                background: ${th.color(colorA)};
+                background: ${th.color(colorStart)};
             }
         }
         @keyframes color-change {
             0% {
-                color: ${colorA};
+                color: ${colorStart};
             }
             50% {
-                color: ${colorB};
+                color: ${colorEnd};
             }
             100% {
-                color: ${colorA};
+                color: ${colorStart};
             }
         }
     `}
@@ -104,8 +104,8 @@ export const Skeleton = ({
     children,
     textLength,
     loading = true,
-    colorA = 'neutrals.silver.dark',
-    colorB = 'neutrals.ash.light',
+    colorStart = th('skeleton.colorStart'),
+    colorEnd = th('skeleton.colorEnd'),
     ...props
 }: SkeletonProps): React.ReactElement<StyledSkeletonProps> | any => {
     if (!loading) {
@@ -143,8 +143,8 @@ export const Skeleton = ({
         <StyledSkeleton
             className={classNames('anchor-skeleton', className)}
             textOnly={!!blockText}
-            colorA={colorA}
-            colorB={colorB}
+            colorStart={colorStart}
+            colorEnd={colorEnd}
             {...props}
         >
             {blockText || children}
