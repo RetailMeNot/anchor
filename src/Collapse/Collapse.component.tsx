@@ -75,14 +75,14 @@ const variants = {
         }
     `,
     compact: css`
-        color: neutrals.charcoal.light;
+        color: text.light;
 
         .anchor-collapse-button {
             background-color: white;
             border-style: none;
             border-bottom: light;
             border-top: light;
-            color: neutrals.charcoal.light;
+            color: text.light;
             cursor: pointer;
             display: block;
             font-weight: bold;
@@ -102,7 +102,7 @@ const variants = {
         }
 
         .anchor-collapse-content {
-            background-color: neutrals.silver.light;
+            background-color: background.light;
 
             ul {
                 padding: 0;

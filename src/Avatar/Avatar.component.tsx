@@ -51,8 +51,8 @@ const InnerBorder = styled('div')`
     font-family: base;
     font-size: 0.75rem;
     font-weight: bold;
-    color: text.body;
-    background-color: background.body;
+    color: text.base;
+    background-color: background.base;
     display: flex;
     justify-content: center;
     align-items: center;

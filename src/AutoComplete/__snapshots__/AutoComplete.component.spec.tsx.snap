@@ -146,7 +146,7 @@ exports[`Component: AutoComplete should be defined 1`] = `
 
 <div
   className="c0 anchor-auto-complete"
-  color="neutrals.charcoal.light"
+  color="text.light"
 >
   <div
     className="c1 anchor-input auto-complete-input"
@@ -325,7 +325,7 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 
 <div
   className="c0 anchor-auto-complete"
-  color="neutrals.charcoal.light"
+  color="text.light"
 >
   <div
     className="c1 anchor-input auto-complete-input"
@@ -502,7 +502,7 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 
 <div
   className="c0 anchor-auto-complete"
-  color="neutrals.charcoal.light"
+  color="text.light"
 >
   <div
     className="c1 anchor-input auto-complete-input"
@@ -689,7 +689,7 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 
 <div
   className="c0 anchor-auto-complete"
-  color="neutrals.charcoal.light"
+  color="text.light"
 >
   <div
     className="c1 anchor-input auto-complete-input"

@@ -28,7 +28,7 @@ storiesOf('Components/Card/CardActionArea', module)
                 <CardActionArea
                     backgroundColor={color(
                         'Background Color',
-                        'background.body'
+                        'background.base'
                     )}
                 >
                     The action area is a large section dedicated for card

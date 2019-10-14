@@ -20,14 +20,14 @@ const StyledStory = styled('div')`
     h3 {
         font-family: base;
         font-weight: normal;
-        color: text.body;
+        color: text.base;
         margin-bottom: 0.5rem;
     }
     h3 {
         margin: 0;
     }
     p {
-        color: text.body;
+        color: text.base;
         margin: 0;
     }
     .card-action-area {

@@ -26,7 +26,7 @@ const StyledItem = styled('a')<ItemProps>`
     cursor: pointer;
     text-align: center;
     font-family: base;
-    color: text.body;
+    color: text.base;
     text-decoration: none;
     transition: color 250ms;
 

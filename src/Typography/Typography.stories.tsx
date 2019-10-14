@@ -19,7 +19,7 @@ import { typography, TypographyTags, Scale } from '../theme/typography.theme';
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
     font-family: base;
-    color: text.body;
+    color: text.base;
 `;
 
 const scales = [62, 52, 44, 36, 32, 28, 24, 20, 18, 16, 14, 12];

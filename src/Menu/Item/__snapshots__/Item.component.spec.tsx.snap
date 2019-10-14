@@ -16,8 +16,8 @@ exports[`Component: Item should be defined 1`] = `
   align-items: center;
   cursor: pointer;
   text-align: center;
-  font-family: base;
-  color: text.body;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #323232;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;
@@ -50,8 +50,8 @@ exports[`Component: Item should render with label 1`] = `
   align-items: center;
   cursor: pointer;
   text-align: center;
-  font-family: base;
-  color: text.body;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #323232;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 250ms;

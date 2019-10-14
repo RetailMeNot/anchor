@@ -41,7 +41,7 @@ const StyledFooterSectionElement = styled('section')`
         display: block;
         margin-bottom: 0.75rem;
         text-decoration: none;
-        color: text.body;
+        color: text.base;
         font-weight: 500;
     }
 `;

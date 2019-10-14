@@ -13,7 +13,7 @@ const StyledFooterElement = styled('footer')`
     font-size: 0.75rem;
     background-color: white;
     border-bottom: solid 1rem ${th.color('primary.base')};
-    color: text.body;
+    color: text.base;
     font-weight: 500;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
 `;

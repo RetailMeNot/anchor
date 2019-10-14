@@ -157,7 +157,7 @@ const StyledInput = styled('input')<StyledInputProps>`
     -webkit-appearance: none;
     background-color: transparent;
     z-index: 1;
-    color: text.body;
+    color: text.base;
     // TODO: bring this back when the 'bug' in styled components gets sorted out (MVP)
     //transition: all 250ms;
     font-family: base;
@@ -300,7 +300,7 @@ export const Input = forwardRef(
                         />
                         {label && (
                             <Typography
-                                color="text.meta"
+                                color="text.label"
                                 scale={
                                     focus ||
                                     (inputValue && `${inputValue}`.length)

@@ -26,7 +26,7 @@ import { Hero } from '@retailmenot/anchor';
 const { Title, Subtitle } = Hero;
 
 const advancedExample = props => (
-    <Hero align="left" color="text.body" minHeight="36rem">
+    <Hero align="left" color="text.base" minHeight="36rem">
         <Container>
             <Title>Socks with Sandals</Title>
             <Subtitle>The best thing since sliced bread!</Subtitle>

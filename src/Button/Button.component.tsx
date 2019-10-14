@@ -93,6 +93,10 @@ const reverseDefaults = {
     minimal: colors.white,
 };
 
+// Todo: This should not be hardcoded like this, and needs
+// a better solution.
+const DISABLED_TEXT_COLOR = '#808080';
+
 export const BUTTON_KEY = 'buttons';
 export const BUTTON_THEME = {
     sizes: {
@@ -155,7 +159,7 @@ export const BUTTON_THEME = {
                     : css`
                           border: solid thin ${colors.ash.light};
                           background-color: ${colors.ash.light};
-                          color: text.meta;
+                          color: ${DISABLED_TEXT_COLOR};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -210,7 +214,7 @@ export const BUTTON_THEME = {
                     : css`
                           border: solid thin ${colors.ash.dark};
                           background-color: transparent;
-                          color: text.meta;
+                          color: ${DISABLED_TEXT_COLOR};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -246,12 +250,12 @@ export const BUTTON_THEME = {
                     ? css`
                           border: solid thin transparent;
                           background-color: transparent;
-                          color: text.meta;
+                          color: ${DISABLED_TEXT_COLOR};
                       `
                     : css`
                           border: solid thin ${colors.ash.light};
                           background-color: ${colors.ash.light};
-                          color: text.meta;
+                          color: ${DISABLED_TEXT_COLOR};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse

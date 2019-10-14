@@ -97,13 +97,11 @@ export const colors = {
 };
 
 type ColorHue = { light: string; base: string; dark: string };
-type Neutrals = 'white' | 'ash' | 'silver' | 'charcoal';
 
 export interface ColorsThemeSchema {
     primary: ColorHue;
     secondary: ColorHue;
     accent: ColorHue;
-    neutrals: { [K in Neutrals]: ColorHue };
 
     borders: {
         base: string;
@@ -116,8 +114,9 @@ export interface ColorsThemeSchema {
     };
 
     text: {
-        body: string;
-        meta: string;
+        base: string;
+        light: string;
+        label: string;
         link: {
             base: string;
             hover: string;
@@ -129,7 +128,8 @@ export interface ColorsThemeSchema {
     };
 
     background: {
-        body: string;
+        base: string;
+        light: string;
         content: string;
         error: string;
         success: string;
@@ -147,12 +147,6 @@ export const ColorsTheme: ColorsThemeSchema = {
     primary: colors.grapePurchase,
     accent: colors.savvyCyan,
     secondary: colors.dealEnvy,
-    neutrals: {
-        white: colors.white,
-        ash: colors.ash,
-        silver: colors.silver,
-        charcoal: colors.charcoal,
-    },
     borders: {
         // PRAGMATIC
         light: colors.silver.dark,
@@ -165,8 +159,8 @@ export const ColorsTheme: ColorsThemeSchema = {
         warning: transparentize(0.4, colors.goldMine.light),
     },
     text: {
-        body: colors.charcoal.base,
-        meta: colors.ash.dark,
+        base: colors.charcoal.base,
+        light: colors.charcoal.light,
         link: {
             base: colors.savvyCyan.dark,
             hover: colors.savvyCyan.dark,
@@ -175,9 +169,11 @@ export const ColorsTheme: ColorsThemeSchema = {
         },
         disabled: colors.ash.light,
         placeholder: colors.ash.dark,
+        label: colors.ash.dark,
     },
     background: {
-        body: colors.silver.base,
+        base: colors.silver.base,
+        light: colors.silver.light,
         content: colors.white.base,
         error: transparentize(0.75, colors.fireSale.dark),
         success: transparentize(0.75, colors.dealEnvy.base),

@@ -154,7 +154,7 @@ export const typography: TypographyTheme = {
         },
         code: {
             fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
-            backgroundColor: 'text.body',
+            backgroundColor: 'text.base',
             display: 'block',
             padding: '1rem',
             borderRadius: 'base',

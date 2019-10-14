@@ -17,7 +17,7 @@ import { RootTheme } from '../theme';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
-    color: text.body;
+    color: text.base;
 `;
 
 const StyledGrid = styled('div')`

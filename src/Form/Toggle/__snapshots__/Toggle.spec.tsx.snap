@@ -24,7 +24,7 @@ exports[`Component: Toggle can be checked 1`] = `
   line-height: 1rem;
   font-weight: 500;
   text-align: center;
-  color: #555;
+  color: #595959;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -123,7 +123,7 @@ exports[`Component: Toggle should be defined 1`] = `
   line-height: 1rem;
   font-weight: 500;
   text-align: center;
-  color: #555;
+  color: #595959;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;

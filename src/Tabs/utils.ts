@@ -34,7 +34,7 @@ const TabVariants: {
                 css({
                     border: 'light',
                     padding: '0.75rem 1rem',
-                    background: active ? 'white' : th.color('background.body'),
+                    background: active ? 'white' : th.color('background.base'),
                     fontWeight: active ? 500 : undefined,
                 }),
         },
@@ -64,7 +64,7 @@ const TabVariants: {
                         ? '0 3px'
                         : '3px 0',
                     fontWeight: active ? 600 : undefined,
-                    color: active ? undefined : 'text.meta',
+                    color: active ? undefined : 'text.label',
                 }),
         },
         pane: css({}),
