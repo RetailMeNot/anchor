@@ -3,8 +3,6 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
-// COMPONENTS
-import { NormalizeCSS } from '../../theme/GlobalStyles';
 
 // Constants
 // ------------------------------------------------------------------------------------------------------------------
@@ -49,7 +47,6 @@ export const Page: React.FunctionComponent<PageProps> = ({
     ...props
 }: PageProps): React.ReactElement<PageProps> => (
     <StyledPage className={classnames('anchor-page', className)} {...props}>
-        <NormalizeCSS />
         <div>
             {header && <div>{header}</div>}
             <div>{children}</div>
