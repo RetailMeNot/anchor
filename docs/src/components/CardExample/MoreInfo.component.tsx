@@ -5,31 +5,21 @@
  */
 
 import * as React from 'react';
-import styled from 'styled-components';
-import { colors, InfoOutline } from '@retailmenot/anchor';
+import styled from '@xstyled/styled-components';
+import { colors, DropDown, InfoOutline } from '@retailmenot/anchor';
 
-const StyledMoreInfo = styled(InfoOutline)`
-    position: relative;
-
-    &:hover {
-        cursor: pointer;
-
-        &:after {
-            content: 'I am an Action';
-            display: block;
-            padding: 1rem;
-            background-color: ${colors.success.dark};
-            color: ${colors.white.base};
-            position: absolute;
-            right: 1.75rem;
-            white-space: nowrap;
-            top: 0;
-            z-index: 1000;
-            border-radius: 0.25rem;
-        }
-    }
+const StyledMessage = styled('div')`
+    color: ${colors.white.base};
+    padding: 0.5rem 1rem;
 `;
 
 export const MoreInfo = () => (
-    <StyledMoreInfo color={colors.success.dark} scale="lg" />
+    <DropDown
+        overlay={<StyledMessage>I am an 'action'.</StyledMessage>}
+        trigger="both"
+        position="leftStart"
+        background={colors.grapePurchase.light}
+    >
+        <InfoOutline scale="lg" color={colors.grapePurchase.light} />
+    </DropDown>
 );
