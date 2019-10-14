@@ -80,8 +80,8 @@ const variants = {
         .anchor-collapse-button {
             background-color: white;
             border-style: none;
-            border-bottom: solid thin ${th.color('borders.light')};
-            border-top: solid thin ${th.color('borders.light')};
+            border-bottom: light;
+            border-top: light;
             color: neutrals.charcoal.light;
             cursor: pointer;
             display: block;
