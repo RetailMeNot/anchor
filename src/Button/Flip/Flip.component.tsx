@@ -1,9 +1,8 @@
 // REACT
 import * as React from 'react';
 // ANCHOR
-import { colors } from '../../theme/colors.theme';
 import { sizes } from '../../theme/sizes.theme';
-import { Theme, TRANSITION_SPEED } from '../utils';
+import { Theme, TRANSITION_SPEED, REVEAL_COLOR } from '../utils';
 // VENDOR
 import styled from '@xstyled/styled-components';
 
@@ -27,7 +26,7 @@ export const StyledFlip = styled('div')<StyledFlipProps>`
         45deg,
         ${({ flipColor }) => flipColor},
         ${({ flipColor }) => flipColor} 50%,
-        ${colors.silver.base} 0
+        ${REVEAL_COLOR} 0
     );
 `;
 

@@ -17,7 +17,6 @@ There are three sizes:
 ```jsx
 import { Badge } from '@retailmenot/anchor';
 import { Cart } from '@retailmenot/anchor';
-import { colors } from '@retailmenot/anchor';
 
 const BadgeDotExample = props => (
     <Badge
@@ -36,7 +35,6 @@ const BadgeDotExample = props => (
 ```jsx
 import { Badge } from '@retailmenot/anchor';
 import { Cart } from '@retailmenot/anchor';
-import { colors } from '@retailmenot/anchor';
 
 const BadgeSmallExample = props => (
     <Badge
@@ -57,7 +55,6 @@ const BadgeSmallExample = props => (
 
 ```jsx
 import { Badge } from '@retailmenot/anchor';
-import { colors } from '@retailmenot/anchor';
 
 const BadgeLargeStandaloneExample = props => (
     <Badge

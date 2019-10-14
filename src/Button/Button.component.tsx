@@ -12,7 +12,7 @@ import { transparentize } from 'polished';
 import { colors } from '../theme/colors.theme';
 import { fonts } from '../theme/fonts.theme';
 import { sizes } from '../theme/sizes.theme';
-import { Theme, TRANSITION_SPEED } from './utils';
+import { Theme, TRANSITION_SPEED, REVEAL_COLOR } from './utils';
 import { rem } from '../utils/rem/rem';
 import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
@@ -453,8 +453,8 @@ const StyledButton = styled('button')<StyledButtonProps>`
         variant === 'filled' &&
         revealed &&
         css`
-            background-color: ${colors.silver.base};
-            border: solid thin ${colors.silver.base};
+            background-color: ${REVEAL_COLOR};
+            border: solid thin ${REVEAL_COLOR};
             color: ${colors.charcoal.light};
             font-weight: bold;
         `}

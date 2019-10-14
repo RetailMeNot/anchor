@@ -48,7 +48,7 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import parse from 'html-react-parser';
 // ANCHOR & COMPONENTS
-import { colors, ScreenClass } from '@retailmenot/anchor';
+import { ScreenClass } from '@retailmenot/anchor';
 import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
 
 interface StyledApiTableProps {

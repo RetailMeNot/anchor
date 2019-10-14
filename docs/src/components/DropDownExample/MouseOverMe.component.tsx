@@ -6,7 +6,7 @@
 
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
-import { colors, Typography } from '@retailmenot/anchor';
+import { Typography } from '@retailmenot/anchor';
 
 export const MouseOverMe = styled(Typography)`
     background-color: accent.base;
