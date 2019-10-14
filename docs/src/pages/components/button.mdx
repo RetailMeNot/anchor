@@ -30,7 +30,6 @@ below. Also included is an example of an icon button*
         onClick={() => setState(({ size }) => ({
           size: size === 'sm' ? 'md' : 'sm'
         }))}
-        outline={true}
         prefix={<AddEvent />}
         reverse={false}
         size={state.size}
@@ -187,14 +186,6 @@ below. Also included is an example of an icon button*
         property: 'onClick',
         description: `The function to execute when the button is clicked.`,
         type: '() => void',
-    },
-    {
-        property: 'outline',
-        description: `If set to true, outlines the <pre>Button</pre>. Note that depending on the
-            <pre>variant</pre> and <pre>colorTheme</pre> settings this may not appear to do
-            anything.`,
-        type: 'boolean',
-        default: 'true',
     },
     {
         property: 'prefix',

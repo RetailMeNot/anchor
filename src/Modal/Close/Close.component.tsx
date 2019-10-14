@@ -38,12 +38,6 @@ export const ModalClose = ({
         className={classnames('anchor-modal-close', className)}
         align={align}
     >
-        <Button
-            prefix={<Close />}
-            variant="minimal"
-            circular
-            outline={false}
-            {...props}
-        />
+        <Button prefix={<Close />} variant="minimal" circular {...props} />
     </StyledClose>
 );

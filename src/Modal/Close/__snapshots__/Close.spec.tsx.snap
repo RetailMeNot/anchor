@@ -46,6 +46,17 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
   color: #0074A6;
 }
 
+.c2:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(circular + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
 .c3 {
   display: inline-block;
   height: 1.5rem;
@@ -80,6 +91,9 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
 >
   <button
     className="c1 c2 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     <span
       className="c3 anchor-icon close anchor-button-prefix"
@@ -162,6 +176,17 @@ exports[`Component: Modal.Close should render 1`] = `
   color: #0074A6;
 }
 
+.c2:focus:after {
+  position: absolute;
+  content: '';
+  top: calc(-1px - 2px);
+  left: calc(-1px - 2px);
+  right: calc(-1px - 2px);
+  bottom: calc(-1px - 2px);
+  border-radius: calc(circular + 2px);
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
 .c3 {
   display: inline-block;
   height: 1.5rem;
@@ -196,6 +221,9 @@ exports[`Component: Modal.Close should render 1`] = `
 >
   <button
     className="c1 c2 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     <span
       className="c3 anchor-icon close anchor-button-prefix"

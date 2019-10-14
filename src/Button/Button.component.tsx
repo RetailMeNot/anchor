@@ -36,7 +36,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     block?: boolean;
     circular?: boolean;
     reverse?: boolean;
-    outline?: boolean;
 
     prefix?: any;
     suffix?: any;
@@ -200,17 +199,11 @@ export const BUTTON_THEME = {
         },
         outline: {
             base: ({ reverse, colorTheme }: StyledButtonProps) =>
-                reverse
-                    ? css`
-                          border: solid thin ${colorTheme.base};
-                          background-color: transparent;
-                          color: ${colorTheme.base};
-                      `
-                    : css`
-                          border: solid thin ${colorTheme.base};
-                          background-color: transparent;
-                          color: ${colorTheme.base};
-                      `,
+                css`
+                    border: solid thin ${colorTheme.base};
+                    background-color: transparent;
+                    color: ${colorTheme.base};
+                `,
             disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
@@ -249,17 +242,11 @@ export const BUTTON_THEME = {
         },
         minimal: {
             base: ({ reverse, colorTheme }: StyledButtonProps) =>
-                reverse
-                    ? css`
-                          border: solid thin transparent;
-                          background-color: transparent;
-                          color: ${colorTheme.base};
-                      `
-                    : css`
-                          border: solid thin transparent;
-                          background-color: transparent;
-                          color: ${colorTheme.base};
-                      `,
+                css`
+                    border: solid thin transparent;
+                    background-color: transparent;
+                    color: ${colorTheme.base};
+                `,
             disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
@@ -337,12 +324,7 @@ const stateStyles = createVariant({
     variants: BUTTON_THEME.variants,
 });
 
-const OutlineStyles = ({
-    buttonStyles,
-    borderRadius,
-    outline,
-}: StyledButtonProps) =>
-    outline &&
+const OutlineStyles = ({ buttonStyles, borderRadius }: StyledButtonProps) =>
     css`
         &:after {
             position: absolute;
@@ -362,7 +344,6 @@ const OutlineStyles = ({
         }
     `;
 
-// TODO: grep styled. to styled('')
 const StyledButton = styled('button')<StyledButtonProps>`
     position: relative;
     ${({ borderRadius }) => css`
@@ -491,7 +472,6 @@ export const Button = ({
     flip = false,
     variant = 'filled',
     size = 'md',
-    outline = true,
     block,
     disabled,
     revealed,
@@ -502,8 +482,13 @@ export const Button = ({
     minWidth,
     prefix,
     suffix,
+    onMouseDown,
+    onMouseUp,
+    onFocus,
     ...props
 }: ButtonProps): React.ReactElement<ButtonProps> => {
+    const [mouseDown, setMouseDown] = React.useState(false);
+
     // if there are no children and only prefix or only suffix are set
     const iconOnly =
         (prefix ? !suffix : !!suffix) && React.Children.count(children) === 0;
@@ -567,10 +552,33 @@ export const Button = ({
 
     return (
         <StyledButton
+            onMouseDown={event => {
+                setMouseDown(true);
+                if (onMouseDown) {
+                    onMouseDown(event);
+                }
+            }}
+            onMouseUp={event => {
+                setMouseDown(false);
+                if (onMouseUp) {
+                    onMouseUp(event);
+                }
+            }}
+            onFocus={event => {
+                if (mouseDown) {
+                    // This keeps the button from being :focused when
+                    // clicked so that it is only applied when tabbed to.
+                    // We want the outline to appear when tabbing for
+                    // accessibility.
+                    event.target.blur();
+                }
+                if (onFocus) {
+                    onFocus(event);
+                }
+            }}
             className={classNames('anchor-button', className)}
             flip={flip}
             block={block}
-            outline={outline}
             colorTheme={colorTheme}
             $fontSize={fontSize}
             padding={padding}

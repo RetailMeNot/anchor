@@ -187,7 +187,6 @@ storiesOf('Components/Skeleton', module)
                                     variant="minimal"
                                     circular
                                     size="sm"
-                                    outline={false}
                                     prefix={<Close />}
                                 />
                             )}

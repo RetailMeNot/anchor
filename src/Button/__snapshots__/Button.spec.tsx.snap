@@ -202,6 +202,9 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <span
     className="c2 anchor-icon star anchor-button-prefix"
@@ -429,6 +432,9 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <span
     className="c2 anchor-icon star anchor-button-prefix"
@@ -656,6 +662,9 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <span
     className="c2 anchor-icon star anchor-button-suffix"
@@ -855,6 +864,9 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -1023,6 +1035,9 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -1206,6 +1221,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -1386,6 +1404,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -1576,6 +1597,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -1733,6 +1757,9 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -1882,6 +1909,9 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -2043,6 +2073,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -2200,6 +2233,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -2368,6 +2404,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -2509,6 +2548,9 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -2648,6 +2690,9 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -2803,6 +2848,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -2956,6 +3004,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -3120,6 +3171,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -3305,6 +3359,9 @@ exports[`Component: Button Sizes should render a md button 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -3489,6 +3546,9 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -3686,6 +3746,9 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <div
     className="c2"
@@ -3890,6 +3953,9 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <div
     className="c2"
@@ -4097,6 +4163,9 @@ exports[`Component: Button Theme Provided should use custom size variants from t
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 />
 `;
 
@@ -4214,6 +4283,9 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -4326,6 +4398,9 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -4449,6 +4524,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -4568,6 +4646,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -4698,6 +4779,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -4802,6 +4886,9 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -4899,6 +4986,9 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -5008,6 +5098,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5113,6 +5206,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5229,6 +5325,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5322,6 +5421,9 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -5389,6 +5491,9 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 <button
   className="c0 c1 anchor-button"
   disabled={true}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -5466,6 +5571,9 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -5534,6 +5642,9 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
 </button>
@@ -5625,6 +5736,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5712,6 +5826,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5810,6 +5927,9 @@ Array [
 
 <button
     className="c0 c1 anchor-button"
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
   >
     Text
   </button>,
@@ -5921,6 +6041,9 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
   <div
@@ -6023,6 +6146,9 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   <span
     className="c2 anchor-icon star anchor-button-prefix"
@@ -6144,6 +6270,9 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Text
   <span
@@ -6237,6 +6366,9 @@ exports[`Component: Button should be defined 1`] = `
 
 <button
   className="c0 c1 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
 >
   Submit
 </button>
