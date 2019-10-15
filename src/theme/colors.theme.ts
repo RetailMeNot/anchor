@@ -2,97 +2,49 @@
 import { transparentize } from 'polished';
 
 export type Color =
-    | 'charcoal'
-    | 'ash'
-    | 'silver'
-    | 'lavenderWhispers'
-    | 'white'
-    | 'grapePurchase'
-    | 'savvyCyan'
-    | 'tealBreaker'
-    | 'dealEnvy'
-    | 'flashPink'
-    | 'cyberMango'
-    | 'goldMine'
-    | 'fireSale'
-    | 'error'
-    | 'success';
+    | 'grayscale'
+    | 'purple'
+    | 'blue'
+    | 'green'
+    | 'yellow'
+    | 'red';
 
 const colors = {
-    charcoal: {
-        base: '#323232',
-        light: '#595959',
-        dark: '#000000',
+    grayscale: {
+        100: '#000000',
+        200: '#323232',
+        300: '#595959',
+        400: '#808080',
+        500: '#A6A6A6',
+        600: '#D3D3D3',
+        700: '#E7E7E7',
+        800: '#F1F1F1',
+        900: '#FAFAFA',
     },
-    ash: {
-        base: '#A6A6A6',
-        light: '#D3D3D3',
-        dark: '#808080',
-    },
-    silver: {
-        base: '#F1F1F1',
-        light: '#FAFAFA',
-        dark: '#E7E7E7',
-    },
-    lavenderWhispers: {
-        base: '#F7F5FC',
-        light: '#FBFAFF',
-        dark: '#F1EEFA',
-    },
-    white: {
-        base: '#FFFFFF',
-        light: '#FFFFFF',
-        dark: '#FFFFFF',
-    },
-    grapePurchase: {
+    purple: {
         base: '#602D6C',
         light: '#91609C',
         dark: '#4B2354',
     },
-    savvyCyan: {
+    blue: {
         base: '#0998D6',
         light: '#66CCFF',
         dark: '#0074A6',
     },
-    tealBreaker: {
-        base: '#00CCCD',
-        light: '#00E0D1',
-        dark: '#00BDBD',
-    },
-    dealEnvy: {
+    green: {
         base: '#14A382',
         light: '#00CDAD',
         dark: '#268068',
     },
-    flashPink: {
-        base: '#DF206C',
-        light: '#E665A1',
-        dark: '#B81D5B',
-    },
-    cyberMango: {
-        base: '#EB663D',
-        light: '#FA9F5A',
-        dark: '#C74E30',
-    },
-    goldMine: {
+    yellow: {
         base: '#F5A623',
         light: '#FFC761',
         dark: '#CC861D',
     },
-    fireSale: {
+    red: {
         base: '#EA4545',
         light: '#F16667',
         dark: '#CC3B3B',
-    },
-    error: {
-        base: '#CC3B3B',
-        light: '#CC3B3B',
-        dark: '#CC3B3B',
-    },
-    success: {
-        base: '#268068',
-        light: '#268068',
-        dark: '#268068',
     },
 };
 
@@ -144,48 +96,48 @@ export interface ColorsThemeSchema {
 }
 
 export const ColorsTheme: ColorsThemeSchema = {
-    primary: colors.grapePurchase,
-    accent: colors.savvyCyan,
-    secondary: colors.dealEnvy,
+    primary: colors.purple,
+    secondary: colors.green,
+    accent: colors.blue,
     borders: {
         // PRAGMATIC
-        light: colors.silver.dark,
-        base: colors.ash.light,
-        dark: colors.ash.dark,
+        light: colors.grayscale[700],
+        base: colors.grayscale[600],
+        dark: colors.grayscale[400],
         // SEMANTIC
-        error: transparentize(0.4, colors.fireSale.dark),
-        success: transparentize(0.4, colors.dealEnvy.base),
-        info: transparentize(0.4, colors.savvyCyan.light),
-        warning: transparentize(0.4, colors.goldMine.light),
+        error: transparentize(0.4, colors.red.dark),
+        success: transparentize(0.4, colors.green.base),
+        info: transparentize(0.4, colors.blue.light),
+        warning: transparentize(0.4, colors.yellow.light),
     },
     text: {
         // PRAGMATIC
-        base: colors.charcoal.base,
-        light: colors.charcoal.light,
+        base: colors.grayscale[200],
+        light: colors.grayscale[300],
         // SEMANTIC
         link: {
-            base: colors.savvyCyan.dark,
-            hover: colors.savvyCyan.dark,
-            focus: colors.savvyCyan.dark,
-            visited: colors.savvyCyan.dark,
+            base: colors.blue.dark,
+            hover: colors.blue.dark,
+            focus: colors.blue.dark,
+            visited: colors.blue.dark,
         },
-        disabled: colors.ash.light,
-        placeholder: colors.ash.dark,
-        label: colors.ash.dark,
+        disabled: colors.grayscale[600],
+        placeholder: colors.grayscale[400],
+        label: colors.grayscale[400],
     },
     background: {
         // PRAGMATIC
-        base: colors.silver.base,
-        light: colors.silver.light,
-        content: colors.white.base,
+        base: colors.grayscale[800],
+        light: colors.grayscale[900],
+        content: 'white',
         // SEMANTIC
-        error: transparentize(0.75, colors.fireSale.dark),
-        success: transparentize(0.75, colors.dealEnvy.base),
-        info: transparentize(0.75, colors.savvyCyan.light),
-        warning: transparentize(0.75, colors.goldMine.light),
+        error: transparentize(0.75, colors.red.dark),
+        success: transparentize(0.75, colors.green.base),
+        info: transparentize(0.75, colors.blue.light),
+        warning: transparentize(0.75, colors.yellow.light),
     },
-    error: colors.fireSale.dark,
-    success: colors.dealEnvy.base,
-    info: colors.savvyCyan.light,
-    warning: colors.goldMine.light,
+    error: colors.red.dark,
+    success: colors.green.base,
+    info: colors.blue.light,
+    warning: colors.yellow.light,
 };
