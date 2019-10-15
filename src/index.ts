@@ -41,8 +41,6 @@ export {
     colors,
     fonts,
     sizes,
-    GlobalCSS,
-    NormalizeCSS,
     RootTheme,
     ThemeProvider,
     variables,
