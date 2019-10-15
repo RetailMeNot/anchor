@@ -21,7 +21,7 @@ const StyledFormatTypes = styled('div')`
     flex-flow: row wrap;
 
     .type:after {
-        color: text.meta;
+        color: text.light;
         content: '|';
         dispay: inline-block;
         padding: 0 0.5rem;
