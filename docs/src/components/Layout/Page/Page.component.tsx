@@ -148,9 +148,9 @@ const HamburgerCol = styled(CenteredCol)`
 
 const AnchorTheme = {
     ...RootTheme,
-    fonts : {
+    fonts: {
         ...RootTheme.fonts,
-        mono : `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
+        mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
     awesomegrid: {
         container: {
@@ -169,8 +169,6 @@ const AnchorTheme = {
         },
     },
 };
-
-console.log(AnchorTheme);
 
 export const Page = ({
     children,
