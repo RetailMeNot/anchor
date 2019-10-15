@@ -30,6 +30,12 @@ import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
 
+const GlobalCSS = createGlobalStyle`
+    body {
+        margin: 0;
+    }
+`;
+
 const StyledPageElement = styled('div')`
     // The Row component can't be extended, so targeting it via class
     .anchor-row {
@@ -108,6 +114,8 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
         z-index: 90;
         overflow-y: scroll;
         top: 4.5rem;
+        left: 0;
+        right: 0;
         padding-bottom: 30rem;
     `}
 `;
@@ -183,6 +191,8 @@ export const Page = ({
                 render={(breakpoint: BreakpointsType) => (
                     <StyledPageElement className={classNames(className)}>
                         <Helmet htmlAttributes={{ lang: 'en' }} />
+
+                        <GlobalCSS />
 
                         <StyledHeader>
                             <Container>
