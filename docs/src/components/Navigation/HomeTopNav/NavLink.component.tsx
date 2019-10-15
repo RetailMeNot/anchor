@@ -13,8 +13,8 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `;
 
-export const NavLink = ({ to, children }: NavLinkProps) => (
-    <StyledLink to={to}>
+export const NavLink = ({ to, children, ...props }: NavLinkProps) => (
+    <StyledLink to={to} {...props}>
         <Typography weight="600">{children}</Typography>
     </StyledLink>
 );

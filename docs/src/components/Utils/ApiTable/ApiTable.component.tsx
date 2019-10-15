@@ -46,11 +46,24 @@
 import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import parse from 'html-react-parser';
 // ANCHOR & COMPONENTS
-import { colors } from '@retailmenot/anchor';
-import { InlineCodeStyle } from '../../Layout/Page/Page.component';
+import { colors, ScreenClass } from '@retailmenot/anchor';
+import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
+
+interface StyledApiTableProps {
+    breakpoint?: BreakpointsType;
+}
+
+const StyledApiTable = styled('section')<StyledApiTableProps>`
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        overflow-x: scroll;
+        white-space: nowrap;
+    `}
+`;
 
 const Table = styled('table')`
     width: 100%;
@@ -93,7 +106,12 @@ const Table = styled('table')`
         }
 
         pre {
-            ${InlineCodeStyle};
+            display: inline;
+            background-color: rgba(27, 31, 35, 0.05);
+            font-family: mono;
+            border-radius: base;
+            padding: 0.2em 0.4em;
+            font-size: 0.85rem;
         }
     }
 `;
@@ -127,56 +145,71 @@ export const ApiTable = ({
     const sortedData = sort ? data.sort(sortDataAlphabetically) : data;
 
     return (
-        <Table>
-            <thead>
-                <tr>
-                    <th>Property</th>
-                    <th>Description</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                </tr>
-            </thead>
-            <tbody>
-                {sortedData &&
-                    sortedData.map(
-                        (rowData: RowData): React.ReactElement<any> => (
-                            <tr key={`key-${rowData.property}`}>
-                                <td>{rowData.property}</td>
-                                <td>
-                                    {Array.isArray(rowData.description)
-                                        ? rowData.description.map(
-                                              (description, i) => (
-                                                  <React.Fragment
-                                                      key={`key-${i}`}
-                                                  >
-                                                      {typeof description ===
-                                                      'string'
-                                                          ? parse(description)
-                                                          : description}
-                                                  </React.Fragment>
-                                              )
-                                          )
-                                        : typeof rowData.description ===
-                                          'string'
-                                        ? parse(rowData.description)
-                                        : rowData.description}
-                                </td>
-                                <td>
-                                    {typeof rowData.type === 'string'
-                                        ? parse(rowData.type)
-                                        : rowData.type}
-                                </td>
-                                <td>
-                                    {rowData.default
-                                        ? typeof rowData.default === 'string'
-                                            ? parse(rowData.default)
-                                            : rowData.default
-                                        : '-'}
-                                </td>
+        // tslint:disable-next-line: jsx-alignment
+        <ScreenClass
+            render={(breakpoint: BreakpointsType) => (
+                <StyledApiTable breakpoint={breakpoint}>
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Type</th>
+                                <th>Default</th>
                             </tr>
-                        )
-                    )}
-            </tbody>
-        </Table>
+                        </thead>
+                        <tbody>
+                            {sortedData &&
+                                sortedData.map(
+                                    (
+                                        rowData: RowData
+                                    ): React.ReactElement<any> => (
+                                        <tr key={`key-${rowData.property}`}>
+                                            <td>{rowData.property}</td>
+                                            <td>
+                                                {Array.isArray(
+                                                    rowData.description
+                                                )
+                                                    ? rowData.description.map(
+                                                          (description, i) => (
+                                                              <React.Fragment
+                                                                  key={`key-${i}`}
+                                                              >
+                                                                  {typeof description ===
+                                                                  'string'
+                                                                      ? parse(
+                                                                            description
+                                                                        )
+                                                                      : description}
+                                                              </React.Fragment>
+                                                          )
+                                                      )
+                                                    : typeof rowData.description ===
+                                                      'string'
+                                                    ? parse(rowData.description)
+                                                    : rowData.description}
+                                            </td>
+                                            <td>
+                                                {typeof rowData.type ===
+                                                'string'
+                                                    ? parse(rowData.type)
+                                                    : rowData.type}
+                                            </td>
+                                            <td>
+                                                {rowData.default
+                                                    ? typeof rowData.default ===
+                                                      'string'
+                                                        ? parse(rowData.default)
+                                                        : rowData.default
+                                                    : '-'}
+                                            </td>
+                                        </tr>
+                                    )
+                                )}
+                        </tbody>
+                    </Table>
+                </StyledApiTable>
+            )}
+        />
     );
 };

@@ -3,26 +3,40 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
+import styled, { createGlobalStyle } from '@xstyled/styled-components';
+import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
+// ANCHOR & COMPONENTS
 import {
     Col,
     colors,
+    Button,
     Container,
+    Hamburger,
     RootTheme,
     Row,
+    ScreenClass,
     ThemeProvider,
     Typography,
+    Visible,
 } from '@retailmenot/anchor';
-import styled, { css } from '@xstyled/styled-components';
-import Helmet from 'react-helmet';
-import { Link } from 'gatsby';
-// COMPONENTS
 import { Footer } from '../';
-import { EnhancedSideNavigation, EnhancedNextPrevious } from '../../Navigation';
-import { CodePreview } from '../../CodePreview';
+import {
+    EnhancedSectionNavigation,
+    EnhancedNextPrevious,
+} from '../../Navigation';
+import { MDXComponents } from './MDXComponents';
+import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
 
-const StyledPageElement = styled('div')``;
+const StyledPageElement = styled('div')`
+    // The Row component can't be extended, so targeting it via class
+    .anchor-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+`;
 
 interface PageProps {
     className?: string;
@@ -30,24 +44,21 @@ interface PageProps {
     enableFooter?: boolean;
 }
 
-// Defining this in one location so that it can be used both in the table styles for the pre tag,
-// and for the StyledInlineCode component fed to MDX's custom Components.
-export const InlineCodeStyle = css`
-    display: inline;
-    background-color: rgba(27, 31, 35, 0.05);
-    font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier,
-        monospace;
-    border-radius: 0.1875rem;
-    padding: 0.2em 0.4em;
-    font-size: 0.85rem;
-`;
+interface StyledContentMainProps {
+    breakpoint?: BreakpointsType;
+}
 
-const StyledContentMain = styled('main')`
+const StyledContentMain = styled('main')<StyledContentMainProps>`
     box-sizing: border-box;
     width: 95%;
     max-width: 80rem;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding: 1rem 1rem 3rem;
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        width: 100%;
+    `}
 
     blockquote {
         padding-bottom: 0;
@@ -72,12 +83,40 @@ const StyledHeader = styled('header')`
     display: block;
     background-color: white;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
+
+    // The Row component can't be extended, so targeting it via class
+    .anchor-row:first-child {
+        flex-wrap: nowrap;
+    }
 `;
 
-const StyledSideNav = styled('div')`
+interface StyledSectionNavProps {
+    breakpoint?: BreakpointsType;
+}
+
+const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     box-sizing: border-box;
     background-color: ${colors.silver.light};
     border-right: solid thin ${colors.silver.base};
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        position: fixed;
+        width: 100vw;
+        height: 120%;
+        z-index: 90;
+        overflow-y: scroll;
+        top: 4.5rem;
+        padding-bottom: 30rem;
+    `}
+`;
+
+// For mobile, fixes the body position so it doesn't scroll around when the navigation is open
+const FixedBody = createGlobalStyle`
+    body {
+        position:fixed;
+    }
 `;
 
 const StyledPrimaryNav = styled('nav')`
@@ -103,158 +142,16 @@ const CenteredCol = styled(Col)`
     justify-content: center;
 `;
 
-// These are standard markdown styles for an inlineCode block. Can't use 'code' because that is tied
-// to the CodePreview component.
-const StyledInlineCode = styled('span')`
-    ${InlineCodeStyle};
+const HamburgerCol = styled(CenteredCol)`
+    max-width: 3rem;
 `;
-
-const StyledLi = styled('li')`
-    padding-bottom: 0.5rem;
-`;
-
-const StyledHr = styled('hr')`
-    margin: 2rem 0;
-    color: ${colors.ash.base};
-    background-color: ${colors.ash.base};
-    border-style: none;
-    height: 1px;
-`;
-
-const StyledTable = styled.table``;
-
-const Components: any = {};
-
-Components.code = (props: any) => <CodePreview {...props} />;
-Components.wrapper = (props: any) => <React.Fragment {...props} />;
-Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
-Components.pre = (props: any) => <Typography tag="pre" {...props} />;
-Components.h1 = ({ children, ...props }: any) => (
-    <Typography
-        id={`${children}`.toLowerCase()}
-        weight={600}
-        tag="h1"
-        {...props}
-        children={children}
-    />
-);
-Components.h2 = ({ children, ...props }: any) => (
-    <>
-        <Typography
-            tag="a"
-            name={children
-                .split(' ')
-                .join('-')
-                .toLowerCase()}
-        />
-        <Typography
-            id={`${children.split(' ').join('-')}`.toLowerCase()}
-            weight={600}
-            tag="h2"
-            lineHeight={2.3}
-            {...props}
-            children={children}
-        />
-    </>
-);
-Components.h3 = ({ children, ...props }: any) => (
-    <>
-        <Typography
-            tag="a"
-            name={children
-                .split(' ')
-                .join('-')
-                .toLowerCase()}
-        />
-        <Typography
-            id={`${children.split(' ').join('-')}`.toLowerCase()}
-            weight={600}
-            tag="h3"
-            lineHeight={2.5}
-            {...props}
-            children={children}
-        />
-    </>
-);
-Components.h4 = ({ children, ...props }: any) => (
-    <>
-        <Typography
-            tag="a"
-            name={children
-                .split(' ')
-                .join('-')
-                .toLowerCase()}
-        />
-        <Typography
-            id={`${children.split(' ').join('-')}`.toLowerCase()}
-            weight={600}
-            tag="h4"
-            {...props}
-            children={children}
-        />
-    </>
-);
-Components.h5 = ({ children, ...props }: any) => (
-    <>
-        <Typography
-            tag="a"
-            name={children
-                .split(' ')
-                .join('-')
-                .toLowerCase()}
-        />
-        <Typography
-            id={`${children.split(' ').join('-')}`.toLowerCase()}
-            weight={600}
-            tag="h5"
-            {...props}
-            children={children}
-        />
-    </>
-);
-Components.h6 = ({ children, ...props }: any) => (
-    <>
-        <Typography
-            tag="a"
-            name={children
-                .split(' ')
-                .join('-')
-                .toLowerCase()}
-        />
-        <Typography
-            id={`${children.split(' ').join('-')}`.toLowerCase()}
-            weight={600}
-            tag="h6"
-            mb="1"
-            {...props}
-            children={children}
-        />
-    </>
-);
-
-Components.p = (props: any) => <Typography tag="p" {...props} />;
-Components.a = (props: any) => (
-    <Typography color={colors.flashPink.base} tag="a" {...props} />
-);
-Components.blockquote = (props: any) => (
-    <Typography tag="blockquote" {...props} />
-);
-Components.strong = (props: any) => (
-    <Typography weight={600} tag="strong" {...props} />
-);
-Components.ul = (props: any) => <ul {...props} />;
-Components.ol = (props: any) => <ol {...props} />;
-Components.li = (props: any) => (
-    <StyledLi>
-        <Typography {...props} />
-    </StyledLi>
-);
-Components.hr = (props: any) => <StyledHr {...props} />;
-// TODO: This only binds to MD tables, not HTML
-Components.table = (props: any) => <StyledTable {...props} />;
 
 const AnchorTheme = {
     ...RootTheme,
+    fonts: {
+        ...RootTheme.fonts,
+        mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    },
     awesomegrid: {
         container: {
             xs: 'full',
@@ -277,57 +174,100 @@ export const Page = ({
     children,
     className,
     enableFooter,
-}: PageProps): React.ReactElement<any> => (
-    <ThemeProvider theme={AnchorTheme}>
-        <StyledPageElement className={classNames(className)}>
-            <Helmet htmlAttributes={{ lang: 'en' }} />
+}: PageProps): React.ReactElement<any> => {
+    const [sectionNavOpen, setSectionNavOpen] = React.useState<boolean>(false);
 
-            <StyledHeader>
-                <Container>
-                    <Row>
-                        <CenteredCol md={2}>
-                            <StyledLogoContainer to="/">
-                                <img alt="Anchor Logo Horizontal" src={logo} />
-                            </StyledLogoContainer>
-                        </CenteredCol>
-                        <CenteredCol md={2}>
-                            {/* TODO: Search will go here */}
-                        </CenteredCol>
-                        <CenteredCol md={4}>
-                            <StyledPrimaryNav>
-                                <Typography
-                                    tag="a"
-                                    weight={600}
-                                    className="active"
-                                    href="https://github.com/RetailMeNot/anchor"
-                                >
-                                    Github
-                                </Typography>
-                            </StyledPrimaryNav>
-                        </CenteredCol>
-                    </Row>
-                </Container>
-            </StyledHeader>
-            <Row>
-                <Col md={2} lg={2}>
-                    <StyledSideNav>
-                        <EnhancedSideNavigation />
-                    </StyledSideNav>
-                </Col>
-                <Col md={6} lg={10}>
-                    <StyledContentMain>
-                        <br />
-                        <MDXProvider components={Components}>
-                            {children}
-                        </MDXProvider>
+    return (
+        <ThemeProvider theme={AnchorTheme}>
+            <ScreenClass
+                render={(breakpoint: BreakpointsType) => (
+                    <StyledPageElement className={classNames(className)}>
+                        <Helmet htmlAttributes={{ lang: 'en' }} />
 
-                        <EnhancedNextPrevious section="components" />
-                        {enableFooter && <Footer />}
-                    </StyledContentMain>
-                </Col>
-            </Row>
-        </StyledPageElement>
-    </ThemeProvider>
-);
+                        <StyledHeader>
+                            <Container>
+                                <Row>
+                                    <Visible xs sm>
+                                        <HamburgerCol xs={1} sm={1}>
+                                            <Button
+                                                variant="minimal"
+                                                prefix={<Hamburger />}
+                                                onClick={() =>
+                                                    setSectionNavOpen(
+                                                        !sectionNavOpen
+                                                    )
+                                                }
+                                            />
+                                        </HamburgerCol>
+                                    </Visible>
+
+                                    <CenteredCol md={2} xs={2} sm={4}>
+                                        <StyledLogoContainer to="/">
+                                            <img
+                                                alt="Anchor Logo Horizontal"
+                                                src={logo}
+                                            />
+                                        </StyledLogoContainer>
+                                    </CenteredCol>
+
+                                    <CenteredCol md={2} xs={1} sm={1}>
+                                        {/* TODO: Search will go here */}
+                                    </CenteredCol>
+
+                                    <CenteredCol md={4} xs={1} sm={3}>
+                                        <StyledPrimaryNav>
+                                            <Typography
+                                                tag="a"
+                                                weight={600}
+                                                className="active"
+                                                href="https://github.com/RetailMeNot/anchor"
+                                            >
+                                                Github
+                                            </Typography>
+                                        </StyledPrimaryNav>
+                                    </CenteredCol>
+                                </Row>
+                            </Container>
+                        </StyledHeader>
+
+                        <Row>
+                            <Col md={2} lg={2}>
+                                {(sectionNavOpen ||
+                                    (breakpoint !== breakpoints.sm &&
+                                        breakpoint !== breakpoints.xs)) && (
+                                    <>
+                                        {sectionNavOpen && (
+                                            <Visible sm xs>
+                                                <FixedBody />
+                                            </Visible>
+                                        )}
+
+                                        <StyledSectionNav
+                                            breakpoint={breakpoint}
+                                        >
+                                            <EnhancedSectionNavigation />
+                                        </StyledSectionNav>
+                                    </>
+                                )}
+                            </Col>
+                            <Col md={6} lg={10}>
+                                <StyledContentMain breakpoint={breakpoint}>
+                                    <br />
+                                    <MDXProvider components={MDXComponents}>
+                                        {children}
+                                    </MDXProvider>
+
+                                    <EnhancedNextPrevious section="components" />
+
+                                    {enableFooter && <Footer />}
+                                </StyledContentMain>
+                            </Col>
+                        </Row>
+                    </StyledPageElement>
+                )}
+            />
+        </ThemeProvider>
+    );
+};
 
 export default Page;

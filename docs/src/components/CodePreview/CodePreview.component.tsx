@@ -42,18 +42,20 @@ import {
     AutoComplete,
     Collapse,
     CollapseGroup,
+    colors,
     Input,
+    ScreenClass,
     Typography,
 } from '@retailmenot/anchor';
 // COMPONENTS
-import * as Anchor from '../../../../src';
-// THEME
-import { colors } from '../../../../src/theme';
+import * as Anchor from '@retailmenot/anchor';
 // EXAMPLE COMPONENTS <-
 import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 import { CustomResults } from '../AutoCompleteExample';
 import { ExampleHeader, ExampleLink } from '../TemplateExample';
+import { breakpoints, BreakpointsType, responsiveCSS } from '../Utils';
+import { COMPONENT_MIN_WIDTH } from '../Utils/constants';
 // TODO: ApiTable is throwing an error when used in the live editor, have to look into it
 // import { ApiTable } from '../Utils/ApiTable';
 import { ColorBlurb } from '../Utils/ColorBlurb';
@@ -75,17 +77,29 @@ interface StyledContainerElementProps {
     // Hiding the title will reduce the amount of top padding, allowing for another title to be
     // placed closer to the code block.
     hideTitle?: boolean;
+    breakpoint?: BreakpointsType;
 }
 
 const StyledContainerElement = styled('div')<StyledContainerElementProps>`
     margin: ${props => (props.hideTitle ? '0 0 3rem 0' : '2.3rem 0 3rem')};
     display: block;
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        overflow-x: scroll;
+    `}
+
+    .prism-code {
+        min-width: ${COMPONENT_MIN_WIDTH};
+    }
 `;
 
 const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
     background-color: ${colors.charcoal.base};
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    min-width: ${COMPONENT_MIN_WIDTH};
     ${CodePreviewForcedStyles};
     // This library uses element-based colors to set some of its colors, which necessitates the '!important' below
     .token-line {
@@ -140,6 +154,8 @@ const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
 
 const StyledLivePreview = styled(LivePreview)<PreProps>`
     ${CodePreviewForcedStyles};
+    min-width: ${COMPONENT_MIN_WIDTH};
+    box-sizing: border-box;
     padding: 1rem;
     border: solid thin ${colors.silver.dark};
     border-bottom-left-radius: 0.25rem;
@@ -205,58 +221,78 @@ export const CodePreview = ({
 
     if (live) {
         return (
-            <StyledContainerElement hideTitle={hideTitle}>
-                {!hideTitle && (
-                    <Typography tag="h6" pb="3" m="0" weight={600}>
-                        {title}
-                    </Typography>
-                )}
+            <ScreenClass
+                render={(breakpoint: BreakpointsType) => (
+                    <StyledContainerElement
+                        hideTitle={hideTitle}
+                        breakpoint={breakpoint}
+                    >
+                        {!hideTitle && (
+                            <Typography tag="h6" pb="3" m="0" weight={600}>
+                                {title}
+                            </Typography>
+                        )}
 
-                <LiveProvider code={children} scope={scope}>
-                    <StyledLiveEditor wrap="true" />
-                    <StyledLivePreview />
-                    <StyledErrorElement />
-                </LiveProvider>
-            </StyledContainerElement>
+                        <LiveProvider code={children} scope={scope}>
+                            <StyledLiveEditor wrap="true" />
+                            <StyledLivePreview />
+                            <StyledErrorElement />
+                        </LiveProvider>
+                    </StyledContainerElement>
+                )}
+            />
         );
     }
 
     // This is code taken from MDX's own documentation on rendering a code block
     // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
     return (
-        <StyledContainerElement hideTitle={hideTitle}>
-            {!hideTitle && (
-                <Typography tag="h6" pb="0" m="0" weight={600}>
-                    {title}
-                </Typography>
-            )}
+        <ScreenClass
+            render={(breakpoint: BreakpointsType) => (
+                <StyledContainerElement
+                    hideTitle={hideTitle}
+                    breakpoint={breakpoint}
+                >
+                    {!hideTitle && (
+                        <Typography tag="h6" pb="0" m="0" weight={600}>
+                            {title}
+                        </Typography>
+                    )}
 
-            <Highlight
-                {...defaultProps}
-                code={children}
-                language={language}
-                theme={github}
-            >
-                {({
-                    className: subClassName,
-                    tokens,
-                    getLineProps,
-                    getTokenProps,
-                }) => (
-                    <StyledCodeBlock className={subClassName}>
-                        {tokens.map((line, i) => (
-                            <div key={i} {...getLineProps({ line, key: i })}>
-                                {line.map((token, key) => (
-                                    <span
-                                        key={key}
-                                        {...getTokenProps({ token, key })}
-                                    />
+                    <Highlight
+                        {...defaultProps}
+                        code={children}
+                        language={language}
+                        theme={github}
+                    >
+                        {({
+                            className: subClassName,
+                            tokens,
+                            getLineProps,
+                            getTokenProps,
+                        }) => (
+                            <StyledCodeBlock className={subClassName}>
+                                {tokens.map((line, i) => (
+                                    <div
+                                        key={i}
+                                        {...getLineProps({ line, key: i })}
+                                    >
+                                        {line.map((token, key) => (
+                                            <span
+                                                key={key}
+                                                {...getTokenProps({
+                                                    token,
+                                                    key,
+                                                })}
+                                            />
+                                        ))}
+                                    </div>
                                 ))}
-                            </div>
-                        ))}
-                    </StyledCodeBlock>
-                )}
-            </Highlight>
-        </StyledContainerElement>
+                            </StyledCodeBlock>
+                        )}
+                    </Highlight>
+                </StyledContainerElement>
+            )}
+        />
     );
 };

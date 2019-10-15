@@ -7,12 +7,17 @@
 
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import { Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
-import { SiteLink } from '../Utils';
+import {
+    breakpoints,
+    BreakpointsType,
+    responsiveCSS,
+    SiteLink,
+} from '../Utils';
 
 interface HomeCardProps {
+    breakpoint?: BreakpointsType;
     description?: string;
     disabled?: boolean;
     imgSrc?: string;
@@ -30,6 +35,15 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
     padding: 2.8125rem;
     position: relative;
     display: flex;
+    margin-bottom: 2rem;
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        padding: 1.5rem;
+        height: auto;
+        background: rgba(255,255,255,0.95);
+    `}
 
     ${({ disabled }) =>
         disabled &&
@@ -83,19 +97,26 @@ const StyledRightCol = styled('div')`
 `;
 
 export const HomeCard = ({
+    breakpoint,
     description,
     disabled,
     imgSrc = '',
     title,
     to,
 }: HomeCardProps): React.ReactElement<any> => (
-    <StyledHomeCard disabled={disabled}>
+    <StyledHomeCard disabled={disabled} breakpoint={breakpoint}>
         <StyledLeftCol>
             <img src={withPrefix(imgSrc)} alt={title} />
         </StyledLeftCol>
 
         <StyledRightCol>
-            <Typography tag="h3" weight="bold" scale="28" color="#323232">
+            <Typography
+                tag="h3"
+                weight="bold"
+                scale="28"
+                color="#323232"
+                mt="0"
+            >
                 {title}
             </Typography>
 

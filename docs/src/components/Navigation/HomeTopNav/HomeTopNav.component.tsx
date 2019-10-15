@@ -9,15 +9,18 @@ interface StyledHomeTopNavProps {
 }
 
 const StyledHomeTopNav = styled('nav')<StyledHomeTopNavProps>`
-    text-align: right;
     margin: 0 auto;
     width: 100%;
     max-width: ${props => props.contentWidth}px;
 `;
 
 const StyledContainer = styled(Container)`
-    width: 300rpx;
+    width: 100%;
     display: inline-block;
+`;
+
+const StyledNavLink = styled(NavLink)`
+    text-align: right;
 `;
 
 export const HomeTopNav = ({
@@ -27,8 +30,8 @@ export const HomeTopNav = ({
         <StyledHomeTopNav contentWidth={contentWidth}>
             <StyledContainer>
                 <Row>
-                    <Col>
-                        <NavLink to="/overview/">Overview</NavLink>
+                    <Col offset={{ xs: 3, md: 6, lg: 11 }}>
+                        <StyledNavLink to="/overview/">Overview</StyledNavLink>
                     </Col>
                 </Row>
             </StyledContainer>
