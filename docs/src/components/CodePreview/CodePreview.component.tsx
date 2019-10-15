@@ -22,82 +22,82 @@
 */
 
 // REACT
-import * as React from "react";
+import * as React from 'react';
 // VENDOR
-import { withPrefix } from "gatsby";
-import styled, { css } from "@xstyled/styled-components";
+import { withPrefix } from 'gatsby';
+import styled, { css } from '@xstyled/styled-components';
 import {
-  LiveEditor,
-  LiveProvider,
-  LivePreview,
-  LiveEditorProps,
-  PreProps,
-  LiveError,
-} from "react-live";
-import Component from "@reach/component-component";
-import Highlight, { defaultProps, Language } from "prism-react-renderer";
+    LiveEditor,
+    LiveProvider,
+    LivePreview,
+    LiveEditorProps,
+    PreProps,
+    LiveError,
+} from 'react-live';
+import Component from '@reach/component-component';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 // tslint:disable-next-line: no-submodule-imports
-import github from "prism-react-renderer/themes/github";
+import github from 'prism-react-renderer/themes/github';
 import {
-  AutoComplete,
-  Button,
-  Collapse,
-  CollapseGroup,
-  colors,
-  Input,
-  ScreenClass,
-  Typography,
-} from "@retailmenot/anchor";
+    AutoComplete,
+    Button,
+    Collapse,
+    CollapseGroup,
+    colors,
+    Input,
+    ScreenClass,
+    Typography,
+} from '@retailmenot/anchor';
 // COMPONENTS
-import * as Anchor from "@retailmenot/anchor";
+import * as Anchor from '@retailmenot/anchor';
 // EXAMPLE COMPONENTS <-
-import { BottomArea, MoreInfo } from "../CardExample";
-import { MouseOverMe, MyList } from "../DropDownExample";
-import { CustomResults } from "../AutoCompleteExample";
-import { ExampleHeader, ExampleLink } from "../TemplateExample";
-import { breakpoints, BreakpointsType, responsiveCSS } from "../Utils";
-import { COMPONENT_MIN_WIDTH } from "../Utils/constants";
+import { BottomArea, MoreInfo } from '../CardExample';
+import { MouseOverMe, MyList } from '../DropDownExample';
+import { CustomResults } from '../AutoCompleteExample';
+import { ExampleHeader, ExampleLink } from '../TemplateExample';
+import { breakpoints, BreakpointsType, responsiveCSS } from '../Utils';
+import { COMPONENT_MIN_WIDTH } from '../Utils/constants';
 // TODO: ApiTable is throwing an error when used in the live editor, have to look into it
 // import { ApiTable } from '../Utils/ApiTable';
-import { ColorBlurb } from "../Utils/ColorBlurb";
-import { ComponentInfo } from "../Utils/ComponentInfo";
-import { FormatTypes } from "../Utils/FormatTypes";
+import { ColorBlurb } from '../Utils/ColorBlurb';
+import { ComponentInfo } from '../Utils/ComponentInfo';
+import { FormatTypes } from '../Utils/FormatTypes';
 
 // TODO: add CDN Inconsolata font
 
 const CodePreviewForcedStyles = css`
-  font-family: Inconsolata, monospace !important;
-  font-size: 0.875rem !important;
+    font-family: Inconsolata, monospace !important;
+    font-size: 0.875rem !important;
 `;
 
 const StyledErrorElement = styled(LiveError)`
-  ${CodePreviewForcedStyles};
+    ${CodePreviewForcedStyles};
 `;
 
 interface StyledContainerElementProps {
-  // Hiding the title will reduce the amount of top padding, allowing for another title to be
-  // placed closer to the code block.
-  hideTitle?: boolean;
-  breakpoint?: BreakpointsType;
+    // Hiding the title will reduce the amount of top padding, allowing for another title to be
+    // placed closer to the code block.
+    hideTitle?: boolean;
+    breakpoint?: BreakpointsType;
 }
 
-const StyledContainerElement = styled("div")<StyledContainerElementProps>`
-  margin: ${props => (props.hideTitle ? "0 0 3rem 0" : "2.3rem 0 3rem")};
-  display: block;
-  ${({ breakpoint }) => responsiveCSS(breakpoint, [
-    breakpoints.xs,
-    breakpoints.sm,
-  ])`
+const StyledContainerElement = styled('div')<StyledContainerElementProps>`
+    margin: ${props => (props.hideTitle ? '0 0 3rem 0' : '2.3rem 0 3rem')};
+    display: block;
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
         overflow-x: scroll;
     `}
 
-  .prism-code {
-    min-width: ${COMPONENT_MIN_WIDTH};
-  }
+    .prism-code {
+        min-width: ${COMPONENT_MIN_WIDTH};
+    }
 `;
 
 const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
-    background-color: text.body;
+    background-color: text.base;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     min-width: ${COMPONENT_MIN_WIDTH};
@@ -154,55 +154,55 @@ const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
 `;
 
 const StyledLivePreview = styled(LivePreview)<PreProps>`
-  ${CodePreviewForcedStyles};
-  min-width: ${COMPONENT_MIN_WIDTH};
-  box-sizing: border-box;
-  padding: 1rem;
-  border: base;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+    ${CodePreviewForcedStyles};
+    min-width: ${COMPONENT_MIN_WIDTH};
+    box-sizing: border-box;
+    padding: 1rem;
+    border: base;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 `;
 
-const StyledCodeBlock = styled("pre")`
-  padding: 1.25rem;
-  background-color: background.code;
+const StyledCodeBlock = styled('pre')`
+    padding: 1.25rem;
+    background-color: background.code;
 `;
 
 interface CodePreviewProps {
-  children?: any;
-  className?: string;
-  live?: boolean;
-  hideTitle?: boolean;
+    children?: any;
+    className?: string;
+    live?: boolean;
+    hideTitle?: boolean;
 }
 
 const scope = {
-  withPrefix,
-  ...Anchor,
-  Component,
-  // OVERRIDES
-  AutoComplete,
-  Button,
-  Collapse,
-  CollapseGroup,
-  Input,
+    withPrefix,
+    ...Anchor,
+    Component,
+    // OVERRIDES
+    AutoComplete,
+    Button,
+    Collapse,
+    CollapseGroup,
+    Input,
 
-  // EXAMPLE COMPONENTS <-
-  // Card
-  BottomArea,
-  MoreInfo,
-  // DropDown
-  MouseOverMe,
-  MyList,
-  // AutoComplete
-  CustomResults,
-  // TemplateExample
-  ExampleHeader,
-  ExampleLink,
+    // EXAMPLE COMPONENTS <-
+    // Card
+    BottomArea,
+    MoreInfo,
+    // DropDown
+    MouseOverMe,
+    MyList,
+    // AutoComplete
+    CustomResults,
+    // TemplateExample
+    ExampleHeader,
+    ExampleLink,
 
-  // DOCUMENTATION COMPONENTS
-  ColorBlurb,
-  ComponentInfo,
-  FormatTypes,
+    // DOCUMENTATION COMPONENTS
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes,
 };
 
 /*
@@ -210,82 +210,91 @@ const scope = {
     live prop is passed, the interactive code editor is used instead.
 */
 export const CodePreview = ({
-  children,
-  className,
-  live = false,
-  hideTitle = false,
-  ...props
+    children,
+    className,
+    live = false,
+    hideTitle = false,
+    ...props
 }: CodePreviewProps): React.ReactElement<any> => {
-  const language: Language | any = className
-    ? className.replace(/language-/, "")
-    : "javascript";
-  const title = live ? "Live Code Editor" : "Example";
+    const language: Language | any = className
+        ? className.replace(/language-/, '')
+        : 'javascript';
+    const title = live ? 'Live Code Editor' : 'Example';
 
-  if (live) {
+    if (live) {
+        return (
+            <ScreenClass
+                render={(breakpoint: BreakpointsType) => (
+                    <StyledContainerElement
+                        hideTitle={hideTitle}
+                        breakpoint={breakpoint}
+                    >
+                        {!hideTitle && (
+                            <Typography tag="h6" pb="3" m="0" weight={600}>
+                                {title}
+                            </Typography>
+                        )}
+
+                        <LiveProvider code={children} scope={scope}>
+                            <StyledLiveEditor wrap="true" />
+                            <StyledLivePreview />
+                            <StyledErrorElement />
+                        </LiveProvider>
+                    </StyledContainerElement>
+                )}
+            />
+        );
+    }
+
+    // This is code taken from MDX's own documentation on rendering a code block
+    // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
     return (
-      <ScreenClass
-        render={(breakpoint: BreakpointsType) => (
-          <StyledContainerElement hideTitle={hideTitle} breakpoint={breakpoint}>
-            {!hideTitle && (
-              <Typography tag="h6" pb="3" m="0" weight={600}>
-                {title}
-              </Typography>
-            )}
+        <ScreenClass
+            render={(breakpoint: BreakpointsType) => (
+                <StyledContainerElement
+                    hideTitle={hideTitle}
+                    breakpoint={breakpoint}
+                >
+                    {!hideTitle && (
+                        <Typography tag="h6" pb="0" m="0" weight={600}>
+                            {title}
+                        </Typography>
+                    )}
 
-            <LiveProvider code={children} scope={scope}>
-              <StyledLiveEditor wrap="true" />
-              <StyledLivePreview />
-              <StyledErrorElement />
-            </LiveProvider>
-          </StyledContainerElement>
-        )}
-      />
+                    <Highlight
+                        {...defaultProps}
+                        code={children}
+                        language={language}
+                        theme={github}
+                    >
+                        {({
+                            className: subClassName,
+                            tokens,
+                            getLineProps,
+                            getTokenProps,
+                        }) => (
+                            <StyledCodeBlock className={subClassName}>
+                                {tokens.map((line, i) => (
+                                    <div
+                                        key={i}
+                                        {...getLineProps({ line, key: i })}
+                                    >
+                                        {line.map((token, key) => (
+                                            <span
+                                                key={key}
+                                                {...getTokenProps({
+                                                    token,
+                                                    key,
+                                                })}
+                                            />
+                                        ))}
+                                    </div>
+                                ))}
+                            </StyledCodeBlock>
+                        )}
+                    </Highlight>
+                </StyledContainerElement>
+            )}
+        />
     );
-  }
-
-  // This is code taken from MDX's own documentation on rendering a code block
-  // https://mdxjs.com/guides/syntax-highlighting/#build-a-codeblock-component
-  return (
-    <ScreenClass
-      render={(breakpoint: BreakpointsType) => (
-        <StyledContainerElement hideTitle={hideTitle} breakpoint={breakpoint}>
-          {!hideTitle && (
-            <Typography tag="h6" pb="0" m="0" weight={600}>
-              {title}
-            </Typography>
-          )}
-
-          <Highlight
-            {...defaultProps}
-            code={children}
-            language={language}
-            theme={github}
-          >
-            {({
-              className: subClassName,
-              tokens,
-              getLineProps,
-              getTokenProps,
-            }) => (
-              <StyledCodeBlock className={subClassName}>
-                {tokens.map((line, i) => (
-                  <div key={i} {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span
-                        key={key}
-                        {...getTokenProps({
-                          token,
-                          key,
-                        })}
-                      />
-                    ))}
-                  </div>
-                ))}
-              </StyledCodeBlock>
-            )}
-          </Highlight>
-        </StyledContainerElement>
-      )}
-    />
-  );
 };

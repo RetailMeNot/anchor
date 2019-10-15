@@ -9,8 +9,8 @@ import styled from 'styled-components';
 import { Typography } from '@retailmenot/anchor';
 
 const StyledBottomArea = styled('div')`
-    background-color: background.body;
-    color: text.body;
+    background-color: background.base;
+    color: text.base;
     padding: 1rem;
 `;
 

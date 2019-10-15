@@ -1,7 +1,5 @@
 // VENDOR
 import { FlattenSimpleInterpolation } from '@xstyled/styled-components';
-// THEME
-import { fonts } from './fonts.theme';
 
 export type TypographyTags =
     | 'a'
@@ -24,7 +22,6 @@ export type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
 
 export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES
-    fontFamily: string;
     fontSize: string;
     fontWeight: string;
     lineHeight: string;
@@ -34,8 +31,7 @@ export interface TypographyTheme {
 }
 
 export const typography: TypographyTheme = {
-    fontFamily: fonts.fontFamily,
-    fontSize: `${fonts.baseFontSize}px`,
+    fontSize: `16px`,
     fontWeight: 'normal',
     lineHeight: '1.5rem',
     scale: {
@@ -153,7 +149,7 @@ export const typography: TypographyTheme = {
             padding: 0,
         },
         code: {
-            fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
+            fontFamily: 'mono',
             backgroundColor: 'text.base',
             display: 'block',
             padding: '1rem',
@@ -163,7 +159,7 @@ export const typography: TypographyTheme = {
             fontSize: '0.875rem',
         },
         pre: {
-            fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
+            fontFamily: 'mono',
         },
         label: {
             lineHeight: '1.5rem',

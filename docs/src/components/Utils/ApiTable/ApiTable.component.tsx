@@ -78,7 +78,7 @@ const Table = styled('table')`
     }
     tr {
         &:nth-child(odd) {
-            background-color: background.body;
+            background-color: background.base;
         }
     }
     td {

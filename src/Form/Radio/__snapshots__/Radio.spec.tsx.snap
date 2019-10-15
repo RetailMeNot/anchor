@@ -18,7 +18,7 @@ exports[`Component: Radio can be checked 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
-  font-family: typography.fontFamily;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   width: 1.375rem;
   height: 1.375rem;
 }
@@ -81,7 +81,7 @@ exports[`Component: Radio should be defined 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
-  font-family: typography.fontFamily;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   width: 1.375rem;
   height: 1.375rem;
 }
@@ -143,7 +143,7 @@ exports[`Component: Radio should be disableable 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
-  font-family: typography.fontFamily;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   width: 1.375rem;
   height: 1.375rem;
 }

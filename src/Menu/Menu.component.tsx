@@ -79,7 +79,7 @@ const StyledMenu = styled('nav')<MenuProps>`
             background: th.color(background),
         })};
     font-size: 0.875rem;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     border-radius: base;
 
     .anchor-menu-item {

@@ -2138,7 +2138,12 @@ storiesOf('Components/Button', module)
                             revealed={boolean('revealed', false)}
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
-                            colorTheme={{ default: undefined, alternative: alternateColors }[chosenColor]}
+                            colorTheme={
+                                {
+                                    default: undefined,
+                                    alternative: alternateColors,
+                                }[chosenColor]
+                            }
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}
                         >
@@ -2204,7 +2209,12 @@ storiesOf('Components/Button', module)
                             revealed={boolean('revealed', false)}
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
-                            colorTheme={{ default: undefined, alternative: alternateColors }[chosenColor]}
+                            colorTheme={
+                                {
+                                    default: undefined,
+                                    alternative: alternateColors,
+                                }[chosenColor]
+                            }
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}
                         >

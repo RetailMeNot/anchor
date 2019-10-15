@@ -6,6 +6,7 @@ import { MDXProvider } from '@mdx-js/tag';
 import styled, { createGlobalStyle } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
+import merge from 'lodash.merge';
 // ANCHOR & COMPONENTS
 import {
     Col,
@@ -102,7 +103,7 @@ interface StyledSectionNavProps {
 
 const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     box-sizing: border-box;
-    background-color: background.body;
+    background-color: background.base;
     border-right: light;
     ${({ breakpoint }) => responsiveCSS(breakpoint, [
         breakpoints.xs,
@@ -138,7 +139,7 @@ const StyledPrimaryNav = styled('nav')`
         display: inline-flex;
         height: 100%;
         min-width: 4rem;
-        color: text.body;
+        color: text.base;
         &:hover {
             color: text.link.hover;
         }
@@ -156,15 +157,23 @@ const HamburgerCol = styled(CenteredCol)`
 
 const AnchorDocsTheme = merge({}, RootTheme, {
     colors: {
-        primary: colors.flashPink,
-        secondary: colors.cyberMango,
+        primary: {
+            base: '#DF206C',
+            light: '#E665A1',
+            dark: '#B81D5B',
+        },
+        secondary: {
+            base: '#EB663D',
+            light: '#FA9F5A',
+            dark: '#C74E30',
+        },
         borders: {
             light: '#F1F1F1',
             base: '#E7E7E7',
             dark: '#D3D3D3',
         },
         background: {
-            body: '#FAFAFA',
+            base: '#FAFAFA',
             code: '#F1F1F1',
         },
         text: {

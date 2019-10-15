@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 export const StyledFooterElement = styled.footer`
     padding: 2rem;
-    background-color: background.body;
+    background-color: background.base;
     border-top: light;
     height: 6rem;
     width: 100%;

@@ -92,12 +92,12 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
     StyledTypographyProps
 >`
     box-sizing: border-box;
-    font-family: base;
     margin: 0;
 
     // Variant styles
     ${props =>
         css({
+            fontFamily: 'base',
             fontSize: th('typography.fontSize'),
             lineHeight: th('typography.lineHeight'),
             fontWeight: th('typography.fontWeight'),

@@ -113,8 +113,8 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -129,8 +129,8 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -306,8 +306,8 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
@@ -322,8 +322,8 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;

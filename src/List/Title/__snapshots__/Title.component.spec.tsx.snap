@@ -17,8 +17,8 @@ exports[`Component: Title should be defined 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;

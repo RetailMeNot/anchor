@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 const StyledStory = styled('div')`
     padding: 2rem 1rem;
     color: text.base;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
 `;
 
 storiesOf('Components/Tabs', module)

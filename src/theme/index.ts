@@ -2,16 +2,13 @@
 import { typography } from './typography.theme';
 import { ColorsTheme } from './colors.theme';
 import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
-import { fonts } from './fonts.theme';
 // TODO: ============================================================ move all of these v consts to a different location
 
 // When re-exporting an interface its type must be explicitly defined
 import { Color } from './colors.theme';
 export type Color = Color;
 
-export { variables } from './variables.theme';
 export { colors } from './colors.theme';
-export { fonts } from './fonts.theme';
 // I'm sorry internet, but this works.
 import { sizes as Sizes } from './sizes.theme';
 export const sizes = Sizes;
@@ -28,7 +25,8 @@ export const RootTheme = {
     [INPUT_KEY]: INPUT_THEME,
     colors: ColorsTheme,
     fonts: {
-        base: fonts.fontFamily,
+        base:
+            'Avenir Next, Segoe UI, Helvetica Neue, Helvetica, Roboto, sans-serif',
         mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
     breakpoints: {
