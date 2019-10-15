@@ -92,13 +92,12 @@ const StyledLogo = styled('img')<StyledLogoProps>`
 
 const StyledCaption = styled('p')<BreakpointProps>`
     padding: 1rem 0;
-    font-family: AvenirNext-Medium, Avenir, sans-serif;
+    font-family: base;
     font-size: 1rem;
     color: #222222;
     text-align: left;
     line-height: 1.5rem;
     max-width: 38.125rem;
-    margin: 0 1rem;
     ${({ breakpoint }) => responsiveCSS(breakpoint, [
         breakpoints.xs,
         breakpoints.sm,
@@ -107,6 +106,17 @@ const StyledCaption = styled('p')<BreakpointProps>`
         padding: 1.5rem;
         border-radius: 0.5rem;
         margin-bottom: 2rem;
+    `}
+`;
+
+const StyledContainer = styled(Container)<BreakpointProps>`
+    padding-top:4rem;
+
+    ${({ breakpoint }) => responsiveCSS(breakpoint, [
+        breakpoints.xs,
+        breakpoints.sm,
+    ])`
+        padding-top:0rem;
     `}
 `;
 
@@ -125,7 +135,7 @@ const StyledOcean = styled('div')<BreakpointProps>`
         breakpoints.sm,
     ])`
         position:fixed;
-        bottom: -24vw; // Using vw to make it's position more relative to the device width
+        bottom: -24vw; // Using vw to make its position more relative to the device width
     `}
 `;
 
@@ -190,7 +200,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                         </StyledCaption>
                     </StyledIntro>
 
-                    <Container>
+                    <StyledContainer breakpoint={breakpoint}>
                         <Row>
                             <Col
                                 offset={{
@@ -221,7 +231,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                                 </Row>
                             </Col>
                         </Row>
-                    </Container>
+                    </StyledContainer>
 
                     <StyledOcean breakpoint={breakpoint}>
                         <Wave duration="89s" top="0" image={1} />

@@ -9,14 +9,12 @@ interface StyledHomeTopNavProps {
 }
 
 const StyledHomeTopNav = styled('nav')<StyledHomeTopNavProps>`
-    // text-align: right;
     margin: 0 auto;
     width: 100%;
     max-width: ${props => props.contentWidth}px;
 `;
 
 const StyledContainer = styled(Container)`
-    // max-width: 18.75rem;
     width: 100%;
     display: inline-block;
 `;
