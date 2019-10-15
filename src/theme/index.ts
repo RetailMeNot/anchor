@@ -2,17 +2,6 @@
 import { typography } from './typography.theme';
 import { ColorsTheme } from './colors.theme';
 import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
-// TODO: ============================================================ move all of these v consts to a different location
-
-// When re-exporting an interface its type must be explicitly defined
-import { Color } from './colors.theme';
-export type Color = Color;
-
-// I'm sorry internet, but this works.
-import { sizes as Sizes } from './sizes.theme';
-export const sizes = Sizes;
-
-// TODO: ============================================================ move all of these ^ consts to a different location
 
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
 import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
