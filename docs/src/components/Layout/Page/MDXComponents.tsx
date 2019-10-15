@@ -32,7 +32,7 @@ Components.code = (props: any) => <CodePreview {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
 Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
 Components.pre = (props: any) => <Typography tag="pre" {...props} />;
-Components.p = (props: any) => <Typography tag="p" {...props} />;
+Components.p = (props: any) => <Typography tag="p" pb="4" {...props} />;
 Components.a = (props: any) => (
     <Typography color={colors.flashPink.base} tag="a" {...props} />
 );
@@ -58,6 +58,7 @@ Components.h1 = ({ children, ...props }: any) => (
         tag="h1"
         {...props}
         children={children}
+        pb="3"
     />
 );
 Components.h2 = ({ children, ...props }: any) => (
@@ -76,6 +77,7 @@ Components.h2 = ({ children, ...props }: any) => (
             lineHeight={2.3}
             {...props}
             children={children}
+            pb="3"
         />
     </>
 );
@@ -95,6 +97,7 @@ Components.h3 = ({ children, ...props }: any) => (
             lineHeight={2.5}
             {...props}
             children={children}
+            pb="2"
         />
     </>
 );

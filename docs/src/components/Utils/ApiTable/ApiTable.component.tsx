@@ -108,8 +108,7 @@ const Table = styled('table')`
         pre {
             display: inline;
             background-color: rgba(27, 31, 35, 0.05);
-            font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo,
-                Courier, monospace;
+            font-family: mono;
             border-radius: base;
             padding: 0.2em 0.4em;
             font-size: 0.85rem;
