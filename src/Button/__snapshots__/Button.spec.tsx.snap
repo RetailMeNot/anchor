@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Button Icon Only should render a circular icon 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -9,143 +9,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   color: currentColor;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
-.c35 + .c0 {
-  margin-left: 1rem;
-}
-
-.c36 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 1000px;
   font-weight: 600;
@@ -179,18 +43,18 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
   min-width: 3rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -202,13 +66,13 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <span
-    className="c2 anchor-icon star anchor-button-prefix"
+    className="c1 anchor-icon star anchor-button-prefix"
     scale="lg"
   >
     <svg
@@ -236,7 +100,7 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 `;
 
 exports[`Component: Button Icon Only should render icon-only using a prefix 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -244,139 +108,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   color: currentColor;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
-.c35 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -410,18 +142,18 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
   min-width: 3rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -433,13 +165,13 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <span
-    className="c2 anchor-icon star anchor-button-prefix"
+    className="c1 anchor-icon star anchor-button-prefix"
     scale="lg"
   >
     <svg
@@ -467,7 +199,7 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
 `;
 
 exports[`Component: Button Icon Only should render icon-only using a suffix 1`] = `
-.c2 {
+.c1 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -475,139 +207,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   color: currentColor;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
-.c35 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -641,18 +241,18 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
   min-width: 3rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -664,13 +264,13 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <span
-    className="c2 anchor-icon star anchor-button-suffix"
+    className="c1 anchor-icon star anchor-button-suffix"
     scale="lg"
   >
     <svg
@@ -698,123 +298,7 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
 `;
 
 exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -849,11 +333,11 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -865,7 +349,7 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -876,107 +360,7 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 `;
 
 exports[`Component: Button Reverse Variant: Minimal should render an minimal button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1003,29 +387,29 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
   -moz-osx-font-smoothing: grayscale;
   border: solid thin transparent;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1:active {
+.c0:active {
   background: rgba(255,255,255,0.2);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -1037,7 +421,7 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -1048,113 +432,9 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 
 exports[`Component: Button Reverse Variant: Minimal should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -1179,168 +459,52 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin transparent;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1:active {
+.c0:active {
   background: rgba(255,255,255,0.2);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -1365,169 +529,53 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin transparent;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
   background: rgba(255,255,255,0.2);
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1:active {
+.c0:active {
   background: rgba(255,255,255,0.2);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -1552,54 +600,54 @@ Array [
   -moz-osx-font-smoothing: grayscale;
   border: solid thin transparent;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
   height: 3rem;
   min-width: 12.5rem;
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(255,255,255,0.16);
-  color: #FFFFFF;
+  color: white;
 }
 
-.c1:active {
+.c0:active {
   background: rgba(255,255,255,0.2);
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -1610,103 +658,7 @@ Array [
 `;
 
 exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1742,11 +694,11 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -1758,7 +710,7 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -1769,91 +721,7 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 `;
 
 exports[`Component: Button Reverse Variant: Outline should render an outline button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1887,19 +755,19 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin white;
   background-color: white;
   color: #595959;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -1911,7 +779,7 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -1922,97 +790,9 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 
 exports[`Component: Button Reverse Variant: Outline should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -2047,132 +827,40 @@ Array [
   color: #595959;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin white;
   background-color: white;
   color: #595959;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -2207,136 +895,40 @@ Array [
   color: #595959;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin white;
   background-color: white;
   color: #595959;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -2371,42 +963,42 @@ Array [
   color: #595959;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin white;
   background-color: white;
   color: #595959;
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -2417,87 +1009,7 @@ Array [
 `;
 
 exports[`Component: Button Reverse Variant: Primary should have a disabled state 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -2533,11 +1045,11 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -2549,7 +1061,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -2560,71 +1072,7 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 `;
 
 exports[`Component: Button Reverse Variant: Primary should render a filled button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -2658,29 +1106,29 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
 }
 
-.c1:active {
+.c0:active {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus {
+.c0:focus {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -2692,7 +1140,7 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -2703,77 +1151,9 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 
 exports[`Component: Button Reverse Variant: Primary should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -2808,130 +1188,50 @@ Array [
   color: #595959;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
 }
 
-.c1:active {
+.c0:active {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus {
+.c0:focus {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -2968,130 +1268,50 @@ Array [
   background-color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
 }
 
-.c1:active {
+.c0:active {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus {
+.c0:focus {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -3128,52 +1348,52 @@ Array [
   background-color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   border: solid thin rgba(255,255,255,0.85);
   background-color: rgba(255,255,255,0.85);
   color: #595959;
 }
 
-.c1:active {
+.c0:active {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:focus {
+.c0:focus {
   border: solid thin white;
   background-color: white;
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -3184,11 +1404,7 @@ Array [
 `;
 
 exports[`Component: Button Sizes should render a md button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -3222,18 +1438,18 @@ exports[`Component: Button Sizes should render a md button 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -3244,124 +1460,8 @@ exports[`Component: Button Sizes should render a md button 1`] = `
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -3371,127 +1471,7 @@ exports[`Component: Button Sizes should render a md button 1`] = `
 `;
 
 exports[`Component: Button Sizes should render an lg button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -3525,18 +1505,18 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -3548,7 +1528,7 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -3558,7 +1538,7 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
 `;
 
 exports[`Component: Button Sizes should render an sm button 1`] = `
-.c2 {
+.c1 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -3567,131 +1547,7 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
   margin: -0.25rem 0;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -3725,18 +1581,18 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
   min-width: 5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -3748,20 +1604,20 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <div
-    className="c2"
+    className="c1"
   />
   Text
 </button>
 `;
 
 exports[`Component: Button Sizes should render an xs button 1`] = `
-.c2 {
+.c1 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -3770,135 +1626,7 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   margin: -0.5rem 0;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -3932,18 +1660,18 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
   min-width: 4rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -3955,162 +1683,22 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <div
-    className="c2"
+    className="c1"
   />
   Text
 </button>
 `;
 
 exports[`Component: Button Theme Provided should use custom size variants from theme 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c17 + .c0 {
-  margin-left: 1rem;
-}
-
-.c18 + .c0 {
-  margin-left: 1rem;
-}
-
-.c19 + .c0 {
-  margin-left: 1rem;
-}
-
-.c20 + .c0 {
-  margin-left: 1rem;
-}
-
-.c21 + .c0 {
-  margin-left: 1rem;
-}
-
-.c22 + .c0 {
-  margin-left: 1rem;
-}
-
-.c23 + .c0 {
-  margin-left: 1rem;
-}
-
-.c24 + .c0 {
-  margin-left: 1rem;
-}
-
-.c25 + .c0 {
-  margin-left: 1rem;
-}
-
-.c26 + .c0 {
-  margin-left: 1rem;
-}
-
-.c27 + .c0 {
-  margin-left: 1rem;
-}
-
-.c28 + .c0 {
-  margin-left: 1rem;
-}
-
-.c29 + .c0 {
-  margin-left: 1rem;
-}
-
-.c30 + .c0 {
-  margin-left: 1rem;
-}
-
-.c31 + .c0 {
-  margin-left: 1rem;
-}
-
-.c32 + .c0 {
-  margin-left: 1rem;
-}
-
-.c33 + .c0 {
-  margin-left: 1rem;
-}
-
-.c34 + .c0 {
-  margin-left: 1rem;
-}
-
-.c35 + .c0 {
-  margin-left: 1rem;
-}
-
-.c36 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -4142,30 +1730,30 @@ exports[`Component: Button Theme Provided should use custom size variants from t
   min-width: 30rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -4173,67 +1761,7 @@ exports[`Component: Button Theme Provided should use custom size variants from t
 `;
 
 exports[`Component: Button Variant: Minimal should be disableable 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c16 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -4268,11 +1796,11 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -4284,7 +1812,7 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -4295,55 +1823,7 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 `;
 
 exports[`Component: Button Variant: Minimal should render an minimal button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -4377,18 +1857,18 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -4400,7 +1880,7 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -4411,61 +1891,9 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 
 exports[`Component: Button Variant: Minimal should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -4499,95 +1927,39 @@ Array [
   color: #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -4621,99 +1993,39 @@ Array [
   color: #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c13 + .c0 {
-  margin-left: 1rem;
-}
-
-.c14 + .c0 {
-  margin-left: 1rem;
-}
-
-.c15 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -4747,41 +2059,41 @@ Array [
   color: #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -4792,51 +2104,7 @@ Array [
 `;
 
 exports[`Component: Button Variant: Outline should be disableable 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c12 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -4871,11 +2139,11 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -4887,7 +2155,7 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -4898,39 +2166,7 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 `;
 
 exports[`Component: Button Variant: Outline should render an outline button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -4964,19 +2200,19 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
   color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -4988,7 +2224,7 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -4999,45 +2235,9 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 
 exports[`Component: Button Variant: Outline should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5072,80 +2272,40 @@ Array [
   color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
   color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5180,84 +2340,40 @@ Array [
   color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
   color: white;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c9 + .c0 {
-  margin-left: 1rem;
-}
-
-.c10 + .c0 {
-  margin-left: 1rem;
-}
-
-.c11 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5292,42 +2408,42 @@ Array [
   color: white;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
   color: white;
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -5338,35 +2454,7 @@ Array [
 `;
 
 exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -5400,18 +2488,18 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #268068;
   border: solid thin #268068;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -5423,7 +2511,7 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -5433,15 +2521,7 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 `;
 
 exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -5476,11 +2556,11 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -5492,7 +2572,7 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   disabled={true}
   onFocus={[Function]}
   onMouseDown={[Function]}
@@ -5503,23 +2583,7 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 `;
 
 exports[`Component: Button Variant: Primary should have a revealed state when flipped 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -5557,11 +2621,11 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
   font-weight: bold;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -5573,7 +2637,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -5583,11 +2647,7 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 `;
 
 exports[`Component: Button Variant: Primary should render a filled button 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -5621,18 +2681,18 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -5644,7 +2704,7 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
@@ -5655,29 +2715,9 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
 
 exports[`Component: Button Variant: Primary should render hovered, active and focused states 1`] = `
 Array [
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5711,63 +2751,39 @@ Array [
   border: solid thin #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5801,67 +2817,39 @@ Array [
   border: solid thin #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     Text
   </button>,
-  .c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+  .c0 {
   position: relative;
-  border-radius: base;
+  border-radius: 4px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -5895,41 +2883,41 @@ Array [
   border: solid thin #0074A6;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:after {
+.c0:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
   left: calc(-1px - 2px);
   right: calc(-1px - 2px);
   bottom: calc(-1px - 2px);
-  border-radius: calc(base + 2px);
+  border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
 <button
-    className="c0 c1 anchor-button"
+    className="c0 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -5940,7 +2928,7 @@ Array [
 `;
 
 exports[`Component: Button Variant: Primary should render properly when flipped 1`] = `
-.c2 {
+.c1 {
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   position: absolute;
@@ -5954,7 +2942,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   background: linear-gradient( 45deg, #0998D6, #0998D6 50%, #F1F1F1 0 );
 }
 
-.c3 {
+.c2 {
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   position: absolute;
@@ -5968,19 +2956,7 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   background: linear-gradient( 45deg, #66CCFF, #66CCFF 50%, #F1F1F1 0 );
 }
 
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -6014,24 +2990,24 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:hover > .flip-base,
-.c1:focus > .flip-base,
-.c1:active > .flip-base {
+.c0:hover > .flip-base,
+.c0:focus > .flip-base,
+.c0:active > .flip-base {
   opacity: 0;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -6043,23 +3019,23 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   Text
   <div
-    className="c2"
+    className="c1"
   />
   <div
-    className="c3 flip-base"
+    className="c2 flip-base"
   />
 </button>
 `;
 
 exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
-.c2 {
+.c1 {
   margin: 0 0.5rem 0 0;
   display: inline-block;
   height: 1rem;
@@ -6068,11 +3044,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   color: currentColor;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -6106,18 +3078,18 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -6128,34 +3100,14 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   <span
-    className="c2 anchor-icon star anchor-button-prefix"
+    className="c1 anchor-icon star anchor-button-prefix"
     scale="md"
   >
     <svg
@@ -6184,7 +3136,7 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 `;
 
 exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
-.c2 {
+.c1 {
   margin: 0 0 0 0.5rem;
   display: inline-block;
   height: 1rem;
@@ -6193,11 +3145,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   color: currentColor;
 }
 
-.c3 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -6231,18 +3179,18 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -6253,35 +3201,15 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c4 + .c0 {
-  margin-left: 1rem;
-}
-
-.c5 + .c0 {
-  margin-left: 1rem;
-}
-
-.c6 + .c0 {
-  margin-left: 1rem;
-}
-
-.c7 + .c0 {
-  margin-left: 1rem;
-}
-
-.c8 + .c0 {
-  margin-left: 1rem;
-}
-
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
   Text
   <span
-    className="c2 anchor-icon star anchor-button-suffix"
+    className="c1 anchor-icon star anchor-button-suffix"
     scale="md"
   >
     <svg
@@ -6309,11 +3237,7 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
 `;
 
 exports[`Component: Button should be defined 1`] = `
-.c2 + .c0 {
-  margin-left: 1rem;
-}
-
-.c1 {
+.c0 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -6347,18 +3271,18 @@ exports[`Component: Button should be defined 1`] = `
   min-width: 12.5rem;
 }
 
-.c1 + .c0 {
+.c0 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c1:hover,
-.c1:focus,
-.c1:active {
+.c0:hover,
+.c0:focus,
+.c0:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c1:focus:after {
+.c0:focus:after {
   position: absolute;
   content: '';
   top: calc(-1px - 2px);
@@ -6370,11 +3294,11 @@ exports[`Component: Button should be defined 1`] = `
 }
 
 <button
-  className="c0 c1 anchor-button"
+  className="c0 anchor-button"
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseUp={[Function]}
 >
-  Submit
+  Test
 </button>
 `;
