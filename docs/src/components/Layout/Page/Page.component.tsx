@@ -16,7 +16,6 @@ import styled, { css } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 // COMPONENTS
-import { NormalizeCSS } from '../../../../../src/theme';
 import { Footer } from '../';
 import { EnhancedSideNavigation, EnhancedNextPrevious } from '../../Navigation';
 import { CodePreview } from '../../CodePreview';
@@ -282,8 +281,6 @@ export const Page = ({
     <ThemeProvider theme={AnchorTheme}>
         <StyledPageElement className={classNames(className)}>
             <Helmet htmlAttributes={{ lang: 'en' }} />
-
-            <NormalizeCSS />
 
             <StyledHeader>
                 <Container>
