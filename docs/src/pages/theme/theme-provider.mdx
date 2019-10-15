@@ -61,7 +61,7 @@ recommended to alter these values.
 ### colors
 
 The `colors` property is arguably one of the most important. `RootTheme` provides a structure for
-the various color swatches available from the <Link to="/theme/colors/">`colors`</Link> object, a
+the various color swatches available from the <Link to="/theme/colors/">`colors`</Link> palette, a
 structure from which **Anchor** components rely on to properly render their styles. As a matter of
 fact, the fastest way to realize that `ThemeProvider` and/or `RootTheme` are not being correctly
 applied to an application is because of a lack of color.
@@ -75,12 +75,6 @@ as, `comfortable`, `cozy`, `light` and `dark` as an example of this approach.
 **Anchor** components will always refer to color usage via the properties of this `ColorTheme`. In
 other words, if a component wanted to use the `light` hue of `grapePurchase`, it would refer to it
 as `primary.light`.
-
-It's important to note that the <Link to="/theme/colors/">`colors`</Link> object that ships
-with **Anchor** is not the same thing as the `RootTheme`. <Link to="/theme/colors/">`colors`</Link> is
-intended to be used when one has a very specific need for a color swatch. Most of the examples of the
-components on this site use the <Link to="/theme/colors/">`colors`</Link> object in cases where the
-`RootTheme` didn't apply a color.
 
 ###### ColorTheme Example
 ```jsx hideTitle

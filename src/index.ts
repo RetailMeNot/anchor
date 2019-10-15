@@ -37,7 +37,7 @@ export {
 export { Menu, Item as MenuItem } from './Menu';
 export { Typography } from './Typography';
 export { Tooltip } from './Tooltip';
-export { colors, sizes, RootTheme, ThemeProvider } from './theme';
+export { sizes, RootTheme, ThemeProvider } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Tabs } from './Tabs';

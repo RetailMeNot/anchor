@@ -8,7 +8,6 @@ import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-component
 import { Color } from './colors.theme';
 export type Color = Color;
 
-export { colors } from './colors.theme';
 // I'm sorry internet, but this works.
 import { sizes as Sizes } from './sizes.theme';
 export const sizes = Sizes;

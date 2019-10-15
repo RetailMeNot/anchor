@@ -2,8 +2,8 @@
 import React from 'react';
 // VENDOR
 import { ColorSwatchFamily } from '../ColorSwatchFamily';
-// THEME
-import { colors } from '../../../../src/theme';
+
+const colors = {};
 
 // JSX MARKUP
 export const ColorSwatchFamilyList = (): React.ReactElement<any> => (

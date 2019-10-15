@@ -18,7 +18,7 @@ export type Color =
     | 'error'
     | 'success';
 
-export const colors = {
+const colors = {
     charcoal: {
         base: '#323232',
         light: '#595959',

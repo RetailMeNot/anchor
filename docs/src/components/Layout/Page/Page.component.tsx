@@ -10,7 +10,6 @@ import merge from 'lodash.merge';
 // ANCHOR & COMPONENTS
 import {
     Col,
-    colors,
     Button,
     Container,
     Hamburger,

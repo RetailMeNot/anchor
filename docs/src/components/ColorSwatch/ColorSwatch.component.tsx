@@ -1,13 +1,12 @@
 // REACT
 import React, { useState } from 'react';
 // VENDOR
-import styled from 'styled-components';
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
 import { ColorHelpers } from '../ColorHelpers';
 import { Pill } from '../Pill';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Typography } from '../../../../src/Typography';
-// THEME
-import { colors } from '../../../../src/theme';
 
 // INTERFACES
 interface ColorSwatchProps {
@@ -40,9 +39,9 @@ const StyledColorSwatch = styled.div<{
         top: 2rem;
         right: 2rem;
         z-index: 10;
-        color: ${colors.success.base};
+        color: success;
         background: white;
-        border: 0.1rem solid ${colors.success.base};
+        border: 0.1rem solid ${th.color('success')};
     }
 `;
 
@@ -55,10 +54,10 @@ const StyledColorSwatchTextContainer = styled.div<{
 
     p {
         margin: 0;
-        padding: 0.25rem 0 0.25rem 0.5rem;
+        padding: 0.25rem 0 0.25rem 1rem;
 
         &:hover {
-            background: ${colors.ash.light};
+            background-color: background.base;
             border-radius: 1rem;
             cursor: pointer;
             text-decoration: underline;
