@@ -30,7 +30,7 @@ exports[`Component: Hero should be defined 1`] = `
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
-.c5 {
+.c4 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -64,24 +64,24 @@ exports[`Component: Hero should render with custom content 1`] = `
   min-width: 12.5rem;
 }
 
-.c5 + .c4 {
+.c4 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:active {
+.c4:hover,
+.c4:focus,
+.c4:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c5:focus:after {
+.c4:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -160,7 +160,7 @@ exports[`Component: Hero should render with custom content 1`] = `
     Some Typography text
   </span>
   <button
-    className="c4 c5 anchor-button"
+    className="c4 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}

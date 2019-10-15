@@ -5,21 +5,23 @@ import classNames from 'classnames';
 import styled, {
     css,
     FlattenSimpleInterpolation,
+    ThemeContext,
 } from '@xstyled/styled-components';
 import { variant as createVariant, th } from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
-import { colors } from '../theme/colors.theme';
-import { fonts } from '../theme/fonts.theme';
-import { sizes } from '../theme/sizes.theme';
-import { Theme, TRANSITION_SPEED, REVEAL_COLOR } from './utils';
+import {
+    Theme,
+    TRANSITION_SPEED,
+    REVEAL_BACKGROUND_COLOR,
+    REVEAL_COLOR,
+} from './utils';
 import { rem } from '../utils/rem/rem';
 import { cloneWithProps } from '../utils/cloneWithProps/cloneWithProps';
 import { Flip } from './Flip';
 import { HitArea } from './HitArea';
 
 type Variant = 'filled' | 'outline' | 'minimal';
-
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs' | string;
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -65,37 +67,57 @@ export interface StyledButtonProps extends ButtonProps {
     variant: Variant;
 }
 
+// Todo: These should not be hardcoded like this, and needs
+// a better solution.
+// Basically a copy of 'ash'
+const disabledColor = {
+    dark: '#808080',
+    light: '#D3D3D3',
+};
+// Just a copy of 'savvyCyan'
+const primaryColor = {
+    base: '#0998D6',
+    light: '#66CCFF',
+    dark: '#0074A6',
+};
+// Just a copy of 'charcoal'
+const grayColor = {
+    base: '#323232',
+    light: '#595959',
+    dark: '#000000',
+};
+
 const themeDefaults = {
-    filled: colors.savvyCyan,
+    filled: primaryColor,
     outline: {
-        base: colors.savvyCyan.dark,
-        light: colors.savvyCyan.base,
-        dark: colors.savvyCyan.dark,
+        base: primaryColor.dark,
+        light: primaryColor.base,
+        dark: primaryColor.dark,
     },
     minimal: {
-        base: colors.savvyCyan.dark,
-        light: colors.savvyCyan.base,
-        dark: colors.savvyCyan.dark,
+        base: primaryColor.dark,
+        light: primaryColor.base,
+        dark: primaryColor.dark,
     },
 };
 
 const reverseDefaults = {
     filled: {
-        base: colors.charcoal.light,
-        light: colors.charcoal.light,
-        dark: colors.charcoal.dark,
+        base: grayColor.light,
+        light: grayColor.light,
+        dark: grayColor.dark,
     },
     outline: {
         base: 'white',
         light: 'white',
-        dark: colors.charcoal.light,
+        dark: grayColor.light,
     },
-    minimal: colors.white,
+    minimal: {
+        base: 'white',
+        light: 'white',
+        dark: 'white',
+    },
 };
-
-// Todo: This should not be hardcoded like this, and needs
-// a better solution.
-const DISABLED_TEXT_COLOR = '#808080';
 
 export const BUTTON_KEY = 'buttons';
 export const BUTTON_THEME = {
@@ -157,9 +179,9 @@ export const BUTTON_THEME = {
                           opacity: 0.5;
                       `
                     : css`
-                          border: solid thin ${colors.ash.light};
-                          background-color: ${colors.ash.light};
-                          color: ${DISABLED_TEXT_COLOR};
+                          border: solid thin ${disabledColor.light};
+                          background-color: ${disabledColor.light};
+                          color: ${disabledColor.dark};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -172,14 +194,14 @@ export const BUTTON_THEME = {
                           background-color: ${colorTheme.dark};
                           border: solid thin ${colorTheme.dark};
                       `,
-            active: ({ reverse, colorTheme }: StyledButtonProps) =>
+            active: ({ reverse }: StyledButtonProps) =>
                 reverse
                     ? css`
                           border: solid thin white;
                           background-color: white;
                       `
                     : undefined,
-            focus: ({ reverse, colorTheme }: StyledButtonProps) =>
+            focus: ({ reverse }: StyledButtonProps) =>
                 reverse
                     ? css`
                           border: solid thin white;
@@ -197,7 +219,7 @@ export const BUTTON_THEME = {
                       `,
         },
         outline: {
-            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+            base: ({ colorTheme }: StyledButtonProps) =>
                 css`
                     border: solid thin ${colorTheme.base};
                     background-color: transparent;
@@ -212,16 +234,16 @@ export const BUTTON_THEME = {
                           color: ${colorTheme.base};
                       `
                     : css`
-                          border: solid thin ${colors.ash.dark};
+                          border: solid thin ${disabledColor.dark};
                           background-color: transparent;
-                          color: ${DISABLED_TEXT_COLOR};
+                          color: ${disabledColor.dark};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
                     ? css`
                           border: solid thin ${colorTheme.base};
                           background-color: ${colorTheme.base};
-                          color: ${colors.charcoal.light};
+                          color: ${grayColor.light};
                       `
                     : css`
                           background-color: ${colorTheme.dark};
@@ -239,23 +261,23 @@ export const BUTTON_THEME = {
                       `,
         },
         minimal: {
-            base: ({ reverse, colorTheme }: StyledButtonProps) =>
+            base: ({ colorTheme }: StyledButtonProps) =>
                 css`
                     border: solid thin transparent;
                     background-color: transparent;
                     color: ${colorTheme.base};
                 `,
-            disabled: ({ reverse, colorTheme }: StyledButtonProps) =>
+            disabled: ({ reverse }: StyledButtonProps) =>
                 reverse
                     ? css`
                           border: solid thin transparent;
                           background-color: transparent;
-                          color: ${DISABLED_TEXT_COLOR};
+                          color: ${disabledColor.dark};
                       `
                     : css`
-                          border: solid thin ${colors.ash.light};
-                          background-color: ${colors.ash.light};
-                          color: ${DISABLED_TEXT_COLOR};
+                          border: solid thin ${disabledColor.light};
+                          background-color: ${disabledColor.light};
+                          color: ${disabledColor.dark};
                       `,
             hover: ({ reverse, colorTheme }: StyledButtonProps) =>
                 reverse
@@ -264,7 +286,10 @@ export const BUTTON_THEME = {
                           color: ${colorTheme.base};
                       `
                     : css`
-                          background: ${transparentize(0.84, colors.ash.dark)};
+                          background: ${transparentize(
+                              0.84,
+                              disabledColor.dark
+                          )};
                           color: ${colorTheme.dark};
                       `,
             active: ({ reverse, colorTheme }: StyledButtonProps) =>
@@ -273,49 +298,41 @@ export const BUTTON_THEME = {
                           background: ${transparentize(0.8, colorTheme.base)};
                       `
                     : undefined,
-            focusOutline: ({ reverse, colorTheme }: StyledButtonProps) =>
+            focusOutline: ({ reverse }: StyledButtonProps) =>
                 reverse
                     ? css`
                           box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
                       `
                     : css`
                           box-shadow: 0 0 0 2px
-                              ${transparentize(0.6, colors.ash.dark)};
+                              ${transparentize(0.6, disabledColor.dark)};
                       `,
         },
     },
 };
 
 const sizeStyles = createVariant({
-    key: 'buttons.sizes',
+    key: `${BUTTON_KEY}.sizes`,
     prop: 'size',
     default: 'md',
     variants: BUTTON_THEME.sizes,
 });
 
+type ButtonStyle =
+    | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
+    | FlattenSimpleInterpolation;
+
 interface ButtonStyles {
-    base:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
-    disabled:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
-    hover:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
-    active?:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
-    focus?:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
-    focusOutline?:
-        | ((args: StyledButtonProps) => FlattenSimpleInterpolation | undefined)
-        | FlattenSimpleInterpolation;
+    base: ButtonStyle;
+    disabled: ButtonStyle;
+    hover: ButtonStyle;
+    active?: ButtonStyle;
+    focus?: ButtonStyle;
+    focusOutline?: ButtonStyle;
 }
 
 const stateStyles = createVariant({
-    key: 'buttons.variants',
+    key: `${BUTTON_KEY}.variants`,
     prop: 'variant',
     default: 'filled',
     variants: BUTTON_THEME.variants,
@@ -327,12 +344,12 @@ const OutlineStyles = ({ buttonStyles, borderRadius }: StyledButtonProps) =>
             position: absolute;
             content: '';
 
-            // overlap border and extend 2px past
-            // TODO: determine xstyled approach for resolving calculations
-            top: calc(-${sizes.border.width.base} - 2px);
-            left: calc(-${sizes.border.width.base} - 2px);
-            right: calc(-${sizes.border.width.base} - 2px);
-            bottom: calc(-${sizes.border.width.base} - 2px);
+            // overlap border (1px) and extend 2px past
+            // TODO: determine approach for spacing with larger than 1px borders
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
 
             border-radius: calc(${th.radius(borderRadius)} + 2px);
 
@@ -343,11 +360,9 @@ const OutlineStyles = ({ buttonStyles, borderRadius }: StyledButtonProps) =>
 
 const StyledButton = styled('button')<StyledButtonProps>`
     position: relative;
-    ${({ borderRadius }) => css`
-        border-radius: ${borderRadius};
-    `};
+    ${({ borderRadius }) => css({ borderRadius })};
 	font-weight: 600;
-	font-family: ${fonts.fontFamily};
+	font-family: base;
 	text-align: center;
     cursor: pointer;
     display: inline-flex;
@@ -359,8 +374,8 @@ const StyledButton = styled('button')<StyledButtonProps>`
     ${({ block, margin }: StyledButtonProps) =>
         !margin &&
         css`
-            & + & {
-                margin-left: ${block ? sizes.margin.sm : sizes.margin.md};
+            & + .anchor-button {
+                margin-left: ${block ? '0.5rem' : '1rem'};
             }
         `};
 
@@ -369,8 +384,8 @@ const StyledButton = styled('button')<StyledButtonProps>`
                 ${TRANSITION_SPEED} ease color,
                 ${TRANSITION_SPEED} ease fill;
 
-	// These properties are deprecated but help make white text on colored backgrounds look more crisp in Chrome and
-	// Firefox.
+    // These properties are deprecated but help make white text
+    // on colored backgrounds look more crisp in Chrome and Firefox.
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -457,9 +472,9 @@ const StyledButton = styled('button')<StyledButtonProps>`
         variant === 'filled' &&
         revealed &&
         css`
-            background-color: ${REVEAL_COLOR};
-            border: solid thin ${REVEAL_COLOR};
-            color: ${colors.charcoal.light};
+            background-color: ${REVEAL_BACKGROUND_COLOR};
+            border: solid thin ${REVEAL_BACKGROUND_COLOR};
+            color: ${REVEAL_COLOR};
             font-weight: bold;
         `}
 `;
@@ -484,6 +499,7 @@ export const Button = ({
     onFocus,
     ...props
 }: ButtonProps): React.ReactElement<ButtonProps> => {
+    const theme = React.useContext(ThemeContext);
     const [mouseDown, setMouseDown] = React.useState(false);
 
     // if there are no children and only prefix or only suffix are set
@@ -525,7 +541,7 @@ export const Button = ({
             : 'lg'
         : 'md';
 
-    const dims = sizeStyles({ ...props, size });
+    const dims = sizeStyles({ ...props, size, theme });
     const { height, affixSpacing, fontSize, minWidth: themeWidth } = dims;
 
     // Value just needs to be larger than the height
@@ -545,7 +561,7 @@ export const Button = ({
         ? '0'
         : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
 
-    const buttonStyles = stateStyles({ ...props, colorTheme, variant });
+    const buttonStyles = stateStyles({ ...props, colorTheme, variant, theme });
 
     return (
         <StyledButton

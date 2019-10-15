@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
-.c2 {
+.c1 {
   position: relative;
-  border-radius: circular;
+  border-radius: 1000px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -35,29 +35,29 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
   min-width: 3rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:hover,
-.c2:focus,
-.c2:active {
+.c1:hover,
+.c1:focus,
+.c1:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(circular + 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: calc(1000px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -91,13 +91,13 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
   className="c0 anchor-modal-close"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <span
-      className="c3 anchor-icon close anchor-button-prefix"
+      className="c2 anchor-icon close anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -132,9 +132,9 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
 `;
 
 exports[`Component: Modal.Close should render 1`] = `
-.c2 {
+.c1 {
   position: relative;
-  border-radius: circular;
+  border-radius: 1000px;
   font-weight: 600;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   text-align: center;
@@ -166,29 +166,29 @@ exports[`Component: Modal.Close should render 1`] = `
   min-width: 3rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:hover,
-.c2:focus,
-.c2:active {
+.c1:hover,
+.c1:focus,
+.c1:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
-  border-radius: calc(circular + 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: calc(1000px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -222,13 +222,13 @@ exports[`Component: Modal.Close should render 1`] = `
   className="c0 anchor-modal-close"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <span
-      className="c3 anchor-icon close anchor-button-prefix"
+      className="c2 anchor-icon close anchor-button-prefix"
       scale="lg"
     >
       <svg

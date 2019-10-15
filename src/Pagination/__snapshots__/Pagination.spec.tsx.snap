@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Pagination should be defined. 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -10,7 +10,7 @@ exports[`Component: Pagination should be defined. 1`] = `
   margin: -0.25rem -0.25rem;
 }
 
-.c2 {
+.c1 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -45,22 +45,22 @@ exports[`Component: Pagination should be defined. 1`] = `
   min-width: 2.5rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c5 {
+.c4 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -94,29 +94,29 @@ exports[`Component: Pagination should be defined. 1`] = `
   min-width: 2.5rem;
 }
 
-.c5 + .c1 {
+.c4 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:active {
+.c4:hover,
+.c4:focus,
+.c4:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c5:focus:after {
+.c4:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c6 {
+.c5 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -150,29 +150,29 @@ exports[`Component: Pagination should be defined. 1`] = `
   min-width: 2.5rem;
 }
 
-.c6 + .c1 {
+.c5 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:active {
+.c5:hover,
+.c5:focus,
+.c5:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c6:focus:after {
+.c5:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -202,7 +202,7 @@ exports[`Component: Pagination should be defined. 1`] = `
   className="c0 anchor-pagination"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     disabled={true}
     onClick={[Function]}
     onFocus={[Function]}
@@ -210,10 +210,10 @@ exports[`Component: Pagination should be defined. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-left anchor-button-prefix"
+      className="c3 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -231,67 +231,67 @@ exports[`Component: Pagination should be defined. 1`] = `
     </span>
   </button>
   <button
-    className="c1 c5 anchor-button active"
+    className="c4 anchor-button active"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     1
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     2
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     3
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     4
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     5
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     disabled={false}
     onClick={[Function]}
     onFocus={[Function]}
@@ -299,10 +299,10 @@ exports[`Component: Pagination should be defined. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-right anchor-button-prefix"
+      className="c3 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -323,7 +323,7 @@ exports[`Component: Pagination should be defined. 1`] = `
 `;
 
 exports[`Component: Pagination should render on the last page. 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -332,7 +332,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   margin: -0.25rem -0.25rem;
 }
 
-.c7 {
+.c6 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -367,22 +367,22 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   min-width: 2.5rem;
 }
 
-.c7 + .c1 {
+.c6 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c7:focus:after {
+.c6:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c6 {
+.c5 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -416,29 +416,29 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   min-width: 2.5rem;
 }
 
-.c6 + .c1 {
+.c5 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:active {
+.c5:hover,
+.c5:focus,
+.c5:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c6:focus:after {
+.c5:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c2 {
+.c1 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -472,29 +472,29 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   min-width: 2.5rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:hover,
-.c2:focus,
-.c2:active {
+.c1:hover,
+.c1:focus,
+.c1:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -502,7 +502,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   color: currentColor;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   height: 1rem;
   width: 1rem;
@@ -532,7 +532,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   className="c0 anchor-pagination"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     disabled={false}
     onClick={[Function]}
     onFocus={[Function]}
@@ -540,10 +540,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-left anchor-button-prefix"
+      className="c3 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -561,28 +561,28 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     </span>
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     1
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c5 anchor-icon ellipses anchor-button-prefix"
+      className="c4 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -614,67 +614,67 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     </span>
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     16
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     17
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     18
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     19
   </button>
   <button
-    className="c1 c6 anchor-button active"
+    className="c5 anchor-button active"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     20
   </button>
   <button
-    className="c1 c7 anchor-button"
+    className="c6 anchor-button"
     disabled={true}
     onClick={[Function]}
     onFocus={[Function]}
@@ -682,10 +682,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-right anchor-button-prefix"
+      className="c3 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -706,7 +706,7 @@ exports[`Component: Pagination should render on the last page. 1`] = `
 `;
 
 exports[`Component: Pagination should render with current page in the middle. 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -715,11 +715,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   margin: -0.25rem -0.25rem;
 }
 
-.c7 + .c1 {
-  margin-left: 1rem;
-}
-
-.c6 {
+.c5 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -753,29 +749,29 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   min-width: 2.5rem;
 }
 
-.c6 + .c1 {
+.c5 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:active {
+.c5:hover,
+.c5:focus,
+.c5:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c6:focus:after {
+.c5:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c2 {
+.c1 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -809,29 +805,29 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   min-width: 2.5rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:hover,
-.c2:focus,
-.c2:active {
+.c1:hover,
+.c1:focus,
+.c1:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -839,7 +835,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   color: currentColor;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   height: 1rem;
   width: 1rem;
@@ -869,7 +865,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   className="c0 anchor-pagination"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     disabled={false}
     onClick={[Function]}
     onFocus={[Function]}
@@ -877,10 +873,10 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-left anchor-button-prefix"
+      className="c3 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -898,28 +894,28 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     1
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c5 anchor-icon ellipses anchor-button-prefix"
+      className="c4 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -951,52 +947,52 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     9
   </button>
   <button
-    className="c1 c6 anchor-button active"
+    className="c5 anchor-button active"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     10
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     11
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c5 anchor-icon ellipses anchor-button-prefix"
+      className="c4 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -1028,19 +1024,19 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     </span>
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     20
   </button>
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     disabled={false}
     onClick={[Function]}
     onFocus={[Function]}
@@ -1048,10 +1044,10 @@ exports[`Component: Pagination should render with current page in the middle. 1`
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-right anchor-button-prefix"
+      className="c3 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -1072,7 +1068,7 @@ exports[`Component: Pagination should render with current page in the middle. 1`
 `;
 
 exports[`Component: Pagination should render with many pages. 1`] = `
-.c3 {
+.c2 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -1081,7 +1077,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   margin: -0.25rem -0.25rem;
 }
 
-.c2 {
+.c1 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1116,22 +1112,22 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   min-width: 2.5rem;
 }
 
-.c2 + .c1 {
+.c1 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c2:focus:after {
+.c1:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c5 {
+.c4 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1165,29 +1161,29 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   min-width: 2.5rem;
 }
 
-.c5 + .c1 {
+.c4 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:active {
+.c4:hover,
+.c4:focus,
+.c4:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c5:focus:after {
+.c4:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
 
-.c6 {
+.c5 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -1221,29 +1217,29 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   min-width: 2.5rem;
 }
 
-.c6 + .c1 {
+.c5 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c6:hover,
-.c6:focus,
-.c6:active {
+.c5:hover,
+.c5:focus,
+.c5:active {
   background: rgba(128,128,128,0.16);
   color: #0074A6;
 }
 
-.c6:focus:after {
+.c5:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -1251,7 +1247,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   color: currentColor;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   height: 1rem;
   width: 1rem;
@@ -1281,7 +1277,7 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   className="c0 anchor-pagination"
 >
   <button
-    className="c1 c2 anchor-button"
+    className="c1 anchor-button"
     disabled={true}
     onClick={[Function]}
     onFocus={[Function]}
@@ -1289,10 +1285,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-left anchor-button-prefix"
+      className="c3 anchor-icon chevron-left anchor-button-prefix"
       scale="lg"
     >
       <svg
@@ -1310,76 +1306,76 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     </span>
   </button>
   <button
-    className="c1 c5 anchor-button active"
+    className="c4 anchor-button active"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     1
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     2
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     3
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     4
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     5
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c7 anchor-icon ellipses anchor-button-prefix"
+      className="c6 anchor-icon ellipses anchor-button-prefix"
       scale="md"
     >
       <svg
@@ -1411,19 +1407,19 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     </span>
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     onClick={[Function]}
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     100
   </button>
   <button
-    className="c1 c6 anchor-button"
+    className="c5 anchor-button"
     disabled={false}
     onClick={[Function]}
     onFocus={[Function]}
@@ -1431,10 +1427,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
     onMouseUp={[Function]}
   >
     <div
-      className="c3"
+      className="c2"
     />
     <span
-      className="c4 anchor-icon chevron-right anchor-button-prefix"
+      className="c3 anchor-icon chevron-right anchor-button-prefix"
       scale="lg"
     >
       <svg

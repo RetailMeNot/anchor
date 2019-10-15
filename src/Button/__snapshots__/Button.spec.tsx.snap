@@ -57,10 +57,10 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(1000px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -156,10 +156,10 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -255,10 +255,10 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -340,10 +340,10 @@ exports[`Component: Button Reverse Variant: Minimal should be disableable 1`] = 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -412,10 +412,10 @@ exports[`Component: Button Reverse Variant: Minimal should render an minimal but
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -486,10 +486,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -557,10 +557,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -627,10 +627,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -638,10 +638,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -701,10 +701,10 @@ exports[`Component: Button Reverse Variant: Outline should be disableable 1`] = 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -770,10 +770,10 @@ exports[`Component: Button Reverse Variant: Outline should render an outline but
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -842,10 +842,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -910,10 +910,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -978,10 +978,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -989,10 +989,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1052,10 +1052,10 @@ exports[`Component: Button Reverse Variant: Primary should have a disabled state
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1131,10 +1131,10 @@ exports[`Component: Button Reverse Variant: Primary should render a filled butto
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1213,10 +1213,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1293,10 +1293,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1373,10 +1373,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1384,10 +1384,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
@@ -1452,10 +1452,10 @@ exports[`Component: Button Sizes should render a md button 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -1519,10 +1519,10 @@ exports[`Component: Button Sizes should render an lg button 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -1595,10 +1595,10 @@ exports[`Component: Button Sizes should render an sm button 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -1674,10 +1674,10 @@ exports[`Component: Button Sizes should render an xs button 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -1744,10 +1744,10 @@ exports[`Component: Button Theme Provided should use custom size variants from t
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -1803,10 +1803,10 @@ exports[`Component: Button Variant: Minimal should be disableable 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -1871,10 +1871,10 @@ exports[`Component: Button Variant: Minimal should render an minimal button 1`] 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -1941,10 +1941,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -2007,10 +2007,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -2073,10 +2073,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -2084,10 +2084,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
 }
@@ -2146,10 +2146,10 @@ exports[`Component: Button Variant: Outline should be disableable 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2215,10 +2215,10 @@ exports[`Component: Button Variant: Outline should render an outline button 1`] 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2287,10 +2287,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2355,10 +2355,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2423,10 +2423,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2434,10 +2434,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2502,10 +2502,10 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(20,163,130,0.4);
 }
@@ -2563,10 +2563,10 @@ exports[`Component: Button Variant: Primary should have a disabled state 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2628,10 +2628,10 @@ exports[`Component: Button Variant: Primary should have a revealed state when fl
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2695,10 +2695,10 @@ exports[`Component: Button Variant: Primary should render a filled button 1`] = 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2765,10 +2765,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2831,10 +2831,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2897,10 +2897,10 @@ Array [
 .c0:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -2908,10 +2908,10 @@ Array [
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -3010,10 +3010,10 @@ exports[`Component: Button Variant: Primary should render properly when flipped 
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -3092,10 +3092,10 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -3193,10 +3193,10 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }
@@ -3285,10 +3285,10 @@ exports[`Component: Button should be defined 1`] = `
 .c0:focus:after {
   position: absolute;
   content: '';
-  top: calc(-1px - 2px);
-  left: calc(-1px - 2px);
-  right: calc(-1px - 2px);
-  bottom: calc(-1px - 2px);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: calc(4px + 2px);
   box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
 }

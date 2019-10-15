@@ -159,8 +159,10 @@ export const ColorsTheme: ColorsThemeSchema = {
         warning: transparentize(0.4, colors.goldMine.light),
     },
     text: {
+        // PRAGMATIC
         base: colors.charcoal.base,
         light: colors.charcoal.light,
+        // SEMANTIC
         link: {
             base: colors.savvyCyan.dark,
             hover: colors.savvyCyan.dark,
@@ -172,9 +174,11 @@ export const ColorsTheme: ColorsThemeSchema = {
         label: colors.ash.dark,
     },
     background: {
+        // PRAGMATIC
         base: colors.silver.base,
         light: colors.silver.light,
         content: colors.white.base,
+        // SEMANTIC
         error: transparentize(0.75, colors.fireSale.dark),
         success: transparentize(0.75, colors.dealEnvy.base),
         info: transparentize(0.75, colors.savvyCyan.light),
