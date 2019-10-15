@@ -5,7 +5,7 @@ import { shallow, mount } from 'enzyme';
 import { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Star } from '..';
-import { RootTheme, colors } from '../theme';
+import { RootTheme } from '../theme';
 // COMPONENT
 import { Button } from './Button.component';
 
@@ -119,7 +119,14 @@ describe('Component: Button', () => {
         it('should accept a color theme', () => {
             const subject = (
                 <ThemeProvider theme={RootTheme}>
-                    <Button variant="filled" colorTheme={colors.dealEnvy}>
+                    <Button
+                        variant="filled"
+                        colorTheme={{
+                            dark: '#444466',
+                            base: '#666688',
+                            light: '#8888aa',
+                        }}
+                    >
                         Text
                     </Button>
                 </ThemeProvider>

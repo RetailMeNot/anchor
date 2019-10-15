@@ -14,7 +14,12 @@ import { Button } from './Button.component';
 import { HitArea } from './HitArea/HitArea.component';
 import * as Icon from '../Icon';
 import { Typography, Cut, SuccessOutline } from '..';
-import { colors } from '../theme';
+
+const alternateColors = {
+    base: '#14A382',
+    light: '#00CDAD',
+    dark: '#268068',
+};
 
 const StyledStory = styled('div')`
     padding: 2rem 3rem;
@@ -33,7 +38,7 @@ const StyledReverseStory = styled(StyledStory)`
 const Label = styled(Typography)`
     && {
         text-transform: uppercase;
-        color: ${colors.charcoal.light};
+        color: text.light;
         font-size: 12px;
         font-weight: bold;
         display: block;
@@ -297,14 +302,14 @@ storiesOf('Components/Button', module)
                             <Label>default</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy}>CTA</Button>
+                            <Button colorTheme={alternateColors}>CTA</Button>
                         </div>
 
                         <div>
                             <Label>button with flip</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} flip>
+                            <Button colorTheme={alternateColors} flip>
                                 CTA
                             </Button>
                         </div>
@@ -313,7 +318,7 @@ storiesOf('Components/Button', module)
                             <Label>hover</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} forceHover>
+                            <Button colorTheme={alternateColors} forceHover>
                                 CTA
                             </Button>
                         </div>
@@ -323,7 +328,7 @@ storiesOf('Components/Button', module)
                         </div>
                         <div>
                             <Button
-                                colorTheme={colors.dealEnvy}
+                                colorTheme={alternateColors}
                                 flip
                                 forceHover
                             >
@@ -335,7 +340,7 @@ storiesOf('Components/Button', module)
                             <Label>disabled</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} disabled>
+                            <Button colorTheme={alternateColors} disabled>
                                 CTA
                             </Button>
                         </div>
@@ -569,7 +574,7 @@ storiesOf('Components/Button', module)
                         <Label>default</Label>
                     </div>
                     <div>
-                        <Button variant="outline" colorTheme={colors.dealEnvy}>
+                        <Button variant="outline" colorTheme={alternateColors}>
                             CTA
                         </Button>
                     </div>
@@ -580,7 +585,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="outline"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             forceHover
                         >
                             CTA
@@ -593,7 +598,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="outline"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             disabled
                         >
                             CTA
@@ -822,7 +827,7 @@ storiesOf('Components/Button', module)
                         <Label>min width - 200 px</Label>
                     </div>
                     <div>
-                        <Button variant="minimal" colorTheme={colors.dealEnvy}>
+                        <Button variant="minimal" colorTheme={alternateColors}>
                             CTA
                         </Button>
                     </div>
@@ -831,7 +836,7 @@ storiesOf('Components/Button', module)
                         <Label>flex width</Label>
                     </div>
                     <div>
-                        <Button variant="minimal" colorTheme={colors.dealEnvy}>
+                        <Button variant="minimal" colorTheme={alternateColors}>
                             I'm a very long CTA Text
                         </Button>
                     </div>
@@ -842,7 +847,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="minimal"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             minWidth="7rem"
                         >
                             CTA
@@ -855,7 +860,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="minimal"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             prefix={<Cut />}
                         >
                             CTA Text
@@ -2091,7 +2096,7 @@ storiesOf('Components/Button', module)
         );
         const chosenColor = select(
             'colorTheme',
-            ['default', ...Object.keys(colors)],
+            ['default', 'alternative'],
             'default'
         );
         const buttonText = text('Text', 'Hello World');
@@ -2133,11 +2138,7 @@ storiesOf('Components/Button', module)
                             revealed={boolean('revealed', false)}
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
-                            colorTheme={
-                                chosenColor === 'default'
-                                    ? undefined
-                                    : colors[chosenColor]
-                            }
+                            colorTheme={{ default: undefined, alternative: alternateColors }[chosenColor]}
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}
                         >
@@ -2161,7 +2162,7 @@ storiesOf('Components/Button', module)
         );
         const chosenColor = select(
             'colorTheme',
-            ['default', ...Object.keys(colors)],
+            ['default', 'alternative'],
             'default'
         );
         const buttonText = text('Text', 'Hello World');
@@ -2203,11 +2204,7 @@ storiesOf('Components/Button', module)
                             revealed={boolean('revealed', false)}
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
-                            colorTheme={
-                                chosenColor === 'default'
-                                    ? undefined
-                                    : colors[chosenColor]
-                            }
+                            colorTheme={{ default: undefined, alternative: alternateColors }[chosenColor]}
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}
                         >

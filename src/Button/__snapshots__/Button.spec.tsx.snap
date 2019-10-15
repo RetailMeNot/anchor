@@ -2479,8 +2479,8 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid thin #14A382;
-  background-color: #14A382;
+  border: solid thin #666688;
+  background-color: #666688;
   color: white;
   padding: 0 1.5rem;
   font-size: 1rem;
@@ -2495,8 +2495,8 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
 .c0:hover,
 .c0:focus,
 .c0:active {
-  background-color: #268068;
-  border: solid thin #268068;
+  background-color: #444466;
+  border: solid thin #444466;
 }
 
 .c0:focus:after {
@@ -2507,7 +2507,7 @@ exports[`Component: Button Variant: Primary should accept a color theme 1`] = `
   right: -3px;
   bottom: -3px;
   border-radius: calc(4px + 2px);
-  box-shadow: 0 0 0 2px rgba(20,163,130,0.4);
+  box-shadow: 0 0 0 2px rgba(102,102,136,0.4);
 }
 
 <button

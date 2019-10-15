@@ -6,7 +6,7 @@ import { boolean, select, number, text } from '@storybook/addon-knobs';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
-import { RootTheme, colors } from '../theme';
+import { RootTheme } from '../theme';
 // SUBJECT
 import * as README from './README.md';
 import {
@@ -196,6 +196,13 @@ storiesOf('Components/Modal', module)
     .add('Customized', () => {
         const OpenModalButton = () => {
             const [isOpen, setIsOpen] = useState<boolean>(true);
+
+            const pinkColorScheme = {
+                base: '#DF206C',
+                light: '#E665A1',
+                dark: '#B81D5B',
+            };
+
             return (
                 <React.Fragment>
                     <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -238,7 +245,7 @@ storiesOf('Components/Modal', module)
                                 block
                                 circular
                                 variant="minimal"
-                                colorTheme={colors.flashPink}
+                                colorTheme={pinkColorScheme}
                                 onClick={() => setIsOpen(false)}
                             >
                                 Decline
@@ -246,7 +253,7 @@ storiesOf('Components/Modal', module)
                             <Button
                                 block
                                 circular
-                                colorTheme={colors.flashPink}
+                                colorTheme={pinkColorScheme}
                                 onClick={() => setIsOpen(false)}
                             >
                                 Accept
