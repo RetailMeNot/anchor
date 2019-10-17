@@ -37,11 +37,11 @@ const StyledItem = styled('a')<ItemProps>`
     height: 2.75rem;
 
     &:hover {
-        background: ${th.color('neutrals.silver.light')};
+        background: ${th.color('background.light')};
     }
 
     &.active {
-        background: ${th.color('neutrals.silver.base')};
+        background: ${th.color('background.base')};
     }
 `;
 
@@ -101,11 +101,7 @@ export const Item = ({
         href={href}
         {...props}
     >
-        <StyledTypography
-            tag="span"
-            color="neutrals.charcoal.light"
-            className={size}
-        >
+        <StyledTypography tag="span" color="text.light" className={size}>
             {prefix && React.cloneElement(prefix, { className: 'item-prefix' })}
             {prefix || suffix ? (
                 <span className="item-main">{children}</span>

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 const StyledExampleLink = styled('a')`
-    color: neutrals.white.base;
+    color: white;
     border-radius: 0.25rem;
     padding: 0 1rem;
     font-weight: bold;

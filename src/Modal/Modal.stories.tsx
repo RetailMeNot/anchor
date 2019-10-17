@@ -6,7 +6,7 @@ import { boolean, select, number, text } from '@storybook/addon-knobs';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Button, Typography } from '..';
-import { RootTheme, colors } from '../theme';
+import { RootTheme } from '../theme';
 // SUBJECT
 import * as README from './README.md';
 import {
@@ -20,7 +20,7 @@ const { useState } = React;
 const { Close, Header, Content, Footer } = Modal;
 
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
     width: 100vw;
     height: 120vh;
 `;
@@ -196,6 +196,13 @@ storiesOf('Components/Modal', module)
     .add('Customized', () => {
         const OpenModalButton = () => {
             const [isOpen, setIsOpen] = useState<boolean>(true);
+
+            const pinkColorScheme = {
+                base: '#DF206C',
+                light: '#E665A1',
+                dark: '#B81D5B',
+            };
+
             return (
                 <React.Fragment>
                     <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -206,12 +213,8 @@ storiesOf('Components/Modal', module)
                         height={text('height', '25rem')}
                         width={text('width', '30rem')}
                         margin={text('margin', 'auto')}
-                        background={`linear-gradient(
-                                170deg, ${colors.flashPink.base} 0%,
-                                ${colors.fireSale.light} 50%,
-                                ${colors.white.base} calc(50% + 1.25px))
-                            `}
-                        color={text('color', colors.white.base)}
+                        background="linear-gradient(170deg, #DF206C 0%, #F16667 50%, white calc(50% + 1.25px))"
+                        color={text('color', 'white')}
                         backgroundProps={{
                             opacity: number('backgroundProps.opacity', 0.2),
                         }}
@@ -242,7 +245,7 @@ storiesOf('Components/Modal', module)
                                 block
                                 circular
                                 variant="minimal"
-                                colorTheme={colors.flashPink}
+                                colorTheme={pinkColorScheme}
                                 onClick={() => setIsOpen(false)}
                             >
                                 Decline
@@ -250,7 +253,7 @@ storiesOf('Components/Modal', module)
                             <Button
                                 block
                                 circular
-                                colorTheme={colors.flashPink}
+                                colorTheme={pinkColorScheme}
                                 onClick={() => setIsOpen(false)}
                             >
                                 Accept

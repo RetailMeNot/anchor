@@ -109,8 +109,8 @@ export const AutoComplete = ({
     size = 'lg',
     shadow = false,
     border = true,
-    background = 'neutrals.white.base',
-    color = 'neutrals.charcoal.light',
+    background = 'white',
+    color = 'text.light',
     resultTemplate,
     allowClear,
     ...props

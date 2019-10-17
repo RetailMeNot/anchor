@@ -16,7 +16,7 @@ exports[`Component: Modal.Header should render with title 1`] = `
   -ms-flex-order: -1;
   order: -1;
   color: #595959;
-  background-color: #FFFFFF;
+  background-color: white;
 }
 
 .c0 ~ .c2.c2 {
@@ -25,8 +25,8 @@ exports[`Component: Modal.Header should render with title 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: normal;

@@ -10,7 +10,6 @@
 import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // ANCHOR & COMPONENTS
 import { ScreenClass, Tooltip } from '@retailmenot/anchor';
 import {
@@ -38,7 +37,7 @@ const StyledPositionGrid = styled('div')<StyledPositionGrid>`
 
 const StyledTable = styled('table')`
     padding: 1rem;
-    background-color: ${th('colors.neutrals.silver.base')};
+    background-color: background.base;
     display: inline-block;
     min-width: ${COMPONENT_MIN_WIDTH};
     width: auto;
@@ -48,7 +47,7 @@ const StyledTable = styled('table')`
     td {
         width: 10rem;
         padding: 0.75rem 0.25rem;
-        font-family: ${th('typography.fontFamily')};
+        font-family: base;
         font-size: 1.25rem;
     }
 `;

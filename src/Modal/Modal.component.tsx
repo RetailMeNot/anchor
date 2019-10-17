@@ -32,7 +32,7 @@ const StyledModal = StyledReactModal.default.styled`
     flex-direction: column;
     justify-content: space-between;
 
-    ${({ background = 'neutrals.white.base', color }: ModalProps) =>
+    ${({ background = 'white', color }: ModalProps) =>
         css({
             background: th.color(background),
             color,

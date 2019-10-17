@@ -1,11 +1,10 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// VENDOR
 import { shallow, mount } from 'enzyme';
-import { RootTheme } from '../../theme';
 import { ThemeProvider } from '@xstyled/styled-components';
-// COMPONENT
+// ANCHOR
+import { RootTheme } from '../../theme';
 import { Title } from './Title.component';
 
 // TEST SETUP
@@ -19,12 +18,6 @@ const component = shallow(subject);
 
 describe('Component: Title', () => {
     it('should be defined', () => {
-        /* tslint:disable */
-        console.log(subject);
-        console.log(wrapper.debug());
-        console.log(component.debug());
-
-        /* tslint:enable */
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();

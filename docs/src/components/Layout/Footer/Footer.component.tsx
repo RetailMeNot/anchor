@@ -3,14 +3,11 @@ import * as React from 'react';
 // VENDOR
 import styled from 'styled-components';
 import classNames from 'classnames';
-// THEME
-import { colors, sizes } from '../../../../../src/theme';
-// COMPONENTS
 
 export const StyledFooterElement = styled.footer`
-    padding: ${sizes.padding.lg};
-    background-color: ${colors.silver.light};
-    border-top: solid thin ${colors.silver.base};
+    padding: 2rem;
+    background-color: background.base;
+    border-top: light;
     height: 6rem;
     width: 100%;
 `;

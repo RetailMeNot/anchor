@@ -13,7 +13,7 @@ import {
 } from './Collapse.component';
 import { CollapseGroup } from './CollapseGroup/CollapseGroup.component';
 import * as Icon from '../Icon';
-import { RootTheme, colors } from '../theme';
+import { RootTheme } from '../theme';
 import { Typography } from '../Typography/Typography.component';
 // README
 import * as README from './README.md';
@@ -82,10 +82,10 @@ storiesOf('Components/Collapse', module)
                         closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
                         hasBottomBorder={boolean('hasBottomBorder', true)}
                         openedIcon={React.createElement(Icon[iconOpenedPick], {
-                            color: colors.savvyCyan.base,
+                            color: 'accent.base',
                         })}
                         closedIcon={React.createElement(Icon[iconClosedPick], {
-                            color: colors.savvyCyan.base,
+                            color: 'accent.base',
                         })}
                     >
                         {content === TEXT ? <TextContent /> : <ListContent />}
@@ -126,10 +126,10 @@ storiesOf('Components/Collapse', module)
                         accordion={boolean('accordion', false)}
                         openIndex={0}
                         openedIcon={React.createElement(Icon[iconOpenedPick], {
-                            color: colors.savvyCyan.base,
+                            color: 'accent.base',
                         })}
                         closedIcon={React.createElement(Icon[iconClosedPick], {
-                            color: colors.savvyCyan.base,
+                            color: 'accent.base',
                         })}
                     >
                         <Collapse>

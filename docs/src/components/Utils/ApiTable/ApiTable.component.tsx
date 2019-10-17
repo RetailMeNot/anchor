@@ -48,7 +48,7 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import parse from 'html-react-parser';
 // ANCHOR & COMPONENTS
-import { colors, ScreenClass } from '@retailmenot/anchor';
+import { ScreenClass } from '@retailmenot/anchor';
 import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
 
 interface StyledApiTableProps {
@@ -73,12 +73,12 @@ const Table = styled('table')`
     th {
         text-align: left;
         padding: 0.75rem 0.5rem;
-        border-bottom: solid thin ${colors.ash.light};
-        background-color: ${colors.white.base};
+        border-bottom: base;
+        background-color: white;
     }
     tr {
         &:nth-child(odd) {
-            background-color: ${colors.silver.light};
+            background-color: background.base;
         }
     }
     td {
@@ -87,7 +87,7 @@ const Table = styled('table')`
 
         &:first-child {
             font-family: monospace;
-            color: ${colors.flashPink.dark};
+            color: primary.dark;
             width: 10%;
         }
         &:nth-child(2) {
@@ -95,7 +95,7 @@ const Table = styled('table')`
         }
         &:nth-child(3) {
             font-family: monospace;
-            color: ${colors.cyberMango.dark};
+            color: secondary.dark;
             width: 20%;
         }
         &:nth-child(4) {

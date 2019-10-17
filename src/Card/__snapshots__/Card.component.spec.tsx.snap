@@ -6,16 +6,16 @@ exports[`Component: Card should match its snapshot. 1`] = `
   position: relative;
   display: block;
   padding: 1rem;
-  font-family: base;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
 }
 
 .c0 {
   position: relative;
   width: 100%;
-  font-family: base;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   box-sizing: border-box;
-  border-radius: base;
-  border: solid thin borders.base;
+  border-radius: 4px;
+  border: solid thin #D3D3D3;
 }
 
 <div

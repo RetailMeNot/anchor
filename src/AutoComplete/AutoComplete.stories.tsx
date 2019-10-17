@@ -9,7 +9,7 @@ import { AutoComplete } from './AutoComplete.component';
 import { Search } from '../Icon';
 import { Item } from '../List';
 import { Typography } from '../Typography';
-import { colors, RootTheme } from '../theme';
+import { RootTheme } from '../theme';
 // README
 import * as README from './README.md';
 // THEME
@@ -51,7 +51,7 @@ const StateBasedAutoCompleteStory = () => {
                             onFilter={(newTerm: any) => {
                                 setTempData(tempDataStringSource(newTerm));
                             }}
-                            prefix={<Search color={colors.ash.base} />}
+                            prefix={<Search color="borders.base" />}
                             dataSource={tempData}
                         />
                     </div>
@@ -94,7 +94,7 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
                             onFilter={(newTerm: any) => {
                                 setTempData(tempDataStringSource(newTerm));
                             }}
-                            prefix={<Search color={colors.ash.base} />}
+                            prefix={<Search color="borders.base" />}
                             dataSource={tempData}
                             resultTemplate={CustomResult}
                         />
@@ -125,7 +125,7 @@ storiesOf('Components/AutoComplete', module)
                         <AutoComplete
                             allowClear={true}
                             placeholder="Search here..."
-                            prefix={<Search color={colors.ash.base} />}
+                            prefix={<Search color="borders.base" />}
                             dataSource={[
                                 {
                                     label: 'Title of a section 1',

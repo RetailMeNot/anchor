@@ -15,14 +15,14 @@ import {
 
 ```tsx live
     <Menu
-        background={colors.savvyCyan.base}
-        color={colors.white.base}
+        background="primary.dark"
+        color="white"
         justify="flex-start"
-        size="large"
+        size="lg"
     >
         <MenuItem label="RMN" href="//www.retailmenot.com" type="text/html" />
         <MenuItem label="GitHub" href="//www.github.com" as="a" target="_blank" />
-        <MenuItem label="Anchor" href="//anchor.retailmenot.design/" active={true} />
+        <MenuItem active label="Anchor" href="//anchor.retailmenot.design/" />
     </Menu>
 ```
 
@@ -56,8 +56,8 @@ import {
         property: 'size',
         description: `Alters the padding around the menu items, as well as their font weight and
             size.`,
-        type: <FormatTypes data={['small', 'large']} />,
-        default: 'large',
+        type: <FormatTypes data={['sm', 'md', 'lg']} />,
+        default: 'lg',
     },
 ]} />
 

@@ -79,19 +79,19 @@ const StyledMenu = styled('nav')<MenuProps>`
             background: th.color(background),
         })};
     font-size: 0.875rem;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     border-radius: base;
 
     .anchor-menu-item {
         line-height: 1.125rem;
-        ${({ color = 'neutrals.white.base' }) => css({ color })};
+        ${({ color = 'white' }) => css({ color })};
         transition: background-color 250ms, color 250ms;
         margin: 0 0.125rem;
 
         &:hover {
             ${({ color }) =>
                 css({
-                    color: color ? lighten(20, color) : 'neutrals.white.base',
+                    color: color ? lighten(20, color) : 'white',
                 })};
             background-color: rgba(255, 255, 255, 0.1);
         }
@@ -100,7 +100,7 @@ const StyledMenu = styled('nav')<MenuProps>`
         &.active {
             ${({ color }) =>
                 css({
-                    color: color ? lighten(20, color) : 'neutrals.white.base',
+                    color: color ? lighten(20, color) : 'white',
                 })};
             background-color: rgba(
                 255,

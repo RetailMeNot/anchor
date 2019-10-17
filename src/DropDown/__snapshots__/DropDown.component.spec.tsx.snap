@@ -6,7 +6,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   box-sizing: border-box;
   width: 0.625rem;
   height: 0.625rem;
-  border: light;
+  border: thin solid #E7E7E7;
   background: white;
   box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
   z-index: -1;
@@ -19,7 +19,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  font-family: base;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   position: relative;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -49,8 +49,8 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   display: flex;
   z-index: 1;
   min-width: 10rem;
-  border: light;
-  border-radius: base;
+  border: thin solid #E7E7E7;
+  border-radius: 4px;
   box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
   visibility: hidden;
   left: 0;

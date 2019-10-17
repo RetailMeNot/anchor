@@ -46,8 +46,8 @@ Array [
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -66,7 +66,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -76,6 +75,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -143,8 +143,8 @@ Array [
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -197,7 +197,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -248,8 +247,8 @@ Array [
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -268,7 +267,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -278,6 +276,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -345,8 +344,8 @@ Array [
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -399,7 +398,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -450,8 +448,8 @@ Array [
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -470,7 +468,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -480,6 +477,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -547,8 +545,8 @@ Array [
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -597,7 +595,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>
@@ -648,8 +645,8 @@ Array [
 
 .c1 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -668,7 +665,6 @@ Array [
   >
     <p
       className="c1 anchor-typography"
-      color="neutrals.charcoal.light"
     >
       Test Description
     </p>
@@ -678,6 +674,7 @@ Array [
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 .c0 {
@@ -745,8 +742,8 @@ Array [
 
 .c3 {
   box-sizing: border-box;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -800,7 +797,6 @@ Array [
       >
         <p
           className="c3 anchor-typography"
-          color="neutrals.charcoal.light"
         >
           Test Description
         </p>

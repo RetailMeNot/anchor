@@ -17,7 +17,7 @@ interface ColorBlurbProps {
     background?: boolean;
     /* If the background accepts gradients. Should really only use this the background prop ^ */
     gradient?: boolean;
-    /* Adds a message that the default colors come from Anchor's colors object */
+    /* Adds a message that the default colors come from Anchor's colors */
     defaultTheme?: boolean;
     /* Specifies what component/prop the color is for. */
     label: string;

@@ -112,7 +112,7 @@ export const Badge = ({
     size = 'dot',
     showZero = false,
     standalone = false,
-    textColor = 'neutrals.white.base',
+    textColor = 'white',
     ...props
 }: BadgeProps): JSX.Element => {
     const getDisplayCount = (

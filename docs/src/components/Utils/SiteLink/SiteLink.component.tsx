@@ -10,7 +10,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 
 interface SiteLinkProps {
     children?: any;
@@ -19,7 +18,7 @@ interface SiteLinkProps {
 
 const StyledSiteLink = styled(Link)`
     color: #007ecd;
-    font-family: ${th('typography.fontFamily')};
+    font-family: base;
     text-decoration: none;
     font-weight: 600;
 `;

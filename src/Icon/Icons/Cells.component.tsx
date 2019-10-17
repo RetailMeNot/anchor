@@ -19,6 +19,7 @@ export const Cells = ({
     <StyledIcon
         className={classNames('anchor-icon cells', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -34,7 +35,7 @@ export const Cells = ({
                     id="cells-a"
                 />
             </defs>
-            <use fill={color} xlinkHref="#cells-a" fillRule="evenodd" />
+            <use fill="currentColor" xlinkHref="#cells-a" fillRule="evenodd" />
         </svg>
     </StyledIcon>
 );

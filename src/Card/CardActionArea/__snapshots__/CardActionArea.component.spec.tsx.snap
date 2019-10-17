@@ -5,10 +5,10 @@ exports[`Component: CardActionArea should be defined 1`] = `
   box-sizing: border-box;
   position: relative;
   display: inline-block;
-  font-family: base;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   width: 100%;
-  border-top: solid thin neutrals.silver.dark;
-  background-color: neutrals.white.base;
+  border-top: thin solid #E7E7E7;
+  background-color: white;
 }
 
 <div

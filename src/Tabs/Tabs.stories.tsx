@@ -25,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledStory = styled('div')`
     padding: 2rem 1rem;
-    color: text.body;
-    font-family: ${th('typography.fontFamily')};
+    color: text.base;
+    font-family: base;
 `;
 
 storiesOf('Components/Tabs', module)
@@ -34,9 +34,7 @@ storiesOf('Components/Tabs', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <GlobalStyle
-                    background={
-                        text('html bg', 'neutrals.silver.light') || undefined
-                    }
+                    background={text('html bg', 'background.base') || undefined}
                 />
                 <Tabs
                     variant={select<Variant>(

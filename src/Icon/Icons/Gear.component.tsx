@@ -19,6 +19,7 @@ export const Gear = ({
     <StyledIcon
         className={classNames('anchor-icon gear', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Gear = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#gear-a" />
+                <use fill="currentColor" xlinkHref="#gear-a" />
             </g>
         </svg>
     </StyledIcon>

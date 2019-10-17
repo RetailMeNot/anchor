@@ -8,8 +8,7 @@ exports[`Component: Divider should be defined 1`] = `
 
 .c0 hr {
   border: none;
-  border-top: solid thin;
-  border-top-color: neutrals.silver.dark;
+  border-top: thin solid #E7E7E7;
 }
 
 <div

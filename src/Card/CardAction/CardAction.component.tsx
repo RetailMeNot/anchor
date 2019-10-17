@@ -20,7 +20,7 @@ const StyledCard = styled('div')<CardActionProps>`
     right: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: neutrals.white.base;
+    background-color: white;
     z-index: 1;
 `;
 

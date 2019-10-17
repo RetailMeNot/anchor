@@ -1,19 +1,17 @@
-// REACT
-import * as React from 'react';
-// ANCHOR
-import { colors } from '../../theme/colors.theme';
-import { sizes } from '../../theme/sizes.theme';
-import { Theme, TRANSITION_SPEED } from '../utils';
 // VENDOR
+import * as React from 'react';
 import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+// ANCHOR
+import { Theme, TRANSITION_SPEED, REVEAL_BACKGROUND_COLOR } from '../utils';
 
 export interface StyledFlipProps extends React.HTMLAttributes<HTMLDivElement> {
     flipColor: string;
 }
 
 export const StyledFlip = styled('div')<StyledFlipProps>`
-    border-top-right-radius: ${sizes.border.radius.base};
-    border-bottom-left-radius: ${sizes.border.radius.base};
+    border-top-right-radius: ${th.radius('base')};
+    border-bottom-left-radius: ${th.radius('base')};
 
     position: absolute;
     top: -1px;
@@ -27,7 +25,7 @@ export const StyledFlip = styled('div')<StyledFlipProps>`
         45deg,
         ${({ flipColor }) => flipColor},
         ${({ flipColor }) => flipColor} 50%,
-        ${colors.silver.base} 0
+        ${REVEAL_BACKGROUND_COLOR} 0
     );
 `;
 

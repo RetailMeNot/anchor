@@ -3,15 +3,13 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 // ANCHOR
-import { ButtonProps } from '../Button/Button.component';
 import { Goto } from './Goto';
 import {
     Button as AnchorButton,
-    ChevronLeft,
-    ChevronRight,
-    Ellipses,
-    Typography,
-} from '..';
+    ButtonProps,
+} from '../Button/Button.component';
+import { ChevronLeft, ChevronRight, Ellipses } from '../Icon';
+import { Typography } from '../Typography';
 
 // Constrain a value between a min and max.
 // Used primarily here to keep the current page

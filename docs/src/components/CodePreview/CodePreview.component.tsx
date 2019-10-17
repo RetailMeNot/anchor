@@ -40,9 +40,9 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import github from 'prism-react-renderer/themes/github';
 import {
     AutoComplete,
+    Button,
     Collapse,
     CollapseGroup,
-    colors,
     Input,
     ScreenClass,
     Typography,
@@ -96,7 +96,7 @@ const StyledContainerElement = styled('div')<StyledContainerElementProps>`
 `;
 
 const StyledLiveEditor = styled(LiveEditor)<LiveEditorProps>`
-    background-color: ${colors.charcoal.base};
+    background-color: text.base;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     min-width: ${COMPONENT_MIN_WIDTH};
@@ -157,14 +157,14 @@ const StyledLivePreview = styled(LivePreview)<PreProps>`
     min-width: ${COMPONENT_MIN_WIDTH};
     box-sizing: border-box;
     padding: 1rem;
-    border: solid thin ${colors.silver.dark};
+    border: base;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 `;
 
 const StyledCodeBlock = styled('pre')`
     padding: 1.25rem;
-    background-color: ${colors.silver.base};
+    background-color: background.code;
 `;
 
 interface CodePreviewProps {
@@ -180,6 +180,7 @@ const scope = {
     Component,
     // OVERRIDES
     AutoComplete,
+    Button,
     Collapse,
     CollapseGroup,
     Input,

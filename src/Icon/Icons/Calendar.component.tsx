@@ -19,6 +19,7 @@ export const Calendar = ({
     <StyledIcon
         className={classNames('anchor-icon calendar', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -34,7 +35,11 @@ export const Calendar = ({
                     id="calendar-a"
                 />
             </defs>
-            <use fill={color} xlinkHref="#calendar-a" fillRule="evenodd" />
+            <use
+                fill="currentColor"
+                xlinkHref="#calendar-a"
+                fillRule="evenodd"
+            />
         </svg>
     </StyledIcon>
 );

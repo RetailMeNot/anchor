@@ -1,7 +1,5 @@
 // VENDOR
 import * as wcagContrast from 'wcag-contrast';
-// THEME
-import { colors } from '../../../../src/theme';
 
 export class ColorHelpers {
     public static getRoundedColorContrast(
@@ -13,14 +11,14 @@ export class ColorHelpers {
     }
 
     public static getSuccessOrErrorColor(colorContrast: number): string {
-        return colorContrast > 4.5 ? colors.success.base : colors.error.base;
+        return colorContrast > 4.5 ? 'success' : 'error';
     }
 
     public static getHigherContrastColor(colorHexCode: string): string {
-        return wcagContrast.hex(colors.silver.base, colorHexCode) >
-            wcagContrast.hex(colors.ash.light, colorHexCode)
-            ? colors.silver.base
-            : colors.ash.light;
+        return wcagContrast.hex('#F1F1F1', colorHexCode) >
+            wcagContrast.hex('#D3D3D3', colorHexCode)
+            ? '#F1F1F1'
+            : '#D3D3D3';
     }
 
     public static getRgbColor(colorHexCode: string): string {

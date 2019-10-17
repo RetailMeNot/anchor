@@ -19,6 +19,7 @@ export const CommentMore = ({
     <StyledIcon
         className={classNames('anchor-icon comment-more', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const CommentMore = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#comment-more-a" />
+                <use fill="currentColor" xlinkHref="#comment-more-a" />
             </g>
         </svg>
     </StyledIcon>

@@ -10,6 +10,7 @@ import { RootTheme } from '../../theme';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
+    color: text.base;
 `;
 
 storiesOf('Components/List/Item', module).add('Primary', () => (

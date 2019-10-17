@@ -19,6 +19,7 @@ export const Play = ({
     <StyledIcon
         className={classNames('anchor-icon play', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -34,7 +35,7 @@ export const Play = ({
                     id="play-a"
                 />
             </defs>
-            <use fill={color} xlinkHref="#play-a" fillRule="evenodd" />
+            <use fill="currentColor" xlinkHref="#play-a" fillRule="evenodd" />
         </svg>
     </StyledIcon>
 );

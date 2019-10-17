@@ -1,8 +1,5 @@
 // VENDOR
 import { FlattenSimpleInterpolation } from '@xstyled/styled-components';
-// THEME
-import { colors } from './colors.theme';
-import { fonts } from './fonts.theme';
 
 export type TypographyTags =
     | 'a'
@@ -25,7 +22,6 @@ export type Scale = 62 | 52 | 44 | 36 | 32 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
 
 export interface TypographyTheme {
     // GLOBAL FONT PROPERTIES
-    fontFamily: string;
     fontSize: string;
     fontWeight: string;
     lineHeight: string;
@@ -35,8 +31,7 @@ export interface TypographyTheme {
 }
 
 export const typography: TypographyTheme = {
-    fontFamily: fonts.fontFamily,
-    fontSize: `${fonts.baseFontSize}px`,
+    fontSize: `16px`,
     fontWeight: 'normal',
     lineHeight: '1.5rem',
     scale: {
@@ -146,7 +141,6 @@ export const typography: TypographyTheme = {
             padding: '0.5rem 0 0.5rem 1rem',
             borderLeft: 'light',
             borderLeftWidth: '0.25rem',
-            color: `${colors.charcoal.base}`,
             fontStyle: 'italic',
             lineHeight: '1.5rem',
         },
@@ -155,17 +149,17 @@ export const typography: TypographyTheme = {
             padding: 0,
         },
         code: {
-            fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
-            background: `${colors.charcoal.base}`,
+            fontFamily: 'mono',
+            backgroundColor: 'text.base',
             display: 'block',
             padding: '1rem',
             borderRadius: 'base',
             margin: '2rem 0',
-            color: `${colors.white.base}`,
+            color: 'white',
             fontSize: '0.875rem',
         },
         pre: {
-            fontFamily: `SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace`,
+            fontFamily: 'mono',
         },
         label: {
             lineHeight: '1.5rem',

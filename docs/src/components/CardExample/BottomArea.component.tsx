@@ -6,11 +6,11 @@
 
 import * as React from 'react';
 import styled from 'styled-components';
-import { colors, Typography } from '@retailmenot/anchor';
+import { Typography } from '@retailmenot/anchor';
 
 const StyledBottomArea = styled('div')`
-    background-color: ${colors.silver.base};
-    color: ${colors.charcoal.base};
+    background-color: background.base;
+    color: text.base;
     padding: 1rem;
 `;
 

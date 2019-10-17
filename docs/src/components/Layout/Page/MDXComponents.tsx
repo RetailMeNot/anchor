@@ -6,7 +6,7 @@
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
 // ANCHOR & COMPONENTS
-import { Typography, colors } from '@retailmenot/anchor';
+import { Typography } from '@retailmenot/anchor';
 import { CodePreview } from '../../CodePreview';
 import { InlineCodeStyle } from '../../Utils';
 
@@ -20,8 +20,8 @@ const StyledLi = styled('li')`
 
 const StyledHr = styled('hr')`
     margin: 2rem 0;
-    color: ${colors.ash.base};
-    background-color: ${colors.ash.base};
+    color: borders.base;
+    background-color: borders.base;
     border-style: none;
     height: 1px;
 `;
@@ -34,7 +34,7 @@ Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
 Components.pre = (props: any) => <Typography tag="pre" {...props} />;
 Components.p = (props: any) => <Typography tag="p" pb="4" {...props} />;
 Components.a = (props: any) => (
-    <Typography color={colors.flashPink.base} tag="a" {...props} />
+    <Typography color="primary.base" tag="a" {...props} />
 );
 Components.blockquote = (props: any) => (
     <Typography tag="blockquote" {...props} />

@@ -7,7 +7,7 @@ import { text, color } from '@storybook/addon-knobs';
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { Typography } from '..';
-import { colors, RootTheme } from '../theme';
+import { RootTheme } from '../theme';
 import * as README from './README.md';
 import SomeImage from './temporary/some_image.svg';
 import { Button } from '../Button';
@@ -16,11 +16,11 @@ import { Hero } from './Hero.component';
 const { Title, Subtitle } = Hero;
 
 const StyledStory = styled('div')`
-    background: ${colors.white.base};
+    background: white;
     width: 100vw;
 `;
 
-const tealGradient = `linear-gradient(224deg,${colors.tealBreaker.base},${colors.dealEnvy.light})`;
+const tealGradient = `linear-gradient(224deg, #00CCCD, #00E0D1)`;
 
 storiesOf('Components/Hero', module)
     .addParameters({
@@ -58,7 +58,7 @@ storiesOf('Components/Hero', module)
                 <StyledStory>
                     <Hero
                         background={color('Hero Background', tealGradient)}
-                        color={color('Hero Color', colors.white.base)}
+                        color={color('Hero Color', '') || undefined}
                     >
                         <BreadCrumbs scale={14} weight={500}>
                             {text('Subtext', 'Westeros / House Tyrell')}

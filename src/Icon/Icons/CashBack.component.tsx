@@ -19,6 +19,7 @@ export const CashBack = ({
     <StyledIcon
         className={classNames('anchor-icon cash-back', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const CashBack = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#cashback-a" />
+                <use fill="currentColor" xlinkHref="#cashback-a" />
             </g>
         </svg>
     </StyledIcon>

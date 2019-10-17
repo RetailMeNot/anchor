@@ -19,6 +19,7 @@ export const Tag = ({
     <StyledIcon
         className={classNames('anchor-icon tag', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Tag = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#tag-a" />
+                <use fill="currentColor" xlinkHref="#tag-a" />
             </g>
         </svg>
     </StyledIcon>

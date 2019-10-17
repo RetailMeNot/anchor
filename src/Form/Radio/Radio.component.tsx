@@ -3,7 +3,6 @@ import * as React from 'react';
 const { forwardRef } = React;
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
@@ -22,7 +21,7 @@ const StyledLabel = styled('label')<RadioProps>`
     position: relative;
     display: inline-flex;
     cursor: pointer;
-    font-family: ${th.color('typography.fontFamily')};
+    font-family: base;
     ${({ size }) => css({ width: size, height: size })}
 
     ${spaceStyles}
@@ -37,16 +36,13 @@ const StyledLabel = styled('label')<RadioProps>`
         z-index: 1;
         border-radius: circular;
         background-color: white;
+        border: base;
 
         ${({ size }) =>
             css({
                 width: size,
                 height: size,
             })}
-        ${({ disabled }) => css`
-            border: 1px solid
-                ${th.color(disabled ? 'text.disabled' : 'neutrals.ash.light')};
-        `}
     }
 
     &:after {

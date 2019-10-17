@@ -19,6 +19,7 @@ export const Camera = ({
     <StyledIcon
         className={classNames('anchor-icon camera', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Camera = ({
                 />
                 <path
                     d="M10.133 9A2.137 2.137 0 0 0 8 6.867 2.137 2.137 0 0 0 5.867 9c0 1.175.958 2.133 2.133 2.133A2.137 2.137 0 0 0 10.133 9zm1.2 0A3.337 3.337 0 0 1 8 12.333 3.337 3.337 0 0 1 4.667 9 3.337 3.337 0 0 1 8 5.667 3.337 3.337 0 0 1 11.333 9z"
-                    fill={color}
+                    fill="currentColor"
                     fillRule="nonzero"
                 />
             </g>

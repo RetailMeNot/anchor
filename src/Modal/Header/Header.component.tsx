@@ -18,10 +18,7 @@ export const StyledHeader = styled('div')<ModalHeaderProps>`
     display: flex;
     order: -1;
 
-    ${({
-        color = 'neutrals.charcoal.light',
-        background = 'neutrals.white.base',
-    }) =>
+    ${({ color = 'text.light', background = 'white' }) =>
         css({
             color,
             backgroundColor: background,

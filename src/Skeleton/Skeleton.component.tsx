@@ -19,6 +19,8 @@ interface SkeletonProps
     minHeight?: string;
     minWidth?: string;
     textLength?: number;
+    colorStart?: string;
+    colorEnd?: string;
 }
 
 interface StyledSkeletonProps extends SkeletonProps {
@@ -51,17 +53,17 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
         })}
     ${spaceStyles}
 
-    ${({ textOnly }) =>
+    ${({ textOnly, colorStart }) =>
         textOnly
             ? css`
                   word-break: break-all;
 
-                  color: neutrals.silver.dark;
+                  color: ${colorStart};
                   animation: color-change 2s ease-in-out infinite;
               `
             : css`
                   pointer-events: none;
-                  background: ${th.color('neutrals.silver.dark')};
+                  background: ${th.color(colorStart)};
                   animation: background-change 2s ease-in-out infinite;
 
                   // hide all children
@@ -71,28 +73,30 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
                   }
               `}
 
-    @keyframes background-change {
-        0% {
-            background: ${th.color('neutrals.silver.dark')};
+    ${({ colorStart, colorEnd }) => css`
+        @keyframes background-change {
+            0% {
+                background: ${th.color(colorStart)};
+            }
+            50% {
+                background: ${th.color(colorEnd)};
+            }
+            100% {
+                background: ${th.color(colorStart)};
+            }
         }
-        50% {
-            background: ${th.color('neutrals.ash.light')};
+        @keyframes color-change {
+            0% {
+                color: ${colorStart};
+            }
+            50% {
+                color: ${colorEnd};
+            }
+            100% {
+                color: ${colorStart};
+            }
         }
-        100% {
-            background: ${th.color('neutrals.silver.dark')};
-        }
-    }
-    @keyframes color-change {
-        0% {
-            color: neutrals.silver.dark;
-        }
-        50% {
-            color: neutrals.ash.light;
-        }
-        100% {
-            color: neutrals.silver.dark;
-        }
-    }
+    `}
 `;
 
 export const Skeleton = ({
@@ -100,6 +104,8 @@ export const Skeleton = ({
     children,
     textLength,
     loading = true,
+    colorStart = th('skeleton.colorStart'),
+    colorEnd = th('skeleton.colorEnd'),
     ...props
 }: SkeletonProps): React.ReactElement<StyledSkeletonProps> | any => {
     if (!loading) {
@@ -137,6 +143,8 @@ export const Skeleton = ({
         <StyledSkeleton
             className={classNames('anchor-skeleton', className)}
             textOnly={!!blockText}
+            colorStart={colorStart}
+            colorEnd={colorEnd}
             {...props}
         >
             {blockText || children}

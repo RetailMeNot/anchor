@@ -19,6 +19,7 @@ export const Share = ({
     <StyledIcon
         className={classNames('anchor-icon share', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Share = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#share-a" />
+                <use fill="currentColor" xlinkHref="#share-a" />
             </g>
         </svg>
     </StyledIcon>

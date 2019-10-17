@@ -6,6 +6,7 @@ exports[`Component: Icon should render out a AddEvent 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -33,6 +34,7 @@ exports[`Component: Icon should render out a ArrowBack 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -77,6 +79,7 @@ exports[`Component: Icon should render out a ArrowForward 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -121,6 +124,7 @@ exports[`Component: Icon should render out a AvatarIcon 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -165,6 +169,7 @@ exports[`Component: Icon should render out a AvatarOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -209,6 +214,7 @@ exports[`Component: Icon should render out a BarCode 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -251,6 +257,7 @@ exports[`Component: Icon should render out a BulletList 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -289,6 +296,7 @@ exports[`Component: Icon should render out a Calendar 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -323,6 +331,7 @@ exports[`Component: Icon should render out a Camera 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -363,6 +372,7 @@ exports[`Component: Icon should render out a Cart 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -401,6 +411,7 @@ exports[`Component: Icon should render out a CashBack 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -442,6 +453,7 @@ exports[`Component: Icon should render out a Cells 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -476,6 +488,7 @@ exports[`Component: Icon should render out a Chat 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -517,6 +530,7 @@ exports[`Component: Icon should render out a Check 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -551,6 +565,7 @@ exports[`Component: Icon should render out a CheckSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -586,6 +601,7 @@ exports[`Component: Icon should render out a ChevronDown 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -613,6 +629,7 @@ exports[`Component: Icon should render out a ChevronDownSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -640,6 +657,7 @@ exports[`Component: Icon should render out a ChevronLeft 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -667,6 +685,7 @@ exports[`Component: Icon should render out a ChevronLeftSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -702,6 +721,7 @@ exports[`Component: Icon should render out a ChevronRight 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -729,6 +749,7 @@ exports[`Component: Icon should render out a ChevronRightSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -764,6 +785,7 @@ exports[`Component: Icon should render out a ChevronUp 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -791,6 +813,7 @@ exports[`Component: Icon should render out a ChevronUpSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -826,6 +849,7 @@ exports[`Component: Icon should render out a Clock 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -871,6 +895,7 @@ exports[`Component: Icon should render out a Close 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -912,6 +937,7 @@ exports[`Component: Icon should render out a CloseSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -953,6 +979,7 @@ exports[`Component: Icon should render out a CommentMore 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -994,6 +1021,7 @@ exports[`Component: Icon should render out a CreditCard 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1036,6 +1064,7 @@ exports[`Component: Icon should render out a CrossHairs 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1071,6 +1100,7 @@ exports[`Component: Icon should render out a Cut 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1112,6 +1142,7 @@ exports[`Component: Icon should render out a Disabled 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1153,6 +1184,7 @@ exports[`Component: Icon should render out a Dislike 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1194,6 +1226,7 @@ exports[`Component: Icon should render out a Download 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1235,6 +1268,7 @@ exports[`Component: Icon should render out a Ellipses 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1276,6 +1310,7 @@ exports[`Component: Icon should render out a EllipsesVertical 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1318,6 +1353,7 @@ exports[`Component: Icon should render out a Envelope 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1359,6 +1395,7 @@ exports[`Component: Icon should render out a EnvelopeOpen 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1400,6 +1437,7 @@ exports[`Component: Icon should render out a Error 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1439,6 +1477,7 @@ exports[`Component: Icon should render out a Expand 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1480,6 +1519,7 @@ exports[`Component: Icon should render out a Gear 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1521,6 +1561,7 @@ exports[`Component: Icon should render out a GiftCard 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1568,6 +1609,7 @@ exports[`Component: Icon should render out a Hamburger 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1608,6 +1650,7 @@ exports[`Component: Icon should render out a Heart 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1649,6 +1692,7 @@ exports[`Component: Icon should render out a HeartOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1690,6 +1734,7 @@ exports[`Component: Icon should render out a Home 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1723,6 +1768,7 @@ exports[`Component: Icon should render out a Info 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1761,6 +1807,7 @@ exports[`Component: Icon should render out a InfoOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1794,6 +1841,7 @@ exports[`Component: Icon should render out a Laptop 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1835,6 +1883,7 @@ exports[`Component: Icon should render out a Lightning 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1877,6 +1926,7 @@ exports[`Component: Icon should render out a Like 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1918,6 +1968,7 @@ exports[`Component: Icon should render out a ListIcon 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -1958,6 +2009,7 @@ exports[`Component: Icon should render out a Lock 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2013,6 +2065,7 @@ exports[`Component: Icon should render out a Map 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2046,6 +2099,7 @@ exports[`Component: Icon should render out a Marker 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2087,6 +2141,7 @@ exports[`Component: Icon should render out a MarkerOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2128,6 +2183,7 @@ exports[`Component: Icon should render out a Mobile 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2169,6 +2225,7 @@ exports[`Component: Icon should render out a News 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2210,6 +2267,7 @@ exports[`Component: Icon should render out a Pencil 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2251,6 +2309,7 @@ exports[`Component: Icon should render out a Play 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2285,6 +2344,7 @@ exports[`Component: Icon should render out a Plus 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2326,6 +2386,7 @@ exports[`Component: Icon should render out a PlusSmall 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2367,6 +2428,7 @@ exports[`Component: Icon should render out a Print 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2394,6 +2456,7 @@ exports[`Component: Icon should render out a Question 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2432,6 +2495,7 @@ exports[`Component: Icon should render out a QuestionOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2465,6 +2529,7 @@ exports[`Component: Icon should render out a Refresh 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2506,6 +2571,7 @@ exports[`Component: Icon should render out a RetailMeNotLogo 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2547,6 +2613,7 @@ exports[`Component: Icon should render out a SadFace 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2598,6 +2665,7 @@ exports[`Component: Icon should render out a Search 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2625,6 +2693,7 @@ exports[`Component: Icon should render out a Share 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2666,6 +2735,7 @@ exports[`Component: Icon should render out a Sliders 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2704,6 +2774,7 @@ exports[`Component: Icon should render out a Star 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2739,6 +2810,7 @@ exports[`Component: Icon should render out a StarHalf 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2779,6 +2851,7 @@ exports[`Component: Icon should render out a StarOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2814,6 +2887,7 @@ exports[`Component: Icon should render out a Success 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2857,6 +2931,7 @@ exports[`Component: Icon should render out a SuccessOutline 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2898,6 +2973,7 @@ exports[`Component: Icon should render out a Tag 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2939,6 +3015,7 @@ exports[`Component: Icon should render out a TagAdd 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span
@@ -2980,6 +3057,7 @@ exports[`Component: Icon should render out a Upload 1`] = `
   height: 1rem;
   width: 1rem;
   line-height: 0;
+  color: currentColor;
 }
 
 <span

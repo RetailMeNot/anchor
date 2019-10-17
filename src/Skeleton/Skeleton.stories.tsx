@@ -14,7 +14,7 @@ import { Skeleton } from './Skeleton.component';
 
 const StyledStory = styled('div')`
     padding: 2rem 4rem;
-    color: text.body;
+    color: text.base;
     font-family: base;
 `;
 
@@ -101,7 +101,12 @@ storiesOf('Components/Skeleton', module)
                         tag={tag || undefined}
                         scale={scale || undefined}
                     >
-                        <Skeleton loading={loading} textLength={textLength}>
+                        <Skeleton
+                            loading={loading}
+                            textLength={textLength}
+                            colorStart={text('colorStart', '') || undefined}
+                            colorEnd={text('colorEnd', '') || undefined}
+                        >
                             {text('Text', defaultText)}
                         </Skeleton>
                     </Typography>
@@ -130,6 +135,8 @@ storiesOf('Components/Skeleton', module)
                         textLength={
                             parseInt(text('textLength', ''), 10) || undefined
                         }
+                        colorStart={text('colorStart', '') || undefined}
+                        colorEnd={text('colorEnd', '') || undefined}
                     />
                 </StyledStory>
             </ThemeProvider>

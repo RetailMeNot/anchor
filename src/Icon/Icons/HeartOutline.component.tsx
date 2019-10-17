@@ -19,6 +19,7 @@ export const HeartOutline = ({
     <StyledIcon
         className={classNames('anchor-icon heart-outline', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const HeartOutline = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#heart-outline-a" />
+                <use fill="currentColor" xlinkHref="#heart-outline-a" />
             </g>
         </svg>
     </StyledIcon>

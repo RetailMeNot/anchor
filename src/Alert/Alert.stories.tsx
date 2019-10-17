@@ -12,7 +12,7 @@ import { InfoOutline } from '../Icon';
 
 const StyledStory = styled('div')`
     padding: 2rem;
-    color: text.body;
+    color: text.base;
     font-family: base;
 `;
 

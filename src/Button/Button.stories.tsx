@@ -14,7 +14,12 @@ import { Button } from './Button.component';
 import { HitArea } from './HitArea/HitArea.component';
 import * as Icon from '../Icon';
 import { Typography, Cut, SuccessOutline } from '..';
-import { colors } from '../theme';
+
+const alternateColors = {
+    base: '#14A382',
+    light: '#00CDAD',
+    dark: '#268068',
+};
 
 const StyledStory = styled('div')`
     padding: 2rem 3rem;
@@ -26,14 +31,14 @@ const StyledStoryPrime = styled(StyledStory)`
 
 const StyledReverseStory = styled(StyledStory)`
     width: 1200px;
-    background-color: ${colors.grapePurchase.base};
-    color: ${colors.white.base};
+    background-color: primary.base;
+    color: white;
 `;
 
 const Label = styled(Typography)`
     && {
         text-transform: uppercase;
-        color: ${colors.charcoal.light};
+        color: text.light;
         font-size: 12px;
         font-weight: bold;
         display: block;
@@ -43,7 +48,7 @@ const Label = styled(Typography)`
 
 const ReverseLabel = styled(Label)`
     && {
-        color: ${colors.white.base};
+        color: white;
     }
 `;
 
@@ -60,6 +65,12 @@ const ShowHitbox = styled('div')`
     button > ${HitArea} {
         background: rgba(255, 0, 0, 0.1);
     }
+`;
+
+const BlockBox = styled('div')`
+    border: light;
+    width: 375px;
+    padding: 1rem;
 `;
 
 storiesOf('Components/Button', module)
@@ -291,14 +302,14 @@ storiesOf('Components/Button', module)
                             <Label>default</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy}>CTA</Button>
+                            <Button colorTheme={alternateColors}>CTA</Button>
                         </div>
 
                         <div>
                             <Label>button with flip</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} flip>
+                            <Button colorTheme={alternateColors} flip>
                                 CTA
                             </Button>
                         </div>
@@ -307,7 +318,7 @@ storiesOf('Components/Button', module)
                             <Label>hover</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} forceHover>
+                            <Button colorTheme={alternateColors} forceHover>
                                 CTA
                             </Button>
                         </div>
@@ -317,7 +328,7 @@ storiesOf('Components/Button', module)
                         </div>
                         <div>
                             <Button
-                                colorTheme={colors.dealEnvy}
+                                colorTheme={alternateColors}
                                 flip
                                 forceHover
                             >
@@ -329,7 +340,7 @@ storiesOf('Components/Button', module)
                             <Label>disabled</Label>
                         </div>
                         <div>
-                            <Button colorTheme={colors.dealEnvy} disabled>
+                            <Button colorTheme={alternateColors} disabled>
                                 CTA
                             </Button>
                         </div>
@@ -338,7 +349,7 @@ storiesOf('Components/Button', module)
                     <Heading>Block Buttons</Heading>
                     <div
                         style={{
-                            border: `2px solid ${colors.silver.base}`,
+                            border: 'light',
                             width: '375px',
                             padding: '1rem',
                         }}
@@ -563,7 +574,7 @@ storiesOf('Components/Button', module)
                         <Label>default</Label>
                     </div>
                     <div>
-                        <Button variant="outline" colorTheme={colors.dealEnvy}>
+                        <Button variant="outline" colorTheme={alternateColors}>
                             CTA
                         </Button>
                     </div>
@@ -574,7 +585,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="outline"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             forceHover
                         >
                             CTA
@@ -587,7 +598,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="outline"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             disabled
                         >
                             CTA
@@ -596,13 +607,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button variant="outline" block>
@@ -615,7 +620,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledStoryPrime>
         </ThemeProvider>
     ))
@@ -822,7 +827,7 @@ storiesOf('Components/Button', module)
                         <Label>min width - 200 px</Label>
                     </div>
                     <div>
-                        <Button variant="minimal" colorTheme={colors.dealEnvy}>
+                        <Button variant="minimal" colorTheme={alternateColors}>
                             CTA
                         </Button>
                     </div>
@@ -831,7 +836,7 @@ storiesOf('Components/Button', module)
                         <Label>flex width</Label>
                     </div>
                     <div>
-                        <Button variant="minimal" colorTheme={colors.dealEnvy}>
+                        <Button variant="minimal" colorTheme={alternateColors}>
                             I'm a very long CTA Text
                         </Button>
                     </div>
@@ -842,7 +847,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="minimal"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             minWidth="7rem"
                         >
                             CTA
@@ -855,7 +860,7 @@ storiesOf('Components/Button', module)
                     <div>
                         <Button
                             variant="minimal"
-                            colorTheme={colors.dealEnvy}
+                            colorTheme={alternateColors}
                             prefix={<Cut />}
                         >
                             CTA Text
@@ -864,13 +869,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button variant="minimal" size="md" block>
@@ -883,7 +882,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledStoryPrime>
         </ThemeProvider>
     ))
@@ -1329,13 +1328,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse block>
@@ -1348,7 +1341,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
@@ -1578,13 +1571,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse variant="outline" size="md" block>
@@ -1603,7 +1590,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
@@ -1833,13 +1820,7 @@ storiesOf('Components/Button', module)
                 </div>
 
                 <Heading>Block Buttons</Heading>
-                <div
-                    style={{
-                        border: `2px solid ${colors.silver.base}`,
-                        width: '375px',
-                        padding: '1rem',
-                    }}
-                >
+                <BlockBox>
                     <div>
                         <div>
                             <Button reverse variant="minimal" size="md" block>
@@ -1858,7 +1839,7 @@ storiesOf('Components/Button', module)
                             </Button>
                         </div>
                     </div>
-                </div>
+                </BlockBox>
             </StyledReverseStory>
         </ThemeProvider>
     ))
@@ -2115,7 +2096,7 @@ storiesOf('Components/Button', module)
         );
         const chosenColor = select(
             'colorTheme',
-            ['default', ...Object.keys(colors)],
+            ['default', 'alternative'],
             'default'
         );
         const buttonText = text('Text', 'Hello World');
@@ -2158,9 +2139,10 @@ storiesOf('Components/Button', module)
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
                             colorTheme={
-                                chosenColor === 'default'
-                                    ? undefined
-                                    : colors[chosenColor]
+                                {
+                                    default: undefined,
+                                    alternative: alternateColors,
+                                }[chosenColor]
                             }
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}
@@ -2185,7 +2167,7 @@ storiesOf('Components/Button', module)
         );
         const chosenColor = select(
             'colorTheme',
-            ['default', ...Object.keys(colors)],
+            ['default', 'alternative'],
             'default'
         );
         const buttonText = text('Text', 'Hello World');
@@ -2228,9 +2210,10 @@ storiesOf('Components/Button', module)
                             minWidth={minWidth ? minWidth : undefined}
                             margin={margin ? margin : undefined}
                             colorTheme={
-                                chosenColor === 'default'
-                                    ? undefined
-                                    : colors[chosenColor]
+                                {
+                                    default: undefined,
+                                    alternative: alternateColors,
+                                }[chosenColor]
                             }
                             prefix={Prefix && <Prefix />}
                             suffix={Suffix && <Suffix />}

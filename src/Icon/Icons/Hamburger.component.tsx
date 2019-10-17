@@ -19,6 +19,7 @@ export const Hamburger = ({
     <StyledIcon
         className={classNames('anchor-icon hamburger', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg

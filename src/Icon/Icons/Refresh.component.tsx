@@ -19,6 +19,7 @@ export const Refresh = ({
     <StyledIcon
         className={classNames('anchor-icon refresh', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Refresh = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#refresh-a" />
+                <use fill="currentColor" xlinkHref="#refresh-a" />
             </g>
         </svg>
     </StyledIcon>

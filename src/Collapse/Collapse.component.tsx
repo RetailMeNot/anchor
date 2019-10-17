@@ -75,14 +75,14 @@ const variants = {
         }
     `,
     compact: css`
-        color: neutrals.charcoal.light;
+        color: text.light;
 
         .anchor-collapse-button {
-            background-color: neutrals.white.base;
+            background-color: white;
             border-style: none;
-            border-bottom: solid thin ${th.color('borders.light')};
-            border-top: solid thin ${th.color('borders.light')};
-            color: neutrals.charcoal.light;
+            border-bottom: light;
+            border-top: light;
+            color: text.light;
             cursor: pointer;
             display: block;
             font-weight: bold;
@@ -102,7 +102,7 @@ const variants = {
         }
 
         .anchor-collapse-content {
-            background-color: neutrals.silver.light;
+            background-color: background.light;
 
             ul {
                 padding: 0;
@@ -166,8 +166,8 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
     ...props
 }: CollapseProps): React.ReactElement<CollapseProps> => {
     const [open, toggleOpen] = React.useState<boolean>(isOpen);
-    const IconOpened = openedIcon || <ChevronDown />;
-    const IconClosed = closedIcon || <ChevronUp />;
+    const IconOpened = openedIcon || <ChevronUp />;
+    const IconClosed = closedIcon || <ChevronDown />;
 
     // If the user provides custom openedText but not custom closedText
     // then use openedText for closedText as well

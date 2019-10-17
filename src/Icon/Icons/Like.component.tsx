@@ -19,6 +19,7 @@ export const Like = ({
     <StyledIcon
         className={classNames('anchor-icon like', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Like = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#like-a" />
+                <use fill="currentColor" xlinkHref="#like-a" />
             </g>
         </svg>
     </StyledIcon>

@@ -19,7 +19,7 @@ const StyledFooterSectionElement = styled('section')`
         font-weight: 700;
         font-size: 0.75rem;
         line-height: 1rem;
-        color: font.body;
+        color: font.base;
     }
 
     ul {
@@ -41,7 +41,7 @@ const StyledFooterSectionElement = styled('section')`
         display: block;
         margin-bottom: 0.75rem;
         text-decoration: none;
-        color: text.body;
+        color: text.base;
         font-weight: 500;
     }
 `;

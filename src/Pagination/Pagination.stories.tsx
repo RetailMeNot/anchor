@@ -13,7 +13,7 @@ import { Pagination, Size, Variant } from './Pagination.component';
 const StyledStory = styled('div')`
     width: 95%;
     padding: 0.5rem;
-    color: text.body;
+    color: text.base;
     font-family: base;
 `;
 

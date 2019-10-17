@@ -19,6 +19,7 @@ export const Expand = ({
     <StyledIcon
         className={classNames('anchor-icon expand', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -36,7 +37,7 @@ export const Expand = ({
             </defs>
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#expand-a" />
+                <use fill="currentColor" xlinkHref="#expand-a" />
             </g>
         </svg>
     </StyledIcon>

@@ -19,6 +19,7 @@ export const Cut = ({
     <StyledIcon
         className={classNames('anchor-icon cut', className)}
         scale={scale}
+        $color={color}
         {...props}
     >
         <svg
@@ -37,7 +38,7 @@ export const Cut = ({
 
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
-                <use fill={color} xlinkHref="#cut-a" />
+                <use fill="currentColor" xlinkHref="#cut-a" />
             </g>
         </svg>
     </StyledIcon>

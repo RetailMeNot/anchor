@@ -7,6 +7,10 @@ import classnames from 'classnames';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
+// Todo: These should not be hardcoded and need a better solution
+const OFF_TRACK_COLOR = '#D3D3D3';
+const OFF_KNOB_COLOR = '#808080';
+
 const HiddenInput = styled('input')<ToggleProps>`
     visibility: hidden;
     opacity: 0;
@@ -31,7 +35,7 @@ const StyledToggle = styled('label')<ToggleProps>`
     text-align: center;
     ${({ disabled }) =>
         css({
-            color: disabled ? 'text.disabled' : '#555',
+            color: disabled ? 'text.disabled' : 'text.light',
             cursor: disabled ? 'not-allowed' : 'pointer',
         })}
     user-select: none;
@@ -55,7 +59,7 @@ const Switch = styled('span')<ToggleProps>`
         content: '';
 
         border-radius: circular;
-        background-color: neutrals.ash.light;
+        background-color: ${OFF_TRACK_COLOR};
         transform: translate(0, -50%);
         transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
             opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -66,7 +70,7 @@ const Switch = styled('span')<ToggleProps>`
                 width: ${trackWidth};
                 background-color: ${checked && !disabled
                     ? toggleColor
-                    : 'neutrals.ash.light'};
+                    : OFF_TRACK_COLOR};
                 opacity: ${checked && !disabled ? 0.5 : undefined};
             `}
     }
@@ -85,8 +89,6 @@ const Switch = styled('span')<ToggleProps>`
             height: ${knobSize};
         `}
         border-radius: circular;
-
-        // background-color: neutrals.ash.dark;
         transform: translate(0, -50%);
 
         ${({ checked, disabled, knobSize, trackWidth, toggleColor }) =>
@@ -97,7 +99,7 @@ const Switch = styled('span')<ToggleProps>`
                 );
                 background-color: ${checked && !disabled
                     ? toggleColor
-                    : 'neutrals.ash.dark'};
+                    : OFF_KNOB_COLOR};
             `}
     }
 `;
