@@ -1,10 +1,10 @@
 {
     "name": "@retailmenot/anchor-docs",
     "description": "Documentation site for Anchor",
-    "author": "Kameron (@sharkparty)",
+    "author": "Kameron (@sharkparty), Steve (@zero0Halo)",
     "dependencies": {
         "@reach/component-component": "^0.1.3",
-        "@retailmenot/anchor": "^1.0.2",
+        "@retailmenot/anchor": "^1.1.0",
         "@xstyled/styled-components": "1.10.0",
         "@xstyled/system": "1.10.0",
         "babel-plugin-styled-components": "^1.10.6",
