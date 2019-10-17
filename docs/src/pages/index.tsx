@@ -1,8 +1,8 @@
-// REACT
-import * as React from 'react';
 // VENDOR
+import * as React from 'react';
 import styled, { createGlobalStyle } from '@xstyled/styled-components';
 import { Link, withPrefix } from 'gatsby';
+import { config } from 'react-awesome-styled-grid';
 // ANCHOR & COMPONENTS
 import {
     Col,
@@ -16,11 +16,7 @@ import {
 } from '@retailmenot/anchor';
 import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
-import {
-    breakpoints,
-    BreakpointsType,
-    responsiveCSS,
-} from '../components/Utils';
+import { breakpoints, BreakpointsType } from '../components/Utils';
 import { Wave } from '../components/Wave';
 
 const CONTENT_WIDTH = 940;
@@ -37,123 +33,99 @@ const TempOverride = createGlobalStyle`
     }
 `;
 
-interface BreakpointProps {
-    breakpoint?: BreakpointsType;
-}
-
-const StyledIndexPage = styled('div')<BreakpointProps>`
+const StyledIndexPage = styled('div')`
+    display: block;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 3.4375rem;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        padding-top: 1rem;
-        min-height: 130vh;
-        margin-bottom: 20rem;
-        display:block;
+    margin-bottom: 20rem;
+    min-height: 130vh;
+    padding-top: 1rem;
+    ${props => config(props).media[breakpoints.sm]`
+        display: flex;
+        flex-direction: column;
+        margin-bottom: auto;
+        min-height: auto;
+        padding-top: 3.4375rem;
     `}
 `;
 
-const StyledIntro = styled('div')<BreakpointProps>`
+const StyledIntro = styled('div')`
     width: 100%;
     max-width: ${CONTENT_WIDTH}px;
     margin: 0 auto;
-    padding-top: 6.25rem;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        padding-top: 1rem;
+    padding-top: 1rem;
+    ${props => config(props).media[breakpoints.sm]`
+        padding-top: 6.25rem;
     `}
 `;
 
-interface StyledLogoProps extends BreakpointProps {
-    test?: string;
-}
-
-const StyledLogo = styled('img')<StyledLogoProps>`
-    flex: 1 1 auto;
+const StyledLogo = styled('img')`
     box-sizing: border-box;
-    width: 80%;
+    display: block;
+    flex: 1 1 auto;
+    margin: 2rem auto;
     max-width: 22.25rem;
-
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        margin: 2rem auto;
-        position: relative;
-        display: block;
+    position: relative;
+    width: 80%;
+    ${props => config(props).media[breakpoints.md]`
+        margin: inherit;
     `}
 `;
 
-const StyledCaption = styled('p')<BreakpointProps>`
-    padding: 1rem 0;
+const StyledCaption = styled('p')`
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5rem;
+    color: #222222;
     font-family: base;
     font-size: 1rem;
-    color: #222222;
-    text-align: left;
     line-height: 1.5rem;
-    max-width: 38.125rem;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        background: rgba(255,255,255,0.95);
-        padding: 1.5rem;
-        border-radius: 0.5rem;
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    max-width: auto;
+    padding: 1.5rem;
+    text-align: left;
+    ${props => config(props).media[breakpoints.md]`
+        background: transparent;
+        border-radius: 0;
+        margin-bottom: 0;
+        max-width: 38.125rem;
+        padding: 1rem 0;
     `}
 `;
 
-const StyledContainer = styled(Container)<BreakpointProps>`
-    padding-top:4rem;
-
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        padding-top:0rem;
+const StyledContainer = styled(Container)`
+    padding-top: 0rem;
+    ${props => config(props).media[breakpoints.sm]`
+        padding-top:4rem;
     `}
 `;
 
-const StyledOcean = styled('div')<BreakpointProps>`
-    margin-top: 3rem;
+const StyledOcean = styled('div')`
+    bottom: -24vw; // Using vw to make its position more relative to the device width
     height: 28rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
     left: 0;
-    right: 0;
+    margin-top: 3rem;
     overflow: hidden;
+    position: fixed;
+    right: 0;
+    width: 100%;
     z-index: -1;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        position:fixed;
-        bottom: -24vw; // Using vw to make its position more relative to the device width
+    ${props => config(props).media[breakpoints.sm]`
+        bottom: 0;
+        position: absolute;
     `}
 `;
 
-const StyledFooter = styled('footer')<BreakpointProps>`
-    width: 100%;
-    display: block;
-    position: absolute;
+const StyledFooter = styled('footer')`
     bottom: 2rem;
+    display: block;
     left: 0;
+    position: fixed;
     right: 0;
     text-align: center;
-    z-index: 30;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        position: fixed;
-        z-index: -1;
+    width: 100%;
+    z-index: -1;
+    ${props => config(props).media[breakpoints.sm]`
+        position: absolute;
+        z-index: 30;
     `}
 
     img {
@@ -170,12 +142,12 @@ export const IndexPage = (): React.ReactElement<any> => (
     <ThemeProvider theme={RootTheme}>
         <ScreenClass
             render={(breakpoint: BreakpointsType) => (
-                <StyledIndexPage breakpoint={breakpoint}>
+                <StyledIndexPage>
                     <TempOverride />
 
                     <HomeTopNav contentWidth={CONTENT_WIDTH} />
 
-                    <StyledIntro breakpoint={breakpoint}>
+                    <StyledIntro>
                         <Link to="/overview">
                             <Hidden xs sm>
                                 <StyledLogo
@@ -186,13 +158,12 @@ export const IndexPage = (): React.ReactElement<any> => (
                             </Hidden>
                             <Visible xs sm>
                                 <StyledLogo
-                                    breakpoint={breakpoint}
                                     src={withPrefix('/images/anchor-logo.svg')}
                                 />
                             </Visible>
                         </Link>
 
-                        <StyledCaption breakpoint={breakpoint}>
+                        <StyledCaption>
                             Anchor is a design system by{' '}
                             <strong>RetailMeNot</strong>, fostered with a sense
                             of collaboration, community, and scalability. We
@@ -200,7 +171,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                         </StyledCaption>
                     </StyledIntro>
 
-                    <StyledContainer breakpoint={breakpoint}>
+                    <StyledContainer>
                         <Row>
                             <Col
                                 offset={{
@@ -233,7 +204,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                         </Row>
                     </StyledContainer>
 
-                    <StyledOcean breakpoint={breakpoint}>
+                    <StyledOcean>
                         <Wave duration="89s" top="0" image={1} />
                         <Wave duration="88s" top="10px" image={5} />
                         <Wave duration="85s" top="20px" image={4} />
@@ -242,7 +213,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                         <Wave duration="67s" top="120px" image={1} />
                     </StyledOcean>
 
-                    <StyledFooter breakpoint={breakpoint}>
+                    <StyledFooter>
                         <a href="//retailmenot.com" target="_blank">
                             <img src={withPrefix('/images/r-mark.svg')} />
                         </a>

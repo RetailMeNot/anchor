@@ -1,12 +1,13 @@
-// REACT
-import * as React from 'react';
 // VENDOR
+import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import styled, { createGlobalStyle } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import merge from 'lodash.merge';
+import { config } from 'react-awesome-styled-grid';
+
 // ANCHOR & COMPONENTS
 import {
     Col,
@@ -15,10 +16,9 @@ import {
     Hamburger,
     RootTheme,
     Row,
-    ScreenClass,
+    StandardBreakpoints,
     ThemeProvider,
     Typography,
-    Visible,
 } from '@retailmenot/anchor';
 import { Footer } from '../';
 import {
@@ -26,7 +26,7 @@ import {
     EnhancedNextPrevious,
 } from '../../Navigation';
 import { MDXComponents } from './MDXComponents';
-import { breakpoints, BreakpointsType, responsiveCSS } from '../../Utils';
+import { breakpoints, rem } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
 
@@ -50,20 +50,13 @@ interface PageProps {
     enableFooter?: boolean;
 }
 
-interface StyledContentMainProps {
-    breakpoint?: BreakpointsType;
-}
-
-const StyledContentMain = styled('main')<StyledContentMainProps>`
+const StyledContentMain = styled('main')`
     box-sizing: border-box;
-    width: 95%;
     max-width: 80rem;
     padding: 1rem 1rem 3rem;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        width: 100%;
+    width: 100%;
+    ${props => config(props).media[breakpoints.md]`
+        width: 95%;
     `}
 
     blockquote {
@@ -96,35 +89,55 @@ const StyledHeader = styled('header')`
     }
 `;
 
+const SectionNavCol = styled(Col)`
+    padding-left: 0;
+    padding-right: 0;
+`;
+
 interface StyledSectionNavProps {
-    breakpoint?: BreakpointsType;
+    sectionNavOpen: boolean;
 }
 
 const StyledSectionNav = styled('div')<StyledSectionNavProps>`
-    box-sizing: border-box;
     background-color: background.base;
     border-right: light;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        position: fixed;
-        width: 100vw;
-        height: 120%;
-        z-index: 90;
-        overflow-y: scroll;
-        top: 4.5rem;
-        left: 0;
-        right: 0;
-        padding-bottom: 30rem;
-    `}
+    box-sizing: border-box;
+    height: 120%;
+    left: 0;
+    overflow-y: scroll;
+    padding-bottom: 30rem;
+    position: fixed;
+    right: 0;
+    top: 4.5rem;
+    width: 100vw;
+    z-index: 90;
+    display: ${({ sectionNavOpen }) => (sectionNavOpen ? 'display' : 'none')}
+        ${props => config(props).media[breakpoints.md]`
+        height: auto;
+        overflow-y: initial;
+        padding-bottom: initial;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        z-index: 0;
+        display: block;
+    `};
 `;
 
+interface FixedBodyProps {
+    sectionNavOpen: boolean;
+}
+
 // For mobile, fixes the body position so it doesn't scroll around when the navigation is open
-const FixedBody = createGlobalStyle`
-    body {
-        position:fixed;
-    }
+const FixedBody = createGlobalStyle<FixedBodyProps>`
+    ${({ sectionNavOpen }) =>
+        sectionNavOpen &&
+        `
+        body {
+            position: fixed;
+        }
+    `}
 `;
 
 const StyledPrimaryNav = styled('nav')`
@@ -152,6 +165,9 @@ const CenteredCol = styled(Col)`
 
 const HamburgerCol = styled(CenteredCol)`
     max-width: 3rem;
+    ${props => config(props).media[breakpoints.md]`
+        display: none;
+    `}
 `;
 
 const AnchorDocsTheme = merge({}, RootTheme, {
@@ -187,6 +203,13 @@ const AnchorDocsTheme = merge({}, RootTheme, {
         dark: 'solid thin #D3D3D3',
     },
     awesomegrid: {
+        breakpoints: {
+            xs: 1,
+            sm: rem(StandardBreakpoints.sm.min),
+            md: rem(StandardBreakpoints.md.min),
+            lg: rem(StandardBreakpoints.lg.min),
+            xl: rem(StandardBreakpoints.xl.min),
+        },
         container: {
             xs: 'full',
             sm: 'full',
@@ -213,95 +236,76 @@ export const Page = ({
 
     return (
         <ThemeProvider theme={AnchorDocsTheme}>
-            <ScreenClass
-                render={(breakpoint: BreakpointsType) => (
-                    <StyledPageElement className={classNames(className)}>
-                        <Helmet htmlAttributes={{ lang: 'en' }} />
+            <StyledPageElement className={classNames(className)}>
+                <Helmet htmlAttributes={{ lang: 'en' }} />
 
-                        <GlobalCSS />
+                <GlobalCSS />
 
-                        <StyledHeader>
-                            <Container>
-                                <Row>
-                                    <Visible xs sm>
-                                        <HamburgerCol xs={1} sm={1}>
-                                            <Button
-                                                variant="minimal"
-                                                prefix={<Hamburger />}
-                                                onClick={() =>
-                                                    setSectionNavOpen(
-                                                        !sectionNavOpen
-                                                    )
-                                                }
-                                            />
-                                        </HamburgerCol>
-                                    </Visible>
-
-                                    <CenteredCol md={2} xs={2} sm={4}>
-                                        <StyledLogoContainer to="/">
-                                            <img
-                                                alt="Anchor Logo Horizontal"
-                                                src={logo}
-                                            />
-                                        </StyledLogoContainer>
-                                    </CenteredCol>
-
-                                    <CenteredCol md={2} xs={1} sm={1}>
-                                        {/* TODO: Search will go here */}
-                                    </CenteredCol>
-
-                                    <CenteredCol md={4} xs={1} sm={3}>
-                                        <StyledPrimaryNav>
-                                            <Typography
-                                                tag="a"
-                                                weight={600}
-                                                className="active"
-                                                href="https://github.com/RetailMeNot/anchor"
-                                            >
-                                                Github
-                                            </Typography>
-                                        </StyledPrimaryNav>
-                                    </CenteredCol>
-                                </Row>
-                            </Container>
-                        </StyledHeader>
-
+                <StyledHeader>
+                    <Container>
                         <Row>
-                            <Col md={2} lg={2}>
-                                {(sectionNavOpen ||
-                                    (breakpoint !== breakpoints.sm &&
-                                        breakpoint !== breakpoints.xs)) && (
-                                    <>
-                                        {sectionNavOpen && (
-                                            <Visible sm xs>
-                                                <FixedBody />
-                                            </Visible>
-                                        )}
+                            <HamburgerCol xs={1} sm={1}>
+                                <Button
+                                    variant="minimal"
+                                    prefix={<Hamburger />}
+                                    onClick={() =>
+                                        setSectionNavOpen(!sectionNavOpen)
+                                    }
+                                />
+                            </HamburgerCol>
 
-                                        <StyledSectionNav
-                                            breakpoint={breakpoint}
-                                        >
-                                            <EnhancedSectionNavigation />
-                                        </StyledSectionNav>
-                                    </>
-                                )}
-                            </Col>
-                            <Col md={6} lg={10}>
-                                <StyledContentMain breakpoint={breakpoint}>
-                                    <br />
-                                    <MDXProvider components={MDXComponents}>
-                                        {children}
-                                    </MDXProvider>
+                            <CenteredCol md={2} xs={2} sm={4}>
+                                <StyledLogoContainer to="/">
+                                    <img
+                                        alt="Anchor Logo Horizontal"
+                                        src={logo}
+                                    />
+                                </StyledLogoContainer>
+                            </CenteredCol>
 
-                                    <EnhancedNextPrevious section="components" />
+                            <CenteredCol md={2} xs={1} sm={1}>
+                                {/* TODO: Search will go here */}
+                            </CenteredCol>
 
-                                    {enableFooter && <Footer />}
-                                </StyledContentMain>
-                            </Col>
+                            <CenteredCol md={4} xs={1} sm={3}>
+                                <StyledPrimaryNav>
+                                    <Typography
+                                        tag="a"
+                                        weight={600}
+                                        className="active"
+                                        href="https://github.com/RetailMeNot/anchor"
+                                    >
+                                        Github
+                                    </Typography>
+                                </StyledPrimaryNav>
+                            </CenteredCol>
                         </Row>
-                    </StyledPageElement>
-                )}
-            />
+                    </Container>
+                </StyledHeader>
+
+                <Row>
+                    <SectionNavCol md={2} lg={2}>
+                        <FixedBody sectionNavOpen={sectionNavOpen} />
+
+                        <StyledSectionNav sectionNavOpen={sectionNavOpen}>
+                            <EnhancedSectionNavigation />
+                        </StyledSectionNav>
+                    </SectionNavCol>
+
+                    <Col md={6} lg={10}>
+                        <StyledContentMain>
+                            <br />
+                            <MDXProvider components={MDXComponents}>
+                                {children}
+                            </MDXProvider>
+
+                            <EnhancedNextPrevious section="components" />
+
+                            {enableFooter && <Footer />}
+                        </StyledContentMain>
+                    </Col>
+                </Row>
+            </StyledPageElement>
         </ThemeProvider>
     );
 };

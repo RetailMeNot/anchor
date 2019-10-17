@@ -1,5 +1,3 @@
-export { AddBreakpoints, responsiveCSS } from './AddBreakpoints.component';
-
 export enum breakpoints {
     xs = 'xs',
     sm = 'sm',

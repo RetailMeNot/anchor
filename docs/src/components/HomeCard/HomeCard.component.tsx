@@ -5,44 +5,38 @@
  * refactored to remove the disabled state.
  */
 
+// VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
-import {
-    breakpoints,
-    BreakpointsType,
-    responsiveCSS,
-    SiteLink,
-} from '../Utils';
+import { config } from 'react-awesome-styled-grid';
+// COMPONENTS
+import { breakpoints, SiteLink } from '../Utils';
 
 interface HomeCardProps {
-    breakpoint?: BreakpointsType;
     description?: string;
     disabled?: boolean;
     imgSrc?: string;
     title?: string;
     to?: string | undefined;
 }
-// df4b6b
+
 const StyledHomeCard = styled('div')<HomeCardProps>`
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 0.5rem;
     border: solid #e1e1e1 1px;
     box-sizing: border-box;
-    height: 14.5265rem;
-    overflow: hidden;
-    padding: 2.8125rem;
-    position: relative;
     display: flex;
+    height: auto;
     margin-bottom: 2rem;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        padding: 1.5rem;
-        height: auto;
-        background: rgba(255,255,255,0.95);
+    overflow: hidden;
+    padding: 1.5rem;
+    position: relative;
+    ${props => config(props).media[breakpoints.md]`
+        padding: 2.8125rem;
+        height: 14.5265rem;
+        background: #fff;
     `}
 
     ${({ disabled }) =>

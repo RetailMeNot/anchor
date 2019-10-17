@@ -5,13 +5,14 @@ export { ColorBlurb } from './ColorBlurb';
 export { ComponentInfo } from './ComponentInfo';
 export { FormatTypes } from './FormatTypes';
 import { BreakpointsType } from './Responsive';
-export { AddBreakpoints, breakpoints, responsiveCSS } from './Responsive';
+export { breakpoints } from './Responsive';
 export type BreakpointsType = BreakpointsType;
 
 export { SiteLink } from './SiteLink';
 
 export * from './constants';
 export { getLink } from './getLink';
+export { rem } from './rem';
 export { sections } from './sections';
 
 // Defining this in one location so that it can be used both in the table styles for the pre tag,
