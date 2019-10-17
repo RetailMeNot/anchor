@@ -139,14 +139,14 @@ declare module 'react-awesome-styled-grid' {
 
     type ColVal = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-    interface ResponsiveProps {
+    export interface ResponsiveProps {
         xs?: ColVal;
         sm?: ColVal;
         md?: ColVal;
         lg?: ColVal;
         xl?: ColVal;
     }
-    interface VisibleProps extends HTMLAttributes<HTMLDivElement> {
+    export interface VisibleProps extends HTMLAttributes<HTMLDivElement> {
         xs?: boolean;
         sm?: boolean;
         md?: boolean;
@@ -157,7 +157,9 @@ declare module 'react-awesome-styled-grid' {
 
     type ResponsiveArrayValues = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-    interface ColProps extends ResponsiveProps, HTMLAttributes<HTMLDivElement> {
+    export interface ColProps
+        extends ResponsiveProps,
+            HTMLAttributes<HTMLDivElement> {
         offset?: ResponsiveProps;
         reverse?: ResponsiveArrayValues[];
         debug?: boolean;
@@ -167,6 +169,16 @@ declare module 'react-awesome-styled-grid' {
         render: (resolution: ResponsiveArrayValues) => any;
     }
 
+    interface ConfigKeys {
+        breakpoints: object;
+        columns: object;
+        container: object;
+        gutterWidth: object;
+        media: object;
+        mediaQuery: string;
+        paddingWidth: object;
+    }
+
     export const Row: FunctionComponent<HTMLAttributes<HTMLDivElement>>;
     export const Col: FunctionComponent<ColProps>;
     export const Container: FunctionComponent<HTMLAttributes<HTMLDivElement>>;
@@ -174,4 +186,5 @@ declare module 'react-awesome-styled-grid' {
     export const Hidden: FunctionComponent<VisibleProps>;
     export const ScreenClass: FunctionComponent<ScreenClassProps>;
     export const ScreenBadge: FunctionComponent<HTMLAttributes<HTMLDivElement>>;
+    export function config(props: object): ConfigKeys;
 }

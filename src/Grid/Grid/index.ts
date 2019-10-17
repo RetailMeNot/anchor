@@ -1,5 +1,7 @@
 // VENDOR
 export {
+    responsiveValues,
+    responsiveQuery,
     Col,
     Visible,
     Hidden,
