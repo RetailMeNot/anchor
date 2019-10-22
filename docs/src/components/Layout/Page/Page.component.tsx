@@ -2,7 +2,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
-import styled, { createGlobalStyle } from '@xstyled/styled-components';
+import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import merge from 'lodash.merge';
@@ -111,8 +111,9 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     top: 4.5rem;
     width: 100vw;
     z-index: 90;
-    display: ${({ sectionNavOpen }) => (sectionNavOpen ? 'display' : 'none')}
-        ${props => config(props).media[breakpoints.md]`
+    ${({ sectionNavOpen }) =>
+        css({ display: sectionNavOpen ? 'display' : 'none' })}
+    ${props => config(props).media[breakpoints.md]`
         height: auto;
         overflow-y: initial;
         padding-bottom: initial;
