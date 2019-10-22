@@ -2,6 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import classnames from 'classnames';
+import { ThemeProvider } from '@xstyled/styled-components';
 import {
     Col as ACol,
     Visible as AVisible,
@@ -14,6 +15,23 @@ import {
     VisibleProps,
     ColProps,
 } from 'react-awesome-styled-grid';
+import { StandardBreakpoints } from '../Adaptor/Adaptor.component';
+import { RootTheme } from '../../theme';
+
+const rem = (val: number | undefined): number => (val && typeof val === "number") ? Math.floor(val / 16) : 0;
+
+const GridTheme = {
+    ...RootTheme,
+    awesomegrid: {
+        breakpoints: {
+            xs: 1,
+            sm: rem(StandardBreakpoints.sm.min),
+            md: rem(StandardBreakpoints.md.min),
+            lg: rem(StandardBreakpoints.lg.min),
+            xl: rem(StandardBreakpoints.xl.min),
+        },
+    },
+};
 
 export enum responsiveValues {
     xs = 'xs',
@@ -39,9 +57,13 @@ export const Col = ({
     debug,
     noGutter,
     ...props
-}: ColProps) => (
-    <ACol className={classnames('anchor-col', className)} {...props} />
-);
+}: ColProps) => {
+    return (
+        <ThemeProvider theme={GridTheme}>
+            <ACol className={classnames('anchor-col', className)} {...props} />
+        </ThemeProvider>
+    );
+};
 
 export const Visible = ({
     className,
@@ -53,7 +75,9 @@ export const Visible = ({
     debug,
     ...props
 }: VisibleProps) => (
-    <AVisible className={classnames('anchor-visible', className)} {...props} />
+    <ThemeProvider theme={GridTheme}>
+        <AVisible className={classnames('anchor-visible', className)} {...props} />
+    </ThemeProvider>
 );
 
 export const Row = ({ className, ...props }: any) => (
