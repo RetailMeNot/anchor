@@ -133,3 +133,17 @@ declare module '@xstyled/system' {
     export const margin: StyleFn;
     export const padding: StyleFn;
 }
+
+declare module 'react-awesome-styled-grid' {
+    interface ConfigKeys {
+        breakpoints: object;
+        columns: object;
+        container: object;
+        gutterWidth: object;
+        media: object;
+        mediaQuery: string;
+        paddingWidth: object;
+    }
+
+    export function config(props: object): ConfigKeys;
+}

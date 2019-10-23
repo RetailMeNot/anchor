@@ -6,32 +6,20 @@
     like Tooltip and DropDown.
 */
 
-// REACT
-import * as React from 'react';
 // VENDOR
+import * as React from 'react';
 import styled from '@xstyled/styled-components';
+import { config } from 'react-awesome-styled-grid';
 // ANCHOR & COMPONENTS
-import { ScreenClass, Tooltip } from '@retailmenot/anchor';
-import {
-    breakpoints,
-    BreakpointsType,
-    COMPONENT_MIN_WIDTH,
-    TEXT_ALIGNMENT,
-    responsiveCSS,
-} from '../Utils';
+import { Tooltip } from '@retailmenot/anchor';
+import { breakpoints, COMPONENT_MIN_WIDTH, TEXT_ALIGNMENT } from '../Utils';
 
-interface StyledPositionGrid {
-    breakpoint?: BreakpointsType;
-}
-
-const StyledPositionGrid = styled('div')<StyledPositionGrid>`
+const StyledPositionGrid = styled('div')`
     text-align: center;
     padding: 1rem 0;
-    ${({ breakpoint }) => responsiveCSS(breakpoint, [
-        breakpoints.xs,
-        breakpoints.sm,
-    ])`
-        overflow-x: scroll;
+    overflow-x: scroll;
+    ${props => config(props).media[breakpoints.md]`
+        overflow-x: initial;
     `}
 `;
 
@@ -89,77 +77,73 @@ const EasyTooltip = ({
 );
 
 export const PositionGrid = () => (
-    <ScreenClass
-        render={(breakpoint: BreakpointsType) => (
-            <StyledPositionGrid breakpoint={breakpoint}>
-                <StyledTable>
-                    <tbody>
-                        <tr>
-                            <Td />
-                            <td>
-                                <EasyTooltip>topStart</EasyTooltip>
-                            </td>
-                            <td>
-                                <EasyTooltip>top</EasyTooltip>
-                            </td>
-                            <td>
-                                <EasyTooltip>topEnd</EasyTooltip>
-                            </td>
-                            <Td align="right" />
-                        </tr>
+    <StyledPositionGrid>
+        <StyledTable>
+            <tbody>
+                <tr>
+                    <Td />
+                    <td>
+                        <EasyTooltip>topStart</EasyTooltip>
+                    </td>
+                    <td>
+                        <EasyTooltip>top</EasyTooltip>
+                    </td>
+                    <td>
+                        <EasyTooltip>topEnd</EasyTooltip>
+                    </td>
+                    <Td align="right" />
+                </tr>
 
-                        <tr>
-                            <Td>
-                                <EasyTooltip vertical>leftStart</EasyTooltip>
-                            </Td>
-                            <Td shaded />
-                            <Td shaded />
-                            <Td shaded />
-                            <Td align="right">
-                                <EasyTooltip vertical>rightStart</EasyTooltip>
-                            </Td>
-                        </tr>
+                <tr>
+                    <Td>
+                        <EasyTooltip vertical>leftStart</EasyTooltip>
+                    </Td>
+                    <Td shaded />
+                    <Td shaded />
+                    <Td shaded />
+                    <Td align="right">
+                        <EasyTooltip vertical>rightStart</EasyTooltip>
+                    </Td>
+                </tr>
 
-                        <tr>
-                            <Td>
-                                <EasyTooltip vertical>left</EasyTooltip>
-                            </Td>
-                            <Td shaded />
-                            <Td shaded />
-                            <Td shaded />
-                            <Td align="right">
-                                <EasyTooltip vertical>right</EasyTooltip>
-                            </Td>
-                        </tr>
+                <tr>
+                    <Td>
+                        <EasyTooltip vertical>left</EasyTooltip>
+                    </Td>
+                    <Td shaded />
+                    <Td shaded />
+                    <Td shaded />
+                    <Td align="right">
+                        <EasyTooltip vertical>right</EasyTooltip>
+                    </Td>
+                </tr>
 
-                        <tr>
-                            <Td>
-                                <EasyTooltip vertical>leftEnd</EasyTooltip>
-                            </Td>
-                            <Td shaded />
-                            <Td shaded />
-                            <Td shaded />
-                            <Td align="right">
-                                <EasyTooltip vertical>rightEnd</EasyTooltip>
-                            </Td>
-                        </tr>
+                <tr>
+                    <Td>
+                        <EasyTooltip vertical>leftEnd</EasyTooltip>
+                    </Td>
+                    <Td shaded />
+                    <Td shaded />
+                    <Td shaded />
+                    <Td align="right">
+                        <EasyTooltip vertical>rightEnd</EasyTooltip>
+                    </Td>
+                </tr>
 
-                        <tr>
-                            <Td />
-                            <td>
-                                <EasyTooltip>bottomStart</EasyTooltip>
-                            </td>
-                            <td>
-                                <EasyTooltip>bottom</EasyTooltip>
-                            </td>
-                            <td>
-                                <EasyTooltip>bottomEnd</EasyTooltip>
-                            </td>
-                            <Td align="right" />
-                        </tr>
-                    </tbody>
-                </StyledTable>
-            </StyledPositionGrid>
-        )}
-    />
+                <tr>
+                    <Td />
+                    <td>
+                        <EasyTooltip>bottomStart</EasyTooltip>
+                    </td>
+                    <td>
+                        <EasyTooltip>bottom</EasyTooltip>
+                    </td>
+                    <td>
+                        <EasyTooltip>bottomEnd</EasyTooltip>
+                    </td>
+                    <Td align="right" />
+                </tr>
+            </tbody>
+        </StyledTable>
+    </StyledPositionGrid>
 );
