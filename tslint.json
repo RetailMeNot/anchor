@@ -2,7 +2,7 @@
     "extends": [
         "tslint:recommended",
         "tslint-react",
-        "eslint-plugin-react-hooks"
+        "tslint-react-hooks"
     ],
     "rules": {
         "arrow-parens": false,
@@ -60,8 +60,6 @@
         ],
         "jsx-no-lambda": false,
         "jsx-no-multiline-js": false,
-        "jsx-boolean-value": false,
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "jsx-boolean-value": false
     }
 }
