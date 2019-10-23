@@ -11,6 +11,9 @@ import {
     DEFAULT_OPENED_TEXT,
     DEFAULT_CLOSED_TEXT,
 } from './Collapse.component';
+import {
+    Collapse2
+} from './Collapse2.component';
 import { CollapseGroup } from './CollapseGroup/CollapseGroup.component';
 import * as Icon from '../Icon';
 import { RootTheme } from '../theme';
@@ -143,6 +146,15 @@ storiesOf('Components/Collapse', module)
                         </Collapse>
                     </CollapseGroup>
                 </section>
+            </ThemeProvider>
+        );
+    })
+    .add('Collapse2', () => {
+        return(
+            <ThemeProvider theme={RootTheme}>
+                <Collapse2>
+                    Hello.
+                </Collapse2>
             </ThemeProvider>
         );
     });
