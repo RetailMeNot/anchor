@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.js",
@@ -136,7 +136,7 @@
     "classnames": "^2.2.6",
     "core-js": "^3.0.0",
     "polished": "^3.2.0",
-    "react-awesome-styled-grid": "^2.2.7",
+    "react-awesome-styled-grid": "^2.3.2",
     "react-responsive": "^6.1.1",
     "rxjs": "^6.5.2",
     "styled-react-modal": "^1.2.1"
