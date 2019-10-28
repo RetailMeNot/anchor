@@ -1,10 +1,12 @@
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { margin as marginStyles } from '@xstyled/system';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
-export interface IconSVGProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface IconSVGProps
+    extends React.HTMLAttributes<HTMLSpanElement>,
+        SpaceProps {
     scale?: ScaleFactors;
     color?: string;
     className?: string;
@@ -28,7 +30,7 @@ export const DefaultColor = 'currentColor';
 export const DefaultScale = 'md';
 
 export const StyledIcon = styled('span')<StyledIconSVGProps>`
-    ${marginStyles};
+    ${spaceStyles};
     display: inline-block;
     height: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
     width: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
