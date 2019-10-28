@@ -191,15 +191,16 @@ const eventTypeResolver = (
     type: InputTypes
 ) => {
     const inputValue = get(event, 'target.value');
+
     switch (type) {
         case 'number':
-            handler(inputValue ? parseFloat(inputValue) : null, event);
+            handler(inputValue ? parseFloat(inputValue) : '', event);
             break;
         case 'text':
-            handler(inputValue, event);
+            handler(inputValue || '', event);
             break;
         default:
-            handler(inputValue, event);
+            handler(inputValue || '', event);
             break;
     }
 };

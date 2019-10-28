@@ -18,7 +18,10 @@ const StyledStory = styled('div')`
 
 const InputStories = () => {
     const { useState } = React;
-    const [someInputVal, setSomeInputVal] = useState<string>('');
+    const [textInputVal, setTextInputVal] = useState<string>('');
+    const [numberInputVal, setNumberInputVal] = useState<number | string>('');
+    const [phoneInputVal, setPhoneInputVal] = useState<number | string>('');
+
     return (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
@@ -28,13 +31,13 @@ const InputStories = () => {
                             placeholder="Enter text here"
                             label="Enter text here"
                             type="text"
-                            value={someInputVal}
-                            onChange={newVal => setSomeInputVal(newVal)}
+                            value={textInputVal}
+                            onChange={newVal => setTextInputVal(newVal)}
                         />
                         <Button
                             size="sm"
                             onClick={() => {
-                                setSomeInputVal('');
+                                setTextInputVal('');
                             }}
                         >
                             Clear text input
@@ -45,6 +48,8 @@ const InputStories = () => {
                             placeholder="Enter a number here"
                             type="number"
                             suffix={<Search color="text.placeholder" />}
+                            value={numberInputVal}
+                            onChange={newVal => setNumberInputVal(newVal)}
                         />
                     </div>
                     <div>
@@ -53,6 +58,8 @@ const InputStories = () => {
                             label="Enter a phone number here"
                             prefix={<Mobile color="text.placeholder" />}
                             type="tel"
+                            value={phoneInputVal}
+                            onChange={newVal => setPhoneInputVal(newVal)}
                         />
                     </div>
                     <div>
