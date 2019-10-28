@@ -40,7 +40,9 @@ const InputStories = () => {
                             label="Enter text here"
                             type="text"
                             value={inputValues.text}
-                            onChange={newVal => setInputValues({ ...inputValues, text: newVal })}
+                            onChange={newVal =>
+                                setInputValues({ ...inputValues, text: newVal })
+                            }
                         />
                         <Button
                             size="sm"
@@ -57,7 +59,12 @@ const InputStories = () => {
                             type="number"
                             suffix={<Search color="text.placeholder" />}
                             value={inputValues.number}
-                            onChange={newVal => setInputValues({ ...inputValues, number: newVal })}
+                            onChange={newVal =>
+                                setInputValues({
+                                    ...inputValues,
+                                    number: newVal,
+                                })
+                            }
                         />
                     </div>
                     <div>
@@ -67,7 +74,9 @@ const InputStories = () => {
                             prefix={<Mobile color="text.placeholder" />}
                             type="tel"
                             value={inputValues.tel}
-                            onChange={newVal => setInputValues({ ...inputValues, tel: newVal })}
+                            onChange={newVal =>
+                                setInputValues({ ...inputValues, tel: newVal })
+                            }
                         />
                     </div>
                     <div>
