@@ -16,11 +16,19 @@ const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
+type InputState = {
+    text?: string;
+    number?: string | number;
+    tel?: string | number;
+};
+
 const InputStories = () => {
     const { useState } = React;
-    const [textInputVal, setTextInputVal] = useState<string>('');
-    const [numberInputVal, setNumberInputVal] = useState<number | string>('');
-    const [phoneInputVal, setPhoneInputVal] = useState<number | string>('');
+    const [inputValues, setInputValues] = useState<InputState>({
+        text: '',
+        number: '',
+        tel: '',
+    });
 
     return (
         <ThemeProvider theme={RootTheme}>
@@ -31,13 +39,13 @@ const InputStories = () => {
                             placeholder="Enter text here"
                             label="Enter text here"
                             type="text"
-                            value={textInputVal}
-                            onChange={newVal => setTextInputVal(newVal)}
+                            value={inputValues.text}
+                            onChange={newVal => setInputValues({ ...inputValues, text: newVal })}
                         />
                         <Button
                             size="sm"
                             onClick={() => {
-                                setTextInputVal('');
+                                setInputValues({ ...inputValues, text: '' });
                             }}
                         >
                             Clear text input
@@ -48,8 +56,8 @@ const InputStories = () => {
                             placeholder="Enter a number here"
                             type="number"
                             suffix={<Search color="text.placeholder" />}
-                            value={numberInputVal}
-                            onChange={newVal => setNumberInputVal(newVal)}
+                            value={inputValues.number}
+                            onChange={newVal => setInputValues({ ...inputValues, number: newVal })}
                         />
                     </div>
                     <div>
@@ -58,8 +66,8 @@ const InputStories = () => {
                             label="Enter a phone number here"
                             prefix={<Mobile color="text.placeholder" />}
                             type="tel"
-                            value={phoneInputVal}
-                            onChange={newVal => setPhoneInputVal(newVal)}
+                            value={inputValues.tel}
+                            onChange={newVal => setInputValues({ ...inputValues, tel: newVal })}
                         />
                     </div>
                     <div>
