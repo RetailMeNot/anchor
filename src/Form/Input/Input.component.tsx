@@ -194,9 +194,12 @@ const eventTypeResolver = (
 
     switch (type) {
         case 'number':
+            // Although counter-intuitive, to properly clear an input field with type number it must
+            // be fed an empty string.
             handler(inputValue ? parseFloat(inputValue) : '', event);
             break;
         case 'text':
+            // An empty inputValue would be null which React doesn't handle well.
             handler(inputValue || '', event);
             break;
         default:
