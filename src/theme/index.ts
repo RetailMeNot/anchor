@@ -18,7 +18,11 @@ export const RootTheme = {
         mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
     breakpoints: {
-        xs: 0,
+        xs: 575,
+        sm: 767,
+        md: 991,
+        lg: 1199,
+        xl: 1599,
     },
     // todo: we should likely remove the color.borders colors and just use this
     // or find a way to reference the colors.border colors here
