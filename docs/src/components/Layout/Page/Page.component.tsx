@@ -26,6 +26,7 @@ import {
     EnhancedNextPrevious,
 } from '../../Navigation';
 import { MDXComponents } from './MDXComponents';
+import { SearchInput } from '../../SearchInput';
 import { breakpoints, rem } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
@@ -171,6 +172,20 @@ const HamburgerCol = styled(CenteredCol)`
     `}
 `;
 
+const LogoCol = styled(CenteredCol)`
+    padding-right: 0;
+`;
+
+// TODO: This is a stopgap measure to get search out. The current mobile layout, plus the way
+// DocSearch initializes, makes both the UX and UI for mobile search tricky. Hiding it for mobile
+// for now
+const SearchCol = styled(CenteredCol)`
+    display: none;
+    ${props => config(props).media[breakpoints.md]`
+        display: flex;
+    `}
+`;
+
 const AnchorDocsTheme = merge({}, RootTheme, {
     colors: {
         primary: {
@@ -182,6 +197,11 @@ const AnchorDocsTheme = merge({}, RootTheme, {
             base: '#EB663D',
             light: '#FA9F5A',
             dark: '#C74E30',
+        },
+        accent: {
+            base: '#E3EEF6',
+            light: '#0998D6',
+            dark: '#0074A6',
         },
         borders: {
             light: '#F1F1F1',
@@ -255,20 +275,20 @@ export const Page = ({
                                 />
                             </HamburgerCol>
 
-                            <CenteredCol md={2} xs={2} sm={4}>
+                            <LogoCol md={2} lg={3} xl={2}>
                                 <StyledLogoContainer to="/">
                                     <img
                                         alt="Anchor Logo Horizontal"
                                         src={logo}
                                     />
                                 </StyledLogoContainer>
-                            </CenteredCol>
+                            </LogoCol>
 
-                            <CenteredCol md={2} xs={1} sm={1}>
-                                {/* TODO: Search will go here */}
-                            </CenteredCol>
+                            <SearchCol>
+                                <SearchInput />
+                            </SearchCol>
 
-                            <CenteredCol md={4} xs={1} sm={3}>
+                            <CenteredCol>
                                 <StyledPrimaryNav>
                                     <Typography
                                         tag="a"
@@ -285,7 +305,7 @@ export const Page = ({
                 </StyledHeader>
 
                 <Row>
-                    <SectionNavCol md={2} lg={2}>
+                    <SectionNavCol md={2} lg={3} xl={2}>
                         <FixedBody sectionNavOpen={sectionNavOpen} />
 
                         <StyledSectionNav sectionNavOpen={sectionNavOpen}>
@@ -293,7 +313,7 @@ export const Page = ({
                         </StyledSectionNav>
                     </SectionNavCol>
 
-                    <Col md={6} lg={10}>
+                    <Col md={6} lg={9} xl={10}>
                         <StyledContentMain>
                             <br />
                             <MDXProvider components={MDXComponents}>
