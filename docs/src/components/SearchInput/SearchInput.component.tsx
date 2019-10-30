@@ -156,7 +156,7 @@ export class SearchInput extends React.PureComponent<InitialState> {
                 onFilter={searchIndex}
                 onSelect={goTo}
                 placeholder="Search"
-                prefix={<SearchIcon />}
+                prefix={<SearchIcon pl="2" />}
                 size="sm"
             />
         );
