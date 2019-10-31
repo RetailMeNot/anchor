@@ -2,10 +2,9 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { ThemeProvider } from '@xstyled/styled-components';
-// tslint:disable-next-line: no-submodule-imports
-// import { Flex, Box } from 'reflexbox/styled-components';
 // COMPONENTS
-import { Cell, FLOW, Grid } from './index';
+import { Cell, Grid } from './index';
+import { FLOW } from './utils';
 import { RootTheme } from '../theme';
 
 storiesOf('Components/GridRefactor', module)
@@ -13,17 +12,21 @@ storiesOf('Components/GridRefactor', module)
         return(
             <ThemeProvider theme={RootTheme}>
                 <Grid debug flow={FLOW.column}>
+                    <Cell width={2}>Cell 1</Cell>
+
                     <Cell
                         debug
-                        left={2}
+                        left={3}
                         width={{
-                            xs: 10,
+                            xs: 9,
                             md: 6,
                             lg: 3,
                         }}
                         height={3}
+                        center
+                        middle
                     >
-                        Cell 1
+                        Cell
                     </Cell>
                 </Grid>
             </ThemeProvider>

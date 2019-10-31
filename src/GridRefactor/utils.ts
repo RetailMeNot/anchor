@@ -1,3 +1,4 @@
+import { createContext } from 'react';
 import { RootTheme } from '../theme';
 
 const { breakpoints } = RootTheme;
@@ -28,4 +29,11 @@ export function getColumnValue(columns: object | number, innerWidth: number) {
     }, 'xl');
 
     return columns[test];
+}
+
+export const WidthContext = createContext(0);
+
+export enum FLOW {
+    column = 'column',
+    row = 'row',
 }
