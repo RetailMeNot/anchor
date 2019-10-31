@@ -1,6 +1,6 @@
 // VENDOR
 import * as React from 'react';
-import { Grid as AGrid } from "styled-css-grid";
+import { Grid as AGrid } from 'styled-css-grid';
 import styled, { css } from '@xstyled/styled-components';
 import { debounce } from 'ts-debounce';
 // COMPONENTS & UTILS
@@ -19,9 +19,12 @@ interface GridProps {
 }
 
 const StyledGrid = styled(AGrid)<GridProps>`
-    ${({debug}) => debug ? css`
-        background-color: rgba(255,0,0,0.4);
-    ` : null}
+    ${({ debug }) =>
+        debug
+            ? css`
+                  background-color: rgba(255, 0, 0, 0.4);
+              `
+            : null}
 `;
 
 export const Grid = ({
@@ -29,11 +32,13 @@ export const Grid = ({
     columns = 12,
     debug = false,
     flow = FLOW.row,
-    gap = "0.5rem",
+    gap = '0.5rem',
     ...props
 }: GridProps) => {
-    const [innerWidth, setInnerWidth] = React.useState<number>(window ? window.innerWidth : 0);
-    const hasWindow = (window && window.innerWidth);
+    const [innerWidth, setInnerWidth] = React.useState<number>(
+        window ? window.innerWidth : 0
+    );
+    const hasWindow = window && window.innerWidth;
 
     React.useEffect(() => {
         const handleResize = debounce(() => {
@@ -51,12 +56,12 @@ export const Grid = ({
 
     return (
         <StyledGrid
-            columns={columns}
-            {...props}
             className="anchor-grid"
+            columns={columns}
             debug={debug}
             flow={flow}
             gap={gap}
+            {...props}
         >
             <WidthContext.Provider value={innerWidth}>
                 {children}

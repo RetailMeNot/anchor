@@ -27,11 +27,11 @@ export function createResponsiveObject(obj: object) {
     // the passed object. If so, it adds it to a return object. If not, it tries to use the value
     // from the previous key. If THAT fails, it defaults to 1.
     return breakpointKeys.reduce((acc, next) => {
-        if (obj[next]) {
+        if (typeof obj[next] === 'number') {
             acc[next] = obj[next];
             lastValid = next;
         } else {
-            acc[next] = obj[lastValid] || 1;
+            acc[next] = typeof obj[lastValid] === 'number' ? obj[lastValid] : 1;
         }
         return acc;
     }, {});
@@ -43,9 +43,11 @@ export function createResponsiveObject(obj: object) {
 */
 export function getResponsiveValue(obj: object | number, innerWidth: number) {
     // Using the breakpointKeys variable above causes a noticable re-render flicker
-    const breakpoint = Object.keys(breakpoints).reverse().reduce((acc, next) => {
-        return innerWidth <= breakpoints[acc] ? next : acc;
-    }, lastBreakpoint);
+    const breakpoint = Object.keys(breakpoints)
+        .reverse()
+        .reduce((acc, next) => {
+            return innerWidth <= breakpoints[acc] ? next : acc;
+        }, lastBreakpoint);
 
     return obj[breakpoint];
 }

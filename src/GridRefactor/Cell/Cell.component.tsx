@@ -1,11 +1,15 @@
 // VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
-import { Cell as ACell } from "styled-css-grid";
+import { Cell as ACell } from 'styled-css-grid';
 // COMPONENTS & UTILS
-import { createResponsiveObject, getResponsiveValue, WidthContext } from '../utils';
+import {
+    createResponsiveObject,
+    getResponsiveValue,
+    WidthContext,
+} from '../utils';
 
-type Breakpoints  = {
+type Breakpoints = {
     [key: string]: number;
 };
 
@@ -21,9 +25,12 @@ interface CellProps {
 }
 
 const StyledCell = styled(ACell)<CellProps>`
-    ${({debug}) => debug ? css`
-        background-color: rgba(255,0,0,0.4);
-    ` : null}
+    ${({ debug }) =>
+        debug
+            ? css`
+                  background-color: rgba(255, 0, 0, 0.4);
+              `
+            : null}
 `;
 
 export const Cell = ({
@@ -41,12 +48,17 @@ export const Cell = ({
     const [columns, setColumns] = React.useState<number | object>(width);
 
     React.useEffect(() => {
-        setColumns(typeof width === 'number' ? width : createResponsiveObject(width));
+        setColumns(
+            typeof width === 'number' ? width : createResponsiveObject(width)
+        );
     }, []);
 
-    const responsiveWidth = typeof width === 'number' ? width : getResponsiveValue(columns, innerWidth);
+    const responsiveWidth =
+        typeof width === 'number'
+            ? width
+            : getResponsiveValue(columns, innerWidth);
 
-    return (
+    return responsiveWidth > 0 ? (
         <StyledCell
             {...props}
             className="anchor-cell"
@@ -60,5 +72,5 @@ export const Cell = ({
         >
             {children}
         </StyledCell>
-    );
+    ) : null;
 };
