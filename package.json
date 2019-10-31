@@ -142,7 +142,8 @@
     "reflexbox": "^4.0.6",
     "rxjs": "^6.5.2",
     "styled-css-grid": "^1.2.1",
-    "styled-react-modal": "^1.2.1"
+    "styled-react-modal": "^1.2.1",
+    "ts-debounce": "^1.0.0"
   },
   "engines": {
     "node": ">=8"

@@ -2,8 +2,11 @@
 import * as React from 'react';
 import { Grid as AGrid } from "styled-css-grid";
 import styled, { css } from '@xstyled/styled-components';
+import { debounce } from 'ts-debounce';
 // COMPONENTS & UTILS
 import { FLOW, WidthContext } from '../utils';
+
+const DEBOUNCE_DELAY = 100;
 
 type Flow = keyof typeof FLOW;
 
@@ -33,9 +36,9 @@ export const Grid = ({
     const hasWindow = (window && window.innerWidth);
 
     React.useEffect(() => {
-        const handleResize = () => {
+        const handleResize = debounce(() => {
             setInnerWidth(hasWindow ? window.innerWidth : 0);
-        };
+        }, DEBOUNCE_DELAY);
 
         if (hasWindow) {
             window.addEventListener('resize', handleResize);

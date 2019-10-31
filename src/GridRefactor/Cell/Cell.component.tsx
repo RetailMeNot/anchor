@@ -3,7 +3,7 @@ import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { Cell as ACell } from "styled-css-grid";
 // COMPONENTS & UTILS
-import { columnsToRender, getColumnValue, WidthContext } from '../utils';
+import { createResponsiveObject, getResponsiveValue, WidthContext } from '../utils';
 
 type Breakpoints  = {
     [key: string]: number;
@@ -41,10 +41,10 @@ export const Cell = ({
     const [columns, setColumns] = React.useState<number | object>(width);
 
     React.useEffect(() => {
-        setColumns(typeof width === 'number' ? width : columnsToRender(width));
+        setColumns(typeof width === 'number' ? width : createResponsiveObject(width));
     }, []);
 
-    const responsiveWidth = typeof width === 'number' ? width : getColumnValue(columns, innerWidth);
+    const responsiveWidth = typeof width === 'number' ? width : getResponsiveValue(columns, innerWidth);
 
     return (
         <StyledCell
