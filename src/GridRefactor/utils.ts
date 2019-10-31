@@ -2,17 +2,14 @@ import { createContext } from 'react';
 import { RootTheme } from '../theme';
 
 const { breakpoints } = RootTheme;
-
-const createBreakpointObject = () => Object.keys(breakpoints).reduce((prev, next) => {
-    prev[next] = 1;
-    return prev;
-}, {});
+const breakpointKeys = Object.keys(breakpoints);
+const firstBreakpoint = breakpointKeys[0];
+const lastBreakpoint = breakpointKeys[breakpointKeys.length - 1];
 
 export function columnsToRender(obj: object) {
-    const defaultObject = createBreakpointObject();
-    let lastValid = Object.keys(defaultObject)[0];
+    let lastValid = firstBreakpoint;
 
-    return Object.keys(defaultObject).reduce((acc, next) => {
+    return breakpointKeys.reduce((acc, next) => {
         if (obj[next]) {
             acc[next] = obj[next];
             lastValid = next;
@@ -24,11 +21,12 @@ export function columnsToRender(obj: object) {
 }
 
 export function getColumnValue(columns: object | number, innerWidth: number) {
-    const test = Object.keys(breakpoints).reverse().reduce((acc, next) => {
+    // Using the breakpointKeys variable above causes a noticable re-render flicker
+    const breakpoint = Object.keys(breakpoints).reverse().reduce((acc, next) => {
         return innerWidth <= breakpoints[acc] ? next : acc;
-    }, 'xl');
+    }, lastBreakpoint);
 
-    return columns[test];
+    return columns[breakpoint];
 }
 
 export const WidthContext = createContext(0);

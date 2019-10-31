@@ -7,7 +7,7 @@ import { columnsToRender, getColumnValue, WidthContext } from '../utils';
 
 type Breakpoints  = {
     [key: string]: number;
-}
+};
 
 interface CellProps {
     center?: boolean;
@@ -44,8 +44,8 @@ export const Cell = ({
         setColumns(typeof width === 'number' ? width : columnsToRender(width));
     }, []);
 
-    const adjustedWidth = typeof width === 'number' ? width : getColumnValue(columns, innerWidth);
-    console.log(adjustedWidth);
+    const responsiveWidth = typeof width === 'number' ? width : getColumnValue(columns, innerWidth);
+
     return (
         <StyledCell
             {...props}
@@ -56,7 +56,7 @@ export const Cell = ({
             left={left}
             middle={middle}
             top={top}
-            width={adjustedWidth}
+            width={responsiveWidth}
         >
             {children}
         </StyledCell>
