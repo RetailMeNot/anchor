@@ -18,7 +18,7 @@ interface CellProps {
     children?: any;
     debug?: boolean;
     height?: number;
-    left?: number;
+    left?: number | Breakpoints | undefined;
     middle?: boolean;
     top?: number;
     width?: number | Breakpoints;
@@ -45,11 +45,16 @@ export const Cell = ({
     ...props
 }: CellProps) => {
     const innerWidth = React.useContext(WidthContext);
-    const [columns, setColumns] = React.useState<number | object>(width);
+    const [columns, setColumns] = React.useState<number | Breakpoints>(width);
+    const [columnsLeft, setColumnsLeft] = React.useState<number | Breakpoints | undefined>(left);
 
     React.useEffect(() => {
         setColumns(
             typeof width === 'number' ? width : createResponsiveObject(width)
+        );
+
+        setColumnsLeft(
+            (typeof left === 'number' || left === undefined)  ? left : createResponsiveObject(left)
         );
     }, []);
 
@@ -58,6 +63,11 @@ export const Cell = ({
             ? width
             : getResponsiveValue(columns, innerWidth);
 
+    const responsiveLeft =
+        (typeof columnsLeft === 'number' || columnsLeft === undefined)
+            ? columnsLeft
+            : getResponsiveValue(columnsLeft, innerWidth);
+
     return responsiveWidth > 0 ? (
         <StyledCell
             {...props}
@@ -65,7 +75,7 @@ export const Cell = ({
             center={center}
             debug={debug}
             height={height}
-            left={left}
+            left={responsiveLeft}
             middle={middle}
             top={top}
             width={responsiveWidth}
