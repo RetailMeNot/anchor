@@ -4,11 +4,6 @@
 */
 
 import { createContext } from 'react';
-import { RootTheme } from '../theme';
-
-const { breakpoints } = RootTheme;
-const breakpointKeys = Object.keys(breakpoints);
-const lastBreakpoint = breakpointKeys[breakpointKeys.length - 1];
 
 export type BreakpointType = {
     [key: string]: number;
@@ -55,18 +50,20 @@ export function createResponsiveObject(responsiveSettings: object, sortedBreakpo
 }
 
 /*
-    Using the passed object, determines what responsive value should be returned based on the
-    window's innerWidth by using the values assigned to breakpoints.
+    Using the passed responsiveSettings, determines what responsive value should be returned for
+    the current breakpoint.
 */
-export function getResponsiveValue(obj: object | number, innerWidth: number) {
-    // Using the breakpointKeys variable above causes a noticable re-render flicker
-    const breakpoint = Object.keys(breakpoints)
-        .reverse()
-        .reduce((acc, next) => {
-            return innerWidth <= breakpoints[acc] ? next : acc;
-        }, lastBreakpoint);
+export function getResponsiveValue(responsiveSettings: object | number, innerWidth: number, sortedBreakpoints: BreakpointType[]) {
+    const breakpoint = sortedBreakpoints
+        .filter(bp => {
+            return Object.values(bp)[0] <= innerWidth;
+        })
+        .sort((a: BreakpointType, b: BreakpointType) => Object.values(b)[0] - Object.values(a)[0])
+        .shift();
 
-    return obj[breakpoint];
+    const breakpointKey = typeof breakpoint === 'object' ? Object.keys(breakpoint)[0] : '';
+
+    return responsiveSettings[breakpointKey];
 }
 
 interface GridContextProps {

@@ -63,22 +63,22 @@ export const Cell = ({
         setRowsHeight(
             (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height, breakpoints)
         );
-    }, [breakpoints]);
+    }, []);
 
     const responsiveWidth =
         typeof width === 'number'
             ? width
-            : getResponsiveValue(columns, innerWidth);
+            : getResponsiveValue(columns, innerWidth, breakpoints);
 
     const responsiveLeft =
         (typeof columnsLeft === 'number' || columnsLeft === undefined)
             ? columnsLeft
-            : getResponsiveValue(columnsLeft, innerWidth);
+            : getResponsiveValue(columnsLeft, innerWidth, breakpoints);
 
     const responsiveHeight =
         (typeof rowsHeight === 'number' || rowsHeight === undefined)
             ? rowsHeight
-            : getResponsiveValue(rowsHeight, innerWidth);
+            : getResponsiveValue(rowsHeight, innerWidth, breakpoints);
 
     return responsiveWidth > 0 ? (
         <StyledCell
