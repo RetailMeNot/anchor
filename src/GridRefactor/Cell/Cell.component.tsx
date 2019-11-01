@@ -18,7 +18,7 @@ interface CellProps {
     height?: number | BreakpointType | undefined;
     left?: number | BreakpointType | undefined;
     middle?: boolean;
-    top?: number;
+    top?: number | BreakpointType | undefined;
     width?: number | BreakpointType | undefined;
 }
 
@@ -46,9 +46,10 @@ export const Cell = ({
         GridContext
     );
     const [cellState, setCellState] =  React.useState<CellProps>({
-        width,
-        left,
         height,
+        left,
+        top,
+        width,
     });
 
     React.useEffect(() => {
@@ -78,6 +79,11 @@ export const Cell = ({
             ? cellState.height
             : getResponsiveValue(cellState.height, innerWidth, breakpoints);
 
+    const responsivetop =
+        typeof cellState.top === 'number' || cellState.top === undefined
+            ? cellState.top
+            : getResponsiveValue(cellState.top, innerWidth, breakpoints);
+
     return responsiveWidth > 0 ? (
         <StyledCell
             {...props}
@@ -87,7 +93,7 @@ export const Cell = ({
             height={responsiveHeight}
             left={responsiveLeft}
             middle={middle}
-            top={top}
+            top={responsivetop}
             width={responsiveWidth}
         >
             {children}
