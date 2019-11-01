@@ -75,6 +75,9 @@ export const Cell = ({
         setState(obj);
     }, []);
 
+    // I hate having these 4 blobs of code, but I haven't been able to find a better way to handle
+    // updating the responsive values quickly. Setting them via state always causes TS errors
+    // because there's a delay.
     const responsiveWidth =
         typeof state.width === 'number'  || state.width === undefined
             ? state.width
