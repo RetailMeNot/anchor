@@ -45,50 +45,38 @@ export const Cell = ({
     const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
         GridContext
     );
-    const [columns, setColumns] = React.useState<
-        number | BreakpointType | undefined
-    >(width);
-    const [columnsLeft, setColumnsLeft] = React.useState<
-        number | BreakpointType | undefined
-    >(left);
-    const [rowsHeight, setRowsHeight] = React.useState<
-        number | BreakpointType | undefined
-    >(height);
+    const [cellState, setCellState] =  React.useState<CellProps>({
+        width,
+        left,
+        height,
+    });
 
     React.useEffect(() => {
-        setColumns(
-            typeof width === 'number'  || width === undefined
-                ? width
-                : createResponsiveObject(width, breakpoints)
-        );
+        const obj = {};
 
-        setColumnsLeft(
-            typeof left === 'number' || left === undefined
-                ? left
-                : createResponsiveObject(left, breakpoints)
-        );
+        Object.keys(cellState).forEach(key => {
+            obj[key] =  typeof cellState[key] === 'number' || cellState[key] === undefined
+                ? cellState[key]
+                : createResponsiveObject(cellState[key], breakpoints);
+        });
 
-        setRowsHeight(
-            typeof height === 'number' || height === undefined
-                ? height
-                : createResponsiveObject(height, breakpoints)
-        );
+        setCellState(obj);
     }, []);
 
     const responsiveWidth =
-        typeof columns === 'number'  || columns === undefined
-            ? columns
-            : getResponsiveValue(columns, innerWidth, breakpoints);
+        typeof cellState.width === 'number'  || cellState.width === undefined
+            ? cellState.width
+            : getResponsiveValue(cellState.width, innerWidth, breakpoints);
 
     const responsiveLeft =
-        typeof columnsLeft === 'number' || columnsLeft === undefined
-            ? columnsLeft
-            : getResponsiveValue(columnsLeft, innerWidth, breakpoints);
+        typeof cellState.left === 'number' || cellState.left === undefined
+            ? cellState.left
+            : getResponsiveValue(cellState.left, innerWidth, breakpoints);
 
     const responsiveHeight =
-        typeof rowsHeight === 'number' || rowsHeight === undefined
-            ? rowsHeight
-            : getResponsiveValue(rowsHeight, innerWidth, breakpoints);
+        typeof cellState.height === 'number' || cellState.height === undefined
+            ? cellState.height
+            : getResponsiveValue(cellState.height, innerWidth, breakpoints);
 
     return responsiveWidth > 0 ? (
         <StyledCell
