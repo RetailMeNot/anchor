@@ -14,6 +14,7 @@ type Breakpoints = {
 };
 
 interface CellProps {
+    area?: string;
     center?: boolean;
     children?: any;
     debug?: boolean;

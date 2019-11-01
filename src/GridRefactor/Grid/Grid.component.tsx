@@ -10,12 +10,57 @@ const DEBOUNCE_DELAY = 100;
 
 type Flow = keyof typeof FLOW;
 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+type Justifycontent = |
+    'center'
+    | 'end'
+    | 'flex-end'
+    | 'flex-start'
+    | 'inherit'
+    | 'initial'
+    | 'left'
+    | 'normal'
+    | 'right'
+    | 'safe center'
+    | 'space-around'
+    | 'space-between'
+    | 'space-evenly'
+    | 'start'
+    | 'stretch'
+    | 'unsafe center'
+    | 'unset';
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+type AlignContent = |
+    'center'
+    | 'baseline'
+    | 'end'
+    | 'first baseline'
+    | 'flex-end'
+    | 'flex-start'
+    | 'inherit'
+    | 'initial'
+    | 'last baseline'
+    | 'normal'
+    | 'safe center'
+    | 'space-around'
+    | 'space-between'
+    | 'space-evenly'
+    | 'start'
+    | 'stretch'
+    | 'unsafe center'
+    | 'unset';
+
 interface GridProps {
+    alignContent?: AlignContent;
+    areas?: [string];
     children?: any;
-    columns?: number;
+    columns?: number | string;
     debug?: boolean;
     flow?: Flow;
     gap?: string;
+    justifyContent?: Justifycontent;
+    rows?: string;
 }
 
 const StyledGrid = styled(AGrid)<GridProps>`
@@ -28,11 +73,15 @@ const StyledGrid = styled(AGrid)<GridProps>`
 `;
 
 export const Grid = ({
+    alignContent,
+    areas,
     children,
     columns = 12,
     debug = false,
     flow = FLOW.row,
     gap = '0.5rem',
+    justifyContent,
+    rows,
     ...props
 }: GridProps) => {
     const [innerWidth, setInnerWidth] = React.useState<number>(
@@ -56,11 +105,14 @@ export const Grid = ({
 
     return (
         <StyledGrid
+            areas={areas}
             className="anchor-grid"
             columns={columns}
             debug={debug}
             flow={flow}
             gap={gap}
+            justifyContent={justifyContent}
+            rows={rows}
             {...props}
         >
             <WidthContext.Provider value={innerWidth}>
