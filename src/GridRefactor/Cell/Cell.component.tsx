@@ -6,7 +6,7 @@ import { Cell as ACell } from 'styled-css-grid';
 import {
     createResponsiveObject,
     getResponsiveValue,
-    WidthContext,
+    GridContext,
 } from '../utils';
 
 type Breakpoints = {
@@ -45,7 +45,7 @@ export const Cell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const innerWidth = React.useContext(WidthContext);
+    const { innerWidth, debug : contextDebug } = React.useContext(GridContext);
     const [columns, setColumns] = React.useState<number | Breakpoints>(width);
     const [columnsLeft, setColumnsLeft] = React.useState<number | Breakpoints | undefined>(left);
 
@@ -74,7 +74,7 @@ export const Cell = ({
             {...props}
             className="anchor-cell"
             center={center}
-            debug={debug}
+            debug={contextDebug || debug}
             height={height}
             left={responsiveLeft}
             middle={middle}

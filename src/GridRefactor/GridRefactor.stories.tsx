@@ -14,22 +14,22 @@ storiesOf('Components/GridRefactor', module)
             <ThemeProvider theme={RootTheme}>
                 <br />
                 <Grid debug flow={FLOW.row}>
-                    <Cell debug center width={{ xs: 0, md: 12}}>
+                    <Cell center width={{ xs: 0, md: 12}}>
                         <Typography tag="h1">
                             Grid Refactor
                         </Typography>
                     </Cell>
-                    <Cell debug width={{ xs: 12, md: 6}}>
+                    <Cell width={{ xs: 12, md: 6}}>
                         <Typography>
                             Cell 1
                         </Typography>
                     </Cell>
-                    <Cell debug width={{ xs: 12, md: 6}}>
+                    <Cell width={{ xs: 12, md: 6}}>
                         <Typography>
                             Cell 2
                         </Typography>
                     </Cell>
-                    <Cell debug width={{ xs: 12, md: 6}} left={{ xs: 1, md: 4 }}>
+                    <Cell width={{ xs: 12, md: 6}} left={{ xs: 1, md: 4 }}>
                         <Typography>
                             Cell 3
                         </Typography>

@@ -53,7 +53,10 @@ export function getResponsiveValue(obj: object | number, innerWidth: number) {
 }
 
 // Creates the context used by both Grid and Cell for tracking the window's inner width
-export const WidthContext = createContext(0);
+export const GridContext = createContext({
+    innerWidth: 0,
+    debug: false,
+});
 
 export enum FLOW {
     column = 'column',

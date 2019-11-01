@@ -4,7 +4,7 @@ import { Grid as AGrid } from 'styled-css-grid';
 import styled, { css } from '@xstyled/styled-components';
 import { debounce } from 'ts-debounce';
 // COMPONENTS & UTILS
-import { FLOW, WidthContext } from '../utils';
+import { FLOW, GridContext } from '../utils';
 
 const DEBOUNCE_DELAY = 100;
 
@@ -115,9 +115,9 @@ export const Grid = ({
             rows={rows}
             {...props}
         >
-            <WidthContext.Provider value={innerWidth}>
+            <GridContext.Provider value={{innerWidth, debug}}>
                 {children}
-            </WidthContext.Provider>
+            </GridContext.Provider>
         </StyledGrid>
     );
 };
