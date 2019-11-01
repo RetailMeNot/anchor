@@ -51,8 +51,6 @@ export const Cell = ({
     const [columnsLeft, setColumnsLeft] = React.useState<number | BreakpointType | undefined>(left);
     const [rowsHeight, setRowsHeight] = React.useState<number | BreakpointType | undefined>(height);
 
-    console.log('ignore me', breakpoints);
-
     React.useEffect(() => {
         setColumns(
             typeof width === 'number' ? width : createResponsiveObject(width, breakpoints)
@@ -65,7 +63,7 @@ export const Cell = ({
         setRowsHeight(
             (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height, breakpoints)
         );
-    }, []);
+    }, [breakpoints]);
 
     const responsiveWidth =
         typeof width === 'number'

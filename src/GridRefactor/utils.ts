@@ -8,7 +8,6 @@ import { RootTheme } from '../theme';
 
 const { breakpoints } = RootTheme;
 const breakpointKeys = Object.keys(breakpoints);
-const firstBreakpoint = breakpointKeys[0];
 const lastBreakpoint = breakpointKeys[breakpointKeys.length - 1];
 
 export type BreakpointType = {
@@ -31,27 +30,26 @@ export function sortBreakpoints(unsortedBreakpoints: object) {
 }
 
 /*
-    Using a passed object, creates a full object with all breakpoints getting a value. Ex:
+    Takes a passed responsiveSettings object and fills in the gaps based on the breakpoints passed
+    via sortedBreakpoints. This function is mobile first, so setting a smaller breakpoint's value
+    will use that same value for larger breakpoints.
 
     const obj = { xs: 1, md: 3, lg: 8 };
     createResponsiveObject(obj); // { xs: 1, sm: 1, md: 3, lg: 8, xl: 8}
-
-    This function is mobile first, so setting a smaller breakpoint's value will use that same value
-    for larger breakpoints.
 */
-export function createResponsiveObject(obj: object, sortedBreakpoints: BreakpointType[]) {
-    let lastValid = firstBreakpoint;
+export function createResponsiveObject(responsiveSettings: object, sortedBreakpoints: BreakpointType[]) {
+    let lastValid = Object.keys(sortedBreakpoints)[0];
 
-    // Walks through the keys in the breakpoints and sees if there is a corresponding key declared in
-    // the passed object. If so, it adds it to a return object. If not, it tries to use the value
-    // from the previous key. If THAT fails, it defaults to 1.
-    return breakpointKeys.reduce((acc, next) => {
-        if (typeof obj[next] === 'number') {
-            acc[next] = obj[next];
-            lastValid = next;
+    return sortedBreakpoints.reduce((acc: object, next: BreakpointType) => {
+        const key = Object.keys(next)[0];
+
+        if (typeof responsiveSettings[key] === 'number') {
+            acc[key] = responsiveSettings[key];
+            lastValid = key;
         } else {
-            acc[next] = typeof obj[lastValid] === 'number' ? obj[lastValid] : 1;
+            acc[key] = typeof responsiveSettings[lastValid] === 'number' ? responsiveSettings[lastValid] : 1;
         }
+
         return acc;
     }, {});
 }
