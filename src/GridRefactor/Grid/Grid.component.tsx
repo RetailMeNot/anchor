@@ -11,8 +11,8 @@ const DEBOUNCE_DELAY = 100;
 type Flow = keyof typeof FLOW;
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
-type Justifycontent = |
-    'center'
+type Justifycontent =
+    | 'center'
     | 'end'
     | 'flex-end'
     | 'flex-start'
@@ -31,8 +31,8 @@ type Justifycontent = |
     | 'unset';
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
-type AlignContent = |
-    'center'
+type AlignContent =
+    | 'center'
     | 'baseline'
     | 'end'
     | 'first baseline'
@@ -88,7 +88,7 @@ export const Grid = ({
         window ? window.innerWidth : 0
     );
     const hasWindow = window && window.innerWidth;
-    const { breakpoints : unsortedBreakpoints } = React.useContext(ThemeContext);
+    const { breakpoints: unsortedBreakpoints } = React.useContext(ThemeContext);
 
     React.useEffect(() => {
         const handleResize = debounce(() => {
@@ -116,7 +116,13 @@ export const Grid = ({
             rows={rows}
             {...props}
         >
-            <GridContext.Provider value={{innerWidth, debug, breakpoints: sortBreakpoints(unsortedBreakpoints)}}>
+            <GridContext.Provider
+                value={{
+                    innerWidth,
+                    debug,
+                    breakpoints: sortBreakpoints(unsortedBreakpoints),
+                }}
+            >
                 {children}
             </GridContext.Provider>
         </StyledGrid>

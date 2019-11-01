@@ -1,6 +1,6 @@
 /*
     All of the logic here does NOT assume that the breakpoints in the RootTheme are specifically set
-    as xs, sm, md, lg, xl. However it does assume that the order of the breakpoints is descending.
+    as xs, sm, md, lg, xl.
 */
 
 import { createContext } from 'react';
@@ -17,11 +17,14 @@ export type BreakpointType = {
 */
 export function sortBreakpoints(unsortedBreakpoints: object) {
     return Object.keys(unsortedBreakpoints)
-        .reduce<BreakpointType[]>( (acc: [BreakpointType], next: string) => {
-            acc.push({[next]: unsortedBreakpoints[next]});
+        .reduce<BreakpointType[]>((acc: [BreakpointType], next: string) => {
+            acc.push({ [next]: unsortedBreakpoints[next] });
             return acc;
         }, [])
-        .sort( (a: BreakpointType, b: BreakpointType) => Object.values(a)[0] - Object.values(b)[0]);
+        .sort(
+            (a: BreakpointType, b: BreakpointType) =>
+                Object.values(a)[0] - Object.values(b)[0]
+        );
 }
 
 /*
@@ -32,7 +35,10 @@ export function sortBreakpoints(unsortedBreakpoints: object) {
     const obj = { xs: 1, md: 3, lg: 8 };
     createResponsiveObject(obj); // { xs: 1, sm: 1, md: 3, lg: 8, xl: 8}
 */
-export function createResponsiveObject(responsiveSettings: object, sortedBreakpoints: BreakpointType[]) {
+export function createResponsiveObject(
+    responsiveSettings: object,
+    sortedBreakpoints: BreakpointType[]
+) {
     let lastValid = Object.keys(sortedBreakpoints)[0];
 
     return sortedBreakpoints.reduce((acc: object, next: BreakpointType) => {
@@ -42,7 +48,10 @@ export function createResponsiveObject(responsiveSettings: object, sortedBreakpo
             acc[key] = responsiveSettings[key];
             lastValid = key;
         } else {
-            acc[key] = typeof responsiveSettings[lastValid] === 'number' ? responsiveSettings[lastValid] : 1;
+            acc[key] =
+                typeof responsiveSettings[lastValid] === 'number'
+                    ? responsiveSettings[lastValid]
+                    : 1;
         }
 
         return acc;
@@ -53,15 +62,23 @@ export function createResponsiveObject(responsiveSettings: object, sortedBreakpo
     Using the passed responsiveSettings, determines what responsive value should be returned for
     the current breakpoint.
 */
-export function getResponsiveValue(responsiveSettings: object | number, innerWidth: number, sortedBreakpoints: BreakpointType[]) {
+export function getResponsiveValue(
+    responsiveSettings: object | number,
+    innerWidth: number,
+    sortedBreakpoints: BreakpointType[]
+) {
     const breakpoint = sortedBreakpoints
         .filter(bp => {
             return Object.values(bp)[0] <= innerWidth;
         })
-        .sort((a: BreakpointType, b: BreakpointType) => Object.values(b)[0] - Object.values(a)[0])
+        .sort(
+            (a: BreakpointType, b: BreakpointType) =>
+                Object.values(b)[0] - Object.values(a)[0]
+        )
         .shift();
 
-    const breakpointKey = typeof breakpoint === 'object' ? Object.keys(breakpoint)[0] : '';
+    const breakpointKey =
+        typeof breakpoint === 'object' ? Object.keys(breakpoint)[0] : '';
 
     return responsiveSettings[breakpointKey];
 }

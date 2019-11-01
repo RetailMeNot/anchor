@@ -19,7 +19,7 @@ interface CellProps {
     left?: number | BreakpointType | undefined;
     middle?: boolean;
     top?: number;
-    width?: number | BreakpointType;
+    width?: number | BreakpointType | undefined;
 }
 
 const StyledCell = styled(ACell)<CellProps>`
@@ -42,41 +42,51 @@ export const Cell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const {
-        breakpoints,
-        debug : contextDebug,
-        innerWidth,
-    } = React.useContext(GridContext);
-    const [columns, setColumns] = React.useState<number | BreakpointType>(width);
-    const [columnsLeft, setColumnsLeft] = React.useState<number | BreakpointType | undefined>(left);
-    const [rowsHeight, setRowsHeight] = React.useState<number | BreakpointType | undefined>(height);
+    const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
+        GridContext
+    );
+    const [columns, setColumns] = React.useState<
+        number | BreakpointType | undefined
+    >(width);
+    const [columnsLeft, setColumnsLeft] = React.useState<
+        number | BreakpointType | undefined
+    >(left);
+    const [rowsHeight, setRowsHeight] = React.useState<
+        number | BreakpointType | undefined
+    >(height);
 
     React.useEffect(() => {
         setColumns(
-            typeof width === 'number' ? width : createResponsiveObject(width, breakpoints)
+            typeof width === 'number'  || width === undefined
+                ? width
+                : createResponsiveObject(width, breakpoints)
         );
 
         setColumnsLeft(
-            (typeof left === 'number' || left === undefined)  ? left : createResponsiveObject(left, breakpoints)
+            typeof left === 'number' || left === undefined
+                ? left
+                : createResponsiveObject(left, breakpoints)
         );
 
         setRowsHeight(
-            (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height, breakpoints)
+            typeof height === 'number' || height === undefined
+                ? height
+                : createResponsiveObject(height, breakpoints)
         );
     }, []);
 
     const responsiveWidth =
-        typeof width === 'number'
-            ? width
+        typeof columns === 'number'  || columns === undefined
+            ? columns
             : getResponsiveValue(columns, innerWidth, breakpoints);
 
     const responsiveLeft =
-        (typeof columnsLeft === 'number' || columnsLeft === undefined)
+        typeof columnsLeft === 'number' || columnsLeft === undefined
             ? columnsLeft
             : getResponsiveValue(columnsLeft, innerWidth, breakpoints);
 
     const responsiveHeight =
-        (typeof rowsHeight === 'number' || rowsHeight === undefined)
+        typeof rowsHeight === 'number' || rowsHeight === undefined
             ? rowsHeight
             : getResponsiveValue(rowsHeight, innerWidth, breakpoints);
 
