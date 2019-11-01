@@ -2,6 +2,7 @@
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { Cell as ACell } from 'styled-css-grid';
+import classNames from 'classnames';
 // COMPONENTS & UTILS
 import {
     BreakpointType,
@@ -14,6 +15,7 @@ interface CellProps {
     area?: string;
     center?: boolean;
     children?: any;
+    className?: string;
     debug?: boolean;
     height?: number | BreakpointType | undefined;
     left?: number | BreakpointType | undefined;
@@ -23,6 +25,10 @@ interface CellProps {
 }
 
 const StyledCell = styled(ACell)<CellProps>`
+    &.hide {
+        display: none;
+    }
+
     ${({ debug }) =>
         debug
             ? css`
@@ -34,6 +40,7 @@ const StyledCell = styled(ACell)<CellProps>`
 export const Cell = ({
     center,
     children,
+    className,
     debug = false,
     height,
     left,
@@ -45,58 +52,62 @@ export const Cell = ({
     const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
         GridContext
     );
-    const [cellState, setCellState] =  React.useState<CellProps>({
+    const [state, setState] =  React.useState<CellProps>({
         height,
         left,
         top,
         width,
     });
 
+    /*
+        Iterates over the props in cellState and formats any responsive object. It does nothing to
+        a prop that is a number or undefined.
+    */
     React.useEffect(() => {
-        const obj = {};
+        const obj: CellProps = {};
 
-        Object.keys(cellState).forEach(key => {
-            obj[key] =  typeof cellState[key] === 'number' || cellState[key] === undefined
-                ? cellState[key]
-                : createResponsiveObject(cellState[key], breakpoints);
+        Object.keys(state).forEach(key => {
+            obj[key] =  typeof state[key] === 'number' || state[key] === undefined
+                ? state[key]
+                : createResponsiveObject(state[key], breakpoints);
         });
 
-        setCellState(obj);
+        setState(obj);
     }, []);
 
     const responsiveWidth =
-        typeof cellState.width === 'number'  || cellState.width === undefined
-            ? cellState.width
-            : getResponsiveValue(cellState.width, innerWidth, breakpoints);
+        typeof state.width === 'number'  || state.width === undefined
+            ? state.width
+            : getResponsiveValue(state.width, innerWidth, breakpoints);
 
     const responsiveLeft =
-        typeof cellState.left === 'number' || cellState.left === undefined
-            ? cellState.left
-            : getResponsiveValue(cellState.left, innerWidth, breakpoints);
+        typeof state.left === 'number' || state.left === undefined
+            ? state.left
+            : getResponsiveValue(state.left, innerWidth, breakpoints);
 
     const responsiveHeight =
-        typeof cellState.height === 'number' || cellState.height === undefined
-            ? cellState.height
-            : getResponsiveValue(cellState.height, innerWidth, breakpoints);
+        typeof state.height === 'number' || state.height === undefined
+            ? state.height
+            : getResponsiveValue(state.height, innerWidth, breakpoints);
 
-    const responsivetop =
-        typeof cellState.top === 'number' || cellState.top === undefined
-            ? cellState.top
-            : getResponsiveValue(cellState.top, innerWidth, breakpoints);
+    const responsiveTop =
+        typeof state.top === 'number' || state.top === undefined
+            ? state.top
+            : getResponsiveValue(state.top, innerWidth, breakpoints);
 
-    return responsiveWidth > 0 ? (
+    return (
         <StyledCell
             {...props}
-            className="anchor-cell"
+            className={classNames("anchor-cell", className, responsiveWidth === 0 && 'hide')}
             center={center}
             debug={contextDebug || debug}
             height={responsiveHeight}
             left={responsiveLeft}
             middle={middle}
-            top={responsivetop}
+            top={responsiveTop}
             width={responsiveWidth}
         >
             {children}
         </StyledCell>
-    ) : null;
+    );
 };

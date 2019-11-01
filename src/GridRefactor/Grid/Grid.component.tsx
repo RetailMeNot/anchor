@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Grid as AGrid } from 'styled-css-grid';
 import styled, { css, ThemeContext } from '@xstyled/styled-components';
 import { debounce } from 'ts-debounce';
+import classNames from 'classnames';
 // COMPONENTS & UTILS
 import { FLOW, GridContext, sortBreakpoints } from '../utils';
 
@@ -55,6 +56,7 @@ interface GridProps {
     alignContent?: AlignContent;
     areas?: [string];
     children?: any;
+    className?: string;
     columns?: number | string;
     debug?: boolean;
     flow?: Flow;
@@ -76,6 +78,7 @@ export const Grid = ({
     alignContent,
     areas,
     children,
+    className,
     columns = 12,
     debug = false,
     flow = FLOW.row,
@@ -107,7 +110,7 @@ export const Grid = ({
     return (
         <StyledGrid
             areas={areas}
-            className="anchor-grid"
+            className={classNames("anchor-grid", className)}
             columns={columns}
             debug={debug}
             flow={flow}

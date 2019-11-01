@@ -69,11 +69,11 @@ export function getResponsiveValue(
 ) {
     const breakpoint = sortedBreakpoints
         .filter(bp => {
-            return Object.values(bp)[0] <= innerWidth;
+            return Object.values(bp)[0] >= innerWidth;
         })
         .sort(
             (a: BreakpointType, b: BreakpointType) =>
-                Object.values(b)[0] - Object.values(a)[0]
+                Object.values(a)[0] - Object.values(b)[0]
         )
         .shift();
 
