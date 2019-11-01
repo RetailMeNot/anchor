@@ -18,7 +18,7 @@ interface CellProps {
     center?: boolean;
     children?: any;
     debug?: boolean;
-    height?: number;
+    height?: number | Breakpoints | undefined;
     left?: number | Breakpoints | undefined;
     middle?: boolean;
     top?: number;
@@ -48,6 +48,7 @@ export const Cell = ({
     const { innerWidth, debug : contextDebug } = React.useContext(GridContext);
     const [columns, setColumns] = React.useState<number | Breakpoints>(width);
     const [columnsLeft, setColumnsLeft] = React.useState<number | Breakpoints | undefined>(left);
+    const [rowsHeight, setRowsHeight] = React.useState<number | Breakpoints | undefined>(height);
 
     React.useEffect(() => {
         setColumns(
@@ -56,6 +57,10 @@ export const Cell = ({
 
         setColumnsLeft(
             (typeof left === 'number' || left === undefined)  ? left : createResponsiveObject(left)
+        );
+
+        setRowsHeight(
+            (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height)
         );
     }, []);
 
@@ -69,13 +74,18 @@ export const Cell = ({
             ? columnsLeft
             : getResponsiveValue(columnsLeft, innerWidth);
 
+    const responsiveHeight =
+        (typeof rowsHeight === 'number' || rowsHeight === undefined)
+            ? rowsHeight
+            : getResponsiveValue(rowsHeight, innerWidth);
+
     return responsiveWidth > 0 ? (
         <StyledCell
             {...props}
             className="anchor-cell"
             center={center}
             debug={contextDebug || debug}
-            height={height}
+            height={responsiveHeight}
             left={responsiveLeft}
             middle={middle}
             top={top}

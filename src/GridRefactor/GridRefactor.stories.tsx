@@ -1,5 +1,6 @@
 // VENDOR
 import * as React from 'react';
+import styled from '@xstyled/styled-components';
 import { storiesOf } from '@storybook/react';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
@@ -8,13 +9,17 @@ import { Cell, Grid } from './index';
 import { FLOW } from './utils';
 import { RootTheme } from '../theme';
 
+const StoryGrid = styled(Grid)`
+    height: 100vh;
+`;
+
 storiesOf('Components/GridRefactor', module)
     .add('Default', () => {
         return (
             <ThemeProvider theme={RootTheme}>
                 <br />
                 <Grid debug flow={FLOW.row}>
-                    <Cell center width={{ xs: 0, md: 12}}>
+                    <Cell center middle height={{ sm: 1, md: 2, lg: 3}} width={{ xs: 0, md: 12}}>
                         <Typography tag="h1">
                             Grid Refactor
                         </Typography>
@@ -41,11 +46,12 @@ storiesOf('Components/GridRefactor', module)
     .add('Custom Columns/Rows', () => {
         return(
             <ThemeProvider theme={RootTheme}>
-                <Grid
-                    columns={"100px 1fr 100px"}
-                    rows={"minmax(45px,auto) 1fr minmax(45px,auto)"}
+                <StoryGrid
+                    columns={"20% 1fr 20%"}
+                    debug
+                    rows={"minmax(3rem,auto) 1fr minmax(3rem,auto)"}
                 >
-                    <Cell width={3} center>
+                    <Cell center middle width={3}>
                         <Typography tag="h1">
                             Header
                         </Typography>
@@ -67,12 +73,12 @@ storiesOf('Components/GridRefactor', module)
                         </Typography>
                     </Cell>
 
-                    <Cell width={3}>
-                        <Typography>
+                    <Cell center middle width={3}>
+                        <Typography tag="h2">
                             Footer
                         </Typography>
                     </Cell>
-                </Grid>
+                </StoryGrid>
             </ThemeProvider>
         );
     });
