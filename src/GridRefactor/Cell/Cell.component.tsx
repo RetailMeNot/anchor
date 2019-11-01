@@ -4,25 +4,22 @@ import styled, { css } from '@xstyled/styled-components';
 import { Cell as ACell } from 'styled-css-grid';
 // COMPONENTS & UTILS
 import {
+    BreakpointType,
     createResponsiveObject,
     getResponsiveValue,
     GridContext,
 } from '../utils';
-
-type Breakpoints = {
-    [key: string]: number;
-};
 
 interface CellProps {
     area?: string;
     center?: boolean;
     children?: any;
     debug?: boolean;
-    height?: number | Breakpoints | undefined;
-    left?: number | Breakpoints | undefined;
+    height?: number | BreakpointType | undefined;
+    left?: number | BreakpointType | undefined;
     middle?: boolean;
     top?: number;
-    width?: number | Breakpoints;
+    width?: number | BreakpointType;
 }
 
 const StyledCell = styled(ACell)<CellProps>`
@@ -45,22 +42,28 @@ export const Cell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const { innerWidth, debug : contextDebug } = React.useContext(GridContext);
-    const [columns, setColumns] = React.useState<number | Breakpoints>(width);
-    const [columnsLeft, setColumnsLeft] = React.useState<number | Breakpoints | undefined>(left);
-    const [rowsHeight, setRowsHeight] = React.useState<number | Breakpoints | undefined>(height);
+    const {
+        breakpoints,
+        debug : contextDebug,
+        innerWidth,
+    } = React.useContext(GridContext);
+    const [columns, setColumns] = React.useState<number | BreakpointType>(width);
+    const [columnsLeft, setColumnsLeft] = React.useState<number | BreakpointType | undefined>(left);
+    const [rowsHeight, setRowsHeight] = React.useState<number | BreakpointType | undefined>(height);
+
+    console.log('ignore me', breakpoints);
 
     React.useEffect(() => {
         setColumns(
-            typeof width === 'number' ? width : createResponsiveObject(width)
+            typeof width === 'number' ? width : createResponsiveObject(width, breakpoints)
         );
 
         setColumnsLeft(
-            (typeof left === 'number' || left === undefined)  ? left : createResponsiveObject(left)
+            (typeof left === 'number' || left === undefined)  ? left : createResponsiveObject(left, breakpoints)
         );
 
         setRowsHeight(
-            (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height)
+            (typeof height === 'number' || height === undefined)  ? height : createResponsiveObject(height, breakpoints)
         );
     }, []);
 

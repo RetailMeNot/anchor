@@ -1,10 +1,10 @@
 // VENDOR
 import * as React from 'react';
 import { Grid as AGrid } from 'styled-css-grid';
-import styled, { css } from '@xstyled/styled-components';
+import styled, { css, ThemeContext } from '@xstyled/styled-components';
 import { debounce } from 'ts-debounce';
 // COMPONENTS & UTILS
-import { FLOW, GridContext } from '../utils';
+import { BreakpointType, FLOW, GridContext, sortBreakpoints } from '../utils';
 
 const DEBOUNCE_DELAY = 100;
 
@@ -88,8 +88,12 @@ export const Grid = ({
         window ? window.innerWidth : 0
     );
     const hasWindow = window && window.innerWidth;
+    const { breakpoints : unsortedBreakpoints } = React.useContext(ThemeContext);
+    const [breakpoints, setBreakpoints] = React.useState<BreakpointType[]>([]);
 
     React.useEffect(() => {
+        setBreakpoints( sortBreakpoints(unsortedBreakpoints) );
+
         const handleResize = debounce(() => {
             setInnerWidth(hasWindow ? window.innerWidth : 0);
         }, DEBOUNCE_DELAY);
@@ -115,7 +119,7 @@ export const Grid = ({
             rows={rows}
             {...props}
         >
-            <GridContext.Provider value={{innerWidth, debug}}>
+            <GridContext.Provider value={{innerWidth, debug, breakpoints}}>
                 {children}
             </GridContext.Provider>
         </StyledGrid>

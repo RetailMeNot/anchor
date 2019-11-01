@@ -18,8 +18,8 @@ export const RootTheme = {
         mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
     breakpoints: {
-        xs: 575,
         sm: 767,
+        xs: 575,
         md: 991,
         lg: 1199,
         xl: 1599,

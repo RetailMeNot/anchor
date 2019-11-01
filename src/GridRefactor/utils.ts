@@ -11,6 +11,25 @@ const breakpointKeys = Object.keys(breakpoints);
 const firstBreakpoint = breakpointKeys[0];
 const lastBreakpoint = breakpointKeys[breakpointKeys.length - 1];
 
+export type BreakpointType = {
+    [key: string]: number;
+};
+
+/*
+    Returns an array of objects sorted by their value, descending. Ex:
+
+    const obj: { xs: 500: md: 800: sm: 650 };
+    sortBreakpoints(obj); // [{xs: 500}, {sm: 650}, {md: 800}]
+*/
+export function sortBreakpoints(unsortedBreakpoints: object) {
+    return Object.keys(unsortedBreakpoints)
+        .reduce<BreakpointType[]>( (acc: [BreakpointType], next: string) => {
+            acc.push({[next]: unsortedBreakpoints[next]});
+            return acc;
+        }, [])
+        .sort( (a: BreakpointType, b: BreakpointType) => Object.values(a)[0] - Object.values(b)[0]);
+}
+
 /*
     Using a passed object, creates a full object with all breakpoints getting a value. Ex:
 
@@ -20,7 +39,7 @@ const lastBreakpoint = breakpointKeys[breakpointKeys.length - 1];
     This function is mobile first, so setting a smaller breakpoint's value will use that same value
     for larger breakpoints.
 */
-export function createResponsiveObject(obj: object) {
+export function createResponsiveObject(obj: object, sortedBreakpoints: BreakpointType[]) {
     let lastValid = firstBreakpoint;
 
     // Walks through the keys in the breakpoints and sees if there is a corresponding key declared in
@@ -52,10 +71,17 @@ export function getResponsiveValue(obj: object | number, innerWidth: number) {
     return obj[breakpoint];
 }
 
+interface GridContextProps {
+    innerWidth: number;
+    debug: boolean;
+    breakpoints: BreakpointType[];
+}
+
 // Creates the context used by both Grid and Cell for tracking the window's inner width
-export const GridContext = createContext({
+export const GridContext = createContext<GridContextProps>({
     innerWidth: 0,
     debug: false,
+    breakpoints: [],
 });
 
 export enum FLOW {
