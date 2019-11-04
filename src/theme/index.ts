@@ -17,12 +17,14 @@ export const RootTheme = {
             'Avenir Next, Segoe UI, Helvetica Neue, Helvetica, Roboto, sans-serif',
         mono: `'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace`,
     },
+    // These are all minimums
     breakpoints: {
-        sm: 767,
-        xs: 575,
-        md: 991,
-        lg: 1199,
-        xl: 1599,
+        xs: 0,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200,
+        xxl: 1600,
     },
     // todo: we should likely remove the color.borders colors and just use this
     // or find a way to reference the colors.border colors here
