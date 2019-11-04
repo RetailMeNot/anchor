@@ -6,6 +6,7 @@ import { debounce } from 'ts-debounce';
 import classNames from 'classnames';
 // COMPONENTS & UTILS
 import { FLOW, GridContext, sortBreakpoints } from '../utils';
+import { RootTheme } from '../../theme';
 
 const DEBOUNCE_DELAY = 100;
 
@@ -91,7 +92,9 @@ export const Grid = ({
         window ? window.innerWidth : 0
     );
     const hasWindow = window && window.innerWidth;
-    const { breakpoints: unsortedBreakpoints } = React.useContext(ThemeContext);
+    // Default behavior is to use the breakpoints defined in the theme, but if the user doesn't use
+    // the ThemeProvider it instead uses the breakpoints in the RootTheme.
+    const { breakpoints: unsortedBreakpoints } = React.useContext(ThemeContext) || RootTheme;
 
     React.useEffect(() => {
         const handleResize = debounce(() => {
