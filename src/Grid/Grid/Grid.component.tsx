@@ -94,7 +94,8 @@ export const Grid = ({
     const hasWindow = window && window.innerWidth;
     // Default behavior is to use the breakpoints defined in the theme, but if the user doesn't use
     // the ThemeProvider it instead uses the breakpoints in the RootTheme.
-    const { breakpoints: unsortedBreakpoints } = React.useContext(ThemeContext) || RootTheme;
+    const { breakpoints: unsortedBreakpoints } =
+        React.useContext(ThemeContext) || RootTheme;
 
     React.useEffect(() => {
         const handleResize = debounce(() => {

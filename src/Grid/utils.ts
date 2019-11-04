@@ -34,7 +34,7 @@ export enum FLOW {
     sortBreakpoints(obj); // [{xs: 500}, {sm: 650}, {md: 800}]
 */
 export function sortBreakpoints(unsortedBreakpoints: object) {
-     return Object.keys(unsortedBreakpoints)
+    return Object.keys(unsortedBreakpoints)
         .reduce<BreakpointType[]>((acc: [BreakpointType], next: string) => {
             acc.push({ [next]: unsortedBreakpoints[next] });
             return acc;

@@ -4,7 +4,11 @@ import * as renderer from 'react-test-renderer';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Grid, Cell } from '../index';
-import { createResponsiveObject, getResponsiveValue, sortBreakpoints } from '../utils';
+import {
+    createResponsiveObject,
+    getResponsiveValue,
+    sortBreakpoints,
+} from '../utils';
 import { RootTheme } from '../../theme';
 // ENZYME
 import { shallow, mount } from 'enzyme';
@@ -39,9 +43,7 @@ describe('Component: Grid & Cell', () => {
         );
         const test = mount(testSubject);
 
-        expect(
-            test.find('.anchor-cell.hide').exists()
-        ).toBeTruthy();
+        expect(test.find('.anchor-cell.hide').exists()).toBeTruthy();
     });
 });
 
@@ -50,7 +52,10 @@ describe('Utilities: Grid & Cell', () => {
     const responsiveSettings = { xs: 12, md: 6 };
     const innerWidth = 780;
     const sortedBreakpoints = sortBreakpoints(testObject);
-    const responsiveObject = createResponsiveObject(responsiveSettings, sortedBreakpoints);
+    const responsiveObject = createResponsiveObject(
+        responsiveSettings,
+        sortedBreakpoints
+    );
 
     it('sortBreakpoints should return a sorted array from an object', () => {
         const lastBreakpoint = sortedBreakpoints[sortedBreakpoints.length - 1];
@@ -68,7 +73,11 @@ describe('Utilities: Grid & Cell', () => {
     });
 
     it('getResponsiveValue should return the value associated from a breakpoint based on window width.', () => {
-        const value = getResponsiveValue(responsiveObject, innerWidth, sortedBreakpoints);
+        const value = getResponsiveValue(
+            responsiveObject,
+            innerWidth,
+            sortedBreakpoints
+        );
 
         expect(value).toEqual(12);
     });
