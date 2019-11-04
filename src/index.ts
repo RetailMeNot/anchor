@@ -6,13 +6,8 @@ export { Badge } from './Badge';
 export { Collapse, CollapseGroup } from './Collapse';
 export { DropDown } from './DropDown';
 export {
-    Col,
-    Visible,
-    Hidden,
-    Row,
-    Container,
-    ScreenClass,
-    ScreenBadge,
+    Cell,
+    Grid,
     LegacyDesktop,
     LegacyTablet,
     LegacyPhone,

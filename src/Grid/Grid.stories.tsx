@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../Typography';
-import { Cell, Grid } from './index';
+import { Cell, Grid } from '../Grid/index';
 import { FLOW } from './utils';
 import { RootTheme } from '../theme';
 
@@ -13,7 +13,7 @@ const StoryGrid = styled(Grid)`
     height: 100vh;
 `;
 
-storiesOf('Components/GridRefactor', module)
+storiesOf('Components/Grid', module)
     .add('Default', () => {
         return (
             <ThemeProvider theme={RootTheme}>

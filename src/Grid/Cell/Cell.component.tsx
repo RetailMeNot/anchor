@@ -52,7 +52,7 @@ export const Cell = ({
     const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
         GridContext
     );
-    const [state, setState] =  React.useState<CellProps>({
+    const [state, setState] = React.useState<CellProps>({
         height,
         left,
         top,
@@ -67,9 +67,10 @@ export const Cell = ({
         const obj: CellProps = {};
 
         Object.keys(state).forEach(key => {
-            obj[key] =  typeof state[key] === 'number' || state[key] === undefined
-                ? state[key]
-                : createResponsiveObject(state[key], breakpoints);
+            obj[key] =
+                typeof state[key] === 'number' || state[key] === undefined
+                    ? state[key]
+                    : createResponsiveObject(state[key], breakpoints);
         });
 
         setState(obj);
@@ -79,7 +80,7 @@ export const Cell = ({
     // updating the responsive values quickly. Setting them via state always causes TS errors
     // because there's a delay.
     const responsiveWidth =
-        typeof state.width === 'number'  || state.width === undefined
+        typeof state.width === 'number' || state.width === undefined
             ? state.width
             : getResponsiveValue(state.width, innerWidth, breakpoints);
 
@@ -101,7 +102,11 @@ export const Cell = ({
     return (
         <StyledCell
             {...props}
-            className={classNames("anchor-cell", className, responsiveWidth === 0 && 'hide')}
+            className={classNames(
+                'anchor-cell',
+                className,
+                responsiveWidth === 0 && 'hide'
+            )}
             center={center}
             debug={contextDebug || debug}
             height={responsiveHeight}
