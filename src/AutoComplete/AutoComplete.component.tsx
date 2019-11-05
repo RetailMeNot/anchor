@@ -16,6 +16,7 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
+    debug?: boolean;
     name?: string;
     dataSource?: AutoCompleteDataSource | string[] | number[];
     className?: string;
@@ -96,6 +97,7 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
 
 export const AutoComplete = ({
     name = '',
+    debug = false,
     className,
     placeholder,
     // children,
@@ -213,7 +215,7 @@ export const AutoComplete = ({
                 name="auto-complete"
                 className="auto-complete-input"
             />
-            {isFocused && dataSource.length > 0 && (
+            { (isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
                     size={size}
                     ref={resultsRef}
