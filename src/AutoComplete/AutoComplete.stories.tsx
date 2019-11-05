@@ -2,6 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
+import { boolean } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
@@ -47,6 +48,7 @@ const StateBasedAutoCompleteStory = () => {
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
+                            debug={boolean('debug', false)}
                             placeholder="Search here..."
                             onFilter={(newTerm: any) => {
                                 setTempData(tempDataStringSource(newTerm));
@@ -90,6 +92,7 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
+                            debug={boolean('debug', false)}
                             placeholder="Search here..."
                             onFilter={(newTerm: any) => {
                                 setTempData(tempDataStringSource(newTerm));
@@ -123,6 +126,7 @@ storiesOf('Components/AutoComplete', module)
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
+                            debug={boolean('debug', false)}
                             allowClear={true}
                             placeholder="Search here..."
                             prefix={<Search color="borders.base" />}
