@@ -25,6 +25,7 @@ experience. As noted after the code sample below some are not required.
 
 ```js
 import {
+    BaseModalBackground,
     Modal,
     ModalProvider,
     RootTheme,
@@ -50,6 +51,8 @@ used with `Header`, and it will lose it's bottom padding if used with `Footer`.
 * The <Link to="/theme/theme-provider#roottheme">`RootTheme`</Link> provides a number of CSS styles that the modal
 will use.
 * `ModalProvider` will set the root portal where `Modal`s will be rendered.
+* `BaseModalBackground` is the component used for the dark overlay and padding behind the modal. It
+is applied via the `ModalProvider`.
 * The <Link to="theme/theme-provider">`ThemeProvider`</Link> will apply the `RootTheme` to the modal.
 
 *NOTE! It's best to put `ThemeProvider`  and `ModalProvider` components higher up in the application
@@ -188,7 +191,51 @@ And voila! Here is our `PageExample` component rendered with our `ModalAndButton
 
 <br /><br />
 
+## Custom Background
+
+If there is a need to have a custom background for the modal, it can be accomplished by sending an
+uninstantiated `styled-component` to the `ModalProvider` as a prop.
+
+```jsx
+import { BaseModalBackground, ModalProvider } from '@retailmenot/anchor';
+import styled from '@xstyled/styled-components';
+
+const CustomBackground = styled(BaseModalBackground)`
+    padding: 0;
+`;f
+
+const App = () => (
+    <ModalProvider backgroundComponent={CustomBackground}>
+        // ...
+    </ModalProvider>
+);
+```
+
 ## API's
+
+---
+
+### ModalProvider
+
+This component should appear higher up in your application tree to control all modals.
+
+<ApiTable data={[
+    {
+        property: 'backgroundComponent',
+        description: `The background behind the modal. It gives padding and the dark opaque overlay
+            for the modal. It accepts an uninstantiated React component. Note that using this prop
+            overides the <pre>backgroundProps</pre> prop of <pre>Modal</pre>`,
+        type: `React.Component`,
+        default: `BaseModalBackground`
+    }
+]} />
+
+---
+
+### BaseModalBackground
+
+The background behind the modal. It gives padding and the dark opaque overlay for the modal. It can
+be extended via `styled-components`.
 
 ---
 
@@ -202,6 +249,13 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
         description: <ColorBlurb background gradient defaultTheme label="Modal" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+    },
+    {
+        property: 'backgroundProps',
+        description: `CSS styles that are applied to the overlay container.
+            Accepts <pre>opacity</pre> and <pre>padding</pre> properties.`,
+        type: `{ padding?: string, opacity?: number }`,
+        default: `{ padding: '2rem 1rem', opacity: 0.6 }`,
     },
     {
         property: 'color',
