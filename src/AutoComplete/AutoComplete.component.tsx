@@ -215,7 +215,7 @@ export const AutoComplete = ({
                 name="auto-complete"
                 className="auto-complete-input"
             />
-            { (isFocused || debug) && dataSource.length > 0 && (
+            {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
                     size={size}
                     ref={resultsRef}
