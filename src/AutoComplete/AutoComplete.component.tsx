@@ -16,39 +16,39 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
-    inputComponent?: any;
+    className?: string;
+    dataSource?: AutoCompleteDataSource | string[] | number[];
     debug?: boolean;
     name?: string;
-    dataSource?: AutoCompleteDataSource | string[] | number[];
-    className?: string;
-    size?: 'sm' | 'md' | 'lg';
     placeholder?: string;
+    size?: 'sm' | 'md' | 'lg';
     value?: string | number;
     // TODO: resultTemplate
     // TODO: allowClear
     allowClear?: boolean;
     // Visual
-    border?: boolean;
-    shadow?: boolean;
     background?: string;
+    border?: boolean;
     color?: string;
+    shadow?: boolean;
     // TODO: Allow children
     resultTemplate?: (props: any) => any;
-    suffix?: any;
+    inputComponent?: any;
     prefix?: any;
+    suffix?: any;
     // Event Handlers
-    onFilter?: (term: string | number) => void;
-    onSelect?: (value?: string | number, item?: any) => void;
-    onChange?: (value?: string | number, item?: any) => void;
-    onFocus?: (event?: React.FocusEvent) => void;
     onBlur?: (event?: React.FocusEvent) => void;
+    onChange?: (value?: string | number, item?: any) => void;
+    onFilter?: (term: string | number) => void;
+    onFocus?: (event?: React.FocusEvent) => void;
+    onSelect?: (value?: string | number, item?: any) => void;
 }
 
 interface StyledAutoCompleteProps {
-    shadow?: boolean;
-    border?: boolean;
     background?: string;
+    border?: boolean;
     color?: string;
+    shadow?: boolean;
 }
 
 const EventKeyCodes = {
@@ -165,58 +165,63 @@ export const AutoComplete = ({
             })}
             {...props}
         >
-            {
-                React.createElement(inputComponent, {
-                    ariaLabel: name.length
-                        ? `auto-complete-${name.toLowerCase()}`
-                        : 'auto-complete'
-                    ,
-                    value: term,
-                    ref: inputRef,
-                    size: size,
-                    prefix: prefix,
-                    suffix: suffix,
-                    placeholder: placeholder,
-                    onFocus: () => setIsFocused(true),
-                    onBlur: () => setIsFocused(false),
-                    onChange: (newValue: string) => {
-                        changeSearchTerm(newValue);
-                    },
-                    onKeyDown: (event: React.KeyboardEvent) => {
-                        switch (event.keyCode) {
-                            case EventKeyCodes.TAB:
-                            case EventKeyCodes.ENTER:
-                                event.preventDefault();
-                                event.stopPropagation();
-                                if (isFocused) {
-                                    // Unset initialTerm
-                                    resultsRef.current.clearInitialTerm();
-                                    // Set the active value of the autocomplete
-                                    resultsRef.current.selectActive();
-                                }
-                                break;
-                            case EventKeyCodes.ARROW_DOWN:
-                                event.preventDefault();
-                                event.stopPropagation();
-                                resultsRef.current.handleNext(term);
-                                break;
-                            case EventKeyCodes.ARROW_UP:
-                                event.preventDefault();
-                                event.stopPropagation();
-                                resultsRef.current.handlePrevious(term);
-                                break;
-                            default:
-                                if (resultsRef.current) {
-                                    resultsRef.current.clearInitialTerm();
-                                    resultsRef.current.setActiveIndex(0);
-                                }
-                                break;
-                        }
-                    },
-                    name: "auto-complete",
-                    className: "auto-complete-input",
-                })
-            }
+            {/*
+                    This can render a custom input component and passed props. This custom input
+                    must be wrapped in forwardRef for this to work. Uses Input by default. Ex:
+
+                    const CustomInput = React.forwardRef(
+                        ({...props}) => <Input {...props} autoCapitalize="off" />
+                    );
+                */
+            React.createElement(inputComponent, {
+                ariaLabel: name.length
+                    ? `auto-complete-${name.toLowerCase()}`
+                    : 'auto-complete',
+                value: term,
+                ref: inputRef,
+                size: size,
+                prefix: prefix,
+                suffix: suffix,
+                placeholder: placeholder,
+                onFocus: () => setIsFocused(true),
+                onBlur: () => setIsFocused(false),
+                onChange: (newValue: string) => {
+                    changeSearchTerm(newValue);
+                },
+                onKeyDown: (event: React.KeyboardEvent) => {
+                    switch (event.keyCode) {
+                        case EventKeyCodes.TAB:
+                        case EventKeyCodes.ENTER:
+                            event.preventDefault();
+                            event.stopPropagation();
+                            if (isFocused) {
+                                // Unset initialTerm
+                                resultsRef.current.clearInitialTerm();
+                                // Set the active value of the autocomplete
+                                resultsRef.current.selectActive();
+                            }
+                            break;
+                        case EventKeyCodes.ARROW_DOWN:
+                            event.preventDefault();
+                            event.stopPropagation();
+                            resultsRef.current.handleNext(term);
+                            break;
+                        case EventKeyCodes.ARROW_UP:
+                            event.preventDefault();
+                            event.stopPropagation();
+                            resultsRef.current.handlePrevious(term);
+                            break;
+                        default:
+                            if (resultsRef.current) {
+                                resultsRef.current.clearInitialTerm();
+                                resultsRef.current.setActiveIndex(0);
+                            }
+                            break;
+                    }
+                },
+                name: 'auto-complete',
+                className: 'auto-complete-input',
+            })}
 
             {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer

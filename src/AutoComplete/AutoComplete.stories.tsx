@@ -11,7 +11,6 @@ import { Search } from '../Icon';
 import { Item } from '../List';
 import { Typography } from '../Typography';
 import { RootTheme } from '../theme';
-import { Input } from '../Form/Input';
 // README
 import * as README from './README.md';
 // THEME
@@ -109,8 +108,6 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
     );
 };
 
-const CustomInput = React.forwardRef(({...props}) => <Input {...props} autoCapitalize="off" />);
-
 storiesOf('Components/AutoComplete', module)
     .addParameters({
         readme: {
@@ -129,7 +126,6 @@ storiesOf('Components/AutoComplete', module)
                         <Typography tag="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
-                            inputComponent={CustomInput}
                             debug={boolean('debug', false)}
                             allowClear={true}
                             placeholder="Search here..."
