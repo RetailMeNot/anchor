@@ -1,10 +1,1 @@
-// VENDOR
-export {
-    Col,
-    Visible,
-    Hidden,
-    Row,
-    Container,
-    ScreenClass,
-    ScreenBadge,
-} from './Grid.component';
+export { Grid } from './Grid.component';

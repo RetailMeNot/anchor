@@ -1,12 +1,5 @@
-export {
-    Col,
-    Visible,
-    Hidden,
-    Row,
-    Container,
-    ScreenClass,
-    ScreenBadge,
-} from './Grid';
+export { Cell } from '../Grid/Cell';
+export { Grid } from '../Grid/Grid';
 
 export {
     LegacyDesktop,
