@@ -5,18 +5,14 @@ import { Link, withPrefix } from 'gatsby';
 import { config } from 'react-awesome-styled-grid';
 // ANCHOR & COMPONENTS
 import {
-    Col,
-    Container,
-    Hidden,
+    Cell,
+    Grid,
     RootTheme,
-    Row,
-    ScreenClass,
     ThemeProvider,
-    Visible,
 } from '@retailmenot/anchor';
 import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
-import { breakpoints, BreakpointsType } from '../components/Utils';
+import { breakpoints } from '../components/Utils';
 import { Wave } from '../components/Wave';
 
 const CONTENT_WIDTH = 940;
@@ -39,6 +35,7 @@ const StyledIndexPage = styled('div')`
     margin-bottom: 20rem;
     min-height: 130vh;
     padding-top: 1rem;
+
     ${props => config(props).media[breakpoints.sm]`
         display: flex;
         flex-direction: column;
@@ -66,7 +63,7 @@ const StyledLogo = styled('img')`
     max-width: 22.25rem;
     position: relative;
     width: 80%;
-    ${props => config(props).media[breakpoints.md]`
+    ${props => config(props).media[breakpoints.sm]`
         margin: inherit;
     `}
 `;
@@ -91,8 +88,11 @@ const StyledCaption = styled('p')`
     `}
 `;
 
-const StyledContainer = styled(Container)`
-    padding-top: 0rem;
+const StyledContainer = styled('div')`
+    width: 100%;
+    max-width: ${CONTENT_WIDTH}px;
+    margin: 0 auto;
+    padding: 0 1rem;
     ${props => config(props).media[breakpoints.sm]`
         padding-top:4rem;
     `}
@@ -140,93 +140,81 @@ const StyledFooter = styled('footer')`
 
 export const IndexPage = (): React.ReactElement<any> => (
     <ThemeProvider theme={RootTheme}>
-        <ScreenClass
-            render={(breakpoint: BreakpointsType) => (
-                <StyledIndexPage>
-                    <TempOverride />
+        <StyledIndexPage>
+            <TempOverride />
 
-                    <HomeTopNav contentWidth={CONTENT_WIDTH} />
+            <HomeTopNav contentWidth={CONTENT_WIDTH} />
 
-                    <StyledIntro>
-                        <Link to="/overview">
-                            <Hidden xs sm>
-                                <StyledLogo
-                                    src={withPrefix(
-                                        '/images/anchor-logo-horizontal.svg'
-                                    )}
-                                />
-                            </Hidden>
-                            <Visible xs sm>
-                                <StyledLogo
-                                    src={withPrefix('/images/anchor-logo.svg')}
-                                />
-                            </Visible>
-                        </Link>
+            <StyledIntro>
+                <Link to="/overview">
+                    <Grid>
+                        <Cell width={{xs: 0, md: 12}}>
+                            <StyledLogo
+                                src={withPrefix(
+                                    '/images/anchor-logo-horizontal.svg'
+                                )}
+                            />
+                        </Cell>
+                        <Cell width={{xs: 12, md: 0}}>
+                            <StyledLogo
+                                src={withPrefix(
+                                    '/images/anchor-logo.svg'
+                                )}
+                            />
+                        </Cell>
+                    </Grid>
+                </Link>
 
-                        <StyledCaption>
-                            Anchor is a design system by{' '}
-                            <strong>RetailMeNot</strong>, fostered with a sense
-                            of collaboration, community, and scalability. We
-                            hope it's as useful for you as it is for us.
-                        </StyledCaption>
-                    </StyledIntro>
+                <StyledCaption>
+                    Anchor is a design system by{' '}
+                    <strong>RetailMeNot</strong>, fostered with a sense
+                    of collaboration, community, and scalability. We
+                    hope it's as useful for you as it is for us.
+                </StyledCaption>
+            </StyledIntro>
 
-                    <StyledContainer>
-                        <Row>
-                            <Col
-                                offset={{
-                                    md: 1,
-                                    lg: 2,
-                                    xl: 2,
-                                }}
-                            >
-                                <Row>
-                                    <Col lg={5} md={3}>
-                                        <HomeCard
-                                            description="Check out our components & documentation."
-                                            imgSrc="/images/developer-icon.svg"
-                                            title="Developers"
-                                            to="/components"
-                                            breakpoint={breakpoint}
-                                        />
-                                    </Col>
-                                    <Col lg={5} md={3}>
-                                        <HomeCard
-                                            description="Take a look at our design philosophy & human interface guidelines."
-                                            imgSrc="/images/designer-icon.svg"
-                                            title="Designers"
-                                            disabled
-                                            breakpoint={breakpoint}
-                                        />
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </StyledContainer>
+            <StyledContainer>
+                <Grid gap="2rem">
+                    <Cell width={{xs: 12, md: 6}}>
+                        <HomeCard
+                            description="Check out our components & documentation."
+                            imgSrc="/images/developer-icon.svg"
+                            title="Developers"
+                            to="/components"
+                        />
+                    </Cell>
+                    <Cell width={{xs: 12, md: 6}} left={{xs: 0, md: 7}} top={{xs: 2, md: 1 }}>
+                        <HomeCard
+                            description="Take a look at our design philosophy & human interface guidelines."
+                            imgSrc="/images/designer-icon.svg"
+                            title="Designers"
+                            disabled
+                        />
+                    </Cell>
+                </Grid>
+            </StyledContainer>
 
-                    <StyledOcean>
-                        <Wave duration="89s" top="0" image={1} />
-                        <Wave duration="88s" top="10px" image={5} />
-                        <Wave duration="85s" top="20px" image={4} />
-                        <Wave duration="62s" top="50px" image={3} />
-                        <Wave duration="65s" top="80px" image={2} />
-                        <Wave duration="67s" top="120px" image={1} />
-                    </StyledOcean>
+            <StyledOcean>
+                <Wave duration="89s" top="0" image={1} />
+                <Wave duration="88s" top="10px" image={5} />
+                <Wave duration="85s" top="20px" image={4} />
+                <Wave duration="62s" top="50px" image={3} />
+                <Wave duration="65s" top="80px" image={2} />
+                <Wave duration="67s" top="120px" image={1} />
+            </StyledOcean>
 
-                    <StyledFooter>
-                        <a href="//retailmenot.com" target="_blank">
-                            <img src={withPrefix('/images/r-mark.svg')} />
-                        </a>
-                        <a
-                            href="//github.com/RetailMeNot/anchor"
-                            target="_blank"
-                        >
-                            <img src={withPrefix('/images/octocat.svg')} />
-                        </a>
-                    </StyledFooter>
-                </StyledIndexPage>
-            )}
-        />
+            <StyledFooter>
+                <a href="//retailmenot.com" target="_blank">
+                    <img src={withPrefix('/images/r-mark.svg')} />
+                </a>
+                <a
+                    href="//github.com/RetailMeNot/anchor"
+                    target="_blank"
+                >
+                    <img src={withPrefix('/images/octocat.svg')} />
+                </a>
+            </StyledFooter>
+        </StyledIndexPage>
     </ThemeProvider>
 );
 

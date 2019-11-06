@@ -10,12 +10,11 @@ import { config } from 'react-awesome-styled-grid';
 
 // ANCHOR & COMPONENTS
 import {
-    Col,
     Button,
-    Container,
+    Cell,
+    Grid,
     Hamburger,
     RootTheme,
-    Row,
     StandardBreakpoints,
     ThemeProvider,
     Typography,
@@ -90,7 +89,7 @@ const StyledHeader = styled('header')`
     }
 `;
 
-const SectionNavCol = styled(Col)`
+const SectionNavCol = styled('div')`
     padding-left: 0;
     padding-right: 0;
 `;
@@ -160,7 +159,7 @@ const StyledPrimaryNav = styled('nav')`
     }
 `;
 
-const CenteredCol = styled(Col)`
+const CenteredCol = styled('div')`
     display: flex;
     justify-content: center;
 `;
@@ -263,57 +262,61 @@ export const Page = ({
                 <GlobalCSS />
 
                 <StyledHeader>
-                    <Container>
-                        <Row>
-                            <HamburgerCol xs={1} sm={1}>
-                                <Button
-                                    variant="minimal"
-                                    prefix={<Hamburger />}
-                                    onClick={() =>
-                                        setSectionNavOpen(!sectionNavOpen)
-                                    }
+                    <Grid>
+                        {/* Formerly HamburgerCol */}
+                        <Cell width={{xs: 1, md: 0}}>
+                            <Button
+                                variant="minimal"
+                                prefix={<Hamburger />}
+                                onClick={() =>
+                                    setSectionNavOpen(!sectionNavOpen)
+                                }
+                            />
+                        </Cell>
+
+                        {/* Formerly LogoCol */}
+                        <Cell width={{md: 2, lg: 3, xl: 3}}>
+                            <StyledLogoContainer to="/">
+                                <img
+                                    alt="Anchor Logo Horizontal"
+                                    src={logo}
                                 />
-                            </HamburgerCol>
+                            </StyledLogoContainer>
+                        </Cell>
 
-                            <LogoCol md={2} lg={3} xl={2}>
-                                <StyledLogoContainer to="/">
-                                    <img
-                                        alt="Anchor Logo Horizontal"
-                                        src={logo}
-                                    />
-                                </StyledLogoContainer>
-                            </LogoCol>
+                        {/* Formerly SearchCol */}
+                        <Cell>
+                            <SearchInput />
+                        </Cell>
 
-                            <SearchCol>
-                                <SearchInput />
-                            </SearchCol>
-
-                            <CenteredCol>
-                                <StyledPrimaryNav>
-                                    <Typography
-                                        tag="a"
-                                        weight={600}
-                                        className="active"
-                                        href="https://github.com/RetailMeNot/anchor"
-                                    >
-                                        Github
-                                    </Typography>
-                                </StyledPrimaryNav>
-                            </CenteredCol>
-                        </Row>
-                    </Container>
+                        {/* Formerly CenteredCol */}
+                        <Cell>
+                            <StyledPrimaryNav>
+                                <Typography
+                                    tag="a"
+                                    weight={600}
+                                    className="active"
+                                    href="https://github.com/RetailMeNot/anchor"
+                                >
+                                    Github
+                                </Typography>
+                            </StyledPrimaryNav>
+                        </Cell>
+                    </Grid>
                 </StyledHeader>
 
-                <Row>
-                    <SectionNavCol md={2} lg={3} xl={2}>
+                <Grid>
+                    {/* Formerly SectionNavCol */}
+                    <Cell width={{ md: 2, lg: 3, xl: 2 }}>
                         <FixedBody sectionNavOpen={sectionNavOpen} />
 
                         <StyledSectionNav sectionNavOpen={sectionNavOpen}>
                             <EnhancedSectionNavigation />
                         </StyledSectionNav>
-                    </SectionNavCol>
+                    </Cell>
 
-                    <Col md={6} lg={9} xl={10}>
+                    {/* Formerly a Col */}
+                    <Cell width={{ md: 6, lg: 9, xl: 10 }}>
                         <StyledContentMain>
                             <br />
                             <MDXProvider components={MDXComponents}>
@@ -324,8 +327,8 @@ export const Page = ({
 
                             {enableFooter && <Footer />}
                         </StyledContentMain>
-                    </Col>
-                </Row>
+                    </Cell>
+                </Grid>
             </StyledPageElement>
         </ThemeProvider>
     );
