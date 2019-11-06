@@ -37,11 +37,6 @@ const GlobalCSS = createGlobalStyle`
 `;
 
 const StyledPageElement = styled('div')`
-    // The Row component can't be extended, so targeting it via class
-    .anchor-row {
-        margin-left: 0;
-        margin-right: 0;
-    }
 `;
 
 interface PageProps {
@@ -87,11 +82,6 @@ const StyledHeader = styled('header')`
     .anchor-row:first-child {
         flex-wrap: nowrap;
     }
-`;
-
-const SectionNavCol = styled('div')`
-    padding-left: 0;
-    padding-right: 0;
 `;
 
 interface StyledSectionNavProps {
@@ -157,32 +147,6 @@ const StyledPrimaryNav = styled('nav')`
             color: text.link.hover;
         }
     }
-`;
-
-const CenteredCol = styled('div')`
-    display: flex;
-    justify-content: center;
-`;
-
-const HamburgerCol = styled(CenteredCol)`
-    max-width: 3rem;
-    ${props => config(props).media[breakpoints.md]`
-        display: none;
-    `}
-`;
-
-const LogoCol = styled(CenteredCol)`
-    padding-right: 0;
-`;
-
-// TODO: This is a stopgap measure to get search out. The current mobile layout, plus the way
-// DocSearch initializes, makes both the UX and UI for mobile search tricky. Hiding it for mobile
-// for now
-const SearchCol = styled(CenteredCol)`
-    display: none;
-    ${props => config(props).media[breakpoints.md]`
-        display: flex;
-    `}
 `;
 
 const AnchorDocsTheme = merge({}, RootTheme, {
@@ -264,7 +228,7 @@ export const Page = ({
                 <StyledHeader>
                     <Grid>
                         {/* Formerly HamburgerCol */}
-                        <Cell width={{xs: 1, md: 0}}>
+                        <Cell width={{xs: 1, md: 0}} middle center>
                             <Button
                                 variant="minimal"
                                 prefix={<Hamburger />}
@@ -275,7 +239,7 @@ export const Page = ({
                         </Cell>
 
                         {/* Formerly LogoCol */}
-                        <Cell width={{md: 2, lg: 3, xl: 3}}>
+                        <Cell width={{xs: 2, md: 3, xl: 2}} middle>
                             <StyledLogoContainer to="/">
                                 <img
                                     alt="Anchor Logo Horizontal"
@@ -285,12 +249,12 @@ export const Page = ({
                         </Cell>
 
                         {/* Formerly SearchCol */}
-                        <Cell>
+                        <Cell width={{xs: 0, md: 6}} middle>
                             <SearchInput />
                         </Cell>
 
                         {/* Formerly CenteredCol */}
-                        <Cell>
+                        <Cell width={{xs: 9, md: 3, xl: 4}} middle>
                             <StyledPrimaryNav>
                                 <Typography
                                     tag="a"
@@ -307,7 +271,7 @@ export const Page = ({
 
                 <Grid>
                     {/* Formerly SectionNavCol */}
-                    <Cell width={{ md: 2, lg: 3, xl: 2 }}>
+                    <Cell width={{xs: 0, md: 3, xl: 2 }}>
                         <FixedBody sectionNavOpen={sectionNavOpen} />
 
                         <StyledSectionNav sectionNavOpen={sectionNavOpen}>
@@ -316,7 +280,7 @@ export const Page = ({
                     </Cell>
 
                     {/* Formerly a Col */}
-                    <Cell width={{ md: 6, lg: 9, xl: 10 }}>
+                    <Cell width={{xs: 12, md: 9, xl: 10 }}>
                         <StyledContentMain>
                             <br />
                             <MDXProvider components={MDXComponents}>
