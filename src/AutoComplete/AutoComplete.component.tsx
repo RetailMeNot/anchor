@@ -217,57 +217,7 @@ export const AutoComplete = ({
                     className: "auto-complete-input",
                 })
             }
-            {/* <Input
-                ariaLabel={
-                    name.length
-                        ? `auto-complete-${name.toLowerCase()}`
-                        : 'auto-complete'
-                }
-                value={term}
-                ref={inputRef}
-                size={size}
-                prefix={prefix}
-                suffix={suffix}
-                placeholder={placeholder}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-                onChange={(newValue: string) => {
-                    changeSearchTerm(newValue);
-                }}
-                onKeyDown={(event: React.KeyboardEvent) => {
-                    switch (event.keyCode) {
-                        case EventKeyCodes.TAB:
-                        case EventKeyCodes.ENTER:
-                            event.preventDefault();
-                            event.stopPropagation();
-                            if (isFocused) {
-                                // Unset initialTerm
-                                resultsRef.current.clearInitialTerm();
-                                // Set the active value of the autocomplete
-                                resultsRef.current.selectActive();
-                            }
-                            break;
-                        case EventKeyCodes.ARROW_DOWN:
-                            event.preventDefault();
-                            event.stopPropagation();
-                            resultsRef.current.handleNext(term);
-                            break;
-                        case EventKeyCodes.ARROW_UP:
-                            event.preventDefault();
-                            event.stopPropagation();
-                            resultsRef.current.handlePrevious(term);
-                            break;
-                        default:
-                            if (resultsRef.current) {
-                                resultsRef.current.clearInitialTerm();
-                                resultsRef.current.setActiveIndex(0);
-                            }
-                            break;
-                    }
-                }}
-                name="auto-complete"
-                className="auto-complete-input"
-            /> */}
+
             {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
                     size={size}
