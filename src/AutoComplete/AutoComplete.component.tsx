@@ -16,6 +16,7 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
+    inputComponent?: any;
     debug?: boolean;
     name?: string;
     dataSource?: AutoCompleteDataSource | string[] | number[];
@@ -96,25 +97,25 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
 `;
 
 export const AutoComplete = ({
-    name = '',
-    debug = false,
+    allowClear,
+    background = 'white',
+    border = true,
     className,
-    placeholder,
-    // children,
-    suffix,
-    prefix,
+    color = 'text.light',
     dataSource = [],
-    value = '',
+    debug = false,
+    inputComponent = Input,
+    name = '',
+    onChange = () => null,
     onFilter = () => null,
     onSelect = () => null,
-    onChange = () => null,
-    size = 'lg',
-    shadow = false,
-    border = true,
-    background = 'white',
-    color = 'text.light',
+    placeholder,
+    prefix,
     resultTemplate,
-    allowClear,
+    shadow = false,
+    size = 'lg',
+    suffix,
+    value = '',
     ...props
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
@@ -164,7 +165,59 @@ export const AutoComplete = ({
             })}
             {...props}
         >
-            <Input
+            {
+                React.createElement(inputComponent, {
+                    ariaLabel: name.length
+                        ? `auto-complete-${name.toLowerCase()}`
+                        : 'auto-complete'
+                    ,
+                    value: term,
+                    ref: inputRef,
+                    size: size,
+                    prefix: prefix,
+                    suffix: suffix,
+                    placeholder: placeholder,
+                    onFocus: () => setIsFocused(true),
+                    onBlur: () => setIsFocused(false),
+                    onChange: (newValue: string) => {
+                        changeSearchTerm(newValue);
+                    },
+                    onKeyDown: (event: React.KeyboardEvent) => {
+                        switch (event.keyCode) {
+                            case EventKeyCodes.TAB:
+                            case EventKeyCodes.ENTER:
+                                event.preventDefault();
+                                event.stopPropagation();
+                                if (isFocused) {
+                                    // Unset initialTerm
+                                    resultsRef.current.clearInitialTerm();
+                                    // Set the active value of the autocomplete
+                                    resultsRef.current.selectActive();
+                                }
+                                break;
+                            case EventKeyCodes.ARROW_DOWN:
+                                event.preventDefault();
+                                event.stopPropagation();
+                                resultsRef.current.handleNext(term);
+                                break;
+                            case EventKeyCodes.ARROW_UP:
+                                event.preventDefault();
+                                event.stopPropagation();
+                                resultsRef.current.handlePrevious(term);
+                                break;
+                            default:
+                                if (resultsRef.current) {
+                                    resultsRef.current.clearInitialTerm();
+                                    resultsRef.current.setActiveIndex(0);
+                                }
+                                break;
+                        }
+                    },
+                    name: "auto-complete",
+                    className: "auto-complete-input",
+                })
+            }
+            {/* <Input
                 ariaLabel={
                     name.length
                         ? `auto-complete-${name.toLowerCase()}`
@@ -214,7 +267,7 @@ export const AutoComplete = ({
                 }}
                 name="auto-complete"
                 className="auto-complete-input"
-            />
+            /> */}
             {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
                     size={size}

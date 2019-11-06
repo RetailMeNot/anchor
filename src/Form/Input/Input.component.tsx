@@ -301,6 +301,7 @@ export const Input = forwardRef(
                             value={inputValue}
                             type={type}
                             placeholder={placeholder}
+                            {...props}
                         />
                         {label && (
                             <Typography
