@@ -188,6 +188,14 @@ props.
                 />,
     },
     {
+        property: 'debug',
+        description: `When set to true, causes the result list to remain visible even
+            when <pre>AutoComplete</pre> loses focus. This can be helpful for developing custom
+            styles and/or a <pre>resultTemplate</pre>`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
         property: 'onBlur',
         description: 'An event handler for blur events.',
         type: '(event?: React.FocusEvent) => void',

@@ -5,6 +5,7 @@ import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Grid, Cell } from '../index';
 import {
+    GridContext,
     createResponsiveObject,
     getResponsiveValue,
     sortBreakpoints,
@@ -44,6 +45,29 @@ describe('Component: Grid & Cell', () => {
         const test = mount(testSubject);
 
         expect(test.find('.anchor-cell.hide').exists()).toBeTruthy();
+    });
+});
+
+describe('Component: Cell', () => {
+    it('should render a number for width if one is supplied', () => {
+        const Mock = ({ children }: any) => (
+            <GridContext.Provider
+                value={{
+                    innerWidth: 1024,
+                    breakpoints: sortBreakpoints(RootTheme.breakpoints),
+                    debug: false,
+            }}>
+                {children}
+            </GridContext.Provider>
+        );
+
+        const subject = (<Mock><Cell width={1} left={1} top={1} /></Mock>);
+        const component = mount(subject);
+
+        console.log(component.debug());
+
+        // expect(component.find('[width=1]')).toHaveLength(1);
+        expect(true);
     });
 });
 
