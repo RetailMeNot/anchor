@@ -2,7 +2,9 @@
 import * as React from 'react';
 // VENDOR
 import Responsive from 'react-responsive';
-import styled from '@xstyled/styled-components';
+// COMPONENTS
+import { ResponsiveContext } from '../ResponsiveProvider';
+import { getMinMax } from '../utils';
 
 interface CustomAdaptorProps {
     children?: any;
@@ -27,144 +29,80 @@ interface FixedAdaptor extends CustomAdaptorProps {
     maxDeviceWidth?: never;
 }
 
-interface BreakpointSchema {
-    min?: number;
-    max?: number;
-}
-
 export const CustomAdaptor = ({ ...props }: CustomAdaptorProps) => (
     <Responsive className="anchor-adaptor" {...props} />
 );
 
-/* =========================================== LEGACY START ========================================================= */
-interface LegacyBreakpointsSchema {
-    desktop: BreakpointSchema;
-    tablet: BreakpointSchema;
-    phone: BreakpointSchema;
-}
+export const XS = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { max } = getMinMax(0, breakpoints);
 
-export const LegacyBreakpoints: LegacyBreakpointsSchema = {
-    desktop: {
-        min: 1000,
-    },
-    tablet: {
-        min: 899,
-        max: 999,
-    },
-    phone: {
-        max: 898,
-    },
+    return max !== 0 ? (
+        <Responsive className="anchor-adaptor" {...props} maxWidth={max} />
+    ) : null;
 };
 
-export const LegacyDesktop = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={LegacyBreakpoints.desktop.min}
-    />
-);
-export const LegacyTablet = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={LegacyBreakpoints.tablet.min}
-        maxWidth={LegacyBreakpoints.tablet.max}
-    />
-);
-export const LegacyPhone = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        maxWidth={LegacyBreakpoints.phone.max}
-    />
-);
+export const SM = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { min, max } = getMinMax(1, breakpoints);
 
-/* =========================================== LEGACY END =========================================================== */
-
-/* =========================================== STANDARD START ======================================================= */
-interface StandardBreakpointsSchema {
-    xs: BreakpointSchema;
-    sm: BreakpointSchema;
-    md: BreakpointSchema;
-    lg: BreakpointSchema;
-    xl: BreakpointSchema;
-    xxl: BreakpointSchema;
-}
-export const StandardBreakpoints: StandardBreakpointsSchema = {
-    xs: {
-        max: 575,
-    },
-    sm: {
-        min: 576,
-        max: 767,
-    },
-    md: {
-        min: 768,
-        max: 991,
-    },
-    lg: {
-        min: 992,
-        max: 1199,
-    },
-    xl: {
-        min: 1200,
-        max: 1599,
-    },
-    xxl: {
-        min: 1600,
-    },
+    return min !== 0 && max !== 0 ? (
+        <Responsive
+            className="anchor-adaptor"
+            {...props}
+            minWidth={min}
+            maxWidth={max}
+        />
+    ) : null;
 };
 
-export const XS = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        maxWidth={StandardBreakpoints.xs.max}
-    />
-);
-export const SM = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.sm.min}
-        maxWidth={StandardBreakpoints.sm.max}
-    />
-);
-export const MD = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.md.min}
-        maxWidth={StandardBreakpoints.md.max}
-    />
-);
-export const LG = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.lg.min}
-        maxWidth={StandardBreakpoints.lg.max}
-    />
-);
-export const XL = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.xl.min}
-        maxWidth={StandardBreakpoints.xl.max}
-    />
-);
-export const XXL = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.xxl.min}
-    />
-);
+export const MD = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { min, max } = getMinMax(2, breakpoints);
 
-export const CenteredCell = styled('div')`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-/* =========================================== STANDARD END ========================================================= */
+    return min !== 0 && max !== 0 ? (
+        <Responsive
+            className="anchor-adaptor"
+            {...props}
+            minWidth={min}
+            maxWidth={max}
+        />
+    ) : null;
+};
+
+export const LG = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { min, max } = getMinMax(3, breakpoints);
+
+    return min !== 0 && max !== 0 ? (
+        <Responsive
+            className="anchor-adaptor"
+            {...props}
+            minWidth={min}
+            maxWidth={max}
+        />
+    ) : null;
+};
+
+export const XL = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { min, max } = getMinMax(4, breakpoints);
+
+    return min !== 0 && max !== 0 ? (
+        <Responsive
+            className="anchor-adaptor"
+            {...props}
+            minWidth={min}
+            maxWidth={max}
+        />
+    ) : null;
+};
+
+export const XXL = ({ ...props }: FixedAdaptor) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const { min } = getMinMax(5, breakpoints);
+
+    return min !== 0 ? (
+        <Responsive className="anchor-adaptor" {...props} minWidth={min} />
+    ) : null;
+};

@@ -6,11 +6,10 @@ export { Badge } from './Badge';
 export { Collapse, CollapseGroup } from './Collapse';
 export { DropDown } from './DropDown';
 export {
+    ResponsiveContext,
+    ResponsiveProvider,
     Cell,
     Grid,
-    LegacyDesktop,
-    LegacyTablet,
-    LegacyPhone,
     CustomAdaptor,
     XS,
     SM,
@@ -18,9 +17,6 @@ export {
     LG,
     XL,
     XXL,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-    CenteredCell,
 } from './Grid';
 export { Page, Layout, SidebarLayout, Footer } from './Layout';
 export {

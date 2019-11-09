@@ -10,6 +10,7 @@ import {
     getResponsiveValue,
     GridContext,
 } from '../utils';
+import { ResponsiveContext } from '../ResponsiveProvider';
 
 interface CellProps {
     area?: string;
@@ -49,9 +50,8 @@ export const Cell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
-        GridContext
-    );
+    const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
+    const { debug: contextDebug } = React.useContext(GridContext);
     const [state, setState] = React.useState<CellProps>({
         height,
         left,
@@ -63,7 +63,7 @@ export const Cell = ({
         Iterates over the props in cellState and formats any responsive object. It does nothing to
         a prop that is a number or undefined.
     */
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         const obj: CellProps = {};
 
         Object.keys(state).forEach(key => {

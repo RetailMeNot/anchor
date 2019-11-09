@@ -1,18 +1,145 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// COMPONENT
-import { CustomAdaptor } from './Adaptor.component';
-// ENZYME
 import { shallow, mount } from 'enzyme';
-
-// TEST SETUP
-const subject = <CustomAdaptor minWidth={200} />;
-const wrapper = mount(subject);
-const component = shallow(subject);
+import { ThemeProvider } from '@xstyled/styled-components';
+// COMPONENT
+import { CustomAdaptor, XS, SM, MD, LG, XL, XXL } from './Adaptor.component';
+import { ResponsiveProvider } from '../ResponsiveProvider';
+import { RootTheme } from '../../theme';
 
 describe('Component: Adaptor', () => {
     it('should be defined', () => {
+        const subject = <CustomAdaptor minWidth={200} />;
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: XS', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <XS>Test</XS>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: SM', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <SM>Test</SM>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: MD', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <MD>Test</MD>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: LG', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <LG>Test</LG>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: XL', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <XL>Test</XL>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});
+
+describe('Component: XXL', () => {
+    it('should be defined', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <XXL>Test</XXL>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
         expect(subject).toBeDefined();
         expect(wrapper).toBeDefined();
         expect(component).toBeDefined();

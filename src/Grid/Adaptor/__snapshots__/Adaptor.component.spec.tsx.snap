@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Adaptor should be defined 1`] = `null`;
+
+exports[`Component: LG should be defined 1`] = `null`;
+
+exports[`Component: MD should be defined 1`] = `null`;
+
+exports[`Component: SM should be defined 1`] = `null`;
+
+exports[`Component: XL should be defined 1`] = `null`;
+
+exports[`Component: XS should be defined 1`] = `null`;
+
+exports[`Component: XXL should be defined 1`] = `null`;

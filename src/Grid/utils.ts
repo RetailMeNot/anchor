@@ -10,16 +10,12 @@ export type BreakpointType = {
 };
 
 interface GridContextProps {
-    innerWidth: number;
     debug: boolean;
-    breakpoints: BreakpointType[];
 }
 
-// Creates the context used by both Grid and Cell for tracking the window's inner width
+// Creates the context used by both Grid and Cell for enabling debug
 export const GridContext = createContext<GridContextProps>({
-    innerWidth: 0,
     debug: false,
-    breakpoints: [],
 });
 
 export enum FLOW {
@@ -77,16 +73,13 @@ export function createResponsiveObject(
 }
 
 /*
-    Using the passed responsiveSettings, determines what responsive value should be returned for
-    the current breakpoint. Ex:
+    Returns the breakpoint key for the specified window's innerWidth. Ex:
 
-    const settings = { xs: 1, sm: 3, md: 6 }
-    const innerWidth = 800;
+    const innerWidth = 920;
     const sortedBreakpoints = [{ xs: 500, sm: 750, md: 1000 }];
-    getResponsiveValue(settings, innerWidth, sortedBreakpoints); // 3
-*/
-export function getResponsiveValue(
-    responsiveSettings: object | number,
+    getBreakpointKey(innerWidth, sortedBreakpoints); // sm
+ */
+export function getBreakpointKey(
     innerWidth: number,
     sortedBreakpoints: BreakpointType[]
 ) {
@@ -104,8 +97,65 @@ export function getResponsiveValue(
         .shift();
 
     // Gets the key based on the breakpoint (i.e. xs, sm, etc)
-    const breakpointKey =
-        typeof breakpoint === 'object' ? Object.keys(breakpoint)[0] : '';
+    return typeof breakpoint === 'object' ? Object.keys(breakpoint)[0] : '';
+}
+
+/*
+    Using the passed responsiveSettings, determines what responsive value should be returned for
+    the current breakpoint. Ex:
+
+    const settings = { xs: 1, sm: 3, md: 6 }
+    const innerWidth = 800;
+    const sortedBreakpoints = [{ xs: 500, sm: 750, md: 1000 }];
+    getResponsiveValue(settings, innerWidth, sortedBreakpoints); // 3
+*/
+export function getResponsiveValue(
+    responsiveSettings: object | number,
+    innerWidth: number,
+    sortedBreakpoints: BreakpointType[]
+) {
+    // Gets the key based on the breakpoint (i.e. xs, sm, etc)
+    const breakpointKey = getBreakpointKey(innerWidth, sortedBreakpoints);
 
     return responsiveSettings[breakpointKey];
+}
+
+/*
+    Using a passed index, this returns the minimum and maximum breakpoints for that position in the
+    sortedBreakpoints array. Ex:
+
+    const index = 1;
+    const sortedBreakpoints = [{xs: 0 }, {sm: 500}, {md: 800}];
+    getMinMax(index, sortedBreakpoints); // { min: 500, max: 799 }
+*/
+export function getMinMax(index: number, sortedBreakpoints: BreakpointType[]) {
+    // The breakpoints in the ThemeProvider already assume a minimum value. If the value is not there, returns 0.
+    const min = sortedBreakpoints[index]
+        ? Object.values(sortedBreakpoints[index])[0]
+        : 0;
+    // Gets the next breakpoint value. If it's not there, returns 0.
+    let max = sortedBreakpoints[index + 1]
+        ? Object.values(sortedBreakpoints[index + 1])[0]
+        : 0;
+
+    // If for some weird reason there are no breakpoints, warn the user they messed up.
+    if (min === 0 && max === 0) {
+        // tslint:disable-next-line: no-console
+        console.warn(
+            `The provided index ${index} was not within the range of the breakpoints:`,
+            sortedBreakpoints
+        );
+    }
+    // If there's a minimum but no maximum, it means it's the last value in the array. Setting the
+    // max to 10000 replicates essentially an XXL value. This is important in those cases where
+    // the dev has set custom breakpoints and they potentially won't use all the Adaptors.
+    // tslint:disable-next-line: one-line
+    else if (min >= 0 && max === 0) {
+        max = 10000;
+    }
+
+    return {
+        min,
+        max,
+    };
 }

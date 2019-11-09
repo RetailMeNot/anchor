@@ -1,10 +1,9 @@
+export { ResponsiveContext, ResponsiveProvider } from './ResponsiveProvider';
+
 export { Cell } from '../Grid/Cell';
 export { Grid } from '../Grid/Grid';
 
 export {
-    LegacyDesktop,
-    LegacyTablet,
-    LegacyPhone,
     CustomAdaptor,
     XS,
     SM,
@@ -12,7 +11,4 @@ export {
     LG,
     XL,
     XXL,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-    CenteredCell,
 } from './Adaptor/Adaptor.component';

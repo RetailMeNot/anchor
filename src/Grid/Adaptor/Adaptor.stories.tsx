@@ -2,39 +2,21 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { number } from '@storybook/addon-knobs';
+import { boolean, number } from '@storybook/addon-knobs';
 // VENDOR
 import styled from '@xstyled/styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
-import {
-    LegacyDesktop,
-    LegacyPhone,
-    LegacyTablet,
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
-    CustomAdaptor,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-} from './Adaptor.component';
+import { XS, SM, MD, LG, XL, XXL, CustomAdaptor } from './Adaptor.component';
+import { ResponsiveProvider } from '../ResponsiveProvider';
+import { RootTheme } from '../../theme';
+import { Typography } from '../../index';
 // README
 import * as README from './README.md';
-import { RootTheme } from '../../theme';
-import { ThemeProvider } from '@xstyled/styled-components';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
-
-const dimension = ({ min, max }: { min?: number; max?: number }): string => {
-    const notSet = 'Not Set';
-    return `(${min ? `${min}px` : `${notSet}`} - ${
-        max ? `${max}px` : `${notSet}`
-    })`;
-};
 
 storiesOf('Components/Grid/Adaptor', module)
     .addParameters({
@@ -42,70 +24,6 @@ storiesOf('Components/Grid/Adaptor', module)
             sidebar: README,
         },
     })
-    .add('Legacy Breakpoints', () => (
-        <ThemeProvider theme={RootTheme}>
-            <StyledStory>
-                <h4>Resize this window to view the three breakpoints</h4>
-                <LegacyDesktop>
-                    <p>
-                        I am visible on Desktop{' '}
-                        {dimension(LegacyBreakpoints.desktop)}
-                    </p>
-                </LegacyDesktop>
-                <LegacyTablet>
-                    <p>
-                        I am visible on Tablet{' '}
-                        {dimension(LegacyBreakpoints.tablet)}
-                    </p>
-                </LegacyTablet>
-                <LegacyPhone>
-                    <p>
-                        I am visible on Phone{' '}
-                        {dimension(LegacyBreakpoints.phone)}
-                    </p>
-                </LegacyPhone>
-            </StyledStory>
-        </ThemeProvider>
-    ))
-    .add('Standard Breakpoints', () => (
-        <ThemeProvider theme={RootTheme}>
-            <StyledStory>
-                <h4>
-                    Resize this window to view the six different breakpoints
-                </h4>
-                <XS>
-                    <p>
-                        I am visible on xs {dimension(StandardBreakpoints.xs)}
-                    </p>
-                </XS>
-                <SM>
-                    <p>
-                        I am visible on sm {dimension(StandardBreakpoints.sm)}
-                    </p>
-                </SM>
-                <MD>
-                    <p>
-                        I am visible on md {dimension(StandardBreakpoints.md)}
-                    </p>
-                </MD>
-                <LG>
-                    <p>
-                        I am visible on lg {dimension(StandardBreakpoints.lg)}
-                    </p>
-                </LG>
-                <XL>
-                    <p>
-                        I am visible on xl {dimension(StandardBreakpoints.xl)}
-                    </p>
-                </XL>
-                <XXL>
-                    <p>
-                        I am visible on xxl {dimension(StandardBreakpoints.xxl)}
-                    </p>
-                </XXL>
-            </StyledStory>
-        </ThemeProvider>
-    ))
     .add('Custom Breakpoints', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
@@ -118,4 +36,34 @@ storiesOf('Components/Grid/Adaptor', module)
                 </CustomAdaptor>
             </StyledStory>
         </ThemeProvider>
-    ));
+    ))
+    .add('Fixed Adaptors', () => {
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider
+                    debug={boolean('ResponsiveProvider Debug', true)}
+                >
+                    <StyledStory>
+                        <XS>
+                            <Typography tag="h4">XS</Typography>
+                        </XS>
+                        <SM>
+                            <Typography tag="h4">SM</Typography>
+                        </SM>
+                        <MD>
+                            <Typography tag="h4">MD</Typography>
+                        </MD>
+                        <LG>
+                            <Typography tag="h4">LG</Typography>
+                        </LG>
+                        <XL>
+                            <Typography tag="h4">XL</Typography>
+                        </XL>
+                        <XXL>
+                            <Typography tag="h4">XXL</Typography>
+                        </XXL>
+                    </StyledStory>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+    });

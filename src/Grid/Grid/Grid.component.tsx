@@ -1,14 +1,10 @@
 // VENDOR
 import * as React from 'react';
 import { Grid as AGrid } from 'styled-css-grid';
-import styled, { css, ThemeContext } from '@xstyled/styled-components';
-import { debounce } from 'ts-debounce';
+import styled, { css } from '@xstyled/styled-components';
 import classNames from 'classnames';
 // COMPONENTS & UTILS
-import { FLOW, GridContext, sortBreakpoints } from '../utils';
-import { RootTheme } from '../../theme';
-
-const DEBOUNCE_DELAY = 100;
+import { FLOW, GridContext } from '../utils';
 
 type Flow = keyof typeof FLOW;
 
@@ -87,51 +83,20 @@ export const Grid = ({
     justifyContent,
     rows,
     ...props
-}: GridProps) => {
-    const hasWindow = typeof window !== 'undefined' && window.innerWidth;
-    const [innerWidth, setInnerWidth] = React.useState<number>(
-        hasWindow ? window.innerWidth : 0
-    );
-    // Default behavior is to use the breakpoints defined in the theme, but if the user doesn't use
-    // the ThemeProvider it instead uses the breakpoints in the RootTheme.
-    const { breakpoints: unsortedBreakpoints } =
-        React.useContext(ThemeContext) || RootTheme;
-
-    React.useEffect(() => {
-        const handleResize = debounce(() => {
-            setInnerWidth(hasWindow ? window.innerWidth : 0);
-        }, DEBOUNCE_DELAY);
-
-        if (hasWindow) {
-            window.addEventListener('resize', handleResize);
-        }
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    return (
-        <StyledGrid
-            areas={areas}
-            className={classNames('anchor-grid', className)}
-            columns={columns}
-            debug={debug}
-            flow={flow}
-            gap={gap}
-            justifyContent={justifyContent}
-            rows={rows}
-            {...props}
-        >
-            <GridContext.Provider
-                value={{
-                    innerWidth,
-                    debug,
-                    breakpoints: sortBreakpoints(unsortedBreakpoints),
-                }}
-            >
-                {children}
-            </GridContext.Provider>
-        </StyledGrid>
-    );
-};
+}: GridProps) => (
+    <StyledGrid
+        areas={areas}
+        className={classNames('anchor-grid', className)}
+        columns={columns}
+        debug={debug}
+        flow={flow}
+        gap={gap}
+        justifyContent={justifyContent}
+        rows={rows}
+        {...props}
+    >
+        <GridContext.Provider value={{ debug }}>
+            {children}
+        </GridContext.Provider>
+    </StyledGrid>
+);
