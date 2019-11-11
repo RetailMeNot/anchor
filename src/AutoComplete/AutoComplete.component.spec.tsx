@@ -70,4 +70,15 @@ describe('Component: AutoComplete', () => {
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it('should pass additional input attributes via inputProps', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <AutoComplete inputProps={{ autoCapitalize: 'false' }} />
+            </ThemeProvider>
+        );
+        const wrapper = mount(subject);
+
+        expect(wrapper.find({ autoCapitalize: 'false' })).toBeDefined();
+    });
 });

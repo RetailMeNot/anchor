@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 // COMPONENTS
 import { Input } from '../Form';
+import { InputPropsType } from '../Form/Input/Input.component';
 import { ResultsContainer } from './ResultsContainer';
 
 const { useState, useRef } = React;
@@ -33,7 +34,7 @@ interface AutoCompleteProps {
     shadow?: boolean;
     // TODO: Allow children
     resultTemplate?: (props: any) => any;
-    inputComponent?: any;
+    inputProps?: InputPropsType;
     prefix?: any;
     suffix?: any;
     // Event Handlers
@@ -104,7 +105,7 @@ export const AutoComplete = ({
     color = 'text.light',
     dataSource = [],
     debug = false,
-    inputComponent = Input,
+    inputProps,
     name = '',
     onChange = () => null,
     onFilter = () => null,
@@ -165,30 +166,25 @@ export const AutoComplete = ({
             })}
             {...props}
         >
-            {/*
-                    This can render a custom input component and passed props. This custom input
-                    must be wrapped in forwardRef for this to work. Uses Input by default. Ex:
-
-                    const CustomInput = React.forwardRef(
-                        ({...props}) => <Input {...props} autoCapitalize="off" />
-                    );
-                */
-            React.createElement(inputComponent, {
-                ariaLabel: name.length
-                    ? `auto-complete-${name.toLowerCase()}`
-                    : 'auto-complete',
-                value: term,
-                ref: inputRef,
-                size: size,
-                prefix: prefix,
-                suffix: suffix,
-                placeholder: placeholder,
-                onFocus: () => setIsFocused(true),
-                onBlur: () => setIsFocused(false),
-                onChange: (newValue: string) => {
+            <Input
+                ariaLabel={
+                    name.length
+                        ? `auto-complete-${name.toLowerCase()}`
+                        : 'auto-complete'
+                }
+                inputProps={inputProps}
+                value={term}
+                ref={inputRef}
+                size={size}
+                prefix={prefix}
+                suffix={suffix}
+                placeholder={placeholder}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                onChange={(newValue: string) => {
                     changeSearchTerm(newValue);
-                },
-                onKeyDown: (event: React.KeyboardEvent) => {
+                }}
+                onKeyDown={(event: React.KeyboardEvent) => {
                     switch (event.keyCode) {
                         case EventKeyCodes.TAB:
                         case EventKeyCodes.ENTER:
@@ -218,10 +214,10 @@ export const AutoComplete = ({
                             }
                             break;
                     }
-                },
-                name: 'auto-complete',
-                className: 'auto-complete-input',
-            })}
+                }}
+                name="auto-complete"
+                className="auto-complete-input"
+            />
 
             {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
