@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Form/Input should be defined 1`] = `
+.c0 {
+  display: block;
+  position: relative;
+  border: solid thin #D3D3D3;
+  border-radius: 4px;
+  cursor: text;
+  box-sizing: border-box;
+  min-width: 5rem;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 3.125rem;
+  padding: 0.25rem;
+}
+
+.c0::-webkit-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c0::-moz-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c0:-ms-input-placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c0::placeholder {
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #808080;
+}
+
+.c0.focus {
+  border-color: #808080;
+}
+
+.c0 label {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  height: 1.4rem;
+  -webkit-transform: translate(0,0.6rem) scale(1);
+  -ms-transform: translate(0,0.6rem) scale(1);
+  transform: translate(0,0.6rem) scale(1);
+}
+
+.c0 label.lift {
+  -webkit-transform: translate(0,0) scale(1);
+  -ms-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1);
+}
+
+.c0 input {
+  height: 1rem;
+  font-size: 0.875rem;
+}
+
+.c2 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  padding: 0 0.25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  outline: none !important;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  background-color: transparent;
+  z-index: 1;
+  color: #323232;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+}
+
+.c3[type='number']::-webkit-inner-spin-button,
+.c3[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c3:placeholder-shown + label {
+  cursor: text;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+<div
+  className="c0 anchor-input"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <input
+        className="c3"
+        name="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;

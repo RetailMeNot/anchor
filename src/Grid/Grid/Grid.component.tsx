@@ -88,10 +88,10 @@ export const Grid = ({
     rows,
     ...props
 }: GridProps) => {
+    const hasWindow = typeof window !== 'undefined' && window.innerWidth;
     const [innerWidth, setInnerWidth] = React.useState<number>(
-        window ? window.innerWidth : 0
+        hasWindow ? window.innerWidth : 0
     );
-    const hasWindow = window && window.innerWidth;
     // Default behavior is to use the breakpoints defined in the theme, but if the user doesn't use
     // the ThemeProvider it instead uses the breakpoints in the RootTheme.
     const { breakpoints: unsortedBreakpoints } =

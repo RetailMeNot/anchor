@@ -18,6 +18,10 @@ const {
     createRef,
 } = React;
 
+export type InputPropsType = {
+    [key: string]: string;
+};
+
 type InputTypes =
     // | 'button'
     // | 'checkbox'
@@ -50,26 +54,26 @@ type InputEventHandler = (
 
 interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
     // Identifiers
-    id?: string;
     className?: string;
+    id?: string;
     name?: string;
     // Value Assignment
     value?: InputContentType;
     // Presentation
+    ariaLabel?: string;
     autoFocus?: boolean;
     disabled?: boolean;
     // fullWidth?: boolean;
-    readOnly?: boolean;
-    placeholder?: string;
     label?: string;
-    ariaLabel?: string;
+    placeholder?: string;
+    readOnly?: boolean;
     // TODO: buttons?
     prefix?: any;
-    suffix?: any;
     size?: 'sm' | 'md' | 'lg';
+    suffix?: any;
     type?: InputTypes;
     // Overrides
-    inputProps?: any;
+    inputProps?: InputPropsType;
     // Event Handlers
     onChange?: InputEventHandler;
     onBlur?: InputEventHandler;
@@ -212,6 +216,7 @@ export const Input = forwardRef(
     (
         {
             className,
+            inputProps,
             onBlur = () => null,
             onKeyDown = () => null,
             onKeyUp = () => null,
@@ -301,6 +306,8 @@ export const Input = forwardRef(
                             value={inputValue}
                             type={type}
                             placeholder={placeholder}
+                            {...inputProps}
+                            {...props}
                         />
                         {label && (
                             <Typography
