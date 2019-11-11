@@ -186,29 +186,6 @@ const AnchorDocsTheme = merge({}, RootTheme, {
         base: 'solid thin #E7E7E7',
         dark: 'solid thin #D3D3D3',
     },
-    awesomegrid: {
-        breakpoints: {
-            xs: 1,
-            sm: rem(StandardBreakpoints.sm.min),
-            md: rem(StandardBreakpoints.md.min),
-            lg: rem(StandardBreakpoints.lg.min),
-            xl: rem(StandardBreakpoints.xl.min),
-        },
-        container: {
-            xs: 'full',
-            sm: 'full',
-            md: 'full',
-            lg: 'full',
-            xl: 'full',
-        },
-        paddingWidth: {
-            xs: 0,
-            sm: 0,
-            md: 0,
-            lg: 0,
-            xl: 0,
-        },
-    },
 });
 
 export const Page = ({
@@ -227,7 +204,6 @@ export const Page = ({
 
                 <StyledHeader>
                     <Grid>
-                        {/* Formerly HamburgerCol */}
                         <Cell width={{xs: 1, md: 0}} middle center>
                             <Button
                                 variant="minimal"
@@ -238,7 +214,6 @@ export const Page = ({
                             />
                         </Cell>
 
-                        {/* Formerly LogoCol */}
                         <Cell width={{xs: 2, md: 3, xl: 2}} middle>
                             <StyledLogoContainer to="/">
                                 <img
@@ -248,12 +223,10 @@ export const Page = ({
                             </StyledLogoContainer>
                         </Cell>
 
-                        {/* Formerly SearchCol */}
                         <Cell width={{xs: 0, md: 6}} middle>
                             <SearchInput />
                         </Cell>
 
-                        {/* Formerly CenteredCol */}
                         <Cell width={{xs: 9, md: 3, xl: 4}} middle>
                             <StyledPrimaryNav>
                                 <Typography
@@ -270,7 +243,6 @@ export const Page = ({
                 </StyledHeader>
 
                 <Grid>
-                    {/* Formerly SectionNavCol */}
                     <Cell width={{xs: 0, md: 3, xl: 2 }}>
                         <FixedBody sectionNavOpen={sectionNavOpen} />
 
@@ -279,7 +251,6 @@ export const Page = ({
                         </StyledSectionNav>
                     </Cell>
 
-                    {/* Formerly a Col */}
                     <Cell width={{xs: 12, md: 9, xl: 10 }}>
                         <StyledContentMain>
                             <br />
