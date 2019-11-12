@@ -7,6 +7,7 @@ import { config } from 'react-awesome-styled-grid';
 import {
     Cell,
     Grid,
+    ResponsiveProvider,
     RootTheme,
     ThemeProvider,
 } from '@retailmenot/anchor';
@@ -140,81 +141,83 @@ const StyledFooter = styled('footer')`
 
 export const IndexPage = (): React.ReactElement<any> => (
     <ThemeProvider theme={RootTheme}>
-        <StyledIndexPage>
-            <TempOverride />
+        <ResponsiveProvider>
+            <StyledIndexPage>
+                <TempOverride />
 
-            <HomeTopNav contentWidth={CONTENT_WIDTH} />
+                <HomeTopNav contentWidth={CONTENT_WIDTH} />
 
-            <StyledIntro>
-                <Link to="/overview">
-                    <Grid>
-                        <Cell width={{xs: 0, md: 12}}>
-                            <StyledLogo
-                                src={withPrefix(
-                                    '/images/anchor-logo-horizontal.svg'
-                                )}
+                <StyledIntro>
+                    <Link to="/overview">
+                        <Grid>
+                            <Cell width={{xs: 0, md: 12}}>
+                                <StyledLogo
+                                    src={withPrefix(
+                                        '/images/anchor-logo-horizontal.svg'
+                                    )}
+                                />
+                            </Cell>
+                            <Cell width={{xs: 12, md: 0}}>
+                                <StyledLogo
+                                    src={withPrefix(
+                                        '/images/anchor-logo.svg'
+                                    )}
+                                />
+                            </Cell>
+                        </Grid>
+                    </Link>
+
+                    <StyledCaption>
+                        Anchor is a design system by{' '}
+                        <strong>RetailMeNot</strong>, fostered with a sense
+                        of collaboration, community, and scalability. We
+                        hope it's as useful for you as it is for us.
+                    </StyledCaption>
+                </StyledIntro>
+
+                <StyledContainer>
+                    <Grid gap="2rem">
+                        <Cell width={{xs: 12, md: 6}}>
+                            <HomeCard
+                                description="Check out our components & documentation."
+                                imgSrc="/images/developer-icon.svg"
+                                title="Developers"
+                                to="/components"
                             />
                         </Cell>
-                        <Cell width={{xs: 12, md: 0}}>
-                            <StyledLogo
-                                src={withPrefix(
-                                    '/images/anchor-logo.svg'
-                                )}
+                        <Cell width={{xs: 12, md: 6}} left={{xs: 0, md: 7}} top={{xs: 2, md: 1 }}>
+                            <HomeCard
+                                description="Take a look at our design philosophy & human interface guidelines."
+                                imgSrc="/images/designer-icon.svg"
+                                title="Designers"
+                                disabled
                             />
                         </Cell>
                     </Grid>
-                </Link>
+                </StyledContainer>
 
-                <StyledCaption>
-                    Anchor is a design system by{' '}
-                    <strong>RetailMeNot</strong>, fostered with a sense
-                    of collaboration, community, and scalability. We
-                    hope it's as useful for you as it is for us.
-                </StyledCaption>
-            </StyledIntro>
+                <StyledOcean>
+                    <Wave duration="89s" top="0" image={1} />
+                    <Wave duration="88s" top="10px" image={5} />
+                    <Wave duration="85s" top="20px" image={4} />
+                    <Wave duration="62s" top="50px" image={3} />
+                    <Wave duration="65s" top="80px" image={2} />
+                    <Wave duration="67s" top="120px" image={1} />
+                </StyledOcean>
 
-            <StyledContainer>
-                <Grid gap="2rem">
-                    <Cell width={{xs: 12, md: 6}}>
-                        <HomeCard
-                            description="Check out our components & documentation."
-                            imgSrc="/images/developer-icon.svg"
-                            title="Developers"
-                            to="/components"
-                        />
-                    </Cell>
-                    <Cell width={{xs: 12, md: 6}} left={{xs: 0, md: 7}} top={{xs: 2, md: 1 }}>
-                        <HomeCard
-                            description="Take a look at our design philosophy & human interface guidelines."
-                            imgSrc="/images/designer-icon.svg"
-                            title="Designers"
-                            disabled
-                        />
-                    </Cell>
-                </Grid>
-            </StyledContainer>
-
-            <StyledOcean>
-                <Wave duration="89s" top="0" image={1} />
-                <Wave duration="88s" top="10px" image={5} />
-                <Wave duration="85s" top="20px" image={4} />
-                <Wave duration="62s" top="50px" image={3} />
-                <Wave duration="65s" top="80px" image={2} />
-                <Wave duration="67s" top="120px" image={1} />
-            </StyledOcean>
-
-            <StyledFooter>
-                <a href="//retailmenot.com" target="_blank">
-                    <img src={withPrefix('/images/r-mark.svg')} />
-                </a>
-                <a
-                    href="//github.com/RetailMeNot/anchor"
-                    target="_blank"
-                >
-                    <img src={withPrefix('/images/octocat.svg')} />
-                </a>
-            </StyledFooter>
-        </StyledIndexPage>
+                <StyledFooter>
+                    <a href="//retailmenot.com" target="_blank">
+                        <img src={withPrefix('/images/r-mark.svg')} />
+                    </a>
+                    <a
+                        href="//github.com/RetailMeNot/anchor"
+                        target="_blank"
+                    >
+                        <img src={withPrefix('/images/octocat.svg')} />
+                    </a>
+                </StyledFooter>
+            </StyledIndexPage>
+        </ResponsiveProvider>
     </ThemeProvider>
 );
 

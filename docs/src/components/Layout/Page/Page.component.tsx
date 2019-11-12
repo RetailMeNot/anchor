@@ -14,8 +14,8 @@ import {
     Cell,
     Grid,
     Hamburger,
+    ResponsiveProvider,
     RootTheme,
-    StandardBreakpoints,
     ThemeProvider,
     Typography,
 } from '@retailmenot/anchor';
@@ -197,74 +197,76 @@ export const Page = ({
 
     return (
         <ThemeProvider theme={AnchorDocsTheme}>
-            <StyledPageElement className={classNames(className)}>
-                <Helmet htmlAttributes={{ lang: 'en' }} />
+            <ResponsiveProvider>
+                <StyledPageElement className={classNames(className)}>
+                    <Helmet htmlAttributes={{ lang: 'en' }} />
 
-                <GlobalCSS />
+                    <GlobalCSS />
 
-                <StyledHeader>
-                    <Grid>
-                        <Cell width={{xs: 1, md: 0}} middle center>
-                            <Button
-                                variant="minimal"
-                                prefix={<Hamburger />}
-                                onClick={() =>
-                                    setSectionNavOpen(!sectionNavOpen)
-                                }
-                            />
-                        </Cell>
-
-                        <Cell width={{xs: 2, md: 3, xl: 2}} middle>
-                            <StyledLogoContainer to="/">
-                                <img
-                                    alt="Anchor Logo Horizontal"
-                                    src={logo}
+                    <StyledHeader>
+                        <Grid>
+                            <Cell width={{xs: 1, md: 0}} middle center>
+                                <Button
+                                    variant="minimal"
+                                    prefix={<Hamburger />}
+                                    onClick={() =>
+                                        setSectionNavOpen(!sectionNavOpen)
+                                    }
                                 />
-                            </StyledLogoContainer>
+                            </Cell>
+
+                            <Cell width={{xs: 2, md: 3, xl: 2}} middle>
+                                <StyledLogoContainer to="/">
+                                    <img
+                                        alt="Anchor Logo Horizontal"
+                                        src={logo}
+                                    />
+                                </StyledLogoContainer>
+                            </Cell>
+
+                            <Cell width={{xs: 0, md: 6}} middle>
+                                <SearchInput />
+                            </Cell>
+
+                            <Cell width={{xs: 9, md: 3, xl: 4}} middle>
+                                <StyledPrimaryNav>
+                                    <Typography
+                                        tag="a"
+                                        weight={600}
+                                        className="active"
+                                        href="https://github.com/RetailMeNot/anchor"
+                                    >
+                                        Github
+                                    </Typography>
+                                </StyledPrimaryNav>
+                            </Cell>
+                        </Grid>
+                    </StyledHeader>
+
+                    <Grid>
+                        <Cell width={{xs: 0, md: 3, xl: 2 }}>
+                            <FixedBody sectionNavOpen={sectionNavOpen} />
+
+                            <StyledSectionNav sectionNavOpen={sectionNavOpen}>
+                                <EnhancedSectionNavigation />
+                            </StyledSectionNav>
                         </Cell>
 
-                        <Cell width={{xs: 0, md: 6}} middle>
-                            <SearchInput />
-                        </Cell>
+                        <Cell width={{xs: 12, md: 9, xl: 10 }}>
+                            <StyledContentMain>
+                                <br />
+                                <MDXProvider components={MDXComponents}>
+                                    {children}
+                                </MDXProvider>
 
-                        <Cell width={{xs: 9, md: 3, xl: 4}} middle>
-                            <StyledPrimaryNav>
-                                <Typography
-                                    tag="a"
-                                    weight={600}
-                                    className="active"
-                                    href="https://github.com/RetailMeNot/anchor"
-                                >
-                                    Github
-                                </Typography>
-                            </StyledPrimaryNav>
+                                <EnhancedNextPrevious section="components" />
+
+                                {enableFooter && <Footer />}
+                            </StyledContentMain>
                         </Cell>
                     </Grid>
-                </StyledHeader>
-
-                <Grid>
-                    <Cell width={{xs: 0, md: 3, xl: 2 }}>
-                        <FixedBody sectionNavOpen={sectionNavOpen} />
-
-                        <StyledSectionNav sectionNavOpen={sectionNavOpen}>
-                            <EnhancedSectionNavigation />
-                        </StyledSectionNav>
-                    </Cell>
-
-                    <Cell width={{xs: 12, md: 9, xl: 10 }}>
-                        <StyledContentMain>
-                            <br />
-                            <MDXProvider components={MDXComponents}>
-                                {children}
-                            </MDXProvider>
-
-                            <EnhancedNextPrevious section="components" />
-
-                            {enableFooter && <Footer />}
-                        </StyledContentMain>
-                    </Cell>
-                </Grid>
-            </StyledPageElement>
+                </StyledPageElement>
+            </ResponsiveProvider>
         </ThemeProvider>
     );
 };
