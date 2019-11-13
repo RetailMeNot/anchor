@@ -26,10 +26,10 @@ interface CellProps {
 }
 
 interface CellState {
-    left?: any;
-    top?: any;
-    height?: any;
-    width?: any;
+    left?: object | number | undefined;
+    top?: object | number | undefined;
+    height?: object | number | undefined;
+    width?: object | number | undefined;
     responsiveTop?: any;
     responsiveHeight?: any;
     responsiveWidth?: any;
