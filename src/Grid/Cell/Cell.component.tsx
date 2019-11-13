@@ -38,10 +38,6 @@ interface CellState {
 }
 
 const StyledCell = styled(ACell)<CellProps>`
-    &.hide {
-        display: none;
-    }
-
     ${({ debug }) =>
         debug
             ? css`
@@ -66,13 +62,13 @@ export const Cell = ({
     const { debug: contextDebug } = React.useContext(GridContext);
     const [state, setState] = React.useState<CellState>({
         height: createResponsiveObject(height, breakpoints),
+        left: createResponsiveObject(left, breakpoints),
         top: createResponsiveObject(top, breakpoints),
         width: createResponsiveObject(width, breakpoints),
-        left: createResponsiveObject(left, breakpoints),
         responsiveHeight: false,
+        responsiveLeft: false,
         responsiveTop: false,
         responsiveWidth: false,
-        responsiveLeft: false,
         ready: false,
     });
 
@@ -80,69 +76,21 @@ export const Cell = ({
         setState({
             ...state,
             responsiveHeight: getResponsiveValue(state.height, innerWidth, breakpoints),
+            responsiveLeft: getResponsiveValue(state.left, innerWidth, breakpoints),
             responsiveTop: getResponsiveValue(state.top, innerWidth, breakpoints),
             responsiveWidth: getResponsiveValue(state.width, innerWidth, breakpoints),
-            responsiveLeft: getResponsiveValue(state.left, innerWidth, breakpoints),
             ready: true,
         });
     }, [innerWidth]);
 
-    /*
-        Iterates over the props in cellState and formats any responsive object. It does nothing to
-        a prop that is a number or undefined.
-    */
-    // React.useLayoutEffect(() => {
-    //     const obj: CellProps = {};
-
-    //     Object.keys(state).forEach(key => {
-    //         obj[key] = createResponsiveObject(state[key], breakpoints);
-    //     });
-
-    //     setState(obj);
-    // }, []);
-
-    // I hate having these 4 blobs of code, but I haven't been able to find a better way to handle
-    // updating the responsive values quickly. Setting them via state always causes TS errors
-    // because there's a delay.
-    // const responsiveWidth = getResponsiveValue(state.width, innerWidth, breakpoints);
-
-    // const responsiveLeft = getResponsiveValue(state.left, innerWidth, breakpoints);
-
-    // const responsiveHeight = getResponsiveValue(state.height, innerWidth, breakpoints);
-
-    // const responsiveTop = getResponsiveValue(state.top, innerWidth, breakpoints);
-
-    // const responsiveWidth = getResponsiveValue(
-    //     createResponsiveObject(width, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveLeft = getResponsiveValue(
-    //     createResponsiveObject(left, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveHeight = getResponsiveValue(
-    //     createResponsiveObject(height, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveTop = getResponsiveValue(
-    //     createResponsiveObject(top, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    return ( state.ready ? (
+    // Without the ready check, there can be a brief blip where the user will see the wrong
+    // breakpoint on page load. Additionally, a responsiveWidth of 0 means don't show the Cell.
+    return ( (state.ready && state.responsiveWidth !== 0) ? (
         <StyledCell
             {...props}
             className={classNames(
                 'anchor-cell',
-                className,
-                state.responsiveWidth === 0 && 'hide'
+                className
             )}
             center={center}
             debug={contextDebug || debug}
