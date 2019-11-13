@@ -25,6 +25,18 @@ interface CellProps {
     width?: number | BreakpointType | undefined;
 }
 
+interface CellState {
+    left?: any;
+    top?: any;
+    height?: any;
+    width?: any;
+    responsiveTop?: any;
+    responsiveHeight?: any;
+    responsiveWidth?: any;
+    responsiveLeft?: any;
+    ready: boolean;
+}
+
 const StyledCell = styled(ACell)<CellProps>`
     &.hide {
         display: none;
@@ -52,12 +64,28 @@ export const Cell = ({
 }: CellProps) => {
     const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
     const { debug: contextDebug } = React.useContext(GridContext);
-    // const [state, setState] = React.useState<CellProps>({
-    //     height,
-    //     left,
-    //     top,
-    //     width,
-    // });
+    const [state, setState] = React.useState<CellState>({
+        height: createResponsiveObject(height, breakpoints),
+        top: createResponsiveObject(top, breakpoints),
+        width: createResponsiveObject(width, breakpoints),
+        left: createResponsiveObject(left, breakpoints),
+        responsiveHeight: false,
+        responsiveTop: false,
+        responsiveWidth: false,
+        responsiveLeft: false,
+        ready: false,
+    });
+
+    React.useEffect(() => {
+        setState({
+            ...state,
+            responsiveHeight: getResponsiveValue(state.height, innerWidth, breakpoints),
+            responsiveTop: getResponsiveValue(state.top, innerWidth, breakpoints),
+            responsiveWidth: getResponsiveValue(state.width, innerWidth, breakpoints),
+            responsiveLeft: getResponsiveValue(state.left, innerWidth, breakpoints),
+            ready: true,
+        });
+    }, [innerWidth]);
 
     /*
         Iterates over the props in cellState and formats any responsive object. It does nothing to
@@ -84,47 +112,47 @@ export const Cell = ({
 
     // const responsiveTop = getResponsiveValue(state.top, innerWidth, breakpoints);
 
-    const responsiveWidth = getResponsiveValue(
-        createResponsiveObject(width, breakpoints),
-        innerWidth,
-        breakpoints
-    );
+    // const responsiveWidth = getResponsiveValue(
+    //     createResponsiveObject(width, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
 
-    const responsiveLeft = getResponsiveValue(
-        createResponsiveObject(left, breakpoints),
-        innerWidth,
-        breakpoints
-    );
+    // const responsiveLeft = getResponsiveValue(
+    //     createResponsiveObject(left, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
 
-    const responsiveHeight = getResponsiveValue(
-        createResponsiveObject(height, breakpoints),
-        innerWidth,
-        breakpoints
-    );
+    // const responsiveHeight = getResponsiveValue(
+    //     createResponsiveObject(height, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
 
-    const responsiveTop = getResponsiveValue(
-        createResponsiveObject(top, breakpoints),
-        innerWidth,
-        breakpoints
-    );
+    // const responsiveTop = getResponsiveValue(
+    //     createResponsiveObject(top, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
 
-    return (
+    return ( state.ready ? (
         <StyledCell
             {...props}
             className={classNames(
                 'anchor-cell',
                 className,
-                responsiveWidth === 0 && 'hide'
+                state.responsiveWidth === 0 && 'hide'
             )}
             center={center}
             debug={contextDebug || debug}
-            height={responsiveHeight}
-            left={responsiveLeft}
+            height={state.responsiveHeight}
+            left={state.responsiveLeft}
             middle={middle}
-            top={responsiveTop}
-            width={responsiveWidth}
+            top={state.responsiveTop}
+            width={state.responsiveWidth}
         >
             {children}
-        </StyledCell>
+        </StyledCell>) : null
     );
 };
