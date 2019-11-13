@@ -37,6 +37,28 @@ storiesOf('Components/Grid/Adaptor', module)
             </StyledStory>
         </ThemeProvider>
     ))
+    .add('Custom Adaptor, From & To', () => (
+        <ThemeProvider theme={RootTheme}>
+            <ResponsiveProvider debug>
+                <Typography tag="h2">Resize the Window</Typography>
+                <CustomAdaptor from="xs" to="md">
+                    <Typography>
+                        I only show up between the xs and md breakpoints.
+                    </Typography>
+                </CustomAdaptor>
+                <CustomAdaptor from="md" to="xl">
+                    <Typography>
+                        I only show up between the md and xl breakpoints.
+                    </Typography>
+                </CustomAdaptor>
+                <CustomAdaptor from="xl">
+                    <Typography>
+                        I only show up at xl breakpoint and up.
+                    </Typography>
+                </CustomAdaptor>
+            </ResponsiveProvider>
+        </ThemeProvider>
+    ))
     .add('Fixed Adaptors', () => {
         return (
             <ThemeProvider theme={RootTheme}>

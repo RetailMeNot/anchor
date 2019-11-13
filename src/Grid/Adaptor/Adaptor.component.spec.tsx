@@ -10,7 +10,30 @@ import { RootTheme } from '../../theme';
 
 describe('Component: Adaptor', () => {
     it('should be defined', () => {
-        const subject = <CustomAdaptor minWidth={200} />;
+        const subject = (
+            <ResponsiveProvider>
+                <CustomAdaptor from="xs" to="xl" />;
+            </ResponsiveProvider>
+        );
+
+        const wrapper = mount(subject);
+        const component = shallow(subject);
+
+        expect(subject).toBeDefined();
+        expect(wrapper).toBeDefined();
+        expect(component).toBeDefined();
+        const tree = renderer.create(subject).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("should warn the user that they can't only provide the to prop without from", () => {
+        const subject = (
+            <ResponsiveProvider>
+                <CustomAdaptor to="xl" />;
+            </ResponsiveProvider>
+        );
+
         const wrapper = mount(subject);
         const component = shallow(subject);
 

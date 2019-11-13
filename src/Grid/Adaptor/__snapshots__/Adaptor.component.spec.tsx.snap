@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Adaptor should be defined 1`] = `null`;
+exports[`Component: Adaptor should be defined 1`] = `";"`;
+
+exports[`Component: Adaptor should warn the user that they can't only provide the to prop without from 1`] = `";"`;
 
 exports[`Component: LG should be defined 1`] = `null`;
 

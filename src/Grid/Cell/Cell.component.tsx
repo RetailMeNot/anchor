@@ -75,23 +75,36 @@ export const Cell = ({
     React.useEffect(() => {
         setState({
             ...state,
-            responsiveHeight: getResponsiveValue(state.height, innerWidth, breakpoints),
-            responsiveLeft: getResponsiveValue(state.left, innerWidth, breakpoints),
-            responsiveTop: getResponsiveValue(state.top, innerWidth, breakpoints),
-            responsiveWidth: getResponsiveValue(state.width, innerWidth, breakpoints),
+            responsiveHeight: getResponsiveValue(
+                state.height,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveLeft: getResponsiveValue(
+                state.left,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveTop: getResponsiveValue(
+                state.top,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveWidth: getResponsiveValue(
+                state.width,
+                innerWidth,
+                breakpoints
+            ),
             ready: true,
         });
     }, [innerWidth]);
 
     // Without the ready check, there can be a brief blip where the user will see the wrong
     // breakpoint on page load. Additionally, a responsiveWidth of 0 means don't show the Cell.
-    return ( (state.ready && state.responsiveWidth !== 0) ? (
+    return state.ready && state.responsiveWidth !== 0 ? (
         <StyledCell
             {...props}
-            className={classNames(
-                'anchor-cell',
-                className
-            )}
+            className={classNames('anchor-cell', className)}
             center={center}
             debug={contextDebug || debug}
             height={state.responsiveHeight}
@@ -101,6 +114,6 @@ export const Cell = ({
             width={state.responsiveWidth}
         >
             {children}
-        </StyledCell>) : null
-    );
+        </StyledCell>
+    ) : null;
 };
