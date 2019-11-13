@@ -50,9 +50,13 @@ export function sortBreakpoints(unsortedBreakpoints: object) {
     createResponsiveObject(obj); // { xs: 1, sm: 1, md: 3, lg: 8, xl: 8}
 */
 export function createResponsiveObject(
-    responsiveSettings: object,
+    responsiveSettings: object | number | undefined,
     sortedBreakpoints: BreakpointType[]
 ) {
+    if (typeof responsiveSettings !== 'object') {
+        return responsiveSettings;
+    }
+
     let lastValid = Object.keys(sortedBreakpoints)[0];
 
     return sortedBreakpoints.reduce((acc: object, next: BreakpointType) => {
@@ -110,10 +114,14 @@ export function getBreakpointKey(
     getResponsiveValue(settings, innerWidth, sortedBreakpoints); // 3
 */
 export function getResponsiveValue(
-    responsiveSettings: object | number,
+    responsiveSettings: object | number | undefined,
     innerWidth: number,
     sortedBreakpoints: BreakpointType[]
 ) {
+    if (typeof responsiveSettings !== 'object') {
+        return responsiveSettings;
+    }
+
     // Gets the key based on the breakpoint (i.e. xs, sm, etc)
     const breakpointKey = getBreakpointKey(innerWidth, sortedBreakpoints);
 

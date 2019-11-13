@@ -5,10 +5,10 @@ import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Grid, Cell } from '../index';
 import {
-    createResponsiveObject,
+    // createResponsiveObject,
     getBreakpointKey,
     getMinMax,
-    getResponsiveValue,
+    // getResponsiveValue,
     sortBreakpoints,
 } from '../utils';
 import { RootTheme } from '../../theme';
@@ -51,13 +51,13 @@ describe('Component: Grid & Cell', () => {
 
 describe('Utilities: Grid & Cell', () => {
     const testObject = { xs: 0, md: 900, sm: 600 };
-    const responsiveSettings = { xs: 12, md: 6 };
+    // const responsiveSettings = { xs: 12, md: 6 };
     const innerWidth = 780;
     const sortedBreakpoints = sortBreakpoints(testObject);
-    const responsiveObject = createResponsiveObject(
-        responsiveSettings,
-        sortedBreakpoints
-    );
+    // const responsiveObject = createResponsiveObject(
+    //     responsiveSettings,
+    //     sortedBreakpoints
+    // );
 
     it('sortBreakpoints should return a sorted array from an object', () => {
         const lastBreakpoint = sortedBreakpoints[sortedBreakpoints.length - 1];
@@ -66,13 +66,13 @@ describe('Utilities: Grid & Cell', () => {
         expect(value).toEqual(900);
     });
 
-    it('createResponsiveObject should return a mobile first object based on supplied breakpoints', () => {
-        const key = Object.keys(responsiveObject)[1];
-        const value = Object.values(responsiveObject)[1];
+    // it('createResponsiveObject should return a mobile first object based on supplied breakpoints', () => {
+    //     const key = Object.keys(responsiveObject)[1];
+    //     const value = Object.values(responsiveObject)[1];
 
-        expect(key).toEqual('sm');
-        expect(value).toEqual(12);
-    });
+    //     expect(key).toEqual('sm');
+    //     expect(value).toEqual(12);
+    // });
 
     it('getBreakpointKey should return the key associated to the current innerWidth', () => {
         const value = getBreakpointKey(innerWidth, sortedBreakpoints);
@@ -80,15 +80,15 @@ describe('Utilities: Grid & Cell', () => {
         expect(value).toEqual('sm');
     });
 
-    it('getResponsiveValue should return the value associated from a breakpoint based on window width.', () => {
-        const value = getResponsiveValue(
-            responsiveObject,
-            innerWidth,
-            sortedBreakpoints
-        );
+    // it('getResponsiveValue should return the value associated from a breakpoint based on window width.', () => {
+    //     const value = getResponsiveValue(
+    //         responsiveObject,
+    //         innerWidth,
+    //         sortedBreakpoints
+    //     );
 
-        expect(value).toEqual(12);
-    });
+    //     expect(value).toEqual(12);
+    // });
 
     it("getMinMax should return the minimum and maximum pixel values with a given window's innerWidth", () => {
         const index = 1;

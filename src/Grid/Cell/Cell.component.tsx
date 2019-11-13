@@ -52,52 +52,61 @@ export const Cell = ({
 }: CellProps) => {
     const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
     const { debug: contextDebug } = React.useContext(GridContext);
-    const [state, setState] = React.useState<CellProps>({
-        height,
-        left,
-        top,
-        width,
-    });
+    // const [state, setState] = React.useState<CellProps>({
+    //     height,
+    //     left,
+    //     top,
+    //     width,
+    // });
 
     /*
         Iterates over the props in cellState and formats any responsive object. It does nothing to
         a prop that is a number or undefined.
     */
-    React.useLayoutEffect(() => {
-        const obj: CellProps = {};
+    // React.useLayoutEffect(() => {
+    //     const obj: CellProps = {};
 
-        Object.keys(state).forEach(key => {
-            obj[key] =
-                typeof state[key] === 'number' || state[key] === undefined
-                    ? state[key]
-                    : createResponsiveObject(state[key], breakpoints);
-        });
+    //     Object.keys(state).forEach(key => {
+    //         obj[key] = createResponsiveObject(state[key], breakpoints);
+    //     });
 
-        setState(obj);
-    }, []);
+    //     setState(obj);
+    // }, []);
 
     // I hate having these 4 blobs of code, but I haven't been able to find a better way to handle
     // updating the responsive values quickly. Setting them via state always causes TS errors
     // because there's a delay.
-    const responsiveWidth =
-        typeof state.width === 'number' || state.width === undefined
-            ? state.width
-            : getResponsiveValue(state.width, innerWidth, breakpoints);
+    // const responsiveWidth = getResponsiveValue(state.width, innerWidth, breakpoints);
 
-    const responsiveLeft =
-        typeof state.left === 'number' || state.left === undefined
-            ? state.left
-            : getResponsiveValue(state.left, innerWidth, breakpoints);
+    // const responsiveLeft = getResponsiveValue(state.left, innerWidth, breakpoints);
 
-    const responsiveHeight =
-        typeof state.height === 'number' || state.height === undefined
-            ? state.height
-            : getResponsiveValue(state.height, innerWidth, breakpoints);
+    // const responsiveHeight = getResponsiveValue(state.height, innerWidth, breakpoints);
 
-    const responsiveTop =
-        typeof state.top === 'number' || state.top === undefined
-            ? state.top
-            : getResponsiveValue(state.top, innerWidth, breakpoints);
+    // const responsiveTop = getResponsiveValue(state.top, innerWidth, breakpoints);
+
+    const responsiveWidth = getResponsiveValue(
+        createResponsiveObject(width, breakpoints),
+        innerWidth,
+        breakpoints
+    );
+
+    const responsiveLeft = getResponsiveValue(
+        createResponsiveObject(left, breakpoints),
+        innerWidth,
+        breakpoints
+    );
+
+    const responsiveHeight = getResponsiveValue(
+        createResponsiveObject(height, breakpoints),
+        innerWidth,
+        breakpoints
+    );
+
+    const responsiveTop = getResponsiveValue(
+        createResponsiveObject(top, breakpoints),
+        innerWidth,
+        breakpoints
+    );
 
     return (
         <StyledCell
