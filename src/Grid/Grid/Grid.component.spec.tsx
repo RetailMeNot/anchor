@@ -6,6 +6,7 @@ import { ThemeProvider } from '@xstyled/styled-components';
 import { Grid, Cell } from '../index';
 import {
     createResponsiveObject,
+    getBreakpointKey,
     getResponsiveValue,
     sortBreakpoints,
 } from '../utils';
@@ -35,7 +36,7 @@ describe('Component: Grid & Cell', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should hide a cell when set to 0 width', () => {
+    it('should not render a cell when set to 0 width', () => {
         const testSubject = (
             <Grid>
                 <Cell width={0}>Hidden</Cell>
@@ -43,7 +44,7 @@ describe('Component: Grid & Cell', () => {
         );
         const test = mount(testSubject);
 
-        expect(test.find('.anchor-cell.hide').exists()).toBeTruthy();
+        expect(test.find('.anchor-cell').exists()).toBeFalsy();
     });
 });
 
@@ -65,19 +66,23 @@ describe('Utilities: Grid & Cell', () => {
     });
 
     it('createResponsiveObject should return a mobile first object based on supplied breakpoints', () => {
-        const key = Object.keys(responsiveObject)[1];
-        const value = Object.values(responsiveObject)[1];
+        const key = responsiveObject && Object.keys(responsiveObject)[1];
+        const value = responsiveObject && Object.values(responsiveObject)[1];
 
         expect(key).toEqual('sm');
         expect(value).toEqual(12);
     });
 
+    it('getBreakpointKey should return the key associated to the current innerWidth', () => {
+        const value = getBreakpointKey(innerWidth, sortedBreakpoints);
+
+        expect(value).toEqual('sm');
+    });
+
     it('getResponsiveValue should return the value associated from a breakpoint based on window width.', () => {
-        const value = getResponsiveValue(
-            responsiveObject,
-            innerWidth,
-            sortedBreakpoints
-        );
+        const value =
+            responsiveObject &&
+            getResponsiveValue(responsiveObject, innerWidth, sortedBreakpoints);
 
         expect(value).toEqual(12);
     });

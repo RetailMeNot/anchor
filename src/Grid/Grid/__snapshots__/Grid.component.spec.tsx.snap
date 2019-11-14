@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Grid & Cell should be defined 1`] = `
-.c1 {
-  height: 100%;
-  min-width: 0;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
-}
-
-.c1.hide {
-  display: none;
-}
-
 .c0 {
   display: grid;
   height: auto;
@@ -23,18 +12,5 @@ exports[`Component: Grid & Cell should be defined 1`] = `
 
 <div
   className="c0 anchor-grid"
->
-  <div
-    className="c1 anchor-cell"
-    width={1}
-  >
-    Cell 1
-  </div>
-  <div
-    className="c1 anchor-cell"
-    width={1}
-  >
-    Cell 2
-  </div>
-</div>
+/>
 `;

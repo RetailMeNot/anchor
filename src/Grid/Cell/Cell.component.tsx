@@ -10,6 +10,7 @@ import {
     getResponsiveValue,
     GridContext,
 } from '../utils';
+import { ResponsiveContext } from '../ResponsiveProvider';
 
 interface CellProps {
     area?: string;
@@ -24,11 +25,19 @@ interface CellProps {
     width?: number | BreakpointType | undefined;
 }
 
-const StyledCell = styled(ACell)<CellProps>`
-    &.hide {
-        display: none;
-    }
+interface CellState {
+    left?: object | number | undefined;
+    top?: object | number | undefined;
+    height?: object | number | undefined;
+    width?: object | number | undefined;
+    responsiveTop?: any;
+    responsiveHeight?: any;
+    responsiveWidth?: any;
+    responsiveLeft?: any;
+    ready: boolean;
+}
 
+const StyledCell = styled(ACell)<CellProps>`
     ${({ debug }) =>
         debug
             ? css`
@@ -49,73 +58,62 @@ export const Cell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const { breakpoints, debug: contextDebug, innerWidth } = React.useContext(
-        GridContext
-    );
-    const [state, setState] = React.useState<CellProps>({
-        height,
-        left,
-        top,
-        width,
+    const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
+    const { debug: contextDebug } = React.useContext(GridContext);
+    const [state, setState] = React.useState<CellState>({
+        height: createResponsiveObject(height, breakpoints),
+        left: createResponsiveObject(left, breakpoints),
+        top: createResponsiveObject(top, breakpoints),
+        width: createResponsiveObject(width, breakpoints),
+        responsiveHeight: false,
+        responsiveLeft: false,
+        responsiveTop: false,
+        responsiveWidth: false,
+        ready: false,
     });
 
-    /*
-        Iterates over the props in cellState and formats any responsive object. It does nothing to
-        a prop that is a number or undefined.
-    */
     React.useEffect(() => {
-        const obj: CellProps = {};
-
-        Object.keys(state).forEach(key => {
-            obj[key] =
-                typeof state[key] === 'number' || state[key] === undefined
-                    ? state[key]
-                    : createResponsiveObject(state[key], breakpoints);
+        setState({
+            ...state,
+            responsiveHeight: getResponsiveValue(
+                state.height,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveLeft: getResponsiveValue(
+                state.left,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveTop: getResponsiveValue(
+                state.top,
+                innerWidth,
+                breakpoints
+            ),
+            responsiveWidth: getResponsiveValue(
+                state.width,
+                innerWidth,
+                breakpoints
+            ),
+            ready: true,
         });
+    }, [innerWidth]);
 
-        setState(obj);
-    }, []);
-
-    // I hate having these 4 blobs of code, but I haven't been able to find a better way to handle
-    // updating the responsive values quickly. Setting them via state always causes TS errors
-    // because there's a delay.
-    const responsiveWidth =
-        typeof state.width === 'number' || state.width === undefined
-            ? state.width
-            : getResponsiveValue(state.width, innerWidth, breakpoints);
-
-    const responsiveLeft =
-        typeof state.left === 'number' || state.left === undefined
-            ? state.left
-            : getResponsiveValue(state.left, innerWidth, breakpoints);
-
-    const responsiveHeight =
-        typeof state.height === 'number' || state.height === undefined
-            ? state.height
-            : getResponsiveValue(state.height, innerWidth, breakpoints);
-
-    const responsiveTop =
-        typeof state.top === 'number' || state.top === undefined
-            ? state.top
-            : getResponsiveValue(state.top, innerWidth, breakpoints);
-
-    return (
+    // Without the ready check, there can be a brief blip where the user will see the wrong
+    // breakpoint on page load. Additionally, a responsiveWidth of 0 means don't show the Cell.
+    return state.ready && state.responsiveWidth !== 0 ? (
         <StyledCell
             {...props}
-            className={classNames(
-                'anchor-cell',
-                className,
-                responsiveWidth === 0 && 'hide'
-            )}
+            className={classNames('anchor-cell', className)}
             center={center}
             debug={contextDebug || debug}
-            height={responsiveHeight}
-            left={responsiveLeft}
+            height={state.responsiveHeight}
+            left={state.responsiveLeft}
             middle={middle}
-            top={responsiveTop}
-            width={responsiveWidth}
+            top={state.responsiveTop}
+            width={state.responsiveWidth}
         >
             {children}
         </StyledCell>
-    );
+    ) : null;
 };

@@ -5,35 +5,29 @@ import { storiesOf } from '@storybook/react';
 import { number } from '@storybook/addon-knobs';
 // VENDOR
 import styled from '@xstyled/styled-components';
+import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
-import {
-    LegacyDesktop,
-    LegacyPhone,
-    LegacyTablet,
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
-    CustomAdaptor,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-} from './Adaptor.component';
+import { Adaptor } from './Adaptor.component';
+import { ResponsiveContext, ResponsiveProvider } from '../ResponsiveProvider';
+import { RootTheme } from '../../theme';
+import { Typography } from '../../index';
 // README
 import * as README from './README.md';
-import { RootTheme } from '../../theme';
-import { ThemeProvider } from '@xstyled/styled-components';
 
 const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
-const dimension = ({ min, max }: { min?: number; max?: number }): string => {
-    const notSet = 'Not Set';
-    return `(${min ? `${min}px` : `${notSet}`} - ${
-        max ? `${max}px` : `${notSet}`
-    })`;
+const Test = () => {
+    const { current, innerWidth } = React.useContext(ResponsiveContext);
+
+    return (
+        <>
+            <Typography tag="h2">ResponsiveContext</Typography> |
+            <Typography pr="2">{current}</Typography> |
+            <Typography pl="2">{innerWidth}</Typography>
+        </>
+    );
 };
 
 storiesOf('Components/Grid/Adaptor', module)
@@ -42,80 +36,51 @@ storiesOf('Components/Grid/Adaptor', module)
             sidebar: README,
         },
     })
-    .add('Legacy Breakpoints', () => (
+    .add('Adaptor, Custom Breakpoints', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <h4>Resize this window to view the three breakpoints</h4>
-                <LegacyDesktop>
-                    <p>
-                        I am visible on Desktop{' '}
-                        {dimension(LegacyBreakpoints.desktop)}
-                    </p>
-                </LegacyDesktop>
-                <LegacyTablet>
-                    <p>
-                        I am visible on Tablet{' '}
-                        {dimension(LegacyBreakpoints.tablet)}
-                    </p>
-                </LegacyTablet>
-                <LegacyPhone>
-                    <p>
-                        I am visible on Phone{' '}
-                        {dimension(LegacyBreakpoints.phone)}
-                    </p>
-                </LegacyPhone>
-            </StyledStory>
-        </ThemeProvider>
-    ))
-    .add('Standard Breakpoints', () => (
-        <ThemeProvider theme={RootTheme}>
-            <StyledStory>
-                <h4>
-                    Resize this window to view the six different breakpoints
-                </h4>
-                <XS>
-                    <p>
-                        I am visible on xs {dimension(StandardBreakpoints.xs)}
-                    </p>
-                </XS>
-                <SM>
-                    <p>
-                        I am visible on sm {dimension(StandardBreakpoints.sm)}
-                    </p>
-                </SM>
-                <MD>
-                    <p>
-                        I am visible on md {dimension(StandardBreakpoints.md)}
-                    </p>
-                </MD>
-                <LG>
-                    <p>
-                        I am visible on lg {dimension(StandardBreakpoints.lg)}
-                    </p>
-                </LG>
-                <XL>
-                    <p>
-                        I am visible on xl {dimension(StandardBreakpoints.xl)}
-                    </p>
-                </XL>
-                <XXL>
-                    <p>
-                        I am visible on xxl {dimension(StandardBreakpoints.xxl)}
-                    </p>
-                </XXL>
-            </StyledStory>
-        </ThemeProvider>
-    ))
-    .add('Custom Breakpoints', () => (
-        <ThemeProvider theme={RootTheme}>
-            <StyledStory>
-                <h4>Use knobs to set custom breakpoints</h4>
-                <CustomAdaptor
+                <Typography tag="h4">
+                    Use knobs to set custom breakpoints
+                </Typography>
+                <Adaptor
                     minWidth={number('Minimum Width', 1)}
                     maxWidth={number('Maximum Width', 99999)}
                 >
-                    <p>My dimensions are defined by knobs.</p>
-                </CustomAdaptor>
+                    <Typography tag="p" pt="3">
+                        My dimensions are defined by knobs.
+                    </Typography>
+                </Adaptor>
             </StyledStory>
         </ThemeProvider>
-    ));
+    ))
+    .add('Adaptor, From & To', () => (
+        <ThemeProvider theme={RootTheme}>
+            <ResponsiveProvider debug>
+                <Typography tag="h2">Resize the Window</Typography>
+                <Adaptor from="xs" to="md">
+                    <Typography>
+                        I only show up between the xs and md breakpoints.
+                    </Typography>
+                </Adaptor>
+                <Adaptor from="md" to="xl">
+                    <Typography>
+                        I only show up between the md and xl breakpoints.
+                    </Typography>
+                </Adaptor>
+                <Adaptor from="xl">
+                    <Typography>
+                        I only show up at xl breakpoint and up.
+                    </Typography>
+                </Adaptor>
+            </ResponsiveProvider>
+        </ThemeProvider>
+    ))
+    .add('Responsive Context', () => {
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <Test />
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+    });

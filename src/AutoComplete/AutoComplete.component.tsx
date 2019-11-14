@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 // COMPONENTS
 import { Input } from '../Form';
+import { InputPropsType } from '../Form/Input/Input.component';
 import { ResultsContainer } from './ResultsContainer';
 
 const { useState, useRef } = React;
@@ -16,38 +17,39 @@ type AutoCompleteDataSource = Array<{
 }>;
 
 interface AutoCompleteProps {
+    className?: string;
+    dataSource?: AutoCompleteDataSource | string[] | number[];
     debug?: boolean;
     name?: string;
-    dataSource?: AutoCompleteDataSource | string[] | number[];
-    className?: string;
-    size?: 'sm' | 'md' | 'lg';
     placeholder?: string;
+    size?: 'sm' | 'md' | 'lg';
     value?: string | number;
     // TODO: resultTemplate
     // TODO: allowClear
     allowClear?: boolean;
     // Visual
-    border?: boolean;
-    shadow?: boolean;
     background?: string;
+    border?: boolean;
     color?: string;
+    shadow?: boolean;
     // TODO: Allow children
     resultTemplate?: (props: any) => any;
-    suffix?: any;
+    inputProps?: InputPropsType;
     prefix?: any;
+    suffix?: any;
     // Event Handlers
-    onFilter?: (term: string | number) => void;
-    onSelect?: (value?: string | number, item?: any) => void;
-    onChange?: (value?: string | number, item?: any) => void;
-    onFocus?: (event?: React.FocusEvent) => void;
     onBlur?: (event?: React.FocusEvent) => void;
+    onChange?: (value?: string | number, item?: any) => void;
+    onFilter?: (term: string | number) => void;
+    onFocus?: (event?: React.FocusEvent) => void;
+    onSelect?: (value?: string | number, item?: any) => void;
 }
 
 interface StyledAutoCompleteProps {
-    shadow?: boolean;
-    border?: boolean;
     background?: string;
+    border?: boolean;
     color?: string;
+    shadow?: boolean;
 }
 
 const EventKeyCodes = {
@@ -96,25 +98,25 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
 `;
 
 export const AutoComplete = ({
-    name = '',
-    debug = false,
+    allowClear,
+    background = 'white',
+    border = true,
     className,
-    placeholder,
-    // children,
-    suffix,
-    prefix,
+    color = 'text.light',
     dataSource = [],
-    value = '',
+    debug = false,
+    inputProps,
+    name = '',
+    onChange = () => null,
     onFilter = () => null,
     onSelect = () => null,
-    onChange = () => null,
-    size = 'lg',
-    shadow = false,
-    border = true,
-    background = 'white',
-    color = 'text.light',
+    placeholder,
+    prefix,
     resultTemplate,
-    allowClear,
+    shadow = false,
+    size = 'lg',
+    suffix,
+    value = '',
     ...props
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
@@ -170,6 +172,7 @@ export const AutoComplete = ({
                         ? `auto-complete-${name.toLowerCase()}`
                         : 'auto-complete'
                 }
+                inputProps={inputProps}
                 value={term}
                 ref={inputRef}
                 size={size}
@@ -215,6 +218,7 @@ export const AutoComplete = ({
                 name="auto-complete"
                 className="auto-complete-input"
             />
+
             {(isFocused || debug) && dataSource.length > 0 && (
                 <ResultsContainer
                     size={size}
