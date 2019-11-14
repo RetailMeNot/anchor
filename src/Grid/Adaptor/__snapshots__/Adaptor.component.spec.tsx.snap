@@ -2,16 +2,6 @@
 
 exports[`Component: Adaptor should be defined 1`] = `";"`;
 
-exports[`Component: Adaptor should warn the user that they can't only provide the to prop without from 1`] = `";"`;
+exports[`Component: Adaptor should warn the user that if using 'from' and/or 'to' that they must use ResponsiveProvider. 1`] = `null`;
 
-exports[`Component: LG should be defined 1`] = `null`;
-
-exports[`Component: MD should be defined 1`] = `null`;
-
-exports[`Component: SM should be defined 1`] = `null`;
-
-exports[`Component: XL should be defined 1`] = `null`;
-
-exports[`Component: XS should be defined 1`] = `null`;
-
-exports[`Component: XXL should be defined 1`] = `null`;
+exports[`Component: Adaptor should warn the user that they can't only provide the 'to' prop without 'from' 1`] = `";"`;

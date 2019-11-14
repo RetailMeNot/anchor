@@ -10,13 +10,7 @@ export {
     ResponsiveProvider,
     Cell,
     Grid,
-    CustomAdaptor,
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
+    Adaptor,
 } from './Grid';
 export { Page, Layout, SidebarLayout, Footer } from './Layout';
 export {

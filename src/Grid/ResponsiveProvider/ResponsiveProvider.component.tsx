@@ -20,13 +20,15 @@ const StyledDebug = styled('div')`
 StyledDebug.displayName = 'StyledDebug';
 
 interface ResponsiveContextProps {
-    innerWidth: number;
     breakpoints: BreakpointType[];
+    current: string;
+    innerWidth: number;
 }
 
 export const ResponsiveContext = React.createContext<ResponsiveContextProps>({
-    innerWidth: 0,
     breakpoints: [],
+    current: '',
+    innerWidth: 0,
 });
 
 interface ResponsiveProviderProps {
@@ -64,6 +66,7 @@ class BasicResponsiveProvider extends React.PureComponent<
 
         this.state = {
             breakpoints: sortedBreakpoints,
+            current: getBreakpointKey(innerWidth, sortedBreakpoints),
             innerWidth: hasWindow ? window.innerWidth : 0,
         };
         this.handleResize = debounce(this.handleResize.bind(this), 100);
@@ -72,7 +75,13 @@ class BasicResponsiveProvider extends React.PureComponent<
 
     handleResize() {
         if (this.hasWindow) {
-            this.setState({ innerWidth: window.innerWidth });
+            this.setState({
+                current: getBreakpointKey(
+                    window.innerWidth,
+                    this.state.breakpoints
+                ),
+                innerWidth: window.innerWidth,
+            });
         }
     }
 
@@ -89,14 +98,16 @@ class BasicResponsiveProvider extends React.PureComponent<
     }
 
     render() {
-        const { breakpoints, innerWidth } = this.state;
+        const { breakpoints, current, innerWidth } = this.state;
         const { debug } = this.props;
 
         return (
-            <ResponsiveContext.Provider value={{ breakpoints, innerWidth }}>
+            <ResponsiveContext.Provider
+                value={{ breakpoints, current, innerWidth }}
+            >
                 {debug && (
                     <StyledDebug>
-                        {getBreakpointKey(innerWidth, breakpoints)} | w:
+                        {current} | w:
                         {innerWidth}px
                     </StyledDebug>
                 )}

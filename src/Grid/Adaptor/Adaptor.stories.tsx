@@ -2,13 +2,13 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { boolean, number } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
-import { XS, SM, MD, LG, XL, XXL, CustomAdaptor } from './Adaptor.component';
-import { ResponsiveProvider } from '../ResponsiveProvider';
+import { Adaptor } from './Adaptor.component';
+import { ResponsiveContext, ResponsiveProvider } from '../ResponsiveProvider';
 import { RootTheme } from '../../theme';
 import { Typography } from '../../index';
 // README
@@ -18,73 +18,68 @@ const StyledStory = styled('div')`
     padding: 2rem 5rem;
 `;
 
+const Test = () => {
+    const { current, innerWidth } = React.useContext(ResponsiveContext);
+
+    return (
+        <>
+            <Typography tag="h2">ResponsiveContext</Typography> |
+            <Typography pr="2">{current}</Typography> |
+            <Typography pl="2">{innerWidth}</Typography>
+        </>
+    );
+};
+
 storiesOf('Components/Grid/Adaptor', module)
     .addParameters({
         readme: {
             sidebar: README,
         },
     })
-    .add('Custom Breakpoints', () => (
+    .add('Adaptor, Custom Breakpoints', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <h4>Use knobs to set custom breakpoints</h4>
-                <CustomAdaptor
+                <Typography tag="h4">
+                    Use knobs to set custom breakpoints
+                </Typography>
+                <Adaptor
                     minWidth={number('Minimum Width', 1)}
                     maxWidth={number('Maximum Width', 99999)}
                 >
-                    <p>My dimensions are defined by knobs.</p>
-                </CustomAdaptor>
+                    <Typography tag="p" pt="3">
+                        My dimensions are defined by knobs.
+                    </Typography>
+                </Adaptor>
             </StyledStory>
         </ThemeProvider>
     ))
-    .add('Custom Adaptor, From & To', () => (
+    .add('Adaptor, From & To', () => (
         <ThemeProvider theme={RootTheme}>
             <ResponsiveProvider debug>
                 <Typography tag="h2">Resize the Window</Typography>
-                <CustomAdaptor from="xs" to="md">
+                <Adaptor from="xs" to="md">
                     <Typography>
                         I only show up between the xs and md breakpoints.
                     </Typography>
-                </CustomAdaptor>
-                <CustomAdaptor from="md" to="xl">
+                </Adaptor>
+                <Adaptor from="md" to="xl">
                     <Typography>
                         I only show up between the md and xl breakpoints.
                     </Typography>
-                </CustomAdaptor>
-                <CustomAdaptor from="xl">
+                </Adaptor>
+                <Adaptor from="xl">
                     <Typography>
                         I only show up at xl breakpoint and up.
                     </Typography>
-                </CustomAdaptor>
+                </Adaptor>
             </ResponsiveProvider>
         </ThemeProvider>
     ))
-    .add('Fixed Adaptors', () => {
+    .add('Responsive Context', () => {
         return (
             <ThemeProvider theme={RootTheme}>
-                <ResponsiveProvider
-                    debug={boolean('ResponsiveProvider Debug', true)}
-                >
-                    <StyledStory>
-                        <XS>
-                            <Typography tag="h4">XS</Typography>
-                        </XS>
-                        <SM>
-                            <Typography tag="h4">SM</Typography>
-                        </SM>
-                        <MD>
-                            <Typography tag="h4">MD</Typography>
-                        </MD>
-                        <LG>
-                            <Typography tag="h4">LG</Typography>
-                        </LG>
-                        <XL>
-                            <Typography tag="h4">XL</Typography>
-                        </XL>
-                        <XXL>
-                            <Typography tag="h4">XXL</Typography>
-                        </XXL>
-                    </StyledStory>
+                <ResponsiveProvider>
+                    <Test />
                 </ResponsiveProvider>
             </ThemeProvider>
         );

@@ -2,7 +2,7 @@
 import * as React from 'react';
 // COMPONENTS
 import { MobileCTA } from './MobileCTA/MobileCTA.component';
-import { CustomAdaptor } from '../../Grid';
+import { Adaptor } from '../../Grid';
 import { FooterSection } from './FooterSection/FooterSection.component';
 import { RootTheme } from '../../theme';
 // VENDOR
@@ -296,11 +296,11 @@ const MobileFooter = () => (
 
 export const Footer = () => (
     <StyledFooterElement className="anchor-footer">
-        <CustomAdaptor maxWidth={RootTheme.breakpoints.lg - 1}>
+        <Adaptor maxWidth={RootTheme.breakpoints.lg - 1}>
             <MobileFooter />
-        </CustomAdaptor>
-        <CustomAdaptor minWidth={RootTheme.breakpoints.lg}>
+        </Adaptor>
+        <Adaptor minWidth={RootTheme.breakpoints.lg}>
             <DesktopFooter />
-        </CustomAdaptor>
+        </Adaptor>
     </StyledFooterElement>
 );

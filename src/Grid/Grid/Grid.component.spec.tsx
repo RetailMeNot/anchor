@@ -7,7 +7,6 @@ import { Grid, Cell } from '../index';
 import {
     createResponsiveObject,
     getBreakpointKey,
-    getMinMax,
     getResponsiveValue,
     sortBreakpoints,
 } from '../utils';
@@ -86,13 +85,5 @@ describe('Utilities: Grid & Cell', () => {
             getResponsiveValue(responsiveObject, innerWidth, sortedBreakpoints);
 
         expect(value).toEqual(12);
-    });
-
-    it("getMinMax should return the minimum and maximum pixel values with a given window's innerWidth", () => {
-        const index = 1;
-        const value = getMinMax(index, sortedBreakpoints);
-
-        expect(value.min).toEqual(600);
-        expect(value.max).toEqual(900);
     });
 });
