@@ -2,9 +2,14 @@
 import * as React from 'react';
 // VENDOR
 import Responsive from 'react-responsive';
-import styled from '@xstyled/styled-components';
+// COMPONENTS
+import { ResponsiveContext } from '../ResponsiveProvider';
 
-interface CustomAdaptorProps {
+interface AdaptorProps {
+    // The from & to props provide a layer of abstraction that allows the user to provid their
+    // named breakpoints instead of a hard number from minWidth and maxWidth, respectively.
+    from?: string;
+    to?: string;
     children?: any;
     query?: string;
     minHeight?: number | string;
@@ -20,151 +25,52 @@ interface CustomAdaptorProps {
     onBeforeChange?: (matches: boolean) => void;
     onChange?: (matches: boolean) => void;
 }
-interface FixedAdaptor extends CustomAdaptorProps {
-    maxWidth?: never;
-    minWidth?: never;
-    minDeviceWidth?: never;
-    maxDeviceWidth?: never;
-}
 
-interface BreakpointSchema {
-    min?: number;
-    max?: number;
-}
-
-export const CustomAdaptor = ({ ...props }: CustomAdaptorProps) => (
-    <Responsive className="anchor-adaptor" {...props} />
-);
-
-/* =========================================== LEGACY START ========================================================= */
-interface LegacyBreakpointsSchema {
-    desktop: BreakpointSchema;
-    tablet: BreakpointSchema;
-    phone: BreakpointSchema;
-}
-
-export const LegacyBreakpoints: LegacyBreakpointsSchema = {
-    desktop: {
-        min: 1000,
-    },
-    tablet: {
-        min: 899,
-        max: 999,
-    },
-    phone: {
-        max: 898,
-    },
+type BreakpointValues = {
+    minWidth?: undefined | number;
+    maxWidth?: undefined | number;
 };
 
-export const LegacyDesktop = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={LegacyBreakpoints.desktop.min}
-    />
-);
-export const LegacyTablet = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={LegacyBreakpoints.tablet.min}
-        maxWidth={LegacyBreakpoints.tablet.max}
-    />
-);
-export const LegacyPhone = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        maxWidth={LegacyBreakpoints.phone.max}
-    />
-);
+export const Adaptor = ({ from, to, ...props }: AdaptorProps) => {
+    const { breakpoints } = React.useContext(ResponsiveContext);
+    const breakpointValues: BreakpointValues = {
+        minWidth: undefined,
+        maxWidth: undefined,
+    };
 
-/* =========================================== LEGACY END =========================================================== */
+    if ((from !== undefined || to !== undefined) && !breakpoints.length) {
+        // tslint:disable-next-line: no-console
+        console.warn(
+            `When using the 'from' and/or 'to' props, the ResponsiveProvider must also be used.`
+        );
+        return null;
+    }
 
-/* =========================================== STANDARD START ======================================================= */
-interface StandardBreakpointsSchema {
-    xs: BreakpointSchema;
-    sm: BreakpointSchema;
-    md: BreakpointSchema;
-    lg: BreakpointSchema;
-    xl: BreakpointSchema;
-    xxl: BreakpointSchema;
-}
-export const StandardBreakpoints: StandardBreakpointsSchema = {
-    xs: {
-        max: 575,
-    },
-    sm: {
-        min: 576,
-        max: 767,
-    },
-    md: {
-        min: 768,
-        max: 991,
-    },
-    lg: {
-        min: 992,
-        max: 1199,
-    },
-    xl: {
-        min: 1200,
-        max: 1599,
-    },
-    xxl: {
-        min: 1600,
-    },
+    if (from === undefined && to !== undefined) {
+        // tslint:disable-next-line: no-console
+        console.warn(
+            `Although the 'from' prop can be used by itself, the 'to' prop requires 'from' to also exist`
+        );
+        return null;
+    }
+
+    if (from) {
+        const min = breakpoints.find(bp => Object.keys(bp)[0] === from);
+        breakpointValues.minWidth =
+            typeof min === 'object' ? Object.values(min)[0] : undefined;
+    }
+
+    if (from && to) {
+        const max = breakpoints.find(bp => Object.keys(bp)[0] === to);
+        breakpointValues.maxWidth =
+            typeof max === 'object' ? Object.values(max)[0] : undefined;
+    }
+
+    return (
+        <Responsive
+            className="anchor-adaptor"
+            {...breakpointValues}
+            {...props}
+        />
+    );
 };
-
-export const XS = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        maxWidth={StandardBreakpoints.xs.max}
-    />
-);
-export const SM = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.sm.min}
-        maxWidth={StandardBreakpoints.sm.max}
-    />
-);
-export const MD = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.md.min}
-        maxWidth={StandardBreakpoints.md.max}
-    />
-);
-export const LG = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.lg.min}
-        maxWidth={StandardBreakpoints.lg.max}
-    />
-);
-export const XL = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.xl.min}
-        maxWidth={StandardBreakpoints.xl.max}
-    />
-);
-export const XXL = ({ ...props }: FixedAdaptor) => (
-    <Responsive
-        className="anchor-adaptor"
-        {...props}
-        minWidth={StandardBreakpoints.xxl.min}
-    />
-);
-
-export const CenteredCell = styled('div')`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-/* =========================================== STANDARD END ========================================================= */
