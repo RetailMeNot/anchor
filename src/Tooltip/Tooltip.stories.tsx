@@ -89,6 +89,8 @@ storiesOf('Components/Tooltip', module)
                         background={text('Tooltip background', '#000')}
                         content={
                             <TooltipMessage event={() => setShow(!show)} />
+                            // This rule is causing the build to fail, but lint insists on it
+                            // tslint:disable-next-line: jsx-curly-spacing
                         }
                         position={select<Position>(
                             'Tooltip Position',
