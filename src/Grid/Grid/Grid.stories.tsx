@@ -7,6 +7,7 @@ import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { Cell, Grid, ResponsiveProvider } from '../index';
+import { TestCell } from '../Cell';
 import { FLOW } from '../utils';
 import { RootTheme } from '../../theme';
 
@@ -76,4 +77,16 @@ storiesOf('Components/Grid', module)
                 </ResponsiveProvider>
             </ThemeProvider>
         );
-    });
+    })
+    .add('Test Cell', () => (
+        <ResponsiveProvider debug>
+            <Grid>
+                <TestCell
+                    width={{ xs: 3, md: 8, xxl: 12 }}
+                    left={{xs: 1, lg: 8, xxl: 6}}
+                >
+                    Hi
+                </TestCell>
+            </Grid>
+        </ResponsiveProvider>
+    ));

@@ -61,17 +61,33 @@ export const Cell = ({
     const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
     const { debug: contextDebug } = React.useContext(GridContext);
     const [state, setState] = React.useState<CellState>({
-        height: createResponsiveObject(height, breakpoints),
         left: createResponsiveObject(left, breakpoints),
         top: createResponsiveObject(top, breakpoints),
+        height: createResponsiveObject(height, breakpoints),
         width: createResponsiveObject(width, breakpoints),
-        responsiveHeight: false,
-        responsiveLeft: false,
-        responsiveTop: false,
-        responsiveWidth: false,
+        responsiveHeight: getResponsiveValue(
+            createResponsiveObject(height, breakpoints),
+            innerWidth,
+            breakpoints
+        ),
+        responsiveLeft: getResponsiveValue(
+            createResponsiveObject(left, breakpoints),
+            innerWidth,
+            breakpoints
+        ),
+        responsiveTop: getResponsiveValue(
+            createResponsiveObject(top, breakpoints),
+            innerWidth,
+            breakpoints
+        ),
+        responsiveWidth: getResponsiveValue(
+            createResponsiveObject(width, breakpoints),
+            innerWidth,
+            breakpoints
+        ),
         ready: false,
     });
-
+console.log(innerWidth);
     React.useEffect(() => {
         setState({
             ...state,
@@ -98,6 +114,32 @@ export const Cell = ({
             ready: true,
         });
     }, [innerWidth]);
+
+    // const responsiveLeft = getResponsiveValue(
+    //     createResponsiveObject(left, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
+
+    // const responsiveHeight = getResponsiveValue(
+    //     createResponsiveObject(height, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
+
+    // const responsiveTop = getResponsiveValue(
+    //     createResponsiveObject(top, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
+
+    // const responsiveWidth = getResponsiveValue(
+    //     createResponsiveObject(width, breakpoints),
+    //     innerWidth,
+    //     breakpoints
+    // );
+
+    // console.log(responsiveWidth);
 
     // Without the ready check, there can be a brief blip where the user will see the wrong
     // breakpoint on page load. Additionally, a responsiveWidth of 0 means don't show the Cell.

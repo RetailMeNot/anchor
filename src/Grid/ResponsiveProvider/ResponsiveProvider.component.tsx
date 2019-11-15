@@ -63,11 +63,12 @@ class BasicResponsiveProvider extends React.PureComponent<
         }
 
         const sortedBreakpoints = sortBreakpoints(breakpoints);
+        const innerWidth = hasWindow ? window.innerWidth : 0;
 
         this.state = {
             breakpoints: sortedBreakpoints,
             current: getBreakpointKey(innerWidth, sortedBreakpoints),
-            innerWidth: hasWindow ? window.innerWidth : 0,
+            innerWidth,
         };
         this.handleResize = debounce(this.handleResize.bind(this), 100);
         this.hasWindow = hasWindow;
