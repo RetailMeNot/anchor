@@ -95,3 +95,4 @@ export const Arrow = styled('div')<ArrowProps>`
         return null;
     }}
 `;
+Arrow.displayName = 'Arrow';

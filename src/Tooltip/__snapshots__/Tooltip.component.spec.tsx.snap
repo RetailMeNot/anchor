@@ -9,7 +9,6 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -33,6 +32,22 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -47,7 +62,14 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -61,7 +83,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -85,6 +106,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -99,7 +136,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -113,7 +157,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -137,6 +180,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -151,7 +210,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -165,7 +231,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -189,6 +254,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -203,7 +284,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -217,7 +305,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -241,6 +328,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -255,7 +358,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -269,7 +379,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -293,6 +402,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -307,7 +432,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -321,7 +453,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -345,6 +476,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -359,7 +506,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -373,7 +527,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -397,6 +550,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -411,7 +580,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -425,7 +601,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -449,6 +624,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -463,7 +654,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -477,7 +675,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -501,6 +698,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -515,7 +728,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -529,7 +749,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -553,6 +772,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -567,7 +802,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -581,7 +823,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -605,6 +846,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -619,7 +876,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;
@@ -633,7 +897,6 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c1 {
   position: absolute;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.8);
   color: white;
   border-radius: 4px;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
@@ -657,6 +920,22 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   visibility: visible;
 }
 
+.c2 {
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.c3 {
+  z-index: 2;
+  position: relative;
+}
+
 <div
   className="c0 anchor-tooltip"
   content="This is a tooltip"
@@ -671,7 +950,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     height={0}
     width={0}
   >
-    This is a tooltip
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      This is a tooltip
+    </div>
   </div>
 </div>
 `;

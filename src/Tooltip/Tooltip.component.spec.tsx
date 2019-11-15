@@ -38,6 +38,41 @@ describe('Component: Tooltip', () => {
         wrapper.update();
         expect(wrapper.find(Tooltip).state().hidden).toBeTruthy();
     });
+    it("should force tooltip's visibility when show is set to true", () => {
+        const testSubject = (
+            <ThemeProvider theme={RootTheme}>
+                <Tooltip content="This is a tooltip" show={true}>
+                    <button>Hover</button>
+                </Tooltip>
+            </ThemeProvider>
+        );
+
+        const wrapper = mount(testSubject);
+
+        wrapper.simulate('mouseleave');
+        wrapper.update();
+
+        expect(
+            wrapper.find('.anchor-tooltip-element.active').exists()
+        ).toBeTruthy();
+    });
+    it('should show an arrow when showArrow is true.', () => {
+        const testSubject = (
+            <ThemeProvider theme={RootTheme}>
+                <Tooltip
+                    content="This is a tooltip"
+                    show={true}
+                    showArrow={true}
+                >
+                    <button>Hover</button>
+                </Tooltip>
+            </ThemeProvider>
+        );
+
+        const wrapper = mount(testSubject);
+
+        expect(wrapper.find('Arrow').exists()).toBeTruthy();
+    });
     it('should render all the different tooltip positions.', () => {
         [
             'topStart',

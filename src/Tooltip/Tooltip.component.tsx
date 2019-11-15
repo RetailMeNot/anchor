@@ -17,7 +17,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     display?: string;
     maxWidth?: string;
     position?: Position;
-    hidden?: boolean;
+    show?: boolean;
     shadow?: string;
     wrapContent?: boolean;
     // Arrow props
@@ -100,9 +100,10 @@ interface BackgroundProps {
 }
 
 const Background = styled('div')<BackgroundProps>`
-    ${({background}) => css({
-        background: th.color(background),
-    })}
+    ${({ background }) =>
+        css({
+            background: th.color(background),
+        })}
     position: absolute;
     left: 0;
     right: 0;
@@ -164,7 +165,7 @@ export class Tooltip extends React.Component<
             color,
             content,
             delay,
-            hidden : propsHidden,
+            show: propShow,
             maxWidth,
             position = 'topEnd',
             shadow,
@@ -175,19 +176,27 @@ export class Tooltip extends React.Component<
         const {
             height,
             width,
-            hidden : stateHidden,
+            hidden: stateHidden,
             toolTipHeight,
             toolTipWidth,
         } = this.state;
-        // If the dev passes hidden as a prop then Tooltip's behavior changes, and whether or not it
+        // If the dev passes show as a prop then Tooltip's behavior changes, and whether or not it
         // is visible is controlled by that prop and not by state.
-        const hiddenOveride = propsHidden !== undefined;
+        const hiddenOveride = propShow !== undefined;
 
         return (
             <ToolTipContainer
                 content={content}
-                onMouseEnter={hiddenOveride ? () => null : () => this.setState({ hidden: false })}
-                onMouseLeave={hiddenOveride ? () => null : () => this.setState({ hidden: true })}
+                onMouseEnter={
+                    hiddenOveride
+                        ? () => null
+                        : () => this.setState({ hidden: false })
+                }
+                onMouseLeave={
+                    hiddenOveride
+                        ? () => null
+                        : () => this.setState({ hidden: true })
+                }
                 ref={this.tooltipContainerRef}
                 className={classNames('anchor-tooltip', className)}
                 {...props}
@@ -196,7 +205,7 @@ export class Tooltip extends React.Component<
                 <TooltipElement
                     border={border}
                     className={classNames('anchor-tooltip-element', {
-                        active: hiddenOveride ? !propsHidden : !stateHidden,
+                        active: hiddenOveride ? propShow : !stateHidden,
                     })}
                     delay={delay}
                     ref={this.tooltipRef}
@@ -212,11 +221,9 @@ export class Tooltip extends React.Component<
                 >
                     <Background background={background} />
 
-                    <StyledContent>
-                        {content}
-                    </StyledContent>
+                    <StyledContent>{content}</StyledContent>
 
-                    {showArrow &&
+                    {showArrow && (
                         <Arrow
                             background={background}
                             border={border}
@@ -225,7 +232,7 @@ export class Tooltip extends React.Component<
                             shadow={shadow}
                             size={arrowSize}
                         />
-                    }
+                    )}
                 </TooltipElement>
             </ToolTipContainer>
         );
