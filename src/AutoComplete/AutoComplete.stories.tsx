@@ -124,9 +124,11 @@ const BasicFilter = () => {
     const [filteredData, setFilteredData] = React.useState(dataSource);
 
     const filter = (val: string) => {
-        setFilteredData(dataSource.filter( data => {
-            return data.label.toLowerCase().includes(val.toLowerCase());
-        }));
+        setFilteredData(
+            dataSource.filter(data => {
+                return data.label.toLowerCase().includes(val.toLowerCase());
+            })
+        );
     };
 
     const select = (val: string) => {
@@ -139,7 +141,7 @@ const BasicFilter = () => {
         }
     };
 
-    return(
+    return (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <AutoComplete
