@@ -4,7 +4,7 @@ import { Grid as AGrid } from 'styled-css-grid';
 import styled, { css } from '@xstyled/styled-components';
 import classNames from 'classnames';
 // COMPONENTS & UTILS
-import { FLOW, GridContext } from '../utils';
+import { debugColor, FLOW, GridContext } from '../utils';
 
 type Flow = keyof typeof FLOW;
 
@@ -63,12 +63,9 @@ interface GridProps {
 }
 
 const StyledGrid = styled(AGrid)<GridProps>`
-    ${({ debug }) =>
-        debug
-            ? css`
-                  background-color: rgba(255, 0, 0, 0.4);
-              `
-            : null}
+    ${({ debug }) => debug && css({
+        backgroundColor: debugColor,
+    })}
 `;
 
 export const Grid = ({

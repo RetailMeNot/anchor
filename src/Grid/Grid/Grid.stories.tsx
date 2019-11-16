@@ -28,7 +28,7 @@ storiesOf('Components/Grid', module)
                         <Cell
                             center
                             middle
-                            height={{ sm: 1, md: 2, lg: 3 }}
+                            height={{ md: 2, lg: 3 }}
                             width={{ xs: 0, md: 12 }}
                         >
                             <Typography tag="h1">Grid</Typography>
@@ -79,14 +79,33 @@ storiesOf('Components/Grid', module)
         );
     })
     .add('Test Cell', () => (
-        <ResponsiveProvider debug>
-            <Grid>
+        <ThemeProvider theme={RootTheme}>
+        <ResponsiveProvider
+            debug={boolean('ResponsiveProvider Debug', true)}
+        >
+            <br />
+            <Grid flow={FLOW.row} debug={boolean('Grid Debug', true)}>
                 <TestCell
-                    width={{ xs: 3, md: 8, xxl: 12 }}
-                    left={{xs: 1, lg: 8, xxl: 6}}
+                    center
+                    middle
+                    height={{ sm: 1, md: 2, lg: 3 }}
+                    width={{ xs: 0, md: 12 }}
                 >
-                    Hi
+                    <Typography tag="h1">Grid</Typography>
+                </TestCell>
+                <TestCell width={{ xs: 12, md: 6 }}>
+                    <Typography>Cell 1</Typography>
+                </TestCell>
+                <TestCell width={{ xs: 12, md: 6 }}>
+                    <Typography>Cell 2</Typography>
+                </TestCell>
+                <TestCell width={{ xs: 12, md: 6 }} left={{ xs: 1, md: 4 }}>
+                    <Typography>Cell 3</Typography>
+                </TestCell>
+                <TestCell width={2} left={11}>
+                    <Typography>Cell 4</Typography>
                 </TestCell>
             </Grid>
         </ResponsiveProvider>
+    </ThemeProvider>
     ));

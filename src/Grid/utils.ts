@@ -23,6 +23,8 @@ export enum FLOW {
     row = 'row',
 }
 
+export const debugColor = 'rgba(255, 0, 0, 0.4)';
+
 /*
     Returns an array of objects sorted by their value, descending. Ex:
 
@@ -126,4 +128,59 @@ export function getResponsiveValue(
     const breakpointKey = getBreakpointKey(innerWidth, sortedBreakpoints);
 
     return responsiveSettings[breakpointKey];
+}
+
+type GridSetting = undefined | number | BreakpointType;
+interface GridSettings {
+    left?: GridSetting;
+    height?: GridSetting;
+    top?: GridSetting;
+    width?: GridSetting;
+}
+
+const ops = {
+    width: (w: any, middle: boolean) => w > 0
+        ? middle
+        ? `grid-column-end: span ${w}; display: inline-flex;`
+        : `grid-column-end: span ${w}; display: block;`
+        : 'display:none;',
+    height: (h: any) => `grid-row-end: span ${h};`,
+    left: (l: any) => `grid-column-start: ${l};`,
+    top: (t: any) => `grid-row-start: ${t};`,
+};
+
+export function generateBreakpointCSS(gridSettings: GridSettings, sortedBreakpoints: BreakpointType[], middle: boolean | undefined) {
+    const responsiveCSS = {};
+    const sortedResponsiveCSS: BreakpointType[] = [];
+    const generalSettings: GridSettings = {};
+
+    // Loops through the props with responsive settings, i.e. left, top, etc
+    Object.keys(gridSettings).forEach((settingKey: string) => {
+        const currentValue = gridSettings[settingKey];
+
+        // If the value passed isn't an object then it's not responsive, so its value should be
+        // put into the generalSettings object
+        if (typeof currentValue !== 'object') {
+            generalSettings[settingKey] = currentValue;
+        } else {
+            Object.keys(currentValue).forEach((breakpointKey: string) => {
+                const responsiveValue = currentValue[breakpointKey];
+
+                if (responsiveCSS[breakpointKey]) {
+                    responsiveCSS[breakpointKey] += ops[settingKey](responsiveValue, middle);
+                } else {
+                    responsiveCSS[breakpointKey] = ops[settingKey](responsiveValue, middle);
+                }
+            });
+        }
+    });
+
+    sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
+        const breakpointKey = Object.keys(breakpointObj)[0];
+        if (responsiveCSS[breakpointKey] !== undefined) {
+            sortedResponsiveCSS.push( { [breakpointKey]: responsiveCSS[breakpointKey] });
+        }
+    });
+
+    return {sortedResponsiveCSS, generalSettings};
 }

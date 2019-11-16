@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled, { css } from "@xstyled/styled-components";
 import { breakpoints } from '@xstyled/system';
-import { BreakpointType } from '../utils';
+import { BreakpointType, debugColor, generateBreakpointCSS, GridContext } from '../utils';
+import { ResponsiveContext } from '../ResponsiveProvider';
 
 interface CellProps {
     area?: string;
@@ -12,23 +13,36 @@ interface CellProps {
     height?: number | BreakpointType | undefined;
     left?: number | BreakpointType | undefined;
     middle?: boolean;
+    responsiveCSS?: BreakpointType[];
     top?: number | BreakpointType | undefined;
     width?: number | BreakpointType | undefined;
-    finalObj?: any;
 }
 
 const StyledCell = styled.div<CellProps>`
     height: 100%;
     min-width: 0;
-    ${({ finalObj }) => breakpoints(finalObj)}
+
+    ${({responsiveCSS}) => {
+        return responsiveCSS && responsiveCSS.map((k: BreakpointType) => {
+            return breakpoints(k);
+        });
+    }}
+
+    ${({ left }) => left && `grid-column-start: ${left}`};
+    ${({ width }) => width && `grid-column-end: span ${width}`};
+    ${({ top }) => top && `grid-row-start: ${top}`};
+    ${({ height }) => height && `grid-row-end: span ${height}`};
+
     ${({ center }) => center && `text-align: center`};
     ${({ area }) => area && `grid-area: ${area}`};
     ${({ middle }) => middle && css`
-        display: inline-flex;
         flex-flow: column wrap;
         justify-content: center;
         justify-self: stretch;
     `}
+    ${({ debug }) => debug && css({
+        backgroundColor: debugColor,
+    })};
 `;
 
 export const TestCell = ({
@@ -43,51 +57,26 @@ export const TestCell = ({
     width = 1,
     ...props
 }: CellProps) => {
-    const generateGridCss = (key: string, responsiveSettings: undefined | number | BreakpointType) => {
-        if (typeof responsiveSettings !== 'object') {
-            return responsiveSettings;
-        } else if (typeof responsiveSettings === 'number') {
-            return [{ xs: responsiveSettings }]
-        }
-        const returnObj: any = [];
-        const ops = {
-            width: (w: any) => `grid-column-end: span ${w};`,
-            height: (h: any) => `grid-row-end: span ${h};`,
-            left: (l: any) => `grid-column-start: ${l};`,
-            top: (t: any) => `grid-row-start: ${t};`,
-        };
-
-        Object.keys(responsiveSettings).forEach(breakpoint => {
-            returnObj.push({ [breakpoint]: ops[key](responsiveSettings[breakpoint])});
-        });
-
-        return returnObj;
-    };
-
-    const allOptions = [].concat(
-        generateGridCss('width', width),
-        generateGridCss('left', left),
-        generateGridCss('top', top),
-        generateGridCss('height', height)
-    );
-    const finalObj = {};
-
-    allOptions.forEach((opt: any) => {
-        if (opt !== undefined) {
-            const optKey = Object.keys(opt)[0];
-            const optVal = Object.values(opt)[0];
-
-            if (finalObj[optKey]) {
-                finalObj[optKey] += optVal;
-            } else {
-                finalObj[optKey] = optVal;
-            }
-        }
-    });
-    Object.keys(finalObj).map(o => {
-        finalObj[o] = css`${finalObj[o]}`;
-    });
-    console.log(finalObj);
-
-    return(<StyledCell {...props} finalObj={finalObj}>{children}</StyledCell>);
-}
+    const { debug: contextDebug } = React.useContext(GridContext);
+    const { breakpoints: sortedBreakpoints } = React.useContext(ResponsiveContext);
+    const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS({
+        left,
+        height,
+        top,
+        width,
+    }, sortedBreakpoints, middle);
+console.log(generalSettings);
+    return(
+        <StyledCell
+            center={center}
+            middle={middle}
+            debug={contextDebug || debug}
+            responsiveCSS={sortedResponsiveCSS}
+            left={generalSettings.left || undefined}
+            height={generalSettings.height || undefined}
+            top={generalSettings.top || undefined}
+            width={generalSettings.width || undefined}
+        >
+            {children}
+        </StyledCell>);
+};

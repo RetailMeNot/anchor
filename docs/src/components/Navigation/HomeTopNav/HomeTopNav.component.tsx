@@ -29,8 +29,8 @@ export const HomeTopNav = ({
     return (
         <StyledHomeTopNav contentWidth={contentWidth}>
             <StyledContainer>
-                <Grid gap="0rem">
-                    <Cell width={2} left={11}>
+                <Grid gap="0rem" debug>
+                    <Cell width={{xs: 2}} left={{xs: 11}}>
                         <StyledNavLink to="/overview/">Overview</StyledNavLink>
                     </Cell>
                 </Grid>
