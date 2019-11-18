@@ -1,14 +1,13 @@
-// VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
-import { Cell as ACell } from 'styled-css-grid';
-import classNames from 'classnames';
-// COMPONENTS & UTILS
+import { breakpoints } from '@xstyled/system';
 import {
     BreakpointType,
-    createResponsiveObject,
-    getResponsiveValue,
+    debugColor,
+    generateBreakpointCSS,
     GridContext,
+    GridSetting,
+    middleCSS,
 } from '../utils';
 import { ResponsiveContext } from '../ResponsiveProvider';
 
@@ -18,32 +17,42 @@ interface CellProps {
     children?: any;
     className?: string;
     debug?: boolean;
-    height?: number | BreakpointType | undefined;
-    left?: number | BreakpointType | undefined;
+    height?: GridSetting;
+    left?: GridSetting;
     middle?: boolean;
-    top?: number | BreakpointType | undefined;
-    width?: number | BreakpointType | undefined;
+    responsiveCSS?: BreakpointType[];
+    top?: GridSetting;
+    width?: GridSetting;
 }
 
-interface CellState {
-    left?: object | number | undefined;
-    top?: object | number | undefined;
-    height?: object | number | undefined;
-    width?: object | number | undefined;
-    responsiveTop?: any;
-    responsiveHeight?: any;
-    responsiveWidth?: any;
-    responsiveLeft?: any;
-    ready: boolean;
-}
+const StyledCell = styled.div<CellProps>`
+    height: 100%;
+    min-width: 0;
 
-const StyledCell = styled(ACell)<CellProps>`
+    // The order in which the media queries are generated is very important, hence breakpoints() is
+    // called multiple times as opposed to just once with a single object.
+    ${({ responsiveCSS }) => {
+        return (
+            responsiveCSS &&
+            responsiveCSS.map((k: BreakpointType) => {
+                return breakpoints(k);
+            })
+        );
+    }}
+
+    ${({ left }) => left && `grid-column-start: ${left}`};
+    ${({ width }) => width && `grid-column-end: span ${width}`};
+    ${({ top }) => top && `grid-row-start: ${top}`};
+    ${({ height }) => height && `grid-row-end: span ${height}`};
+
+    ${({ center }) => center && `text-align: center`};
+    ${({ area }) => area && `grid-area: ${area}`};
+    ${({ middle, width }) => middle && width && middleCSS}
     ${({ debug }) =>
-        debug
-            ? css`
-                  background-color: rgba(255, 0, 0, 0.4);
-              `
-            : null}
+        debug &&
+        css({
+            backgroundColor: debugColor,
+        })};
 `;
 
 export const Cell = ({
@@ -56,106 +65,34 @@ export const Cell = ({
     middle,
     top,
     width = 1,
-    ...props
 }: CellProps) => {
-    const { breakpoints, innerWidth } = React.useContext(ResponsiveContext);
     const { debug: contextDebug } = React.useContext(GridContext);
-    const [state, setState] = React.useState<CellState>({
-        left: createResponsiveObject(left, breakpoints),
-        top: createResponsiveObject(top, breakpoints),
-        height: createResponsiveObject(height, breakpoints),
-        width: createResponsiveObject(width, breakpoints),
-        responsiveHeight: getResponsiveValue(
-            createResponsiveObject(height, breakpoints),
-            innerWidth,
-            breakpoints
-        ),
-        responsiveLeft: getResponsiveValue(
-            createResponsiveObject(left, breakpoints),
-            innerWidth,
-            breakpoints
-        ),
-        responsiveTop: getResponsiveValue(
-            createResponsiveObject(top, breakpoints),
-            innerWidth,
-            breakpoints
-        ),
-        responsiveWidth: getResponsiveValue(
-            createResponsiveObject(width, breakpoints),
-            innerWidth,
-            breakpoints
-        ),
-        ready: false,
-    });
-console.log(innerWidth);
-    React.useEffect(() => {
-        setState({
-            ...state,
-            responsiveHeight: getResponsiveValue(
-                state.height,
-                innerWidth,
-                breakpoints
-            ),
-            responsiveLeft: getResponsiveValue(
-                state.left,
-                innerWidth,
-                breakpoints
-            ),
-            responsiveTop: getResponsiveValue(
-                state.top,
-                innerWidth,
-                breakpoints
-            ),
-            responsiveWidth: getResponsiveValue(
-                state.width,
-                innerWidth,
-                breakpoints
-            ),
-            ready: true,
-        });
-    }, [innerWidth]);
+    const { breakpoints: sortedBreakpoints } = React.useContext(
+        ResponsiveContext
+    );
+    const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS(
+        {
+            left,
+            height,
+            top,
+            width,
+        },
+        sortedBreakpoints,
+        middle
+    );
 
-    // const responsiveLeft = getResponsiveValue(
-    //     createResponsiveObject(left, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveHeight = getResponsiveValue(
-    //     createResponsiveObject(height, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveTop = getResponsiveValue(
-    //     createResponsiveObject(top, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // const responsiveWidth = getResponsiveValue(
-    //     createResponsiveObject(width, breakpoints),
-    //     innerWidth,
-    //     breakpoints
-    // );
-
-    // console.log(responsiveWidth);
-
-    // Without the ready check, there can be a brief blip where the user will see the wrong
-    // breakpoint on page load. Additionally, a responsiveWidth of 0 means don't show the Cell.
-    return state.ready && state.responsiveWidth !== 0 ? (
+    return (
         <StyledCell
-            {...props}
-            className={classNames('anchor-cell', className)}
             center={center}
-            debug={contextDebug || debug}
-            height={state.responsiveHeight}
-            left={state.responsiveLeft}
             middle={middle}
-            top={state.responsiveTop}
-            width={state.responsiveWidth}
+            debug={contextDebug || debug}
+            responsiveCSS={sortedResponsiveCSS}
+            left={generalSettings.left || undefined}
+            height={generalSettings.height || undefined}
+            top={generalSettings.top || undefined}
+            width={generalSettings.width || undefined}
         >
             {children}
         </StyledCell>
-    ) : null;
+    );
 };

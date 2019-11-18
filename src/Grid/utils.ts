@@ -10,6 +10,15 @@ export type BreakpointType = {
     [key: string]: number;
 };
 
+export type GridSetting = undefined | number | BreakpointType;
+
+interface GridSettings {
+    left?: GridSetting;
+    height?: GridSetting;
+    top?: GridSetting;
+    width?: GridSetting;
+}
+
 interface GridContextProps {
     debug: boolean;
 }
@@ -45,41 +54,6 @@ export function sortBreakpoints(unsortedBreakpoints: object) {
 }
 
 /*
-    Takes a passed responsiveSettings object and fills in the gaps based on the breakpoints passed
-    via sortedBreakpoints. This function is mobile first, so setting a smaller breakpoint's value
-    will use that same value for larger breakpoints.
-
-    const obj = { xs: 1, md: 3, lg: 8 };
-    createResponsiveObject(obj); // { xs: 1, sm: 1, md: 3, lg: 8, xl: 8}
-*/
-export function createResponsiveObject(
-    responsiveSettings: object | number | undefined,
-    sortedBreakpoints: BreakpointType[]
-) {
-    if (typeof responsiveSettings !== 'object') {
-        return responsiveSettings;
-    }
-
-    let lastValid = Object.keys(sortedBreakpoints)[0];
-
-    return sortedBreakpoints.reduce((acc: object, next: BreakpointType) => {
-        const key = Object.keys(next)[0];
-
-        if (typeof responsiveSettings[key] === 'number') {
-            acc[key] = responsiveSettings[key];
-            lastValid = key;
-        } else {
-            acc[key] =
-                typeof responsiveSettings[lastValid] === 'number'
-                    ? responsiveSettings[lastValid]
-                    : 1;
-        }
-
-        return acc;
-    }, {});
-}
-
-/*
     Returns the breakpoint key for the specified window's innerWidth. Ex:
 
     const innerWidth = 920;
@@ -108,37 +82,8 @@ export function getBreakpointKey(
 }
 
 /*
-    Using the passed responsiveSettings, determines what responsive value should be returned for
-    the current breakpoint. Ex:
-
-    const settings = { xs: 1, sm: 3, md: 6 }
-    const innerWidth = 800;
-    const sortedBreakpoints = [{ xs: 500, sm: 750, md: 1000 }];
-    getResponsiveValue(settings, innerWidth, sortedBreakpoints); // 3
+    CSS used both by generateBreakpointCSS() and the Cell component. Aligns content vertically.
 */
-export function getResponsiveValue(
-    responsiveSettings: object | number | undefined,
-    innerWidth: number,
-    sortedBreakpoints: BreakpointType[]
-) {
-    if (typeof responsiveSettings !== 'object') {
-        return responsiveSettings;
-    }
-
-    // Gets the key based on the breakpoint (i.e. xs, sm, etc)
-    const breakpointKey = getBreakpointKey(innerWidth, sortedBreakpoints);
-
-    return responsiveSettings[breakpointKey];
-}
-
-type GridSetting = undefined | number | BreakpointType;
-interface GridSettings {
-    left?: GridSetting;
-    height?: GridSetting;
-    top?: GridSetting;
-    width?: GridSetting;
-}
-
 export const middleCSS = css`
     display: inline-flex;
     flex-flow: column wrap;
@@ -146,18 +91,33 @@ export const middleCSS = css`
     justify-self: stretch;
 `;
 
+/*
+    Small helper object for the generateBreakpointCSS() function to render the correct CSS for each
+    grid setting.
+*/
 const ops = {
-    width: (w: any, middle: boolean) => w > 0
-        ? middle
-        ? `grid-column-end: span ${w}; ${middleCSS}`
-        : `grid-column-end: span ${w}; display: block;`
-        : 'display:none;',
+    // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
+    width: (w: any, middle: boolean) =>
+        w > 0
+            ? middle
+                ? `grid-column-end: span ${w}; ${middleCSS}`
+                : `grid-column-end: span ${w}; display: block;`
+            : 'display:none;',
     height: (h: any) => `grid-row-end: span ${h};`,
     left: (l: any) => `grid-column-start: ${l};`,
     top: (t: any) => `grid-row-start: ${t};`,
 };
 
-export function generateBreakpointCSS(gridSettings: GridSettings, sortedBreakpoints: BreakpointType[], middle: boolean | undefined) {
+/*
+    Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
+    css properties based on the breakpoint size so that a single breakpoint declaration for 'xs' can
+    have css for left, top, height & width if necessary.
+*/
+export function generateBreakpointCSS(
+    gridSettings: GridSettings,
+    sortedBreakpoints: BreakpointType[],
+    middle: boolean | undefined
+) {
     const responsiveCSS = {};
     const sortedResponsiveCSS: BreakpointType[] = [];
     const generalSettings: GridSettings = {};
@@ -175,9 +135,15 @@ export function generateBreakpointCSS(gridSettings: GridSettings, sortedBreakpoi
                 const responsiveValue = currentValue[breakpointKey];
 
                 if (responsiveCSS[breakpointKey]) {
-                    responsiveCSS[breakpointKey] += ops[settingKey](responsiveValue, middle);
+                    responsiveCSS[breakpointKey] += ops[settingKey](
+                        responsiveValue,
+                        middle
+                    );
                 } else {
-                    responsiveCSS[breakpointKey] = ops[settingKey](responsiveValue, middle);
+                    responsiveCSS[breakpointKey] = ops[settingKey](
+                        responsiveValue,
+                        middle
+                    );
                 }
             });
         }
@@ -186,9 +152,26 @@ export function generateBreakpointCSS(gridSettings: GridSettings, sortedBreakpoi
     sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
         const breakpointKey = Object.keys(breakpointObj)[0];
         if (responsiveCSS[breakpointKey] !== undefined) {
-            sortedResponsiveCSS.push( { [breakpointKey]: responsiveCSS[breakpointKey] });
+            sortedResponsiveCSS.push({
+                [breakpointKey]: responsiveCSS[breakpointKey],
+            });
         }
     });
 
-    return {sortedResponsiveCSS, generalSettings};
+    /*
+    sortedResponsiveCSS is an array of breakpoint css associated to a breakpoint key, i.e.
+    [
+         {xs: 'grid-column-end: span 2; display: block; grid-row-end: span 3;'},
+         {md: 'grid-column-end: span 10;'}
+    ]
+
+    generalSettings is the returned values which were not responsive objects, i.e.
+    {
+        left: 1,
+        top: undefined,
+        height: 1,
+        width: 3
+    }
+    */
+    return { sortedResponsiveCSS, generalSettings };
 }

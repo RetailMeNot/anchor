@@ -65,9 +65,11 @@ interface GridProps {
 }
 
 const StyledGrid = styled(AGrid)<GridProps>`
-    ${({ debug }) => debug && css({
-        backgroundColor: debugColor,
-    })}
+    ${({ debug }) =>
+        debug &&
+        css({
+            backgroundColor: debugColor,
+        })}
 `;
 
 export const Grid = ({

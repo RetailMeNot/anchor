@@ -5,9 +5,8 @@ import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENT
 import { Grid, Cell } from '../index';
 import {
-    createResponsiveObject,
+    generateBreakpointCSS,
     getBreakpointKey,
-    getResponsiveValue,
     sortBreakpoints,
 } from '../utils';
 import { RootTheme } from '../../theme';
@@ -50,13 +49,8 @@ describe('Component: Grid & Cell', () => {
 
 describe('Utilities: Grid & Cell', () => {
     const testObject = { xs: 0, md: 900, sm: 600 };
-    const responsiveSettings = { xs: 12, md: 6 };
     const innerWidth = 780;
     const sortedBreakpoints = sortBreakpoints(testObject);
-    const responsiveObject = createResponsiveObject(
-        responsiveSettings,
-        sortedBreakpoints
-    );
 
     it('sortBreakpoints should return a sorted array from an object', () => {
         const lastBreakpoint = sortedBreakpoints[sortedBreakpoints.length - 1];
@@ -65,25 +59,26 @@ describe('Utilities: Grid & Cell', () => {
         expect(value).toEqual(900);
     });
 
-    it('createResponsiveObject should return a mobile first object based on supplied breakpoints', () => {
-        const key = responsiveObject && Object.keys(responsiveObject)[1];
-        const value = responsiveObject && Object.values(responsiveObject)[1];
-
-        expect(key).toEqual('sm');
-        expect(value).toEqual(12);
-    });
-
     it('getBreakpointKey should return the key associated to the current innerWidth', () => {
         const value = getBreakpointKey(innerWidth, sortedBreakpoints);
 
         expect(value).toEqual('sm');
     });
 
-    it('getResponsiveValue should return the value associated from a breakpoint based on window width.', () => {
-        const value =
-            responsiveObject &&
-            getResponsiveValue(responsiveObject, innerWidth, sortedBreakpoints);
+    it('generateBreakpointCSS should return generated css and basic grid settings', () => {
+        const gridSettings = {
+            width: { xs: 12, md: 6 },
+            left: 1,
+            height: { xs: 3, md: 1 },
+        };
+        const middle = true;
+        const value = generateBreakpointCSS(
+            gridSettings,
+            sortedBreakpoints,
+            middle
+        );
 
-        expect(value).toEqual(12);
+        expect(value.sortedResponsiveCSS.length).toBe(2);
+        expect(Object.keys(value.generalSettings)[0]).toBe('left');
     });
 });
