@@ -58,6 +58,8 @@ interface GridProps {
     debug?: boolean;
     flow?: Flow;
     gap?: string;
+    rowGap?: string;
+    columnGap?: string;
     justifyContent?: Justifycontent;
     rows?: string;
 }
@@ -77,6 +79,8 @@ export const Grid = ({
     debug = false,
     flow = FLOW.row,
     gap = '0.5rem',
+    rowGap,
+    columnGap,
     justifyContent,
     rows,
     ...props
@@ -88,6 +92,8 @@ export const Grid = ({
         debug={debug}
         flow={flow}
         gap={gap}
+        rowGap={rowGap}
+        columnGap={columnGap}
         justifyContent={justifyContent}
         rows={rows}
         {...props}

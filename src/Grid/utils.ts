@@ -4,6 +4,7 @@
 */
 
 import { createContext } from 'react';
+import { css } from '@xstyled/styled-components';
 
 export type BreakpointType = {
     [key: string]: number;
@@ -138,10 +139,17 @@ interface GridSettings {
     width?: GridSetting;
 }
 
+export const middleCSS = css`
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-self: stretch;
+`;
+
 const ops = {
     width: (w: any, middle: boolean) => w > 0
         ? middle
-        ? `grid-column-end: span ${w}; display: inline-flex;`
+        ? `grid-column-end: span ${w}; ${middleCSS}`
         : `grid-column-end: span ${w}; display: block;`
         : 'display:none;',
     height: (h: any) => `grid-row-end: span ${h};`,

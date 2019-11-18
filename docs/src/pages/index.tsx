@@ -1,8 +1,8 @@
 // VENDOR
 import * as React from 'react';
-import styled, { createGlobalStyle } from '@xstyled/styled-components';
+import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
+import { breakpoints } from '@xstyled/system';
 import { Link, withPrefix } from 'gatsby';
-import { config } from 'react-awesome-styled-grid';
 // ANCHOR & COMPONENTS
 import {
     Cell,
@@ -13,7 +13,6 @@ import {
 } from '@retailmenot/anchor';
 import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
-import { breakpoints } from '../components/Utils';
 import { Wave } from '../components/Wave';
 
 const CONTENT_WIDTH = 940;
@@ -37,13 +36,15 @@ const StyledIndexPage = styled('div')`
     min-height: 130vh;
     padding-top: 1rem;
 
-    ${props => config(props).media[breakpoints.sm]`
-        display: flex;
-        flex-direction: column;
-        margin-bottom: auto;
-        min-height: auto;
-        padding-top: 3.4375rem;
-    `}
+    ${breakpoints({
+        md: css`
+            display: flex;
+            flex-direction: column;
+            margin-bottom: auto;
+            min-height: auto;
+            padding-top: 3.4375rem;
+        `,
+    })}
 `;
 
 const StyledIntro = styled('div')`
@@ -51,9 +52,12 @@ const StyledIntro = styled('div')`
     max-width: ${CONTENT_WIDTH}px;
     margin: 0 auto;
     padding-top: 1rem;
-    ${props => config(props).media[breakpoints.sm]`
-        padding-top: 6.25rem;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            padding-top: 6.25rem;
+        `,
+    })}
 `;
 
 const StyledLogo = styled('img')`
@@ -64,9 +68,12 @@ const StyledLogo = styled('img')`
     max-width: 22.25rem;
     position: relative;
     width: 80%;
-    ${props => config(props).media[breakpoints.sm]`
-        margin: inherit;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            margin: inherit;
+        `,
+    })}
 `;
 
 const StyledCaption = styled('p')`
@@ -80,13 +87,16 @@ const StyledCaption = styled('p')`
     max-width: auto;
     padding: 1.5rem;
     text-align: left;
-    ${props => config(props).media[breakpoints.md]`
-        background: transparent;
-        border-radius: 0;
-        margin-bottom: 0;
-        max-width: 38.125rem;
-        padding: 1rem 0;
-    `}
+
+    ${breakpoints({
+        md: css`
+            background: transparent;
+            border-radius: 0;
+            margin-bottom: 0;
+            max-width: 38.125rem;
+            padding: 1rem 0;
+        `,
+    })}
 `;
 
 const StyledContainer = styled('div')`
@@ -94,9 +104,12 @@ const StyledContainer = styled('div')`
     max-width: ${CONTENT_WIDTH}px;
     margin: 0 auto;
     padding: 0 1rem;
-    ${props => config(props).media[breakpoints.sm]`
-        padding-top:4rem;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            padding-top:4rem;
+        `,
+    })}
 `;
 
 const StyledOcean = styled('div')`
@@ -109,10 +122,13 @@ const StyledOcean = styled('div')`
     right: 0;
     width: 100%;
     z-index: -1;
-    ${props => config(props).media[breakpoints.sm]`
-        bottom: 0;
-        position: absolute;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            bottom: 0;
+            position: absolute;
+        `,
+    })}
 `;
 
 const StyledFooter = styled('footer')`
@@ -124,10 +140,13 @@ const StyledFooter = styled('footer')`
     text-align: center;
     width: 100%;
     z-index: -1;
-    ${props => config(props).media[breakpoints.sm]`
-        position: absolute;
-        z-index: 30;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            position: absolute;
+            z-index: 30;
+        `,
+    })}
 
     img {
         display: block;
@@ -137,6 +156,11 @@ const StyledFooter = styled('footer')`
         display: inline-block;
         padding: 0 1rem;
     }
+`;
+
+const StyledGrid = styled(Grid)`
+    row-gap: 2rem;
+    column-gap: 0rem;
 `;
 
 export const IndexPage = (): React.ReactElement<any> => (
@@ -176,8 +200,8 @@ export const IndexPage = (): React.ReactElement<any> => (
                 </StyledIntro>
 
                 <StyledContainer>
-                    <Grid gap="2rem">
-                        <Cell width={{xs: 12, md: 6}}>
+                    <StyledGrid columns={13}>
+                        <Cell width={{xs: 13, md: 6}}>
                             <HomeCard
                                 description="Check out our components & documentation."
                                 imgSrc="/images/developer-icon.svg"
@@ -185,7 +209,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                                 to="/components"
                             />
                         </Cell>
-                        <Cell width={{xs: 12, md: 6}} left={{xs: 0, md: 7}} top={{xs: 2, md: 1 }}>
+                        <Cell width={{xs: 13, md: 6}} left={{xs: 0, md: 8}} top={{xs: 2, md: 1 }}>
                             <HomeCard
                                 description="Take a look at our design philosophy & human interface guidelines."
                                 imgSrc="/images/designer-icon.svg"
@@ -193,7 +217,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                                 disabled
                             />
                         </Cell>
-                    </Grid>
+                    </StyledGrid>
                 </StyledContainer>
 
                 <StyledOcean>

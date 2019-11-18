@@ -3,10 +3,10 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
+import { breakpoints } from '@xstyled/system';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import merge from 'lodash.merge';
-import { config } from 'react-awesome-styled-grid';
 
 // ANCHOR & COMPONENTS
 import {
@@ -26,7 +26,6 @@ import {
 } from '../../Navigation';
 import { MDXComponents } from './MDXComponents';
 import { SearchInput } from '../../SearchInput';
-import { breakpoints, rem } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
 
@@ -50,9 +49,11 @@ const StyledContentMain = styled('main')`
     max-width: 80rem;
     padding: 1rem 1rem 3rem;
     width: 100%;
-    ${props => config(props).media[breakpoints.md]`
-        width: 95%;
-    `}
+    ${breakpoints({
+        md: css`
+            width: 95%;
+        `,
+    })}
 
     blockquote {
         padding-bottom: 0;
@@ -103,17 +104,19 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     z-index: 90;
     ${({ sectionNavOpen }) =>
         css({ display: sectionNavOpen ? 'display' : 'none' })}
-    ${props => config(props).media[breakpoints.md]`
-        height: auto;
-        overflow-y: initial;
-        padding-bottom: initial;
-        position: relative;
-        right: auto;
-        top: auto;
-        width: auto;
-        z-index: 0;
-        display: block;
-    `};
+    ${(breakpoints({
+        md: css`
+            height: auto;
+            overflow-y: initial;
+            padding-bottom: initial;
+            position: relative;
+            right: auto;
+            top: auto;
+            width: auto;
+            z-index: 0;
+            display: block;
+        `,
+    }))}
 `;
 
 interface FixedBodyProps {

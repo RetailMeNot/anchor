@@ -8,11 +8,11 @@
 // VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
+import { breakpoints } from '@xstyled/system';
 import { Cell, Grid, Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
-import { config } from 'react-awesome-styled-grid';
 // COMPONENTS
-import { breakpoints, SiteLink } from '../Utils';
+import { SiteLink } from '../Utils';
 
 interface HomeCardProps {
     description?: string;
@@ -32,11 +32,14 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
     overflow: hidden;
     padding: 1.5rem;
     position: relative;
-    ${props => config(props).media[breakpoints.md]`
-        padding: 2.8125rem;
-        height: 14.5265rem;
-        background: #fff;
-    `}
+
+    ${breakpoints({
+        md: css`
+            padding: 2.8125rem;
+            height: 14.5265rem;
+            background: #fff;
+        `,
+    })}
 
     ${({ disabled }) =>
         disabled &&
@@ -71,6 +74,7 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
             }
         `}
 `;
+StyledHomeCard.displayName = "StyledHomeCard";
 
 const StyledLeftCell = styled(Cell)`
     img {
@@ -86,12 +90,12 @@ export const HomeCard = ({
     to,
 }: HomeCardProps): React.ReactElement<any> => (
     <StyledHomeCard disabled={disabled}>
-        <Grid>
-            <StyledLeftCell width={{xs: 12, md: 3}} middle>
+        <Grid gap="0rem">
+            <StyledLeftCell width={{xs: 3}} middle center>
                 <img src={withPrefix(imgSrc)} alt={title} />
             </StyledLeftCell>
 
-            <Cell width={{xs: 12, md: 9}}>
+            <Cell width={7} left={5}>
                 <Typography
                     tag="h3"
                     weight="bold"

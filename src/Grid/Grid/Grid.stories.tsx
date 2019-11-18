@@ -93,6 +93,14 @@ storiesOf('Components/Grid', module)
                 >
                     <Typography tag="h1">Grid</Typography>
                 </TestCell>
+                <TestCell
+                    middle
+                    center
+                    width={12}
+                    height={2}
+                >
+                    <Typography>Middle Aligned</Typography>
+                </TestCell>
                 <TestCell width={{ xs: 12, md: 6 }}>
                     <Typography>Cell 1</Typography>
                 </TestCell>

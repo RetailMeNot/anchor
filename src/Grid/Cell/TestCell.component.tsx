@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from "@xstyled/styled-components";
 import { breakpoints } from '@xstyled/system';
-import { BreakpointType, debugColor, generateBreakpointCSS, GridContext } from '../utils';
+import { BreakpointType, debugColor, generateBreakpointCSS, GridContext, middleCSS } from '../utils';
 import { ResponsiveContext } from '../ResponsiveProvider';
 
 interface CellProps {
@@ -35,11 +35,7 @@ const StyledCell = styled.div<CellProps>`
 
     ${({ center }) => center && `text-align: center`};
     ${({ area }) => area && `grid-area: ${area}`};
-    ${({ middle }) => middle && css`
-        flex-flow: column wrap;
-        justify-content: center;
-        justify-self: stretch;
-    `}
+    ${({ middle, width }) => middle && width && middleCSS}
     ${({ debug }) => debug && css({
         backgroundColor: debugColor,
     })};
@@ -65,7 +61,6 @@ export const TestCell = ({
         top,
         width,
     }, sortedBreakpoints, middle);
-console.log(generalSettings);
     return(
         <StyledCell
             center={center}

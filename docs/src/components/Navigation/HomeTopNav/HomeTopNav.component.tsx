@@ -21,6 +21,7 @@ const StyledContainer = styled('div')`
 
 const StyledNavLink = styled(NavLink)`
     text-align: right;
+    display: block;
 `;
 
 export const HomeTopNav = ({
@@ -29,8 +30,8 @@ export const HomeTopNav = ({
     return (
         <StyledHomeTopNav contentWidth={contentWidth}>
             <StyledContainer>
-                <Grid gap="0rem" debug>
-                    <Cell width={{xs: 2}} left={{xs: 11}}>
+                <Grid gap="0rem">
+                    <Cell width={{xs: 4, md: 2}} left={{xs: 8, md: 11}}>
                         <StyledNavLink to="/overview/">Overview</StyledNavLink>
                     </Cell>
                 </Grid>
