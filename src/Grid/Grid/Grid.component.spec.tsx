@@ -18,7 +18,7 @@ const subject = (
     <ThemeProvider theme={RootTheme}>
         <Grid
             alignContent="center"
-            areas={["head head", "nav main", "nav foot"]}
+            areas={['head head', 'nav main', 'nav foot']}
             columnGap="5rem"
             debug
             justifyContent="initial"

@@ -149,6 +149,8 @@ export function generateBreakpointCSS(
         }
     });
 
+    // This sorts the breakpoints by the breakpoints from ResponsiveProvider. This is neccessary
+    // because the order in which the media queries are rendered is important.
     sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
         const breakpointKey = Object.keys(breakpointObj)[0];
         if (responsiveCSS[breakpointKey] !== undefined) {
