@@ -3,19 +3,24 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+
 // ANCHOR
-import { positionVariants, Position } from '../utils/position/position';
+import { Position } from '../utils/position/position';
+import { PositionContainer } from '../utils/PositionContainer';
 
 interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-    content: string;
-    position?: Position;
-    maxWidth?: string;
+    arrowIndent?: string;
+    arrowSize?: string;
     background?: string;
     color?: string;
-    wrapContent?: boolean;
-    display?: string;
+    content: string;
     delay?: string;
+    display?: string;
+    initialDistance?: number;
+    maxWidth?: string;
+    position?: Position;
+    showArrow?: boolean;
+    wrapContent?: boolean;
 }
 
 interface TooltipContainerState {
@@ -29,58 +34,6 @@ interface TooltipContainerState {
 const ToolTipContainer = styled('div')<TooltipContainerProps>`
     position: relative;
     ${({ display = 'inline-block' }) => css({ display })};
-`;
-
-interface TooltipElementProps {
-    position: Position;
-    height: number;
-    width: number;
-    toolTipHeight: number;
-    toolTipWidth: number;
-    wrapContent?: boolean;
-    background?: string;
-    color?: string;
-    maxWidth?: string;
-    delay?: string;
-}
-
-const TooltipElement = styled('div')<TooltipElementProps>`
-    position: absolute;
-    box-sizing: border-box;
-    ${({ background = 'rgba(0, 0, 0, 0.8)', color = 'white' }) =>
-        css({
-            background: th.color(background),
-            color,
-        })};
-    border-radius: base;
-    font-family: base;
-    font-size: 0.8rem;
-    padding: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 250ms ease-in-out;
-
-    &.active {
-        ${({ delay }) =>
-            css({
-                transitionDelay: delay,
-            })}
-        opacity: 1;
-        visibility: visible;
-    }
-
-    ${({ wrapContent = true }) =>
-        css({ whiteSpace: wrapContent ? 'normal' : 'nowrap' })};
-    ${({ maxWidth = 'auto' }) => css({ width: maxWidth })};
-    ${({ position, height, width, toolTipHeight, toolTipWidth }) =>
-        positionVariants(
-            position,
-            height,
-            width,
-            toolTipHeight,
-            toolTipWidth,
-            8
-        )};
 `;
 
 export class Tooltip extends React.Component<
@@ -121,15 +74,19 @@ export class Tooltip extends React.Component<
 
     render(): React.ReactElement<Tooltip> {
         const {
-            className,
-            children,
-            content,
-            position = 'topEnd',
-            wrapContent,
+            arrowIndent,
+            arrowSize,
             background,
-            color,
-            maxWidth,
+            children,
+            className,
+            color = 'white',
+            content,
             delay,
+            initialDistance = 8,
+            maxWidth,
+            position = 'topEnd',
+            showArrow,
+            wrapContent,
             ...props
         } = this.props;
         const {
@@ -149,22 +106,25 @@ export class Tooltip extends React.Component<
                 {...props}
             >
                 {children}
-                <TooltipElement
-                    className={classNames('anchor-tooltip-element', {
-                        active: !hidden,
-                    })}
-                    delay={delay}
-                    ref={this.tooltipRef}
-                    position={position}
-                    height={height}
-                    width={width}
-                    toolTipHeight={toolTipHeight}
-                    toolTipWidth={toolTipWidth}
-                    children={content}
-                    wrapContent={wrapContent}
+                <PositionContainer
+                    active={!hidden}
+                    arrowIndent={arrowIndent}
+                    arrowSize={arrowSize}
                     background={background}
+                    children={content}
+                    className="anchor-tooltip-element"
                     color={color}
+                    containerHeight={toolTipHeight}
+                    containerWidth={toolTipWidth}
+                    delay={delay}
+                    height={height}
+                    initialDistance={initialDistance}
                     maxWidth={maxWidth}
+                    position={position}
+                    ref={this.tooltipRef}
+                    showArrow={showArrow}
+                    width={width}
+                    wrapContent={wrapContent}
                 />
             </ToolTipContainer>
         );

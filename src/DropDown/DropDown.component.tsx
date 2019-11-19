@@ -3,13 +3,12 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
 import { filter, map, mapTo, distinctUntilChanged } from 'rxjs/operators';
 // ANCHOR
 import { get } from '../utils/get/get';
-import { Arrow } from './Arrow/Arrow.component';
-import { positionVariants, Position } from '../utils/position/position';
+import { Position } from '../utils/position/position';
+import { PositionContainer } from '../utils/PositionContainer';
 
 export type Trigger = 'hover' | 'click' | 'both';
 
@@ -95,65 +94,6 @@ const StyledDropDown = styled('div')<StyledDropDownProps>`
         }
         return null;
     }};
-`;
-
-interface DropDownContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-    ref?: any;
-    height: number;
-    width: number;
-    containerHeight: number;
-    containerWidth: number;
-    position: Position;
-    showArrow?: boolean;
-    shadow?: string;
-    border?: string;
-    background?: string;
-    borderRadius?: string;
-    active?: boolean;
-    children?: any;
-    className?: string;
-    offset?: string;
-}
-
-const StyledDropDownContainer = styled('div')<DropDownContainerProps>`
-    position: absolute;
-    box-sizing: border-box;
-    display: flex;
-    z-index: 1;
-    min-width: 10rem;
-
-    ${({ border, borderRadius, shadow, active }) =>
-        css({
-            border,
-            borderRadius,
-            boxShadow: shadow,
-            visibility: active ? 'visible' : 'hidden',
-        })};
-
-    ${({ position, height, width, containerHeight, containerWidth }) =>
-        positionVariants(
-            position,
-            height,
-            width,
-            containerHeight,
-            containerWidth
-        )};
-`;
-
-interface BackgroundProps {
-    background?: string;
-}
-
-const Background = styled('div')<BackgroundProps>`
-    box-sizing: border-box;
-    border-radius: inherit;
-    width: 100%;
-    z-index: 2;
-
-    ${({ background }) =>
-        css({
-            background: th.color(background),
-        })};
 `;
 
 export class DropDown extends React.Component<DropDownProps> {
@@ -328,31 +268,24 @@ export class DropDown extends React.Component<DropDownProps> {
                 {...props}
             >
                 {children}
-                <StyledDropDownContainer
-                    className="anchor-drop-down-container"
-                    ref={this.containerReference}
-                    shadow={shadow}
+                <PositionContainer
+                    active={showDropdown}
+                    arrowIndent={arrowIndent}
+                    arrowSize={arrowSize}
+                    background={background}
                     border={border}
                     borderRadius={borderRadius}
-                    position={position}
-                    active={showDropdown}
-                    height={height}
-                    width={width}
+                    children={overlay}
+                    className="anchor-drop-down-container"
                     containerHeight={containerHeight}
                     containerWidth={containerWidth}
-                >
-                    <Background background={background}>{overlay}</Background>
-                    {showArrow && (
-                        <Arrow
-                            position={position}
-                            size={arrowSize}
-                            indent={arrowIndent}
-                            background={background}
-                            shadow={shadow}
-                            border={border}
-                        />
-                    )}
-                </StyledDropDownContainer>
+                    height={height}
+                    position={position}
+                    ref={this.containerReference}
+                    shadow={shadow}
+                    showArrow={showArrow}
+                    width={width}
+                />
             </StyledDropDown>
         );
     }

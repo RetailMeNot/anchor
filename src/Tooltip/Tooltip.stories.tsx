@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select, boolean, text } from '@storybook/addon-knobs';
+import { select, boolean, text, number } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
@@ -54,6 +54,10 @@ storiesOf('Components/Tooltip', module)
                         maxWidth={text('Tooltip width', 'auto')}
                         delay={text('Tooltip delay', '') || undefined}
                         background={text('Tooltip background', '') || undefined}
+                        showArrow={boolean('Show Arrow', false)}
+                        arrowIndent={text('Arrow Indent', '') || undefined}
+                        arrowSize={text('Arrow Size', '') || undefined}
+                        initialDistance={number('Initial Distance', 8) || undefined}
                     >
                         <Button size="lg">Hover over me</Button>
                     </Tooltip>
