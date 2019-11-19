@@ -5,19 +5,31 @@ exports[`Component: Grid & Cell should be defined 1`] = `
   height: 100%;
   min-width: 0;
   grid-column-end: span 1;
+  background-color: rgba(255,0,0,0.4);
 }
 
 .c0 {
   display: grid;
   height: auto;
   grid-auto-flow: row;
-  grid-auto-rows: minmax(20px,auto);
+  grid-auto-rows: minmax(1.25rem,auto);
+  grid-template-rows: repeat(3,1fr);
   grid-template-columns: repeat(12,1fr);
   grid-gap: 0.5rem;
+  -webkit-column-gap: 5rem;
+  column-gap: 5rem;
+  row-gap: 1rem;
+  grid-template-areas: 'head head' 'nav main' 'nav foot';
+  -webkit-box-pack: initial;
+  -webkit-justify-content: initial;
+  -ms-flex-pack: initial;
+  justify-content: initial;
+  background-color: rgba(255,0,0,0.4);
 }
 
 <div
   className="c0 anchor-grid"
+  rows={3}
 >
   <div
     className="c1"

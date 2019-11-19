@@ -7,7 +7,6 @@ import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { Cell, Grid, ResponsiveProvider } from '../index';
-import { TestCell } from '../Cell';
 import { FLOW } from '../utils';
 import { RootTheme } from '../../theme';
 
@@ -77,35 +76,4 @@ storiesOf('Components/Grid', module)
                 </ResponsiveProvider>
             </ThemeProvider>
         );
-    })
-    .add('Test Cell', () => (
-        <ThemeProvider theme={RootTheme}>
-            <ResponsiveProvider
-                debug={boolean('ResponsiveProvider Debug', true)}
-            >
-                <br />
-                <Grid flow={FLOW.row} debug={boolean('Grid Debug', true)}>
-                    <TestCell
-                        center
-                        middle
-                        height={{ sm: 1, md: 2, lg: 3 }}
-                        width={{ xs: 0, md: 12 }}
-                    >
-                        <Typography tag="h1">Grid</Typography>
-                    </TestCell>
-                    <TestCell width={{ xs: 12, md: 6 }}>
-                        <Typography>Cell 1</Typography>
-                    </TestCell>
-                    <TestCell width={{ xs: 12, md: 6 }}>
-                        <Typography>Cell 2</Typography>
-                    </TestCell>
-                    <TestCell width={{ xs: 12, md: 6 }} left={{ xs: 1, md: 4 }}>
-                        <Typography>Cell 3</Typography>
-                    </TestCell>
-                    <TestCell width={2} left={11}>
-                        <Typography>Cell 4</Typography>
-                    </TestCell>
-                </Grid>
-            </ResponsiveProvider>
-        </ThemeProvider>
-    ));
+    });

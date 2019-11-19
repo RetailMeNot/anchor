@@ -16,7 +16,15 @@ import { shallow, mount } from 'enzyme';
 // TEST SETUP
 const subject = (
     <ThemeProvider theme={RootTheme}>
-        <Grid>
+        <Grid
+            alignContent="center"
+            areas={["head head", "nav main", "nav foot"]}
+            columnGap="5rem"
+            debug
+            justifyContent="initial"
+            rowGap="1rem"
+            rows={3}
+        >
             <Cell>Cell 1</Cell>
             <Cell>Cell 2</Cell>
         </Grid>
@@ -34,6 +42,22 @@ describe('Component: Grid & Cell', () => {
 
         expect(tree).toMatchSnapshot();
     });
+
+    // it('should correctly concatenate areas', () => {
+    //     const testSubject = (
+    //         <Grid
+    //             areas={["head head", "nav main", "nav foot"]}
+    //             debug
+    //         >
+    //             <Cell>Cell 1</Cell>
+    //         </Grid>
+    //     );
+
+    //     const test = mount(testSubject);
+    //     const styles = test.instance().style;
+    //     console.log(test.debug());
+    //     expect(true);
+    // });
 
     it('should not render a cell when set to 0 width', () => {
         const testSubject = (
