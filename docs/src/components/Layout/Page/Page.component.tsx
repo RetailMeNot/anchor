@@ -3,19 +3,20 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
 import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
-import { breakpoints } from '@xstyled/system';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import merge from 'lodash.merge';
+import { config } from 'react-awesome-styled-grid';
 
 // ANCHOR & COMPONENTS
 import {
+    Col,
     Button,
-    Cell,
-    Grid,
+    Container,
     Hamburger,
-    ResponsiveProvider,
     RootTheme,
+    Row,
+    StandardBreakpoints,
     ThemeProvider,
     Typography,
 } from '@retailmenot/anchor';
@@ -26,6 +27,7 @@ import {
 } from '../../Navigation';
 import { MDXComponents } from './MDXComponents';
 import { SearchInput } from '../../SearchInput';
+import { breakpoints, rem } from '../../Utils';
 // ASSETS
 import logo from './anchor-logo.svg';
 
@@ -36,6 +38,11 @@ const GlobalCSS = createGlobalStyle`
 `;
 
 const StyledPageElement = styled('div')`
+    // The Row component can't be extended, so targeting it via class
+    .anchor-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 `;
 
 interface PageProps {
@@ -49,11 +56,9 @@ const StyledContentMain = styled('main')`
     max-width: 80rem;
     padding: 1rem 1rem 3rem;
     width: 100%;
-    ${breakpoints({
-        md: css`
-            width: 95%;
-        `,
-    })}
+    ${props => config(props).media[breakpoints.md]`
+        width: 95%;
+    `}
 
     blockquote {
         padding-bottom: 0;
@@ -85,6 +90,11 @@ const StyledHeader = styled('header')`
     }
 `;
 
+const SectionNavCol = styled(Col)`
+    padding-left: 0;
+    padding-right: 0;
+`;
+
 interface StyledSectionNavProps {
     sectionNavOpen: boolean;
 }
@@ -104,19 +114,17 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     z-index: 90;
     ${({ sectionNavOpen }) =>
         css({ display: sectionNavOpen ? 'display' : 'none' })}
-    ${(breakpoints({
-        md: css`
-            height: auto;
-            overflow-y: initial;
-            padding-bottom: initial;
-            position: relative;
-            right: auto;
-            top: auto;
-            width: auto;
-            z-index: 0;
-            display: block;
-        `,
-    }))}
+    ${props => config(props).media[breakpoints.md]`
+        height: auto;
+        overflow-y: initial;
+        padding-bottom: initial;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        z-index: 0;
+        display: block;
+    `};
 `;
 
 interface FixedBodyProps {
@@ -150,6 +158,32 @@ const StyledPrimaryNav = styled('nav')`
             color: text.link.hover;
         }
     }
+`;
+
+const CenteredCol = styled(Col)`
+    display: flex;
+    justify-content: center;
+`;
+
+const HamburgerCol = styled(CenteredCol)`
+    max-width: 3rem;
+    ${props => config(props).media[breakpoints.md]`
+        display: none;
+    `}
+`;
+
+const LogoCol = styled(CenteredCol)`
+    padding-right: 0;
+`;
+
+// TODO: This is a stopgap measure to get search out. The current mobile layout, plus the way
+// DocSearch initializes, makes both the UX and UI for mobile search tricky. Hiding it for mobile
+// for now
+const SearchCol = styled(CenteredCol)`
+    display: none;
+    ${props => config(props).media[breakpoints.md]`
+        display: flex;
+    `}
 `;
 
 const AnchorDocsTheme = merge({}, RootTheme, {
@@ -189,6 +223,29 @@ const AnchorDocsTheme = merge({}, RootTheme, {
         base: 'solid thin #E7E7E7',
         dark: 'solid thin #D3D3D3',
     },
+    awesomegrid: {
+        breakpoints: {
+            xs: 1,
+            sm: rem(StandardBreakpoints.sm.min),
+            md: rem(StandardBreakpoints.md.min),
+            lg: rem(StandardBreakpoints.lg.min),
+            xl: rem(StandardBreakpoints.xl.min),
+        },
+        container: {
+            xs: 'full',
+            sm: 'full',
+            md: 'full',
+            lg: 'full',
+            xl: 'full',
+        },
+        paddingWidth: {
+            xs: 0,
+            sm: 0,
+            md: 0,
+            lg: 0,
+            xl: 0,
+        },
+    },
 });
 
 export const Page = ({
@@ -200,15 +257,15 @@ export const Page = ({
 
     return (
         <ThemeProvider theme={AnchorDocsTheme}>
-            <ResponsiveProvider>
-                <StyledPageElement className={classNames(className)}>
-                    <Helmet htmlAttributes={{ lang: 'en' }} />
+            <StyledPageElement className={classNames(className)}>
+                <Helmet htmlAttributes={{ lang: 'en' }} />
 
-                    <GlobalCSS />
+                <GlobalCSS />
 
-                    <StyledHeader>
-                        <Grid>
-                            <Cell width={{xs: 1, md: 0}} middle center>
+                <StyledHeader>
+                    <Container>
+                        <Row>
+                            <HamburgerCol xs={1} sm={1}>
                                 <Button
                                     variant="minimal"
                                     prefix={<Hamburger />}
@@ -216,22 +273,22 @@ export const Page = ({
                                         setSectionNavOpen(!sectionNavOpen)
                                     }
                                 />
-                            </Cell>
+                            </HamburgerCol>
 
-                            <Cell width={{xs: 2, md: 3, xl: 2}} middle>
+                            <LogoCol md={2} lg={3} xl={2}>
                                 <StyledLogoContainer to="/">
                                     <img
                                         alt="Anchor Logo Horizontal"
                                         src={logo}
                                     />
                                 </StyledLogoContainer>
-                            </Cell>
+                            </LogoCol>
 
-                            <Cell width={{xs: 0, md: 6}} middle>
+                            <SearchCol>
                                 <SearchInput />
-                            </Cell>
+                            </SearchCol>
 
-                            <Cell width={{xs: 9, md: 3, xl: 4}} middle>
+                            <CenteredCol>
                                 <StyledPrimaryNav>
                                     <Typography
                                         tag="a"
@@ -242,34 +299,34 @@ export const Page = ({
                                         Github
                                     </Typography>
                                 </StyledPrimaryNav>
-                            </Cell>
-                        </Grid>
-                    </StyledHeader>
+                            </CenteredCol>
+                        </Row>
+                    </Container>
+                </StyledHeader>
 
-                    <Grid>
-                        <Cell width={{xs: 0, md: 3, xl: 2 }}>
-                            <FixedBody sectionNavOpen={sectionNavOpen} />
+                <Row>
+                    <SectionNavCol md={2} lg={3} xl={2}>
+                        <FixedBody sectionNavOpen={sectionNavOpen} />
 
-                            <StyledSectionNav sectionNavOpen={sectionNavOpen}>
-                                <EnhancedSectionNavigation />
-                            </StyledSectionNav>
-                        </Cell>
+                        <StyledSectionNav sectionNavOpen={sectionNavOpen}>
+                            <EnhancedSectionNavigation />
+                        </StyledSectionNav>
+                    </SectionNavCol>
 
-                        <Cell width={{xs: 12, md: 9, xl: 10 }}>
-                            <StyledContentMain>
-                                <br />
-                                <MDXProvider components={MDXComponents}>
-                                    {children}
-                                </MDXProvider>
+                    <Col md={6} lg={9} xl={10}>
+                        <StyledContentMain>
+                            <br />
+                            <MDXProvider components={MDXComponents}>
+                                {children}
+                            </MDXProvider>
 
-                                <EnhancedNextPrevious section="components" />
+                            <EnhancedNextPrevious section="components" />
 
-                                {enableFooter && <Footer />}
-                            </StyledContentMain>
-                        </Cell>
-                    </Grid>
-                </StyledPageElement>
-            </ResponsiveProvider>
+                            {enableFooter && <Footer />}
+                        </StyledContentMain>
+                    </Col>
+                </Row>
+            </StyledPageElement>
         </ThemeProvider>
     );
 };

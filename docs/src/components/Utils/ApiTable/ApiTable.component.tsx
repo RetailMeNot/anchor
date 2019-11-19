@@ -44,20 +44,19 @@
 
 // VENDOR
 import * as React from 'react';
-import styled, { css } from '@xstyled/styled-components';
+import styled from '@xstyled/styled-components';
 import parse from 'html-react-parser';
-import { breakpoints } from '@xstyled/system';
+import { config } from 'react-awesome-styled-grid';
+// ANCHOR & COMPONENTS
+import { breakpoints } from '../../Utils';
 
 const StyledApiTable = styled('section')`
     overflow-x: scroll;
     white-space: nowrap;
-
-    ${breakpoints({
-        md: css`
-            overflow-x: initial;
-            white-space: normal;
-        `,
-    })}
+    ${props => config(props).media[breakpoints.md]`
+        overflow-x: initial;
+        white-space: normal;
+    `}
 `;
 
 const Table = styled('table')`

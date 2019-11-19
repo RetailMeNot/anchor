@@ -26,7 +26,6 @@ import * as React from 'react';
 // VENDOR
 import { withPrefix } from 'gatsby';
 import styled, { css } from '@xstyled/styled-components';
-import { breakpoints } from '@xstyled/system';
 import {
     LiveEditor,
     LiveProvider,
@@ -47,6 +46,7 @@ import {
     Input,
     Typography,
 } from '@retailmenot/anchor';
+import { config } from 'react-awesome-styled-grid';
 // COMPONENTS
 import * as Anchor from '@retailmenot/anchor';
 // EXAMPLE COMPONENTS <-
@@ -54,6 +54,7 @@ import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 import { CustomResults } from '../AutoCompleteExample';
 import { ExampleHeader, ExampleLink } from '../TemplateExample';
+import { breakpoints } from '../Utils';
 import { COMPONENT_MIN_WIDTH } from '../Utils/constants';
 // TODO: ApiTable is throwing an error when used in the live editor, have to look into it
 // import { ApiTable } from '../Utils/ApiTable';
@@ -82,11 +83,9 @@ const StyledContainerElement = styled('div')<StyledContainerElementProps>`
     margin: ${props => (props.hideTitle ? '0 0 3rem 0' : '2.3rem 0 3rem')};
     display: block;
     overflow-x: scroll;
-    ${breakpoints({
-        md: css`
-            overflow-x: initial;
-        `,
-    })}
+    ${props => config(props).media[breakpoints.md]`
+        overflow-x: initial;
+    `}
 
     .prism-code {
         min-width: ${COMPONENT_MIN_WIDTH};
