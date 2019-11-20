@@ -22,6 +22,7 @@ describe('Component: DropDown', () => {
         expect(tree).toMatchSnapshot();
     });
     test('should toggle when clicked', () => {
+        // TODO: THIS TEST FAILS!
         const subject = <DropDown overlay={<div>1</div>} />;
         const wrapper = mount(subject);
         wrapper.setState({ clicked: true });

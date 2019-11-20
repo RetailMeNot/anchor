@@ -3,7 +3,6 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-
 // ANCHOR
 import { Position } from '../utils/position/position';
 import { PositionContainer } from '../utils/PositionContainer';
@@ -16,7 +15,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     content: string;
     delay?: string;
     display?: string;
-    initialDistance?: number;
+    spacing?: number;
     maxWidth?: string;
     position?: Position;
     showArrow?: boolean;
@@ -82,7 +81,7 @@ export class Tooltip extends React.Component<
             color = 'white',
             content,
             delay,
-            initialDistance = 8,
+            spacing = 8,
             maxWidth,
             position = 'topEnd',
             showArrow,
@@ -118,7 +117,7 @@ export class Tooltip extends React.Component<
                     containerWidth={toolTipWidth}
                     delay={delay}
                     height={height}
-                    initialDistance={initialDistance}
+                    spacing={spacing}
                     maxWidth={maxWidth}
                     position={position}
                     ref={this.tooltipRef}

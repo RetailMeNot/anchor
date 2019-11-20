@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: PositionContainer should be defined. 1`] = `
+.c0 {
+  position: absolute;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  min-width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem;
+  border-radius: 4px;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(15px,50px,0);
+  -ms-transform: translate3d(15px,50px,0);
+  transform: translate3d(15px,50px,0);
+  white-space: normal;
+  width: auto;
+}
+
+.c0.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c1 {
+  box-sizing: border-box;
+  border-radius: inherit;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: black;
+}
+
+.c2 {
+  position: relative;
+  z-index: 1;
+}
+
+<div
+  className="c0 anchor-position-container"
+  height={50}
+  width={100}
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+</div>
+`;

@@ -57,7 +57,7 @@ storiesOf('Components/Tooltip', module)
                         showArrow={boolean('Show Arrow', false)}
                         arrowIndent={text('Arrow Indent', '') || undefined}
                         arrowSize={text('Arrow Size', '') || undefined}
-                        initialDistance={number('Initial Distance', 8) || undefined}
+                        spacing={number('Spacing', 8) || undefined}
                     >
                         <Button size="lg">Hover over me</Button>
                     </Tooltip>
