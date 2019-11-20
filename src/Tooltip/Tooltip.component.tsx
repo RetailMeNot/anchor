@@ -14,6 +14,7 @@ interface TooltipContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     color?: string;
     content: string;
     delay?: string;
+    debug?: boolean;
     display?: string;
     spacing?: number;
     maxWidth?: string;
@@ -81,10 +82,11 @@ export class Tooltip extends React.Component<
             color = 'white',
             content,
             delay,
-            spacing = 8,
+            debug,
             maxWidth,
             position = 'topEnd',
             showArrow,
+            spacing = 8,
             wrapContent,
             ...props
         } = this.props;
@@ -116,6 +118,7 @@ export class Tooltip extends React.Component<
                     containerHeight={toolTipHeight}
                     containerWidth={toolTipWidth}
                     delay={delay}
+                    debug={debug}
                     height={height}
                     spacing={spacing}
                     maxWidth={maxWidth}

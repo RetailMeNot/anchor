@@ -21,6 +21,7 @@ interface PositionContainerProps  extends React.HTMLAttributes<HTMLDivElement> {
     containerHeight: number;
     containerWidth: number;
     delay?: string;
+    debug?: boolean;
     height: number;
     spacing?: number;
     maxWidth?: string;
@@ -41,7 +42,7 @@ const StyledPositionContainer = styled('div')<PositionContainerProps>`
     min-width: 10rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
     font-family: base;
 
     ${({
@@ -128,6 +129,7 @@ export const PositionContainer = forwardRef(
             containerHeight,
             containerWidth,
             delay,
+            debug,
             height,
             spacing = 0,
             padding = '0.5rem',
@@ -141,7 +143,7 @@ export const PositionContainer = forwardRef(
         <StyledPositionContainer
             border={border}
             borderRadius={borderRadius}
-            className={classNames(className || 'anchor-position-container', active && 'active')}
+            className={classNames(className || 'anchor-position-container', (debug || active) && 'active')}
             color={color}
             containerHeight={containerHeight}
             containerWidth={containerWidth}

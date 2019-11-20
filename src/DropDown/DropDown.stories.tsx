@@ -148,6 +148,7 @@ storiesOf('Components/DropDown', module)
                                 }
                                 arrowSize={text('arrowSize', '') || undefined}
                                 spacing={text('spacing', '') || undefined}
+                                debug={boolean('Debug', false)}
                             >
                                 <Button>
                                     {/* Not a prop, just for testing various widths */}

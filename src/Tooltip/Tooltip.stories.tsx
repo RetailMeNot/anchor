@@ -58,6 +58,7 @@ storiesOf('Components/Tooltip', module)
                         arrowIndent={text('Arrow Indent', '') || undefined}
                         arrowSize={text('Arrow Size', '') || undefined}
                         spacing={number('Spacing', 8) || undefined}
+                        debug={boolean('Debug', false)}
                     >
                         <Button size="lg">Hover over me</Button>
                     </Tooltip>

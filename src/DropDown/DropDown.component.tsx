@@ -18,17 +18,18 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     children?: any;
     // Configuration
-    ref?: any;
-    position?: Position;
-    shadow?: string;
-    showArrow?: boolean;
-    border?: string;
-    borderRadius?: string;
-    background?: string;
-    spacing?: string;
     arrowIndent?: string;
     arrowSize?: string;
+    background?: string;
+    border?: string;
+    borderRadius?: string;
+    debug?: boolean;
     onTriggered?: (state: boolean) => void;
+    position?: Position;
+    ref?: any;
+    shadow?: string;
+    showArrow?: boolean;
+    spacing?: string;
 }
 
 interface DropDownState {
@@ -223,6 +224,7 @@ export class DropDown extends React.Component<DropDownProps> {
             overlay,
             spacing,
             arrowSize,
+            debug,
             trigger = 'both',
             arrowIndent = '0.75rem',
             showArrow = true,
@@ -279,6 +281,7 @@ export class DropDown extends React.Component<DropDownProps> {
                     className="anchor-drop-down-container"
                     containerHeight={containerHeight}
                     containerWidth={containerWidth}
+                    debug={debug}
                     height={height}
                     position={position}
                     ref={this.containerReference}
