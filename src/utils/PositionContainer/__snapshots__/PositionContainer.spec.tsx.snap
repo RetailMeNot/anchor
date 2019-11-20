@@ -12,8 +12,8 @@ exports[`Component: PositionContainer should be defined. 1`] = `
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem;
   border-radius: 4px;
@@ -32,15 +32,14 @@ exports[`Component: PositionContainer should be defined. 1`] = `
 }
 
 .c1 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -52,6 +51,7 @@ exports[`Component: PositionContainer should be defined. 1`] = `
 <div
   className="c0 anchor-position-container"
   height={50}
+  spacing={0}
   width={100}
 >
   <div

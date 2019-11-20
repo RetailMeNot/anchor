@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import { positionVariants, Position } from '../position/position';
 import { Arrow } from '../Arrow/Arrow.component';
 
-interface PositionContainerProps  extends React.HTMLAttributes<HTMLDivElement> {
+interface PositionContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     active?: boolean;
     arrowIndent?: string;
     arrowSize?: string;
@@ -45,30 +45,17 @@ const StyledPositionContainer = styled('div')<PositionContainerProps>`
     transition: all 250ms ease-in-out;
     font-family: base;
 
-    ${({
-        border,
-        borderRadius,
-        color,
-        delay,
-        padding,
-        shadow,
-    }) => css({
-        border,
-        color,
-        padding,
-        borderRadius,
-        boxShadow: shadow,
-        transitionDelay: delay,
-    })};
+    ${({ border, borderRadius, color, delay, padding, shadow }) =>
+        css({
+            border,
+            color,
+            padding,
+            borderRadius,
+            boxShadow: shadow,
+            transitionDelay: delay,
+        })};
 
-    ${({
-        containerHeight,
-        containerWidth,
-        height,
-        spacing,
-        position,
-        width,
-    }) =>
+    ${({ containerHeight, containerWidth, height, spacing, position, width }) =>
         positionVariants(
             position,
             height,
@@ -143,7 +130,10 @@ export const PositionContainer = forwardRef(
         <StyledPositionContainer
             border={border}
             borderRadius={borderRadius}
-            className={classNames(className || 'anchor-position-container', (debug || active) && 'active')}
+            className={classNames(
+                className || 'anchor-position-container',
+                (debug || active) && 'active'
+            )}
             color={color}
             containerHeight={containerHeight}
             containerWidth={containerWidth}
@@ -158,9 +148,7 @@ export const PositionContainer = forwardRef(
         >
             <Background background={background} />
 
-            <StyledOverlay>
-                {children}
-            </StyledOverlay>
+            <StyledOverlay>{children}</StyledOverlay>
 
             {showArrow && (
                 <Arrow

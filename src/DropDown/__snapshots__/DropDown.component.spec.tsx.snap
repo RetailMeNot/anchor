@@ -28,8 +28,8 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   border: thin solid #E7E7E7;
   padding: 0.5rem;
@@ -50,15 +50,14 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: white;
 }
 
@@ -97,6 +96,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   <div
     className="c1 anchor-drop-down-container"
     height={null}
+    spacing={0}
     width={null}
   >
     <div

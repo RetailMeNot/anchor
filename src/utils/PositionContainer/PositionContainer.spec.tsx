@@ -17,7 +17,7 @@ describe('Component: PositionContainer', () => {
                     containerHeight={120}
                     containerWidth={70}
                     position="bottom"
-                 />
+                />
             </ThemeProvider>
         );
         const wrapper = mount(subject);

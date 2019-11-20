@@ -12,8 +12,8 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -33,15 +33,14 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -68,6 +67,7 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -94,8 +94,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -115,15 +115,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -150,6 +149,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -176,8 +176,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -197,15 +197,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -232,6 +231,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -258,8 +258,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -279,15 +279,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -314,6 +313,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -340,8 +340,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -361,15 +361,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -396,6 +395,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -422,8 +422,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -443,15 +443,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -478,6 +477,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -504,8 +504,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -525,15 +525,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -560,6 +559,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -586,8 +586,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -607,15 +607,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -642,6 +641,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -668,8 +668,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -689,15 +689,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -724,6 +723,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -750,8 +750,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -771,15 +771,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -806,6 +805,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -832,8 +832,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -853,15 +853,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -888,6 +887,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -914,8 +914,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -935,15 +935,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -970,6 +969,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
@@ -996,8 +996,8 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   color: white;
   padding: 0.5rem;
@@ -1017,15 +1017,14 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 }
 
 .c2 {
+  position: absolute;
   box-sizing: border-box;
   border-radius: inherit;
-  width: 100%;
   z-index: 0;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
+  bottom: 0;
+  left: 0;
   background: black;
 }
 
@@ -1052,6 +1051,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     className="c1 anchor-tooltip-element"
     color="white"
     height={0}
+    spacing={8}
     width={0}
   >
     <div
