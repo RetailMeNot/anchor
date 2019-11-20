@@ -17,7 +17,9 @@ const StyledStory = styled('div')`
 storiesOf('Components/PopOver', module).add('Default', () => (
     <ThemeProvider theme={RootTheme}>
         <StyledStory>
-            <PopOver />
+            <PopOver content="Hello, World!" active={true}>
+                <div>Hello</div>
+            </PopOver>
         </StyledStory>
     </ThemeProvider>
 ));
