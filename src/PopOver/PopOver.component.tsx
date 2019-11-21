@@ -1,6 +1,7 @@
 // VENDOR
 import * as React from 'react';
-// import classNames from 'classnames';
+import styled from '@xstyled/styled-components';
+import classNames from 'classnames';
 // COMPONENTS
 import { Position } from '../utils/position/position';
 import { PositionContainer } from '../utils/PositionContainer';
@@ -9,16 +10,17 @@ interface PopOverContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     arrowIndent?: string;
     arrowSize?: string;
     background?: string;
+    border?: string;
+    borderRadius?: string;
     color?: string;
-    content: any;
+    content: string | React.ReactChild;
     delay?: string;
     debug?: boolean;
-    display?: string;
+    shadow?: string;
     spacing?: number;
     maxWidth?: string;
     position?: Position;
     showArrow?: boolean;
-    wrapContent?: boolean;
     active: boolean;
 }
 
@@ -29,8 +31,12 @@ interface PopOverContainerState {
     popOverWidth: number;
 }
 
+const StyledPopOver = styled('div')`
+    position: relative;
+`;
+
 export class PopOver extends React.PureComponent<
-    PopOverContainerProps, 
+    PopOverContainerProps,
     PopOverContainerState
 > {
     public state = {
@@ -49,7 +55,7 @@ export class PopOver extends React.PureComponent<
     componentDidMount(): void {
         const { current: popOverContainer } = this.popOverContainerRef;
         const { current: popOver } = this.popOverRef;
-        // TODO: instead of setting state, what about using the render fxn?
+
         if (popOverContainer) {
             this.setState({
                 height: popOverContainer.clientHeight,
@@ -70,33 +76,35 @@ export class PopOver extends React.PureComponent<
             arrowSize,
             background,
             children,
-            // className,
+            className,
+            border,
+            borderRadius,
             color,
             content,
             delay,
             debug,
-            spacing,
+            shadow,
+            spacing = 8,
             maxWidth,
-            position = 'bottom',
+            position = 'bottomStart',
             showArrow,
-            wrapContent,
             active,
         } = this.props;
-        
-        const {
-            height,
-            popOverHeight,
-            popOverWidth,
-            width,
-        } = this.state;
+
+        const { height, popOverHeight, popOverWidth, width } = this.state;
         return (
-            <div ref={this.popOverContainerRef}>
+            <StyledPopOver
+                className={classNames('anchor-pop-over', className)}
+                ref={this.popOverContainerRef}
+            >
                 {children}
                 <PositionContainer
                     active={active}
                     arrowIndent={arrowIndent}
                     arrowSize={arrowSize}
                     background={background}
+                    border={border}
+                    borderRadius={borderRadius}
                     children={content}
                     className="anchor-pop-over-element"
                     color={color}
@@ -105,15 +113,15 @@ export class PopOver extends React.PureComponent<
                     delay={delay}
                     debug={debug}
                     height={height}
+                    shadow={shadow}
                     spacing={spacing}
                     maxWidth={maxWidth}
                     position={position}
                     ref={this.popOverRef}
                     showArrow={showArrow}
                     width={width}
-                    wrapContent={wrapContent}
                 />
-            </div>
-        )
+            </StyledPopOver>
+        );
     }
-} 
+}

@@ -41,6 +41,7 @@ const componentList = {
     layout: './src/Layout/index.ts',
     list: './src/List/index.ts',
     menu: './src/Menu/index.ts',
+    popover: './src/PopOver/index.ts',
     skeleton: './src/Skeleton/index.ts',
     pagination: './src/Pagination/index.ts',
     tabs: './src/Tabs/index.ts',

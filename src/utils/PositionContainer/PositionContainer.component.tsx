@@ -42,7 +42,7 @@ const StyledPositionContainer = styled('div')<PositionContainerProps>`
     min-width: 10rem;
     opacity: 0;
     visibility: hidden;
-    transition: all 250ms ease-in-out;
+    transition: visibility 250ms ease-in-out, opacity 250ms ease-in-out;
     font-family: base;
 
     ${({ border, borderRadius, color, delay, padding, shadow }) =>

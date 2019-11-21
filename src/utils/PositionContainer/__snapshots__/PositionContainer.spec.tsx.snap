@@ -12,8 +12,8 @@ exports[`Component: PositionContainer should be defined. 1`] = `
   min-width: 10rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+  -webkit-transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
+  transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
   padding: 0.5rem;
   border-radius: 4px;
