@@ -71,6 +71,7 @@ exports[`Component: PopOver should be defined. 1`] = `
   -webkit-transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
   transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  color: #ffffff;
   padding: 0.5rem;
   border-radius: 4px;
   left: 0;
@@ -96,7 +97,7 @@ exports[`Component: PopOver should be defined. 1`] = `
   right: 0;
   bottom: 0;
   left: 0;
-  background: black;
+  background: #000000;
 }
 
 .c4 {
@@ -119,6 +120,7 @@ exports[`Component: PopOver should be defined. 1`] = `
   />
   <div
     className="c2 anchor-pop-over-element active"
+    color="#ffffff"
     height={0}
     spacing={8}
     width={0}
