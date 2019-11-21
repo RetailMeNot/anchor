@@ -13,8 +13,6 @@ import { RootTheme } from '../../theme';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
-jest.useFakeTimers();
-
 // TEST SETUP
 const subject = (
     <ThemeProvider theme={RootTheme}>
