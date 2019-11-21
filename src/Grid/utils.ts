@@ -125,8 +125,8 @@ export function generateBreakpointCSS(
     const generalSettings: GridSettings = {};
 
     for (const gridSettingKey in gridSettings) {
+        // forin requires an 'if' guard
         if (gridSettings[gridSettingKey]) {
-            // forin requires an 'if' guard
             const gridSettingValue = gridSettings[gridSettingKey];
             // Put non-responsive settings into the generalSettings object
             if (
