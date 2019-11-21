@@ -112,6 +112,8 @@ const ops = {
     Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
     css properties based on the breakpoint size so that a single breakpoint declaration for 'xs' can
     have css for left, top, height & width if necessary.
+
+    NOTE: This function uses older loop structures as they are tremendously more performant.
 */
 export function generateBreakpointCSS(
     gridSettings: GridSettings,
@@ -122,38 +124,48 @@ export function generateBreakpointCSS(
     const sortedResponsiveCSS: BreakpointType[] = [];
     const generalSettings: GridSettings = {};
 
-    // Loops through the props with responsive settings, i.e. left, top, etc
-    Object.keys(gridSettings).forEach((settingKey: string) => {
-        const currentValue = gridSettings[settingKey];
+    for (const gridSettingKey in gridSettings) {
+        if (gridSettings[gridSettingKey]) {
+            // forin requires an 'if' guard
+            const gridSettingValue = gridSettings[gridSettingKey];
+            // Put non-responsive settings into the generalSettings object
+            if (
+                typeof gridSettingValue === 'number' ||
+                typeof gridSettingValue === 'undefined'
+            ) {
+                generalSettings[gridSettingKey] = gridSettingValue;
+            }
+            // Collates styles at the same breakpoint from different props into a single css declaration
+            // tslint:disable-next-line: one-line
+            else if (typeof gridSettingValue === 'object') {
+                for (const breakpointKey in gridSettingValue) {
+                    if (gridSettingValue[breakpointKey] >= 0) {
+                        // 0 is a valid value, no truthiness
+                        const responsiveValue = gridSettingValue[breakpointKey];
 
-        // If the value passed isn a number or undefined it's not responsive, so its value should be
-        // put into the generalSettings object
-        if (typeof currentValue === 'number' || typeof currentValue === 'undefined') {
-            generalSettings[settingKey] = currentValue;
-        } else if (typeof currentValue === 'object') {
-            Object.keys(currentValue).forEach((breakpointKey: string) => {
-                const responsiveValue = currentValue[breakpointKey];
-
-                if (!responsiveCSS[breakpointKey]) {
-                    responsiveCSS[breakpointKey] = '';
+                        if (!responsiveCSS[breakpointKey]) {
+                            responsiveCSS[breakpointKey] = '';
+                        }
+                        responsiveCSS[breakpointKey] += ops[gridSettingKey](
+                            responsiveValue,
+                            middle
+                        );
+                    }
                 }
-                responsiveCSS[breakpointKey] += ops[settingKey](
-                    responsiveValue,
-                    middle
-                );
-            });
+            }
         }
-    });
-    // This sorts the breakpoints by the breakpoints from ResponsiveProvider. This is neccessary
-    // because the order in which the media queries are rendered is important.
-    sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
-        const [breakpointKey] = Object.keys(breakpointObj);
-        if (responsiveCSS[breakpointKey] !== undefined) {
-            sortedResponsiveCSS.push({
-                [breakpointKey]: responsiveCSS[breakpointKey],
-            });
+    }
+
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < sortedBreakpoints.length; i++) {
+        for (const breakpointKey in sortedBreakpoints[i]) {
+            if (responsiveCSS[breakpointKey] !== undefined) {
+                sortedResponsiveCSS.push({
+                    [breakpointKey]: responsiveCSS[breakpointKey],
+                });
+            }
         }
-    });
+    }
 
     /*
     sortedResponsiveCSS is an array of breakpoint css associated to a breakpoint key, i.e.

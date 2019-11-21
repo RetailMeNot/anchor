@@ -11,7 +11,10 @@ import {
     middleCSS,
     GridContext,
 } from '../utils';
-import { ResponsiveContext, ResponsiveContextProps } from '../ResponsiveProvider';
+import {
+    ResponsiveContext,
+    ResponsiveContextProps,
+} from '../ResponsiveProvider';
 
 interface CellProps {
     area?: string;
@@ -43,7 +46,10 @@ const StyledCell = styled.div<CellProps>`
     }}
 
     ${({ left }) => left && `grid-column-start: ${left}`};
-    ${({ width }) => width && `grid-column-end: span ${width}`};
+    ${({ width }) =>
+        typeof width !== undefined && width
+            ? `grid-column-end: span ${width}`
+            : 'display: none'};
     ${({ top }) => top && `grid-row-start: ${top}`};
     ${({ height }) => height && `grid-row-end: span ${height}`};
 
@@ -88,22 +94,13 @@ export class Cell extends React.PureComponent<CellProps> {
     }
 
     render() {
-        const {
-            center,
-            children,
-            className,
-            debug,
-            middle,
-        } = this.props;
+        const { center, children, className, debug, middle } = this.props;
 
-        const {
-            generalSettings,
-            sortedResponsiveCSS,
-        } = this.state;
+        const { generalSettings, sortedResponsiveCSS } = this.state;
 
-        return(
+        return (
             <GridContext.Consumer>
-                {({debug: contextDebug}) => (
+                {({ debug: contextDebug }) => (
                     <StyledCell
                         center={center}
                         className={classNames('anchor-cell', className)}

@@ -13,6 +13,8 @@ import { RootTheme } from '../../theme';
 // ENZYME
 import { shallow, mount } from 'enzyme';
 
+jest.useFakeTimers();
+
 // TEST SETUP
 const subject = (
     <ThemeProvider theme={RootTheme}>
@@ -51,7 +53,8 @@ describe('Component: Grid & Cell', () => {
         );
         const test = mount(testSubject);
 
-        expect(test.find('.anchor-cell').exists()).toBeFalsy();
+        const expectation: any = expect(test.find('.anchor-cell'));
+        expectation.toHaveStyleRule('display', 'none');
     });
 });
 
