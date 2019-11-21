@@ -1,16 +1,17 @@
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
+import classNames from 'classnames';
 import {
     BreakpointType,
     debugColor,
     generateBreakpointCSS,
-    generateBreakpointCSS2,
-    GridContext,
     GridSetting,
+    GridSettings,
     middleCSS,
+    GridContext,
 } from '../utils';
-import { ResponsiveContext } from '../ResponsiveProvider';
+import { ResponsiveContext, ResponsiveContextProps } from '../ResponsiveProvider';
 
 interface CellProps {
     area?: string;
@@ -56,56 +57,69 @@ const StyledCell = styled.div<CellProps>`
         })};
 `;
 
-export const Cell = ({
-    center,
-    children,
-    className,
-    debug = false,
-    height,
-    left,
-    middle,
-    top,
-    width = 1,
-}: CellProps) => {
-    const { debug: contextDebug } = React.useContext(GridContext);
-    const { breakpoints: sortedBreakpoints } = React.useContext(
-        ResponsiveContext
+interface CellState {
+    generalSettings: GridSettings;
+    sortedResponsiveCSS: BreakpointType[];
+}
+
+export class Cell extends React.PureComponent<CellProps> {
+    readonly state: CellState;
+
+    constructor(props: CellProps, context: ResponsiveContextProps) {
+        super(props, context);
+
+        // Generates css data for xstyle'd media queries in the constructor so as to only
+        // fire a single time and before render.
+        const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS(
+            {
+                left: props.left,
+                height: props.height,
+                top: props.top,
+                width: props.width,
+            },
+            context.breakpoints,
+            props.middle
         );
 
-    const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS(
-        {
-            left,
-            height,
-            top,
-            width,
-        },
-        sortedBreakpoints,
-        middle
-    );
+        this.state = {
+            generalSettings,
+            sortedResponsiveCSS,
+        };
+    }
 
-    generateBreakpointCSS2(
-        {
-            left,
-            height,
-            top,
-            width,
-        },
-        sortedBreakpoints,
-        middle
-    );
+    render() {
+        const {
+            center,
+            children,
+            className,
+            debug,
+            middle,
+        } = this.props;
 
-    return (
-        <StyledCell
-            center={center}
-            middle={middle}
-            debug={contextDebug || debug}
-            responsiveCSS={sortedResponsiveCSS}
-            left={generalSettings.left || undefined}
-            height={generalSettings.height || undefined}
-            top={generalSettings.top || undefined}
-            width={generalSettings.width || undefined}
-        >
-            {children}
-        </StyledCell>
-    );
-};
+        const {
+            generalSettings,
+            sortedResponsiveCSS,
+        } = this.state;
+
+        return(
+            <GridContext.Consumer>
+                {({debug: contextDebug}) => (
+                    <StyledCell
+                        center={center}
+                        className={classNames('anchor-cell', className)}
+                        middle={middle}
+                        debug={contextDebug || debug}
+                        responsiveCSS={sortedResponsiveCSS}
+                        left={generalSettings.left || undefined}
+                        height={generalSettings.height || undefined}
+                        top={generalSettings.top || undefined}
+                        width={generalSettings.width || undefined}
+                    >
+                        {children}
+                    </StyledCell>
+                )}
+            </GridContext.Consumer>
+        );
+    }
+}
+Cell.contextType = ResponsiveContext;

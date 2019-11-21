@@ -12,7 +12,7 @@ export type BreakpointType = {
 
 export type GridSetting = undefined | number | BreakpointType;
 
-interface GridSettings {
+export interface GridSettings {
     left?: GridSetting;
     height?: GridSetting;
     top?: GridSetting;
@@ -107,50 +107,6 @@ const ops = {
     left: (left: any) => `grid-column-start: ${left};`,
     top: (top: any) => `grid-row-start: ${top};`,
 };
-
-export function generateBreakpointCSS2(
-    gridSettings: GridSettings,
-    sortedBreakpoints: BreakpointType[],
-    middle: boolean | undefined
-) {
-    console.log('fired');
-    const gridSettingsKeys = Object.keys(gridSettings);
-    const responsiveCSS = gridSettingsKeys.reduce((acc: object, next: string) => {
-        const val = typeof gridSettings[next] === 'object' ? gridSettings[next] : false;
-
-        if (val) {
-            Object.keys(val).forEach((key: string) => {
-                acc[key] = '';
-                acc[key] += ops[next](val[key], middle);
-            });
-        }
-
-        return acc;
-    }, {});
-    const generalSettings = gridSettingsKeys.reduce((acc: object, next: string) => {
-        const val = (typeof gridSettings[next] === 'undefined' || typeof gridSettings[next] === 'number')
-            ? gridSettings[next]
-            : false;
-
-        if (val !== false) {
-            acc[next] = val;
-        }
-
-        return acc;
-    }, {});
-    const sortedResponsiveCSS = sortedBreakpoints.reduce((acc: object[], next: BreakpointType) => {
-        for (const key in next) {
-            if (responsiveCSS[key] !== undefined) {
-                // console.log({ [key]: responsiveCSS[key] });
-                // console.log('---');
-                acc.push({ [key]: responsiveCSS[key] });
-            }
-        }
-        return acc;
-    }, []);
-
-    return { sortedResponsiveCSS, generalSettings };
-}
 
 /*
     Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
