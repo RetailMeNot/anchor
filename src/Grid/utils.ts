@@ -97,16 +97,60 @@ export const middleCSS = css`
 */
 const ops = {
     // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
-    width: (w: any, middle: boolean) =>
-        w > 0
+    width: (width: any, middle: boolean) =>
+        width > 0
             ? middle
-                ? `grid-column-end: span ${w}; ${middleCSS}`
-                : `grid-column-end: span ${w}; display: block;`
+                ? `grid-column-end: span ${width}; ${middleCSS}`
+                : `grid-column-end: span ${width}; display: block;`
             : 'display:none;',
-    height: (h: any) => `grid-row-end: span ${h};`,
-    left: (l: any) => `grid-column-start: ${l};`,
-    top: (t: any) => `grid-row-start: ${t};`,
+    height: (height: any) => `grid-row-end: span ${height};`,
+    left: (left: any) => `grid-column-start: ${left};`,
+    top: (top: any) => `grid-row-start: ${top};`,
 };
+
+export function generateBreakpointCSS2(
+    gridSettings: GridSettings,
+    sortedBreakpoints: BreakpointType[],
+    middle: boolean | undefined
+) {
+    console.log('fired');
+    const gridSettingsKeys = Object.keys(gridSettings);
+    const responsiveCSS = gridSettingsKeys.reduce((acc: object, next: string) => {
+        const val = typeof gridSettings[next] === 'object' ? gridSettings[next] : false;
+
+        if (val) {
+            Object.keys(val).forEach((key: string) => {
+                acc[key] = '';
+                acc[key] += ops[next](val[key], middle);
+            });
+        }
+
+        return acc;
+    }, {});
+    const generalSettings = gridSettingsKeys.reduce((acc: object, next: string) => {
+        const val = (typeof gridSettings[next] === 'undefined' || typeof gridSettings[next] === 'number')
+            ? gridSettings[next]
+            : false;
+
+        if (val !== false) {
+            acc[next] = val;
+        }
+
+        return acc;
+    }, {});
+    const sortedResponsiveCSS = sortedBreakpoints.reduce((acc: object[], next: BreakpointType) => {
+        for (const key in next) {
+            if (responsiveCSS[key] !== undefined) {
+                // console.log({ [key]: responsiveCSS[key] });
+                // console.log('---');
+                acc.push({ [key]: responsiveCSS[key] });
+            }
+        }
+        return acc;
+    }, []);
+
+    return { sortedResponsiveCSS, generalSettings };
+}
 
 /*
     Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
@@ -126,33 +170,28 @@ export function generateBreakpointCSS(
     Object.keys(gridSettings).forEach((settingKey: string) => {
         const currentValue = gridSettings[settingKey];
 
-        // If the value passed isn't an object then it's not responsive, so its value should be
+        // If the value passed isn a number or undefined it's not responsive, so its value should be
         // put into the generalSettings object
-        if (typeof currentValue !== 'object') {
+        if (typeof currentValue === 'number' || typeof currentValue === 'undefined') {
             generalSettings[settingKey] = currentValue;
-        } else {
+        } else if (typeof currentValue === 'object') {
             Object.keys(currentValue).forEach((breakpointKey: string) => {
                 const responsiveValue = currentValue[breakpointKey];
 
-                if (responsiveCSS[breakpointKey]) {
-                    responsiveCSS[breakpointKey] += ops[settingKey](
-                        responsiveValue,
-                        middle
-                    );
-                } else {
-                    responsiveCSS[breakpointKey] = ops[settingKey](
-                        responsiveValue,
-                        middle
-                    );
+                if (!responsiveCSS[breakpointKey]) {
+                    responsiveCSS[breakpointKey] = '';
                 }
+                responsiveCSS[breakpointKey] += ops[settingKey](
+                    responsiveValue,
+                    middle
+                );
             });
         }
     });
-
     // This sorts the breakpoints by the breakpoints from ResponsiveProvider. This is neccessary
     // because the order in which the media queries are rendered is important.
     sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
-        const breakpointKey = Object.keys(breakpointObj)[0];
+        const [breakpointKey] = Object.keys(breakpointObj);
         if (responsiveCSS[breakpointKey] !== undefined) {
             sortedResponsiveCSS.push({
                 [breakpointKey]: responsiveCSS[breakpointKey],

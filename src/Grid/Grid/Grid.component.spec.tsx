@@ -43,22 +43,6 @@ describe('Component: Grid & Cell', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    // it('should correctly concatenate areas', () => {
-    //     const testSubject = (
-    //         <Grid
-    //             areas={["head head", "nav main", "nav foot"]}
-    //             debug
-    //         >
-    //             <Cell>Cell 1</Cell>
-    //         </Grid>
-    //     );
-
-    //     const test = mount(testSubject);
-    //     const styles = test.instance().style;
-    //     console.log(test.debug());
-    //     expect(true);
-    // });
-
     it('should not render a cell when set to 0 width', () => {
         const testSubject = (
             <Grid>

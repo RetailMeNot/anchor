@@ -5,6 +5,7 @@ import {
     BreakpointType,
     debugColor,
     generateBreakpointCSS,
+    generateBreakpointCSS2,
     GridContext,
     GridSetting,
     middleCSS,
@@ -69,8 +70,20 @@ export const Cell = ({
     const { debug: contextDebug } = React.useContext(GridContext);
     const { breakpoints: sortedBreakpoints } = React.useContext(
         ResponsiveContext
-    );
+        );
+
     const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS(
+        {
+            left,
+            height,
+            top,
+            width,
+        },
+        sortedBreakpoints,
+        middle
+    );
+
+    generateBreakpointCSS2(
         {
             left,
             height,

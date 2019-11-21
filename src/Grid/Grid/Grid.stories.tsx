@@ -9,6 +9,7 @@ import { Typography } from '../../Typography';
 import { Cell, Grid, ResponsiveProvider } from '../index';
 import { FLOW } from '../utils';
 import { RootTheme } from '../../theme';
+import { TestCell } from '../Cell/';
 
 const StoryGrid = styled(Grid)`
     height: 100vh;
@@ -73,6 +74,21 @@ storiesOf('Components/Grid', module)
                             <Typography tag="h2">Footer</Typography>
                         </Cell>
                     </StoryGrid>
+                </ResponsiveProvider>
+            </ThemeProvider>
+        );
+    })
+    .add('TestCell', () => {
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <ResponsiveProvider>
+                    <Grid>
+                        <TestCell
+                            left={1}
+                            height={{xs: 3, md: 2, xl: 1}}
+                            width={{xs: 11, md: 5}}
+                        >Test</TestCell>
+                    </Grid>
                 </ResponsiveProvider>
             </ThemeProvider>
         );
