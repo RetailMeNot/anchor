@@ -44,6 +44,7 @@ import {
     Button,
     Collapse,
     CollapseGroup,
+    Grid,
     Input,
     Typography,
 } from '@retailmenot/anchor';
@@ -181,6 +182,7 @@ const scope = {
     Button,
     Collapse,
     CollapseGroup,
+    Grid,
     Input,
 
     // EXAMPLE COMPONENTS <-

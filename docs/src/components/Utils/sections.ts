@@ -88,8 +88,8 @@ export const sections: Sections = [
             {
                 title: 'Grid',
                 path: '/components/grid/',
-                description: `Grid itself is actually not a component, but a collection of
-                    components that interact with one another to provide a responsive layout.`,
+                description: `The Grid component, and its child component Cell, comprise a
+                css-grid-based system to handle dynamic layouts.`,
                 hide: false,
             },
             {
@@ -136,6 +136,12 @@ export const sections: Sections = [
                 path: '/components/modal/',
                 description: `The Modal component is an overlay over all content on the page,
                 presenting its own content area for the user to interact with. `,
+            },
+            {
+                title: 'ResponsiveProvider',
+                path: '/components/responsiveprovider/',
+                description: `The ResponsiveProvider component use's React context to pass down
+                responsive information such as window width and breakpoints to other components.`,
             },
             {
                 title: 'Skeleton',

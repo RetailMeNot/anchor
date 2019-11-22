@@ -3,618 +3,281 @@ import {
     ComponentInfo,
     FormatTypes
 } from '../../components/Utils';
+import { Link } from 'gatsby';
 
 # Grid
 
 <ComponentInfo title="Grid" />
 
-Grid can be broken out into 2 groups of components, those for **Layout**, and those for
-**Breakpoints**.
+However you will also need the  <Link to="/components/responsiveprovider">`ResponsiveProvider`</Link> component
+if you want to take advantage of `Cell`'s responsive API.
 
-###### Grid Components
-```jsx hideTitle
-import {
-    // Layout
-    CenteredCell,
-    Col,
-    Container,
-    Hidden,
-    Row,
-    ScreenBadge,
-    ScreenClass,
-    Visible,
+As with many layout systems, the `Grid` uses a 12 column format, but unlike other systems this can
+be altered by using the `columns` prop for occasions where a greater degree of control is needed.
 
-    // Breakpoints
-    CustomAdaptor,
-    LegacyDesktop,
-    LegacyTablet,
-    LegacyPhone,
-    XS,
-    SM,
-    MD,
-    LG,
-    XL,
-    XXL,
-    LegacyBreakpoints,
-    StandardBreakpoints,
-} from '@retailmenot/anchor';
+---
+
+## Basic Usage
+
+In the example below, `Grid` and `Cell` are being used to make a very simple 3 column, 2 row layout
+with default settings.
+
+```tsx live
+<Grid debug>
+    <Cell width={4}> I'm cell 1.</Cell>
+    <Cell width={4}> I'm cell 2.</Cell>
+    <Cell width={4}> I'm cell 3.</Cell>
+    <Cell width={6}> I'm cell 4.</Cell>
+    <Cell width={6}> I'm cell 5.</Cell>
+</Grid>
 ```
 
 ---
 
-## Layout Components
+## Responsive Usage
 
-These are components that are built using
-<a href="https://awesome-styled-grid.netlify.com/" target="_blank">react-awesome-styled-grid</a>,
-which in itself is based off of
-<a href="//material.io/design/layout/responsive-layout-grid.html#columns-gutters-margins" target="_blank">Google's Material Design</a>.
-They provide structure to content and layout with utilities for responsive design. The components
-that fit into this category are noted in the list below.
+The `Cell` props can accept an object with breakpoint data instead of a number. This allows you to
+set `left`, `height`, `top` and `width` values for any breakpoint set in `ResponsiveProvider`. As
+noted above, this functionality only works if `ResponsiveProvider` is used. The breakpoints are
+mobile first.
 
-* `CenteredCell`: This layout component is not part of `react-awesome-styled-grid`. It can still be
-used within the `Container` component as noted in the example below. It provides a column that
-centers its children.
-* `Col`: A column. Has the most options and props.
-* `Container`: Containing element. All other layout components should be a child of this one.
-* `Hidden`: Children of this component will be hidden by default unless at a specific breakpoint.
-* `Row`: A row.
-* `ScreenBadge`: This is strictly for debugging. It shows the breakpoint in the bottom-right corner
-of the page.
-* `ScreenClass`: A component whose render method exposes the breakpoint.
-* `Visible`: Children of this component will be visible by default unless at a specific breakpoint.
+*NOTE: Unlike this example, it's best to put the `ResponsiveProvider` and `ThemeProvider` higher up
+in the application.*
 
-The `debug` prop is assigned to nearly every component in the example. This shows the purple
-background for each component and makes it easier to plan a layout.
+```tsx live
+<ThemeProvider theme={RootTheme}>
+    <ResponsiveProvider debug>
+        <Grid debug>
+            <Cell
+                center
+                height={{ xs: 1, lg: 2, xl: 3, xxl: 4 }}
+                left={{ xs: 4, xl: 1 }}
+                middle
+                width={{xs: 6, xl: 12}}
+            >
+                <Typography tag="h2">Resize the Window</Typography>
+            </Cell>
+            <Cell width={{xs: 4, xl: 3}}>
+                <Typography>I'm cell 1.</Typography>
+            </Cell>
+            <Cell width={{xs: 4, xl: 3}}>
+                <Typography>I'm cell 2.</Typography>
+            </Cell>
+            <Cell width={{xs: 4, xl: 3}}>
+                <Typography>I'm cell 3.</Typography>
+            </Cell>
+            <Cell width={{xs: 12, xl: 3}}>
+                <Typography>I'm cell 4.</Typography>
+            </Cell>
 
-###### Layout Components (Live Code Editor)
-```tsx live hideTitle
-<Container debug>
-    <CenteredCell>
-        <ScreenClass render={(screen) => <>{screen}</>} />
-    </CenteredCell>
-    <Row debug>
-        <Col
+        </Grid>
+    </ResponsiveProvider>
+</ThemeProvider>
+```
+
+---
+
+## Advanced Usage
+
+If you want to use the components but would like even greater control, the `Grid` component can accept
+most css grid attributes when passed through props.
+
+```tsx live
+<ThemeProvider theme={RootTheme}>
+    <ResponsiveProvider>
+        <Grid
+            columns={'20% 1fr 20%'}
             debug
-            md={4}
-            lg={6}
-            xl={8}
-            offset={{
-                md: 2,
-                lg: 3,
-                xl: 2
-            }}
+            height="20rem"
+            rows={'minmax(3rem,auto) 1fr minmax(3rem,auto)'}
         >
-            Hello!
-        </Col>
-    </Row>
-    <Row debug>
-        <Hidden xs xl>
-            <Col debug>
-                1
-            </Col>
-        </Hidden>
-        <Col debug>2</Col>
-        <Visible md xs>
-            <Col debug>
-                3
-            </Col>
-        </Visible>
-    </Row>
-    <Row debug>
-        <Col debug>
-            4
-        </Col>
-        <Col debug>
-            5
-        </Col>
-        <Col debug>
-            6
-        </Col>
-    </Row>
-    <ScreenBadge />
-</Container>
+            <Cell center middle width={3}>
+                <Typography tag="h1">Header</Typography>
+            </Cell>
+
+            <Cell>
+                <Typography>Menu</Typography>
+            </Cell>
+            <Cell>
+                <Typography>Content</Typography>
+            </Cell>
+            <Cell>
+                <Typography>Ads</Typography>
+            </Cell>
+
+            <Cell center middle width={3}>
+                <Typography tag="h2">Footer</Typography>
+            </Cell>
+        </Grid>
+    </ResponsiveProvider>
+</ThemeProvider>
 ```
+
+
+
+## API's
 
 ---
 
-## Breakpoint Components
-
-These components are designed to help make changes to a layout on an even more granular level than
-the Layout components can via breakpoints. The components that fit into this category are noted in
-the list below.
-
-* `CustomAdaptor`: Lets the user specify their own breakpoints at which point content should be
-shown.
-* `LegacyDesktop`: Uses the `LegacyBreakpoints` object to define at which point content should be
-shown for desktop.
-* `LegacyTablet`: Uses the `LegacyBreakpoints` object to define at which point content should be
-shown for tablet.
-* `LegacyPhone`: Uses the `LegacyBreakpoints` object to define at which point content should be
-shown for tablet.
-* `XS`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *xs*.
-* `SM`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *sm*.
-* `MD`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *md*.
-* `LG`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *lg*.
-* `XL`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *xl*.
-* `XXL`: Uses the `StandardBreakpoints` object to define at which point content should be
-shown for *xxl*.
-* `LegacyBreakpoints`: An object containing min-max breakpoint values based on RetailMeNot's
-legacy website.
-* `StandardBreakpoints`: An object containing min-max breakpoint values based on newer standards.
-
-<br />
-
-### StandardBreakpoints
-
-The components, `XS`, `SM`, `MD`, `LG`, `XL` and `XXL` are all based on the `StandardBreakpoints`
-object. Below are the min and max values for each of those breakpoints, and an example of them in
-use.
-
-###### StandardBreakpoints
-```jsx hideTitle
-{
-    xs: {
-        max: 575,
-    },
-    sm: {
-        min: 576,
-        max: 767,
-    },
-    md: {
-        min: 768,
-        max: 991,
-    },
-    lg: {
-        min: 992,
-        max: 1199,
-    },
-    xl: {
-        min: 1200,
-        max: 1599,
-    },
-    xxl: {
-        min: 1600,
-    },
-}
-```
-
-```tsx live
-<div>
-    <XS>
-        XS
-    </XS>
-    <SM>
-        SM
-    </SM>
-    <MD>
-        MD
-    </MD>
-    <LG>
-        LG
-    </LG>
-    <XL>
-        XL
-    </XL>
-    <XXL>
-        XXL
-    </XXL>
-</div>
-```
-
-<br />
-
-### LegacyBreakpoints
-
-The components, `LegacyDesktop`, `LegacyTablet`, and `LegacyPhone` are all based on the
-`LegacyBreakpoints` object. Below are the min and max values for each of those breakpoints, and an
-example of them in use.
-
-###### LegacyBreakpoints
-```jsx hideTitle
-{
-    desktop: {
-        min: 1000,
-    },
-    tablet: {
-        min: 899,
-        max: 999,
-    },
-    phone: {
-        max: 898,
-    },
-}
-```
-
-```tsx live
-<div>
-    <LegacyPhone>
-        LegacyPhone
-    </LegacyPhone>
-    <LegacyTablet>
-        LegacyTablet
-    </LegacyTablet>
-    <LegacyDesktop>
-        LegacyDesktop
-    </LegacyDesktop>
-</div>
-```
-
-<br />
-
-### CustomAdaptor
-
-The `CustomAdaptor` allows for custom maximum and minimum widths per the example below.
-
-```tsx live
-<div>
-    <CustomAdaptor
-        maxWidth={399}
-        onChange={(matches) => console.log(`onChange ${matches}`)}
-    >
-        Up to 399
-    </CustomAdaptor>
-
-    <CustomAdaptor
-        minWidth={400}
-        maxWidth={1000}
-    >
-        Between 400 & 1000
-    </CustomAdaptor>
-
-    <CustomAdaptor
-        minWidth={1001}
-    >
-        Above 1001
-    </CustomAdaptor>
-</div>
-```
-
-<br />
-
-## API's for Layout
-
-It is recommended to refer to
-<a href="https://awesome-styled-grid.netlify.com/" target="_blank">react-awesome-styled-grid</a>'s
-documentation for advanced usage of the `Col`, `Container`, `Hidden`, `Row`, `ScreenBadge`,
-`ScreenClass` and `Visible` components.
-
----
-
-### CenteredCell
+### Cell
 
 <ApiTable data={[
     {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
-### Col
-
-<ApiTable
-    sort={false}
-    data={[
-        {
-            property: 'xs',
-            description: 'Sets the number of columns on screen for the <em>xs</em> breakpoint.',
-            type: <FormatTypes data={['number', 'string']} noInterpret />,
-        },
-        {
-            property: 'sm',
-            description: 'Sets the number of columns on screen for the <em>sm</em> breakpoint.',
-            type: <FormatTypes data={['number', 'string']} noInterpret />,
-        },
-        {
-            property: 'md',
-            description: 'Sets the number of columns on screen for the <em>md</em> breakpoint.',
-            type: <FormatTypes data={['number', 'string']} noInterpret />,
-        },
-        {
-            property: 'lg',
-            description: 'Sets the number of columns on screen for the <em>lg</em> breakpoint.',
-            type: <FormatTypes data={['number', 'string']} noInterpret />,
-        },
-        {
-            property: 'xl',
-            description: 'Sets the number of columns on screen for the <em>xl</em> breakpoint.',
-            type: <FormatTypes data={['number', 'string']} noInterpret />,
-        },
-        {
-            property: 'debug',
-            description: `Gives the <pre>Container</pre> a purple background to visually indicate its
-                boundaries.`,
-            type: 'boolean',
-        },
-        {
-            property: 'noGutter',
-            description: `Removes the gutter around the <pre>Col</pre>.`,
-            type: 'boolean',
-            default: false,
-        },
-        {
-            property: 'offset',
-            description: `Sets the number of the offset columns.`,
-            type: <FormatTypes data={['number', 'object']} noInterpret />,
-        },
-        {
-            property: 'reverse',
-            description: `Reverses the direction of the columns.`,
-            type: <FormatTypes data={['number', '[]']} noInterpret />,
-        },
-    ]}
-/>
-
----
-
-### Container
-
-<ApiTable data={[
-    {
-        property: 'fluid',
-        description: 'If the container is full width.',
+        property: 'center',
+        description: `Horiztonally aligns content within a <pre>Cell</pre>.`,
         type: 'boolean',
-        default: 'true',
     },
     {
         property: 'debug',
-        description: `Gives the <pre>Container</pre> a purple background to visually indicate its
-            boundaries.`,
+        description: `Puts a slightly transparent red background behind the <pre>Cell</pre>.`,
         type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'area',
+        description: `Alias for the css property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area" target="_blank"><pre>grid-area</pre></a>.`,
+        type: `string`,
+    },
+    {
+        property: 'height',
+        description: `How many rows tall a <pre>Cell</pre> is.`,
+        type: `number`,
+        type: <FormatTypes data={['number', 'string', '{[key: string]: number}']} noInterpret />,
+        default: '1',
+    },
+    {
+        property: 'left',
+        description: `How many columns from the left the <pre>Cell</pre> is.`,
+        type: <FormatTypes data={['number', 'string', '{[key: string]: number}']} noInterpret />,
+    },
+    {
+        property: 'middle',
+        description: `Vertically aligns content within a <pre>Cell</pre>.`,
+        type: 'boolean',
+    },
+    {
+        property: 'top',
+        description: `How many rows from the top the <pre>Cell</pre> is.`,
+        type: <FormatTypes data={['number', 'string', '{[key: string]: number}']} noInterpret />,
+    },
+    {
+        property: 'width',
+        description: `How many columns wide a <pre>Cell</pre> is. When using responsive notation, a setting
+        of <pre>0</pre> will hide the cell. Ex: <pre>{xs: 0, md: 12}</pre>`,
+        type: <FormatTypes data={['number', 'string', '{[key: string]: number}']} noInterpret />,
+        default: '1'
     },
 ]} />
 
 ---
 
-### Hidden
-
-<ApiTable
-    sort={false}
-    data={[
-        {
-            property: 'xs',
-            description: 'When at the <em>xs</em> breakpoint, content will be hidden.',
-            type: 'boolean',
-        },
-        {
-            property: 'sm',
-            description: 'When at the <em>sm</em> breakpoint, content will be hidden.',
-            type: 'boolean',
-        },
-        {
-            property: 'md',
-            description: 'When at the <em>md</em> breakpoint, content will be hidden.',
-            type: 'boolean',
-        },
-        {
-            property: 'lg',
-            description: 'When at the <em>lg</em> breakpoint, content will be hidden.',
-            type: 'boolean',
-        },
-        {
-            property: 'xl',
-            description: 'When at the <em>xl</em> breakpoint, content will be hidden.',
-            type: 'boolean',
-        },
-    ]}
-/>
-
----
-
-### Row
+### Grid
 
 <ApiTable data={[
     {
-        property: 'reverse',
-        description: `Reverses the direction of the row.`,
-        type: <FormatTypes data={['number', '[]']} noInterpret />,
+        property: 'alignContent',
+        description: `Alias for the css property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content" target="_blank"><pre>alignContent</pre></a>.`,
+        type: <FormatTypes data={[
+            'baseline',
+            'center',
+            'end',
+            'first baseline',
+            'flex-end',
+            'flex-start',
+            'inherit',
+            'initial',
+            'last baseline',
+            'normal',
+            'safe center',
+            'space-around',
+            'space-between',
+            'space-evenly',
+            'start',
+            'stretch',
+            'unsafe center',
+            'unset',
+        ]} />,
+    },
+    {
+        property: 'area',
+        description: `Alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas" target="_blank"><pre>grid-template-areas</pre></a>.`,
+        type: 'string[]',
+    },
+    {
+        property: 'columnGap',
+        description: `Alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap" target="_blank"><pre>column-gap</pre></a>.`,
+        type: 'string',
+    },
+    {
+        property: 'columns',
+        description: `When a number is passed, sets the number of columns the <pre>Grid</pre> uses.
+        When a string is passed, acts as an alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" target="_blank"><pre>grid-template-columns</pre></a>.`,
+        type: <FormatTypes data={['number', 'string']} noInterpret />,
+        default: 12
     },
     {
         property: 'debug',
-        description: `Gives the <pre>Container</pre> a purple background to visually indicate its
-            boundaries.`,
+        description: `Puts a slightly transparent red background behind the <pre>Grid</pre> and all
+        child <pre>Cell</pre>s.`,
         type: 'boolean',
+        default: 'false',
     },
-]} />
-
----
-
-### ScreenBadge
-
-<ApiTable data={[
     {
-        property: '-',
-        description: '-',
-        type: '-',
+        property: 'flow',
+        description: `Alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow" target="_blank"><pre>grid-auto-flow</pre></a>.`,
+        type: <FormatTypes data={['column', 'row']} />,
+        default: 'row',
     },
-]} />
-
----
-
-### ScreenClass
-
-<ApiTable data={[
     {
-        property: 'render',
-        description: `A function that outputs the current breakpoint, i.e. <pre>xs</pre>,
-        <pre>sm</pre>, <pre>md</pre>, <pre>lg</pre>, <pre>xl</pre>.`,
-        type: '(value: string) => void',
+        property: 'gap',
+        description: `Alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap" target="_blank"><pre>grid-gap</pre></a>.`,
+        type: 'string',
+        default: '0.5rem',
     },
-]} />
-
----
-
-### Visible
-
-<ApiTable
-    sort={false}
-    data={[
-        {
-            property: 'xs',
-            description: 'When at the <em>xs</em> breakpoint, content will be visible.',
-            type: 'boolean',
-        },
-        {
-            property: 'sm',
-            description: 'When at the <em>sm</em> breakpoint, content will be visible.',
-            type: 'boolean',
-        },
-        {
-            property: 'md',
-            description: 'When at the <em>md</em> breakpoint, content will be visible.',
-            type: 'boolean',
-        },
-        {
-            property: 'lg',
-            description: 'When at the <em>lg</em> breakpoint, content will be visible.',
-            type: 'boolean',
-        },
-        {
-            property: 'xl',
-            description: 'When at the <em>xl</em> breakpoint, content will be visible.',
-            type: 'boolean',
-        },
-    ]}
-/>
-
-<br /><br /><br />
-
-## API's for Breakpoints
-
----
-
-### CustomAdaptor
-
-It is recommended to refer to
-<a href="https://github.com/contra/react-responsive" target="_blank">react-responsive</a>'s
-documentation for advanced usage of the `CustomAdaptor`.
-
-<ApiTable data={[
     {
-        property: 'minHeight',
-        description: `The minimum document height at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
+        property: 'height',
+        description: `The height of the <pre>Grid</pre>. Any valid css unit can be used.`,
+        type: 'string',
+        default: 'auto',
+    },
+    {
+        property: 'justifyContent',
+        description: `Alias for the css property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank"><pre>justify-content</pre></a>.`,
+        type: <FormatTypes data={[
+            'center',
+            'end',
+            'flex-end',
+            'flex-start',
+            'inherit',
+            'initial',
+            'left',
+            'normal',
+            'right',
+            'safe center',
+            'space-around',
+            'space-between',
+            'space-evenly',
+            'start',
+            'stretch',
+            'unsafe center',
+            'unset'
+        ]} />,
+    },
+    {
+        property: 'minRowHeight',
+        description: `The minimum height of the rows within <pre>Grid</pre>. Any valid css unit can be used.`,
+        type: 'string',
+        default: '1.25rem',
+    },
+    {
+        property: 'rowGap',
+        description: `Alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap" target="_blank"><pre>row-gap</pre></a>.`,
+        type: 'string',
+    },
+    {
+        property: 'rows',
+        description: `When a number is passed, sets the number of rows the <pre>Grid</pre> uses.
+        When a string is passed, acts as an alias for the css grid property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" target="_blank"><pre>grid-template-rows</pre></a>.`,
         type: <FormatTypes data={['number', 'string']} noInterpret />,
     },
-    {
-        property: 'maxHeight',
-        description: `The maximum document height at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'minDeviceHeight',
-        description: `The minimum device height at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'maxDeviceHeight',
-        description: `The maximum device height at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'minWidth',
-        description: `The minimum document width at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'maxWidth',
-        description: `The maximum document width at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'minDeviceWidth',
-        description: `The minimum device width at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'maxDeviceWidth',
-        description: `The maximum device width at which the children of the
-            <pre>CustomAdaptor</pre> should be displayed.`,
-        type: <FormatTypes data={['number', 'string']} noInterpret />,
-    },
-    {
-        property: 'onChange',
-        description: `An event which fires just as the parameters for the <pre>CustomAdapator</pre>
-            are met.`,
-        type: `(matches: boolean) => void`,
-    },
 ]} />
-
----
-
-### XS
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
----
-
-### SM
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
----
-
-### MD
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
----
-
-### LG
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
----
-
-### XL
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
----
-
-### XXL
-<ApiTable data={[
-    {
-        property: '-',
-        description: '-',
-        type: '-',
-    },
-]} />
-
-
