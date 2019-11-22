@@ -12,9 +12,11 @@ import {
     GridContext,
 } from '../utils';
 import {
-    ResponsiveContext,
-    ResponsiveContextProps,
+    ResponsiveContext
 } from '../ResponsiveProvider';
+import {
+    ResponsiveContextProps
+} from '../ResponsiveProvider/ResponsiveProvider.component';
 
 interface CellProps {
     area?: string;
