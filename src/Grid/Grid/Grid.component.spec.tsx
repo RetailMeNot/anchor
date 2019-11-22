@@ -42,18 +42,6 @@ describe('Component: Grid & Cell', () => {
 
         expect(tree).toMatchSnapshot();
     });
-
-    it('should not render a cell when set to 0 width', () => {
-        const testSubject = (
-            <Grid>
-                <Cell width={0}>Hidden</Cell>
-            </Grid>
-        );
-        const test = mount(testSubject);
-
-        const expectation: any = expect(test.find('.anchor-cell'));
-        expectation.toHaveStyleRule('display', 'none');
-    });
 });
 
 describe('Utilities: Grid & Cell', () => {

@@ -4,7 +4,6 @@ exports[`Component: Grid & Cell should be defined 1`] = `
 .c1 {
   height: 100%;
   min-width: 0;
-  display: none;
   background-color: rgba(255,0,0,0.4);
 }
 

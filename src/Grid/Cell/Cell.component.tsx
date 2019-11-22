@@ -11,12 +11,8 @@ import {
     middleCSS,
     GridContext,
 } from '../utils';
-import {
-    ResponsiveContext
-} from '../ResponsiveProvider';
-import {
-    ResponsiveContextProps
-} from '../ResponsiveProvider/ResponsiveProvider.component';
+import { ResponsiveContext } from '../ResponsiveProvider';
+import { ResponsiveContextProps } from '../ResponsiveProvider/ResponsiveProvider.component';
 
 interface CellProps {
     area?: string;
@@ -48,10 +44,7 @@ const StyledCell = styled.div<CellProps>`
     }}
 
     ${({ left }) => left && `grid-column-start: ${left}`};
-    ${({ width }) =>
-        typeof width !== undefined && width
-            ? `grid-column-end: span ${width}`
-            : 'display: none'};
+    ${({ width }) => width && `grid-column-end: span ${width}`};
     ${({ top }) => top && `grid-row-start: ${top}`};
     ${({ height }) => height && `grid-row-end: span ${height}`};
 
