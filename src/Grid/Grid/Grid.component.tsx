@@ -1,10 +1,9 @@
 // VENDOR
 import * as React from 'react';
-import { Grid as AGrid } from 'styled-css-grid';
 import styled, { css } from '@xstyled/styled-components';
 import classNames from 'classnames';
 // COMPONENTS & UTILS
-import { FLOW, GridContext } from '../utils';
+import { debugColor, FLOW, GridContext } from '../utils';
 
 type Flow = keyof typeof FLOW;
 
@@ -51,24 +50,56 @@ type AlignContent =
 
 interface GridProps {
     alignContent?: AlignContent;
-    areas?: [string];
+    areas?: string[];
     children?: any;
     className?: string;
+    columnGap?: string;
     columns?: number | string;
     debug?: boolean;
     flow?: Flow;
     gap?: string;
+    height?: string;
     justifyContent?: Justifycontent;
-    rows?: string;
+    minRowHeight?: string;
+    rowGap?: string;
+    rows?: number | string;
 }
 
-const StyledGrid = styled(AGrid)<GridProps>`
-    ${({ debug }) =>
-        debug
-            ? css`
-                  background-color: rgba(255, 0, 0, 0.4);
-              `
-            : null}
+const frGetter = (value: number | string) =>
+    typeof value === 'number' ? `repeat(${value}, 1fr)` : value;
+
+const formatAreas = (areas: string[]) =>
+    areas.map(area => `'${area}'`).join(' ');
+
+const StyledGrid = styled('div')<GridProps>`
+    display: grid;
+    ${({
+        alignContent,
+        areas,
+        columnGap,
+        columns = 12,
+        debug,
+        flow = FLOW.row,
+        gap = '0.5rem',
+        height = 'auto',
+        justifyContent,
+        minRowHeight = '1.25rem',
+        rowGap,
+        rows,
+    }) => css`
+        height: ${height};
+        grid-auto-flow: ${flow};
+        grid-auto-rows: minmax(${minRowHeight}, auto);
+        ${rows && `grid-template-rows: ${frGetter(rows)}`};
+        grid-template-columns: ${frGetter(columns)};
+        grid-gap: ${gap};
+        ${columnGap && `column-gap: ${columnGap}`};
+        ${rowGap && `row-gap: ${rowGap}`};
+        ${areas && `grid-template-areas: ${formatAreas(areas)}`};
+        ${justifyContent && `justify-content: ${justifyContent}`};
+        ${alignContent && `align-content: ${alignContent}`};
+        ${debug && `background-color: ${debugColor}`};
+    `}
 `;
 
 export const Grid = ({
@@ -76,10 +107,12 @@ export const Grid = ({
     areas,
     children,
     className,
-    columns = 12,
+    columns,
     debug = false,
-    flow = FLOW.row,
-    gap = '0.5rem',
+    flow,
+    gap,
+    rowGap,
+    columnGap,
     justifyContent,
     rows,
     ...props
@@ -91,6 +124,8 @@ export const Grid = ({
         debug={debug}
         flow={flow}
         gap={gap}
+        rowGap={rowGap}
+        columnGap={columnGap}
         justifyContent={justifyContent}
         rows={rows}
         {...props}

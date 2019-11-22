@@ -23,7 +23,7 @@ const Test = () => {
 
     return (
         <>
-            <Typography tag="h2">ResponsiveContext</Typography> |
+            <Typography tag="h2">ResponsiveContext</Typography>
             <Typography pr="2">{current}</Typography> |
             <Typography pl="2">{innerWidth}</Typography>
         </>
