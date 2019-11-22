@@ -245,7 +245,9 @@ export const ResultsContainer = forwardRef(
             },
             selectActive: () => {
                 if (currentIndex >= 0 && currentIndex <= results.length) {
-                    emitSelectedItem(results[currentIndex - 1]);
+                    // If currentIndex is 0, it's referring to the input field
+                    const index = currentIndex === 0 ? 0 : currentIndex - 1;
+                    emitSelectedItem(results[index]);
                 }
             },
         }));
