@@ -20,6 +20,7 @@ export {
     Divider as ListDivider,
 } from './List';
 export { Menu, Item as MenuItem } from './Menu';
+export { PopOver } from './PopOver';
 export { Typography } from './Typography';
 export { Tooltip } from './Tooltip';
 export { RootTheme, ThemeProvider } from './theme';
