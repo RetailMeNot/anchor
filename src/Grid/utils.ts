@@ -4,10 +4,20 @@
 */
 
 import { createContext } from 'react';
+import { css } from '@xstyled/styled-components';
 
 export type BreakpointType = {
     [key: string]: number;
 };
+
+export type GridSetting = undefined | number | BreakpointType;
+
+export interface GridSettings {
+    left?: GridSetting;
+    height?: GridSetting;
+    top?: GridSetting;
+    width?: GridSetting;
+}
 
 interface GridContextProps {
     debug: boolean;
@@ -22,6 +32,8 @@ export enum FLOW {
     column = 'column',
     row = 'row',
 }
+
+export const debugColor = 'rgba(255, 0, 0, 0.4)';
 
 /*
     Returns an array of objects sorted by their value, descending. Ex:
@@ -39,41 +51,6 @@ export function sortBreakpoints(unsortedBreakpoints: object) {
             (a: BreakpointType, b: BreakpointType) =>
                 Object.values(a)[0] - Object.values(b)[0]
         );
-}
-
-/*
-    Takes a passed responsiveSettings object and fills in the gaps based on the breakpoints passed
-    via sortedBreakpoints. This function is mobile first, so setting a smaller breakpoint's value
-    will use that same value for larger breakpoints.
-
-    const obj = { xs: 1, md: 3, lg: 8 };
-    createResponsiveObject(obj); // { xs: 1, sm: 1, md: 3, lg: 8, xl: 8}
-*/
-export function createResponsiveObject(
-    responsiveSettings: object | number | undefined,
-    sortedBreakpoints: BreakpointType[]
-) {
-    if (typeof responsiveSettings !== 'object') {
-        return responsiveSettings;
-    }
-
-    let lastValid = Object.keys(sortedBreakpoints)[0];
-
-    return sortedBreakpoints.reduce((acc: object, next: BreakpointType) => {
-        const key = Object.keys(next)[0];
-
-        if (typeof responsiveSettings[key] === 'number') {
-            acc[key] = responsiveSettings[key];
-            lastValid = key;
-        } else {
-            acc[key] =
-                typeof responsiveSettings[lastValid] === 'number'
-                    ? responsiveSettings[lastValid]
-                    : 1;
-        }
-
-        return acc;
-    }, {});
 }
 
 /*
@@ -105,25 +82,105 @@ export function getBreakpointKey(
 }
 
 /*
-    Using the passed responsiveSettings, determines what responsive value should be returned for
-    the current breakpoint. Ex:
-
-    const settings = { xs: 1, sm: 3, md: 6 }
-    const innerWidth = 800;
-    const sortedBreakpoints = [{ xs: 500, sm: 750, md: 1000 }];
-    getResponsiveValue(settings, innerWidth, sortedBreakpoints); // 3
+    CSS used both by generateBreakpointCSS() and the Cell component. Aligns content vertically.
 */
-export function getResponsiveValue(
-    responsiveSettings: object | number | undefined,
-    innerWidth: number,
-    sortedBreakpoints: BreakpointType[]
+export const middleCSS = css`
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-self: stretch;
+`;
+
+/*
+    Small helper object for the generateBreakpointCSS() function to render the correct CSS for each
+    grid setting.
+*/
+const ops = {
+    // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
+    width: (width: any, middle: boolean) =>
+        width > 0
+            ? middle
+                ? `grid-column-end: span ${width}; ${middleCSS}`
+                : `grid-column-end: span ${width}; display: block;`
+            : 'display:none;',
+    height: (height: any) => `grid-row-end: span ${height};`,
+    left: (left: any) => `grid-column-start: ${left};`,
+    top: (top: any) => `grid-row-start: ${top};`,
+};
+
+/*
+    Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
+    css properties based on the breakpoint size so that a single breakpoint declaration for 'xs' can
+    have css for left, top, height & width if necessary.
+
+    NOTE: This function uses older loop structures as they are tremendously more performant.
+*/
+export function generateBreakpointCSS(
+    gridSettings: GridSettings,
+    sortedBreakpoints: BreakpointType[],
+    middle: boolean | undefined
 ) {
-    if (typeof responsiveSettings !== 'object') {
-        return responsiveSettings;
+    const responsiveCSS = {};
+    const sortedResponsiveCSS: BreakpointType[] = [];
+    const generalSettings: GridSettings = {};
+
+    for (const gridSettingKey in gridSettings) {
+        // forin requires an 'if' guard
+        if (gridSettings[gridSettingKey]) {
+            const gridSettingValue = gridSettings[gridSettingKey];
+            // Put non-responsive settings into the generalSettings object
+            if (
+                typeof gridSettingValue === 'number' ||
+                typeof gridSettingValue === 'undefined'
+            ) {
+                generalSettings[gridSettingKey] = gridSettingValue;
+            }
+            // Collates styles at the same breakpoint from different props into a single css declaration
+            // tslint:disable-next-line: one-line
+            else if (typeof gridSettingValue === 'object') {
+                for (const breakpointKey in gridSettingValue) {
+                    if (gridSettingValue[breakpointKey] >= 0) {
+                        // 0 is a valid value, no truthiness
+                        const responsiveValue = gridSettingValue[breakpointKey];
+
+                        if (!responsiveCSS[breakpointKey]) {
+                            responsiveCSS[breakpointKey] = '';
+                        }
+                        responsiveCSS[breakpointKey] += ops[gridSettingKey](
+                            responsiveValue,
+                            middle
+                        );
+                    }
+                }
+            }
+        }
     }
 
-    // Gets the key based on the breakpoint (i.e. xs, sm, etc)
-    const breakpointKey = getBreakpointKey(innerWidth, sortedBreakpoints);
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < sortedBreakpoints.length; i++) {
+        for (const breakpointKey in sortedBreakpoints[i]) {
+            if (responsiveCSS[breakpointKey] !== undefined) {
+                sortedResponsiveCSS.push({
+                    [breakpointKey]: responsiveCSS[breakpointKey],
+                });
+            }
+        }
+    }
 
-    return responsiveSettings[breakpointKey];
+    /*
+    sortedResponsiveCSS is an array of breakpoint css associated to a breakpoint key, i.e.
+    [
+         {xs: 'grid-column-end: span 2; display: block; grid-row-end: span 3;'},
+         {md: 'grid-column-end: span 10;'}
+    ]
+
+    generalSettings is the returned values which were not responsive objects, i.e.
+    {
+        left: 1,
+        top: undefined,
+        height: 1,
+        width: 3
+    }
+    */
+    return { sortedResponsiveCSS, generalSettings };
 }

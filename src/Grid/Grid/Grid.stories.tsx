@@ -27,7 +27,7 @@ storiesOf('Components/Grid', module)
                         <Cell
                             center
                             middle
-                            height={{ sm: 1, md: 2, lg: 3 }}
+                            height={{ md: 2, lg: 3 }}
                             width={{ xs: 0, md: 12 }}
                         >
                             <Typography tag="h1">Grid</Typography>
