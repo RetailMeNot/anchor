@@ -10,6 +10,7 @@ import merge from 'lodash.merge';
 
 // ANCHOR & COMPONENTS
 import {
+    Adaptor,
     Button,
     Cell,
     Grid,
@@ -26,6 +27,7 @@ import {
 } from '../../Navigation';
 import { MDXComponents } from './MDXComponents';
 import { SearchInput } from '../../SearchInput';
+import { Octocat } from '../../Octocat';
 // ASSETS
 import logo from './anchor-logo.svg';
 
@@ -86,7 +88,7 @@ const StyledHeader = styled('header')`
 `;
 
 interface StyledSectionNavProps {
-    sectionNavOpen: boolean;
+    sectionNavOpen?: boolean;
 }
 
 const StyledSectionNav = styled('div')<StyledSectionNavProps>`
@@ -150,6 +152,12 @@ const StyledPrimaryNav = styled('nav')`
             color: text.link.hover;
         }
     }
+
+    .octocat {
+        height: 100%;
+        display:inline-flex;
+        padding-left: 0.5rem;
+    }
 `;
 
 const AnchorDocsTheme = merge({}, RootTheme, {
@@ -206,6 +214,15 @@ export const Page = ({
 
                     <GlobalCSS />
 
+                    {/* On mobile, the navigation will be full screen when the hamburger is clicked */}
+                    <Adaptor from="xs" to="md">
+                        <FixedBody sectionNavOpen={sectionNavOpen} />
+
+                        <StyledSectionNav sectionNavOpen={sectionNavOpen}>
+                            <EnhancedSectionNavigation />
+                        </StyledSectionNav>
+                    </Adaptor>
+
                     <StyledHeader>
                         <Grid>
                             <Cell width={{xs: 1, md: 0}} middle center>
@@ -240,6 +257,7 @@ export const Page = ({
                                         href="https://github.com/RetailMeNot/anchor"
                                     >
                                         Github
+                                        <Octocat />
                                     </Typography>
                                 </StyledPrimaryNav>
                             </Cell>
@@ -248,9 +266,7 @@ export const Page = ({
 
                     <Grid>
                         <Cell width={{xs: 0, md: 3, xl: 2 }}>
-                            <FixedBody sectionNavOpen={sectionNavOpen} />
-
-                            <StyledSectionNav sectionNavOpen={sectionNavOpen}>
+                            <StyledSectionNav>
                                 <EnhancedSectionNavigation />
                             </StyledSectionNav>
                         </Cell>
