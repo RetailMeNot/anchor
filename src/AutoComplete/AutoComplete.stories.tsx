@@ -108,6 +108,54 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
     );
 };
 
+interface DataPoint {
+    label: string;
+    id: number;
+    url: string;
+}
+
+const BasicFilter = () => {
+    const dataSource: DataPoint[] = [
+        { label: 'Google', id: 1, url: 'http://www.google.com' },
+        { label: 'Kotaku', id: 2, url: 'http://www.kotaku.com' },
+        { label: 'io9', id: 3, url: 'http://www.io9.com' },
+    ];
+
+    const [filteredData, setFilteredData] = React.useState(dataSource);
+
+    const filter = (val: string) => {
+        setFilteredData(
+            dataSource.filter(data => {
+                return data.label.toLowerCase().includes(val.toLowerCase());
+            })
+        );
+    };
+
+    const select = (val: string) => {
+        const result = dataSource.find((item: DataPoint) => {
+            return val === item.label;
+        });
+
+        if (result) {
+            window.open(result.url);
+        }
+    };
+
+    return (
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <AutoComplete
+                    dataSource={filteredData.length ? filteredData : dataSource}
+                    onFilter={filter}
+                    onSelect={select}
+                    placeholder="Search here..."
+                    prefix={<Search color="borders.base" />}
+                />
+            </StyledStory>
+        </ThemeProvider>
+    );
+};
+
 storiesOf('Components/AutoComplete', module)
     .addParameters({
         readme: {
@@ -165,4 +213,5 @@ storiesOf('Components/AutoComplete', module)
                 </div>
             </StyledStory>
         </ThemeProvider>
-    ));
+    ))
+    .add('Simple Filtering', () => <BasicFilter />);

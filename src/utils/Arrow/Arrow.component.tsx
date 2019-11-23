@@ -2,7 +2,7 @@
 import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 // COMPONENTS
-import { Position } from '../../utils/position/position';
+import { Position } from '../position/position';
 
 export const DefaultSize = '0.625rem';
 

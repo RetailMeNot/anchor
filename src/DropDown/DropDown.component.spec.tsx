@@ -24,21 +24,15 @@ describe('Component: DropDown', () => {
     test('should toggle when clicked', () => {
         const subject = <DropDown overlay={<div>1</div>} />;
         const wrapper = mount(subject);
+
         wrapper.setState({ clicked: true });
+        expect(
+            wrapper.find('div.anchor-drop-down-container.active')
+        ).toBeDefined();
 
-        // I'm creating a variable here to cast to any and avoid
-        // a "toHaveStyleRule" type def error.
-        // todo: include the type def
-        let expectation: any = expect(
-            wrapper.find('div.anchor-drop-down-container')
-        );
-        expectation.toHaveStyleRule('visibility', 'visible');
-
-        // enzyme's simulate('click') calls the onClick prop directly
-        // which we're no longer using
         wrapper.setState({ clicked: false });
-
-        expectation = expect(wrapper.find('div.anchor-drop-down-container'));
-        expectation.toHaveStyleRule('visibility', 'hidden');
+        expect(
+            wrapper.find('div.anchor-drop-down-container.active').exists()
+        ).toBeFalsy();
     });
 });

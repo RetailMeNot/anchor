@@ -12,7 +12,7 @@ export type BreakpointType = {
 
 export type GridSetting = undefined | number | BreakpointType;
 
-interface GridSettings {
+export interface GridSettings {
     left?: GridSetting;
     height?: GridSetting;
     top?: GridSetting;
@@ -97,21 +97,23 @@ export const middleCSS = css`
 */
 const ops = {
     // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
-    width: (w: any, middle: boolean) =>
-        w > 0
+    width: (width: any, middle: boolean) =>
+        width > 0
             ? middle
-                ? `grid-column-end: span ${w}; ${middleCSS}`
-                : `grid-column-end: span ${w}; display: block;`
+                ? `grid-column-end: span ${width}; ${middleCSS}`
+                : `grid-column-end: span ${width}; display: block;`
             : 'display:none;',
-    height: (h: any) => `grid-row-end: span ${h};`,
-    left: (l: any) => `grid-column-start: ${l};`,
-    top: (t: any) => `grid-row-start: ${t};`,
+    height: (height: any) => `grid-row-end: span ${height};`,
+    left: (left: any) => `grid-column-start: ${left};`,
+    top: (top: any) => `grid-row-start: ${top};`,
 };
 
 /*
     Takes the gridSettings object and parses the data to generate sorted css breakpoints. It groups
     css properties based on the breakpoint size so that a single breakpoint declaration for 'xs' can
     have css for left, top, height & width if necessary.
+
+    NOTE: This function uses older loop structures as they are tremendously more performant.
 */
 export function generateBreakpointCSS(
     gridSettings: GridSettings,
@@ -122,41 +124,48 @@ export function generateBreakpointCSS(
     const sortedResponsiveCSS: BreakpointType[] = [];
     const generalSettings: GridSettings = {};
 
-    // Loops through the props with responsive settings, i.e. left, top, etc
-    Object.keys(gridSettings).forEach((settingKey: string) => {
-        const currentValue = gridSettings[settingKey];
+    for (const gridSettingKey in gridSettings) {
+        // forin requires an 'if' guard
+        if (gridSettings[gridSettingKey]) {
+            const gridSettingValue = gridSettings[gridSettingKey];
+            // Put non-responsive settings into the generalSettings object
+            if (
+                typeof gridSettingValue === 'number' ||
+                typeof gridSettingValue === 'undefined'
+            ) {
+                generalSettings[gridSettingKey] = gridSettingValue;
+            }
+            // Collates styles at the same breakpoint from different props into a single css declaration
+            // tslint:disable-next-line: one-line
+            else if (typeof gridSettingValue === 'object') {
+                for (const breakpointKey in gridSettingValue) {
+                    if (gridSettingValue[breakpointKey] >= 0) {
+                        // 0 is a valid value, no truthiness
+                        const responsiveValue = gridSettingValue[breakpointKey];
 
-        // If the value passed isn't an object then it's not responsive, so its value should be
-        // put into the generalSettings object
-        if (typeof currentValue !== 'object') {
-            generalSettings[settingKey] = currentValue;
-        } else {
-            Object.keys(currentValue).forEach((breakpointKey: string) => {
-                const responsiveValue = currentValue[breakpointKey];
-
-                if (responsiveCSS[breakpointKey]) {
-                    responsiveCSS[breakpointKey] += ops[settingKey](
-                        responsiveValue,
-                        middle
-                    );
-                } else {
-                    responsiveCSS[breakpointKey] = ops[settingKey](
-                        responsiveValue,
-                        middle
-                    );
+                        if (!responsiveCSS[breakpointKey]) {
+                            responsiveCSS[breakpointKey] = '';
+                        }
+                        responsiveCSS[breakpointKey] += ops[gridSettingKey](
+                            responsiveValue,
+                            middle
+                        );
+                    }
                 }
-            });
+            }
         }
-    });
+    }
 
-    sortedBreakpoints.forEach((breakpointObj: BreakpointType) => {
-        const breakpointKey = Object.keys(breakpointObj)[0];
-        if (responsiveCSS[breakpointKey] !== undefined) {
-            sortedResponsiveCSS.push({
-                [breakpointKey]: responsiveCSS[breakpointKey],
-            });
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < sortedBreakpoints.length; i++) {
+        for (const breakpointKey in sortedBreakpoints[i]) {
+            if (responsiveCSS[breakpointKey] !== undefined) {
+                sortedResponsiveCSS.push({
+                    [breakpointKey]: responsiveCSS[breakpointKey],
+                });
+            }
         }
-    });
+    }
 
     /*
     sortedResponsiveCSS is an array of breakpoint css associated to a breakpoint key, i.e.

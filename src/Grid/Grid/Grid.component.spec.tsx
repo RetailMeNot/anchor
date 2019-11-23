@@ -18,7 +18,7 @@ const subject = (
     <ThemeProvider theme={RootTheme}>
         <Grid
             alignContent="center"
-            areas={["head head", "nav main", "nav foot"]}
+            areas={['head head', 'nav main', 'nav foot']}
             columnGap="5rem"
             debug
             justifyContent="initial"
@@ -41,33 +41,6 @@ describe('Component: Grid & Cell', () => {
         const tree = renderer.create(subject).toJSON();
 
         expect(tree).toMatchSnapshot();
-    });
-
-    // it('should correctly concatenate areas', () => {
-    //     const testSubject = (
-    //         <Grid
-    //             areas={["head head", "nav main", "nav foot"]}
-    //             debug
-    //         >
-    //             <Cell>Cell 1</Cell>
-    //         </Grid>
-    //     );
-
-    //     const test = mount(testSubject);
-    //     const styles = test.instance().style;
-    //     console.log(test.debug());
-    //     expect(true);
-    // });
-
-    it('should not render a cell when set to 0 width', () => {
-        const testSubject = (
-            <Grid>
-                <Cell width={0}>Hidden</Cell>
-            </Grid>
-        );
-        const test = mount(testSubject);
-
-        expect(test.find('.anchor-cell').exists()).toBeFalsy();
     });
 });
 

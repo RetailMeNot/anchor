@@ -8,11 +8,11 @@
 // VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
-import { breakpoints } from '@xstyled/system';
-import { Cell, Grid, Typography } from '@retailmenot/anchor';
+import { Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
+import { config } from 'react-awesome-styled-grid';
 // COMPONENTS
-import { SiteLink } from '../Utils';
+import { breakpoints, SiteLink } from '../Utils';
 
 interface HomeCardProps {
     description?: string;
@@ -28,18 +28,16 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
     border: solid #e1e1e1 1px;
     box-sizing: border-box;
     display: flex;
-    height: 100%;
+    height: auto;
+    margin-bottom: 2rem;
     overflow: hidden;
     padding: 1.5rem;
     position: relative;
-
-    ${breakpoints({
-        md: css`
-            padding: 2.8125rem;
-            height: 14.5265rem;
-            background: #fff;
-        `,
-    })}
+    ${props => config(props).media[breakpoints.md]`
+        padding: 2.8125rem;
+        height: 14.5265rem;
+        background: #fff;
+    `}
 
     ${({ disabled }) =>
         disabled &&
@@ -74,44 +72,53 @@ const StyledHomeCard = styled('div')<HomeCardProps>`
             }
         `}
 `;
-StyledHomeCard.displayName = "StyledHomeCard";
 
-const StyledLeftCell = styled(Cell)`
+const StyledLeftCol = styled('div')`
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+
     img {
         max-width: 4.3125rem;
     }
 `;
 
+const StyledRightCol = styled('div')`
+    display: inline-block;
+    padding-left: 2rem;
+    width: 79%;
+`;
+
 export const HomeCard = ({
+    breakpoint,
     description,
     disabled,
     imgSrc = '',
     title,
     to,
 }: HomeCardProps): React.ReactElement<any> => (
-    <StyledHomeCard disabled={disabled}>
-        <Grid gap="0rem">
-            <StyledLeftCell width={{xs: 3}} middle center>
-                <img src={withPrefix(imgSrc)} alt={title} />
-            </StyledLeftCell>
+    <StyledHomeCard disabled={disabled} breakpoint={breakpoint}>
+        <StyledLeftCol>
+            <img src={withPrefix(imgSrc)} alt={title} />
+        </StyledLeftCol>
 
-            <Cell width={7} left={5}>
-                <Typography
-                    tag="h3"
-                    weight="bold"
-                    scale="28"
-                    color="#323232"
-                    mt="0"
-                >
-                    {title}
-                </Typography>
+        <StyledRightCol>
+            <Typography
+                tag="h3"
+                weight="bold"
+                scale="28"
+                color="#323232"
+                mt="0"
+            >
+                {title}
+            </Typography>
 
-                <Typography tag="p" pt="0" mt="0">
-                    {description}
-                </Typography>
+            <Typography tag="p" pt="0" mt="0">
+                {description}
+            </Typography>
 
-                {to && <SiteLink to={to} />}
-            </Cell>
-        </Grid>
+            {to && <SiteLink to={to} />}
+        </StyledRightCol>
     </StyledHomeCard>
 );

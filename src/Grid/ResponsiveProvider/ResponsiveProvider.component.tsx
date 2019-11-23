@@ -19,7 +19,7 @@ const StyledDebug = styled('div')`
 `;
 StyledDebug.displayName = 'StyledDebug';
 
-interface ResponsiveContextProps {
+export interface ResponsiveContextProps {
     breakpoints: BreakpointType[];
     current: string;
     innerWidth: number;

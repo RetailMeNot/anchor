@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: DropDown should render in the DOM 1`] = `
-.c3 {
+.c4 {
   position: absolute;
   box-sizing: border-box;
   width: 0.625rem;
@@ -15,6 +15,55 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   transform: rotate(45deg);
   top: calc(-0.625rem / 2);
   left: calc(50% - 0.625rem / 2);
+}
+
+.c1 {
+  position: absolute;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  min-width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
+  transition: visibility 250ms ease-in-out,opacity 250ms ease-in-out;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  border: thin solid #E7E7E7;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0px,0px,0);
+  -ms-transform: translate3d(0px,0px,0);
+  transform: translate3d(0px,0px,0);
+  white-space: normal;
+  width: auto;
+}
+
+.c1.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c2 {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: inherit;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
 }
 
 .c0 {
@@ -40,34 +89,6 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   margin-bottom: -0.75rem;
 }
 
-.c1 {
-  position: absolute;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 1;
-  min-width: 10rem;
-  border: thin solid #E7E7E7;
-  border-radius: 4px;
-  box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.2);
-  visibility: hidden;
-  left: 0;
-  top: 0;
-  -webkit-transform: translate3d(0px,0px,0);
-  -ms-transform: translate3d(0px,0px,0);
-  transform: translate3d(0px,0px,0);
-}
-
-.c2 {
-  box-sizing: border-box;
-  border-radius: inherit;
-  width: 100%;
-  z-index: 2;
-  background: white;
-}
-
 <div
   className="c0 anchor-drop-down"
   spacing="0.75rem"
@@ -75,17 +96,21 @@ exports[`Component: DropDown should render in the DOM 1`] = `
   <div
     className="c1 anchor-drop-down-container"
     height={null}
+    spacing={0}
     width={null}
   >
     <div
       className="c2"
+    />
+    <div
+      className="c3"
     >
       <div>
         1
       </div>
     </div>
     <div
-      className="c3"
+      className="c4"
     />
   </div>
 </div>
