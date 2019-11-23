@@ -37,8 +37,7 @@ const GlobalCSS = createGlobalStyle`
     }
 `;
 
-const StyledPageElement = styled('div')`
-`;
+const StyledPageElement = styled('div')``;
 
 interface PageProps {
     className?: string;
@@ -106,7 +105,7 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
     z-index: 90;
     ${({ sectionNavOpen }) =>
         css({ display: sectionNavOpen ? 'display' : 'none' })}
-    ${(breakpoints({
+    ${breakpoints({
         md: css`
             height: auto;
             overflow-y: initial;
@@ -118,7 +117,7 @@ const StyledSectionNav = styled('div')<StyledSectionNavProps>`
             z-index: 0;
             display: block;
         `,
-    }))}
+    })}
 `;
 
 interface FixedBodyProps {
@@ -155,7 +154,7 @@ const StyledPrimaryNav = styled('nav')`
 
     .octocat {
         height: 100%;
-        display:inline-flex;
+        display: inline-flex;
         padding-left: 0.5rem;
     }
 `;
@@ -225,7 +224,7 @@ export const Page = ({
 
                     <StyledHeader>
                         <Grid>
-                            <Cell width={{xs: 1, md: 0}} middle center>
+                            <Cell width={{ xs: 1, md: 0 }} middle center>
                                 <Button
                                     variant="minimal"
                                     prefix={<Hamburger />}
@@ -235,7 +234,7 @@ export const Page = ({
                                 />
                             </Cell>
 
-                            <Cell width={{xs: 2, md: 3, xl: 2}} middle>
+                            <Cell width={{ xs: 2, md: 3, xl: 2 }} middle>
                                 <StyledLogoContainer to="/">
                                     <img
                                         alt="Anchor Logo Horizontal"
@@ -244,11 +243,11 @@ export const Page = ({
                                 </StyledLogoContainer>
                             </Cell>
 
-                            <Cell width={{xs: 0, md: 6}} middle>
+                            <Cell width={{ xs: 0, md: 6 }} middle>
                                 <SearchInput />
                             </Cell>
 
-                            <Cell width={{xs: 9, md: 3, xl: 4}} middle>
+                            <Cell width={{ xs: 9, md: 3, xl: 4 }} middle>
                                 <StyledPrimaryNav>
                                     <Typography
                                         tag="a"
@@ -265,13 +264,13 @@ export const Page = ({
                     </StyledHeader>
 
                     <Grid>
-                        <Cell width={{xs: 0, md: 3, xl: 2 }}>
+                        <Cell width={{ xs: 0, md: 3, xl: 2 }}>
                             <StyledSectionNav>
                                 <EnhancedSectionNavigation />
                             </StyledSectionNav>
                         </Cell>
 
-                        <Cell width={{xs: 12, md: 9, xl: 10 }}>
+                        <Cell width={{ xs: 12, md: 9, xl: 10 }}>
                             <StyledContentMain>
                                 <br />
                                 <MDXProvider components={MDXComponents}>
