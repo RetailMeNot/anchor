@@ -40,6 +40,7 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 // tslint:disable-next-line: no-submodule-imports
 import github from 'prism-react-renderer/themes/github';
 import {
+    Adaptor,
     AutoComplete,
     Button,
     Collapse,
@@ -178,6 +179,7 @@ const scope = {
     ...Anchor,
     Component,
     // OVERRIDES
+    Adaptor,
     AutoComplete,
     Button,
     Collapse,
