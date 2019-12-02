@@ -1,0 +1,71 @@
+import {
+    ApiTable,
+    ComponentInfo,
+} from '../../components/Utils';
+import { Link } from 'gatsby';
+
+# Adaptor
+
+<ComponentInfo title="Adaptor" />
+
+<br />
+
+The `Adaptor` component is based on <a href="https://www.npmjs.com/package/react-responsive" target="_blank">`react-responsive`</a>'s
+component API, but it offers an additional feature: tying into the `breakpoints` property from
+the <Link to="/components/responsiveprovider">`ResponsiveProvider`</Link> component.
+
+The key's passed to the `from` and `to` fields are whatever breakpoints are set in
+the <Link to="/components/responsiveprovider">`ResponsiveProvider`</Link>. As noted in the
+documentation for that component, the keys and their values are entirely configurable. In the
+example below, the values being used are what is shipped as the defaults from **Anchor**, `xs`, `sm`,
+`md`, `lg`, `xl` and `xxl`.
+
+```tsx live
+<ThemeProvider theme={RootTheme}>
+    <ResponsiveProvider debug>
+        <Adaptor from="lg">
+            <Typography tag="p" pb="3">
+                Visible from the 'lg' breakpoint on up.
+            </Typography>
+        </Adaptor>
+        <Adaptor from="md" to="xxl">
+            <Typography tag="p" pb="3">
+                Visible from the 'md' breakpoint until 'xxl'.
+            </Typography>
+        </Adaptor>
+        <Adaptor minWidth="500px">
+            <Typography tag="p" pb="3">
+                Visible from '500px' on up.
+            </Typography>
+        </Adaptor>
+    </ResponsiveProvider>
+</ThemeProvider>
+```
+
+---
+
+## API
+
+As noted above, `Adaptor` is based on `react-resposnive`'s component API. The following props are
+supported: `query`, `minHeight`, `maxHeight`, `minDeviceHeight`, `maxDeviceHeight`, `minWidth`,
+`maxWidth`, `minDeviceWidth`, `maxDeviceWidth`, `minResolution`, `maxResolution`, `onBeforeChange` and
+`onChange`. Please refer to
+their <a href="https://github.com/contra/react-responsive" target="_blank">documentation</a> for
+more details.
+
+<ApiTable data={[
+    {
+        property: 'from',
+        description: `The breakpoint from which <pre>Adaptor</pre>'s children are rendered.
+        <pre>from</pre> can be set without <pre>to</pre>.`,
+        type: 'string'
+    },
+    {
+        property: 'to',
+        description: `The breakpoint to which <pre>Adaptor</pre>'s children are no longer
+        rendered. This is not inclusive, i.e. a setting of <pre>from="xs"</pre>
+        and <pre>to="md"</pre> will be visible at the <pre>xs</pre>, and <pre>sm</pre> breakpoints.
+        <pre>to</pre> <i>cannot</i> be set without <pre>from</pre> as well.`,
+        type: 'string'
+    },
+]} />

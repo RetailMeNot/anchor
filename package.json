@@ -85,7 +85,6 @@
     "@types/react-color": "^3.0.1",
     "@types/react-responsive": "^3.0.3",
     "@types/react-test-renderer": "^16.0.3",
-    "@types/storybook__addon-info": "^4.1.2",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.12",
     "@types/styled-react-modal": "^1.2.0",

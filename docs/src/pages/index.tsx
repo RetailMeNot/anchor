@@ -1,22 +1,18 @@
 // VENDOR
 import * as React from 'react';
-import styled, { createGlobalStyle } from '@xstyled/styled-components';
+import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
+import { breakpoints } from '@xstyled/system';
 import { Link, withPrefix } from 'gatsby';
-import { config } from 'react-awesome-styled-grid';
 // ANCHOR & COMPONENTS
 import {
-    Col,
-    Container,
-    Hidden,
+    Cell,
+    Grid,
+    ResponsiveProvider,
     RootTheme,
-    Row,
-    ScreenClass,
     ThemeProvider,
-    Visible,
 } from '@retailmenot/anchor';
 import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
-import { breakpoints, BreakpointsType } from '../components/Utils';
 import { Wave } from '../components/Wave';
 
 const CONTENT_WIDTH = 940;
@@ -39,13 +35,16 @@ const StyledIndexPage = styled('div')`
     margin-bottom: 20rem;
     min-height: 130vh;
     padding-top: 1rem;
-    ${props => config(props).media[breakpoints.sm]`
-        display: flex;
-        flex-direction: column;
-        margin-bottom: auto;
-        min-height: auto;
-        padding-top: 3.4375rem;
-    `}
+
+    ${breakpoints({
+        md: css`
+            display: flex;
+            flex-direction: column;
+            margin-bottom: auto;
+            min-height: auto;
+            padding-top: 3.4375rem;
+        `,
+    })}
 `;
 
 const StyledIntro = styled('div')`
@@ -53,9 +52,12 @@ const StyledIntro = styled('div')`
     max-width: ${CONTENT_WIDTH}px;
     margin: 0 auto;
     padding-top: 1rem;
-    ${props => config(props).media[breakpoints.sm]`
-        padding-top: 6.25rem;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            padding-top: 6.25rem;
+        `,
+    })}
 `;
 
 const StyledLogo = styled('img')`
@@ -66,9 +68,12 @@ const StyledLogo = styled('img')`
     max-width: 22.25rem;
     position: relative;
     width: 80%;
-    ${props => config(props).media[breakpoints.md]`
-        margin: inherit;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            margin: inherit;
+        `,
+    })}
 `;
 
 const StyledCaption = styled('p')`
@@ -82,20 +87,29 @@ const StyledCaption = styled('p')`
     max-width: auto;
     padding: 1.5rem;
     text-align: left;
-    ${props => config(props).media[breakpoints.md]`
-        background: transparent;
-        border-radius: 0;
-        margin-bottom: 0;
-        max-width: 38.125rem;
-        padding: 1rem 0;
-    `}
+
+    ${breakpoints({
+        md: css`
+            background: transparent;
+            border-radius: 0;
+            margin-bottom: 0;
+            max-width: 38.125rem;
+            padding: 1rem 0;
+        `,
+    })}
 `;
 
-const StyledContainer = styled(Container)`
-    padding-top: 0rem;
-    ${props => config(props).media[breakpoints.sm]`
-        padding-top:4rem;
-    `}
+const StyledContainer = styled('div')`
+    width: 100%;
+    max-width: ${CONTENT_WIDTH}px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    ${breakpoints({
+        sm: css`
+            padding-top: 4rem;
+        `,
+    })}
 `;
 
 const StyledOcean = styled('div')`
@@ -108,10 +122,13 @@ const StyledOcean = styled('div')`
     right: 0;
     width: 100%;
     z-index: -1;
-    ${props => config(props).media[breakpoints.sm]`
-        bottom: 0;
-        position: absolute;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            bottom: 0;
+            position: absolute;
+        `,
+    })}
 `;
 
 const StyledFooter = styled('footer')`
@@ -123,10 +140,13 @@ const StyledFooter = styled('footer')`
     text-align: center;
     width: 100%;
     z-index: -1;
-    ${props => config(props).media[breakpoints.sm]`
-        position: absolute;
-        z-index: 30;
-    `}
+
+    ${breakpoints({
+        sm: css`
+            position: absolute;
+            z-index: 30;
+        `,
+    })}
 
     img {
         display: block;
@@ -138,95 +158,89 @@ const StyledFooter = styled('footer')`
     }
 `;
 
+const StyledGrid = styled(Grid)`
+    row-gap: 2rem;
+    column-gap: 0rem;
+`;
+
 export const IndexPage = (): React.ReactElement<any> => (
     <ThemeProvider theme={RootTheme}>
-        <ScreenClass
-            render={(breakpoint: BreakpointsType) => (
-                <StyledIndexPage>
-                    <TempOverride />
+        <ResponsiveProvider>
+            <StyledIndexPage>
+                <TempOverride />
 
-                    <HomeTopNav contentWidth={CONTENT_WIDTH} />
+                <HomeTopNav contentWidth={CONTENT_WIDTH} />
 
-                    <StyledIntro>
-                        <Link to="/overview">
-                            <Hidden xs sm>
+                <StyledIntro>
+                    <Link to="/overview">
+                        <Grid>
+                            <Cell width={{ xs: 0, md: 12 }}>
                                 <StyledLogo
                                     src={withPrefix(
                                         '/images/anchor-logo-horizontal.svg'
                                     )}
                                 />
-                            </Hidden>
-                            <Visible xs sm>
+                            </Cell>
+                            <Cell width={{ xs: 12, md: 0 }}>
                                 <StyledLogo
                                     src={withPrefix('/images/anchor-logo.svg')}
                                 />
-                            </Visible>
-                        </Link>
+                            </Cell>
+                        </Grid>
+                    </Link>
 
-                        <StyledCaption>
-                            Anchor is a design system by{' '}
-                            <strong>RetailMeNot</strong>, fostered with a sense
-                            of collaboration, community, and scalability. We
-                            hope it's as useful for you as it is for us.
-                        </StyledCaption>
-                    </StyledIntro>
+                    <StyledCaption>
+                        Anchor is a design system by{' '}
+                        <strong>RetailMeNot</strong>, fostered with a sense of
+                        collaboration, community, and scalability. We hope it's
+                        as useful for you as it is for us.
+                    </StyledCaption>
+                </StyledIntro>
 
-                    <StyledContainer>
-                        <Row>
-                            <Col
-                                offset={{
-                                    md: 1,
-                                    lg: 2,
-                                    xl: 2,
-                                }}
-                            >
-                                <Row>
-                                    <Col lg={5} md={3}>
-                                        <HomeCard
-                                            description="Check out our components & documentation."
-                                            imgSrc="/images/developer-icon.svg"
-                                            title="Developers"
-                                            to="/components"
-                                            breakpoint={breakpoint}
-                                        />
-                                    </Col>
-                                    <Col lg={5} md={3}>
-                                        <HomeCard
-                                            description="Take a look at our design philosophy & human interface guidelines."
-                                            imgSrc="/images/designer-icon.svg"
-                                            title="Designers"
-                                            disabled
-                                            breakpoint={breakpoint}
-                                        />
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </StyledContainer>
-
-                    <StyledOcean>
-                        <Wave duration="89s" top="0" image={1} />
-                        <Wave duration="88s" top="10px" image={5} />
-                        <Wave duration="85s" top="20px" image={4} />
-                        <Wave duration="62s" top="50px" image={3} />
-                        <Wave duration="65s" top="80px" image={2} />
-                        <Wave duration="67s" top="120px" image={1} />
-                    </StyledOcean>
-
-                    <StyledFooter>
-                        <a href="//retailmenot.com" target="_blank">
-                            <img src={withPrefix('/images/r-mark.svg')} />
-                        </a>
-                        <a
-                            href="//github.com/RetailMeNot/anchor"
-                            target="_blank"
+                <StyledContainer>
+                    <StyledGrid columns={13}>
+                        <Cell width={{ xs: 13, md: 6 }}>
+                            <HomeCard
+                                description="Check out our components & documentation."
+                                imgSrc="/images/developer-icon.svg"
+                                title="Developers"
+                                to="/components"
+                            />
+                        </Cell>
+                        <Cell
+                            width={{ xs: 13, md: 6 }}
+                            left={{ xs: 0, md: 8 }}
+                            top={{ xs: 2, md: 1 }}
                         >
-                            <img src={withPrefix('/images/octocat.svg')} />
-                        </a>
-                    </StyledFooter>
-                </StyledIndexPage>
-            )}
-        />
+                            <HomeCard
+                                description="Take a look at our design philosophy & human interface guidelines."
+                                imgSrc="/images/designer-icon.svg"
+                                title="Designers"
+                                disabled
+                            />
+                        </Cell>
+                    </StyledGrid>
+                </StyledContainer>
+
+                <StyledOcean>
+                    <Wave duration="89s" top="0" image={1} />
+                    <Wave duration="88s" top="10px" image={5} />
+                    <Wave duration="85s" top="20px" image={4} />
+                    <Wave duration="62s" top="50px" image={3} />
+                    <Wave duration="65s" top="80px" image={2} />
+                    <Wave duration="67s" top="120px" image={1} />
+                </StyledOcean>
+
+                <StyledFooter>
+                    <a href="//retailmenot.com" target="_blank">
+                        <img src={withPrefix('/images/r-mark.svg')} />
+                    </a>
+                    <a href="//github.com/RetailMeNot/anchor" target="_blank">
+                        <img src={withPrefix('/images/octocat.svg')} />
+                    </a>
+                </StyledFooter>
+            </StyledIndexPage>
+        </ResponsiveProvider>
     </ThemeProvider>
 );
 

@@ -8,19 +8,22 @@
 
 // VENDOR
 import * as React from 'react';
-import styled from '@xstyled/styled-components';
-import { config } from 'react-awesome-styled-grid';
+import styled, { css } from '@xstyled/styled-components';
+import { breakpoints } from '@xstyled/system';
 // ANCHOR & COMPONENTS
 import { Tooltip } from '@retailmenot/anchor';
-import { breakpoints, COMPONENT_MIN_WIDTH, TEXT_ALIGNMENT } from '../Utils';
+import { COMPONENT_MIN_WIDTH, TEXT_ALIGNMENT } from '../Utils';
 
 const StyledPositionGrid = styled('div')`
     text-align: center;
     padding: 1rem 0;
     overflow-x: scroll;
-    ${props => config(props).media[breakpoints.md]`
-        overflow-x: initial;
-    `}
+
+    ${breakpoints({
+        md: css`
+            overflow-x: initial;
+        `,
+    })}
 `;
 
 const StyledTable = styled('table')`

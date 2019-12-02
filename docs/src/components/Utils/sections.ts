@@ -86,13 +86,6 @@ export const sections: Sections = [
                 it's not limited that usage.`,
             },
             {
-                title: 'Grid',
-                path: '/components/grid/',
-                description: `Grid itself is actually not a component, but a collection of
-                    components that interact with one another to provide a responsive layout.`,
-                hide: false,
-            },
-            {
                 title: 'Hero',
                 path: '/components/hero/',
                 description: `The Hero component is used to display a website hero which spans from
@@ -162,6 +155,31 @@ export const sections: Sections = [
                     condimentum elit, id aliquet sapien sollicitudin eget. Fusce semper dapibus nisl
                     non blandit.`,
                 hide: true,
+            },
+            {
+                title: 'Responsive',
+                type: 'title',
+            },
+
+            {
+                title: 'Adaptor',
+                path: '/components/adaptor/',
+                description: `The Adaptor component allows you to specify the visibility of its
+                children based on breakpoints.`,
+                hide: false,
+            },
+            {
+                title: 'Grid',
+                path: '/components/grid/',
+                description: `The Grid component, and its child component Cell, comprise a
+                css-grid-based system to handle dynamic layouts.`,
+                hide: false,
+            },
+            {
+                title: 'ResponsiveProvider',
+                path: '/components/responsiveprovider/',
+                description: `The ResponsiveProvider component use's React context to pass down
+                responsive information such as window width and breakpoints to other components.`,
             },
         ],
     },

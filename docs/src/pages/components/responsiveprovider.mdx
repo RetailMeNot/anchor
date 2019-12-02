@@ -1,0 +1,178 @@
+import {
+    ApiTable,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
+import { ResponsiveContextExample } from '../../components/ResponsiveContextExample';
+
+# ResponsiveProvider
+
+<ComponentInfo title="ResponsiveProvider" />
+
+```jsx
+import {
+    ResponsiveProvider,
+    RootTheme,
+    ThemeProvider
+} from '@retailmenot/anchor';
+import { App } from './components/App'; // Just an example of a root application
+
+export const Example = () => (
+    <ThemeProvider theme={RootTheme}>
+        <ResponsiveProvider>
+            <App />
+        </ResponsiveProvider>
+    </ThemeProvider>
+);
+```
+
+Similar to the `ThemeProvider` component, it's best to put the `ResponsiveProvider` component near
+the top of an application. It passes responsive information down to other components, primary
+amongst them the `Cell` component. In addition, `ResponsiveProvider`'s context is also available as
+`ResponsiveContext`, which lets you access its data in your own components.
+
+`ResponsiveProvider` contains 3 pieces of data: `breakpoints`, `current` and `innerWidth`.
+
+---
+
+## breakpoints
+This is a sorted array of the breakpoints set in the `ThemeProvider`. Assuming the `RootTheme` is
+fed to the `ThemeProvider`, these are the default settings for breakpoints in **Anchor**:
+
+###### RootTheme Breakpoints
+```jsx hideTitle
+{
+    ...RootTheme,
+    // These are all minimums
+    breakpoints: {
+        xs: 0,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200,
+        xxl: 1600,
+    },
+}
+
+// ResponsiveProvider would return the above as:
+// [{xs: 0}, {sm: 576}, {md: 768}, {lg: 992}, {xl: 1200}, {xxl: 1600}]
+```
+
+If the application does not have a `ThemeProvider`, `ResponsiveProvider` will automatically pull in
+the breakpoints from the `RootTheme`. In addition, you can provide your own breakpoints via
+`ResponsiveProvider`'s `breakpoints` prop.
+
+Note that your breakpoints do *not* have to be `xs`, `sm`, `md`, etc, you can have as many or as
+few as you like and named whatever you want. Be aware that all **Anchor** components will use those
+breakpoint keys/values.
+
+###### Custom Breakpoints
+```jsx hideTitle
+{
+    ...RootTheme,
+    breakpoints: {
+        jane: 0,
+        bob: 700,
+        evelyn: 1000,
+    },
+}
+
+// ResponsiveProvider would return the above as:
+// [{jane: 0}, {bob: 700}, {evelyn: 1000}]
+```
+
+---
+
+### current
+
+The current breakpoint key based on the `innerWidth`.
+
+---
+
+### innerWidth
+The width, in pixels, of the current browser window. Updated on window resize, debounced to 100ms.
+
+---
+
+## Examples
+
+###### Debug Mode (Live Editor)
+```tsx live hideTitle
+<ThemeProvider theme={RootTheme}>
+    <ResponsiveProvider debug>
+        <Typography tag="h3">
+            See the black box in the bottom right corner? That's debug mode.
+        </Typography>
+    </ResponsiveProvider>
+</ThemeProvider>
+```
+
+###### Using ResponsiveContext
+
+<br />
+
+This site already has the `ResponsiveProvider` in use at the top of the application, so the below
+component is using `ResponsiveContext` to pull that data in via the `useContext` hook.
+
+```jsx hideTitle
+// VENDOR
+import * as React from 'react';
+import styled from '@xstyled/styled-components';
+// COMPONENTS
+import {
+    ResponsiveContext,
+    Typography
+} from '@retailmenot/anchor';
+
+const StyledResponsiveContextExample = styled('div')`
+    padding: 1rem;
+    border: base;
+`;
+
+export const ResponsiveContextExample = () => {
+    const { breakpoints, current, innerWidth  } = React.useContext(ResponsiveContext);
+    const breakpointKeys = breakpoints
+        .map((breakpoint: object) => Object.keys(breakpoint)[0])
+        .join(', ');
+
+    return (
+        <StyledResponsiveContextExample>
+            <Typography tag="p" pb="2" weight={600}>breakpointKeys: {breakpointKeys}</Typography>
+            <Typography tag="p" pb="2" weight={600}>current: {current}</Typography>
+            <Typography tag="p" pb="2" weight={600}>innerWidth: {innerWidth}</Typography>
+        </StyledResponsiveContextExample>
+    );
+};
+```
+
+And here's the result:
+
+<br />
+
+<ResponsiveContextExample />
+
+<br />
+
+---
+
+## API
+
+<ApiTable data={[
+    {
+        property: 'debug',
+        description: `Displays the debug mode box in the bottom right corner of the screen.
+            Displays the current breakpoint and the current window's innerWidth.`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'breakpoints',
+        description: `An object containing the minimum breakpoints that
+            the <pre>ResponsiveProvider</pre> should use. By default, the component will first
+            try to retreive breakpoint data passed from this prop, then from
+            the <pre>ThemeProvider</pre>, then finally the <pre>RootTheme</pre> if neither of the
+            others can be found.`,
+        type: `{ [key: string]: number; }`,
+        default: 'See description.',
+    },
+]} />

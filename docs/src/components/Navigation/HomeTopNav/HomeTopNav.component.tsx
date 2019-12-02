@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Col, Container, Row } from '@retailmenot/anchor';
+import { Cell, Grid } from '@retailmenot/anchor';
 import styled from '@xstyled/styled-components';
 // Components
 import { NavLink } from './NavLink.component';
@@ -14,13 +14,14 @@ const StyledHomeTopNav = styled('nav')<StyledHomeTopNavProps>`
     max-width: ${props => props.contentWidth}px;
 `;
 
-const StyledContainer = styled(Container)`
+const StyledContainer = styled('div')`
     width: 100%;
     display: inline-block;
 `;
 
 const StyledNavLink = styled(NavLink)`
     text-align: right;
+    display: block;
 `;
 
 export const HomeTopNav = ({
@@ -29,11 +30,11 @@ export const HomeTopNav = ({
     return (
         <StyledHomeTopNav contentWidth={contentWidth}>
             <StyledContainer>
-                <Row>
-                    <Col offset={{ xs: 3, md: 6, lg: 11 }}>
+                <Grid gap="0rem">
+                    <Cell width={{ xs: 4, md: 2 }} left={{ xs: 8, md: 11 }}>
                         <StyledNavLink to="/overview/">Overview</StyledNavLink>
-                    </Col>
-                </Row>
+                    </Cell>
+                </Grid>
             </StyledContainer>
         </StyledHomeTopNav>
     );
