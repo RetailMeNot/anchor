@@ -91,7 +91,7 @@ export const HomeCard = ({
 }: HomeCardProps): React.ReactElement<any> => (
     <StyledHomeCard disabled={disabled}>
         <Grid gap="0rem">
-            <StyledLeftCell width={{ xs: 3 }} middle center>
+            <StyledLeftCell width={3} middle center>
                 <img src={withPrefix(imgSrc)} alt={title} />
             </StyledLeftCell>
 
