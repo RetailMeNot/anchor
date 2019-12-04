@@ -4,6 +4,8 @@ exports[`Component: Grid & Cell should be defined 1`] = `
 .c1 {
   height: 100%;
   min-width: 0;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
   background-color: rgba(255,0,0,0.4);
 }
 
@@ -32,11 +34,15 @@ exports[`Component: Grid & Cell should be defined 1`] = `
 >
   <div
     className="c1 anchor-cell"
+    height={1}
+    width={1}
   >
     Cell 1
   </div>
   <div
     className="c1 anchor-cell"
+    height={1}
+    width={1}
   >
     Cell 2
   </div>
