@@ -70,13 +70,13 @@ export class Cell extends React.PureComponent<CellProps> {
         super(props, context);
 
         // Generates css data for xstyle'd media queries in the constructor so as to only
-        // fire a single time and before render.
+        // fire a single time and before render. Width and height have a default of 1.
         const { sortedResponsiveCSS, generalSettings } = generateBreakpointCSS(
             {
                 left: props.left,
-                height: props.height,
+                height: props.height || 1,
                 top: props.top,
-                width: props.width,
+                width: props.width || 1,
             },
             context.breakpoints,
             props.middle
