@@ -55,6 +55,29 @@ declare module '@xstyled/system' {
     export type TLengthStyledSystem = string | 0 | number;
     export type ResponsiveValue<T> = T | { [key: string]: T };
 
+    export interface TypographyProps<TLength = TLengthStyledSystem> {
+        fontFamily?: ResponsiveValue<CSS.FontFamilyProperty>;
+        fontSize?: ResponsiveValue<CSS.FontSizeProperty<TLength>>;
+        lineHeight?: ResponsiveValue<CSS.LineHeightProperty<TLength>>;
+        fontWeight?: ResponsiveValue<CSS.FontWeightProperty>;
+        textAlign?: ResponsiveValue<CSS.TextAlignProperty>;
+        letterSpacing?: ResponsiveValue<CSS.LetterSpacingProperty<TLength>>;
+        color?: ResponsiveValue<CSS.ColorProperty>;
+        textTransform?: ResponsiveValue<CSS.TextTransformProperty>;
+    }
+
+    export interface LayoutProps<TLength = TLengthStyledSystem> {
+        display?: ResponsiveValue<CSS.DisplayProperty>;
+        width?: ResponsiveValue<CSS.WidthProperty<TLength>>;
+        height?: ResponsiveValue<CSS.HeightProperty<TLength>>;
+        maxWidth?: ResponsiveValue<CSS.MaxWidthProperty<TLength>>;
+        maxHeight?: ResponsiveValue<CSS.MaxHeightProperty<TLength>>;
+        minWidth?: ResponsiveValue<CSS.MinWidthProperty<TLength>>;
+        minHeight?: ResponsiveValue<CSS.MinHeightProperty<TLength>>;
+        verticalAlign?: ResponsiveValue<CSS.VerticalAlignProperty<TLength>>;
+        size?: ResponsiveValue<CSS.HeightProperty<TLength>>;
+    }
+
     export interface SpaceProps<TLength = TLengthStyledSystem> {
         m?: ResponsiveValue<CSS.MarginProperty<TLength>>;
         margin?: ResponsiveValue<CSS.MarginProperty<TLength>>;
@@ -98,6 +121,7 @@ declare module '@xstyled/system' {
             | 'my'
             | 'mx'
         > {}
+
     export interface PaddingProps
         extends Pick<
             SpaceProps,
@@ -115,9 +139,31 @@ declare module '@xstyled/system' {
             | 'px'
         > {}
 
-    export interface ColorProps {
-        color?: ResponsiveValue<CSS.ColorProperty>;
-    }
+    export interface DisplayProps extends Pick<LayoutProps, 'display'> {}
+    export interface WidthProps extends Pick<LayoutProps, 'width'> {}
+    export interface MaxWidthProps extends Pick<LayoutProps, 'maxWidth'> {}
+    export interface MinWidthProps extends Pick<LayoutProps, 'minWidth'> {}
+    export interface HeightProps extends Pick<LayoutProps, 'height'> {}
+    export interface MaxHeightProps extends Pick<LayoutProps, 'maxHeight'> {}
+    export interface MinHeightProps extends Pick<LayoutProps, 'minHeight'> {}
+    export interface VerticalAlignProps
+        extends Pick<LayoutProps, 'verticalAlign'> {}
+
+    export interface FontFamilyProps
+        extends Pick<TypographyProps, 'fontFamily'> {}
+    export interface FontSizeProps extends Pick<TypographyProps, 'fontSize'> {}
+    export interface LineHeightProps
+        extends Pick<TypographyProps, 'lineHeight'> {}
+    export interface FontWeightProps
+        extends Pick<TypographyProps, 'fontWeight'> {}
+    export interface TextAlignProps
+        extends Pick<TypographyProps, 'textAlign'> {}
+    export interface LetterSpacingProps
+        extends Pick<TypographyProps, 'letterSpacing'> {}
+    export interface TextTransformProps
+        extends Pick<TypographyProps, 'textTransform'> {}
+    export interface ColorProps extends Pick<TypographyProps, 'color'> {}
+
     export interface BackgroundColorProps<TLength = TLengthStyledSystem> {
         backgroundColor?: ResponsiveValue<CSS.BackgroundProperty<TLength>>;
     }
@@ -127,10 +173,26 @@ declare module '@xstyled/system' {
         propTypes?: string[];
     }
 
+    export const fontFamily: StyleFn;
+    export const fontSize: StyleFn;
+    export const lineHeight: StyleFn;
+    export const fontWeight: StyleFn;
+    export const textAlign: StyleFn;
+    export const letterSpacing: StyleFn;
+    export const textTransform: StyleFn;
     export const color: StyleFn;
+
     export const backgroundColor: StyleFn;
 
     export const space: StyleFn;
     export const margin: StyleFn;
     export const padding: StyleFn;
+    export const width: StyleFn;
+    export const minWidth: StyleFn;
+    export const maxWidth: StyleFn;
+    export const height: StyleFn;
+    export const minHeight: StyleFn;
+    export const maxHeight: StyleFn;
+    export const display: StyleFn;
+    export const verticalAlign: StyleFn;
 }
