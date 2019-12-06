@@ -3,6 +3,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import {
+    th,
     variant as createVariant,
     margin as marginStyles,
     MarginProps,
@@ -23,17 +24,14 @@ import {
     fontWeight as fontWeightStyles,
     FontWeightProps,
     color as colorStyles,
+    BorderRadiusProps,
+    borderRadius as borderRadiusStyles,
+    BorderProps,
+    border as borderStyles,
 } from '@xstyled/system';
 
 interface SizeTheme {
-    [K: string]: {
-        cell?: any;
-        row?: any;
-        header?: any;
-
-        td?: any;
-        th?: any;
-    };
+    [K: string]: any;
 }
 
 const TableSizes: SizeTheme = {
@@ -42,7 +40,7 @@ const TableSizes: SizeTheme = {
         td: { padding: '0.25rem 0.75rem' },
     },
     md: {
-        th: { padding: '0.5rem 1.25rem 0.25rem' },
+        th: { padding: '0.5rem 1.25rem' },
         td: { padding: '0.5rem 1.25rem' },
     },
 };
@@ -59,46 +57,44 @@ export const sizeVariantStyles = createVariant({
 
 interface TableProps
     extends React.HTMLAttributes<HTMLTableElement>,
+        FontSizeProps,
+        FontWeightProps,
+        BorderRadiusProps,
+        BorderProps,
         MarginProps,
         WidthProps,
         MaxWidthProps,
         MinWidthProps {
     borderRadius?: string;
+    background?: string;
+    altBackground?: string;
     size?: string;
 }
 
 const StyledTable = styled('table')<TableProps>`
-    border: base;
     border-spacing: 0;
-
     overflow: hidden;
 
-    color: text.light;
-    font-weight: 500;
-
     ${sizeVariantStyles}
+    ${borderStyles}
     ${marginStyles}
     ${widthStyles}
     ${maxWidthStyles}
     ${minWidthStyles}
-    ${({ borderRadius = 'base' }) =>
-        css({
-            borderRadius,
-        })}
+    ${borderRadiusStyles}
+    ${colorStyles}
+    ${fontWeightStyles}
+    ${fontSizeStyles}
+    ${({ background }) => css({ background: th.color(background) })}
 
     tbody tr:nth-child(odd) {
-        background-color: background.base;
-    }
-    tr {
-        border: dark;
+        ${({ altBackground }) => css({ background: th.color(altBackground) })}
     }
 
     th {
         white-space: nowrap;
     }
 `;
-
-StyledTable.defaultProps = { borderRadius: 'base' };
 
 export const Table = ({
     className,
@@ -110,19 +106,42 @@ export const Table = ({
     </StyledTable>
 );
 
+Table.defaultProps = {
+    color: 'text.light',
+    fontWeight: 500,
+    border: 'base',
+    borderRadius: 'base',
+    background: 'white',
+    altBackground: 'background.base',
+};
+
 // Table.Row
 // ----------------------------------------------------------------------------------
 
-interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement> {}
+interface TableRowProps
+    extends React.HTMLAttributes<HTMLTableRowElement>,
+        HeightProps,
+        MarginProps,
+        PaddingProps {
+    background?: string;
+}
+
+const StyledRow = styled('tr')<TableRowProps>`
+    ${heightStyles}
+    ${marginStyles}
+    ${paddingStyles}
+    ${colorStyles}
+    ${({ background }) => css({ background: th.color(background) })}
+`;
 
 export const TableRow = ({
     className,
     children,
     ...props
 }: TableRowProps): React.ReactElement<TableRowProps> => (
-    <tr className={classNames('anchor-table-row', className)} {...props}>
+    <StyledRow className={classNames('anchor-table-row', className)} {...props}>
         {children}
-    </tr>
+    </StyledRow>
 );
 
 Table.Row = TableRow;

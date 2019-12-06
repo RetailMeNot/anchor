@@ -55,15 +55,20 @@ declare module '@xstyled/system' {
     export type TLengthStyledSystem = string | 0 | number;
     export type ResponsiveValue<T> = T | { [key: string]: T };
 
-    export interface TypographyProps<TLength = TLengthStyledSystem> {
-        fontFamily?: ResponsiveValue<CSS.FontFamilyProperty>;
-        fontSize?: ResponsiveValue<CSS.FontSizeProperty<TLength>>;
-        lineHeight?: ResponsiveValue<CSS.LineHeightProperty<TLength>>;
-        fontWeight?: ResponsiveValue<CSS.FontWeightProperty>;
-        textAlign?: ResponsiveValue<CSS.TextAlignProperty>;
-        letterSpacing?: ResponsiveValue<CSS.LetterSpacingProperty<TLength>>;
-        color?: ResponsiveValue<CSS.ColorProperty>;
-        textTransform?: ResponsiveValue<CSS.TextTransformProperty>;
+    export interface BordersProps<TLength = TLengthStyledSystem> {
+        border?: ResponsiveValue<CSS.BorderProperty<TLength>>;
+        borderColor?: ResponsiveValue<CSS.BorderColorProperty>;
+        borderWidth?: ResponsiveValue<CSS.BorderWidthProperty<TLength>>;
+        borderStyle?: ResponsiveValue<CSS.BorderStyleProperty>;
+        borderRadius?: ResponsiveValue<CSS.BorderRadiusProperty<TLength>>;
+        borderTop?: ResponsiveValue<CSS.BorderTopProperty<TLength>>;
+        borderTopColor?: ResponsiveValue<CSS.BorderTopColorProperty>;
+        borderRight?: ResponsiveValue<CSS.BorderRightProperty<TLength>>;
+        borderRightColor?: ResponsiveValue<CSS.BorderRightColorProperty>;
+        borderLeft?: ResponsiveValue<CSS.BorderLeftProperty<TLength>>;
+        borderLeftColor?: ResponsiveValue<CSS.BorderLeftColorProperty>;
+        borderBottom?: ResponsiveValue<CSS.BorderBottomProperty<TLength>>;
+        borderBottomColor?: ResponsiveValue<CSS.BorderBottomColorProperty>;
     }
 
     export interface LayoutProps<TLength = TLengthStyledSystem> {
@@ -103,6 +108,17 @@ declare module '@xstyled/system' {
         paddingLeft?: ResponsiveValue<CSS.PaddingLeftProperty<TLength>>;
         px?: ResponsiveValue<CSS.PaddingProperty<TLength>>;
         py?: ResponsiveValue<CSS.PaddingProperty<TLength>>;
+    }
+
+    export interface TypographyProps<TLength = TLengthStyledSystem> {
+        fontFamily?: ResponsiveValue<CSS.FontFamilyProperty>;
+        fontSize?: ResponsiveValue<CSS.FontSizeProperty<TLength>>;
+        lineHeight?: ResponsiveValue<CSS.LineHeightProperty<TLength>>;
+        fontWeight?: ResponsiveValue<CSS.FontWeightProperty>;
+        textAlign?: ResponsiveValue<CSS.TextAlignProperty>;
+        letterSpacing?: ResponsiveValue<CSS.LetterSpacingProperty<TLength>>;
+        color?: ResponsiveValue<CSS.ColorProperty>;
+        textTransform?: ResponsiveValue<CSS.TextTransformProperty>;
     }
 
     export interface MarginProps
@@ -164,6 +180,30 @@ declare module '@xstyled/system' {
         extends Pick<TypographyProps, 'textTransform'> {}
     export interface ColorProps extends Pick<TypographyProps, 'color'> {}
 
+    export interface BorderProps extends Pick<BordersProps, 'border'> {}
+    export interface BorderColorProps
+        extends Pick<BordersProps, 'borderColor'> {}
+    export interface BorderWidthProps
+        extends Pick<BordersProps, 'borderWidth'> {}
+    export interface BorderStyleProps
+        extends Pick<BordersProps, 'borderStyle'> {}
+    export interface BorderRadiusProps
+        extends Pick<BordersProps, 'borderRadius'> {}
+    export interface BorderTopProps extends Pick<BordersProps, 'borderTop'> {}
+    export interface BorderTopColorProps
+        extends Pick<BordersProps, 'borderTopColor'> {}
+    export interface BorderRightProps
+        extends Pick<BordersProps, 'borderRight'> {}
+    export interface BorderRightColorProps
+        extends Pick<BordersProps, 'borderRightColor'> {}
+    export interface BorderLeftProps extends Pick<BordersProps, 'borderLeft'> {}
+    export interface BorderLeftColorProps
+        extends Pick<BordersProps, 'borderLeftColor'> {}
+    export interface BorderBottomProps
+        extends Pick<BordersProps, 'borderBottom'> {}
+    export interface BorderBottomColorProps
+        extends Pick<BordersProps, 'borderBottomColor'> {}
+
     export interface BackgroundColorProps<TLength = TLengthStyledSystem> {
         backgroundColor?: ResponsiveValue<CSS.BackgroundProperty<TLength>>;
     }
@@ -195,4 +235,18 @@ declare module '@xstyled/system' {
     export const maxHeight: StyleFn;
     export const display: StyleFn;
     export const verticalAlign: StyleFn;
+
+    export const border: StyleFn;
+    export const borderWidth: StyleFn;
+    export const borderStyle: StyleFn;
+    export const borderColor: StyleFn;
+    export const borderRadius: StyleFn;
+    export const borderTop: StyleFn;
+    export const borderTopColor: StyleFn;
+    export const borderRight: StyleFn;
+    export const borderRightColor: StyleFn;
+    export const borderLeft: StyleFn;
+    export const borderLeftColor: StyleFn;
+    export const borderBottom: StyleFn;
+    export const borderBottomColor: StyleFn;
 }

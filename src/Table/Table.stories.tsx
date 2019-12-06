@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { select } from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
@@ -44,9 +44,10 @@ storiesOf('Components/Table', module).add('Default', () => (
                 Fruit Table
             </Typography>
             <Table
-                borderRadius="modal"
-                width="33.75rem"
+                width={text('width', '33.75rem')}
                 size={select<'md' | 'sm'>('size', ['md', 'sm'], 'md')}
+                background={text('background', '') || undefined}
+                altBackground={text('altBackground', '') || undefined}
             >
                 <Head>
                     <Row>
@@ -79,7 +80,7 @@ storiesOf('Components/Table', module).add('Default', () => (
                 </Head>
                 <Body>
                     {data.map(({ name, color, rating }) => (
-                        <Row>
+                        <Row key={name}>
                             <HeaderCell
                                 scope="row"
                                 align="left"

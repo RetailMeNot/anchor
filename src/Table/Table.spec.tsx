@@ -9,18 +9,26 @@ import { Table } from './Table.component';
 const { Head, Body, Cell, Footer, Row, HeaderCell } = Table;
 
 describe('Component: Table', () => {
-    it('should be defined.', () => {
+    const table = (
+        <ThemeProvider theme={RootTheme}>
+            <Table />
+        </ThemeProvider>
+    );
+
+    const wrapper = mount(table);
+    const component = shallow(table);
+
+    expect(table).toBeDefined();
+    expect(wrapper).toBeDefined();
+    expect(component).toBeDefined();
+
+    it('should match snapshot.', () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>
                 <Table />
             </ThemeProvider>
         );
-        const wrapper = mount(subject);
-        const component = shallow(subject);
 
-        expect(subject).toBeDefined();
-        expect(wrapper).toBeDefined();
-        expect(component).toBeDefined();
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });

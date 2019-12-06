@@ -1,17 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Table should be defined. 1`] = `
+exports[`Component: Table should match snapshot. 1`] = `
 .c0 {
-  border: thin solid #D3D3D3;
   border-spacing: 0;
-  overflow: auto;
+  overflow: hidden;
+  border: thin solid #D3D3D3;
+  border-radius: 4px;
   color: #595959;
   font-weight: 500;
-  border-radius: 4px;
+  background: white;
 }
 
 .c0 th {
-  padding: 0.5rem 1.25rem 0.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 .c0 td {
@@ -19,11 +20,7 @@ exports[`Component: Table should be defined. 1`] = `
 }
 
 .c0 tbody tr:nth-child(odd) {
-  background-color: #F1F1F1;
-}
-
-.c0 tr {
-  border: thin solid #808080;
+  background: #F1F1F1;
 }
 
 .c0 th {
@@ -32,21 +29,24 @@ exports[`Component: Table should be defined. 1`] = `
 
 <table
   className="c0 anchor-table"
+  color="text.light"
+  fontWeight={500}
 />
 `;
 
 exports[`Component: Table should render with all the bells and whistles 1`] = `
 .c0 {
-  border: thin solid #D3D3D3;
   border-spacing: 0;
-  overflow: auto;
+  overflow: hidden;
+  border: thin solid #D3D3D3;
+  border-radius: 4px;
   color: #595959;
   font-weight: 500;
-  border-radius: 4px;
+  background: white;
 }
 
 .c0 th {
-  padding: 0.5rem 1.25rem 0.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 .c0 td {
@@ -54,11 +54,7 @@ exports[`Component: Table should render with all the bells and whistles 1`] = `
 }
 
 .c0 tbody tr:nth-child(odd) {
-  background-color: #F1F1F1;
-}
-
-.c0 tr {
-  border: thin solid #808080;
+  background: #F1F1F1;
 }
 
 .c0 th {
@@ -67,6 +63,8 @@ exports[`Component: Table should render with all the bells and whistles 1`] = `
 
 <table
   className="c0 anchor-table"
+  color="text.light"
+  fontWeight={500}
 >
   <thead
     className="anchor-table-head"
