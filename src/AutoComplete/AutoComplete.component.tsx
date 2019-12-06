@@ -190,7 +190,8 @@ export const AutoComplete = ({
                         case EventKeyCodes.ENTER:
                             event.preventDefault();
                             event.stopPropagation();
-                            if (isFocused) {
+                            // This should only fire if the results container exists
+                            if (isFocused && resultsRef.current) {
                                 // Unset initialTerm
                                 resultsRef.current.clearInitialTerm();
                                 // Set the active value of the autocomplete
