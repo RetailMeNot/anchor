@@ -4,7 +4,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
 // ANCHOR
 import { RootTheme } from '../../src/theme';
 import { MyComponent } from './MyComponent.component';
