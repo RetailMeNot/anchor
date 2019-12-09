@@ -46,11 +46,7 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
             opacity: disabled ? 0.4 : 1,
         })};
 
-    ${compose(
-        spaceStyles,
-        colorStyles,
-        backgroundColorStyles
-    )};
+    ${compose(spaceStyles, colorStyles, backgroundColorStyles)};
 `;
 
 interface CheckboxProps {

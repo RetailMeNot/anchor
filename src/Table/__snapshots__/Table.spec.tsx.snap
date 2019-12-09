@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Table should match snapshot. 1`] = `
+.c0 {
+  border-spacing: 0;
+  overflow: hidden;
+  border: thin solid #D3D3D3;
+  border-radius: 4px;
+  color: #595959;
+  font-weight: 500;
+  background: white;
+}
+
+.c0 th {
+  padding: 0.5rem 1.25rem;
+}
+
+.c0 td {
+  padding: 0.5rem 1.25rem;
+}
+
+.c0 tbody tr:nth-child(odd) {
+  background: #F1F1F1;
+}
+
+.c0 th {
+  white-space: nowrap;
+}
+
+<table
+  className="c0 anchor-table"
+  color="text.light"
+  fontWeight={500}
+/>
+`;
+
+exports[`Component: Table should render with all the bells and whistles 1`] = `
+.c0 {
+  border-spacing: 0;
+  overflow: hidden;
+  border: thin solid #D3D3D3;
+  border-radius: 4px;
+  color: #595959;
+  font-weight: 500;
+  background: white;
+}
+
+.c0 th {
+  padding: 0.5rem 1.25rem;
+}
+
+.c0 td {
+  padding: 0.5rem 1.25rem;
+}
+
+.c0 tbody tr:nth-child(odd) {
+  background: #F1F1F1;
+}
+
+.c0 th {
+  white-space: nowrap;
+}
+
+<table
+  className="c0 anchor-table"
+  color="text.light"
+  fontWeight={500}
+>
+  <thead
+    className="anchor-table-head"
+  >
+    <tr
+      className="anchor-table-row"
+    >
+      <th
+        className="anchor-table-header-cell"
+      >
+        Fruit
+      </th>
+      <th
+        className="anchor-table-header-cell"
+      >
+        Color
+      </th>
+      <th
+        className="anchor-table-header-cell"
+      >
+        Calories
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="anchor-table-body"
+  >
+    <tr
+      className="anchor-table-row"
+    >
+      <td
+        className="anchor-table-cell"
+      >
+        Apple
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        Red
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        95
+      </td>
+    </tr>
+    <tr
+      className="anchor-table-row"
+    >
+      <td
+        className="anchor-table-cell"
+      >
+        Banana
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        Yellow
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        105
+      </td>
+    </tr>
+    <tr
+      className="anchor-table-row"
+    >
+      <td
+        className="anchor-table-cell"
+      >
+        Cranberry
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        Red
+      </td>
+      <td
+        className="anchor-table-cell"
+      >
+        2
+      </td>
+    </tr>
+  </tbody>
+  <tfoot
+    className="anchor-table-footer"
+  >
+    <tr
+      className="anchor-table-row"
+    >
+      <td
+        className="anchor-table-cell"
+      >
+        People use tfoots?
+      </td>
+    </tr>
+  </tfoot>
+</table>
+`;
