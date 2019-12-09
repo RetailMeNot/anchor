@@ -3,6 +3,7 @@ import {
     ComponentInfo,
     FormatTypes
 } from '../../components/Utils';
+import { Link } from 'gatsby';
 import { ResponsiveContextExample } from '../../components/ResponsiveContextExample';
 
 # ResponsiveProvider
@@ -152,6 +153,23 @@ And here's the result:
 <ResponsiveContextExample />
 
 <br />
+
+---
+
+## A Note About Server Side Rendering (SSR)
+
+It's important to remember that when using the `ResponsiveProvider`, that it can never return an
+accurate value for `innerWidth` or `current` with SSR on an initial render. These values require a
+`window` object to exist, and SSR pages do not have a `window` object upon their initial render.
+However, the `breakpoints` value does not depend on the `window` object as its primary function is to
+sort the `breakpoints` values in the `ThemeProvider`.
+
+`innerWidth` and `current` are most useful for client side rendering, particularly in situations
+where it's helpful to place content that needs to appear based on user interaction.
+
+All **Anchor** components are built with SSR in mind so you should feel safe using them.
+For example, the <Link to="/components/grid">`Grid` and `Cell`</Link> components are built using
+`breakpoints` expressly to avoid SSR issues.
 
 ---
 

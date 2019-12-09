@@ -1,0 +1,165 @@
+import { PositionGrid } from './../../components/PositionGrid';
+import {
+    ApiTable,
+    ColorBlurb,
+    ComponentInfo,
+    FormatTypes
+} from '../../components/Utils';
+
+# PopOver
+
+<ComponentInfo title="PopOver" />
+
+<br />
+
+The `PopOver` has 12 possible placements via the `position` prop. These placements are based on the
+motion and direction of the content and less about exact positioning. The diagram below illustrates:
+
+<PositionGrid />
+
+```tsx live
+<Component initialState={{ showPopOver: true }}>
+    {
+        ({ state, setState }) => (
+            <PopOver
+                active={state.showPopOver}
+                content={<Typography tag="h3" color="gold" p="1">An Example PopOver</Typography>}
+                position="bottomStart"
+                shadow="5px 2px 2px rgba(0,0,0,0.25)"
+                showArrow={true}
+            >
+                <div>
+                    <Typography tag="h2" pb="2">
+                        PopOver Example
+                    </Typography>
+                    <Typography tag="p" pb="2">
+                        This is an example of a PopOver that uses a button to control its visibility.
+                    </Typography>
+                    <Button
+                        onClick={ () => {setState({showPopOver : !state.showPopOver})} }
+                        prefix={state.showPopOver ? <Heart /> : <HeartOutline />}
+                    />
+                </div>
+            </PopOver>
+        )
+    }
+</Component>
+```
+
+---
+
+## API
+
+<ApiTable data={[
+    {
+        property: 'active',
+        description: `Whether or not the <pre>PopOver</pre> is visible.`,
+        type: 'boolean',
+        default: false,
+    },
+    {
+        property: 'arrowIndent',
+        description: `How far the arrow should be indented relative to the <pre>PopOver</pre> content.
+            This setting works with all <pre>position</pre>'s
+            except <pre>bottom</pre>, <pre>top</pre>, <pre>right</pre> or <pre>left</pre>. Any valid
+            CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.75rem',
+    },
+    {
+        property: 'arrowSize',
+        description: `How large the arrow will be. Note that extremely large values will distort the
+            arrow. Any valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.625rem',
+    },
+    {
+        property: 'background',
+        description: <ColorBlurb label="PopOver" background gradient />,
+        type: 'string',
+        default: '#000000',
+    },
+    {
+        property: 'border',
+        description: `Displays a border around the <pre>PopOver</pre>, including the arrow
+            if <pre>showArrow</pre> is set to true. This accepts an valid CSS shorthand
+            for the <pre>border</pre> property.`,
+        type: 'string',
+    },
+    {
+        property: 'borderRadius',
+        description: `Controls the <pre>border-radius</pre> CSS property for the
+            <pre>PopOver</pre>. Any valid CSS for the <pre>border-radius</pre> CSS property is
+            allowed.`,
+        type: 'string',
+        default: '4px',
+    },
+    {
+        property: 'color',
+        description: <ColorBlurb label="PopOver" />,
+        type: 'string',
+        default: '#ffffff',
+    },
+    {
+        property: 'content',
+        description: 'The content of the <pre>PopOver</pre>.',
+        type: <FormatTypes data={['string', 'JSX']} noInterpret />,
+    },
+    {
+        property: 'delay',
+        description: `Delays the <pre>PopOver</pre>'s visibility change. Any valid
+            CSS <pre>transition-delay</pre> value is accepted.`,
+        type: 'string',
+    },
+    {
+        property: 'debug',
+        description: `Forces the <pre>PopOver</pre>'s <pre>content</pre> to be visible regardless of
+            the <pre>active</pre> prop.`,
+        type: 'boolean',
+    },
+    {
+        property: 'maxWidth',
+        description: `Property for the maximum width of the <pre>PopOver</pre>.`,
+        type: 'string',
+        default: 'auto',
+    },
+    {
+        property: 'position',
+        description: `Where the <pre>PopOver</pre> should appear when <pre>active</pre> is true.`,
+        type: <FormatTypes
+                data={[
+                    'topStart',
+                    'top',
+                    'topEnd',
+                    'rightStart',
+                    'right',
+                    'rightEnd',
+                    'bottomEnd',
+                    'bottom',
+                    'bottomStart',
+                    'leftEnd',
+                    'left',
+                    'leftStart',
+                ]} />,
+        default: 'topEnd',
+    },
+    {
+        property: 'shadow',
+        description: `The dropshadow that appears beneath the <pre>PopOver</pre>. This accepts any
+            valid CSS <pre>box-shadow</pre> values.`,
+        type: 'string',
+    },
+    {
+        property: 'showArrow',
+        description: `Whether or not the arrow should be displayed.`,
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'spacing',
+        description: `The distance the <pre>PopOver</pre> will be from the contained element. Any
+            valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.75rem',
+    },
+]}/>

@@ -131,6 +131,13 @@ export const sections: Sections = [
                 presenting its own content area for the user to interact with. `,
             },
             {
+                title: 'PopOver',
+                path: '/components/popover/',
+                description: `The PopOver component is a targeted overlay, meaning its position is
+                determined by a piece of content that already exists on the page. Unlike Tooltip,
+                it is controlled programatically rather than by events.`,
+            },
+            {
                 title: 'Skeleton',
                 path: '/components/skeleton/',
                 description: `The Skeleton component is intended to show placeholder shapes while a
