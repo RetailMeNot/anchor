@@ -37,12 +37,13 @@ with default settings.
 ## Responsive Usage
 
 The `Cell` props can accept an object with breakpoint data instead of a number. This allows you to
-set `left`, `height`, `top` and `width` values for any breakpoint set in `ResponsiveProvider`. As
+set `left`, `height`, `top` and `width` values for any breakpoint set in <Link to="/components/responsiveprovider">`ResponsiveProvider`</Link>. As
 noted above, this functionality only works if `ResponsiveProvider` is used. The breakpoints are
 mobile first.
 
-*NOTE: Unlike this example, it's best to put the `ResponsiveProvider` and `ThemeProvider` higher up
-in the application.*
+*NOTE: Cell uses the `breakpoint` data from `ResponsiveProvider` in order to generate media
+queries making them safe to use for SSR. Also, unlike in this example, it's best to put the
+`ResponsiveProvider` and `ThemeProvider` higher up in the application.*
 
 ```tsx live
 <ThemeProvider theme={RootTheme}>

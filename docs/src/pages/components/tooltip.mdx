@@ -22,8 +22,9 @@ motion and direction of the content and less about exact positioning. The diagra
     content="Here is some lovely content."
     display="inline-block"
     maxWidth="10rem"
-    position="right"
+    position="bottomStart"
     wrap="true"
+    showArrow={true}
 >
     <Button>Hover over me</Button>
 </Tooltip>
@@ -34,6 +35,22 @@ motion and direction of the content and less about exact positioning. The diagra
 ## API
 
 <ApiTable data={[
+    {
+        property: 'arrowIndent',
+        description: `How far the arrow should be indented relative to the <pre>Tooltip</pre> content.
+            This setting works with all <pre>position</pre>'s
+            except <pre>bottom</pre>, <pre>top</pre>, <pre>right</pre> or <pre>left</pre>. Any valid
+            CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.75rem',
+    },
+    {
+        property: 'arrowSize',
+        description: `How large the arrow will be. Note that extremely large values will distort the
+            arrow. Any valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.625rem',
+    },
     {
         property: 'background',
         description: <ColorBlurb label="Tooltip" background gradient />,
@@ -50,6 +67,17 @@ motion and direction of the content and less about exact positioning. The diagra
         property: 'content',
         description: 'The text that will appear in the <pre>Tooltip</pre>.',
         type: 'string',
+    },
+    {
+        property: 'delay',
+        description: `Delays the <pre>Tooltip</pre>'s visibility change. Any valid
+            CSS <pre>transition-delay</pre> value is accepted.`,
+        type: 'string',
+    },
+    {
+        property: 'debug',
+        description: `Forces the <pre>Tooltip</pre> to be visible (useful for styling).`,
+        type: 'boolean',
     },
     {
         property: 'display',
@@ -82,6 +110,19 @@ motion and direction of the content and less about exact positioning. The diagra
                     'leftStart',
                 ]} />,
         default: 'topEnd',
+    },
+    {
+        property: 'showArrow',
+        description: `Whether or not the arrow should be displayed.`,
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'spacing',
+        description: `The distance the <pre>Tooltip</pre> will be from the contained element. Any
+            valid CSS unit (<pre>em</pre>, <pre>px</pre>, etc.) is accepted.`,
+        type: 'string',
+        default: '0.75rem',
     },
     {
         property: 'wrap',
