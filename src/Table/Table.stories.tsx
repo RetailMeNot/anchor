@@ -91,13 +91,13 @@ storiesOf('Components/Table', module).add('Default', () => (
                             </HeaderCell>
                             <Cell
                                 align="center"
-                                width={{ xs: '100px', md: '1px' }}
+                                width={{ xs: '1px', md: '200px' }}
                             >
                                 {color}
                             </Cell>
                             <Cell
                                 align="center"
-                                width={{ xs: '100px', md: '1px' }}
+                                width={{ xs: '1px', md: '200px' }}
                             >
                                 {rating}
                             </Cell>
