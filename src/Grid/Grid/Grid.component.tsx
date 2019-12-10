@@ -1,9 +1,11 @@
 // VENDOR
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 // COMPONENTS & UTILS
 import { debugColor, FLOW, GridContext } from '../utils';
+import { Cell } from '../Cell';
 
 type Flow = keyof typeof FLOW;
 
@@ -48,7 +50,7 @@ type AlignContent =
     | 'unsafe center'
     | 'unset';
 
-interface GridProps {
+interface GridProps extends SpaceProps {
     alignContent?: AlignContent;
     areas?: string[];
     children?: any;
@@ -100,6 +102,8 @@ const StyledGrid = styled('div')<GridProps>`
         ${alignContent && `align-content: ${alignContent}`};
         ${debug && `background-color: ${debugColor}`};
     `}
+
+    ${spaceStyles}
 `;
 
 export const Grid = ({
@@ -135,3 +139,5 @@ export const Grid = ({
         </GridContext.Provider>
     </StyledGrid>
 );
+
+Grid.Cell = Cell;

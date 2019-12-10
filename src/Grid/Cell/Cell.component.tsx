@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
-import { breakpoints } from '@xstyled/system';
+import { breakpoints, space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 import {
     BreakpointType,
@@ -14,7 +14,7 @@ import {
 import { ResponsiveContext } from '../ResponsiveProvider';
 import { ResponsiveContextProps } from '../ResponsiveProvider/ResponsiveProvider.component';
 
-interface CellProps {
+interface CellProps extends SpaceProps {
     area?: string;
     center?: boolean;
     children?: any;
@@ -56,6 +56,12 @@ const StyledCell = styled.div<CellProps>`
         css({
             backgroundColor: debugColor,
         })};
+
+    ${spaceStyles}
+`;
+
+const Box = styled('div')<SpaceProps>`
+    ${spaceStyles}
 `;
 
 interface CellState {
@@ -107,7 +113,7 @@ export class Cell extends React.PureComponent<CellProps> {
                         top={generalSettings.top || undefined}
                         width={generalSettings.width || undefined}
                     >
-                        {children}
+                        <Box {...this.props}>{children}</Box>
                     </StyledCell>
                 )}
             </GridContext.Consumer>

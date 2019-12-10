@@ -6,9 +6,11 @@ import { boolean } from '@storybook/addon-knobs';
 import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
-import { Cell, Grid, ResponsiveProvider } from '../index';
+import { Grid, ResponsiveProvider } from '../index';
 import { FLOW } from '../utils';
 import { RootTheme } from '../../theme';
+
+const { Cell } = Grid;
 
 const StoryGrid = styled(Grid)`
     height: 100vh;
@@ -23,7 +25,12 @@ storiesOf('Components/Grid', module)
                     debug={boolean('ResponsiveProvider Debug', true)}
                 >
                     <br />
-                    <Grid flow={FLOW.row} debug={boolean('Grid Debug', true)}>
+                    <Grid
+                        flow={FLOW.row}
+                        debug={boolean('Grid Debug', true)}
+                        p={1}
+                        m={3}
+                    >
                         <Cell
                             center
                             middle
@@ -35,7 +42,7 @@ storiesOf('Components/Grid', module)
                         <Cell width={{ xs: 12, md: 6 }}>
                             <Typography>Cell 1</Typography>
                         </Cell>
-                        <Cell width={{ xs: 12, md: 6 }}>
+                        <Cell width={{ xs: 12, md: 6 }} pt={3} center>
                             <Typography>Cell 2</Typography>
                         </Cell>
                         <Cell width={{ xs: 12, md: 6 }} left={{ xs: 1, md: 4 }}>
