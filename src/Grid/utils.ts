@@ -4,7 +4,6 @@
 */
 
 import { createContext } from 'react';
-import { css } from '@xstyled/styled-components';
 
 export type BreakpointType = {
     [key: string]: number;
@@ -82,16 +81,6 @@ export function getBreakpointKey(
 }
 
 /*
-    CSS used both by generateBreakpointCSS() and the Cell component. Aligns content vertically.
-*/
-export const middleCSS = css`
-    display: inline-flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    justify-self: stretch;
-`;
-
-/*
     Small helper object for the generateBreakpointCSS() function to render the correct CSS for each
     grid setting.
 */
@@ -99,10 +88,8 @@ const ops = {
     // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
     width: (width: any, middle: boolean) =>
         width > 0
-            ? middle
-                ? `grid-column-end: span ${width}; ${middleCSS}`
-                : `grid-column-end: span ${width}; display: block;`
-            : 'display:none;',
+        ? `grid-column-end: span ${width}; display: block;`
+        : 'display: none;',
     height: (height: any) => `grid-row-end: span ${height};`,
     left: (left: any) => `grid-column-start: ${left};`,
     top: (top: any) => `grid-row-start: ${top};`,
@@ -117,8 +104,7 @@ const ops = {
 */
 export function generateBreakpointCSS(
     gridSettings: GridSettings,
-    sortedBreakpoints: BreakpointType[],
-    middle: boolean | undefined
+    sortedBreakpoints: BreakpointType[]
 ) {
     const responsiveCSS = {};
     const sortedResponsiveCSS: BreakpointType[] = [];
@@ -146,10 +132,7 @@ export function generateBreakpointCSS(
                         if (!responsiveCSS[breakpointKey]) {
                             responsiveCSS[breakpointKey] = '';
                         }
-                        responsiveCSS[breakpointKey] += ops[gridSettingKey](
-                            responsiveValue,
-                            middle
-                        );
+                        responsiveCSS[breakpointKey] += ops[gridSettingKey](responsiveValue);
                     }
                 }
             }

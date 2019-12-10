@@ -68,11 +68,9 @@ describe('Utilities: Grid & Cell', () => {
             left: 1,
             height: { xs: 3, md: 1 },
         };
-        const middle = true;
         const value = generateBreakpointCSS(
             gridSettings,
-            sortedBreakpoints,
-            middle
+            sortedBreakpoints
         );
 
         expect(value.sortedResponsiveCSS.length).toBe(2);

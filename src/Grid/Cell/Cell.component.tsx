@@ -8,23 +8,22 @@ import {
     generateBreakpointCSS,
     GridSetting,
     GridSettings,
-    middleCSS,
     GridContext,
 } from '../utils';
 import { ResponsiveContext } from '../ResponsiveProvider';
 import { ResponsiveContextProps } from '../ResponsiveProvider/ResponsiveProvider.component';
 
 interface CellProps extends SpaceProps {
+    align?: string;
     area?: string;
-    center?: boolean;
     children?: any;
     className?: string;
     debug?: boolean;
     height?: GridSetting;
     left?: GridSetting;
-    middle?: boolean;
     responsiveCSS?: BreakpointType[];
     top?: GridSetting;
+    valign?: string;
     width?: GridSetting;
 }
 
@@ -48,20 +47,63 @@ const StyledCell = styled.div<CellProps>`
     ${({ top }) => top && `grid-row-start: ${top}`};
     ${({ height }) => height && `grid-row-end: span ${height}`};
 
-    ${({ center }) => center && `text-align: center`};
     ${({ area }) => area && `grid-area: ${area}`};
-    ${({ middle, width }) => middle && width && middleCSS}
     ${({ debug }) =>
         debug &&
         css({
             backgroundColor: debugColor,
         })};
-
-    ${spaceStyles}
 `;
 
-const Box = styled('div')<SpaceProps>`
+interface BoxProps extends SpaceProps {
+    align?: string;
+    valign?: string;
+}
+
+type BoxStyles = {
+    display?: string;
+    height?: string;
+    justifyContent?: string;
+    alignItems?: string;
+};
+
+/* Used these flex styles rather than xstyled 'flexboxes' system prop to limit the props the user
+would have to use for the same effect. May rethink this if users ask for even more flex control. */
+const Box = styled('div')<BoxProps>`
+    box-sizing: border-box;
+
     ${spaceStyles}
+
+    ${({align, valign}) => {
+        const styles: BoxStyles = {};
+
+        if (align || valign) {
+            styles.display = 'flex';
+
+            if (valign) {
+                styles.height = '100%';
+            }
+        }
+
+        switch (align) {
+            case 'left':
+                styles.justifyContent = 'flex-start'; break;
+            case 'center':
+                styles.justifyContent = 'center'; break;
+            case 'right':
+                styles.justifyContent = 'flex-end'; break;
+        }
+
+        switch (valign) {
+            case 'top':
+                styles.alignItems = 'flex-start'; break;
+            case 'middle':
+                styles.alignItems = 'center'; break;
+            case 'bottom':
+                styles.alignItems = 'flex-end'; break;
+        }
+        return css(styles);
+    }}
 `;
 
 interface CellState {
@@ -84,8 +126,7 @@ export class Cell extends React.PureComponent<CellProps> {
                 top: props.top,
                 width: props.width || 1,
             },
-            context.breakpoints,
-            props.middle
+            context.breakpoints
         );
 
         this.state = {
@@ -95,17 +136,14 @@ export class Cell extends React.PureComponent<CellProps> {
     }
 
     render() {
-        const { center, children, className, debug, middle } = this.props;
-
+        const { align, children, className, debug, valign } = this.props;
         const { generalSettings, sortedResponsiveCSS } = this.state;
 
         return (
             <GridContext.Consumer>
                 {({ debug: contextDebug }) => (
                     <StyledCell
-                        center={center}
                         className={classNames('anchor-cell', className)}
-                        middle={middle}
                         debug={contextDebug || debug}
                         responsiveCSS={sortedResponsiveCSS}
                         left={generalSettings.left || undefined}
@@ -113,7 +151,10 @@ export class Cell extends React.PureComponent<CellProps> {
                         top={generalSettings.top || undefined}
                         width={generalSettings.width || undefined}
                     >
-                        <Box {...this.props}>{children}</Box>
+                        {/* The spread ensures the spaceStyles get applied to Box */}
+                        <Box {...this.props} align={align} valign={valign}>
+                            {children}
+                        </Box>
                     </StyledCell>
                 )}
             </GridContext.Consumer>
