@@ -12,7 +12,6 @@ import merge from 'lodash.merge';
 import {
     Adaptor,
     Button,
-    Cell,
     Grid,
     Hamburger,
     ResponsiveProvider,
@@ -30,6 +29,8 @@ import { SearchInput } from '../../SearchInput';
 import { Octocat } from '../../Octocat';
 // ASSETS
 import logo from './anchor-logo.svg';
+
+const { Cell } = Grid;
 
 const GlobalCSS = createGlobalStyle`
     body {
@@ -137,8 +138,6 @@ const FixedBody = createGlobalStyle<FixedBodyProps>`
 
 const StyledPrimaryNav = styled('nav')`
     height: 100%;
-    display: flex;
-    justify-content: flex-end;
 
     a {
         padding: 1.5rem;
@@ -224,7 +223,7 @@ export const Page = ({
 
                     <StyledHeader>
                         <Grid>
-                            <Cell width={{ xs: 1, md: 0 }} middle center>
+                            <Cell width={{ xs: 1, md: 0 }} valign="middle" align="center">
                                 <Button
                                     variant="minimal"
                                     prefix={<Hamburger />}
@@ -234,7 +233,7 @@ export const Page = ({
                                 />
                             </Cell>
 
-                            <Cell width={{ xs: 2, md: 3, xl: 2 }} middle>
+                            <Cell width={{ xs: 2, md: 3, xl: 2 }} valign="middle">
                                 <StyledLogoContainer to="/">
                                     <img
                                         alt="Anchor Logo Horizontal"
@@ -243,11 +242,15 @@ export const Page = ({
                                 </StyledLogoContainer>
                             </Cell>
 
-                            <Cell width={{ xs: 0, md: 6 }} middle>
+                            <Cell width={{ xs: 0, md: 6 }} valign="middle">
                                 <SearchInput />
                             </Cell>
 
-                            <Cell width={{ xs: 9, md: 3, xl: 4 }} middle>
+                            <Cell
+                                width={{ xs: 9, md: 3, xl: 4 }}
+                                align="right"
+                                valign="middle"
+                            >
                                 <StyledPrimaryNav>
                                     <Typography
                                         tag="a"

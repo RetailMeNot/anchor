@@ -15,6 +15,17 @@ if you want to take advantage of `Cell`'s responsive API.
 As with many layout systems, the `Grid` uses a 12 column format, but unlike other systems this can
 be altered by using the `columns` prop for occasions where a greater degree of control is needed.
 
+`Grid` comes with `Cell` as a submodule.
+
+*NOTE: `Cell` is currently shipped as a standalone component, however that is being deprecated in
+favor of the submodule approach in a later release.*
+
+```jsx hideTitle
+@import { Grid } from '@retailmenot/anchor';
+
+const { Cell } = Grid;
+```
+
 ---
 
 ## Basic Usage
@@ -24,11 +35,11 @@ with default settings.
 
 ```tsx live
 <Grid debug>
-    <Cell width={4}> I'm cell 1.</Cell>
-    <Cell width={4}> I'm cell 2.</Cell>
-    <Cell width={4}> I'm cell 3.</Cell>
-    <Cell width={6}> I'm cell 4.</Cell>
-    <Cell width={6}> I'm cell 5.</Cell>
+    <Grid.Cell width={4}> I'm cell 1.</Grid.Cell>
+    <Grid.Cell width={4}> I'm cell 2.</Grid.Cell>
+    <Grid.Cell width={4}> I'm cell 3.</Grid.Cell>
+    <Grid.Cell width={6}> I'm cell 4.</Grid.Cell>
+    <Grid.Cell width={6}> I'm cell 5.</Grid.Cell>
 </Grid>
 ```
 
@@ -49,27 +60,27 @@ queries making them safe to use for SSR. Also, unlike in this example, it's best
 <ThemeProvider theme={RootTheme}>
     <ResponsiveProvider debug>
         <Grid debug>
-            <Cell
-                center
+            <Grid.Cell
+                align="center"
                 height={{ xs: 1, lg: 2, xl: 3, xxl: 4 }}
                 left={{ xs: 4, xl: 1 }}
-                middle
+                valign="middle"
                 width={{xs: 6, xl: 12}}
             >
                 <Typography tag="h2">Resize the Window</Typography>
-            </Cell>
-            <Cell width={{xs: 4, xl: 3}}>
+            </Grid.Cell>
+            <Grid.Cell width={{xs: 4, xl: 3}}>
                 <Typography>I'm cell 1.</Typography>
-            </Cell>
-            <Cell width={{xs: 4, xl: 3}}>
+            </Grid.Cell>
+            <Grid.Cell width={{xs: 4, xl: 3}}>
                 <Typography>I'm cell 2.</Typography>
-            </Cell>
-            <Cell width={{xs: 4, xl: 3}}>
+            </Grid.Cell>
+            <Grid.Cell width={{xs: 4, xl: 3}}>
                 <Typography>I'm cell 3.</Typography>
-            </Cell>
-            <Cell width={{xs: 12, xl: 3}}>
+            </Grid.Cell>
+            <Grid.Cell width={{xs: 12, xl: 3}}>
                 <Typography>I'm cell 4.</Typography>
-            </Cell>
+            </Grid.Cell>
 
         </Grid>
     </ResponsiveProvider>
@@ -92,29 +103,27 @@ most css grid attributes when passed through props.
             height="20rem"
             rows={'minmax(3rem,auto) 1fr minmax(3rem,auto)'}
         >
-            <Cell center middle width={3}>
+            <Grid.Cell center middle width={3}>
                 <Typography tag="h1">Header</Typography>
-            </Cell>
+            </Grid.Cell>
 
-            <Cell>
+            <Grid.Cell>
                 <Typography>Menu</Typography>
-            </Cell>
-            <Cell>
+            </Grid.Cell>
+            <Grid.Cell>
                 <Typography>Content</Typography>
-            </Cell>
-            <Cell>
+            </Grid.Cell>
+            <Grid.Cell>
                 <Typography>Ads</Typography>
-            </Cell>
+            </Grid.Cell>
 
-            <Cell center middle width={3}>
+            <Grid.Cell center middle width={3}>
                 <Typography tag="h2">Footer</Typography>
-            </Cell>
+            </Grid.Cell>
         </Grid>
     </ResponsiveProvider>
 </ThemeProvider>
 ```
-
-
 
 ## API's
 
@@ -124,8 +133,15 @@ most css grid attributes when passed through props.
 
 <ApiTable data={[
     {
-        property: 'center',
+        property: 'align',
         description: `Horiztonally aligns content within a <pre>Cell</pre>.`,
+        type: <FormatTypes data={['left', 'center', 'right']} />,
+        default: 'left',
+    },
+    {
+        property: 'center',
+        description: `Horiztonally aligns content within a <pre>Cell</pre>. This prop is being
+            deprecated, use <pre>align</pre> instead.`,
         type: 'boolean',
     },
     {
@@ -153,13 +169,20 @@ most css grid attributes when passed through props.
     },
     {
         property: 'middle',
-        description: `Vertically aligns content within a <pre>Cell</pre>.`,
+        description: `Vertically aligns content within a <pre>Cell</pre>. This prop is being
+            deprecated, use <pre>valign</pre> instead.`,
         type: 'boolean',
     },
     {
         property: 'top',
         description: `How many rows from the top the <pre>Cell</pre> is.`,
         type: <FormatTypes data={['number', 'string', '{[key: string]: number}']} noInterpret />,
+    },
+    {
+        property: 'valign',
+        description: `Vertically aligns content within a <pre>Cell</pre>.`,
+        type: <FormatTypes data={['top', 'middle', 'bottom']} />,
+        default: 'top',
     },
     {
         property: 'width',
