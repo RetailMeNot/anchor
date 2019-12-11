@@ -44,8 +44,24 @@ storiesOf('Components/Grid', module)
                             <Typography>Cell 1</Typography>
                         </Cell>
                         <Cell
-                            align={radios('Align', { left: 'left', center: 'center', right: 'right' }, 'left')}
-                            valign={radios('Valign', { top: 'top', middle: 'middle', bottom: 'bottom' }, 'top')}
+                            align={radios(
+                                'Align',
+                                {
+                                    left: 'left',
+                                    center: 'center',
+                                    right: 'right',
+                                },
+                                'left'
+                            )}
+                            valign={radios(
+                                'Valign',
+                                {
+                                    top: 'top',
+                                    middle: 'middle',
+                                    bottom: 'bottom',
+                                },
+                                'top'
+                            )}
                             p={select('Padding', [0, 1, 2, 3, 4], 0)}
                             height={4}
                             width={{ xs: 12, md: 6 }}

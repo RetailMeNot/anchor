@@ -88,8 +88,8 @@ const ops = {
     // If width is 0, don't show the cell. If middle is true, add in the middle CSS.
     width: (width: any, middle: boolean) =>
         width > 0
-        ? `grid-column-end: span ${width}; display: block;`
-        : 'display: none;',
+            ? `grid-column-end: span ${width}; display: block;`
+            : 'display: none;',
     height: (height: any) => `grid-row-end: span ${height};`,
     left: (left: any) => `grid-column-start: ${left};`,
     top: (top: any) => `grid-row-start: ${top};`,
@@ -132,7 +132,9 @@ export function generateBreakpointCSS(
                         if (!responsiveCSS[breakpointKey]) {
                             responsiveCSS[breakpointKey] = '';
                         }
-                        responsiveCSS[breakpointKey] += ops[gridSettingKey](responsiveValue);
+                        responsiveCSS[breakpointKey] += ops[gridSettingKey](
+                            responsiveValue
+                        );
                     }
                 }
             }

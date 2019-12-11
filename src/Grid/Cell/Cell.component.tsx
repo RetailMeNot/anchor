@@ -25,6 +25,10 @@ interface CellProps extends SpaceProps {
     top?: GridSetting;
     valign?: string;
     width?: GridSetting;
+
+    // These should be deprecated in favor of align and valign
+    center?: boolean;
+    middle?: boolean;
 }
 
 const StyledCell = styled.div<CellProps>`
@@ -57,6 +61,8 @@ const StyledCell = styled.div<CellProps>`
 
 interface BoxProps extends SpaceProps {
     align?: string;
+    center?: boolean;
+    middle?: boolean;
     valign?: string;
 }
 
@@ -74,37 +80,48 @@ const Box = styled('div')<BoxProps>`
 
     ${spaceStyles}
 
-    ${({align, valign}) => {
+    ${({ align, center, middle, valign }) => {
         const styles: BoxStyles = {};
+        // This is to keep the API from breaking from v1.3.3 and below.
+        // The middle and center props should be deprecated.
+        const tmpValign = middle ? 'middle' : valign;
+        const tmpAlign = center ? 'center' : align;
 
-        if (align || valign) {
+        if (tmpAlign || tmpValign) {
             styles.display = 'flex';
 
-            if (valign) {
+            if (tmpValign) {
                 styles.height = '100%';
             }
         }
 
-        switch (align) {
+        switch (tmpAlign) {
             case 'left':
-                styles.justifyContent = 'flex-start'; break;
+                styles.justifyContent = 'flex-start';
+                break;
             case 'center':
-                styles.justifyContent = 'center'; break;
+                styles.justifyContent = 'center';
+                break;
             case 'right':
-                styles.justifyContent = 'flex-end'; break;
+                styles.justifyContent = 'flex-end';
+                break;
         }
 
-        switch (valign) {
+        switch (tmpValign) {
             case 'top':
-                styles.alignItems = 'flex-start'; break;
+                styles.alignItems = 'flex-start';
+                break;
             case 'middle':
-                styles.alignItems = 'center'; break;
+                styles.alignItems = 'center';
+                break;
             case 'bottom':
-                styles.alignItems = 'flex-end'; break;
+                styles.alignItems = 'flex-end';
+                break;
         }
         return css(styles);
     }}
 `;
+Box.displayName = 'Box';
 
 interface CellState {
     generalSettings: GridSettings;
@@ -136,7 +153,15 @@ export class Cell extends React.PureComponent<CellProps> {
     }
 
     render() {
-        const { align, children, className, debug, valign } = this.props;
+        const {
+            align,
+            center,
+            children,
+            className,
+            debug,
+            middle,
+            valign,
+        } = this.props;
         const { generalSettings, sortedResponsiveCSS } = this.state;
 
         return (
@@ -151,8 +176,15 @@ export class Cell extends React.PureComponent<CellProps> {
                         top={generalSettings.top || undefined}
                         width={generalSettings.width || undefined}
                     >
-                        {/* The spread ensures the spaceStyles get applied to Box */}
-                        <Box {...this.props} align={align} valign={valign}>
+                        {/* The spread ensures that spaceStyles get applied to Box and NOT StyledCell */}
+                        <Box
+                            {...this.props}
+                            align={align}
+                            center={center}
+                            className="anchor-cell-box"
+                            valign={valign}
+                            middle={middle}
+                        >
                             {children}
                         </Box>
                     </StyledCell>
