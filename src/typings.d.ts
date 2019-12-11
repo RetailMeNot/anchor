@@ -71,6 +71,20 @@ declare module '@xstyled/system' {
         borderBottomColor?: ResponsiveValue<CSS.BorderBottomColorProperty>;
     }
 
+    export interface FlexboxProps<TLength = TLengthStyledSystem> {
+        display?: ResponsiveValue<CSS.DisplayProperty>;
+        alignItems?: ResponsiveValue<CSS.AlignItemsProperty>;
+        alignContent?: ResponsiveValue<CSS.AlignContentProperty>;
+        justifyContent?: ResponsiveValue<CSS.JustifyContentProperty>;
+        justifyItems?: ResponsiveValue<CSS.JustifyItemsProperty>;
+        flexWrap?: ResponsiveValue<CSS.FlexWrapProperty>;
+        flexBasis?: ResponsiveValue<CSS.FlexBasisProperty<TLength>>;
+        flexDirection?: ResponsiveValue<CSS.FlexDirectionProperty>;
+        flex?: ResponsiveValue<CSS.FlexProperty<TLength>>;
+        justifySelf?: ResponsiveValue<CSS.JustifySelfProperty>;
+        alignSelf?: ResponsiveValue<CSS.AlignSelfProperty>;
+    }
+
     export interface LayoutProps<TLength = TLengthStyledSystem> {
         display?: ResponsiveValue<CSS.DisplayProperty>;
         width?: ResponsiveValue<CSS.WidthProperty<TLength>>;
@@ -223,6 +237,8 @@ declare module '@xstyled/system' {
     export const color: StyleFn;
 
     export const backgroundColor: StyleFn;
+
+    export const flexboxes: StyleFn;
 
     export const space: StyleFn;
     export const margin: StyleFn;

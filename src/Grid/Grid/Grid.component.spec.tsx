@@ -44,6 +44,40 @@ describe('Component: Grid & Cell', () => {
     });
 });
 
+describe('Component: Cell', () => {
+    it('should align content horizontally', () => {
+        const valignOptions = ['top', 'middle', 'bottom'];
+
+        valignOptions.map(option => {
+            const testSubject = (
+                <ThemeProvider theme={RootTheme}>
+                    <Grid>
+                        <Cell valign={option}>Text</Cell>
+                    </Grid>
+                </ThemeProvider>
+            );
+            const tree = renderer.create(testSubject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+
+    it('should align content vertically', () => {
+        const alignOptions = ['left', 'center', 'right'];
+
+        alignOptions.map(option => {
+            const testSubject = (
+                <ThemeProvider theme={RootTheme}>
+                    <Grid>
+                        <Cell align={option}>Text</Cell>
+                    </Grid>
+                </ThemeProvider>
+            );
+            const tree = renderer.create(testSubject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});
+
 describe('Utilities: Grid & Cell', () => {
     const testObject = { xs: 0, md: 900, sm: 600 };
     const innerWidth = 780;
@@ -68,12 +102,7 @@ describe('Utilities: Grid & Cell', () => {
             left: 1,
             height: { xs: 3, md: 1 },
         };
-        const middle = true;
-        const value = generateBreakpointCSS(
-            gridSettings,
-            sortedBreakpoints,
-            middle
-        );
+        const value = generateBreakpointCSS(gridSettings, sortedBreakpoints);
 
         expect(value.sortedResponsiveCSS.length).toBe(2);
         expect(Object.keys(value.generalSettings)[0]).toBe('left');
