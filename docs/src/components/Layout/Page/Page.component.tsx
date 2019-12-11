@@ -12,7 +12,6 @@ import merge from 'lodash.merge';
 import {
     Adaptor,
     Button,
-    Cell,
     Grid,
     Hamburger,
     ResponsiveProvider,
@@ -30,6 +29,8 @@ import { SearchInput } from '../../SearchInput';
 import { Octocat } from '../../Octocat';
 // ASSETS
 import logo from './anchor-logo.svg';
+
+const { Cell } = Grid;
 
 const GlobalCSS = createGlobalStyle`
     body {
@@ -137,8 +138,6 @@ const FixedBody = createGlobalStyle<FixedBodyProps>`
 
 const StyledPrimaryNav = styled('nav')`
     height: 100%;
-    display: flex;
-    justify-content: flex-end;
 
     a {
         padding: 1.5rem;
@@ -247,7 +246,11 @@ export const Page = ({
                                 <SearchInput />
                             </Cell>
 
-                            <Cell width={{ xs: 9, md: 3, xl: 4 }} middle>
+                            <Cell
+                                width={{ xs: 9, md: 3, xl: 4 }}
+                                align="right"
+                                valign="middle"
+                            >
                                 <StyledPrimaryNav>
                                     <Typography
                                         tag="a"

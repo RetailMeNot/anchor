@@ -9,10 +9,12 @@
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
-import { Cell, Grid, Typography } from '@retailmenot/anchor';
+import { Grid, Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
 // COMPONENTS
 import { SiteLink } from '../Utils';
+
+const { Cell } = Grid;
 
 interface HomeCardProps {
     description?: string;
