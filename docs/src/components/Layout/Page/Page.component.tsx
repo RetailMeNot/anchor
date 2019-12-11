@@ -223,7 +223,7 @@ export const Page = ({
 
                     <StyledHeader>
                         <Grid>
-                            <Cell width={{ xs: 1, md: 0 }} middle center>
+                            <Cell width={{ xs: 1, md: 0 }} valign="middle" align="center">
                                 <Button
                                     variant="minimal"
                                     prefix={<Hamburger />}
@@ -233,7 +233,7 @@ export const Page = ({
                                 />
                             </Cell>
 
-                            <Cell width={{ xs: 2, md: 3, xl: 2 }} middle>
+                            <Cell width={{ xs: 2, md: 3, xl: 2 }} valign="middle">
                                 <StyledLogoContainer to="/">
                                     <img
                                         alt="Anchor Logo Horizontal"
@@ -242,7 +242,7 @@ export const Page = ({
                                 </StyledLogoContainer>
                             </Cell>
 
-                            <Cell width={{ xs: 0, md: 6 }} middle>
+                            <Cell width={{ xs: 0, md: 6 }} valign="middle">
                                 <SearchInput />
                             </Cell>
 
