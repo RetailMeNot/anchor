@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Cell should align content vertically 1`] = `
+exports[`Component: Cell should align content horizontally 1`] = `
 .c1 {
   height: 100%;
   min-width: 0;
@@ -47,7 +47,7 @@ exports[`Component: Cell should align content vertically 1`] = `
 </div>
 `;
 
-exports[`Component: Cell should align content vertically 2`] = `
+exports[`Component: Cell should align content horizontally 2`] = `
 .c1 {
   height: 100%;
   min-width: 0;
@@ -94,7 +94,7 @@ exports[`Component: Cell should align content vertically 2`] = `
 </div>
 `;
 
-exports[`Component: Cell should align content vertically 3`] = `
+exports[`Component: Cell should align content horizontally 3`] = `
 .c1 {
   height: 100%;
   min-width: 0;
@@ -141,7 +141,7 @@ exports[`Component: Cell should align content vertically 3`] = `
 </div>
 `;
 
-exports[`Component: Cell should align content vertically 4`] = `
+exports[`Component: Cell should align content vertically 1`] = `
 .c1 {
   height: 100%;
   min-width: 0;
@@ -187,7 +187,7 @@ exports[`Component: Cell should align content vertically 4`] = `
 </div>
 `;
 
-exports[`Component: Cell should align content vertically 5`] = `
+exports[`Component: Cell should align content vertically 2`] = `
 .c1 {
   height: 100%;
   min-width: 0;
@@ -233,7 +233,7 @@ exports[`Component: Cell should align content vertically 5`] = `
 </div>
 `;
 
-exports[`Component: Cell should align content vertically 6`] = `
+exports[`Component: Cell should align content vertically 3`] = `
 .c1 {
   height: 100%;
   min-width: 0;

@@ -45,7 +45,7 @@ describe('Component: Grid & Cell', () => {
 });
 
 describe('Component: Cell', () => {
-    it('should align content vertically', () => {
+    it('should align content horizontally', () => {
         const valignOptions = ['top', 'middle', 'bottom'];
 
         valignOptions.map(option => {
