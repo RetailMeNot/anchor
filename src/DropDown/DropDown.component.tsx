@@ -226,7 +226,7 @@ export class DropDown extends React.Component<DropDownProps> {
             arrowSize,
             debug,
             trigger = 'both',
-            arrowIndent = '0.75rem',
+            arrowIndent,
             showArrow = true,
             position = 'bottom',
             shadow = '0 0 0.5rem 0 rgba(0,0,0,0.2)',
@@ -271,6 +271,7 @@ export class DropDown extends React.Component<DropDownProps> {
             >
                 {children}
                 <PositionContainer
+                    ref={this.containerReference}
                     active={showDropdown}
                     arrowIndent={arrowIndent}
                     arrowSize={arrowSize}
@@ -281,13 +282,12 @@ export class DropDown extends React.Component<DropDownProps> {
                     className="anchor-drop-down-container"
                     containerHeight={containerHeight}
                     containerWidth={containerWidth}
-                    debug={debug}
                     height={height}
+                    width={width}
                     position={position}
-                    ref={this.containerReference}
                     shadow={shadow}
                     showArrow={showArrow}
-                    width={width}
+                    debug={debug}
                 />
             </StyledDropDown>
         );
