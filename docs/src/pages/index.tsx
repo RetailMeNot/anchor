@@ -5,7 +5,6 @@ import { breakpoints } from '@xstyled/system';
 import { Link, withPrefix } from 'gatsby';
 // ANCHOR & COMPONENTS
 import {
-    Cell,
     Grid,
     ResponsiveProvider,
     RootTheme,
@@ -15,6 +14,7 @@ import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
 import { Wave } from '../components/Wave';
 
+const { Cell } = Grid;
 const CONTENT_WIDTH = 940;
 
 // TODO: Delete this override when migrated over to Page

@@ -9,10 +9,12 @@
 import * as React from 'react';
 import styled, { css } from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
-import { Cell, Grid, Typography } from '@retailmenot/anchor';
+import { Grid, Typography } from '@retailmenot/anchor';
 import { withPrefix } from 'gatsby';
 // COMPONENTS
 import { SiteLink } from '../Utils';
+
+const { Cell } = Grid;
 
 interface HomeCardProps {
     description?: string;
@@ -91,7 +93,7 @@ export const HomeCard = ({
 }: HomeCardProps): React.ReactElement<any> => (
     <StyledHomeCard disabled={disabled}>
         <Grid gap="0rem">
-            <StyledLeftCell width={3} middle center>
+            <StyledLeftCell width={3} valign="middle" align="center">
                 <img src={withPrefix(imgSrc)} alt={title} />
             </StyledLeftCell>
 

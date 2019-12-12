@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { Cell, Grid } from '@retailmenot/anchor';
+import { Grid } from '@retailmenot/anchor';
 import styled from '@xstyled/styled-components';
 // Components
 import { NavLink } from './NavLink.component';
+
+const { Cell } = Grid;
 
 interface StyledHomeTopNavProps {
     contentWidth: number;
