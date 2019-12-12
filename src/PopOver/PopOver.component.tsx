@@ -110,7 +110,7 @@ export class PopOver extends React.PureComponent<
             shadow,
             spacing = 8,
             maxWidth,
-            position = 'bottom',
+            position = 'bottomStart',
             showArrow,
             active,
             ...props
