@@ -79,20 +79,18 @@ export class PopOver extends React.PureComponent<
             spacing !== prevSpacing
         ) {
             const {
-                current: dropDown,
+                current: popOver,
             }: { current: any } = this.popOverRef;
             const {
-                current: container,
+                current: popOverContainer,
             }: { current: any } = this.popOverContainerRef;
 
-            if (container) {
-                this.setState({
-                    height: get(dropDown, 'clientHeight', 0),
-                    width: get(dropDown, 'clientWidth', 0),
-                    containerHeight: get(container, 'clientHeight', 0),
-                    containerWidth: get(container, 'clientWidth', 0),
-                });
-            }
+            this.setState({
+                height: get(popOver, 'clientHeight', 0),
+                width: get(popOver, 'clientWidth', 0),
+                containerHeight: get(popOverContainer, 'clientHeight', 0),
+                containerWidth: get(popOverContainer, 'clientWidth', 0),
+            });
         }
     }
 
