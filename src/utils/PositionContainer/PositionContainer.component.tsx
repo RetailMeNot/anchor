@@ -105,7 +105,7 @@ export const PositionContainer = forwardRef(
     (
         {
             active,
-            arrowIndent,
+            arrowIndent = '0.75rem',
             arrowSize,
             background = 'black',
             border,

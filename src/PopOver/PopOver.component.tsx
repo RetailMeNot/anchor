@@ -5,6 +5,8 @@ import classNames from 'classnames';
 // COMPONENTS
 import { Position } from '../utils/position/position';
 import { PositionContainer } from '../utils/PositionContainer';
+// UTILS
+import { get } from '../utils/get/get';
 
 interface PopOverContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     arrowIndent?: string;
@@ -25,10 +27,10 @@ interface PopOverContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 interface PopOverContainerState {
-    width: number;
     height: number;
-    popOverHeight: number;
-    popOverWidth: number;
+    width: number;
+    containerHeight: number;
+    containerWidth: number;
 }
 
 const StyledPopOver = styled('div')`
@@ -42,8 +44,8 @@ export class PopOver extends React.PureComponent<
     public state = {
         width: 0,
         height: 0,
-        popOverHeight: 0,
-        popOverWidth: 0,
+        containerHeight: 0,
+        containerWidth: 0,
     };
     private readonly popOverContainerRef: React.RefObject<
         HTMLDivElement
@@ -51,22 +53,46 @@ export class PopOver extends React.PureComponent<
     private readonly popOverRef: React.RefObject<
         HTMLDivElement
     > = React.createRef();
-
+    // TODO: why the fuck not just use the code in the dropdown/abstract that out and inject it into two instances?
     componentDidMount(): void {
-        const { current: popOverContainer } = this.popOverContainerRef;
         const { current: popOver } = this.popOverRef;
+        const { current: popOverContainer } = this.popOverContainerRef;
+        this.setState({
+            height: get(popOver, 'clientHeight', 0),
+            width: get(popOver, 'clientWidth', 0),
+            containerHeight: get(popOverContainer, 'clientHeight', 0),
+            containerWidth: get(popOverContainer, 'clientWidth', 0),
+        });
+    }
 
-        if (popOverContainer) {
-            this.setState({
-                height: popOverContainer.clientHeight,
-                width: popOverContainer.clientWidth,
-            });
-        }
-        if (popOver) {
-            this.setState({
-                popOverHeight: popOver.clientHeight,
-                popOverWidth: popOver.clientWidth,
-            });
+    componentDidUpdate(prevProps: PopOverContainerProps) {
+        const {
+            showArrow: prevShowArrow,
+            position: prevPosition,
+            spacing: prevSpacing,
+        } = prevProps;
+        const { showArrow, position, spacing } = this.props;
+
+        if (
+            showArrow !== prevShowArrow ||
+            position !== prevPosition ||
+            spacing !== prevSpacing
+        ) {
+            const {
+                current: dropDown,
+            }: { current: any } = this.popOverRef;
+            const {
+                current: container,
+            }: { current: any } = this.popOverContainerRef;
+
+            if (container) {
+                this.setState({
+                    height: get(dropDown, 'clientHeight', 0),
+                    width: get(dropDown, 'clientWidth', 0),
+                    containerHeight: get(container, 'clientHeight', 0),
+                    containerWidth: get(container, 'clientWidth', 0),
+                });
+            }
         }
     }
 
@@ -86,19 +112,21 @@ export class PopOver extends React.PureComponent<
             shadow,
             spacing = 8,
             maxWidth,
-            position = 'bottomStart',
+            position = 'bottom',
             showArrow,
             active,
+            ...props
         } = this.props;
-
-        const { height, popOverHeight, popOverWidth, width } = this.state;
+        const { height, containerHeight, containerWidth, width } = this.state;
         return (
             <StyledPopOver
                 className={classNames('anchor-pop-over', className)}
-                ref={this.popOverContainerRef}
+                {...props}
+                ref={this.popOverRef}
             >
                 {children}
                 <PositionContainer
+                    ref={this.popOverContainerRef}
                     active={active}
                     arrowIndent={arrowIndent}
                     arrowSize={arrowSize}
@@ -108,18 +136,17 @@ export class PopOver extends React.PureComponent<
                     children={content}
                     className="anchor-pop-over-element"
                     color={color}
-                    containerHeight={popOverHeight}
-                    containerWidth={popOverWidth}
+                    containerHeight={containerHeight}
+                    containerWidth={containerWidth}
+                    height={height}
+                    width={width}
                     delay={delay}
                     debug={debug}
-                    height={height}
                     shadow={shadow}
                     spacing={spacing}
                     maxWidth={maxWidth}
                     position={position}
-                    ref={this.popOverRef}
                     showArrow={showArrow}
-                    width={width}
                 />
             </StyledPopOver>
         );

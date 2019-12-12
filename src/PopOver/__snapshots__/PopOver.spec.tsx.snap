@@ -121,9 +121,9 @@ exports[`Component: PopOver should be defined. 1`] = `
   <div
     className="c2 anchor-pop-over-element active"
     color="#ffffff"
-    height={0}
+    height={null}
     spacing={8}
-    width={0}
+    width={null}
   >
     <div
       className="c3"
