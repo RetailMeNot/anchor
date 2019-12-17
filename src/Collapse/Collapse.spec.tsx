@@ -85,4 +85,20 @@ describe('Component: Collapse', () => {
 
         expect(wrapper.find('.anchor-icon.arrow-back').exists()).toBeTruthy();
     });
+
+    it('should keep closed content in the dom when removeInactive is false.', () => {
+        const subject = (
+            <Collapse isOpen={false} removeInactive={false}>
+                Hello World!
+            </Collapse>
+        );
+        const component = shallow(subject);
+
+        expect(
+            component.find('.anchor-collapse-content').exists()
+        ).toBeTruthy();
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });

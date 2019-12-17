@@ -78,6 +78,7 @@ storiesOf('Components/Collapse', module)
                             'comfortable'
                         )}
                         isOpen={boolean('isOpen', false)}
+                        removeInactive={boolean('removeInactive', true)}
                         openedText={text('openedText', DEFAULT_OPENED_TEXT)}
                         closedText={text('closedText', DEFAULT_CLOSED_TEXT)}
                         hasBottomBorder={boolean('hasBottomBorder', true)}
@@ -124,6 +125,7 @@ storiesOf('Components/Collapse', module)
                             'comfortable'
                         )}
                         accordion={boolean('accordion', false)}
+                        removeInactive={boolean('removeInactive', true)}
                         openIndex={0}
                         openedIcon={React.createElement(Icon[iconOpenedPick], {
                             color: 'accent.base',

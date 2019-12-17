@@ -78,9 +78,7 @@ export class PopOver extends React.PureComponent<
             position !== prevPosition ||
             spacing !== prevSpacing
         ) {
-            const {
-                current: popOver,
-            }: { current: any } = this.popOverRef;
+            const { current: popOver }: { current: any } = this.popOverRef;
             const {
                 current: popOverContainer,
             }: { current: any } = this.popOverContainerRef;

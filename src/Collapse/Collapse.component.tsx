@@ -30,6 +30,7 @@ interface CollapseProps extends React.HTMLAttributes<HTMLDivElement> {
     /** This mostly exists for CollapseGroup in order to hide the bottom border of stacked Collapse children */
     hasBottomBorder?: boolean;
     children?: any;
+    removeInactive?: boolean;
     className?: string;
 }
 
@@ -149,6 +150,10 @@ const StyledCollapse = styled('div')<StyledCollapseProps>`
             border-bottom-style: none;
         }
     }
+
+    .anchor-collapse-content.inactive {
+        display: none;
+    }
 `;
 StyledCollapse.displayName = 'StyledCollapse';
 
@@ -161,6 +166,7 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
     variant = DEFAULT_VARIANT,
     onClick,
     hasBottomBorder = true,
+    removeInactive = true,
     className,
     children,
     ...props
@@ -209,8 +215,13 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
                 )}
             </button>
 
-            {open && (
-                <section className="anchor-collapse-content">
+            {(open || !removeInactive) && (
+                <section
+                    className={classNames(
+                        'anchor-collapse-content',
+                        !open && 'inactive'
+                    )}
+                >
                     {children}
                 </section>
             )}
