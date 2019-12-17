@@ -25,6 +25,8 @@ interface CollapseGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     openedIcon?: React.ReactElement;
     /** By passing a closedIcon to the group, all Collapse children use that closedIcon */
     closedIcon?: React.ReactElement;
+    /** By passing removeInactive to the group, all Collapse children will receive that prop */
+    removeInactive?: boolean;
     /**
      * Realistically anything can be a child of CollapseGroup, but it's rather
      * pointless as it's intended to have Collapse components as children
