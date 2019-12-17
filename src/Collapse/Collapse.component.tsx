@@ -29,8 +29,9 @@ interface CollapseProps extends React.HTMLAttributes<HTMLDivElement> {
     onClick?: any;
     /** This mostly exists for CollapseGroup in order to hide the bottom border of stacked Collapse children */
     hasBottomBorder?: boolean;
-    children?: any;
+    /** This specifies whether the contents of a closed collapse are removed from the dom vs hidden */
     removeInactive?: boolean;
+    children?: any;
     className?: string;
 }
 
