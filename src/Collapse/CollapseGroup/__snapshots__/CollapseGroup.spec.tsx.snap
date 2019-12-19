@@ -55,6 +55,10 @@ exports[`Component: CollapseGroup should match its snapshot. 1`] = `
   border-bottom-style: none;
 }
 
+.c0 .anchor-collapse-content.inactive {
+  display: none;
+}
+
 <div
   className="anchor-collapse-group"
 >
