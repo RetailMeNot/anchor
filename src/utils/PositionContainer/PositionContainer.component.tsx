@@ -99,6 +99,7 @@ const Background = styled('div')<BackgroundProps>`
 const StyledOverlay = styled('div')`
     position: relative;
     z-index: 1;
+    width: 100%;
 `;
 
 export const PositionContainer = forwardRef(

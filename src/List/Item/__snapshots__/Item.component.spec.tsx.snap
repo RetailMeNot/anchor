@@ -15,7 +15,7 @@ exports[`Component: Item should be defined 1`] = `
   background: white;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: 2.75rem;
+  min-height: 2.75rem;
 }
 
 .c0:hover {

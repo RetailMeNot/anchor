@@ -91,7 +91,7 @@ const StyledMenu = styled('nav')<MenuProps>`
         &:hover {
             ${({ color }) =>
                 css({
-                    color: color ? lighten(20, color) : 'white',
+                    color: color ? lighten(0.2, color) : 'white',
                 })};
             background-color: rgba(255, 255, 255, 0.1);
         }
@@ -100,7 +100,7 @@ const StyledMenu = styled('nav')<MenuProps>`
         &.active {
             ${({ color }) =>
                 css({
-                    color: color ? lighten(20, color) : 'white',
+                    color: color ? lighten(0.2, color) : 'white',
                 })};
             background-color: rgba(
                 255,

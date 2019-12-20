@@ -47,6 +47,7 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -129,6 +130,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -211,6 +213,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -293,6 +296,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -375,6 +379,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -457,6 +462,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -539,6 +545,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -621,6 +628,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -703,6 +711,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -785,6 +794,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -867,6 +877,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -949,6 +960,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
@@ -1031,6 +1043,7 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {

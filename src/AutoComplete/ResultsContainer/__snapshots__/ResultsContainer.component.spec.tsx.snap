@@ -15,7 +15,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   background: white;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: 2.75rem;
+  min-height: 2.75rem;
 }
 
 .c1:hover {
@@ -192,7 +192,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   background: white;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: 2.75rem;
+  min-height: 2.75rem;
 }
 
 .c2:hover {
