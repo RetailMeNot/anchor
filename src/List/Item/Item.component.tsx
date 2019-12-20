@@ -34,7 +34,7 @@ const StyledItem = styled('a')<ItemProps>`
             background: th.color(background),
         })}
     text-decoration: none;
-    height: 2.75rem;
+    min-height: 2.75rem;
 
     &:hover {
         background: ${th.color('background.light')};

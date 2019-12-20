@@ -103,6 +103,7 @@ exports[`Component: PopOver should be defined. 1`] = `
 .c4 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {

@@ -64,6 +64,7 @@ exports[`Component: DropDown should render in the DOM 1`] = `
 .c3 {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .c0 {
