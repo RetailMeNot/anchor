@@ -3,7 +3,6 @@ FROM node:lts as builder
 WORKDIR /usr/app
 
 COPY . .
-#RUN npm up yarn
 RUN yarn
 RUN yarn lint
 
