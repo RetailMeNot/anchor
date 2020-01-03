@@ -3,13 +3,14 @@ import * as React from 'react';
 import styled from '@xstyled/styled-components';
 import { storiesOf } from '@storybook/react';
 import { boolean, radios, select } from '@storybook/addon-knobs';
-import { ThemeProvider } from '@xstyled/styled-components';
+// import { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { Button } from '../../Button';
 import { Grid, ResponsiveProvider } from '../index';
 import { FLOW } from '../utils';
 import { RootTheme } from '../../theme';
+import {ThemeProvider} from '../../theme';
 
 const { Cell } = Grid;
 
@@ -21,7 +22,7 @@ const StoryGrid = styled(Grid)`
 storiesOf('Components/Grid', module)
     .add('Default', () => {
         return (
-            <ThemeProvider theme={RootTheme}>
+            <ThemeProvider theme={RootTheme} debug>
                 <ResponsiveProvider
                     debug={boolean('ResponsiveProvider Debug', true)}
                 >
