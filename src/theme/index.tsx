@@ -7,6 +7,8 @@ import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
 import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
 import React from 'react';
+import {Button} from '../Button';
+import classNames from 'classnames';
 
 export const RootTheme = {
     typography,
@@ -146,7 +148,7 @@ const Debug = ({property, propertyName}: DebugProps) => {
 
     return(
         <StyledDebug>
-            {property
+            {(property || property === 0)
                 ? (
                     typeof property === 'number' ||
                     typeof property === 'string' ||
@@ -196,14 +198,22 @@ const DebugWrapper = styled('div')`
     background-color: rgba(0,0,0,.75);
     border-left-color: transparent;
     position: fixed;
-    top: 10%;
-    bottom: 10%;
     left: 0;
-    height: 80%;
+    top: 0;
+    height: 100%;
     overflow: hidden;
     width: 30rem;
-    border-radius: 0 1rem 1rem 0;
     padding: 1rem 2rem 1rem 0;
+
+    &.closed {
+        height:2.4rem;
+        width: auto;
+        padding-right: 1rem;
+
+        .debug-scroll {
+            display: none;
+        }
+    }
 `;
 
 const DebugScroll = styled('div')`
@@ -218,15 +228,30 @@ interface ThemeProviderProps {
     theme?: any;
 }
 
-export const ThemeProvider = ({ children, debug, theme }: ThemeProviderProps) => (
-    <XstyledThemeProvider theme={theme}>
-        {debug &&
-            <DebugWrapper>
-                <DebugScroll>
-                    <Debug property={theme} propertyName="Theme" />
-                </DebugScroll>
-            </DebugWrapper>
-        }
-        {children}
-    </XstyledThemeProvider>
-);
+export const ThemeProvider = ({ children, debug, theme }: ThemeProviderProps) => {
+    const isOpen = localStorage.themeProviderDebug === 'true';
+    const [isOpenState, setIsOpenState] = React.useState(isOpen);
+
+    return (
+        <XstyledThemeProvider theme={theme}>
+            {debug &&
+                <DebugWrapper className={classNames(!isOpenState ? 'closed' : null)}>
+                    <Button
+                        onClick={() => {
+                            localStorage.themeProviderDebug = !isOpenState;
+                            setIsOpenState(!isOpenState);
+                        }}
+                        size="sm"
+                    >
+                        ThemeProvider Debug
+                    </Button>
+
+                    <DebugScroll className="debug-scroll">
+                        <Debug property={theme} propertyName="Theme" />
+                    </DebugScroll>
+                </DebugWrapper>
+            }
+            {children}
+        </XstyledThemeProvider>
+    );
+};
