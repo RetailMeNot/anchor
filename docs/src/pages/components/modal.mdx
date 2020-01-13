@@ -246,9 +246,9 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
 <ApiTable data={[
     {
         property: 'background',
-        description: <ColorBlurb background gradient defaultTheme label="Modal" />,
+        description: <ColorBlurb background gradient label="Modal" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
-        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+        default: 'white',
     },
     {
         property: 'backgroundProps',
@@ -259,7 +259,7 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
     },
     {
         property: 'color',
-        description: <ColorBlurb defaultTheme label="Modal" />,
+        description: <ColorBlurb label="Modal" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
     },
     {
@@ -305,15 +305,15 @@ The `Modal` component is based off of `styled-react-modal` and as such accepts a
 <ApiTable data={[
     {
         property: 'background',
-        description: <ColorBlurb defaultTheme background label="Header" />,
+        description: <ColorBlurb background label="Header" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
-        default: <Link to="/theme/theme-provider#colors">white.base</Link>,
+        default: 'white',
     },
     {
         property: 'color',
         description: <ColorBlurb defaultTheme label="header" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
-        default: <Link to="/theme/theme-provider#colors">charcoal.light</Link>,
+        default: <Link to="/theme/root-theme#colors">text.light</Link>,
     },
     {
         property: 'title',

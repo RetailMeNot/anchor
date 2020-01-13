@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import {
     ApiTable,
+    ColorBlurb,
     ComponentInfo,
     FormatTypes
 } from '../../components/Utils';
@@ -53,10 +54,7 @@ These are the default styles for Typography:
     },
     {
         property: 'color',
-        description: [
-            `Sets the font color. Accepts any valid CSS color value. Will use values present in the colors
-            <Link to="/theme/colors/">theme</Link>.`
-        ],
+        description: <ColorBlurb label="Typography" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
         default: 'inherit',
     },

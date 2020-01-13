@@ -47,6 +47,7 @@ import {
     CollapseGroup,
     Grid,
     Input,
+    RootTheme,
     Typography,
 } from '@retailmenot/anchor';
 // COMPONENTS
@@ -175,6 +176,7 @@ interface CodePreviewProps {
 }
 
 const scope = {
+    css,
     withPrefix,
     ...Anchor,
     Component,
@@ -186,6 +188,7 @@ const scope = {
     CollapseGroup,
     Grid,
     Input,
+    RootTheme,
 
     // EXAMPLE COMPONENTS <-
     // Card

@@ -116,6 +116,7 @@ Components.h4 = ({ children, ...props }: any) => (
             tag="h4"
             {...props}
             children={children}
+            pb="2"
         />
     </>
 );

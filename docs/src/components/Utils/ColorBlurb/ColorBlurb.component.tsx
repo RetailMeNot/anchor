@@ -48,8 +48,8 @@ export const ColorBlurb = ({
         {defaultTheme ? (
             <Typography pl="1">
                 It uses{' '}
-                <Link to="/theme/colors">
-                    <pre>colors</pre>
+                <Link to="/theme/root-theme#colors">
+                    <pre>theme colors</pre>
                 </Link>{' '}
                 from <strong>Anchor</strong> by default, but any valid CSS color
                 value can be provided
