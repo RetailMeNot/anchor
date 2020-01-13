@@ -16,6 +16,7 @@ import {
     Hamburger,
     ResponsiveProvider,
     RootTheme,
+    themeMerge,
     ThemeProvider,
     Typography,
 } from '@retailmenot/anchor';
@@ -158,7 +159,7 @@ const StyledPrimaryNav = styled('nav')`
     }
 `;
 
-const AnchorDocsTheme = merge({}, RootTheme, {
+const AnchorDocsTheme = themeMerge({
     colors: {
         primary: {
             base: '#DF206C',

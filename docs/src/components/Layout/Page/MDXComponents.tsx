@@ -32,7 +32,7 @@ Components.code = (props: any) => <CodePreview {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
 Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
 Components.pre = (props: any) => <Typography as="pre" {...props} />;
-Components.p = (props: any) => <Typography as="p" pb="4" {...props} />;
+Components.p = (props: any) => <Typography as="p" py="2" {...props} />;
 Components.a = (props: any) => (
     <Typography color="primary.base" as="a" {...props} />
 );
@@ -116,6 +116,7 @@ Components.h4 = ({ children, ...props }: any) => (
             as="h4"
             {...props}
             children={children}
+            pb="2"
         />
     </>
 );
