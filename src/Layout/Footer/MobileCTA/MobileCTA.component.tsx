@@ -165,11 +165,11 @@ export const MobileCTA = ({
             </div>
             <div>
                 <div>
-                    <Typography tag="p" className="cta-caption">
+                    <Typography as="p" className="cta-caption">
                         Get Savings on the go!
                     </Typography>
                     <Typography
-                        tag="p"
+                        as="p"
                         className="cta-caption"
                         weight={600}
                         color="accent.dark"

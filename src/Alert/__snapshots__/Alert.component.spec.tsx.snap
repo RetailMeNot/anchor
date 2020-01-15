@@ -2,80 +2,19 @@
 
 exports[`Component: Alert should match its snapshot. 1`] = `
 Array [
-  .c0 {
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 4px;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-  background-color: rgba(255,199,97,0.25);
-  border: solid thin;
-  border-color: rgba(255,199,97,0.6);
-}
-
-.c0 .anchor-alert-icon {
-  color: #faa100;
-}
-
-.c0 .anchor-alert-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.c0 .anchor-alert-close:active,
-.c0 .anchor-alert-close:hover,
-.c0 .anchor-alert-close:focus {
-  background-color: transparent;
-}
-
-.c0 h4,
-.c0 p {
-  line-height: 1.2em;
-  margin: 0;
-  padding: 0;
-}
-
-.c0 h4 {
-  padding-bottom: 0.75rem;
-}
-
-.c0 h4:last-child {
-  padding-bottom: 0;
-}
-
-.c1 {
+  .c1 {
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
   color: inherit;
-  color: #595959;
 }
 
 .c1 small {
   font-size: 87.5%;
-}
-
-<div
-    className="c0 anchor-alert"
-    title="Test Title"
-  >
-    <p
-      className="c1 anchor-typography"
-    >
-      Test Description
-    </p>
-  </div>,
-  .c2 {
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  line-height: 0;
-  color: currentColor;
 }
 
 .c0 {
@@ -120,6 +59,82 @@ Array [
   padding-bottom: 0;
 }
 
+<div
+    className="c0 anchor-alert"
+    title="Test Title"
+  >
+    <p
+      className="c1 anchor-typography"
+      color="text.light"
+    >
+      Test Description
+    </p>
+  </div>,
+  .c2 {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  line-height: 0;
+  color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c3 small {
+  font-size: 87.5%;
+}
+
+.c0 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  background-color: rgba(255,199,97,0.25);
+  border: solid thin;
+  border-color: rgba(255,199,97,0.6);
+}
+
+.c0 .anchor-alert-icon {
+  color: #faa100;
+}
+
+.c0 .anchor-alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c0 .anchor-alert-close:active,
+.c0 .anchor-alert-close:hover,
+.c0 .anchor-alert-close:focus {
+  background-color: transparent;
+}
+
+.c0 h4,
+.c0 p {
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 h4 {
+  padding-bottom: 0.75rem;
+}
+
+.c0 h4:last-child {
+  padding-bottom: 0;
+}
+
 .c1 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -139,22 +154,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -197,13 +196,29 @@ Array [
       >
         <p
           className="c3 anchor-typography"
+          color="text.light"
         >
           Test Description
         </p>
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -245,28 +260,13 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
   >
     <p
       className="c1 anchor-typography"
+      color="text.light"
     >
       Test Description
     </p>
@@ -277,6 +277,21 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -342,22 +357,6 @@ Array [
   padding: 0 0.5rem 0 0;
 }
 
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
@@ -398,13 +397,29 @@ Array [
       >
         <p
           className="c3 anchor-typography"
+          color="text.light"
         >
           Test Description
         </p>
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -446,28 +461,13 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
   >
     <p
       className="c1 anchor-typography"
+      color="text.light"
     >
       Test Description
     </p>
@@ -478,6 +478,21 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -541,22 +556,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -595,13 +594,29 @@ Array [
       >
         <p
           className="c3 anchor-typography"
+          color="text.light"
         >
           Test Description
         </p>
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -643,28 +658,13 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
   >
     <p
       className="c1 anchor-typography"
+      color="text.light"
     >
       Test Description
     </p>
@@ -675,6 +675,21 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -738,22 +753,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -797,6 +796,7 @@ Array [
       >
         <p
           className="c3 anchor-typography"
+          color="text.light"
         >
           Test Description
         </p>

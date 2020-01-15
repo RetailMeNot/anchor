@@ -11,7 +11,9 @@ import { CardContent } from './CardContent';
 
 export type Gutters = 'none' | 'small' | 'medium' | 'large';
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+export interface CardProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     className?: string;
     children?: any;
     action?: any;

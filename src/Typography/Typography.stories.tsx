@@ -57,14 +57,14 @@ const transforms = [
     'initial',
     'inherit',
 ] as TextTransforms[];
-const tags = Object.keys(typography.tag) as TypographyTags[];
+const as = Object.keys(typography.as) as TypographyTags[];
 
 type TagSelect = TypographyTags | '';
 type ScaleSelect = Scale | '';
 type AlignSelect = TextAlign | '';
 type WeightSelect = FontWeights | '';
 type TransformsSelect = TextTransforms | '';
-const Tags = [''].concat(tags) as TagSelect[];
+const Tags = [''].concat(as) as TagSelect[];
 const Scales = ['']
     .concat(Object.keys(typography.scale))
     .map(x => parseInt(x, 10) || '') as ScaleSelect[];
@@ -81,7 +81,7 @@ storiesOf('Components/Typography', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h1">Scales</Typography>
+                <Typography as="h1">Scales</Typography>
                 <div>
                     {scales.map((scale: any) => (
                         <div key={scale}>
@@ -91,11 +91,11 @@ storiesOf('Components/Typography', module)
                         </div>
                     ))}
                 </div>
-                <Typography tag="h1">Elements</Typography>
+                <Typography as="h1">Elements</Typography>
                 <div>
-                    {tags.map((element: any) => (
+                    {as.map((element: any) => (
                         <div key={element}>
-                            <Typography tag={element}>
+                            <Typography as={element}>
                                 Element: {element}
                             </Typography>
                         </div>
@@ -114,7 +114,7 @@ storiesOf('Components/Typography', module)
             <ThemeProvider theme={RootTheme}>
                 <StyledStory>
                     <Typography
-                        tag={select('tag', Tags, '') || undefined}
+                        as={select('as', Tags, '') || undefined}
                         scale={select('scale', Scales, '') || undefined}
                         color={text('color', '') || undefined}
                         size={text('size', '') || undefined}

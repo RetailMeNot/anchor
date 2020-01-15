@@ -109,9 +109,9 @@ const renderMessageAndDescription = ({
     description?: string;
 }) => (
     <>
-        {message && <Typography tag="h4">{message}</Typography>}
+        {message && <Typography as="h4">{message}</Typography>}
         {description && (
-            <Typography tag="p" color="text.light">
+            <Typography as="p" color="text.light">
                 {description}
             </Typography>
         )}

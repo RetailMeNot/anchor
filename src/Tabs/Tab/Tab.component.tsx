@@ -18,8 +18,6 @@ interface TabProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     spacing?: string;
     offset?: string;
     border?: string;
-    margin?: string;
-    padding?: string;
     background?: string;
     borderRadius?: string;
 

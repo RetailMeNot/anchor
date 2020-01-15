@@ -30,7 +30,22 @@ exports[`Component: Hero should be defined 1`] = `
 `;
 
 exports[`Component: Hero should render with custom content 1`] = `
-.c4 {
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
+.c3 {
   position: relative;
   border-radius: 4px;
   font-weight: 600;
@@ -64,18 +79,18 @@ exports[`Component: Hero should render with custom content 1`] = `
   min-width: 12.5rem;
 }
 
-.c4 + .anchor-button {
+.c3 + .anchor-button {
   margin-left: 1rem;
 }
 
-.c4:hover,
-.c4:focus,
-.c4:active {
+.c3:hover,
+.c3:focus,
+.c3:active {
   background-color: #0074A6;
   border: solid thin #0074A6;
 }
 
-.c4:focus:after {
+.c3:focus:after {
   position: absolute;
   content: '';
   top: -3px;
@@ -109,58 +124,27 @@ exports[`Component: Hero should render with custom content 1`] = `
   text-align: center;
 }
 
-.c2 {
+.c1 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-typography c2 anchor-hero-title"
+    className="c1 anchor-hero-title"
     scale={32}
   >
     Good Ole Title
   </h1>
   <span
-    className="c3 anchor-typography"
+    className="c2 anchor-typography"
   >
     Some Typography text
   </span>
   <button
-    className="c4 anchor-button"
+    className="c3 anchor-button"
     onFocus={[Function]}
     onMouseDown={[Function]}
     onMouseUp={[Function]}
@@ -194,32 +178,16 @@ exports[`Component: Hero should render with title 1`] = `
   text-align: center;
 }
 
-.c2 {
+.c1 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c1 small {
-  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-typography c2 anchor-hero-title"
+    className="c1 anchor-hero-title"
     scale={32}
   >
     Hero Title
@@ -228,6 +196,22 @@ exports[`Component: Hero should render with title 1`] = `
 `;
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
 .c0 {
   box-sizing: border-box;
   position: relative;
@@ -251,60 +235,28 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   text-align: center;
 }
 
-.c2 {
+.c1 {
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
 }
 
-.c4 {
+.c3 {
   text-shadow: 0 0.125rem 0.125rem rgba(0,0,0,0.04);
   position: relative;
   display: block;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-typography c2 anchor-hero-title"
+    className="c1 anchor-hero-title"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="c3 anchor-typography c4 anchor-hero-subtitle"
+    className="c2 anchor-typography c3 anchor-hero-subtitle"
     scale={18}
   >
     Hero Subtitle

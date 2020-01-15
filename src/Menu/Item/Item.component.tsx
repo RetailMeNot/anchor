@@ -7,7 +7,9 @@ import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { MenuSizeProps } from '../Menu.component';
 
-export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement>, SpaceProps {
+export interface ItemProps
+    extends React.HTMLAttributes<HTMLAnchorElement>,
+        SpaceProps {
     path?: string;
     label?: string;
     children?: any;

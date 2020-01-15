@@ -8,7 +8,7 @@ import { select, boolean, text, number } from '@storybook/addon-knobs';
 import { RootTheme } from '../../src/theme';
 import { PopOver } from './PopOver.component';
 import { Position } from '../utils/position/position';
-import { Typography } from '../Typography';
+import { Typography, TypographyProps } from '../Typography';
 import { Button } from '../Button';
 
 const StyledStory = styled('div')`
@@ -17,7 +17,7 @@ const StyledStory = styled('div')`
     font-family: base;
 `;
 
-const StyledParagraph = styled(Typography)`
+const StyledParagraph = styled(Typography)<TypographyProps>`
     border: base;
     border-radius: base;
 `;
@@ -43,7 +43,7 @@ const PopOverWithButton = () => {
             showArrow
             spacing={0}
         >
-            <Typography pb="3" tag="p">
+            <Typography pb="3" as="p">
                 This is an example of the PopOver being controlled by a button.
             </Typography>
             {!active && (
@@ -59,7 +59,7 @@ storiesOf('Components/PopOver', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h1">PopOver</Typography>
+                <Typography as="h1">PopOver</Typography>
                 <PopOver
                     active={boolean('Active', true)}
                     delay={text('Animation Delay', '') || undefined}
@@ -95,7 +95,7 @@ storiesOf('Components/PopOver', module)
                     arrowSize={text('Arrow Size', '') || undefined}
                     debug={boolean('Debug', false)}
                 >
-                    <StyledParagraph tag="p" p="2" my="3">
+                    <StyledParagraph as="p" p="2" my="3">
                         The PopOver allows programmatic control of the 'Popped
                         Over' content. Toggle the 'active' prop in the knobs
                         below to see. It can accept strings or JSX for its

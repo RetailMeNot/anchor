@@ -35,7 +35,7 @@ storiesOf('Components/Table', module).add('Default', () => (
     <ThemeProvider theme={RootTheme}>
         <StyledStory>
             <Typography
-                tag="h3"
+                as="h3"
                 scale={24}
                 weight={500}
                 mb="0.5rem"
@@ -53,7 +53,7 @@ storiesOf('Components/Table', module).add('Default', () => (
                     <Row>
                         <HeaderCell scope="col" />
                         <HeaderCell scope="col">
-                            <Typography scale={28} weight={600} tag="p">
+                            <Typography scale={28} weight={600} as="p">
                                 $4
                             </Typography>
                             <Typography
@@ -65,7 +65,7 @@ storiesOf('Components/Table', module).add('Default', () => (
                             </Typography>
                         </HeaderCell>
                         <HeaderCell scope="col">
-                            <Typography scale={28} weight={600} tag="p">
+                            <Typography scale={28} weight={600} as="p">
                                 $10
                             </Typography>
                             <Typography

@@ -67,7 +67,7 @@ const CardFooter = styled('div')`
 
 type TagSelect = TypographyTags | '';
 type ScaleSelect = Scale | '';
-const Tags = [''].concat(Object.keys(typography.tag)) as TagSelect[];
+const Tags = [''].concat(Object.keys(typography.as)) as TagSelect[];
 const Scales = ['']
     .concat(Object.keys(typography.scale))
     .map(x => parseInt(x, 10) || '') as ScaleSelect[];
@@ -91,16 +91,13 @@ storiesOf('Components/Skeleton', module)
                              solutions, churn, code rot, technical debt, etc.`;
 
         const textLength = parseInt(text('textLength', ''), 10) || undefined;
-        const tag = select<TagSelect>('Typography tag', Tags, '');
+        const as = select<TagSelect>('Typography tag', Tags, '');
         const scale = select<ScaleSelect>('Typography scale', Scales, '');
 
         return (
             <ThemeProvider theme={RootTheme}>
                 <StyledStory>
-                    <Typography
-                        tag={tag || undefined}
-                        scale={scale || undefined}
-                    >
+                    <Typography as={as || undefined} scale={scale || undefined}>
                         <Skeleton
                             loading={loading}
                             textLength={textLength}

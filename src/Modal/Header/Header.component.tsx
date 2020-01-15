@@ -36,7 +36,7 @@ export const StyledHeader = styled('div')<ModalHeaderProps>`
     ${spaceStyles}
 `;
 
-export interface ModalHeaderProps extends SpaceProps{
+export interface ModalHeaderProps extends SpaceProps {
     children?: any;
     className?: string;
     title?: string;

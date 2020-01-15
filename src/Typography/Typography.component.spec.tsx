@@ -36,7 +36,7 @@ describe('Component: Typography', () => {
             expect(
                 mount(
                     <ThemeProvider theme={RootTheme}>
-                        <Typography tag={element}>Test text</Typography>
+                        <Typography as={element}>Test text</Typography>
                     </ThemeProvider>
                 ).exists(element)
             ).toBeTruthy();

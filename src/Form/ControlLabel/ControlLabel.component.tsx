@@ -56,7 +56,7 @@ export const ControlLabel = ({
 }: ControlLabelProps): React.ReactElement<ControlLabelProps> => (
     <StyledLabel
         className={classnames('anchor-control-label', className)}
-        tag="label"
+        as="label"
         htmlFor={id}
         color={disabled ? 'text.disabled' : undefined}
         value={value}

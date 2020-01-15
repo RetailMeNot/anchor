@@ -7,7 +7,9 @@ import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
-export interface TitleProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+export interface TitleProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     children?: any;
     className?: string;
     label?: string;

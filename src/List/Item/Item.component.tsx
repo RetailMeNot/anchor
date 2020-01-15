@@ -7,7 +7,9 @@ import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
-export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement>, SpaceProps {
+export interface ItemProps
+    extends React.HTMLAttributes<HTMLAnchorElement>,
+        SpaceProps {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
@@ -102,7 +104,7 @@ export const Item = ({
         href={href}
         {...props}
     >
-        <StyledTypography tag="span" color="text.light" className={size}>
+        <StyledTypography as="span" color="text.light" className={size}>
             {prefix && React.cloneElement(prefix, { className: 'item-prefix' })}
             {prefix || suffix ? (
                 <span className="item-main">{children}</span>

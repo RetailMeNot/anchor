@@ -38,7 +38,7 @@ storiesOf('Components/Grid', module)
                             height={{ md: 2, lg: 3 }}
                             width={{ xs: 0, md: 12 }}
                         >
-                            <Typography tag="h1">Grid</Typography>
+                            <Typography as="h1">Grid</Typography>
                         </Cell>
                         <Cell width={{ xs: 12, md: 6 }}>
                             <Typography>Cell 1</Typography>
@@ -86,7 +86,7 @@ storiesOf('Components/Grid', module)
                         rows={'minmax(3rem,auto) 1fr minmax(3rem,auto)'}
                     >
                         <Cell width={3} align="center" valign="middle">
-                            <Typography tag="h1">Header</Typography>
+                            <Typography as="h1">Header</Typography>
                         </Cell>
 
                         <Cell>
@@ -100,7 +100,7 @@ storiesOf('Components/Grid', module)
                         </Cell>
 
                         <Cell width={3} align="center" valign="middle">
-                            <Typography tag="h2">Footer</Typography>
+                            <Typography as="h2">Footer</Typography>
                         </Cell>
                     </StoryGrid>
                 </ResponsiveProvider>

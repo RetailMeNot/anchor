@@ -76,7 +76,7 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     htmlFor?: string;
     href?: string;
     children?: any;
-    tag?: TypographyTags;
+    as?: TypographyTags;
     weight?: FontWeights;
     color?: 'inherit' | 'initial' | string;
     scale?: Scale;
@@ -88,9 +88,7 @@ export interface StyledTypographyProps extends TypographyProps {
     $color?: 'inherit' | 'initial' | string;
 }
 
-const StyledTypography = (tag: TypographyTags) => styled(tag)<
-    StyledTypographyProps
->`
+const StyledTypography = styled('span')<StyledTypographyProps>`
     box-sizing: border-box;
     margin: 0;
 
@@ -104,9 +102,9 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
             textAlign: 'inherit',
             color: 'inherit',
             ...variant({
-                key: 'typography.tag',
+                key: 'typography.as',
                 default: 'none',
-                prop: 'tag',
+                prop: 'as',
             })(props),
             ...variant({
                 key: 'typography.scale',
@@ -139,14 +137,14 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
 export const Typography = ({
     className,
     children,
-    tag: as = 'span',
+    as = 'span',
     color,
     ...props
-}: TypographyProps): JSX.Element =>
-    React.createElement(StyledTypography(as), {
-        children,
-        as,
-        $color: color,
-        className: classNames('anchor-typography', className),
-        ...props,
-    });
+}: TypographyProps): JSX.Element => (
+    <StyledTypography
+        className={classNames('anchor-typography', className)}
+        {...{ as, color, ...props }}
+    >
+        {children}
+    </StyledTypography>
+);

@@ -8,7 +8,7 @@ import {
     space as spaceStyles,
     color as colorStyles,
     backgroundColor as backgroundColorStyles,
-    SpaceProps
+    SpaceProps,
 } from '@xstyled/system';
 import classnames from 'classnames';
 

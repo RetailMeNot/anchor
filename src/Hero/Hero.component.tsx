@@ -5,16 +5,14 @@ import styled, { css } from '@xstyled/styled-components';
 import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
-import {
-    Typography,
-    TypographyProps,
-    TextAlign,
-} from '../Typography/Typography.component';
+import { Typography, TextAlign } from '../Typography/Typography.component';
 
 // Hero
 // ------------------------------------------------------------------------------------------------------------------
 
-interface StyledHeroProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+interface StyledHeroProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     align?: TextAlign;
     background?: string;
     color?: string;
@@ -80,16 +78,16 @@ const StyledTitle = styled(Typography)`
 export const HeroTitle = ({
     className,
     children,
-    tag = 'h1',
     weight = 600,
     scale = 32,
+    as = 'h1',
     ...props
-}: TypographyProps): React.ReactElement<any> => (
+}: any): React.ReactElement<any> => (
     <StyledTitle
         className={classnames('anchor-hero-title', className)}
-        tag={tag}
         weight={weight}
         scale={scale}
+        as={as}
         {...props}
     >
         {children}
@@ -114,7 +112,7 @@ export const HeroSubtitle = ({
     scale = 18,
     weight = 600,
     ...props
-}: TypographyProps): React.ReactElement<any> => (
+}: any): React.ReactElement<any> => (
     <StyledSubtitle
         className={classnames('anchor-hero-subtitle', className)}
         scale={scale}

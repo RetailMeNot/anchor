@@ -3,13 +3,20 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { variant as createVariant, th, space as spaceStyles, SpaceProps } from '@xstyled/system';
+import {
+    variant as createVariant,
+    th,
+    space as spaceStyles,
+    SpaceProps,
+} from '@xstyled/system';
 // Components
 import { ChevronDown, ChevronUp } from '../Icon';
 
 export type CollapseVariants = 'comfortable' | 'compact' | 'none' | string;
 
-interface CollapseProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+interface CollapseProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     /**
      * Whether the component starts off open or closed. Can also be used to programmatically open/close the
      * component.

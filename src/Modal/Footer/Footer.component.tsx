@@ -30,7 +30,7 @@ export const StyledFooter = styled('div')<ModalFooterProps>`
     ${spaceStyles}
 `;
 
-export interface ModalFooterProps extends SpaceProps{
+export interface ModalFooterProps extends SpaceProps {
     children?: any;
     className?: string;
     background?: string;

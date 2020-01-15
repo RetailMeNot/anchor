@@ -5,7 +5,9 @@ import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
-export interface DividerProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+export interface DividerProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;

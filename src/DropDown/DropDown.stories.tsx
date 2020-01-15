@@ -59,7 +59,7 @@ storiesOf('Components/DropDown', module)
                 <Grid gap="2rem">
                     <Cell width={3}>
                         <div>
-                            <Typography tag="h1">DropDown Default</Typography>
+                            <Typography as="h1">DropDown Default</Typography>
                             <DropDown overlay={<MockList />}>
                                 <span>
                                     <span>
@@ -74,7 +74,7 @@ storiesOf('Components/DropDown', module)
                     </Cell>
                     <Cell width={3} top={2}>
                         <div>
-                            <Typography tag="h1">DropDown Right</Typography>
+                            <Typography as="h1">DropDown Right</Typography>
                             <DropDown overlay={<MockList />} position="right">
                                 <a>DropDown Link Right</a>
                             </DropDown>
@@ -82,7 +82,7 @@ storiesOf('Components/DropDown', module)
                     </Cell>
                     <Cell width={3} top={3}>
                         <div>
-                            <Typography tag="h1">DropDown Left</Typography>
+                            <Typography as="h1">DropDown Left</Typography>
                             <DropDown overlay={<MockList />} position="left">
                                 <a>DropDown Link Left</a>
                             </DropDown>
@@ -90,7 +90,7 @@ storiesOf('Components/DropDown', module)
                     </Cell>
                     <Cell width={3} top={4}>
                         <div>
-                            <Typography tag="h1">DropDown Top</Typography>
+                            <Typography as="h1">DropDown Top</Typography>
                             <DropDown
                                 overlay={<MockList />}
                                 position="top"
@@ -110,7 +110,7 @@ storiesOf('Components/DropDown', module)
                 <Grid>
                     <Cell>
                         <div>
-                            <Typography tag="h1">DropDown</Typography>
+                            <Typography as="h1">DropDown</Typography>
                             <DropDown
                                 overlay={<MockList />}
                                 position={select<Position>(

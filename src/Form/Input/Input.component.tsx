@@ -52,7 +52,9 @@ type InputEventHandler = (
     event?: KeyboardEvent
 ) => any;
 
-interface InputProps extends React.HTMLAttributes<HTMLInputElement>, SpaceProps {
+interface InputProps
+    extends React.HTMLAttributes<HTMLInputElement>,
+        SpaceProps {
     // Identifiers
     className?: string;
     id?: string;
@@ -321,7 +323,7 @@ export const Input = forwardRef(
                                         : 14
                                 }
                                 htmlFor={name}
-                                tag="label"
+                                as="label"
                                 className={classNames({
                                     lift:
                                         focus ||

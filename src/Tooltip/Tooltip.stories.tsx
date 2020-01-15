@@ -29,7 +29,7 @@ storiesOf('Components/Tooltip', module)
         <StyledStory>
             <ThemeProvider theme={RootTheme}>
                 <>
-                    <Typography tag="h1">Tool Tip Demo</Typography>
+                    <Typography as="h1">Tool Tip Demo</Typography>
                     <Tooltip
                         wrapContent={boolean('Tooltip wrapContent', false)}
                         position={select<Position>(

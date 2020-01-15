@@ -13,7 +13,9 @@ import { PositionContainer } from '../utils/PositionContainer';
 
 export type Trigger = 'hover' | 'click' | 'both';
 
-interface DropDownProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
+interface DropDownProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
     trigger?: Trigger;
     className?: string;
