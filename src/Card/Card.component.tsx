@@ -3,16 +3,15 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { CardActionArea } from './CardActionArea';
 import { CardAction } from './CardAction';
 import { CardContent } from './CardContent';
-// THEME
 
 export type Gutters = 'none' | 'small' | 'medium' | 'large';
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     className?: string;
     children?: any;
     action?: any;
@@ -27,6 +26,7 @@ const StyledCard = styled('div')<CardProps>`
     box-sizing: border-box;
     border-radius: base;
     border: solid thin ${th.color('borders.base')};
+    ${spaceStyles}
 `;
 
 export const Card: React.FunctionComponent<CardProps> = ({

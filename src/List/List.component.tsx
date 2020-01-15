@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Item } from './Item';
 import { Title } from './Title';
@@ -18,7 +19,7 @@ type ListItem = {
     };
 };
 
-interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ListProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     className?: string;
     children?: any;
     hidden?: boolean;
@@ -33,21 +34,7 @@ const itemComponent = {
 
 const StyledList = styled('div')`
     box-sizing: border-box;
-
-    .anchor-list-title {
-        margin-top: 0.75rem;
-    }
-
-    .anchor-list-item {
-        margin-bottom: 0.25rem;
-        & + .anchor-list-title {
-            margin-top: 0.5rem;
-        }
-    }
-
-    .anchor-list-divider {
-        // no rules for this yet
-    }
+    ${spaceStyles}
 `;
 
 export const List: React.FunctionComponent<ListProps> = ({

@@ -48,7 +48,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -145,7 +145,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -249,7 +249,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -346,7 +346,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -450,7 +450,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -547,7 +547,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -647,7 +647,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;
@@ -744,7 +744,7 @@ Array [
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5rem;
   font-weight: normal;
   text-align: inherit;

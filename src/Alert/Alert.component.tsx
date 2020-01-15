@@ -1,6 +1,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 import styled, {
     css,
@@ -32,7 +33,7 @@ type AlertType =
     | AlertTypes.warning
     | AlertTypes.error;
 
-interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AlertProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     variant: AlertType;
     className?: string;
     message?: string;
@@ -97,6 +98,7 @@ const StyledAlert = styled('div')<AlertProps>`
             padding-bottom: 0;
         }
     }
+    ${spaceStyles};
 `;
 
 const renderMessageAndDescription = ({

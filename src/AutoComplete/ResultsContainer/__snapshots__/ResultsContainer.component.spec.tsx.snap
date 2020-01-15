@@ -280,18 +280,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   box-sizing: border-box;
 }
 
-.c1 .anchor-list-title {
-  margin-top: 0.75rem;
-}
-
-.c1 .anchor-list-item {
-  margin-bottom: 0.25rem;
-}
-
-.c1 .anchor-list-item + .anchor-list-title {
-  margin-top: 0.5rem;
-}
-
 .c0 {
   background-color: white;
   position: absolute;

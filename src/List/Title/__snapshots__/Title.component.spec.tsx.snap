@@ -13,6 +13,7 @@ exports[`Component: Title should be defined 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 2rem;
+  margin-top: 0.75rem;
 }
 
 .c1 {

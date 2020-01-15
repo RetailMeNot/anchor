@@ -28,6 +28,8 @@ import {
     borderRadius as borderRadiusStyles,
     BorderProps,
     border as borderStyles,
+    space as spaceStyles,
+    SpaceProps
 } from '@xstyled/system';
 
 interface SizeTheme {
@@ -64,7 +66,8 @@ interface TableProps
         MarginProps,
         WidthProps,
         MaxWidthProps,
-        MinWidthProps {
+        MinWidthProps,
+        SpaceProps {
     borderRadius?: string;
     background?: string;
     altBackground?: string;
@@ -85,6 +88,7 @@ const StyledTable = styled('table')<TableProps>`
     ${colorStyles}
     ${fontWeightStyles}
     ${fontSizeStyles}
+    ${spaceStyles}
     ${({ background }) => css({ background: th.color(background) })}
 
     tbody tr:nth-child(odd) {

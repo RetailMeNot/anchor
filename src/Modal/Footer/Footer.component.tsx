@@ -2,6 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classnames from 'classnames';
 
 export const StyledFooter = styled('div')<ModalFooterProps>`
@@ -25,9 +26,11 @@ export const StyledFooter = styled('div')<ModalFooterProps>`
     justify-self: flex-end;
 
     background: ${({ background = 'transparent' }) => background};
+
+    ${spaceStyles}
 `;
 
-export interface ModalFooterProps {
+export interface ModalFooterProps extends SpaceProps{
     children?: any;
     className?: string;
     background?: string;

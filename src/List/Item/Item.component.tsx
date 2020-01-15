@@ -3,11 +3,11 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 
-export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
+export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement>, SpaceProps {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
@@ -43,6 +43,7 @@ const StyledItem = styled('a')<ItemProps>`
     &.active {
         background: ${th.color('background.base')};
     }
+    ${spaceStyles}
 `;
 
 const StyledTypography = styled(Typography)`

@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
-import { th, variant } from '@xstyled/system';
+import { th, variant, space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Typography } from '../../Typography';
 import { INPUT_THEME, INPUT_KEY } from './utils';
@@ -52,7 +52,7 @@ type InputEventHandler = (
     event?: KeyboardEvent
 ) => any;
 
-interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
+interface InputProps extends React.HTMLAttributes<HTMLInputElement>, SpaceProps {
     // Identifiers
     className?: string;
     id?: string;
@@ -120,6 +120,8 @@ const StyledInputWrapper = styled('div')<InputProps>`
         default: 'md',
         variants: INPUT_THEME.sizes,
     })}
+
+    ${spaceStyles}
 `;
 
 const StyledReversedInputContainer = styled('div')`

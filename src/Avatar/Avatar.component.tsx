@@ -1,10 +1,11 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 
-interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AvatarProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     className?: string;
     // Configuration
     label?: string;
@@ -42,6 +43,7 @@ const StyledAvatar = styled('div')<AvatarProps>`
         height: 1.5rem;
         margin-bottom: -0.375rem;
     }
+    ${spaceStyles}
 `;
 
 const InnerBorder = styled('div')`

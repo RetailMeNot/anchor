@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
 import { filter, map, mapTo, distinctUntilChanged } from 'rxjs/operators';
 // ANCHOR
@@ -12,7 +13,7 @@ import { PositionContainer } from '../utils/PositionContainer';
 
 export type Trigger = 'hover' | 'click' | 'both';
 
-interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
+interface DropDownProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
     trigger?: Trigger;
     className?: string;
@@ -95,6 +96,8 @@ const StyledDropDown = styled('div')<StyledDropDownProps>`
         }
         return null;
     }};
+
+    ${spaceStyles}
 `;
 
 export class DropDown extends React.Component<DropDownProps> {

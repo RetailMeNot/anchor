@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { Input } from '../Form';
 import { InputPropsType } from '../Form/Input/Input.component';
@@ -16,7 +17,7 @@ type AutoCompleteDataSource = Array<{
     [key: string]: any;
 }>;
 
-interface AutoCompleteProps {
+interface AutoCompleteProps extends SpaceProps {
     className?: string;
     dataSource?: AutoCompleteDataSource | string[] | number[];
     debug?: boolean;
@@ -95,6 +96,7 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
     .auto-complete-input {
         border: none;
     }
+    ${spaceStyles}
 `;
 
 export const AutoComplete = ({

@@ -23,6 +23,7 @@ exports[`Component: Modal.Footer should match snapshot with padding 1`] = `
   order: 1;
   justify-self: flex-end;
   background: transparent;
+  padding: 1rem;
 }
 
 .c0.c0 {

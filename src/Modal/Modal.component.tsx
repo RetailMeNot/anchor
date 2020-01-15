@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classnames from 'classnames';
 // COMPONENTS
 import { ModalHeader, StyledHeader } from './Header';
@@ -68,9 +68,10 @@ const StyledModal = StyledReactModal.default.styled`
         min-height: ${({ size = defaultSize }: ModalProps) =>
             Sizes[size].footerHeight}rem;
     }
+    ${spaceStyles}
 `;
 
-interface ModalProps extends StyledReactModal.ModalProps {
+interface ModalProps extends StyledReactModal.ModalProps, SpaceProps {
     size?: ModalSize;
     background?: string;
     color?: string;

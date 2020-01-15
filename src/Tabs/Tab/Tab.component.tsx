@@ -2,11 +2,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css, ThemeContext } from '@xstyled/styled-components';
-import { th, space as spaceStyles } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 // ANCHOR
 import { Position, Variant, variantStyles } from '../utils';
 
-interface TabProps extends React.HTMLAttributes<HTMLDivElement> {
+interface TabProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     className?: string;
 
     position?: Position;

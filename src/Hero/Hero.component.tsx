@@ -2,7 +2,7 @@
 import * as React from 'react';
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classnames from 'classnames';
 // ANCHOR
 import {
@@ -14,7 +14,7 @@ import {
 // Hero
 // ------------------------------------------------------------------------------------------------------------------
 
-interface StyledHeroProps extends React.HTMLAttributes<HTMLDivElement> {
+interface StyledHeroProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     align?: TextAlign;
     background?: string;
     color?: string;
@@ -37,9 +37,10 @@ const StyledHero = styled('section')<StyledHeroProps>`
             minHeight,
             textAlign: align,
         })}
+    ${spaceStyles}
 `;
 
-interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
+interface HeroProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     background?: string;
     align?: TextAlign;
     color?: string;
@@ -73,6 +74,7 @@ export const Hero = ({
 const StyledTitle = styled(Typography)`
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.09);
     position: relative;
+    ${spaceStyles}
 `;
 
 export const HeroTitle = ({
@@ -103,6 +105,7 @@ const StyledSubtitle = styled(Typography)`
     text-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.04);
     position: relative;
     display: block;
+    ${spaceStyles}
 `;
 
 export const HeroSubtitle = ({

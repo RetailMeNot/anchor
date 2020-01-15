@@ -1,7 +1,6 @@
 // REACT
 import * as React from 'react';
 const { forwardRef } = React;
-
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import {
@@ -9,6 +8,7 @@ import {
     space as spaceStyles,
     color as colorStyles,
     backgroundColor as backgroundColorStyles,
+    SpaceProps
 } from '@xstyled/system';
 import classnames from 'classnames';
 
@@ -49,7 +49,7 @@ const StyledCheckbox = styled('label')<CheckboxProps>`
     ${compose(spaceStyles, colorStyles, backgroundColorStyles)};
 `;
 
-interface CheckboxProps {
+interface CheckboxProps extends SpaceProps {
     className?: string;
     id?: string;
     htmlFor?: string;

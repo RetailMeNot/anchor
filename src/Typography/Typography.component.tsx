@@ -139,13 +139,13 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
 export const Typography = ({
     className,
     children,
-    tag = 'span',
+    tag: as = 'span',
     color,
     ...props
 }: TypographyProps): JSX.Element =>
-    React.createElement(StyledTypography(tag), {
+    React.createElement(StyledTypography(as), {
         children,
-        tag,
+        as,
         $color: color,
         className: classNames('anchor-typography', className),
         ...props,

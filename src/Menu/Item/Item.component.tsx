@@ -3,10 +3,11 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // COMPONENTS
 import { MenuSizeProps } from '../Menu.component';
 
-export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement> {
+export interface ItemProps extends React.HTMLAttributes<HTMLAnchorElement>, SpaceProps {
     path?: string;
     label?: string;
     children?: any;
@@ -33,6 +34,7 @@ const StyledItem = styled('a')<ItemProps>`
     // Disable Select
     user-select: none;
     -webkit-touch-callout: none;
+    ${spaceStyles}
 `;
 
 export const Item: React.FunctionComponent<ItemProps> = ({
