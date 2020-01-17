@@ -9,7 +9,7 @@ import {
     DefaultScale,
 } from '../utils';
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 export const InfoOutline = ({
     color = DefaultColor,
     scale = DefaultScale,

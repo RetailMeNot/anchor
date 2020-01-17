@@ -35,7 +35,7 @@ const StyledStory = styled('div')`
     }
 `;
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 const TwoRowWithActionCardContent = () => (
     <div>
         <div>
@@ -113,7 +113,7 @@ const ActionArea = () => (
         </div>
     </CardActionArea>
 );
-/* tslint:enable */
+/* eslint-enable max-len */
 
 const CardAction = (
     <DropDown overlay={<div>123</div>} position="bottomEnd">

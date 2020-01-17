@@ -22,7 +22,7 @@ interface MobileCTAProps {
     href?: string;
 }
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-line-length */
 const MobileCTAImage = () => (
     <svg
         width="64px"
@@ -147,7 +147,7 @@ const Chevron = () => (
         />
     </svg>
 );
-/* tslint:enable max-line-length */
+/* eslint:enable max-line-length */
 
 export const MobileCTA = ({
     href,

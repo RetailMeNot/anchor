@@ -14,8 +14,8 @@ type ListItemType = 'item' | 'title' | 'divider';
 type ListItem = {
     label: string;
     value: {
-        listItemType?: ListItemType;
         [key: string]: any;
+        listItemType?: ListItemType;
     };
 };
 

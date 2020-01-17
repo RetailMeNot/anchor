@@ -11,11 +11,11 @@ import { ResultsContainer } from './ResultsContainer';
 
 const { useState, useRef } = React;
 
-type AutoCompleteDataSource = Array<{
+type AutoCompleteDataSource = {
+    [key: string]: any;
     label?: string;
     listItemType?: 'item' | 'title' | 'divider';
-    [key: string]: any;
-}>;
+}[];
 
 interface AutoCompleteProps extends SpaceProps {
     className?: string;

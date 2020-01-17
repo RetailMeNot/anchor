@@ -16,7 +16,7 @@ export type Trigger = 'hover' | 'click' | 'both';
 interface DropDownProps
     extends React.HTMLAttributes<HTMLDivElement>,
         SpaceProps {
-    overlay?: React.ReactElement<any> | Array<React.ReactElement<any>>;
+    overlay?: React.ReactElement<any> | React.ReactElement<any>[];
     trigger?: Trigger;
     className?: string;
     children?: any;

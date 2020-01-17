@@ -20,7 +20,7 @@ export const positionVariants = (
     width: number,
     overlayHeight: number,
     overlayWidth: number,
-    spacing: number = 0
+    spacing = 0
 ) => {
     switch (position) {
         case 'topStart':

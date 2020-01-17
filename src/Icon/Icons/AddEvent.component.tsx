@@ -9,7 +9,7 @@ import {
     DefaultScale,
 } from '../utils';
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 export const AddEvent = ({
     color = DefaultColor,
     scale = DefaultScale,

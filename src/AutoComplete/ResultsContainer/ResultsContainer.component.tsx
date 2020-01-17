@@ -207,10 +207,7 @@ export const ResultsContainer = forwardRef(
             return nextIndex;
         };
 
-        const handleTraversal = (
-            currentTerm: string = '',
-            forward: boolean
-        ) => {
+        const handleTraversal = (currentTerm = '', forward: boolean) => {
             // Check if there's a initialTerm
             if (!initialTerm || initialTerm === '') {
                 // If there's no initialTerm, assign the current input value

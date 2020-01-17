@@ -9,7 +9,7 @@ import {
     DefaultScale,
 } from '../utils';
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 export const PlusSmall = ({
     color = DefaultColor,
     scale = DefaultScale,

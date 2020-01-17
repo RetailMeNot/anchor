@@ -49,7 +49,7 @@ describe('Component: CollapseGroup', () => {
         ).toHaveLength(1);
     });
 
-    // tslint:disable-next-line: max-line-length
+    // eslint-disable-next-line: max-line-length
     it("should assign props specified on the component to child Collapse child component's, and override them.", () => {
         const subject = (
             <ThemeProvider theme={RootTheme}>

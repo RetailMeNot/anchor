@@ -18,7 +18,7 @@ export const filterChildrenByType = (
             goodChildren.push(child);
         } else {
             if (warn) {
-                /* tslint:disable no-console max-line-length */
+                /* eslint-disable no-console, max-len  */
                 console.warn(
                     `Children of type ${childType} not allowed in this component. Accepted types are ${acceptedTypes.join(
                         ', '

@@ -94,12 +94,12 @@ export const Tabs = ({
     onChange,
     ...props
 }: TabsProps): React.ReactElement<TabsProps> => {
-    let tabInfo: Array<{
+    let tabInfo: {
         title: any;
         key: any;
         disabled?: boolean;
         active?: boolean;
-    }> = [];
+    }[] = [];
     React.Children.forEach(children, (child, index) => {
         if (!child || !React.isValidElement(child)) {
             return;

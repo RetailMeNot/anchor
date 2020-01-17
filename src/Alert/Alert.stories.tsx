@@ -35,9 +35,8 @@ storiesOf('Components/Alert', module)
                     message={text('Message', 'This is a message')}
                     description={text('Description', 'This is a description')}
                     onClose={() => {
-                        /* tslint:disable no-console */
+                        /* eslint-disable-next-line */
                         console.log('Alert has closed!');
-                        /* tslint:enable no-console */
                     }}
                 />
             </StyledStory>

@@ -29,9 +29,8 @@ const MockList = () => (
             <ListItem
                 key={key}
                 onClick={() => {
-                    /* tslint:disable no-console */
+                    /* eslint-disable-next-line */
                     console.log(`${label} has been clicked`);
-                    /* tslint:enable no-console */
                 }}
             >
                 {label}
