@@ -115,7 +115,6 @@ export const typography: TypographyTheme = {
         h1: {
             fontSize: '1.75rem',
             lineHeight: '2rem',
-            color: 'red',
         },
         h2: {
             fontSize: '1.5rem',
