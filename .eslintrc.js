@@ -137,7 +137,7 @@ module.exports = {
                 "next": "return"
             }
         ],
-        "prefer-arrow-callback": [ "error", { "allowUnboundThis": false } ],
+        "prefer-arrow-callback": [ "error", { "allowUnboundThis": true } ],
         "prefer-const": "error",
         "prefer-template": "error",
         "quote-props": [
