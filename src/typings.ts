@@ -223,8 +223,8 @@ declare module '@xstyled/system' {
     }
 
     export interface StyleFn {
-        (...args: any[]): any;
         propTypes?: string[];
+        (...args: any[]): any;
     }
 
     export const fontFamily: StyleFn;
