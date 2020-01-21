@@ -142,8 +142,9 @@ export const Typography = ({
     ...props
 }: TypographyProps): JSX.Element => (
     <StyledTypography
+        $color={color}
         className={classNames('anchor-typography', className)}
-        {...{ as, color, ...props }}
+        {...{ as, ...props }}
     >
         {children}
     </StyledTypography>

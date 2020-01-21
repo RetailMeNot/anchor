@@ -10,6 +10,7 @@ exports[`Component: Title should be defined 1`] = `
   font-weight: 500;
   text-align: inherit;
   color: inherit;
+  color: #808080;
   font-weight: 700;
 }
 
@@ -37,7 +38,6 @@ exports[`Component: Title should be defined 1`] = `
 >
   <span
     className="c1 anchor-typography"
-    color="text.label"
     scale={12}
   >
     Title
