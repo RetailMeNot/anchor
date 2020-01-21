@@ -18,6 +18,7 @@ module.exports = {
         "@typescript-eslint/tslint"
     ],
     "rules": {
+        "@typescript-eslint/unbound-method": "warn",
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/ban-types": "error",
