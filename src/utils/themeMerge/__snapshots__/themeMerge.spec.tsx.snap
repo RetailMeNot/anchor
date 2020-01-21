@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme: themeMerge() should not affect Button's functions() established in the theme 1`] = `
+.c0 {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: Comic Sans MS;
+  text-align: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none !important;
+  margin: 0;
+  -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: solid thin #0998D6;
+  background-color: #0998D6;
+  color: white;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  min-width: 12.5rem;
+}
+
+.c0 + .anchor-button {
+  margin-left: 1rem;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active {
+  background-color: #0074A6;
+  border: solid thin #0074A6;
+}
+
+.c0:focus:after {
+  position: absolute;
+  content: '';
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: calc(4px + 2px);
+  box-shadow: 0 0 0 2px rgba(9,152,214,0.4);
+}
+
+<button
+  className="c0 anchor-button"
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  Hello
+</button>
+`;
