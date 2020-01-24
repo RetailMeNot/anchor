@@ -104,7 +104,7 @@ export const Item = ({
         href={href}
         {...props}
     >
-        <StyledTypography as="span" color="text.light" className={size}>
+        <StyledTypography color="text.light" className={size}>
             {prefix && React.cloneElement(prefix, { className: 'item-prefix' })}
             {prefix || suffix ? (
                 <span className="item-main">{children}</span>
