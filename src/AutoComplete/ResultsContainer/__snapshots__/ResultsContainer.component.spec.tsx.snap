@@ -27,6 +27,15 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,6 +49,10 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.c2 small {
+  font-size: 87.5%;
 }
 
 .c2 .item-prefix {
@@ -124,8 +137,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c2 lg"
-        color="text.light"
+        className="sc-LzLte c2 lg anchor-typography"
       >
         Result Item 1
       </span>
@@ -137,8 +149,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c2 lg"
-        color="text.light"
+        className="sc-LzLte c2 lg anchor-typography"
       >
         Result Item 2
       </span>
@@ -174,6 +185,15 @@ exports[`Component: ResultsContainer should be defined 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,6 +207,10 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c3 .item-prefix {
@@ -276,8 +300,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c3 lg"
-        color="text.light"
+        className="sc-LzLte c3 lg anchor-typography"
       >
         Result Item 1
       </span>
@@ -290,8 +313,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c3 lg"
-        color="text.light"
+        className="sc-LzLte c3 lg anchor-typography"
       >
         Result Item 2
       </span>

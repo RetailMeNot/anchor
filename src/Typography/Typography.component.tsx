@@ -1,12 +1,11 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
-import { TypographyTags, Scale } from '../theme/typography.theme';
+import { Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
 export type FontWeights =
@@ -76,7 +75,6 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     htmlFor?: string;
     href?: string;
     children?: any;
-    as?: TypographyTags;
     weight?: FontWeights;
     color?: 'inherit' | 'initial' | string;
     scale?: Scale;
@@ -88,7 +86,14 @@ export interface StyledTypographyProps extends TypographyProps {
     $color?: 'inherit' | 'initial' | string;
 }
 
-const StyledTypography = styled('span')<StyledTypographyProps>`
+export const Typography = styled('span').attrs<TypographyProps>(
+    ({ color }) => ({
+        $color: color,
+        color: undefined,
+        className: 'anchor-typography',
+    })
+)<StyledTypographyProps>`
+
     box-sizing: border-box;
     margin: 0;
 
@@ -133,19 +138,3 @@ const StyledTypography = styled('span')<StyledTypographyProps>`
         font-size: 87.5%;
     }
 `;
-
-export const Typography = ({
-    className,
-    children,
-    as = 'span',
-    color,
-    ...props
-}: TypographyProps): JSX.Element => (
-    <StyledTypography
-        $color={color}
-        className={classNames('anchor-typography', className)}
-        {...{ as, ...props }}
-    >
-        {children}
-    </StyledTypography>
-);

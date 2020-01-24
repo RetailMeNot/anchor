@@ -2,6 +2,16 @@
 
 exports[`Component: ControlLabel should be defined 1`] = `
 .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -14,8 +24,12 @@ exports[`Component: ControlLabel should be defined 1`] = `
   cursor: pointer;
 }
 
+.c0 small {
+  font-size: 87.5%;
+}
+
 <label
-  className="c0 anchor-control-label"
+  className="sc-LzLte c0 anchor-control-label anchor-typography"
   label="label"
   value="value"
 >

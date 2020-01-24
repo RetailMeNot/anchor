@@ -27,6 +27,15 @@ exports[`Component: Item should be defined 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,6 +49,10 @@ exports[`Component: Item should be defined 1`] = `
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.c1 small {
+  font-size: 87.5%;
 }
 
 .c1 .item-prefix {
@@ -106,8 +119,7 @@ exports[`Component: Item should be defined 1`] = `
   onMouseOver={[Function]}
 >
   <span
-    className="c1 lg"
-    color="text.light"
+    className="sc-LzLte c1 lg anchor-typography"
   >
     Item
   </span>

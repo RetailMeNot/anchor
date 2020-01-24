@@ -96,3 +96,118 @@ exports[`Component: Typography should accept a custom size 1`] = `
   Text
 </span>
 `;
+
+exports[`Component: Typography should be allow for custom classNames to be added 1`] = `
+Array [
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+    className="c0 customClass anchor-typography"
+  >
+    Typography customClass
+  </span>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: red;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+    className="c0 customClass anchor-typography"
+  >
+    RedText customClass
+  </span>,
+  .c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: red;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<h1
+    className="c0 customClass anchor-typography"
+  >
+    RedText h1 customClass
+  </h1>,
+]
+`;
+
+exports[`Component: Typography should be extendable via styled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: red;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="sc-LzLsE c0 anchor-typography"
+>
+  I should be red!
+</span>
+`;
+
+exports[`Component: Typography should be extendable via styled 2`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: red;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<h1
+  className="sc-LzLsE c0 anchor-typography"
+>
+  I should be an h1 and be red!
+</h1>
+`;

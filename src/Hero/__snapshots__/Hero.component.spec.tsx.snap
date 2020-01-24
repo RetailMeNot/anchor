@@ -125,15 +125,28 @@ exports[`Component: Hero should render with custom content 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: 600;
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
+}
+
+.c1 small {
+  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-hero-title"
+    className="c1 anchor-hero-title anchor-typography"
     scale={32}
   >
     Good Ole Title
@@ -179,15 +192,28 @@ exports[`Component: Hero should render with title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: 600;
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
+}
+
+.c1 small {
+  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-hero-title"
+    className="sc-LzLsF c1 anchor-hero-title anchor-typography"
     scale={32}
   >
     Hero Title
@@ -196,22 +222,6 @@ exports[`Component: Hero should render with title 1`] = `
 `;
 
 exports[`Component: Hero should render with title and subtitle 1`] = `
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c2 small {
-  font-size: 87.5%;
-}
-
 .c0 {
   box-sizing: border-box;
   position: relative;
@@ -236,27 +246,53 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: 600;
   text-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.09);
   position: relative;
 }
 
-.c3 {
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: 600;
   text-shadow: 0 0.125rem 0.125rem rgba(0,0,0,0.04);
   position: relative;
   display: block;
+}
+
+.c2 small {
+  font-size: 87.5%;
 }
 
 <section
   className="c0 anchor-hero"
 >
   <h1
-    className="c1 anchor-hero-title"
+    className="sc-LzLsF c1 anchor-hero-title anchor-typography"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="c2 anchor-typography c3 anchor-hero-subtitle"
+    className="sc-LzLsF c2 anchor-hero-subtitle anchor-typography"
     scale={18}
   >
     Hero Subtitle
