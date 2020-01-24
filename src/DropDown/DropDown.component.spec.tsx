@@ -35,4 +35,44 @@ describe('Component: DropDown', () => {
             wrapper.find('div.anchor-drop-down-container.active').exists()
         ).toBeFalsy();
     });
+    test('should fire onTriggered with correct type when clicked', () => {
+        const onTrigMock = jest.fn();
+        const subject = (
+            <DropDown
+                overlay={<div>1</div>}
+                trigger="click"
+                onTriggered={onTrigMock}
+            />
+        );
+        const wrapper = mount(subject);
+        wrapper.getDOMNode().dispatchEvent(new MouseEvent('click'));
+        expect(onTrigMock).toHaveBeenCalledWith(true, 'click');
+    });
+    test('should fire onTriggered with correct type when hovered', () => {
+        const onTrigMock = jest.fn();
+        const subject = (
+            <DropDown
+                overlay={<div>1</div>}
+                trigger="hover"
+                onTriggered={onTrigMock}
+            />
+        );
+        const wrapper = mount(subject);
+        wrapper.getDOMNode().dispatchEvent(new MouseEvent('mouseenter'));
+        expect(onTrigMock).toHaveBeenCalledWith(true, 'hover');
+    });
+    test('should fire onTriggered with false when clicked twice', () => {
+        const onTrigMock = jest.fn();
+        const subject = (
+            <DropDown
+                overlay={<div>1</div>}
+                trigger="click"
+                onTriggered={onTrigMock}
+            />
+        );
+        const wrapper = mount(subject);
+        wrapper.setState({ clicked: true });
+        wrapper.getDOMNode().dispatchEvent(new MouseEvent('click'));
+        expect(onTrigMock).toHaveBeenCalledWith(false, 'click');
+    });
 });

@@ -24,7 +24,7 @@ interface DropDownProps extends React.HTMLAttributes<HTMLDivElement> {
     border?: string;
     borderRadius?: string;
     debug?: boolean;
-    onTriggered?: (state: boolean) => void;
+    onTriggered?: (state: boolean, trigger?: string) => void;
     position?: Position;
     ref?: any;
     shadow?: string;
@@ -159,7 +159,7 @@ export class DropDown extends React.Component<DropDownProps> {
                 width: clicked ? get(dropDown, 'clientWidth', 0) : width,
             }));
             if (this.props.onTriggered) {
-                this.props.onTriggered(clicked);
+                this.props.onTriggered(clicked, 'click');
             }
         });
 
@@ -185,7 +185,7 @@ export class DropDown extends React.Component<DropDownProps> {
                 }));
 
                 if (this.props.onTriggered) {
-                    this.props.onTriggered(hovered);
+                    this.props.onTriggered(hovered, 'hover');
                 }
             });
     }
