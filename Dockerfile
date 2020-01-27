@@ -3,7 +3,6 @@ FROM node:lts as builder
 WORKDIR /usr/app
 
 COPY . .
-RUN npm i -g yarn
 RUN yarn
 
 WORKDIR /usr/app/docs
