@@ -116,7 +116,10 @@ storiesOf('Components/PopOver', module)
                     border={text('Border', '') || undefined}
                     borderRadius={text('Border Radius', '') || undefined}
                     color={text('Color', '') || undefined}
-                    content={text('Content', 'Text')}
+                    content={text(
+                        'Content',
+                        'Will reposition when newly active.'
+                    )}
                     position={select<Position>(
                         'Position',
                         [
