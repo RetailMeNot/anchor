@@ -105,6 +105,53 @@ storiesOf('Components/PopOver', module)
             </StyledStory>
         </ThemeProvider>
     ))
+    .add('Resizeable', () => (
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Typography tag="h1">PopOver</Typography>
+                <PopOver
+                    active={boolean('Active', true)}
+                    delay={text('Animation Delay', '') || undefined}
+                    background={text('Background', '') || undefined}
+                    border={text('Border', '') || undefined}
+                    borderRadius={text('Border Radius', '') || undefined}
+                    color={text('Color', '') || undefined}
+                    content={text(
+                        'Content',
+                        'Will reposition when newly active.'
+                    )}
+                    position={select<Position>(
+                        'Position',
+                        [
+                            'topStart',
+                            'top',
+                            'topEnd',
+                            'rightStart',
+                            'right',
+                            'rightEnd',
+                            'bottomEnd',
+                            'bottom',
+                            'bottomStart',
+                            'leftEnd',
+                            'left',
+                            'leftStart',
+                        ],
+                        'bottom'
+                    )}
+                    shadow={
+                        text('Shadow (buggy in Storybook)', '') || undefined
+                    }
+                    spacing={number('Spacing', 8) || undefined}
+                    showArrow={boolean('Show Arrow', true)}
+                    arrowIndent={text('Arrow Indent', '') || undefined}
+                    arrowSize={text('Arrow Size', '') || undefined}
+                    debug={boolean('Debug', false)}
+                >
+                    <textarea />
+                </PopOver>
+            </StyledStory>
+        </ThemeProvider>
+    ))
     .add('Button to Control', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
