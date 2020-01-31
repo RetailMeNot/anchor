@@ -107,7 +107,7 @@ describe('theme: themeMerge()', () => {
 
     it('should not affect values set with the css() function', () => {
         const Test = () => (
-            <Tabs variant="tabular">
+            <Tabs variant="regular">
                 <Pane>Test 1</Pane>
                 <Pane>Test 2</Pane>
             </Tabs>

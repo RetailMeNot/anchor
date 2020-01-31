@@ -81,14 +81,14 @@ exports[`theme: themeMerge() should not affect values set with the css() functio
   position: relative;
   -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
   transition: 250ms ease background,250ms ease color,125ms ease border-color;
-  border: light;
-  padding: 0.75rem 1rem;
-  background: white;
-  font-weight: 500;
+  border: solid transparent;
+  padding: 0.625rem 0;
+  border-width: 3px 0;
+  font-weight: 600;
   color: primary.base;
   border-radius: base;
-  border-bottom-color: transparent;
-  margin-right: 0.25rem;
+  border-bottom-color: primary.base;
+  margin-right: 2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -115,11 +115,12 @@ exports[`theme: themeMerge() should not affect values set with the css() functio
   position: relative;
   -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
   transition: 250ms ease background,250ms ease color,125ms ease border-color;
-  border: light;
-  padding: 0.75rem 1rem;
-  background: background.base;
+  border: solid transparent;
+  padding: 0.625rem 0;
+  border-width: 3px 0;
+  color: text.label;
   border-radius: base;
-  margin-right: 0.25rem;
+  margin-right: 2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -167,8 +168,8 @@ exports[`theme: themeMerge() should not affect values set with the css() functio
   -ms-flex-direction: row;
   flex-direction: row;
   overflow-x: auto;
-  position: relative;
-  bottom: -1px;
+  padding: 0 1rem;
+  background: white;
 }
 
 .c0 {
@@ -179,6 +180,7 @@ exports[`theme: themeMerge() should not affect values set with the css() functio
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  border: light;
 }
 
 <div
