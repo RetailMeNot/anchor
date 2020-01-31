@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { ThemeProvider } from '@xstyled/styled-components';
-import { RootTheme, themeMerge } from '../../theme';
+import { themeMerge } from './themeMerge';
+import { RootTheme } from '../../theme';
 import { Button } from '../../Button';
 
 // TEST SETUP

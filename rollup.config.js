@@ -50,6 +50,8 @@ const componentList = {
     tooltip: './src/Tooltip/index.ts',
     // THEME
     theme: './src/theme/index.ts',
+    // UTILS
+    thememerge: './src/utils/index.ts',
     // ICONS
     addevent: './src/Icon/Icons/AddEvent.component.tsx',
     arrowback: './src/Icon/Icons/ArrowBack.component.tsx',

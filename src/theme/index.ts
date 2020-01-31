@@ -5,8 +5,6 @@ import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-component
 
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
 import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
-import { themeMerge as anchorThemeMerge } from '../utils/themeMerge';
-import { ThemeType } from '../utils/themeMerge/themeMerge';
 
 export const RootTheme = {
     typography,
@@ -45,10 +43,3 @@ export const RootTheme = {
 
 // Exporting out @xstyled's ThemeProvider. Only way I could get it to work w/o issues.
 export class ThemeProvider extends XstyledThemeProvider {}
-
-// Passing RootTheme to avoid circular references with exports. RootTheme is the default baseTheme
-// but the user can pass in any theme.
-export const themeMerge = (
-    settings: object,
-    baseTheme: ThemeType = RootTheme
-) => anchorThemeMerge(settings, baseTheme);

@@ -11,6 +11,7 @@
     TODO: It would be good at some point to also add validation to this so the user doesn't break
     all the things.
 */
+import { RootTheme } from '../../theme';
 
 export type ThemeType = {
     typography: object;
@@ -50,7 +51,7 @@ function recursiveUpdate(settingStep: object, newThemeStep: object) {
     }
 }
 
-export function themeMerge(settings: object, baseTheme: ThemeType): ThemeType {
+export function themeMerge(settings: object, baseTheme: ThemeType = RootTheme): ThemeType {
     const newTheme = deepClone(baseTheme);
 
     for (const key in settings) {
