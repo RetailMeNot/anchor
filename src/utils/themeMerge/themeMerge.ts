@@ -53,7 +53,10 @@ function recursiveUpdate(settingStep: object, newThemeStep: object) {
     }
 }
 
-export function themeMerge(settings: object, baseTheme: ThemeType = RootTheme): ThemeType {
+export function themeMerge(
+    settings: object,
+    baseTheme: ThemeType = RootTheme
+): ThemeType {
     const newTheme = deepClone(baseTheme);
 
     for (const key in settings) {
