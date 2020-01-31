@@ -43,7 +43,9 @@ function deepClone(data: any) {
 
 function recursiveUpdate(settingStep: object, newThemeStep: object) {
     for (const key in settingStep) {
-        if (settingStep[key] && typeof settingStep[key] !== 'object') {
+        if (settingStep[key] === undefined) {
+            delete newThemeStep[key];
+        } else if (settingStep[key] && typeof settingStep[key] !== 'object') {
             newThemeStep[key] = settingStep[key];
         } else {
             recursiveUpdate(settingStep[key], newThemeStep[key]);

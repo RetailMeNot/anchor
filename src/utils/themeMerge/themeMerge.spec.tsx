@@ -18,6 +18,14 @@ const data = {
             base: '#ff0000',
         },
     },
+    radii: {
+        circular: undefined,
+    },
+    typography: {
+        tag: {
+            a: undefined,
+        },
+    },
     exampleComponent: {
         xs: '1rem',
         md: '2rem',
@@ -27,12 +35,19 @@ const data = {
 const subject = themeMerge(data, RootTheme);
 
 describe('theme: themeMerge()', () => {
-    it('should have all keys from RootTheme', () => {
+    it('should have all root keys from RootTheme', () => {
         for (const key in RootTheme) {
             if (RootTheme[key]) {
                 expect(subject.hasOwnProperty(key)).toBe(true);
             }
         }
+    });
+
+    it('should remove properties from the object if the value is set to undefined', () => {
+        // tslint:disable-next-line: no-string-literal
+        expect(subject.typography['tag'].a).toBeUndefined();
+        // tslint:disable-next-line: no-string-literal
+        expect(subject.radii['circular']).toBeUndefined();
     });
 
     it('should have newly added root keys and values', () => {
