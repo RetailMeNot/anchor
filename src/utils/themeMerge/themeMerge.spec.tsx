@@ -4,6 +4,9 @@ import { ThemeProvider } from '@xstyled/styled-components';
 import { themeMerge } from './themeMerge';
 import { RootTheme } from '../../theme';
 import { Button } from '../../Button';
+import { Tabs } from '../../Tabs';
+
+const { Pane } = Tabs;
 
 // TEST SETUP
 const data = {
@@ -37,6 +40,15 @@ describe('theme: themeMerge()', () => {
         expect(subject.exampleComponent.md).toBe('2rem');
     });
 
+    it('should not mutate RootTheme', () => {
+        // tslint:disable-next-line: no-string-literal
+        subject.skeleton['colorStart'] = '#00ff00';
+        // tslint:disable-next-line: no-string-literal
+        expect(RootTheme.skeleton['colorStart']).toBe('#E7E7E7');
+        // tslint:disable-next-line: no-string-literal
+        expect(subject.skeleton['colorStart']).toBe('#00ff00');
+    });
+
     it('should overwrite RootTheme values with new values', () => {
         expect(subject.fonts.base).toBe('Comic Sans MS');
         // Oddly can't read 'primary' with dot notation. Verified that the value is there and usable.
@@ -62,6 +74,18 @@ describe('theme: themeMerge()', () => {
             <ThemeProvider theme={subject}>
                 <TestButton />
             </ThemeProvider>
+        );
+
+        const tree = renderer.create(<Test />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should not affect values set with the css() function', () => {
+        const Test = () => (
+            <Tabs variant="tabular">
+                <Pane>Test 1</Pane>
+                <Pane>Test 2</Pane>
+            </Tabs>
         );
 
         const tree = renderer.create(<Test />).toJSON();

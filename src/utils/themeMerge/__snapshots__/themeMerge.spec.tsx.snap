@@ -66,3 +66,295 @@ exports[`theme: themeMerge() should not affect Button's functions() established 
   Hello
 </button>
 `;
+
+exports[`theme: themeMerge() should not affect values set with the css() function  1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  border: light;
+  padding: 0.75rem 1rem;
+  background: white;
+  font-weight: 500;
+  color: primary.base;
+  border-radius: base;
+  border-bottom-color: transparent;
+  margin-right: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c3.disabled {
+  color: text.disabled;
+  cursor: not-allowed;
+}
+
+.c3:last-of-type {
+  margin-right: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  border: light;
+  padding: 0.75rem 1rem;
+  background: background.base;
+  border-radius: base;
+  margin-right: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c4.disabled {
+  color: text.disabled;
+  cursor: not-allowed;
+}
+
+.c4:last-of-type {
+  margin-right: 0;
+}
+
+.c5 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 2rem;
+  display: block;
+  background: white;
+}
+
+.c6 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 2rem;
+  display: none;
+  background: white;
+}
+
+.c1 {
+  border-bottom: light;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  position: relative;
+  bottom: -1px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0 anchor-tabs"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 anchor-tabs-header"
+    >
+      <div
+        className="c3 anchor-tabs-header-item active"
+        onClick={[Function]}
+      />
+      <div
+        className="c4 anchor-tabs-header-item"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="c5 anchor-tabs-pane anchor-tabs-panel active"
+  >
+    Test 1
+  </div>
+  <div
+    className="c6 anchor-tabs-pane anchor-tabs-panel"
+  >
+    Test 2
+  </div>
+</div>
+`;
+
+exports[`theme: themeMerge() should not affect values set with the css() function 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  border: light;
+  padding: 0.75rem 1rem;
+  background: white;
+  font-weight: 500;
+  color: primary.base;
+  border-radius: base;
+  border-bottom-color: transparent;
+  margin-right: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c3.disabled {
+  color: text.disabled;
+  cursor: not-allowed;
+}
+
+.c3:last-of-type {
+  margin-right: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  transition: 250ms ease background,250ms ease color,125ms ease border-color;
+  border: light;
+  padding: 0.75rem 1rem;
+  background: background.base;
+  border-radius: base;
+  margin-right: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c4.disabled {
+  color: text.disabled;
+  cursor: not-allowed;
+}
+
+.c4:last-of-type {
+  margin-right: 0;
+}
+
+.c5 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 2rem;
+  display: block;
+  background: white;
+}
+
+.c6 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 2rem;
+  display: none;
+  background: white;
+}
+
+.c1 {
+  border-bottom: light;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+  position: relative;
+  bottom: -1px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0 anchor-tabs"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 anchor-tabs-header"
+    >
+      <div
+        className="c3 anchor-tabs-header-item active"
+        onClick={[Function]}
+      />
+      <div
+        className="c4 anchor-tabs-header-item"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="c5 anchor-tabs-pane anchor-tabs-panel active"
+  >
+    Test 1
+  </div>
+  <div
+    className="c6 anchor-tabs-pane anchor-tabs-panel"
+  >
+    Test 2
+  </div>
+</div>
+`;
