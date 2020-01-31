@@ -35,7 +35,17 @@ const data = {
 const subject = themeMerge(data, RootTheme);
 
 describe('theme: themeMerge()', () => {
-    it('should have all root keys from RootTheme', () => {
+    it('should default to RootTheme if no baseTheme is passed', () => {
+        const testingDefault = themeMerge(data);
+
+        for (const key in RootTheme) {
+            if (RootTheme[key]) {
+                expect(testingDefault.hasOwnProperty(key)).toBe(true);
+            }
+        }
+    });
+
+    it('should have all root keys from baseTheme', () => {
         for (const key in RootTheme) {
             if (RootTheme[key]) {
                 expect(subject.hasOwnProperty(key)).toBe(true);
