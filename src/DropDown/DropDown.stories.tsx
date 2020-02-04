@@ -159,4 +159,48 @@ storiesOf('Components/DropDown', module)
                 </Grid>
             </StyledStory>
         </ThemeProvider>
+    ))
+    .add('Resize Demo', () => (
+        <ThemeProvider theme={RootTheme}>
+            <StyledStory>
+                <Typography tag="h1">DropDown</Typography>
+                <DropDown
+                    overlay={<MockList />}
+                    position={select<Position>(
+                        'position',
+                        [
+                            'topStart',
+                            'top',
+                            'topEnd',
+                            'rightStart',
+                            'right',
+                            'rightEnd',
+                            'bottomEnd',
+                            'bottom',
+                            'bottomStart',
+                            'leftEnd',
+                            'left',
+                            'leftStart',
+                        ],
+                        'bottom'
+                    )}
+                    trigger={select<Trigger>(
+                        'trigger',
+                        ['click', 'hover', 'both'],
+                        'hover'
+                    )}
+                    showArrow={boolean('showArrow', true)}
+                    shadow={text('shadow', '') || undefined}
+                    background={text('background', '') || undefined}
+                    border={text('border', '') || undefined}
+                    borderRadius={text('borderRadius', '') || undefined}
+                    arrowIndent={text('arrowIndent', '') || undefined}
+                    arrowSize={text('arrowSize', '') || undefined}
+                    spacing={text('spacing', '') || undefined}
+                    debug={boolean('Debug', false)}
+                >
+                    <textarea defaultValue={text('Text', 'Resize me')} />
+                </DropDown>
+            </StyledStory>
+        </ThemeProvider>
     ));

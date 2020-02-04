@@ -158,7 +158,11 @@ export class DropDown extends React.Component<DropDownProps> {
             escapeKey$.pipe(mapTo(false)),
             dropDownClick$.pipe(map(() => !this.state.clicked))
         ).subscribe(clicked => {
-            this.setState({ clicked });
+            this.setState(({ height, width }: DropDownState) => ({
+                clicked,
+                height: clicked ? get(dropDown, 'clientHeight', 0) : height,
+                width: clicked ? get(dropDown, 'clientWidth', 0) : width,
+            }));
             if (this.props.onTriggered) {
                 this.props.onTriggered(clicked);
             }
@@ -179,7 +183,12 @@ export class DropDown extends React.Component<DropDownProps> {
                 distinctUntilChanged()
             )
             .subscribe(hovered => {
-                this.setState({ hovered });
+                this.setState(({ height, width }: DropDownState) => ({
+                    hovered,
+                    height: hovered ? get(dropDown, 'clientHeight', 0) : height,
+                    width: hovered ? get(dropDown, 'clientWidth', 0) : width,
+                }));
+
                 if (this.props.onTriggered) {
                     this.props.onTriggered(hovered);
                 }

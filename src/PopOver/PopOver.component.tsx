@@ -1,6 +1,7 @@
 // VENDOR
 import * as React from 'react';
 import styled from '@xstyled/styled-components';
+import { DisplayProps, display as displayStyles } from '@xstyled/system';
 import classNames from 'classnames';
 // COMPONENTS
 import { Position } from '../utils/position/position';
@@ -8,7 +9,9 @@ import { PositionContainer } from '../utils/PositionContainer';
 // UTILS
 import { get } from '../utils/get/get';
 
-interface PopOverContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface PopOverContainerProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        DisplayProps {
     arrowIndent?: string;
     arrowSize?: string;
     background?: string;
@@ -33,8 +36,15 @@ interface PopOverContainerState {
     containerWidth: number;
 }
 
-const StyledPopOver = styled('div')`
+interface StyledPopOverProps extends DisplayProps {}
+
+const StyledPopOver = styled('div')<StyledPopOverProps>`
+    ${displayStyles}
     position: relative;
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 `;
 
 export class PopOver extends React.PureComponent<
@@ -70,10 +80,12 @@ export class PopOver extends React.PureComponent<
             showArrow: prevShowArrow,
             position: prevPosition,
             spacing: prevSpacing,
+            active: prevActive,
         } = prevProps;
-        const { showArrow, position, spacing } = this.props;
+        const { showArrow, position, spacing, active } = this.props;
 
         if (
+            (active && !prevActive) ||
             showArrow !== prevShowArrow ||
             position !== prevPosition ||
             spacing !== prevSpacing
@@ -110,6 +122,7 @@ export class PopOver extends React.PureComponent<
             maxWidth,
             position = 'bottomStart',
             showArrow,
+            display = 'inline-block',
             active,
             ...props
         } = this.props;
@@ -117,6 +130,7 @@ export class PopOver extends React.PureComponent<
         return (
             <StyledPopOver
                 className={classNames('anchor-pop-over', className)}
+                display={display}
                 {...props}
                 ref={this.popOverRef}
             >

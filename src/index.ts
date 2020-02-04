@@ -31,4 +31,5 @@ export { Skeleton } from './Skeleton';
 export { Pagination } from './Pagination';
 export { Modal, BaseModalBackground, ModalProvider } from './Modal';
 export { Input, Toggle, Radio, Checkbox, ControlLabel } from './Form';
+export { themeMerge } from './utils';
 export * from './Icon';
