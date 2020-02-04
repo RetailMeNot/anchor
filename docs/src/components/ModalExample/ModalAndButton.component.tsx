@@ -29,7 +29,7 @@ export const ModalAndButton = () => {
                 </Header>
 
                 <Content>
-                    <Typography tag="h3">Hello World!</Typography>
+                    <Typography as="h3">Hello World!</Typography>
                 </Content>
 
                 <Footer>

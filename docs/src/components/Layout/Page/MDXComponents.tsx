@@ -31,16 +31,16 @@ const Components: any = {};
 Components.code = (props: any) => <CodePreview {...props} />;
 Components.wrapper = (props: any) => <React.Fragment {...props} />;
 Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
-Components.pre = (props: any) => <Typography tag="pre" {...props} />;
-Components.p = (props: any) => <Typography tag="p" pb="4" {...props} />;
+Components.pre = (props: any) => <Typography as="pre" {...props} />;
+Components.p = (props: any) => <Typography as="p" pb="4" {...props} />;
 Components.a = (props: any) => (
-    <Typography color="primary.base" tag="a" {...props} />
+    <Typography color="primary.base" as="a" {...props} />
 );
 Components.blockquote = (props: any) => (
-    <Typography tag="blockquote" {...props} />
+    <Typography as="blockquote" {...props} />
 );
 Components.strong = (props: any) => (
-    <Typography weight={600} tag="strong" {...props} />
+    <Typography weight={600} as="strong" {...props} />
 );
 Components.ul = (props: any) => <ul {...props} />;
 Components.ol = (props: any) => <ol {...props} />;
@@ -55,7 +55,7 @@ Components.h1 = ({ children, ...props }: any) => (
     <Typography
         id={`${children}`.toLowerCase()}
         weight={600}
-        tag="h1"
+        as="h1"
         {...props}
         children={children}
         pb="3"
@@ -64,7 +64,7 @@ Components.h1 = ({ children, ...props }: any) => (
 Components.h2 = ({ children, ...props }: any) => (
     <>
         <Typography
-            tag="a"
+            as="a"
             name={children
                 .split(' ')
                 .join('-')
@@ -73,7 +73,7 @@ Components.h2 = ({ children, ...props }: any) => (
         <Typography
             id={`${children.split(' ').join('-')}`.toLowerCase()}
             weight={600}
-            tag="h2"
+            as="h2"
             lineHeight={2.3}
             {...props}
             children={children}
@@ -84,7 +84,7 @@ Components.h2 = ({ children, ...props }: any) => (
 Components.h3 = ({ children, ...props }: any) => (
     <>
         <Typography
-            tag="a"
+            as="a"
             name={children
                 .split(' ')
                 .join('-')
@@ -93,7 +93,7 @@ Components.h3 = ({ children, ...props }: any) => (
         <Typography
             id={`${children.split(' ').join('-')}`.toLowerCase()}
             weight={600}
-            tag="h3"
+            as="h3"
             lineHeight={2.5}
             {...props}
             children={children}
@@ -104,7 +104,7 @@ Components.h3 = ({ children, ...props }: any) => (
 Components.h4 = ({ children, ...props }: any) => (
     <>
         <Typography
-            tag="a"
+            as="a"
             name={children
                 .split(' ')
                 .join('-')
@@ -113,7 +113,7 @@ Components.h4 = ({ children, ...props }: any) => (
         <Typography
             id={`${children.split(' ').join('-')}`.toLowerCase()}
             weight={600}
-            tag="h4"
+            as="h4"
             {...props}
             children={children}
         />
@@ -122,7 +122,7 @@ Components.h4 = ({ children, ...props }: any) => (
 Components.h5 = ({ children, ...props }: any) => (
     <>
         <Typography
-            tag="a"
+            as="a"
             name={children
                 .split(' ')
                 .join('-')
@@ -131,7 +131,7 @@ Components.h5 = ({ children, ...props }: any) => (
         <Typography
             id={`${children.split(' ').join('-')}`.toLowerCase()}
             weight={600}
-            tag="h5"
+            as="h5"
             {...props}
             children={children}
         />
@@ -140,7 +140,7 @@ Components.h5 = ({ children, ...props }: any) => (
 Components.h6 = ({ children, ...props }: any) => (
     <>
         <Typography
-            tag="a"
+            as="a"
             name={children
                 .split(' ')
                 .join('-')
@@ -149,7 +149,7 @@ Components.h6 = ({ children, ...props }: any) => (
         <Typography
             id={`${children.split(' ').join('-')}`.toLowerCase()}
             weight={600}
-            tag="h6"
+            as="h6"
             mb="1"
             {...props}
             children={children}

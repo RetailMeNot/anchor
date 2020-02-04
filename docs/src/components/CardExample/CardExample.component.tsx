@@ -10,11 +10,11 @@ import { BottomArea, MoreInfo } from './index';
 
 export const CardExample = () => (
     <Card actionArea={<BottomArea />} action={<MoreInfo />} gutter="medium">
-        <Typography tag="h3" mt="1">
+        <Typography as="h3" mt="1">
             I am the content of the card.
         </Typography>
 
-        <Typography tag="p">
+        <Typography as="p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
             semper leo sit amet nibh ornare, sed condimentum libero rutrum.
         </Typography>

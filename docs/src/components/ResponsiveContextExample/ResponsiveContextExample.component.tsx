@@ -19,13 +19,13 @@ export const ResponsiveContextExample = () => {
 
     return (
         <StyledResponsiveContextExample>
-            <Typography tag="p" pb="2" weight={600}>
+            <Typography as="p" pb="2" weight={600}>
                 breakpointKeys: {breakpointKeys}
             </Typography>
-            <Typography tag="p" pb="2" weight={600}>
+            <Typography as="p" pb="2" weight={600}>
                 current: {current}
             </Typography>
-            <Typography tag="p" pb="2" weight={600}>
+            <Typography as="p" pb="2" weight={600}>
                 innerWidth: {innerWidth}
             </Typography>
         </StyledResponsiveContextExample>

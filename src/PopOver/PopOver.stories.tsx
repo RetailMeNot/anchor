@@ -8,7 +8,7 @@ import { select, boolean, text, number } from '@storybook/addon-knobs';
 import { RootTheme } from '../../src/theme';
 import { PopOver } from './PopOver.component';
 import { Position } from '../utils/position/position';
-import { Typography, TypographyProps } from '../Typography';
+import { Typography, TypographyProps } from '../Typography/Typography.component';
 import { Button } from '../Button';
 
 const StyledStory = styled('div')`
@@ -108,7 +108,7 @@ storiesOf('Components/PopOver', module)
     .add('Resizeable', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h1">PopOver</Typography>
+                <Typography as="h1">PopOver</Typography>
                 <PopOver
                     active={boolean('Active', true)}
                     delay={text('Animation Delay', '') || undefined}

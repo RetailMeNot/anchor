@@ -70,7 +70,7 @@ export const ComponentInfo = ({
                 : 'No Description';
 
         return (
-            <Typography tag="p">
+            <Typography as="p">
                 {description.replace(tooManySpaces, ' ')}
             </Typography>
         );
@@ -91,7 +91,7 @@ export const ComponentInfo = ({
                                     {component.title}
                                 </TitleLink>
 
-                                <Typography tag="p">
+                                <Typography as="p">
                                     {component.description.replace(
                                         tooManySpaces,
                                         ' '
@@ -108,5 +108,5 @@ export const ComponentInfo = ({
         );
     }
 
-    return <Typography tag="span">title is a required field.</Typography>;
+    return <Typography as="span">title is a required field.</Typography>;
 };

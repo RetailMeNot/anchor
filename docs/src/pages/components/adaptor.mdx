@@ -24,17 +24,17 @@ example below, the values being used are what is shipped as the defaults from **
 <ThemeProvider theme={RootTheme}>
     <ResponsiveProvider debug>
         <Adaptor from="lg">
-            <Typography tag="p" pb="3">
+            <Typography as="p" pb="3">
                 Visible from the 'lg' breakpoint on up.
             </Typography>
         </Adaptor>
         <Adaptor from="md" to="xxl">
-            <Typography tag="p" pb="3">
+            <Typography as="p" pb="3">
                 Visible from the 'md' breakpoint until 'xxl'.
             </Typography>
         </Adaptor>
         <Adaptor minWidth="500px">
-            <Typography tag="p" pb="3">
+            <Typography as="p" pb="3">
                 Visible from '500px' on up.
             </Typography>
         </Adaptor>

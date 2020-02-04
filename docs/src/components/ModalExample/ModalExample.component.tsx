@@ -23,12 +23,12 @@ const StyledModalExample = styled.div`
 export const ModalExample = () => (
     <ModalProvider>
         <StyledModalExample>
-            <Typography tag="h2" mt="0">
+            <Typography as="h2" mt="0">
                 An Example Page
             </Typography>
 
             <section>
-                <Typography tag="p" pb="2">
+                <Typography as="p" pb="2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc tempor ante quis mauris hendrerit, sed egestas nulla
                     porttitor. Pellentesque habitant morbi tristique senectus et

@@ -32,7 +32,7 @@ export const IconList = () => (
     <StyledIconList>
         {iconKeys.map(key => (
             <div className="cell" key={`cell-${key}`}>
-                <IconTitle tag="h6">{key}</IconTitle>
+                <IconTitle as="h6">{key}</IconTitle>
                 {React.createElement(Icons[key], {})}
             </div>
         ))}
