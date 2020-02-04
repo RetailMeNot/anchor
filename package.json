@@ -41,7 +41,7 @@
     "build:modules": "rollup -c rollup.config.js",
     "ci": "concurrently --names 'lint,test' 'npm run lint' 'npm run test'",
     "prepublishOnly": "npm run build",
-    "lint": "concurrently --names 'pretty,eslint' 'npm run pretty' 'npm run eslint --quiet'",
+    "lint": "concurrently --names 'pretty,eslint' 'npm run pretty' 'npm run eslint -- --quiet'",
     "pretty": "prettier --config .prettierrc --write \"./src/**/*.{tsx,ts}\"",
     "eslint": "eslint ./src/**/*.{tsx,ts} --fix",
     "static": "",
