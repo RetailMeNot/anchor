@@ -19,7 +19,7 @@ Skeleton text observes font styles (font-size, line-height, etc) because it is i
 In practice that means you'll probably want to use it with the Skeleton inside your typographical element like so:
 
 ```jsx
-<Typography tag="h2">
+<Typography as="h2">
     <Skeleton>I'm the text the skeleton will cover</Skeleton>
 </Typography>
 ```

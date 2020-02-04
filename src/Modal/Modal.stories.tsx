@@ -70,7 +70,7 @@ storiesOf('Components/Modal', module)
             <ThemeProvider theme={RootTheme}>
                 <ModalProvider>
                     <StyledStory>
-                        <Typography tag="h5">Click this button!</Typography>
+                        <Typography as="h5">Click this button!</Typography>
                         <OpenModalButton />
                     </StyledStory>
                 </ModalProvider>
@@ -229,14 +229,14 @@ storiesOf('Components/Modal', module)
                         <Close reverse onClick={() => setIsOpen(false)} />
                         <Content>
                             <Typography
-                                tag="h2"
+                                as="h2"
                                 scale={24}
                                 weight={600}
                                 align="center"
                             >
                                 Customized Example
                             </Typography>
-                            <Typography tag="p" align="center">
+                            <Typography as="p" align="center">
                                 With some other text
                             </Typography>
                         </Content>

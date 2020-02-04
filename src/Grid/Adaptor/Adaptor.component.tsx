@@ -6,7 +6,7 @@ import Responsive from 'react-responsive';
 import { ResponsiveContext } from '../ResponsiveProvider';
 
 interface AdaptorProps {
-    // The from & to props provide a layer of abstraction that allows the user to provid their
+    // The from & to props provide a layer of abstraction that allows the user to provide their
     // named breakpoints instead of a hard number from minWidth and maxWidth, respectively.
     from?: string;
     to?: string;
@@ -39,7 +39,7 @@ export const Adaptor = ({ from, to, ...props }: AdaptorProps) => {
     };
 
     if ((from !== undefined || to !== undefined) && !breakpoints.length) {
-        // tslint:disable-next-line: no-console
+        /* eslint-disable-next-line */
         console.warn(
             `When using the 'from' and/or 'to' props, the ResponsiveProvider must also be used.`
         );
@@ -47,7 +47,7 @@ export const Adaptor = ({ from, to, ...props }: AdaptorProps) => {
     }
 
     if (from === undefined && to !== undefined) {
-        // tslint:disable-next-line: no-console
+        /* eslint-disable-next-line */
         console.warn(
             `Although the 'from' prop can be used by itself, the 'to' prop requires 'from' to also exist`
         );

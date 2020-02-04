@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import styled from '@xstyled/styled-components';
 import classnames from 'classnames';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
 export const StyledContent = styled.div<ModalContentProps>`
     box-sizing: border-box;
@@ -10,9 +11,10 @@ export const StyledContent = styled.div<ModalContentProps>`
 
     order: 0;
     flex-grow: 1;
+    ${spaceStyles}
 `;
 
-export interface ModalContentProps {
+export interface ModalContentProps extends SpaceProps {
     children?: any;
     className?: string;
 }

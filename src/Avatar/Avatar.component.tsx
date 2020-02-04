@@ -1,10 +1,11 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
 
-interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AvatarProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     className?: string;
     // Configuration
     label?: string;
@@ -12,7 +13,7 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     alt?: string;
 }
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
     <svg
         width="36"
@@ -26,7 +27,7 @@ const DefaultAvatar: React.FunctionComponent<AvatarProps> = () => (
         />
     </svg>
 );
-/* tslint:enable max-line-length */
+/* eslint-enable max-len */
 
 const StyledAvatar = styled('div')<AvatarProps>`
     border: solid 0.1875rem rgba(255, 255, 255, 0.4);
@@ -42,6 +43,7 @@ const StyledAvatar = styled('div')<AvatarProps>`
         height: 1.5rem;
         margin-bottom: -0.375rem;
     }
+    ${spaceStyles}
 `;
 
 const InnerBorder = styled('div')`

@@ -57,7 +57,7 @@ storiesOf('Components/Icon', module)
                         {Object.keys(Icon).map((iconKey: string) => (
                             <StyledCell key={iconKey}>
                                 <Typography
-                                    tag="p"
+                                    as="p"
                                     scale={14}
                                     mb="0.5rem"
                                     weight={500}

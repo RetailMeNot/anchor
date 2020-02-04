@@ -26,7 +26,16 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   background: #F1F1F1;
 }
 
-.c3 {
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,6 +49,168 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.c2 small {
+  font-size: 87.5%;
+}
+
+.c2 .item-prefix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+}
+
+.c2 .item-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 4 1 auto;
+  -ms-flex: 4 1 auto;
+  flex: 4 1 auto;
+}
+
+.c2 .item-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 0;
+  -ms-flex: 0 0 0;
+  flex: 0 0 0;
+  text-align: right;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2.lg {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.c2.sm {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.c0 {
+  background-color: white;
+  position: absolute;
+  width: inherit;
+  z-index: 3;
+  box-sizing: border-box;
+  box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0,0,0,0.2);
+  border-radius: 0 0 4px 4px;
+  padding: 1rem;
+  top: 3.25rem;
+}
+
+<div
+  className="c0 anchor-auto-complete-results-container"
+>
+  <div
+    className="auto-complete-results"
+  >
+    <a
+      className="c1 anchor-list-item"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span
+        className="sc-LzLte c2 lg anchor-typography"
+      >
+        Result Item 1
+      </span>
+    </a>
+    <a
+      className="c1 anchor-list-item"
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <span
+        className="sc-LzLte c2 lg anchor-typography"
+      >
+        Result Item 2
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Component: ResultsContainer should be defined 1`] = `
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  -webkit-transition: background 500ms;
+  transition: background 500ms;
+  background: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  min-height: 2.75rem;
+}
+
+.c2:hover {
+  background: #FAFAFA;
+}
+
+.c2.active {
+  background: #F1F1F1;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c3 .item-prefix {
@@ -99,199 +270,10 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
   font-weight: 500;
 }
 
-.c0 {
-  background-color: white;
-  position: absolute;
-  width: inherit;
-  z-index: 3;
-  box-sizing: border-box;
-  box-shadow: 0 0.5rem 0.75rem -0.375rem rgba(0,0,0,0.2);
-  border-radius: 0 0 4px 4px;
-  padding: 1rem;
-  top: 3.25rem;
-}
-
-.c2 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c2 small {
-  font-size: 87.5%;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c4 small {
-  font-size: 87.5%;
-}
-
-<div
-  className="c0 anchor-auto-complete-results-container"
->
-  <div
-    className="auto-complete-results"
-  >
-    <a
-      className="c1 anchor-list-item"
-      onMouseDown={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-    >
-      <span
-        className="c2 anchor-typography c3 lg"
-      >
-        Result Item 1
-      </span>
-    </a>
-    <a
-      className="c1 anchor-list-item"
-      onMouseDown={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-    >
-      <span
-        className="c4 anchor-typography c3 lg"
-      >
-        Result Item 2
-      </span>
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Component: ResultsContainer should be defined 1`] = `
-.c2 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-transition: background 500ms;
-  transition: background 500ms;
-  background: white;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  min-height: 2.75rem;
-}
-
-.c2:hover {
-  background: #FAFAFA;
-}
-
-.c2.active {
-  background: #F1F1F1;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.c4 .item-prefix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 0;
-  -ms-flex: 0 0 0;
-  flex: 0 0 0;
-}
-
-.c4 .item-main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 4 1 auto;
-  -ms-flex: 4 1 auto;
-  flex: 4 1 auto;
-}
-
-.c4 .item-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 0;
-  -ms-flex: 0 0 0;
-  flex: 0 0 0;
-  text-align: right;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c4.lg {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.c4.sm {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
 .c1 {
   box-sizing: border-box;
 }
 
-.c1 .anchor-list-title {
-  margin-top: 0.75rem;
-}
-
-.c1 .anchor-list-item {
-  margin-bottom: 0.25rem;
-}
-
-.c1 .anchor-list-item + .anchor-list-title {
-  margin-top: 0.5rem;
-}
-
 .c0 {
   background-color: white;
   position: absolute;
@@ -302,38 +284,6 @@ exports[`Component: ResultsContainer should be defined 1`] = `
   border-radius: 0 0 4px 4px;
   padding: 1rem;
   top: 3.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
-}
-
-.c5 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c5 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -350,7 +300,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c3 anchor-typography c4 lg"
+        className="sc-LzLte c3 lg anchor-typography"
       >
         Result Item 1
       </span>
@@ -363,7 +313,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="c5 anchor-typography c4 lg"
+        className="sc-LzLte c3 lg anchor-typography"
       >
         Result Item 2
       </span>

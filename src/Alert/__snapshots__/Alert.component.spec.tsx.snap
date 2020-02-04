@@ -2,7 +2,23 @@
 
 exports[`Component: Alert should match its snapshot. 1`] = `
 Array [
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -44,22 +60,6 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
@@ -76,6 +76,22 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -139,22 +155,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -203,7 +203,23 @@ Array [
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -245,22 +261,6 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
@@ -277,6 +277,22 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -340,22 +356,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -404,7 +404,23 @@ Array [
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -446,22 +462,6 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
@@ -478,6 +478,22 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -541,22 +557,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div
@@ -601,7 +601,23 @@ Array [
       </div>
     </div>
   </div>,
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
+.c0 {
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -643,22 +659,6 @@ Array [
   padding-bottom: 0;
 }
 
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c1 small {
-  font-size: 87.5%;
-}
-
 <div
     className="c0 anchor-alert"
     title="Test Title"
@@ -675,6 +675,22 @@ Array [
   width: 1rem;
   line-height: 0;
   color: currentColor;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  color: #595959;
+}
+
+.c3 small {
+  font-size: 87.5%;
 }
 
 .c0 {
@@ -738,22 +754,6 @@ Array [
   -ms-flex: 0 0 0;
   flex: 0 0 0;
   padding: 0 0.5rem 0 0;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  color: #595959;
-}
-
-.c3 small {
-  font-size: 87.5%;
 }
 
 <div

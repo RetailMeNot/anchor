@@ -83,7 +83,7 @@ storiesOf('Components/Button', module)
         return (
             <ThemeProvider theme={RootTheme}>
                 <StyledStoryPrime>
-                    <Typography tag="h2" weight={'bold'}>
+                    <Typography as="h2" weight={'bold'}>
                         Filled Buttons
                     </Typography>
 
@@ -374,7 +374,7 @@ storiesOf('Components/Button', module)
     .add('Outline', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStoryPrime>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Outline Buttons
                 </Typography>
 
@@ -627,7 +627,7 @@ storiesOf('Components/Button', module)
     .add('Minimal', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStoryPrime>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Minimal Buttons
                 </Typography>
 
@@ -889,7 +889,7 @@ storiesOf('Components/Button', module)
     .add('Icons', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStoryPrime>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Icons Only Buttons
                 </Typography>
 
@@ -1133,7 +1133,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Filled', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledReverseStory>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Filled Buttons
                 </Typography>
 
@@ -1348,7 +1348,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Outline', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledReverseStory>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Outline Buttons
                 </Typography>
 
@@ -1597,7 +1597,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Minimal', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledReverseStory>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Minimal Buttons
                 </Typography>
 
@@ -1846,7 +1846,7 @@ storiesOf('Components/Button', module)
     .add('Reverse | Icons', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledReverseStory>
-                <Typography tag="h2" weight={'bold'}>
+                <Typography as="h2" weight={'bold'}>
                     Icon Only Buttons
                 </Typography>
 
@@ -2119,7 +2119,7 @@ storiesOf('Components/Button', module)
         return (
             <ThemeProvider theme={RootTheme}>
                 <StoryComponent>
-                    <Typography tag="h2" weight={'bold'}>
+                    <Typography as="h2" weight={'bold'}>
                         Configure me
                     </Typography>
                     {Array.from(Array(numberOfButtons)).map((x, i) => (
@@ -2190,7 +2190,7 @@ storiesOf('Components/Button', module)
         return (
             <ThemeProvider theme={object('theme', RootTheme)}>
                 <StoryComponent>
-                    <Typography tag="h2" weight={'bold'}>
+                    <Typography as="h2" weight={'bold'}>
                         Configure me
                     </Typography>
                     {Array.from(Array(numberOfButtons)).map((x, i) => (

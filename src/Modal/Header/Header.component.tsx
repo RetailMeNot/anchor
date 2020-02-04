@@ -3,6 +3,7 @@ import * as React from 'react';
 // VENDOR
 import styled, { css } from '@xstyled/styled-components';
 import classnames from 'classnames';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // ANCHOR
 import { Typography } from '../../Typography';
 import { StyledContent } from '../Content/Content.component';
@@ -31,9 +32,11 @@ export const StyledHeader = styled('div')<ModalHeaderProps>`
     & ~ ${StyledContent}${StyledContent} {
         padding-top: 0;
     }
+
+    ${spaceStyles}
 `;
 
-export interface ModalHeaderProps {
+export interface ModalHeaderProps extends SpaceProps {
     children?: any;
     className?: string;
     title?: string;

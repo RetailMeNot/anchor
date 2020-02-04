@@ -113,8 +113,8 @@ storiesOf('Components/Collapse', module)
         return (
             <ThemeProvider theme={RootTheme}>
                 <section>
-                    <Typography tag="h2">CollapseGroup Example</Typography>
-                    <Typography tag="p">
+                    <Typography as="h2">CollapseGroup Example</Typography>
+                    <Typography as="p">
                         Adjusting Knobs for CollapseGroup will apply settings to
                         Collapse child components.
                     </Typography>

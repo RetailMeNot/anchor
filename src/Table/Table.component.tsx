@@ -5,8 +5,6 @@ import styled, { css } from '@xstyled/styled-components';
 import {
     th,
     variant as createVariant,
-    margin as marginStyles,
-    MarginProps,
     width as widthStyles,
     WidthProps,
     height as heightStyles,
@@ -15,8 +13,6 @@ import {
     MaxWidthProps,
     minWidth as minWidthStyles,
     MinWidthProps,
-    padding as paddingStyles,
-    PaddingProps,
     textAlign as textAlignStyles,
     TextAlignProps,
     fontSize as fontSizeStyles,
@@ -28,6 +24,8 @@ import {
     borderRadius as borderRadiusStyles,
     BorderProps,
     border as borderStyles,
+    space as spaceStyles,
+    SpaceProps,
 } from '@xstyled/system';
 
 interface SizeTheme {
@@ -61,10 +59,10 @@ interface TableProps
         FontWeightProps,
         BorderRadiusProps,
         BorderProps,
-        MarginProps,
         WidthProps,
         MaxWidthProps,
-        MinWidthProps {
+        MinWidthProps,
+        SpaceProps {
     borderRadius?: string;
     background?: string;
     altBackground?: string;
@@ -77,7 +75,6 @@ const StyledTable = styled('table')<TableProps>`
 
     ${sizeVariantStyles}
     ${borderStyles}
-    ${marginStyles}
     ${widthStyles}
     ${maxWidthStyles}
     ${minWidthStyles}
@@ -85,6 +82,7 @@ const StyledTable = styled('table')<TableProps>`
     ${colorStyles}
     ${fontWeightStyles}
     ${fontSizeStyles}
+    ${spaceStyles}
     ${({ background }) => css({ background: th.color(background) })}
 
     tbody tr:nth-child(odd) {
@@ -121,16 +119,14 @@ Table.defaultProps = {
 interface TableRowProps
     extends React.HTMLAttributes<HTMLTableRowElement>,
         HeightProps,
-        MarginProps,
-        PaddingProps {
+        SpaceProps {
     background?: string;
 }
 
 const StyledRow = styled('tr')<TableRowProps>`
     ${heightStyles}
-    ${marginStyles}
-    ${paddingStyles}
     ${colorStyles}
+    ${spaceStyles}
     ${({ background }) => css({ background: th.color(background) })}
 `;
 
@@ -211,8 +207,8 @@ interface TableCellProps
         WidthProps,
         MaxWidthProps,
         MinWidthProps,
-        PaddingProps,
-        HeightProps {
+        HeightProps,
+        SpaceProps {
     align?: 'center' | 'left' | 'right';
 }
 
@@ -221,10 +217,10 @@ const StyledTd = styled('td')<TableCellProps>`
     ${widthStyles}
     ${maxWidthStyles}
     ${minWidthStyles}
-    ${paddingStyles}
     ${fontSizeStyles}
     ${fontWeightStyles}
     ${colorStyles}
+    ${spaceStyles}
     ${({ align }) => textAlignStyles({ textAlign: align })}
 `;
 
@@ -251,8 +247,8 @@ interface TableHeaderCellProps
         WidthProps,
         MaxWidthProps,
         MinWidthProps,
-        PaddingProps,
-        HeightProps {
+        HeightProps,
+        SpaceProps {
     align?: 'center' | 'left' | 'right';
     scope?: string;
 }
@@ -262,10 +258,10 @@ const StyledTh = styled('th')<TableHeaderCellProps>`
     ${widthStyles}
     ${maxWidthStyles}
     ${minWidthStyles}
-    ${paddingStyles}
     ${fontSizeStyles}
     ${fontWeightStyles}
     ${colorStyles}
+    ${spaceStyles}
     ${({ align }) => textAlignStyles({ textAlign: align })}
 `;
 

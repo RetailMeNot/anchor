@@ -27,7 +27,7 @@ export interface TypographyTheme {
     lineHeight: string;
     // FONT TREATMENTS
     scale: { [T in Scale | 'none']: FlattenSimpleInterpolation | {} };
-    tag: { [K in TypographyTags | 'none']: FlattenSimpleInterpolation | {} };
+    as: { [K in TypographyTags | 'none']: FlattenSimpleInterpolation | {} };
 }
 
 export const typography: TypographyTheme = {
@@ -86,7 +86,7 @@ export const typography: TypographyTheme = {
         },
         none: {},
     },
-    tag: {
+    as: {
         a: {
             fontSize: '1rem',
             lineHeight: '1.5rem',

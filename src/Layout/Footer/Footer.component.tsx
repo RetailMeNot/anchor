@@ -63,7 +63,7 @@ interface ItemsType {
     children?: ItemChild[];
 }
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 const FooterLogo = () => (
     <svg
         className="footer-logo"
@@ -138,7 +138,7 @@ const FooterLogo = () => (
         </g>
     </svg>
 );
-/* tslint:enable max-line-length */
+/* eslint-enable max-len */
 
 const defaultLinks: ItemsType[] = [
     {

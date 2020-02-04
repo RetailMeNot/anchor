@@ -19,9 +19,7 @@ enum MenuSizes {
 export type MenuSizeProps = MenuSizes | 'sm' | 'md' | 'lg';
 
 interface MenuProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
-    children?:
-        | Array<React.ReactElement<ItemProps>>
-        | React.ReactElement<ItemProps>;
+    children?: React.ReactElement<ItemProps>[] | React.ReactElement<ItemProps>;
     className?: string;
     size?: MenuSizeProps;
     // Color

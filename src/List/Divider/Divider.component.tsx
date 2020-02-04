@@ -3,8 +3,11 @@ import * as React from 'react';
 // VENDOR
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
-export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface DividerProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        SpaceProps {
     onMouseOver?: (event: React.MouseEvent) => any;
     onMouseOut?: (event: React.MouseEvent) => any;
     onSelect?: (...props: any) => any;
@@ -21,6 +24,7 @@ const StyledDivider = styled('div')<DividerProps>`
         border: none;
         border-top: light;
     }
+    ${spaceStyles}
 `;
 
 export const Divider = ({

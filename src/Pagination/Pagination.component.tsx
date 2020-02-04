@@ -2,6 +2,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import styled from '@xstyled/styled-components';
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 // ANCHOR
 import { Goto } from './Goto';
 import {
@@ -34,7 +35,7 @@ interface RenderProps {
     range: [number, number];
 }
 
-interface PaginationProps {
+interface PaginationProps extends SpaceProps {
     className?: string;
     current?: number;
 
@@ -59,6 +60,8 @@ const StyledPagination = styled('div')`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    ${spaceStyles}
 `;
 
 const AffixWrapper = styled('div')`

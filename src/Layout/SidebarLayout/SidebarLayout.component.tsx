@@ -92,7 +92,7 @@ export const SidebarLayout = ({
             contentWidth={contentWidth}
             contentBackgroundColor={contentBackgroundColor}
         >
-            {/*{sidebarAlign === RIGHT ? (*/}
+            {/* {sidebarAlign === RIGHT ? (*/}
             {/*    <Grid columns={`1fr ${sidebarWidth}`}>*/}
             {/*        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>*/}
             {/*            <Cell width={2}>{children}</Cell>*/}
@@ -102,7 +102,7 @@ export const SidebarLayout = ({
             {/*            <Cell>{sidebar}</Cell>*/}
             {/*        </CustomAdaptor>*/}
             {/*    </Grid>*/}
-            {/*) : (*/}
+            {/* ) : (*/}
             {/*    <Grid columns={`${sidebarWidth} 1fr `}>*/}
             {/*        <CustomAdaptor maxWidth={StandardBreakpoints.sm.max}>*/}
             {/*            <Cell width={2}>{children}</Cell>*/}
@@ -112,7 +112,7 @@ export const SidebarLayout = ({
             {/*            <Cell>{children}</Cell>*/}
             {/*        </CustomAdaptor>*/}
             {/*    </Grid>*/}
-            {/*)}*/}
+            {/* )}*/}
         </StyledContent>
     </StyledLayout>
 );

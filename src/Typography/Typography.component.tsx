@@ -1,12 +1,11 @@
 // REACT
 import * as React from 'react';
 // VENDOR
-import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { th, variant } from '@xstyled/system';
 // ANCHOR
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
-import { TypographyTags, Scale } from '../theme/typography.theme';
+import { Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
 export type FontWeights =
@@ -76,7 +75,6 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
     htmlFor?: string;
     href?: string;
     children?: any;
-    tag?: TypographyTags;
     weight?: FontWeights;
     color?: 'inherit' | 'initial' | string;
     scale?: Scale;
@@ -88,9 +86,14 @@ export interface StyledTypographyProps extends TypographyProps {
     $color?: 'inherit' | 'initial' | string;
 }
 
-const StyledTypography = (tag: TypographyTags) => styled(tag)<
-    StyledTypographyProps
->`
+export const Typography = styled('span').attrs<TypographyProps>(
+    ({ color }) => ({
+        $color: color,
+        color: undefined,
+        className: 'anchor-typography',
+    })
+)<StyledTypographyProps>`
+
     box-sizing: border-box;
     margin: 0;
 
@@ -104,9 +107,9 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
             textAlign: 'inherit',
             color: 'inherit',
             ...variant({
-                key: 'typography.tag',
+                key: 'typography.as',
                 default: 'none',
-                prop: 'tag',
+                prop: 'as',
             })(props),
             ...variant({
                 key: 'typography.scale',
@@ -135,18 +138,3 @@ const StyledTypography = (tag: TypographyTags) => styled(tag)<
         font-size: 87.5%;
     }
 `;
-
-export const Typography = ({
-    className,
-    children,
-    tag = 'span',
-    color,
-    ...props
-}: TypographyProps): JSX.Element =>
-    React.createElement(StyledTypography(tag), {
-        children,
-        tag,
-        $color: color,
-        className: classNames('anchor-typography', className),
-        ...props,
-    });

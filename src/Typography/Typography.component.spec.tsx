@@ -1,12 +1,11 @@
-// REACT
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-// VENDOR
 import { mount } from 'enzyme';
 import { Typography } from './Typography.component';
-// COMPONENT
+import styled, { ThemeProvider } from '@xstyled/styled-components';
+// ANCHOR
 import { RootTheme } from '../theme';
-import { ThemeProvider } from '@xstyled/styled-components';
 
 describe('Component: Typography', () => {
     it('match its snapshot', () => {
@@ -36,7 +35,7 @@ describe('Component: Typography', () => {
             expect(
                 mount(
                     <ThemeProvider theme={RootTheme}>
-                        <Typography tag={element}>Test text</Typography>
+                        <Typography as={element}>Test text</Typography>
                     </ThemeProvider>
                 ).exists(element)
             ).toBeTruthy();
@@ -75,6 +74,56 @@ describe('Component: Typography', () => {
                 <Typography display="block">Text</Typography>
             </ThemeProvider>
         );
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+    it('should be extendable via styled', () => {
+        const RedText = styled(Typography)`
+            color: red;
+        `;
+
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <RedText>I should be red!</RedText>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should be extendable via styled', () => {
+        const RedText = styled(Typography)`
+            color: red;
+        `;
+
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <RedText as="h1">I should be an h1 and be red!</RedText>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should be allow for custom classNames to be added', () => {
+        const RedText = styled(Typography)`
+            color: red;
+        `;
+
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography className="customClass">
+                    Typography customClass
+                </Typography>
+                <RedText className="customClass">RedText customClass</RedText>
+                <RedText as="h1" className="customClass">
+                    RedText h1 customClass
+                </RedText>
+            </ThemeProvider>
+        );
+
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });

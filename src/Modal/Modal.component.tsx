@@ -3,7 +3,7 @@ import * as React from 'react';
 // VENDOR
 import * as StyledReactModal from 'styled-react-modal';
 import styled, { css } from '@xstyled/styled-components';
-import { th } from '@xstyled/system';
+import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classnames from 'classnames';
 // COMPONENTS
 import { ModalHeader, StyledHeader } from './Header';
@@ -25,8 +25,6 @@ const StyledModal = StyledReactModal.default.styled`
     width: ${({ width, size = defaultSize }: ModalProps) =>
         width || `${Sizes[size].width}rem`};
     height: ${({ height = '42.375rem' }: ModalProps) => height};
-    margin: ${({ margin = 'auto' }: ModalProps) => margin};
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -68,15 +66,15 @@ const StyledModal = StyledReactModal.default.styled`
         min-height: ${({ size = defaultSize }: ModalProps) =>
             Sizes[size].footerHeight}rem;
     }
+    ${spaceStyles}
 `;
 
-interface ModalProps extends StyledReactModal.ModalProps {
+interface ModalProps extends StyledReactModal.ModalProps, SpaceProps {
     size?: ModalSize;
     background?: string;
     color?: string;
     width?: string;
     height?: string;
-    margin?: string;
     shadow?: string;
     children?: any;
     className?: string;
@@ -85,11 +83,13 @@ interface ModalProps extends StyledReactModal.ModalProps {
 export const Modal = ({
     children,
     className,
+    margin = 'auto',
     ...props
 }: ModalProps): React.ReactElement<ModalProps> => (
     <StyledModal
         {...{
             className: classnames('anchor-modal', className),
+            margin,
             ...props,
         }}
     >

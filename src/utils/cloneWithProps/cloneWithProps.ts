@@ -10,8 +10,8 @@ import classNames from 'classnames';
 // overriding them
 
 interface Props {
-    className?: any;
     [key: string]: any;
+    className?: any;
 }
 
 export const cloneWithProps = (element: any, props: Props = {}) => {

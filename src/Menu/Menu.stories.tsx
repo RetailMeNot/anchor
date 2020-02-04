@@ -29,9 +29,8 @@ const MockList = () => (
             <ListItem
                 key={key}
                 onClick={() => {
-                    /* tslint:disable no-console */
+                    /* eslint-disable-next-line */
                     console.log(`${label} has been clicked`);
-                    /* tslint:enable no-console */
                 }}
             >
                 {label}
@@ -95,7 +94,7 @@ storiesOf('Components/Menu', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="p">Large</Typography>
+                <Typography as="p">Large</Typography>
                 <Menu size="lg">
                     <Item path="/">Item 1</Item>
                     <Item path="/">Item 2</Item>
@@ -104,10 +103,10 @@ storiesOf('Components/Menu', module)
                     <Item path="/">Item 5</Item>
                     <Item path="/">Item 6</Item>
                 </Menu>
-                <Typography tag="p">Medium</Typography>
+                <Typography as="p">Medium</Typography>
                 {renderDemoMenu()}
                 <br />
-                <Typography tag="p">Small</Typography>
+                <Typography as="p">Small</Typography>
 
                 <Menu size="sm">
                     <Item path="/">Rx Saver</Item>
@@ -118,7 +117,7 @@ storiesOf('Components/Menu', module)
                 </Menu>
 
                 <br />
-                <Typography tag="p">
+                <Typography as="p">
                     Small, Custom Color, &amp; Custom Position
                 </Typography>
 

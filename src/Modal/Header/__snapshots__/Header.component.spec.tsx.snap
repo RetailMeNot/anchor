@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Modal.Header should render with title 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  font-weight: bold;
+}
+
+.c1 small {
+  font-size: 87.5%;
+}
+
 .c0 {
   box-sizing: border-box;
   min-height: 4rem;
@@ -19,24 +35,8 @@ exports[`Component: Modal.Header should render with title 1`] = `
   background-color: white;
 }
 
-.c0 ~ .sc-LzLsE.sc-LzLsE {
+.c0 ~ .sc-LzLsF.sc-LzLsF {
   padding-top: 0;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  text-align: inherit;
-  color: inherit;
-  font-weight: bold;
-}
-
-.c1 small {
-  font-size: 87.5%;
 }
 
 <div

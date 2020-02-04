@@ -506,34 +506,38 @@ export const Button = ({
     const iconOnly =
         (prefix ? !suffix : !!suffix) && React.Children.count(children) === 0;
 
-    /* tslint:disable no-console */
     if (flip && circular) {
+        /* eslint-disable-next-line */
         console.warn(
             "Buttons should not have both 'flip' and 'circular' props."
         );
     }
     if (flip && reverse) {
+        /* eslint-disable-next-line */
         console.warn(
             "Buttons should not have both 'flip' and 'reverse' props."
         );
     }
     if (flip && disabled) {
+        /* eslint-disable-next-line */
         console.warn(
             "Buttons with 'flip' are not meant to be 'disabled'. Did you mean to make it 'revealed'?"
         );
     }
     if (iconOnly && minWidth) {
+        /* eslint-disable-next-line */
         console.warn("Button is icon-only so 'minWidth' prop will be ignored.");
     }
     if (iconOnly && block) {
+        /* eslint-disable-next-line */
         console.warn("Button is icon-only so 'block' prop will be ignored.");
     }
     if (block && minWidth) {
+        /* eslint-disable-next-line */
         console.warn(
             "Button has 'block' prop so 'minWidth' prop will be ignored."
         );
     }
-    /* tslint:enable no-console */
 
     const iconScale = iconOnly
         ? size === 'xs' || (size === 'sm' && variant === 'minimal')

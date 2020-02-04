@@ -28,11 +28,11 @@ storiesOf('Components/Avatar', module)
     .add('Default', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h1">Avatar</Typography>
+                <Typography as="h1">Avatar</Typography>
                 <Avatar />
-                <Typography tag="h1">Avatar With Initials</Typography>
+                <Typography as="h1">Avatar With Initials</Typography>
                 <Avatar label={text('Avatar Initials', 'CC')} />
-                <Typography tag="h1">Avatar With Picture</Typography>
+                <Typography as="h1">Avatar With Picture</Typography>
                 <Avatar
                     src={text(
                         'Avatar Url',

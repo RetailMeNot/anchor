@@ -45,7 +45,7 @@ const StateBasedAutoCompleteStory = () => {
             <StyledStory>
                 <div>
                     <div>
-                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <Typography as="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
                             debug={boolean('debug', false)}
@@ -89,7 +89,7 @@ const StateBasedAutoCompleteStoryCustomResult = () => {
             <StyledStory>
                 <div>
                     <div>
-                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <Typography as="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
                             debug={boolean('debug', false)}
@@ -171,7 +171,7 @@ storiesOf('Components/AutoComplete', module)
             <StyledStory>
                 <div>
                     <div>
-                        <Typography tag="h1">AutoComplete 1</Typography>
+                        <Typography as="h1">AutoComplete 1</Typography>
                         <br />
                         <AutoComplete
                             debug={boolean('debug', false)}

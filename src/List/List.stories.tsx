@@ -28,8 +28,8 @@ storiesOf('Components/List', module)
             <StyledStory>
                 <Typography>List</Typography>
                 <List>
-                    <Title>Title 1</Title>
-                    <Item>Item 1</Item>
+                    <Title p={4}>Title 1</Title>
+                    <Item m={0}>Item 1</Item>
                     <Item>Item 2</Item>
                     <Item>Item 3</Item>
                     <Item>Item 4</Item>
@@ -40,7 +40,7 @@ storiesOf('Components/List', module)
                     <Item>Item 3</Item>
                     <Item>Item 4</Item>
                     <Item>Item 5</Item>
-                    <Divider />
+                    <Divider mb={4} />
                     <Item>Item 4</Item>
                     <Item>Item 4</Item>
                     <Divider />

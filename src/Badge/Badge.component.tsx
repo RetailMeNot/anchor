@@ -1,6 +1,7 @@
 // REACT
 import * as React from 'react';
 // VENDOR
+import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import classNames from 'classnames';
 import styled, {
     css,
@@ -8,7 +9,7 @@ import styled, {
 } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+interface BadgeProps extends React.HTMLAttributes<HTMLDivElement>, SpaceProps {
     backgroundColor?: string;
     borderColor?: string;
     borderColorHover?: string;
@@ -53,6 +54,7 @@ const StyledBadgeContainer = styled('div')<BadgeProps>`
     position: relative;
     font-family: base;
     display: inline-block;
+    ${spaceStyles}
 `;
 
 const StyledBadge = styled('div')<BadgeProps>`

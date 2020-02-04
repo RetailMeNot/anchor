@@ -1,7 +1,7 @@
 // REACT
 import * as React from 'react';
 
-/* tslint:disable max-line-length */
+/* eslint-disable max-len */
 export default () => (
     <svg
         style={{ width: '180px' }}

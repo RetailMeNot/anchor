@@ -14,6 +14,7 @@
 import { RootTheme } from '../../theme';
 
 export type ThemeType = {
+    [key: string]: any;
     typography: object;
     radii: object;
     buttons: object;
@@ -21,7 +22,6 @@ export type ThemeType = {
     colors: object;
     borders: object;
     skeleton: object;
-    [key: string]: any;
 };
 
 // Can't really be 100% sure what data will be as it is cloned, hence :any

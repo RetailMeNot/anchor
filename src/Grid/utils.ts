@@ -120,10 +120,7 @@ export function generateBreakpointCSS(
                 typeof gridSettingValue === 'undefined'
             ) {
                 generalSettings[gridSettingKey] = gridSettingValue;
-            }
-            // Collates styles at the same breakpoint from different props into a single css declaration
-            // tslint:disable-next-line: one-line
-            else if (typeof gridSettingValue === 'object') {
+            } else if (typeof gridSettingValue === 'object') {
                 for (const breakpointKey in gridSettingValue) {
                     if (gridSettingValue[breakpointKey] >= 0) {
                         // 0 is a valid value, no truthiness
@@ -141,7 +138,7 @@ export function generateBreakpointCSS(
         }
     }
 
-    // tslint:disable-next-line: prefer-for-of
+    // eslint-disable-next-line: prefer-for-of
     for (let i = 0; i < sortedBreakpoints.length; i++) {
         for (const breakpointKey in sortedBreakpoints[i]) {
             if (responsiveCSS[breakpointKey] !== undefined) {

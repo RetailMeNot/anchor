@@ -23,7 +23,7 @@ const Test = () => {
 
     return (
         <>
-            <Typography tag="h2">ResponsiveContext</Typography>
+            <Typography as="h2">ResponsiveContext</Typography>
             <Typography pr="2">{current}</Typography> |
             <Typography pl="2">{innerWidth}</Typography>
         </>
@@ -39,14 +39,14 @@ storiesOf('Components/Grid/Adaptor', module)
     .add('Adaptor, Custom Breakpoints', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h4">
+                <Typography as="h4">
                     Use knobs to set custom breakpoints
                 </Typography>
                 <Adaptor
                     minWidth={number('Minimum Width', 1)}
                     maxWidth={number('Maximum Width', 99999)}
                 >
-                    <Typography tag="p" pt="3">
+                    <Typography as="p" pt="3">
                         My dimensions are defined by knobs.
                     </Typography>
                 </Adaptor>
@@ -56,7 +56,7 @@ storiesOf('Components/Grid/Adaptor', module)
     .add('Adaptor, From & To', () => (
         <ThemeProvider theme={RootTheme}>
             <ResponsiveProvider debug>
-                <Typography tag="h2">Resize the Window</Typography>
+                <Typography as="h2">Resize the Window</Typography>
                 <Adaptor from="xs" to="md">
                     <Typography>
                         I only show up between the xs and md breakpoints.

@@ -9,9 +9,9 @@ import { List } from '../../List';
 const { useState, forwardRef, useImperativeHandle } = React;
 
 type DataItem = {
+    [key: string]: any;
     value: any;
     label: string;
-    [key: string]: any;
 };
 
 type EmitSelectedItem = (newItem: DataItem) => void;
@@ -64,7 +64,7 @@ const createResult = (label: string, value?: any): DataItem => ({
     value: value || label,
 });
 
-type ObjectItem = { label: string; [key: string]: any };
+type ObjectItem = { [key: string]: any; label: string };
 
 const generateResults = (
     results: any[],
@@ -207,10 +207,7 @@ export const ResultsContainer = forwardRef(
             return nextIndex;
         };
 
-        const handleTraversal = (
-            currentTerm: string = '',
-            forward: boolean
-        ) => {
+        const handleTraversal = (currentTerm = '', forward: boolean) => {
             // Check if there's a initialTerm
             if (!initialTerm || initialTerm === '') {
                 // If there's no initialTerm, assign the current input value
