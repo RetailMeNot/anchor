@@ -99,7 +99,7 @@ export const HomeCard = ({
 
             <Cell width={7} left={5}>
                 <Typography
-                    tag="h3"
+                    as="h3"
                     weight="bold"
                     scale="28"
                     color="#323232"
@@ -108,7 +108,7 @@ export const HomeCard = ({
                     {title}
                 </Typography>
 
-                <Typography tag="p" pt="0" mt="0">
+                <Typography as="p" pt="0" mt="0">
                     {description}
                 </Typography>
 

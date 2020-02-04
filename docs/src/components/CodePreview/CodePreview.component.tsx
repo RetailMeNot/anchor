@@ -226,7 +226,7 @@ export const CodePreview = ({
         return (
             <StyledContainerElement hideTitle={hideTitle}>
                 {!hideTitle && (
-                    <Typography tag="h6" pb="3" m="0" weight={600}>
+                    <Typography as="h6" pb="3" m="0" weight={600}>
                         {title}
                     </Typography>
                 )}
@@ -245,7 +245,7 @@ export const CodePreview = ({
     return (
         <StyledContainerElement hideTitle={hideTitle}>
             {!hideTitle && (
-                <Typography tag="h6" pb="0" m="0" weight={600}>
+                <Typography as="h6" pb="0" m="0" weight={600}>
                     {title}
                 </Typography>
             )}

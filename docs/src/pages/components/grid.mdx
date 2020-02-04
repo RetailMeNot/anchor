@@ -67,7 +67,7 @@ queries making them safe to use for SSR. Also, unlike in this example, it's best
                 valign="middle"
                 width={{xs: 6, xl: 12}}
             >
-                <Typography tag="h2">Resize the Window</Typography>
+                <Typography as="h2">Resize the Window</Typography>
             </Grid.Cell>
             <Grid.Cell width={{xs: 4, xl: 3}}>
                 <Typography>I'm cell 1.</Typography>
@@ -104,7 +104,7 @@ most css grid attributes when passed through props.
             rows={'minmax(3rem,auto) 1fr minmax(3rem,auto)'}
         >
             <Grid.Cell center middle width={3}>
-                <Typography tag="h1">Header</Typography>
+                <Typography as="h1">Header</Typography>
             </Grid.Cell>
 
             <Grid.Cell>
@@ -118,7 +118,7 @@ most css grid attributes when passed through props.
             </Grid.Cell>
 
             <Grid.Cell center middle width={3}>
-                <Typography tag="h2">Footer</Typography>
+                <Typography as="h2">Footer</Typography>
             </Grid.Cell>
         </Grid>
     </ResponsiveProvider>

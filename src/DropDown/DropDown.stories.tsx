@@ -163,7 +163,7 @@ storiesOf('Components/DropDown', module)
     .add('Resize Demo', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
-                <Typography tag="h1">DropDown</Typography>
+                <Typography as="h1">DropDown</Typography>
                 <DropDown
                     overlay={<MockList />}
                     position={select<Position>(

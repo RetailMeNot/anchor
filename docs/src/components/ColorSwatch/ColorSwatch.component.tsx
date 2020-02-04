@@ -125,7 +125,7 @@ export const ColorSwatch = ({
                     text={colorName}
                     onCopy={() => handleCopy(colorName)}
                 >
-                    <Typography tag="p" weight={700}>
+                    <Typography as="p" weight={700}>
                         {colorName}
                     </Typography>
                 </CopyToClipboard>
@@ -133,7 +133,7 @@ export const ColorSwatch = ({
                     text={colorHexCode}
                     onCopy={() => handleCopy(colorHexCode)}
                 >
-                    <Typography tag="p" weight={500}>
+                    <Typography as="p" weight={500}>
                         {colorHexCode}
                     </Typography>
                 </CopyToClipboard>
@@ -141,7 +141,7 @@ export const ColorSwatch = ({
                     text={colorRgbCode}
                     onCopy={() => handleCopy(colorRgbCode)}
                 >
-                    <Typography tag="p" weight={500}>
+                    <Typography as="p" weight={500}>
                         {colorRgbCode}
                     </Typography>
                 </CopyToClipboard>

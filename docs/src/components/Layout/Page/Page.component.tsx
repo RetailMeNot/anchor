@@ -260,7 +260,7 @@ export const Page = ({
                             >
                                 <StyledPrimaryNav>
                                     <Typography
-                                        tag="a"
+                                        as="a"
                                         weight={600}
                                         className="active"
                                         href="https://github.com/RetailMeNot/anchor"

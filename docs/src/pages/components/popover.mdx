@@ -23,16 +23,16 @@ motion and direction of the content and less about exact positioning. The diagra
         ({ state, setState }) => (
             <PopOver
                 active={state.showPopOver}
-                content={<Typography tag="h3" color="gold" p="1">An Example PopOver</Typography>}
+                content={<Typography as="h3" color="gold" p="1">An Example PopOver</Typography>}
                 position="bottomStart"
                 shadow="5px 2px 2px rgba(0,0,0,0.25)"
                 showArrow={true}
             >
                 <div>
-                    <Typography tag="h2" pb="2">
+                    <Typography as="h2" pb="2">
                         PopOver Example
                     </Typography>
-                    <Typography tag="p" pb="2">
+                    <Typography as="p" pb="2">
                         This is an example of a PopOver that uses a button to control its visibility.
                     </Typography>
                     <Button

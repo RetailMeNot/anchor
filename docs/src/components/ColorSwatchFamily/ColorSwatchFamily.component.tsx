@@ -40,7 +40,7 @@ export const ColorSwatchFamily = ({
         darkColorHexCode={darkColorHexCode}
         lightColorHexCode={lightColorHexCode}
     >
-        <Typography tag="h3" weight={600}>
+        <Typography as="h3" weight={600}>
             {baseColorName}
         </Typography>
 
