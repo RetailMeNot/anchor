@@ -1,6 +1,8 @@
+// VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { ThemeProvider } from '@xstyled/styled-components';
+// THEME
 import { themeMerge } from './themeMerge';
 import { RootTheme } from '../../theme';
 import { Button } from '../../Button';
@@ -9,7 +11,7 @@ import { Tabs } from '../../Tabs';
 const { Pane } = Tabs;
 
 // TEST SETUP
-const data = {
+const TestTheme = {
     fonts: {
         base: 'Comic Sans MS',
     },
@@ -22,7 +24,7 @@ const data = {
         circular: undefined,
     },
     typography: {
-        tag: {
+        as: {
             a: undefined,
         },
     },
@@ -32,11 +34,11 @@ const data = {
     },
 };
 
-const subject = themeMerge(data, RootTheme);
+const subject = themeMerge(TestTheme, RootTheme);
 
 describe('theme: themeMerge()', () => {
     it('should default to RootTheme if no baseTheme is passed', () => {
-        const testingDefault = themeMerge(data);
+        const testingDefault = themeMerge(TestTheme);
 
         for (const key in RootTheme) {
             if (RootTheme[key]) {
@@ -54,9 +56,7 @@ describe('theme: themeMerge()', () => {
     });
 
     it('should remove properties from the object if the value is set to undefined', () => {
-        // tslint:disable-next-line: no-string-literal
-        expect(subject.typography['tag'].a).toBeUndefined();
-        // tslint:disable-next-line: no-string-literal
+        expect(subject.typography['as'].a).toBeUndefined();
         expect(subject.radii['circular']).toBeUndefined();
     });
 
@@ -66,18 +66,14 @@ describe('theme: themeMerge()', () => {
     });
 
     it('should not mutate RootTheme', () => {
-        // tslint:disable-next-line: no-string-literal
         subject.skeleton['colorStart'] = '#00ff00';
-        // tslint:disable-next-line: no-string-literal
         expect(RootTheme.skeleton['colorStart']).toBe('#E7E7E7');
-        // tslint:disable-next-line: no-string-literal
         expect(subject.skeleton['colorStart']).toBe('#00ff00');
     });
 
     it('should overwrite RootTheme values with new values', () => {
         expect(subject.fonts.base).toBe('Comic Sans MS');
         // Oddly can't read 'primary' with dot notation. Verified that the value is there and usable.
-        // tslint:disable-next-line: no-string-literal
         expect(subject.colors['primary'].base).toBe('#ff0000');
     });
 
