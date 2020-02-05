@@ -182,7 +182,7 @@ exports[`Component: Typography should be extendable via styled 1`] = `
 }
 
 <span
-  className="sc-LzLsE c0 anchor-typography"
+  className="sc-pscky c0 anchor-typography"
 >
   I should be red!
 </span>
@@ -206,7 +206,7 @@ exports[`Component: Typography should be extendable via styled 2`] = `
 }
 
 <h1
-  className="sc-LzLsE c0 anchor-typography"
+  className="sc-pscky c0 anchor-typography"
 >
   I should be an h1 and be red!
 </h1>

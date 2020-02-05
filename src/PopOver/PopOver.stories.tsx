@@ -8,7 +8,10 @@ import { select, boolean, text, number } from '@storybook/addon-knobs';
 import { RootTheme } from '../../src/theme';
 import { PopOver } from './PopOver.component';
 import { Position } from '../utils/position/position';
-import { Typography, TypographyProps } from '../Typography/Typography.component';
+import {
+    Typography,
+    TypographyProps,
+} from '../Typography/Typography.component';
 import { Button } from '../Button';
 
 const StyledStory = styled('div')`

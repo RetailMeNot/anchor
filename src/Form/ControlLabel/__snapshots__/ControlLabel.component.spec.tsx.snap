@@ -29,7 +29,7 @@ exports[`Component: ControlLabel should be defined 1`] = `
 }
 
 <label
-  className="sc-LzLte c0 anchor-control-label anchor-typography"
+  className="sc-pzMyG c0 anchor-control-label anchor-typography"
   label="label"
   value="value"
 >
