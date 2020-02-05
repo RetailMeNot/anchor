@@ -1,7 +1,6 @@
 // Theme Files
 import { typography } from './typography.theme';
 import { ColorsTheme } from './colors.theme';
-import { ThemeProvider as XstyledThemeProvider } from '@xstyled/styled-components';
 
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
 import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
@@ -40,6 +39,3 @@ export const RootTheme = {
         colorEnd: '#D3D3D3',
     },
 };
-
-// Exporting out @xstyled's ThemeProvider. Only way I could get it to work w/o issues.
-export class ThemeProvider extends XstyledThemeProvider {}

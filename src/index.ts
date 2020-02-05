@@ -23,7 +23,7 @@ export { Menu, Item as MenuItem } from './Menu';
 export { PopOver } from './PopOver';
 export { Typography } from './Typography';
 export { Tooltip } from './Tooltip';
-export { RootTheme, ThemeProvider } from './theme';
+export { RootTheme } from './theme';
 export { Card } from './Card';
 export { Hero } from './Hero';
 export { Tabs } from './Tabs';
