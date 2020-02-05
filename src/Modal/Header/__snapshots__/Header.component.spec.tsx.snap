@@ -35,7 +35,7 @@ exports[`Component: Modal.Header should render with title 1`] = `
   background-color: white;
 }
 
-.c0 ~ .sc-LzLsF.sc-LzLsF {
+.c0 ~ .sc-qQYBZ.sc-qQYBZ {
   padding-top: 0;
 }
 

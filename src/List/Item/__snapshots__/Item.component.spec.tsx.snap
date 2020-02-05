@@ -119,7 +119,7 @@ exports[`Component: Item should be defined 1`] = `
   onMouseOver={[Function]}
 >
   <span
-    className="sc-LzLte c1 lg anchor-typography"
+    className="sc-pzMyG c1 lg anchor-typography"
   >
     Item
   </span>
