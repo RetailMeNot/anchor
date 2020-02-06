@@ -24,13 +24,34 @@ Anchor is a robust yet lightweight series of UI components, utilities, and style
 
 ### Get Started
 
+**NPM**
+
 ```ssh
 npm i -S @retailmenot/anchor styled-components
 ```
 
-```typescript jsx
+**Yarn**
+
+```ssh
+yarn add -D @retailmenot/anchor styled-components
+```
+
+**Usage**
+
+```jsx
 // VENDOR
-import { Menu } from '@retailmenot/anchor';
+import { ThemeProvider } from '@xstyled/styled-components';
+import { RootTheme, Typography } from '@retailmenot/anchor';
+
+const Root = () => (
+    <ThemeProvider theme={RootTheme}>
+        <Typography tag="h1">
+            Hello World!
+        </Typography>
+    </ThemeProvider>
+);
+
+ReactDOM.render(Root, document.getElementById('app'));
 ```
 
 [View our docs site for more usage guidelines](https://anchor.retailmenot.design/)

@@ -4,7 +4,7 @@
     "author": "Kameron (@sharkparty), Steve (@zero0Halo)",
     "dependencies": {
         "@reach/component-component": "^0.1.3",
-        "@retailmenot/anchor": "1.4.0",
+        "@retailmenot/anchor": "^1.5.0",
         "@xstyled/styled-components": "1.10.0",
         "@xstyled/system": "1.10.0",
         "algoliasearch": "^3.35.1",
@@ -27,7 +27,6 @@
         "lodash.merge": "^4.6.2",
         "prism-react-renderer": "^0.1.7",
         "react": "^16.10.2",
-        "react-awesome-styled-grid": "^2.3.1",
         "react-copy-to-clipboard": "^5.0.1",
         "react-dom": "^16.10.2",
         "react-helmet": "^5.2.1",

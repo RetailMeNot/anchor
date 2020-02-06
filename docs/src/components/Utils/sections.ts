@@ -23,6 +23,10 @@ export const sections: Sections = [
                 title: 'Introduction',
                 path: '/overview/',
             },
+            {
+                title: 'Install',
+                path: '/install/',
+            },
         ],
     },
 

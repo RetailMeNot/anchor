@@ -1,12 +1,16 @@
 import { Typography } from '@retailmenot/anchor';
 import { Link } from 'gatsby';
 
-# Theme Provider
+# ThemeProvider
 
-**Anchor** components depend on the `ThemeProvider` to read values from, providing theme context to
-all styled components. `ThemeProvider` is an exported module from **Anchor**, but it is the same
-module found in <a target="_blank" href="https://www.smooth-code.com/open-source/xstyled/">`@xstyled/styled-components`</a> and
-`styled-components`, so any of them will work interchangably.
+Theming is one of the great strengths of styled-components, and **Anchor** uses it heavily in all of
+its components. It does this by way of the `ThemeProvider` component from
+the [@xstyled/styled-components](https://www.smooth-code.com/open-source/xstyled/) library. This
+library, in conjunction with [@xstyled/system](https://www.npmjs.com/package/@xstyled/system),
+offers many features that `styled-components` alone do not.
+
+**It is required that `ThemeProvider` exist in your application tree. Anchor components will render
+if it's not included, but without their styles.**
 
 Of course without a theme, `ThemeProvider` isn't very useful. **Anchor** ships with
 a <Link to="/theme/root-theme">`RootTheme`</Link> which is passed via the `theme` prop. When wrapped
@@ -14,7 +18,8 @@ around an application, the colors, fonts and other settings in the `theme` are m
 child component.
 
 ```jsx
-import { ThemeProvider, RootTheme } from '@retailmenot/anchor';
+import { ThemeProvider } from '@xstyled/styled-components';
+import { RootTheme } from '@retailmenot/anchor';
 import { App } from '/components/App';  // An example path
 
 const Root = () => (

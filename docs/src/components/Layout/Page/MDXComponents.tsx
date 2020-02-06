@@ -34,7 +34,7 @@ Components.inlineCode = (props: any) => <StyledInlineCode {...props} />;
 Components.pre = (props: any) => <Typography as="pre" {...props} />;
 Components.p = (props: any) => <Typography as="p" py="2" {...props} />;
 Components.a = (props: any) => (
-    <Typography color="primary.base" as="a" {...props} />
+    <Typography color="primary.base" as="a" target="_blank" {...props} />
 );
 Components.blockquote = (props: any) => (
     <Typography as="blockquote" {...props} />
