@@ -182,9 +182,10 @@ grouping, `sizes`, is fairly straightforward. Though the units are not explictly
 all assumed to be `rem`.
 
 The second grouping, `variants` is slightly more complicated. The value listed for all of them is
-xstyled's <a href="https://xstyled.dev/docs/migrate-from-styled-components/#css-utility-is-required" target="_blank">`css()`</a> function
-(refer to their documentation for more information). To put in new styles, use the `css()`
-function yourself.
+`func()`. This is because `Button` has a function that exists between it and it's final styling based
+not just on `variants`, but also `disabled`, and `reverse`. It is possible to override this function
+with your own styling, such as using the `css()` utility
+from [@xstyled/styled-components](https://xstyled.dev/docs/migrate-from-styled-components/#css-utility-is-required).
 
 ```tsx live
 <Component initialState={{theme: {
@@ -209,7 +210,7 @@ function yourself.
 }}}>
     {({state}) => (
         <ThemeProvider theme={state.theme}>
-            <Typography tag="h3" pb={3}>
+            <Typography as="h3" pb={3}>
                 The default 'variant' for 'Button' is 'filled', which is why the button immediately
                 takes on the new colors.
             </Typography>
@@ -257,8 +258,8 @@ automatically applied to it, in addition to those defined immediately under `tag
 
     const Example = () => (
         <section>
-            <Typography tag="h2">Welcome!</Typography>
-            <Typography tag="p">Lorem Ipsum etc, etc...</Typography>
+            <Typography as="h2">Welcome!</Typography>
+            <Typography as="p">Lorem Ipsum etc, etc...</Typography>
         <section>
     );
 

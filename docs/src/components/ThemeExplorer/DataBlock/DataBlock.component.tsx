@@ -52,14 +52,7 @@ export const DataBlock = ({ data }: DataBlockProps) => {
     return (
         <span>
             {typeof data === 'function' ? (
-                // This is a little hacky. This is most likely true, that css() is being used if the
-                // type is function. It is truthy as of right now (v1.3.7)
-                <a
-                    href="https://xstyled.dev/docs/migrate-from-styled-components/#css-utility-is-required"
-                    target="_blank"
-                >
-                    css()
-                </a>
+                <span>func()</span>
             ) : hexColor ? (
                 <>
                     <ColorValue>{data}</ColorValue>

@@ -9,9 +9,25 @@ defaults to **Anchor**'s <Link to="/theme/root-theme">`RootTheme`</Link>.
 
 **Arguments**
 
-* `object`: The settings the user wishes to merge with a base theme object.
-* `object`: the base theme object. Defaults to <Link to="/theme/root-theme">`RootTheme`</Link> if not
-provided.
+* `settings` (object): The settings the user wishes to merge with a base theme object.
+* `baseTheme` (object): the base theme for which settings will merge with. Defaults
+to <Link to="/theme/root-theme">`RootTheme`</Link> if not provided.
+
+The `baseTheme` should resemble `RootTheme`'s default data structure below for it to work across
+all **Anchor** components.
+
+```jsx hideTitle
+{
+    [key: string]?: any;
+    borders?: object;
+    buttons?: object;
+    colors?: object;
+    inputs?: object;
+    radii?: object;
+    skeleton?: object;
+    typography?: object;
+}
+```
 
 **Return**
 * `object`: A new deeply cloned object based on the two passed objects.

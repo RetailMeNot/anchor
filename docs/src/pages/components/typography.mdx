@@ -19,6 +19,9 @@ rendering common fonts regardless of their enclosing tags.
 Using `Typography` without modifying any of its props will wrap any text element in a `span` tag.
 These are the default styles for Typography:
 
+**For more information on theming `Typography`, refer to its section
+in <Link to="/theme/root-theme#typography">`RootTheme`</Link>.**
+
 * `font-family: Avenir Next, Segoe UI, Helvetica Neue, Helvetica, Roboto,sans-serif;`
 * `font-size: 1rem;`
 * `line-height: 1.5rem;`
@@ -107,7 +110,7 @@ These are the default styles for Typography:
         default: '16',
     },
     {
-        property: 'tag',
+        property: 'as',
         description: `Changing this prop will let the component render as the specified html tag.`,
         type: <FormatTypes data={['a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5',
                     'h6', 'blockquote', 'address', 'code', 'label', 'pre']}
