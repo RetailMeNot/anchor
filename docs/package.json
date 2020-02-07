@@ -4,7 +4,7 @@
     "author": "Kameron (@sharkparty), Steve (@zero0Halo)",
     "dependencies": {
         "@reach/component-component": "^0.1.3",
-        "@retailmenot/anchor": "1.3.9",
+        "@retailmenot/anchor": "1.4.0",
         "@xstyled/styled-components": "1.10.0",
         "@xstyled/system": "1.10.0",
         "algoliasearch": "^3.35.1",
