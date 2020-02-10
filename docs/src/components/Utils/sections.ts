@@ -196,12 +196,16 @@ export const sections: Sections = [
         pattern: '/theme',
         links: [
             {
-                title: 'colors',
-                path: '/theme/colors',
-            },
-            {
                 title: 'ThemeProvider',
                 path: '/theme/theme-provider',
+            },
+            {
+                title: 'RootTheme',
+                path: '/theme/root-theme',
+            },
+            {
+                title: 'themeMerge()',
+                path: '/theme/theme-merge',
             },
         ],
     },

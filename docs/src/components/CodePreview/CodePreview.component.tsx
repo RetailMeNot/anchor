@@ -47,6 +47,7 @@ import {
     CollapseGroup,
     Grid,
     Input,
+    RootTheme,
     Typography,
 } from '@retailmenot/anchor';
 // COMPONENTS
@@ -56,6 +57,7 @@ import { BottomArea, MoreInfo } from '../CardExample';
 import { MouseOverMe, MyList } from '../DropDownExample';
 import { CustomResults } from '../AutoCompleteExample';
 import { ExampleHeader, ExampleLink } from '../TemplateExample';
+import { ThemeExplorer } from '../ThemeExplorer';
 import { COMPONENT_MIN_WIDTH } from '../Utils/constants';
 // TODO: ApiTable is throwing an error when used in the live editor, have to look into it
 // import { ApiTable } from '../Utils/ApiTable';
@@ -175,6 +177,7 @@ interface CodePreviewProps {
 }
 
 const scope = {
+    css,
     withPrefix,
     ...Anchor,
     Component,
@@ -186,6 +189,7 @@ const scope = {
     CollapseGroup,
     Grid,
     Input,
+    RootTheme,
 
     // EXAMPLE COMPONENTS <-
     // Card
@@ -204,6 +208,7 @@ const scope = {
     ColorBlurb,
     ComponentInfo,
     FormatTypes,
+    ThemeExplorer,
 };
 
 /*

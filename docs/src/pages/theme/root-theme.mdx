@@ -1,0 +1,281 @@
+import { Link } from 'gatsby';
+import { ThemeExplorer } from '../../components/ThemeExplorer';
+
+# RootTheme
+
+The look of all of **Anchor**'s components are guided by
+the <Link to="/theme/theme-provider">`ThemeProvider`</Link>, but the `ThemeProvider` is
+nothing without a theme to provide. That is why **Anchor** includes `RootTheme`, with settings to
+declare things like borders, colors, font families and everything inbetween. The documentation
+below will dissect the `RootTheme`, but it's a good idea to review the documentation on
+<a href="https://xstyled.dev/" target="_blank">xstyled</a>'s implementation
+of <a href="https://xstyled.dev/docs/theming/" target="_blank">theming</a> with
+an emphasis on <a href="https://xstyled.dev/docs/theme-specification/" target="_blank">theme
+specification</a>.
+
+The box below is an interactive representation of the `RootTheme`. If you select the **Sticky**
+option it will stay at the top of the page while you continue to read and selecting **Collapse**
+will collapse the entire structure making the rest of the documentation easier to read.
+
+<ThemeExplorer />
+
+<br />
+
+## Usage & Modifying
+
+The `RootTheme` is a JavaScript object. Its top-level keys are important as the `ThemeProvider` looks
+for them specifically (again, check
+out <a href="https://xstyled.dev/docs/theme-specification/" target="_blank">theme specification</a>).
+**Anchor** does not use every key from the theme specification and actually adds a few of its own.
+
+###### RootTheme, top level
+```jsx hideTitle
+    {
+        borders: {...},
+        breakpoints: {...},
+        colors: {...},
+        fonts: {...},
+        radii: {...},
+
+        // Anchor specific
+        buttons: {...},
+        inputs: {...},
+        skeleton: {...},
+        typography: {...},
+    }
+```
+
+Because the `RootTheme` is a JavaScript object, creating a theme with new values is as simple as
+importing the `RootTheme` and overwriting the existing values.
+
+**Anchor** also ships with a <Link to="/theme/theme-merge">`themeMerge`</Link> utility function to
+help generate a theme, but it's recommended to understand the basics of the `RootTheme` before
+using it.
+
+```jsx
+import { RootTheme } from '@retailmenot/anchor';
+
+export const MyTheme = {
+    ...RootTheme,
+    fonts: {
+        ...RootTheme.fonts
+        base: 'Comic Sans, sans-serif',
+    }
+};
+```
+
+If `MyTheme` was then given to a site's `ThemeProvider`, all **Anchor** components would use
+`Comic Sans` as their font. Why? Because **Anchor**'s styled components are written to use the keys
+that are supplied by the ThemeProvider. Take a look at the code for the `Typography`
+component <a href="https://github.com/RetailMeNot/anchor/blob/master/src/Typography/Typography.component.tsx#L100" target="_blank">here</a>.
+Notice that the value for `fontFamily` is `base`, not the name of the font. This is the essence of
+theming, a layer of abstraction that easily allows sweeping changes to the look of all styled
+components.
+
+This doesn't just apply to **Anchor** components though. Any styled component that is a child of a
+`ThemeProvider` that has access to that theme can also tap into it.
+
+```jsx
+import styled from '@xstyled/styled-components';
+import { ThemeProvider } from '@retailmenot/anchor';
+import { App } from './components/App'; // This path is just an example
+import { MyTheme } from './utils/MyTheme'; // This path is just an example
+
+const Title = styled('h1')`
+    font-family: base;
+    color: primary.light;
+`;
+
+export const Example = () => (
+    <ThemeProvider theme={MyTheme}>
+        <Title>I'll Be in Comic Sans and purplish!</Title>
+        <App />
+    </ThemeProvider>
+);
+```
+
+*NOTE! It's a good idea to extend the `RootTheme` or override its values rather than create a theme
+from scratch. All **Anchor** components are designed to reference established keys from the
+`RootTheme`.*
+
+<br />
+
+## Breakdown
+
+Now that we know how to use `RootTheme` (or a custom theme based on it), here is a breakdown of
+its key/values.
+
+---
+
+#### borders
+The CSS properties, `border`, `border-top`, `border-right`, `border-bottom`, and `border-left`
+can all reference to the keys in `borders`.
+
+<ThemeExplorer openTo="borders" />
+
+---
+
+#### breakpoints
+`breakpoints` are an interesting black-sheep in this otherwise straightforward implementation of a
+theme. Their primary purpose is to tie into
+the <a href="https://xstyled.dev/docs/responsive/#create-a-responsive-component" target="_blank">`breakpoints()`</a> function
+which generates media queries for styled components.
+
+*NOTE! **Anchor** does not access any breakpoint strictly by its key name. The few components that
+tie into them are written in a way to avoid it. Refer to the documentation
+on <Link to="/components/responsiveprovider">`ResponsiveProvider`</Link> for more detail.*
+
+<ThemeExplorer openTo="breakpoints" />
+
+---
+
+#### colors
+`colors` is a group of generalized and abstracted keys which don't (typically) associate directly
+to a specific color name. Instead they refer to usage, such as `primary` or `text`. These are further
+classified by `light`, `dark`, `base`, or even `error`.
+
+The CSS properties, `color`, `background-color` and `border-color` can all reference the keys in
+`colors`.
+
+<ThemeExplorer openTo="colors" />
+
+---
+
+#### fonts
+The CSS property, `font-family` can reference the keys in `fonts`.
+
+<ThemeExplorer openTo="fonts" />
+
+---
+
+#### radii
+The CSS property, `border-radius`  can reference the keys in `radii`.
+
+<ThemeExplorer openTo="radii" />
+
+---
+
+## Anchor Specific Breakdown
+The remaining top-level keys are added just for **Anchor**. Unlike the keys from
+the <a href="https://xstyled.dev/docs/theme-specification/" target="_blank">theme specification</a>,
+they can't be accessed without using
+the <a href="https://xstyled.dev/docs/system-utilities/#theme-getters" target="_blank">`th()`</a> helper
+function within a styled component.
+
+```jsx
+import styled from '@xstyled/styled-components';
+import { th } from '@xstyled/system';
+
+const Example = styled('div')`
+    display: inline-block;
+    background-color: ${th('skeleton.colorStart')};
+`;
+```
+
+---
+
+
+#### buttons
+
+These settings are used for the <Link to="/components/button">`Button`</Link> component. The first
+grouping, `sizes`, is fairly straightforward. Though the units are not explictly declared, they are
+all assumed to be `rem`.
+
+The second grouping, `variants` is slightly more complicated. The value listed for all of them is
+`func()`. This is because `Button` has a function that exists between it and it's final styling based
+not just on `variants`, but also `disabled`, and `reverse`. It is possible to override this function
+with your own styling, such as using the `css()` utility
+from [@xstyled/styled-components](https://xstyled.dev/docs/migrate-from-styled-components/#css-utility-is-required).
+
+```tsx live
+<Component initialState={{theme: {
+    ...RootTheme,
+    buttons: {
+        ...RootTheme.buttons,
+        variants: {
+            ...RootTheme.buttons.variants,
+            filled: {
+                ...RootTheme.buttons.variants.filled,
+                base: css({
+                    color: 'white',
+                    backgroundColor: 'red',
+                }),
+                hover: css({
+                    color: 'red',
+                    backgroundColor: 'white',
+                }),
+            },
+        },
+    },
+}}}>
+    {({state}) => (
+        <ThemeProvider theme={state.theme}>
+            <Typography as="h3" pb={3}>
+                The default 'variant' for 'Button' is 'filled', which is why the button immediately
+                takes on the new colors.
+            </Typography>
+
+            <Button>Example Button</Button>
+        </ThemeProvider>
+    )}
+</Component>
+```
+
+<ThemeExplorer openTo="buttons" />
+
+---
+
+#### inputs
+
+These settings are used for the <Link to="/components/input">`Input`</Link> component. They control
+both the semantic `input` tag's styles, as well as the wrapping container.
+
+<ThemeExplorer openTo="inputs" />
+
+---
+
+#### skeleton
+
+The <Link to="/components/skeleton">`Skeleton`</Link> component uses the color values here in its
+pulsing animation. These values are kept here, rather as a configuration prop for the component, in
+order to affect all `Skeleton` components used on a site at once.
+
+<ThemeExplorer openTo="skeleton" />
+
+___
+
+#### typography
+
+These settings are used for the <Link to="/components/typography">`Typography`</Link> component.
+Of particular interest are the values under `tag`. The `Typography` component can act as many
+semantic HTML tags when using its `tag` prop. When doing so, the styles for that tag will be
+automatically applied to it, in addition to those defined immediately under `tag`.
+
+```jsx
+    // This component assumes that a ThemeProvider with the RootTheme
+    // is already set in the application
+    import { Typography } from '@retailmenot/anchor';
+
+    const Example = () => (
+        <section>
+            <Typography as="h2">Welcome!</Typography>
+            <Typography as="p">Lorem Ipsum etc, etc...</Typography>
+        <section>
+    );
+
+    {/*
+        The first Typography tag (h2) will have the following styles:
+            fontWeight:normal
+            fontSize:1.5rem
+            lineHeight:2rem
+
+        And the second Typography tag (p) will have these:
+            fontWeight:normal
+            fontSize:1rem
+            lineHeight:1.5rem
+    */}
+```
+
+<ThemeExplorer openTo="typography" />
+
+---

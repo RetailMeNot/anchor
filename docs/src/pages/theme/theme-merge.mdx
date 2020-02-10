@@ -1,0 +1,125 @@
+import { Link } from 'gatsby';
+import { ThemeExplorer } from '../../components/ThemeExplorer';
+
+# themeMerge()
+
+`themeMerge` is a utility function which returns a deep cloned object based on a settings object
+passed by the user along with a base theme object. If no base theme object is provided, `themeMerge`
+defaults to **Anchor**'s <Link to="/theme/root-theme">`RootTheme`</Link>.
+
+**Arguments**
+
+* `settings` (object): The settings the user wishes to merge with a base theme object.
+* `baseTheme` (object): the base theme for which settings will merge with. Defaults
+to <Link to="/theme/root-theme">`RootTheme`</Link> if not provided.
+
+The `baseTheme` should resemble `RootTheme`'s default data structure below for it to work across
+all **Anchor** components.
+
+```jsx hideTitle
+{
+    [key: string]?: any;
+    borders?: object;
+    buttons?: object;
+    colors?: object;
+    inputs?: object;
+    radii?: object;
+    skeleton?: object;
+    typography?: object;
+}
+```
+
+**Return**
+* `object`: A new deeply cloned object based on the two passed objects.
+
+```jsx
+    import { themeMerge, ThemeProvider } from '@retailmenot/anchor';
+    import { App } from '/components/App';  // An example path
+
+    const MyTheme = themeMerge({
+        fonts: {
+            base: 'Arial, sans-serif',
+        },
+    });
+
+    const Root = () => (
+        <ThemeProvider theme={MyTheme}>
+            <App />
+        </ThemeProvider>
+    );
+    ReactDOM.render(Root, document.getElementById('app'));
+```
+
+---
+
+## Removing Fields ##
+
+It is also possible to remove fields from the base theme object. This can be useful in some situations
+where a default style is difficult to work around. This is intended to be used to remove a
+single css property, but it is not limited to that. Properties whose values are objects along with
+their children can also be removed, though none of the root properties can be. In the example below
+the `mono` property is being removed from the theme.
+
+Try changing `mono` to `base`, and see in the resulting example how `mono` returns and now `base` is
+removed.
+
+```tsx live
+<ThemeExplorer openTo="fonts" theme={themeMerge({
+    fonts: {
+        mono: undefined,
+    },
+})}
+/>
+```
+
+*NOTE! Use this feature with caution. If fields
+from <Link to="/theme/root-theme">`RootTheme`</Link> are removed it is likely that css styles will
+not be properly applied to some **Anchor** components.*
+
+---
+
+## Practical Example ##
+
+Here is this site's settings merged in with <Link to="/theme/root-theme">`RootTheme`</Link> using
+`themeMerge`.
+
+```tsx live
+<ThemeExplorer theme={themeMerge({
+    colors: {
+        primary: {
+            base: '#DF206C',
+            light: '#E665A1',
+            dark: '#B81D5B',
+        },
+        secondary: {
+            base: '#EB663D',
+            light: '#FA9F5A',
+            dark: '#C74E30',
+        },
+        accent: {
+            base: '#E3EEF6',
+            light: '#0998D6',
+            dark: '#0074A6',
+        },
+        borders: {
+            light: '#F1F1F1',
+            base: '#E7E7E7',
+            dark: '#D3D3D3',
+        },
+        background: {
+            base: '#FAFAFA',
+            code: '#F1F1F1',
+        },
+        text: {
+            link: {
+                hover: '#DF206C',
+            },
+        },
+    },
+    borders: {
+        light: 'solid thin #F1F1F1',
+        base: 'solid thin #E7E7E7',
+        dark: 'solid thin #D3D3D3',
+    },
+})} />
+```
