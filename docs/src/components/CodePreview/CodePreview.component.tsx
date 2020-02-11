@@ -25,7 +25,7 @@
 import * as React from 'react';
 // VENDOR
 import { withPrefix } from 'gatsby';
-import styled, { css } from '@xstyled/styled-components';
+import styled, { css, ThemeProvider } from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
 import {
     LiveEditor,
@@ -209,6 +209,7 @@ const scope = {
     ComponentInfo,
     FormatTypes,
     ThemeExplorer,
+    ThemeProvider,
 };
 
 /*

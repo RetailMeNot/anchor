@@ -1,0 +1,68 @@
+import { Link } from 'gatsby';
+import { EnhancedNextPrevious } from '../components/Navigation';
+
+# Install
+
+---
+
+### NPM
+
+```ssh hideTitle
+npm i --save @retailmenot/anchor styled-components
+```
+
+### Yarn
+
+```ssh hideTitle
+yarn add @retailmenot/anchor styled-components
+```
+
+---
+
+## Usage
+
+```jsx hideTitle
+// VENDOR
+import { ThemeProvider } from '@xstyled/styled-components';
+import { RootTheme, Typography } from '@retailmenot/anchor';
+
+const Root = () => (
+    <ThemeProvider theme={RootTheme}>
+        <Typography tag="h1">
+            Hello World!
+        </Typography>
+    </ThemeProvider>
+);
+
+ReactDOM.render(Root, document.getElementById('app'));
+```
+
+---
+
+## @xstyled/styled-components vs. styled-components
+
+**Anchor** uses styled components extensively, but it opts to use
+the [@xstyled/styled-components](https://www.smooth-code.com/open-source/xstyled/) library over
+[styled-components](https://styled-components.com/). When installing **Anchor**, the
+`@xstyled/styled-components` and `@xstyled/system` libraries will be installed as well since they are
+dependencies, so the opportunity to use `@xstyled` will already be there.
+
+Although it's not necessary to use `@xstyled`, it's recommended. It is a library that wraps around
+`styled-components` and offers a robust feature-set that makes composing styled components and also
+theming even more powerful.
+
+All code examples on this site are written with `@xstyled`'s libraries.
+
+---
+
+## What Next?
+
+**If you're new to design systems...**
+It's a good idea to check out **Anchor's** <Link to="/overview">introduction</Link>.
+
+**If you're ready to jump into using components...**
+Take a look at what **Anchor** <Link to="/components">has to offer</Link>.
+
+**If you want to learn how to theme Anchor...**
+Read up on **Anchor's** implementation of theming
+using <Link to="/theme/theme-provider">ThemeProvider</Link>, <Link to="/theme/root-theme">RootTheme</Link> and <Link to="/theme/theme-merge">themeMerge</Link>.

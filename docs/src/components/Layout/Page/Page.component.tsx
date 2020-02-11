@@ -2,11 +2,14 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { MDXProvider } from '@mdx-js/tag';
-import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
+import styled, {
+    createGlobalStyle,
+    css,
+    ThemeProvider,
+} from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
-import merge from 'lodash.merge';
 
 // ANCHOR & COMPONENTS
 import {
@@ -15,9 +18,7 @@ import {
     Grid,
     Hamburger,
     ResponsiveProvider,
-    RootTheme,
     themeMerge,
-    ThemeProvider,
     Typography,
 } from '@retailmenot/anchor';
 import { Footer } from '../';

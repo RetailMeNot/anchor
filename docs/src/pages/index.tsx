@@ -1,15 +1,14 @@
 // VENDOR
 import * as React from 'react';
-import styled, { createGlobalStyle, css } from '@xstyled/styled-components';
+import styled, {
+    createGlobalStyle,
+    css,
+    ThemeProvider,
+} from '@xstyled/styled-components';
 import { breakpoints } from '@xstyled/system';
 import { Link, withPrefix } from 'gatsby';
 // ANCHOR & COMPONENTS
-import {
-    Grid,
-    ResponsiveProvider,
-    RootTheme,
-    ThemeProvider,
-} from '@retailmenot/anchor';
+import { Grid, ResponsiveProvider, RootTheme } from '@retailmenot/anchor';
 import { HomeCard } from '../components/HomeCard';
 import { HomeTopNav } from '../components/Navigation/HomeTopNav';
 import { Wave } from '../components/Wave';
@@ -204,7 +203,7 @@ export const IndexPage = (): React.ReactElement<any> => (
                                 description="Check out our components & documentation."
                                 imgSrc="/images/developer-icon.svg"
                                 title="Developers"
-                                to="/components"
+                                to="/install"
                             />
                         </Cell>
                         <Cell
