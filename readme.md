@@ -27,13 +27,13 @@ Anchor is a robust yet lightweight series of UI components, utilities, and style
 **NPM**
 
 ```ssh
-npm i -S @retailmenot/anchor styled-components
+npm i --save @retailmenot/anchor styled-components
 ```
 
 **Yarn**
 
 ```ssh
-yarn add -D @retailmenot/anchor styled-components
+yarn add @retailmenot/anchor styled-components
 ```
 
 **Usage**
