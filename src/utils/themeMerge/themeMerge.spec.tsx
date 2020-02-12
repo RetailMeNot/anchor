@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 // VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
@@ -18,6 +19,7 @@ const TestTheme = {
     colors: {
         primary: {
             base: '#ff0000',
+            lighter: '#ee0000',
         },
     },
     radii: {
@@ -60,9 +62,13 @@ describe('theme: themeMerge()', () => {
         expect(subject.radii['circular']).toBeUndefined();
     });
 
-    it('should have newly added root keys and values', () => {
+    it('should have newly updated root keys and values', () => {
         expect(subject.exampleComponent.xs).toBe('1rem');
         expect(subject.exampleComponent.md).toBe('2rem');
+    });
+
+    it('should have completely new key/values', () => {
+        expect(subject.colors['primary'].lighter).toBe('#ee0000');
     });
 
     it('should not mutate RootTheme', () => {

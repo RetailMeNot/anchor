@@ -25,7 +25,7 @@ export type ThemeType = {
 };
 
 // Can't really be 100% sure what data will be as it is cloned, hence :any
-function deepClone(data: any) {
+function deepClone(data: any): any {
     if (typeof data === null || typeof data !== 'object') {
         return data;
     }
@@ -41,12 +41,20 @@ function deepClone(data: any) {
     return tmpObj;
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function recursiveUpdate(settingStep: object, newThemeStep: object) {
     for (const key in settingStep) {
+        // If the user has passed undefined as a value, delete the associated property
+        // Else if the value isn't an object then update the theme with that value
+        // Else if the key doesn't already exist in the new theme, add it, and continue recursion
+        // Else continue recursion
         if (settingStep[key] === undefined) {
             delete newThemeStep[key];
         } else if (settingStep[key] && typeof settingStep[key] !== 'object') {
             newThemeStep[key] = settingStep[key];
+        } else if (settingStep[key] && !newThemeStep[key]) {
+            newThemeStep[key] = {};
+            recursiveUpdate(settingStep[key], newThemeStep[key]);
         } else {
             recursiveUpdate(settingStep[key], newThemeStep[key]);
         }
