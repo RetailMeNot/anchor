@@ -479,159 +479,181 @@ const StyledButton = styled('button')<StyledButtonProps>`
         `}
 `;
 
-export const Button = ({
-    className,
-    flip = false,
-    variant = 'filled',
-    size = 'md',
-    block,
-    disabled,
-    revealed,
-    colorTheme,
-    reverse,
-    circular,
-    children,
-    minWidth,
-    prefix,
-    suffix,
-    onMouseDown,
-    onMouseUp,
-    onFocus,
-    ...props
-}: ButtonProps): React.ReactElement<ButtonProps> => {
-    const theme = React.useContext(ThemeContext);
-    const [mouseDown, setMouseDown] = React.useState(false);
+export const Button = React.forwardRef(
+    (
+        {
+            className,
+            flip = false,
+            variant = 'filled',
+            size = 'md',
+            block,
+            disabled,
+            revealed,
+            colorTheme,
+            reverse,
+            circular,
+            children,
+            minWidth,
+            prefix,
+            suffix,
+            onMouseDown,
+            onMouseUp,
+            onFocus,
+            ...props
+        }: ButtonProps,
+        ref: React.RefObject<any>
+    ): React.ReactElement<ButtonProps> => {
+        const theme = React.useContext(ThemeContext);
+        const [mouseDown, setMouseDown] = React.useState(false);
 
-    // if there are no children and only prefix or only suffix are set
-    const iconOnly =
-        (prefix ? !suffix : !!suffix) && React.Children.count(children) === 0;
+        // if there are no children and only prefix or only suffix are set
+        const iconOnly =
+            (prefix ? !suffix : !!suffix) &&
+            React.Children.count(children) === 0;
 
-    if (flip && circular) {
-        /* eslint-disable-next-line */
-        console.warn(
-            "Buttons should not have both 'flip' and 'circular' props."
-        );
-    }
-    if (flip && reverse) {
-        /* eslint-disable-next-line */
-        console.warn(
-            "Buttons should not have both 'flip' and 'reverse' props."
-        );
-    }
-    if (flip && disabled) {
-        /* eslint-disable-next-line */
-        console.warn(
-            "Buttons with 'flip' are not meant to be 'disabled'. Did you mean to make it 'revealed'?"
-        );
-    }
-    if (iconOnly && minWidth) {
-        /* eslint-disable-next-line */
-        console.warn("Button is icon-only so 'minWidth' prop will be ignored.");
-    }
-    if (iconOnly && block) {
-        /* eslint-disable-next-line */
-        console.warn("Button is icon-only so 'block' prop will be ignored.");
-    }
-    if (block && minWidth) {
-        /* eslint-disable-next-line */
-        console.warn(
-            "Button has 'block' prop so 'minWidth' prop will be ignored."
-        );
-    }
+        if (flip && circular) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Buttons should not have both 'flip' and 'circular' props."
+            );
+        }
+        if (flip && reverse) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Buttons should not have both 'flip' and 'reverse' props."
+            );
+        }
+        if (flip && disabled) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Buttons with 'flip' are not meant to be 'disabled'. Did you mean to make it 'revealed'?"
+            );
+        }
+        if (iconOnly && minWidth) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Button is icon-only so 'minWidth' prop will be ignored."
+            );
+        }
+        if (iconOnly && block) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Button is icon-only so 'block' prop will be ignored."
+            );
+        }
+        if (block && minWidth) {
+            /* eslint-disable-next-line */
+            console.warn(
+                "Button has 'block' prop so 'minWidth' prop will be ignored."
+            );
+        }
 
-    const iconScale = iconOnly
-        ? size === 'xs' || (size === 'sm' && variant === 'minimal')
-            ? 'md'
-            : 'lg'
-        : 'md';
+        const iconScale = iconOnly
+            ? size === 'xs' || (size === 'sm' && variant === 'minimal')
+                ? 'md'
+                : 'lg'
+            : 'md';
 
-    const dims = sizeStyles({ ...props, size, theme });
-    const { height, affixSpacing, fontSize, minWidth: themeWidth } = dims;
+        const dims = sizeStyles({ ...props, size, theme });
+        const { height, affixSpacing, fontSize, minWidth: themeWidth } = dims;
 
-    // Value just needs to be larger than the height
-    // to make the ends circular. We're using a very
-    // large radius so that it doesn't actually have
-    // to be calculated from the height.
-    const borderRadius = circular ? 'circular' : 'base';
-    const width = iconOnly ? height : minWidth || themeWidth;
+        // Value just needs to be larger than the height
+        // to make the ends circular. We're using a very
+        // large radius so that it doesn't actually have
+        // to be calculated from the height.
+        const borderRadius = circular ? 'circular' : 'base';
+        const width = iconOnly ? height : minWidth || themeWidth;
 
-    if (!colorTheme) {
-        colorTheme = reverse
-            ? reverseDefaults[variant]
-            : themeDefaults[variant];
-    }
+        if (!colorTheme) {
+            colorTheme = reverse
+                ? reverseDefaults[variant]
+                : themeDefaults[variant];
+        }
 
-    const padding = iconOnly
-        ? '0'
-        : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
+        const padding = iconOnly
+            ? '0'
+            : `0 ${circular ? dims.circularPadding : dims.padding}rem`;
 
-    const buttonStyles = stateStyles({ ...props, colorTheme, variant, theme });
+        const buttonStyles = stateStyles({
+            ...props,
+            colorTheme,
+            variant,
+            theme,
+        });
 
-    return (
-        <StyledButton
-            onMouseDown={event => {
-                setMouseDown(true);
-                if (onMouseDown) {
-                    onMouseDown(event);
-                }
-            }}
-            onMouseUp={event => {
-                setMouseDown(false);
-                if (onMouseUp) {
-                    onMouseUp(event);
-                }
-            }}
-            onFocus={event => {
-                if (mouseDown) {
-                    // This keeps the button from being :focused when
-                    // clicked so that it is only applied when tabbed to.
-                    // We want the outline to appear when tabbing for
-                    // accessibility.
-                    event.target.blur();
-                }
-                if (onFocus) {
-                    onFocus(event);
-                }
-            }}
-            className={classNames('anchor-button', className)}
-            flip={flip}
-            block={block}
-            colorTheme={colorTheme}
-            $fontSize={fontSize}
-            padding={padding}
-            reverse={reverse}
-            minWidth={width}
-            $height={height}
-            $size={size}
-            iconOnly={iconOnly}
-            circular={circular}
-            variant={variant}
-            disabled={disabled}
-            revealed={revealed}
-            borderRadius={borderRadius}
-            buttonStyles={buttonStyles}
-            {...props}
-        >
-            {/* Caveat: If the width was set to below 3rem, but the button ended up
+        return (
+            <StyledButton
+                onMouseDown={event => {
+                    setMouseDown(true);
+                    if (onMouseDown) {
+                        onMouseDown(event);
+                    }
+                }}
+                onMouseUp={event => {
+                    setMouseDown(false);
+                    if (onMouseUp) {
+                        onMouseUp(event);
+                    }
+                }}
+                onFocus={event => {
+                    if (mouseDown) {
+                        // This keeps the button from being :focused when
+                        // clicked so that it is only applied when tabbed to.
+                        // We want the outline to appear when tabbing for
+                        // accessibility.
+                        event.target.blur();
+                    }
+                    if (onFocus) {
+                        onFocus(event);
+                    }
+                }}
+                className={classNames('anchor-button', className)}
+                ref={ref}
+                flip={flip}
+                block={block}
+                colorTheme={colorTheme}
+                $fontSize={fontSize}
+                padding={padding}
+                reverse={reverse}
+                minWidth={width}
+                $height={height}
+                $size={size}
+                iconOnly={iconOnly}
+                circular={circular}
+                variant={variant}
+                disabled={disabled}
+                revealed={revealed}
+                borderRadius={borderRadius}
+                buttonStyles={buttonStyles}
+                {...props}
+            >
+                {/* Caveat: If the width was set to below 3rem, but the button ended up
                 being wider (because wide contents) then a horizontal hitbox could
                 be added to the button when it isn't needed. */}
-            {(height < 3 || width < 3) && (
-                <HitArea buttonHeight={height} buttonWidth={width} />
-            )}
-            {prefix &&
-                cloneWithProps(prefix, {
-                    scale: iconScale,
-                    margin: iconOnly ? undefined : `0 ${affixSpacing}rem 0 0`,
-                    className: 'anchor-button-prefix',
-                })}
-            {children}
-            {suffix &&
-                cloneWithProps(suffix, {
-                    scale: iconScale,
-                    margin: iconOnly ? undefined : `0 0 0 ${affixSpacing}rem`,
-                    className: 'anchor-button-suffix',
-                })}
-            {flip && !disabled && !revealed && <Flip colorTheme={colorTheme} />}
-        </StyledButton>
-    );
-};
+                {(height < 3 || width < 3) && (
+                    <HitArea buttonHeight={height} buttonWidth={width} />
+                )}
+                {prefix &&
+                    cloneWithProps(prefix, {
+                        scale: iconScale,
+                        margin: iconOnly
+                            ? undefined
+                            : `0 ${affixSpacing}rem 0 0`,
+                        className: 'anchor-button-prefix',
+                    })}
+                {children}
+                {suffix &&
+                    cloneWithProps(suffix, {
+                        scale: iconScale,
+                        margin: iconOnly
+                            ? undefined
+                            : `0 0 0 ${affixSpacing}rem`,
+                        className: 'anchor-button-suffix',
+                    })}
+                {flip && !disabled && !revealed && (
+                    <Flip colorTheme={colorTheme} />
+                )}
+            </StyledButton>
+        );
+    }
+);
