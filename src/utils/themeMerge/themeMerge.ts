@@ -34,7 +34,7 @@ function deepClone(data: any): any {
     const tmpObj = data.constructor();
 
     for (const key in data) {
-        if (data[key]) {
+        if (data.hasOwnProperty(key)) {
             tmpObj[key] = deepClone(data[key]);
         }
     }
@@ -43,16 +43,20 @@ function deepClone(data: any): any {
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function recursiveUpdate(settingStep: object, newThemeStep: object) {
+    // eslint-disable-next-line guard-for-in
     for (const key in settingStep) {
         // If the user has passed undefined as a value, delete the associated property
         // Else if the value isn't an object then update the theme with that value
         // Else if the key doesn't already exist in the new theme, add it, and continue recursion
         // Else continue recursion
-        if (settingStep[key] === undefined) {
+        if (settingStep.hasOwnProperty(key) && settingStep[key] === undefined) {
             delete newThemeStep[key];
-        } else if (settingStep[key] && typeof settingStep[key] !== 'object') {
+        } else if (
+            settingStep.hasOwnProperty(key) &&
+            typeof settingStep[key] !== 'object'
+        ) {
             newThemeStep[key] = settingStep[key];
-        } else if (settingStep[key] && !newThemeStep[key]) {
+        } else if (settingStep.hasOwnProperty(key) && !newThemeStep[key]) {
             newThemeStep[key] = {};
             recursiveUpdate(settingStep[key], newThemeStep[key]);
         } else {
@@ -66,7 +70,6 @@ export function themeMerge(
     baseTheme: ThemeType = RootTheme
 ): ThemeType {
     const newTheme = deepClone(baseTheme);
-
     for (const key in settings) {
         if (settings[key]) {
             if (!newTheme.hasOwnProperty(key)) {

@@ -33,6 +33,7 @@ const TestTheme = {
     exampleComponent: {
         xs: '1rem',
         md: '2rem',
+        render: false,
     },
 };
 
@@ -117,5 +118,11 @@ describe('theme: themeMerge()', () => {
 
         const tree = renderer.create(<Test />).toJSON();
         expect(tree).toMatchSnapshot();
+    });
+
+    it('should copy keys even if their values are false or 0', () => {
+        expect(RootTheme.breakpoints.xs).toBe(0);
+        expect(subject.breakpoints.xs).toBe(0);
+        expect(subject.exampleComponent.render).toBe(false);
     });
 });
