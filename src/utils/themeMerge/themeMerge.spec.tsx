@@ -2,7 +2,7 @@
 // VENDOR
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import { ThemeProvider } from '@xstyled/styled-components';
+import { css, ThemeProvider } from '@xstyled/styled-components';
 // THEME
 import { themeMerge } from './themeMerge';
 import { RootTheme } from '../../theme';
@@ -20,6 +20,19 @@ const TestTheme = {
         primary: {
             base: '#ff0000',
             lighter: '#ee0000',
+        },
+    },
+    buttons: {
+        variants: {
+            cta: {
+                base: css`
+                    border: solid thin;
+                    border-color: secondary.base;
+                    background-color: secondary.base;
+                    color: white;
+                    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.1);
+                `,
+            },
         },
     },
     radii: {
@@ -124,5 +137,9 @@ describe('theme: themeMerge()', () => {
         expect(RootTheme.breakpoints.xs).toBe(0);
         expect(subject.breakpoints.xs).toBe(0);
         expect(subject.exampleComponent.render).toBe(false);
+    });
+
+    it('should copy arrays to new keys, such as a tagged template literal', () => {
+        expect(Array.isArray(subject.buttons['variants'].cta.base)).toBe(true);
     });
 });
