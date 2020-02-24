@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Adapt should be defined. 1`] = `
+@media (min-width:768px) {
+  .c0 > :nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width:767.98px) {
+  .c0 > :nth-child(2) {
+    display: none;
+  }
+}
+
+<div
+  className="c0 anchor-adapt"
+>
+  <div>
+    blue | xs
+  </div>
+  <div>
+    green | md
+  </div>
+</div>
+`;
+
+exports[`Component: Adapt should not show below the minimum specified breakpoint. 1`] = `
+@media (max-width:767.98px) {
+  .c0 > :nth-child(1) {
+    display: none;
+  }
+}
+
+<div
+  className="c0 anchor-adapt"
+>
+  <div>
+    green | md
+  </div>
+</div>
+`;
+
+exports[`Component: Adapt should order breakpoints that were specified out of order. 1`] = `
+@media (min-width:768px) {
+  .c0 > :nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width:767.98px) {
+  .c0 > :nth-child(2) {
+    display: none;
+  }
+}
+
+<div
+  className="c0 anchor-adapt"
+>
+  <div>
+    blue | xs
+  </div>
+  <div>
+    green | md
+  </div>
+</div>
+`;

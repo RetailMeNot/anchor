@@ -27,7 +27,11 @@ export type ThemeType = {
 
 // Can't really be 100% sure what data will be as it is cloned, hence :any
 function deepClone(data: any): any {
-    if (typeof data === null || typeof data !== 'object' || Array.isArray(data)) {
+    if (
+        typeof data === null ||
+        typeof data !== 'object' ||
+        Array.isArray(data)
+    ) {
         return data;
     }
 

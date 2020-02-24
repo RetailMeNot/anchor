@@ -213,7 +213,7 @@ exports[`Component: Hero should render with title 1`] = `
   className="c0 anchor-hero"
 >
   <h1
-    className="sc-qQYBZ c1 anchor-hero-title anchor-typography"
+    className="sc-qZtCU c1 anchor-hero-title anchor-typography"
     scale={32}
   >
     Hero Title
@@ -286,13 +286,13 @@ exports[`Component: Hero should render with title and subtitle 1`] = `
   className="c0 anchor-hero"
 >
   <h1
-    className="sc-qQYBZ c1 anchor-hero-title anchor-typography"
+    className="sc-qZtCU c1 anchor-hero-title anchor-typography"
     scale={32}
   >
     Hero Title
   </h1>
   <span
-    className="sc-qQYBZ c2 anchor-hero-subtitle anchor-typography"
+    className="sc-qZtCU c2 anchor-hero-subtitle anchor-typography"
     scale={18}
   >
     Hero Subtitle
