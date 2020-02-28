@@ -21,7 +21,10 @@ interface AdaptProps
         SpaceProps {
     className?: string;
     forEach: ForEach;
-    children: (value: any, breakpoint: string) => any;
+    children: (
+        value: any,
+        breakpoint: string
+    ) => JSX.Element | React.ReactElement;
 }
 
 interface StyledParentProps
@@ -79,8 +82,9 @@ export const Adapt = ({
 
     const keys = Object.keys(forEach);
 
-    // keys are sorted by their pixel values (if available) so
-    // that the css styles are ordered properly
+    // Keys are sorted by their pixel values (if available) so
+    // that the css styles are ordered properly.
+    // This could be changed to use ResponsiveContext's sorted breakpoints.
     const sortedKeys = breakpoints
         ? keys.sort((a, b) => (breakpoints[a] || 0) - (breakpoints[b] || 0))
         : keys;

@@ -30,7 +30,7 @@ storiesOf('Components/Adapt', module)
                         })}
                     >
                         {(value, breakpoint) => (
-                            <div>
+                            <div key={breakpoint}>
                                 <p>Value: {value}</p>
                                 <p>Breakpoint: {breakpoint}</p>
                             </div>
@@ -44,15 +44,15 @@ storiesOf('Components/Adapt', module)
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Adapt
-                    forEach={{
+                    forEach={object('forEach', {
                         xs: 'xs',
                         sm: 'sm',
                         md: 'md',
                         lg: 'lg',
-                    }}
+                    })}
                 >
                     {(size, breakpoint) => (
-                        <Button size={size} margin="0">
+                        <Button size={size} margin="0" key={breakpoint}>
                             Hello at {breakpoint}
                         </Button>
                     )}
