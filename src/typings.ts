@@ -24,6 +24,9 @@ declare module '@xstyled/styled-components' {
     export const css: ThemedCssFunction<DefaultTheme>;
     export const withTheme: any;
 
+    export const up: (breakpoint: string, styles: any) => any;
+    export const down: (breakpoint: string, styles: any) => any;
+
     const styled: StyledInterface;
     export default styled;
 }
@@ -241,6 +244,7 @@ declare module '@xstyled/system' {
     export const flexboxes: StyleFn;
 
     export const space: StyleFn;
+    export const layout: StyleFn;
     export const margin: StyleFn;
     export const padding: StyleFn;
     export const width: StyleFn;
