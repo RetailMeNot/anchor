@@ -8,6 +8,8 @@ import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { Scale } from '../theme/typography.theme';
 import { rem } from '../utils/rem/rem';
 
+const { isArray } = Array;
+
 export type FontWeights =
     | 'normal'
     | 'bold'
@@ -84,21 +86,31 @@ export interface TypographyProps extends SpaceProps, React.HTMLAttributes<any> {
 
 export interface StyledTypographyProps extends TypographyProps {
     $color?: 'inherit' | 'initial' | string;
+    asVariant?: any;
+    scaleVariant?: any;
 }
 
-export const Typography = styled('span').attrs<TypographyProps>(
-    ({ color }) => ({
-        $color: color,
-        color: undefined,
-        className: 'anchor-typography',
-    })
-)<StyledTypographyProps>`
+export const Typography = styled('span').attrs<TypographyProps>(props => ({
+    $color: props.color,
+    color: undefined,
+    className: 'anchor-typography',
+    asVariant: variant({
+        key: 'typography.as',
+        default: 'none',
+        prop: 'as',
+    })(props),
+    scaleVariant: variant({
+        key: 'typography.scale',
+        default: 'none',
+        prop: 'scale',
+    })(props),
+}))<StyledTypographyProps>`
 
     box-sizing: border-box;
     margin: 0;
 
     // Variant styles
-    ${props =>
+    ${({ asVariant, scaleVariant }) =>
         css({
             fontFamily: 'base',
             fontSize: th('typography.fontSize'),
@@ -106,17 +118,18 @@ export const Typography = styled('span').attrs<TypographyProps>(
             fontWeight: th('typography.fontWeight'),
             textAlign: 'inherit',
             color: 'inherit',
-            ...variant({
-                key: 'typography.as',
-                default: 'none',
-                prop: 'as',
-            })(props),
-            ...variant({
-                key: 'typography.scale',
-                default: 'none',
-                prop: 'scale',
-            })(props),
+            ...(!isArray(asVariant) ? asVariant : {}),
+            ...(!isArray(asVariant) && !isArray(scaleVariant)
+                ? scaleVariant
+                : {}),
         })}
+
+    // If the "asVariant" is a css block, then we aren't spreading it above and must
+    // include it here. We also include the scale variant so that it's still defined
+    // "after" the as variant, and takes precedence.
+    ${({ asVariant }) => isArray(asVariant) && asVariant}
+    ${({ scaleVariant, asVariant }) =>
+        (isArray(asVariant) || isArray(scaleVariant)) && scaleVariant}
 
     // Prop overrides. We don't have any defaults here because then they
     // would always override the variants above.
