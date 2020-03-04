@@ -118,6 +118,7 @@ export const Typography = styled('span').attrs<TypographyProps>(props => ({
             fontWeight: th('typography.fontWeight'),
             textAlign: 'inherit',
             color: 'inherit',
+            // Don't include variants that are css-blocks
             ...(!isArray(asVariant) ? asVariant : {}),
             ...(!isArray(asVariant) && !isArray(scaleVariant)
                 ? scaleVariant
