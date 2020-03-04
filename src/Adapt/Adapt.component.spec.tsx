@@ -12,7 +12,7 @@ describe('Component: Adapt', () => {
             <ThemeProvider theme={RootTheme}>
                 <Adapt forEach={{ xs: 'blue', md: 'green' }}>
                     {(value, breakpoint) => (
-                        <div>{`${value} | ${breakpoint}`}</div>
+                        <div key={breakpoint}>{`${value} | ${breakpoint}`}</div>
                     )}
                 </Adapt>
             </ThemeProvider>
@@ -26,7 +26,7 @@ describe('Component: Adapt', () => {
             <ThemeProvider theme={RootTheme}>
                 <Adapt forEach={{ md: 'green' }}>
                     {(value, breakpoint) => (
-                        <div>{`${value} | ${breakpoint}`}</div>
+                        <div key={breakpoint}>{`${value} | ${breakpoint}`}</div>
                     )}
                 </Adapt>
             </ThemeProvider>
@@ -40,7 +40,7 @@ describe('Component: Adapt', () => {
             <ThemeProvider theme={RootTheme}>
                 <Adapt forEach={{ md: 'green', xs: 'blue' }}>
                     {(value, breakpoint) => (
-                        <div>{`${value} | ${breakpoint}`}</div>
+                        <div key={breakpoint}>{`${value} | ${breakpoint}`}</div>
                     )}
                 </Adapt>
             </ThemeProvider>

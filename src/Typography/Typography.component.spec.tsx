@@ -3,9 +3,25 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { Typography } from './Typography.component';
-import styled, { ThemeProvider } from '@xstyled/styled-components';
+import styled, { css, ThemeProvider } from '@xstyled/styled-components';
 // ANCHOR
 import { RootTheme } from '../theme';
+import { themeMerge } from '../utils/themeMerge';
+
+const themeWithCssBlockVariant = themeMerge({
+    typography: {
+        as: {
+            h5: css`
+                background-color: blue;
+            `,
+        },
+        scale: {
+            24: css`
+                background-color: green;
+            `,
+        },
+    },
+});
 
 describe('Component: Typography', () => {
     it('match its snapshot', () => {
@@ -121,6 +137,58 @@ describe('Component: Typography', () => {
                 <RedText as="h1" className="customClass">
                     RedText h1 customClass
                 </RedText>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('scale should take precendence over as variants', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <Typography className="customClass" as="h5" scale={32}>
+                    Typography customClass
+                </Typography>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should work with css block as-variants', () => {
+        const subject = (
+            <ThemeProvider theme={themeWithCssBlockVariant}>
+                <Typography className="customClass" as="h5">
+                    Typography customClass
+                </Typography>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should work with css block scale variants', () => {
+        const subject = (
+            <ThemeProvider theme={themeWithCssBlockVariant}>
+                <Typography className="customClass" scale={24}>
+                    Typography customClass
+                </Typography>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('scale should still take precendence with css block as-variants', () => {
+        const subject = (
+            <ThemeProvider theme={themeWithCssBlockVariant}>
+                <Typography className="customClass" as="h5" scale={32}>
+                    Typography customClass
+                </Typography>
             </ThemeProvider>
         );
 

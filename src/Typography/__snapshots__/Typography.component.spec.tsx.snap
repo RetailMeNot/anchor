@@ -23,6 +23,57 @@ exports[`Component: Typography match its snapshot 1`] = `
 </span>
 `;
 
+exports[`Component: Typography scale should still take precendence with css block as-variants 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  background-color: blue;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<h5
+  className="c0 customClass anchor-typography"
+  scale={32}
+>
+  Typography customClass
+</h5>
+`;
+
+exports[`Component: Typography scale should take precendence over as variants 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<h5
+  className="c0 customClass anchor-typography"
+  scale={32}
+>
+  Typography customClass
+</h5>
+`;
+
 exports[`Component: Typography should accept a custom display 1`] = `
 .c0 {
   box-sizing: border-box;
@@ -210,4 +261,53 @@ exports[`Component: Typography should be extendable via styled 2`] = `
 >
   I should be an h1 and be red!
 </h1>
+`;
+
+exports[`Component: Typography should work with css block as-variants 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  background-color: blue;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<h5
+  className="c0 customClass anchor-typography"
+>
+  Typography customClass
+</h5>
+`;
+
+exports[`Component: Typography should work with css block scale variants 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  background-color: green;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="c0 customClass anchor-typography"
+  scale={24}
+>
+  Typography customClass
+</span>
 `;
