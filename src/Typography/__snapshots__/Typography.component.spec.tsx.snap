@@ -286,3 +286,28 @@ exports[`Component: Typography should work with css block as-variants 1`] = `
   Typography customClass
 </h5>
 `;
+
+exports[`Component: Typography should work with css block scale variants 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Avenir Next,Segoe UI,Helvetica Neue,Helvetica,Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: normal;
+  text-align: inherit;
+  color: inherit;
+  background-color: green;
+}
+
+.c0 small {
+  font-size: 87.5%;
+}
+
+<span
+  className="c0 customClass anchor-typography"
+  scale={24}
+>
+  Typography customClass
+</span>
+`;

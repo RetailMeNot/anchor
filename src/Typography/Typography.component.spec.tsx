@@ -15,6 +15,11 @@ const themeWithCssBlockVariant = themeMerge({
                 background-color: blue;
             `,
         },
+        scale: {
+            24: css`
+                background-color: green;
+            `,
+        },
     },
 });
 
@@ -156,6 +161,19 @@ describe('Component: Typography', () => {
         const subject = (
             <ThemeProvider theme={themeWithCssBlockVariant}>
                 <Typography className="customClass" as="h5">
+                    Typography customClass
+                </Typography>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should work with css block scale variants', () => {
+        const subject = (
+            <ThemeProvider theme={themeWithCssBlockVariant}>
+                <Typography className="customClass" scale={24}>
                     Typography customClass
                 </Typography>
             </ThemeProvider>
