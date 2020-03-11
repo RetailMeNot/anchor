@@ -58,8 +58,11 @@ const variants = {
         border-bottom: solid thin ${th.color('borders.base')};
 
         .anchor-collapse-button {
+            appearance: none;
+            background-color: transparent; /* All but Chrome show a grey button bg color despite 'appearance: none' */
             cursor: pointer;
-            display: block;
+            display: flex;
+            justify-content: space-between;
             width: 100%;
             text-align: left;
             border-style: none;
@@ -72,8 +75,9 @@ const variants = {
                 outline: none;
             }
 
-            span:last-child {
-                float: right;
+            > *:last-child {
+                flex: 0 0 auto;
+                padding-left: 0.5em;
             }
         }
 
@@ -87,13 +91,15 @@ const variants = {
         color: text.light;
 
         .anchor-collapse-button {
-            background-color: white;
+            appearance: none;
+            background-color: transparent; /* All but Chrome show a grey button bg color despite 'appearance: none' */
             border-style: none;
             border-bottom: light;
             border-top: light;
             color: text.light;
             cursor: pointer;
-            display: block;
+            display: flex;
+            justify-content: space-between;
             font-weight: bold;
             height: 3rem;
             padding: 0 1.3125rem;
@@ -105,8 +111,9 @@ const variants = {
                 outline: none;
             }
 
-            *:last-child {
-                float: right;
+            > *:last-child {
+                flex: 0 0 auto;
+                padding-left: 0.5em;
             }
         }
 
@@ -215,13 +222,13 @@ export const Collapse: React.FunctionComponent<CollapseProps> = ({
                 className="anchor-collapse-button"
             >
                 {open ? (
-                    <React.Fragment>
+                    <>
                         {openedText} {IconOpened}
-                    </React.Fragment>
+                    </>
                 ) : (
-                    <React.Fragment>
+                    <>
                         {textClosed} {IconClosed}
-                    </React.Fragment>
+                    </>
                 )}
             </button>
 
