@@ -19,8 +19,19 @@ exports[`Component: Collapse should keep closed content in the dom when removeIn
 }
 
 .c0 .anchor-collapse-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   text-align: left;
   border-style: none;
@@ -37,8 +48,11 @@ exports[`Component: Collapse should keep closed content in the dom when removeIn
   outline: none;
 }
 
-.c0 .anchor-collapse-button span:last-child {
-  float: right;
+.c0 .anchor-collapse-button > *:last-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-left: 0.5em;
 }
 
 .c0 .anchor-collapse-content {
@@ -113,8 +127,19 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
 }
 
 .c0 .anchor-collapse-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
   cursor: pointer;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   text-align: left;
   border-style: none;
@@ -131,8 +156,11 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
   outline: none;
 }
 
-.c0 .anchor-collapse-button span:last-child {
-  float: right;
+.c0 .anchor-collapse-button > *:last-child {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-left: 0.5em;
 }
 
 .c0 .anchor-collapse-content {
