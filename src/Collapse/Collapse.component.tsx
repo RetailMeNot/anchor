@@ -77,7 +77,7 @@ const variants = {
 
             > *:last-child {
                 flex: 0 0 auto;
-                padding-left: 0.5em;
+                margin-left: 0.5em;
             }
         }
 
@@ -113,7 +113,7 @@ const variants = {
 
             > *:last-child {
                 flex: 0 0 auto;
-                padding-left: 0.5em;
+                margin-left: 0.5em;
             }
         }
 

@@ -52,7 +52,7 @@ exports[`Component: Collapse should keep closed content in the dom when removeIn
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 .c0 .anchor-collapse-content {
@@ -160,7 +160,7 @@ exports[`Component: Collapse should match its snapshot. 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 .c0 .anchor-collapse-content {

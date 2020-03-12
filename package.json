@@ -1,6 +1,6 @@
 {
   "name": "@retailmenot/anchor",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "A React UI Library by RetailMeNot",
   "main": "commonjs/index.js",
   "module": "esm/index.js",
