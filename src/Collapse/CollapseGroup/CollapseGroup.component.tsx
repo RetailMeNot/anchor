@@ -57,6 +57,9 @@ export const CollapseGroup: React.FunctionComponent<CollapseGroupProps> = ({
             {children &&
                 children.map((child: any, index: number) =>
                     React.cloneElement(child, {
+                        // TODO: Even if not explicitly set, this forces all child Collapse components
+                        // to closed because `undefined` is falsy.  Additionally, this is overwritten
+                        // if `isOpen` is explicitly set, because `...props` is spread below.
                         isOpen: accordion
                             ? index === currentOpenIndex
                             : undefined,
