@@ -511,12 +511,6 @@ export const Button = React.forwardRef(
             (prefix ? !suffix : !!suffix) &&
             React.Children.count(children) === 0;
 
-        if (flip && circular) {
-            /* eslint-disable-next-line */
-            console.warn(
-                "Buttons should not have both 'flip' and 'circular' props."
-            );
-        }
         if (flip && reverse) {
             /* eslint-disable-next-line */
             console.warn(
@@ -651,7 +645,7 @@ export const Button = React.forwardRef(
                         className: 'anchor-button-suffix',
                     })}
                 {flip && !disabled && !revealed && (
-                    <Flip colorTheme={colorTheme} />
+                    <Flip circular={circular} colorTheme={colorTheme} />
                 )}
             </StyledButton>
         );
