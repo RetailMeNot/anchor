@@ -228,7 +228,7 @@ export const Input = forwardRef(
             onChange = () => null,
             onFocus = () => null,
             type = 'text',
-            filter = value => value,
+            filter = val => val,
             placeholder,
             name = 'input',
             label,
