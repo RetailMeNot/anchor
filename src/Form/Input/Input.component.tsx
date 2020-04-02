@@ -68,6 +68,7 @@ interface InputProps
     // fullWidth?: boolean;
     label?: string;
     placeholder?: string;
+    filter?: (value?: string) => any;
     readOnly?: boolean;
     // TODO: buttons?
     prefix?: any;
@@ -227,6 +228,7 @@ export const Input = forwardRef(
             onChange = () => null,
             onFocus = () => null,
             type = 'text',
+            filter = value => value,
             placeholder,
             name = 'input',
             label,
@@ -241,16 +243,18 @@ export const Input = forwardRef(
         ref: React.RefObject<any>
     ) => {
         const inputRef = createRef<HTMLInputElement>();
-        const [inputValue, setInputValue] = useState<string | number>(value);
+        const [inputValue, setInputValue] = useState<string | number>(
+            filter(value)
+        );
         const [focus, setFocus] = useState<boolean>(false);
 
         useEffect(() => {
-            setInputValue(value);
+            setInputValue(filter(value));
         }, [value]);
 
         useImperativeHandle(ref, () => ({
             update: (newValue: InputContentType) => {
-                setInputValue(newValue);
+                setInputValue(filter(newValue));
             },
             blur: () => (inputRef.current ? inputRef.current.blur() : null),
         }));
@@ -292,7 +296,7 @@ export const Input = forwardRef(
                                 const {
                                     target: { value: currentValue },
                                 } = event;
-                                setInputValue(currentValue);
+                                setInputValue(filter(currentValue));
                                 eventTypeResolver(onChange, event, type);
                             }}
                             onKeyDown={(event: React.KeyboardEvent) => {
