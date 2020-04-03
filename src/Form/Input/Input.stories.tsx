@@ -20,6 +20,7 @@ type InputState = {
     text?: string;
     number?: string | number;
     tel?: string | number;
+    filtered?: string;
 };
 
 const InputStories = () => {
@@ -28,6 +29,7 @@ const InputStories = () => {
         text: '',
         number: '',
         tel: '',
+        filtered: '',
     });
 
     return (
@@ -83,6 +85,21 @@ const InputStories = () => {
                         <Input
                             prefix={<Search color="text.placeholder" />}
                             type="number"
+                        />
+                    </div>
+                    <div>
+                        <Input
+                            placeholder="Only [0-9], max of 5 characters"
+                            value={inputValues.filtered}
+                            onChange={newVal =>
+                                setInputValues({
+                                    ...inputValues,
+                                    filtered: newVal,
+                                })
+                            }
+                            filter={value =>
+                                value?.replace(/\D/g, '')?.substring(0, 5)
+                            }
                         />
                     </div>
                 </div>
