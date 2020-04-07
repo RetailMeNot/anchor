@@ -101,6 +101,10 @@ storiesOf('Components/Skeleton', module)
                         <Skeleton
                             loading={loading}
                             textLength={textLength}
+                            blockRatio={
+                                parseFloat(text('blockRatio', '')) || undefined
+                            }
+                            textChar={text('textChar', '') || undefined}
                             colorStart={text('colorStart', '') || undefined}
                             colorEnd={text('colorEnd', '') || undefined}
                         >
@@ -132,8 +136,46 @@ storiesOf('Components/Skeleton', module)
                         textLength={
                             parseInt(text('textLength', ''), 10) || undefined
                         }
+                        variant={text('variant', 'base') || undefined}
                         colorStart={text('colorStart', '') || undefined}
                         colorEnd={text('colorEnd', '') || undefined}
+                    />
+                </StyledStory>
+            </ThemeProvider>
+        );
+    })
+    .add('Multiple Colors', () => {
+        const loading = boolean('loading', true);
+
+        return (
+            <ThemeProvider theme={RootTheme}>
+                <StyledStory>
+                    <Skeleton
+                        loading={loading}
+                        textLength={200}
+                        colorStart={text('A: colorStart', '') || undefined}
+                        colorEnd={text('A: colorEnd', '') || undefined}
+                    />
+                    <Skeleton
+                        loading={loading}
+                        textLength={200}
+                        colorStart={
+                            text('B: colorStart', 'accent.light') || undefined
+                        }
+                        colorEnd={
+                            text('B: colorEnd', 'accent.dark') || undefined
+                        }
+                    />
+                    <Skeleton
+                        loading={loading}
+                        textLength={200}
+                        colorStart={
+                            text('C: colorStart', 'secondary.light') ||
+                            undefined
+                        }
+                        colorEnd={
+                            text('C: colorEnd', 'secondary.dark') || undefined
+                        }
                     />
                 </StyledStory>
             </ThemeProvider>

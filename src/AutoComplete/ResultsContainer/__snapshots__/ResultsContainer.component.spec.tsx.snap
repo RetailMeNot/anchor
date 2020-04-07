@@ -137,7 +137,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="sc-pzMyG c2 lg anchor-typography"
+        className="sc-pHIBf c2 lg anchor-typography"
       >
         Result Item 1
       </span>
@@ -149,7 +149,7 @@ exports[`Component: ResultsContainer should accept a resultTemplate 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="sc-pzMyG c2 lg anchor-typography"
+        className="sc-pHIBf c2 lg anchor-typography"
       >
         Result Item 2
       </span>
@@ -300,7 +300,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="sc-pzMyG c3 lg anchor-typography"
+        className="sc-pHIBf c3 lg anchor-typography"
       >
         Result Item 1
       </span>
@@ -313,7 +313,7 @@ exports[`Component: ResultsContainer should be defined 1`] = `
       onMouseOver={[Function]}
     >
       <span
-        className="sc-pzMyG c3 lg anchor-typography"
+        className="sc-pHIBf c3 lg anchor-typography"
       >
         Result Item 2
       </span>

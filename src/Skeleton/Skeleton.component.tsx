@@ -1,70 +1,92 @@
-// REACT
-import * as React from 'react';
 // VENDOR
+import * as React from 'react';
 import classNames from 'classnames';
-import styled, { css } from '@xstyled/styled-components';
-import { th, space as spaceStyles, SpaceProps } from '@xstyled/system';
+import styled, {
+    css,
+    keyframes,
+    ThemeContext,
+} from '@xstyled/styled-components';
+import {
+    space as spaceStyles,
+    SpaceProps,
+    layout as layoutStyles,
+    LayoutProps,
+    borderRadius as borderRadiusStyles,
+    BorderRadiusProps,
+    variant as createVariant,
+    th,
+} from '@xstyled/system';
 
 interface SkeletonProps
     extends React.HTMLAttributes<HTMLDivElement>,
-        SpaceProps {
+        SpaceProps,
+        LayoutProps,
+        BorderRadiusProps {
     className?: string;
     loading?: boolean;
-    borderRadius?: string;
-    display?: string;
-    height?: string;
-    width?: string;
-    maxHeight?: string;
-    maxWidth?: string;
-    minHeight?: string;
-    minWidth?: string;
     textLength?: number;
+    textChar?: string;
+    blockRatio?: number;
     colorStart?: string;
     colorEnd?: string;
+    variant?: string;
 }
 
 interface StyledSkeletonProps extends SkeletonProps {
     textOnly?: boolean;
+
+    // making nonnullable
+    colorStart: string;
+    colorEnd: string;
 }
+
+export const SKELETON_KEY = 'skeleton';
+export const SKELETON_THEME = {
+    variants: {
+        base: {
+            colorStart: '#E7E7E7',
+            colorEnd: '#D3D3D3',
+        },
+    },
+};
+
+const colorVariant = createVariant({
+    key: `${SKELETON_KEY}.variants`,
+    prop: 'variant',
+    default: 'base',
+    variants: SKELETON_THEME.variants,
+});
+
+const colorKeyframe = (start: string, end: string) => keyframes`
+    0% { color: ${start}; }
+    50% { color: ${end}; }
+    100% { color: ${start}; }
+`;
+const bgKeyframe = (start: string, end: string) => keyframes`
+    0% { background: ${start}; }
+    50% { background: ${end}; }
+    100% { background: ${start}; }
+`;
 
 const StyledSkeleton = styled('div')<StyledSkeletonProps>`
     box-sizing: border-box;
-
-    ${({
-        display,
-        borderRadius,
-        height,
-        width,
-        maxHeight,
-        maxWidth,
-        minHeight,
-        minWidth,
-        textOnly,
-    }) =>
-        css({
-            borderRadius,
-            display: display || (textOnly ? 'inherit' : 'inline-block'),
-            width,
-            height,
-            maxWidth,
-            maxHeight,
-            minHeight,
-            minWidth,
-        })}
+    ${borderRadiusStyles}
     ${spaceStyles}
+    ${layoutStyles}
 
-    ${({ textOnly, colorStart }) =>
+    ${({ textOnly, colorStart, colorEnd }) =>
         textOnly
             ? css`
                   word-break: break-all;
-
                   color: ${colorStart};
-                  animation: color-change 2s ease-in-out infinite;
+                  animation: ${colorKeyframe(colorStart, colorEnd)} 2s
+                      ease-in-out infinite;
               `
             : css`
                   pointer-events: none;
-                  background: ${th.color(colorStart)};
-                  animation: background-change 2s ease-in-out infinite;
+                  background: ${colorStart};
+                  animation: ${bgKeyframe(colorStart, colorEnd)} 2s ease-in-out
+                      infinite;
 
                   // hide all children
                   && * {
@@ -72,57 +94,37 @@ const StyledSkeleton = styled('div')<StyledSkeletonProps>`
                       opacity: 0;
                   }
               `}
-
-    ${({ colorStart, colorEnd }) => css`
-        @keyframes background-change {
-            0% {
-                background: ${th.color(colorStart)};
-            }
-            50% {
-                background: ${th.color(colorEnd)};
-            }
-            100% {
-                background: ${th.color(colorStart)};
-            }
-        }
-        @keyframes color-change {
-            0% {
-                color: ${colorStart};
-            }
-            50% {
-                color: ${colorEnd};
-            }
-            100% {
-                color: ${colorStart};
-            }
-        }
-    `}
 `;
 
 export const Skeleton = ({
     className,
     children,
+    display,
     textLength,
+    textChar = '▆',
+    // This is the conversion from block width to the average width of
+    // a normal distribution of letters. We came up with it by eyeballing it
+    // for the Avenir Next font. We should probably make it themeable in the future.
+    blockRatio = 1 / 2.15,
     loading = true,
-    colorStart = th('skeleton.colorStart'),
-    colorEnd = th('skeleton.colorEnd'),
+    colorStart,
+    colorEnd,
     ...props
 }: SkeletonProps): React.ReactElement<StyledSkeletonProps> | any => {
     if (!loading) {
         return typeof children === 'undefined' ? null : children;
     }
 
-    // This is the conversion from block width to the average width of
-    // a normal distribution of letters. We came up with it by eyeballing it
-    // for the Avenir Next font. We should make it configurable via theme/prop
-    // or make further calculations to improve it.
-    const blockToAverageCharQuotient = 2.15;
+    const theme = React.useContext(ThemeContext);
+    const { colorStart: themeStart, colorEnd: themeEnd } = colorVariant({
+        ...props,
+        theme,
+    });
 
-    // This is the unicode block character that put together looks like one
-    // long bar. There are shorter and taller characters that could be used
-    // or a fatter or thinner bar. Therefore the bar thickness chould be made
-    // a prop in the future, mapping to different block characters.
-    const blockChar = '▆';
+    // Keyframes don't play nice with prop functions, so we're manually
+    // calculating the raw color value from the theme before plugging it in
+    const startValue = th.color(colorStart || themeStart)({ theme });
+    const endValue = th.color(colorEnd || themeEnd)({ theme });
 
     const onlyChild =
         React.Children.count(children) === 1 &&
@@ -134,17 +136,16 @@ export const Skeleton = ({
 
     const length = textLength || (childText && childText.length);
     const blockText =
-        length &&
-        Array(Math.ceil(length / blockToAverageCharQuotient) + 1).join(
-            blockChar
-        );
+        length && Array(Math.ceil(length * blockRatio) + 1).join(textChar);
+    const textOnly = !!blockText;
 
     return (
         <StyledSkeleton
             className={classNames('anchor-skeleton', className)}
-            textOnly={!!blockText}
-            colorStart={colorStart}
-            colorEnd={colorEnd}
+            display={display || (textOnly ? 'inherit' : 'inline-block')}
+            textOnly={textOnly}
+            colorStart={startValue}
+            colorEnd={endValue}
             {...props}
         >
             {blockText || children}

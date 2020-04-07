@@ -1,1 +1,1 @@
-export { Skeleton } from './Skeleton.component';
+export { Skeleton, SKELETON_KEY, SKELETON_THEME } from './Skeleton.component';
