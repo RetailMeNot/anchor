@@ -101,6 +101,9 @@ export const Skeleton = ({
     children,
     display,
     textLength,
+    // This is the unicode block character that put together looks like one
+    // long bar. There are shorter and taller characters that could be used
+    // or a fatter or thinner bar.
     textChar = '▆',
     // This is the conversion from block width to the average width of
     // a normal distribution of letters. We came up with it by eyeballing it
