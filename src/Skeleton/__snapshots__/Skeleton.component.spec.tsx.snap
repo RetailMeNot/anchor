@@ -6,8 +6,8 @@ exports[`Component: Skeleton should be defined. 1`] = `
   display: inline-block;
   pointer-events: none;
   background: #E7E7E7;
-  -webkit-animation: background-change 2s ease-in-out infinite;
-  animation: background-change 2s ease-in-out infinite;
+  -webkit-animation: fLEqvv 2s ease-in-out infinite;
+  animation: fLEqvv 2s ease-in-out infinite;
 }
 
 .c0.c0 * {
@@ -17,6 +17,7 @@ exports[`Component: Skeleton should be defined. 1`] = `
 
 <div
   className="c0 anchor-skeleton"
+  display="inline-block"
 />
 `;
 
@@ -32,14 +33,56 @@ exports[`Component: Skeleton should render in textOnly mode when given only text
   display: inherit;
   word-break: break-all;
   color: #E7E7E7;
-  -webkit-animation: color-change 2s ease-in-out infinite;
-  animation: color-change 2s ease-in-out infinite;
+  -webkit-animation: gXgMws 2s ease-in-out infinite;
+  animation: gXgMws 2s ease-in-out infinite;
 }
 
 <div
   className="c0 anchor-skeleton"
+  display="inherit"
 >
   ▆▆▆▆▆▆▆▆▆▆▆▆
+</div>
+`;
+
+exports[`Component: Skeleton should support multiple color schemes 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: inherit;
+  word-break: break-all;
+  color: #0074A6;
+  -webkit-animation: gVOVAL 2s ease-in-out infinite;
+  animation: gVOVAL 2s ease-in-out infinite;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: inherit;
+  word-break: break-all;
+  color: #268068;
+  -webkit-animation: gsfEtd 2s ease-in-out infinite;
+  animation: gsfEtd 2s ease-in-out infinite;
+}
+
+<div>
+  <div
+    className="c0 anchor-skeleton"
+    display="inherit"
+  >
+    ▆▆▆
+  </div>
+  <div
+    className="c0 anchor-skeleton"
+    display="inherit"
+  >
+    ▆▆▆
+  </div>
+  <div
+    className="c1 anchor-skeleton"
+    display="inherit"
+  >
+    ▆▆▆
+  </div>
 </div>
 `;
 
@@ -49,8 +92,8 @@ exports[`Component: Skeleton should wrap over nontext children and hide them 1`]
   display: inline-block;
   pointer-events: none;
   background: #E7E7E7;
-  -webkit-animation: background-change 2s ease-in-out infinite;
-  animation: background-change 2s ease-in-out infinite;
+  -webkit-animation: fLEqvv 2s ease-in-out infinite;
+  animation: fLEqvv 2s ease-in-out infinite;
 }
 
 .c0.c0 * {
@@ -60,6 +103,7 @@ exports[`Component: Skeleton should wrap over nontext children and hide them 1`]
 
 <div
   className="c0 anchor-skeleton"
+  display="inline-block"
 >
   <div>
     hide me!

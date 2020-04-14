@@ -57,4 +57,27 @@ describe('Component: Skeleton', () => {
         const tree = renderer.create(subject).toJSON();
         expect(tree).toMatchSnapshot();
     });
+    it('should support multiple color schemes', () => {
+        const subject = (
+            <ThemeProvider theme={RootTheme}>
+                <div>
+                    <Skeleton colorStart="accent.dark" colorEnd="accent.light">
+                        Apple
+                    </Skeleton>
+                    <Skeleton colorStart="accent.dark" colorEnd="accent.light">
+                        Apple
+                    </Skeleton>
+                    <Skeleton
+                        colorStart="secondary.dark"
+                        colorEnd="secondary.light"
+                    >
+                        Banana
+                    </Skeleton>
+                </div>
+            </ThemeProvider>
+        );
+
+        const tree = renderer.create(subject).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
