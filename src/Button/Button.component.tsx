@@ -7,7 +7,12 @@ import styled, {
     FlattenSimpleInterpolation,
     ThemeContext,
 } from '@xstyled/styled-components';
-import { variant as createVariant, th } from '@xstyled/system';
+import {
+    variant as createVariant,
+    th,
+    space as spaceStyles,
+    SpaceProps,
+} from '@xstyled/system';
 import { transparentize } from 'polished';
 // ANCHOR
 import {
@@ -24,13 +29,14 @@ import { HitArea } from './HitArea';
 type Variant = 'filled' | 'outline' | 'minimal';
 type ButtonSize = 'lg' | 'md' | 'sm' | 'xs' | string;
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+    extends React.HTMLAttributes<HTMLButtonElement>,
+        SpaceProps {
     children?: any;
     disabled?: boolean;
     revealed?: boolean;
     showSpinner?: boolean;
     className?: string;
-    margin?: string;
 
     flip?: boolean;
     colorTheme?: Theme;
@@ -55,7 +61,6 @@ export interface StyledButtonProps extends ButtonProps {
     iconOnly?: boolean;
     borderRadius: string;
     buttonStyles: ButtonStyles;
-    padding?: string;
 
     // named this way to avoid applying html attributes
     $height: number;
@@ -370,15 +375,6 @@ const StyledButton = styled('button')<StyledButtonProps>`
     align-items: center;
     outline: none !important;
 
-    margin: ${({ margin }: StyledButtonProps) => margin || `0`};
-    ${({ block, margin }: StyledButtonProps) =>
-        !margin &&
-        css`
-            & + .anchor-button {
-                margin-left: ${block ? '0.5rem' : '1rem'};
-            }
-        `};
-
 	transition: ${TRANSITION_SPEED} ease background-color,
                 ${TRANSITION_SPEED} ease border-color,
                 ${TRANSITION_SPEED} ease color,
@@ -399,8 +395,7 @@ const StyledButton = styled('button')<StyledButtonProps>`
             : buttonStyles.base}
 
     /* Sizing */
-    ${({ $fontSize, $height, padding }) => css`
-        padding: ${padding};
+    ${({ $fontSize, $height }) => css`
         font-size: ${rem($fontSize)};
         height: ${rem($height)};
     `}
@@ -477,6 +472,8 @@ const StyledButton = styled('button')<StyledButtonProps>`
             color: ${REVEAL_COLOR};
             font-weight: bold;
         `}
+
+    ${spaceStyles}
 `;
 
 export const Button = React.forwardRef(

@@ -21,7 +21,6 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -29,14 +28,10 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 1rem;
   height: 3rem;
   min-width: 3rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:hover,
@@ -152,7 +147,6 @@ exports[`Component: Modal.Close should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -160,14 +154,10 @@ exports[`Component: Modal.Close should render 1`] = `
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 1rem;
   height: 3rem;
   min-width: 3rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:hover,
