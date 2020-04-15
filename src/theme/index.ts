@@ -3,6 +3,7 @@ import { typography } from './typography.theme';
 import { ColorsTheme } from './colors.theme';
 
 import { BUTTON_KEY, BUTTON_THEME } from '../Button';
+import { SKELETON_KEY, SKELETON_THEME } from '../Skeleton';
 import { INPUT_KEY, INPUT_THEME } from '../Form/Input/utils';
 
 export const RootTheme = {
@@ -34,8 +35,5 @@ export const RootTheme = {
         dark: `thin solid ${ColorsTheme.borders.dark}`,
     },
 
-    skeleton: {
-        colorStart: '#E7E7E7',
-        colorEnd: '#D3D3D3',
-    },
+    [SKELETON_KEY]: SKELETON_THEME,
 };

@@ -8,6 +8,9 @@ declare module '@xstyled/styled-components' {
         ThemedCssFunction,
         DefaultTheme,
         StyledInterface,
+        CSSKeyframes,
+        SimpleInterpolation,
+        Keyframes,
     } from 'styled-components';
     export {
         StyledInterface,
@@ -23,6 +26,11 @@ declare module '@xstyled/styled-components' {
     export const ThemeProvider: any;
     export const css: ThemedCssFunction<DefaultTheme>;
     export const withTheme: any;
+
+    export const keyframes: (
+        strings: TemplateStringsArray | CSSKeyframes,
+        ...interpolations: SimpleInterpolation[]
+    ) => Keyframes;
 
     export const up: (breakpoint: string, styles: any) => any;
     export const down: (breakpoint: string, styles: any) => any;
