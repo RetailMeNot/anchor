@@ -30,7 +30,6 @@ exports[`Component: Pagination should be defined. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -39,14 +38,10 @@ exports[`Component: Pagination should be defined. 1`] = `
   background-color: #D3D3D3;
   color: #808080;
   cursor: not-allowed;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:focus:after {
@@ -80,7 +75,6 @@ exports[`Component: Pagination should be defined. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -88,14 +82,10 @@ exports[`Component: Pagination should be defined. 1`] = `
   border: solid thin #0998D6;
   background-color: #0998D6;
   color: white;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c4 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c4:hover,
@@ -136,7 +126,6 @@ exports[`Component: Pagination should be defined. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -144,14 +133,10 @@ exports[`Component: Pagination should be defined. 1`] = `
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c5 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c5:hover,
@@ -352,7 +337,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -360,14 +344,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:hover,
@@ -408,7 +388,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -416,14 +395,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   border: solid thin #0998D6;
   background-color: #0998D6;
   color: white;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c5 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c5:hover,
@@ -464,7 +439,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -473,14 +447,10 @@ exports[`Component: Pagination should render on the last page. 1`] = `
   background-color: #D3D3D3;
   color: #808080;
   cursor: not-allowed;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c6 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c6:focus:after {
@@ -735,7 +705,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -743,14 +712,10 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:hover,
@@ -791,7 +756,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -799,14 +763,10 @@ exports[`Component: Pagination should render with current page in the middle. 1`
   border: solid thin #0998D6;
   background-color: #0998D6;
   color: white;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c5 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c5:hover,
@@ -1097,7 +1057,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -1106,14 +1065,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   background-color: #D3D3D3;
   color: #808080;
   cursor: not-allowed;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c1 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c1:focus:after {
@@ -1147,7 +1102,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -1155,14 +1109,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   border: solid thin #0998D6;
   background-color: #0998D6;
   color: white;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c4 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c4:hover,
@@ -1203,7 +1153,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   -ms-flex-align: center;
   align-items: center;
   outline: none !important;
-  margin: 0;
   -webkit-transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   transition: 500ms ease background-color, 500ms ease border-color, 500ms ease color, 500ms ease fill;
   -webkit-font-smoothing: antialiased;
@@ -1211,14 +1160,10 @@ exports[`Component: Pagination should render with many pages. 1`] = `
   border: solid thin transparent;
   background-color: transparent;
   color: #0074A6;
-  padding: 0;
   font-size: 0.875rem;
   height: 2.5rem;
   min-width: 2.5rem;
-}
-
-.c5 + .anchor-button {
-  margin-left: 1rem;
+  padding: 0;
 }
 
 .c5:hover,

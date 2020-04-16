@@ -22,7 +22,7 @@ export type ThemeType = {
     inputs: object;
     colors: object;
     borders: object;
-    skeleton: object;
+    skeleton: any;
 };
 
 // Can't really be 100% sure what data will be as it is cloned, hence :any

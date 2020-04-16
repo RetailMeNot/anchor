@@ -86,9 +86,9 @@ describe('theme: themeMerge()', () => {
     });
 
     it('should not mutate RootTheme', () => {
-        subject.skeleton['colorStart'] = '#00ff00';
-        expect(RootTheme.skeleton['colorStart']).toBe('#E7E7E7');
-        expect(subject.skeleton['colorStart']).toBe('#00ff00');
+        subject.skeleton.variants.base['colorStart'] = '#00ff00';
+        expect(RootTheme.skeleton.variants.base['colorStart']).toBe('#E7E7E7');
+        expect(subject.skeleton.variants.base['colorStart']).toBe('#00ff00');
     });
 
     it('should overwrite RootTheme values with new values', () => {
