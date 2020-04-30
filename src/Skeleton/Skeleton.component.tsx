@@ -14,6 +14,10 @@ import {
     borderRadius as borderRadiusStyles,
     BorderRadiusProps,
     variant as createVariant,
+    fontSize as fontSizeStyles,
+    FontSizeProps,
+    lineHeight as lineHeightStyles,
+    LineHeightProps,
     th,
 } from '@xstyled/system';
 
@@ -21,7 +25,9 @@ interface SkeletonProps
     extends React.HTMLAttributes<HTMLDivElement>,
         SpaceProps,
         LayoutProps,
-        BorderRadiusProps {
+        BorderRadiusProps,
+        FontSizeProps,
+        LineHeightProps {
     className?: string;
     loading?: boolean;
     textLength?: number;
@@ -68,16 +74,27 @@ const bgKeyframe = (start: string, end: string) => keyframes`
     100% { background: ${start}; }
 `;
 
-const StyledSkeleton = styled('div')<StyledSkeletonProps>`
+const StyledSkeleton = styled('span')<StyledSkeletonProps>`
     box-sizing: border-box;
     ${borderRadiusStyles}
     ${spaceStyles}
     ${layoutStyles}
+    ${fontSizeStyles}
+    ${lineHeightStyles}
 
     ${({ textOnly, colorStart, colorEnd }) =>
         textOnly
             ? css`
+                  // its all one word technically, so we want to make sure
+                  // it can be broken up into multiple lines
                   word-break: break-all;
+                  white-space: normal;
+
+                  // smoothing can make it appear as though theres
+                  // a gap between the block characters
+                  -webkit-font-smoothing: none;
+                  -moz-osx-font-smoothing: auto;
+
                   color: ${colorStart};
                   animation: ${colorKeyframe(colorStart, colorEnd)} 2s
                       ease-in-out infinite;
