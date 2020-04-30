@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { color, select } from '@storybook/addon-knobs';
+import { text, select } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
@@ -43,7 +43,7 @@ storiesOf('Components/Icon', module)
         },
     })
     .add('All Icons', () => {
-        const selectedColor = color('color', DefaultColor) || undefined;
+        const selectedColor = text('color', DefaultColor) || undefined;
         const scale = select(
             'scale',
             ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
@@ -86,7 +86,7 @@ storiesOf('Components/Icon', module)
             <ThemeProvider theme={RootTheme}>
                 <StyledStory>
                     {React.createElement(Icon[iconKey], {
-                        color: color('color', DefaultColor),
+                        color: text('color', DefaultColor),
                         scale: select(
                             'scale',
                             ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
