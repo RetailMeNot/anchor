@@ -32,7 +32,7 @@ export const CloseSmall = ({
                 <path d="M0 0h16v16H0z" />
                 <path
                     d="M9.501 9.734L6.075 6.309c-.083-.084-.1-.205-.036-.269l.001-.001c.064-.064.185-.047.269.036l3.425 3.426c.084.084.1.205.037.268l-.001.002c-.064.064-.185.047-.269-.037"
-                    stroke={color}
+                    stroke="currentColor"
                     strokeWidth=".8"
                     fill="#FFF"
                 />
