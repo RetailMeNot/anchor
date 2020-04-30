@@ -15,7 +15,7 @@ exports[`Component: Skeleton should be defined. 1`] = `
   opacity: 0;
 }
 
-<div
+<span
   className="c0 anchor-skeleton"
   display="inline-block"
 />
@@ -32,17 +32,20 @@ exports[`Component: Skeleton should render in textOnly mode when given only text
   box-sizing: border-box;
   display: inherit;
   word-break: break-all;
+  white-space: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
   color: #E7E7E7;
   -webkit-animation: gXgMws 2s ease-in-out infinite;
   animation: gXgMws 2s ease-in-out infinite;
 }
 
-<div
+<span
   className="c0 anchor-skeleton"
   display="inherit"
 >
   ▆▆▆▆▆▆▆▆▆▆▆▆
-</div>
+</span>
 `;
 
 exports[`Component: Skeleton should support multiple color schemes 1`] = `
@@ -50,6 +53,9 @@ exports[`Component: Skeleton should support multiple color schemes 1`] = `
   box-sizing: border-box;
   display: inherit;
   word-break: break-all;
+  white-space: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
   color: #0074A6;
   -webkit-animation: gVOVAL 2s ease-in-out infinite;
   animation: gVOVAL 2s ease-in-out infinite;
@@ -59,30 +65,33 @@ exports[`Component: Skeleton should support multiple color schemes 1`] = `
   box-sizing: border-box;
   display: inherit;
   word-break: break-all;
+  white-space: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
   color: #268068;
   -webkit-animation: gsfEtd 2s ease-in-out infinite;
   animation: gsfEtd 2s ease-in-out infinite;
 }
 
 <div>
-  <div
+  <span
     className="c0 anchor-skeleton"
     display="inherit"
   >
     ▆▆▆
-  </div>
-  <div
+  </span>
+  <span
     className="c0 anchor-skeleton"
     display="inherit"
   >
     ▆▆▆
-  </div>
-  <div
+  </span>
+  <span
     className="c1 anchor-skeleton"
     display="inherit"
   >
     ▆▆▆
-  </div>
+  </span>
 </div>
 `;
 
@@ -101,12 +110,12 @@ exports[`Component: Skeleton should wrap over nontext children and hide them 1`]
   opacity: 0;
 }
 
-<div
+<span
   className="c0 anchor-skeleton"
   display="inline-block"
 >
   <div>
     hide me!
   </div>
-</div>
+</span>
 `;

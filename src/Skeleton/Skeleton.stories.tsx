@@ -104,6 +104,8 @@ storiesOf('Components/Skeleton', module)
                             blockRatio={
                                 parseFloat(text('blockRatio', '')) || undefined
                             }
+                            fontSize={text('fontSize', '') || undefined}
+                            lineHeight={text('lineHeight', '') || undefined}
                             textChar={text('textChar', '') || undefined}
                             colorStart={text('colorStart', '') || undefined}
                             colorEnd={text('colorEnd', '') || undefined}
