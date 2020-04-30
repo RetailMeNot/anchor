@@ -31,7 +31,7 @@ export const Hamburger = ({
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h16v16H0z" />
                 <g
-                    stroke={color}
+                    stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="1.333"
