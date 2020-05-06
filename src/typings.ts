@@ -26,6 +26,8 @@ declare module '@xstyled/styled-components' {
     export const ThemeProvider: any;
     export const css: ThemedCssFunction<DefaultTheme>;
     export const withTheme: any;
+    export const Box: any;
+    export const useTheme: any;
 
     export const keyframes: (
         strings: TemplateStringsArray | CSSKeyframes,
