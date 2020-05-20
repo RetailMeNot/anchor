@@ -62,6 +62,18 @@ describe('Component: Button', () => {
             expect(tree).toMatchSnapshot();
         });
 
+        it('should render properly when flipped and circular', () => {
+            const subject = (
+                <ThemeProvider theme={RootTheme}>
+                    <Button variant="filled" flip circular>
+                        Text
+                    </Button>
+                </ThemeProvider>
+            );
+            const tree = renderer.create(subject).toJSON();
+            expect(tree).toMatchSnapshot();
+        });
+
         it('should have a revealed state when flipped', () => {
             const subject = (
                 <ThemeProvider theme={RootTheme}>
