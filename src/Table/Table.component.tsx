@@ -59,13 +59,14 @@ interface TableProps
         FontWeightProps,
         BorderRadiusProps,
         BorderProps,
-        WidthProps,
         MaxWidthProps,
         MinWidthProps,
         SpaceProps {
     borderRadius?: string;
     background?: string;
     altBackground?: string;
+    width?: any;
+    height?: any;
     size?: string;
 }
 
@@ -204,12 +205,12 @@ interface TableCellProps
         FontSizeProps,
         FontWeightProps,
         TextAlignProps,
-        WidthProps,
         MaxWidthProps,
         MinWidthProps,
-        HeightProps,
         SpaceProps {
     align?: 'center' | 'left' | 'right';
+    height?: any;
+    width?: any;
 }
 
 const StyledTd = styled('td')<TableCellProps>`

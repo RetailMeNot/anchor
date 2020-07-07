@@ -5,7 +5,13 @@ import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 import { fromEvent, Subscription, merge } from 'rxjs';
-import { filter, map, mapTo, distinctUntilChanged } from 'rxjs/operators';
+import {
+    filter,
+    map,
+    mapTo,
+    distinctUntilChanged,
+    throttleTime,
+} from 'rxjs/operators';
 // ANCHOR
 import { get } from '../utils/get/get';
 import { Position } from '../utils/position/position';
@@ -140,12 +146,13 @@ export class DropDown extends React.Component<DropDownProps> {
             fromEvent(this.rootElement, 'touchstart')
         ).pipe(
             filter(() => this.state.clicked),
-            filter(({ target }) => !dropDown.contains(target))
+            filter(({ target }) => !dropDown.contains(target)),
+            throttleTime(500)
         );
         const dropDownClick$ = merge(
             fromEvent(dropDown, 'click'),
             fromEvent(dropDown, 'touchstart')
-        );
+        ).pipe(throttleTime(500));
         const escapeKey$ = fromEvent(this.rootElement, 'keyup').pipe(
             filter(() => this.state.clicked || this.state.hovered),
             filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape')
