@@ -133,7 +133,7 @@ storiesOf('Components/DropDown', module)
                                 trigger={select<Trigger>(
                                     'trigger',
                                     ['click', 'hover', 'both'],
-                                    'hover'
+                                    'click'
                                 )}
                                 showArrow={boolean('showArrow', true)}
                                 shadow={text('shadow', '') || undefined}
