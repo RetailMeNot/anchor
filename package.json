@@ -135,6 +135,7 @@
     "core-js": "^3.0.0",
     "polished": "^3.2.0",
     "react-responsive": "^8.0.1",
+    "react-snaplist-carousel": "^3.2.2",
     "rxjs": "^6.5.2",
     "styled-react-modal": "^1.2.1",
     "ts-debounce": "^1.0.0"
