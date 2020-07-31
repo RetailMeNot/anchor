@@ -158,6 +158,18 @@ props.
 
 <ApiTable data={[
     {
+        property: 'autoComplete',
+        description: 'Enable/Disable browser auto complete for input',
+        type: 'boolean',
+        default: 'true',
+    },
+    {
+        property: 'autoFocus',
+        description: 'Enable/Disable auto focus on input',
+        type: 'boolean',
+        default: 'false',
+    },
+    {
         property: 'background',
         description: <ColorBlurb label="AutoComplete" />,
         type: <FormatTypes data={['string', 'rgb', 'rgba']} noInterpret />,
