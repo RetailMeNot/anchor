@@ -38,7 +38,7 @@ type InputTypes =
     // | 'radio'
     // | 'range'
     // | 'reset'
-    // | 'search'
+    | 'search'
     // | 'submit'
     | 'tel'
     | 'text';
@@ -63,6 +63,7 @@ interface InputProps
     value?: InputContentType;
     // Presentation
     ariaLabel?: string;
+    autoComplete?: string;
     autoFocus?: boolean;
     disabled?: boolean;
     // fullWidth?: boolean;
@@ -238,6 +239,8 @@ export const Input = forwardRef(
             size,
             id,
             ariaLabel,
+            autoComplete = 'on',
+            autoFocus = false,
             ...props
         }: InputProps,
         ref: React.RefObject<any>
@@ -286,6 +289,8 @@ export const Input = forwardRef(
                             id={id}
                             hasLabel={!!label}
                             name={name}
+                            autoComplete={autoComplete}
+                            autoFocus={autoFocus}
                             onBlur={(event: React.FocusEvent) => {
                                 eventTypeResolver(onBlur, event, type);
                                 setFocus(false);

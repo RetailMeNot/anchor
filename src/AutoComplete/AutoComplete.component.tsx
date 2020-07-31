@@ -9,13 +9,15 @@ import { Input } from '../Form';
 import { InputPropsType } from '../Form/Input/Input.component';
 import { ResultsContainer } from './ResultsContainer';
 
-const { useState, useRef } = React;
+const { useEffect, useState, useRef } = React;
 
 type AutoCompleteDataSource = {
     [key: string]: any;
     label?: string;
     listItemType?: 'item' | 'title' | 'divider';
 }[];
+
+type InputTypes = 'email' | 'number' | 'search' | 'tel' | 'text';
 
 interface AutoCompleteProps extends SpaceProps {
     className?: string;
@@ -28,6 +30,8 @@ interface AutoCompleteProps extends SpaceProps {
     // TODO: resultTemplate
     // TODO: allowClear
     allowClear?: boolean;
+    browserAutoComplete?: boolean;
+    autoFocus?: boolean;
     // Visual
     background?: string;
     border?: boolean;
@@ -36,6 +40,7 @@ interface AutoCompleteProps extends SpaceProps {
     // TODO: Allow children
     resultTemplate?: (props: any) => any;
     inputProps?: InputPropsType;
+    inputType?: InputTypes;
     prefix?: any;
     suffix?: any;
     // Event Handlers
@@ -101,6 +106,8 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
 
 export const AutoComplete = ({
     allowClear,
+    browserAutoComplete = true,
+    autoFocus = false,
     background = 'white',
     border = true,
     className,
@@ -108,6 +115,7 @@ export const AutoComplete = ({
     dataSource = [],
     debug = false,
     inputProps,
+    inputType = 'text',
     name = '',
     onChange = () => null,
     onFilter = () => null,
@@ -125,9 +133,33 @@ export const AutoComplete = ({
     const [isFocused, setIsFocused] = useState<boolean>(false);
     // The current search term
     const [term, setTerm] = useState<string>(value ? `${value}` : '');
+    const autoFocusRef = useRef<HTMLDivElement>(null);
     // Instance of the nested input
     const inputRef = useRef<any>();
     const resultsRef = useRef<any>();
+    let rootElement: any;
+
+    // Handle click outside of auto complete component
+    const handleOutsideClick = (e: any) => {
+        if (
+            isFocused &&
+            autoFocusRef.current &&
+            !autoFocusRef.current.contains(e.target)
+        ) {
+            setIsFocused(false);
+        }
+    };
+    // Set root element and listener for outside click
+    useEffect(() => {
+        rootElement = autoFocusRef.current
+            ? autoFocusRef.current.getRootNode()
+            : null;
+        if (rootElement) {
+            rootElement.addEventListener('click', handleOutsideClick);
+        }
+        return () =>
+            rootElement.removeEventListener('click', handleOutsideClick);
+    }, [inputRef, isFocused]);
 
     // Handle updating the search term
     const changeSearchTerm = (newTerm: string) => {
@@ -155,10 +187,12 @@ export const AutoComplete = ({
         inputRef.current.blur();
         // Reset the index
         resultsRef.current.setActiveIndex(0);
+        setIsFocused(false);
     };
 
     return (
         <StyledAutoComplete
+            ref={autoFocusRef}
             shadow={shadow}
             border={border}
             background={background}
@@ -175,22 +209,29 @@ export const AutoComplete = ({
                         : 'auto-complete'
                 }
                 inputProps={inputProps}
+                type={inputType}
                 value={term}
                 ref={inputRef}
                 size={size}
+                autoComplete={browserAutoComplete ? 'on' : 'off'}
+                autoFocus={autoFocus}
                 prefix={prefix}
                 suffix={suffix}
                 placeholder={placeholder}
                 onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
                 onChange={(newValue: string) => {
                     changeSearchTerm(newValue);
                 }}
                 onKeyDown={(event: React.KeyboardEvent) => {
                     switch (event.keyCode) {
                         case EventKeyCodes.TAB:
+                            if (!term) {
+                                break;
+                            }
                         case EventKeyCodes.ENTER:
-                            event.preventDefault();
+                            if (term) {
+                                event.preventDefault();
+                            }
                             event.stopPropagation();
                             // This should only fire if the results container exists
                             if (isFocused && resultsRef.current) {

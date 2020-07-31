@@ -129,6 +129,8 @@ exports[`Component: Form/Input should be defined 1`] = `
       className="c2"
     >
       <input
+        autoComplete="on"
+        autoFocus={false}
         className="c3"
         name="input"
         onBlur={[Function]}
