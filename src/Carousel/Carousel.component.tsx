@@ -1,7 +1,7 @@
 // VENDOR
 import * as React from 'react';
 import classNames from 'classnames';
-import styled from '@xstyled/styled-components';
+import styled, { css } from '@xstyled/styled-components';
 import { space, SpaceProps } from '@xstyled/system';
 import { SnapList, SnapItem, useScroll } from 'react-snaplist-carousel';
 
@@ -10,14 +10,16 @@ interface CarouselProps {
     className?: string;
 }
 
+interface DotProps {
+    active: boolean;
+}
+
 const StyledCarousel = styled('div')<SpaceProps>`
     ${space}
 `;
 
 const CarouselItem = styled('div')`
     width: calc(100vw - 1rem);
-    height: 200;
-    background: #cccccc;
 `;
 
 const Dots = styled('span')`
@@ -25,11 +27,12 @@ const Dots = styled('span')`
     display: block;
 `;
 
-const Dot = styled('span')`
+const Dot = styled('span')<DotProps>`
     height: 0.5rem;
     width: 0.5rem;
     display: inline-block;
-    background-color: gray;
+    ${({active}) => active && css`background-color: gray;`}
+    border: base;
     border-radius: 50%;
     margin: 0.25rem;
 `;
@@ -37,6 +40,7 @@ const Dot = styled('span')`
 export const Carousel = ({children, className}: CarouselProps): React.ReactElement<CarouselProps> => {
     const snapList = React.useRef(null);
     const goToElement = useScroll({ ref: snapList });
+    const [active, setActive] = React.useState(0);
 
     return (
         <StyledCarousel className={classNames('anchor-carousel', className)}>
@@ -50,7 +54,7 @@ export const Carousel = ({children, className}: CarouselProps): React.ReactEleme
                 ))}
             </SnapList>
             <Dots>
-                {children.map((_: any, i: number) => <Dot key={`dot-${i}`} onClick={() => goToElement(i)} />)}
+                {children.map((_: any, i: number) => <Dot key={`dot-${i}`} onClick={() => {setActive(i); goToElement(i); }} active={active === i} />)}
             </Dots>
         </StyledCarousel>
     );
