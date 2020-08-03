@@ -16,6 +16,7 @@ storiesOf('Components/Carousel', module)
                 <Carousel>
                     <div>Hello</div>
                     <div>Hi</div>
+                    <div>Sup</div>
                 </Carousel>
             </ThemeProvider>
         );
