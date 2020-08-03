@@ -17,13 +17,14 @@ const CarouselItem = styled('div')`
     font-family: base;
     padding: 16;
     margin: 16;
+    height: calc(100% - 64px);
 `;
 
 storiesOf('Components/Carousel', module)
     .add('Default', () => {
         return (
             <ThemeProvider theme={RootTheme}>
-                <Carousel>
+                <Carousel test={true}>
                     <CarouselItem>Hello</CarouselItem>
                     <CarouselItem>Hi my name is long and hopefully will cause wrapping because it's important to see how the carousel handles something long.</CarouselItem>
                     <CarouselItem>Sup</CarouselItem>

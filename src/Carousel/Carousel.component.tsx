@@ -3,15 +3,16 @@ import * as React from 'react';
 import classNames from 'classnames';
 import styled, { css } from '@xstyled/styled-components';
 import { space, SpaceProps } from '@xstyled/system';
-import { SnapList, SnapItem, useScroll } from 'react-snaplist-carousel';
+import { SnapList, SnapItem, useScroll, useVisibleElements } from 'react-snaplist-carousel';
 
-interface CarouselProps {
+interface CarouselProps extends SpaceProps {
     children: any;
     className?: string;
+    test?: boolean;
 }
 
 interface DotProps {
-    active: boolean;
+    selected: boolean;
 }
 
 const StyledCarousel = styled('div')<SpaceProps>`
@@ -31,19 +32,24 @@ const Dot = styled('span')<DotProps>`
     height: 0.5rem;
     width: 0.5rem;
     display: inline-block;
-    ${({active}) => active && css`background-color: gray;`}
+    ${({selected}): any => selected && css`background-color: gray;`}
     border: base;
     border-radius: 50%;
     margin: 0.25rem;
+    transition: 250ms background-color;
 `;
 
-export const Carousel = ({children, className}: CarouselProps): React.ReactElement<CarouselProps> => {
+export const Carousel = ({children, className, ...rest}: CarouselProps): React.ReactElement<CarouselProps> => {
     const snapList = React.useRef(null);
     const goToElement = useScroll({ ref: snapList });
-    const [active, setActive] = React.useState(0);
+    const selected = useVisibleElements(
+        { ref: snapList, debounce: 10 },
+        elements => elements[0],
+    );
+    console.log(rest);
 
     return (
-        <StyledCarousel className={classNames('anchor-carousel', className)}>
+        <StyledCarousel className={classNames('anchor-carousel', className)} {...rest}>
             <SnapList direction="horizontal" ref={snapList}>
                 {children.map((child: any, i: number) => (
                     <SnapItem snapAlign="center" className={`anchor-carousel-item-${i}`} key={`anchor-carousel-item-${i}`} margin={{right: '1rem'}}>
@@ -54,7 +60,7 @@ export const Carousel = ({children, className}: CarouselProps): React.ReactEleme
                 ))}
             </SnapList>
             <Dots>
-                {children.map((_: any, i: number) => <Dot key={`dot-${i}`} onClick={() => {setActive(i); goToElement(i); }} active={active === i} />)}
+                {children.map((_: any, i: number) => <Dot key={`dot-${i}`} onClick={() => {goToElement(i); }} selected={selected === i} />)}
             </Dots>
         </StyledCarousel>
     );
