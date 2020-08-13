@@ -4,6 +4,7 @@ WORKDIR /usr/app
 
 COPY . .
 RUN yarn
+RUN yarn build
 
 WORKDIR /usr/app/docs
 
