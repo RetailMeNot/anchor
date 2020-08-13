@@ -153,6 +153,8 @@ exports[`Component: Goto should be defined. 1`] = `
         className="c3"
       >
         <input
+          autoComplete="on"
+          autoFocus={false}
           className="c4"
           name="input"
           onBlur={[Function]}

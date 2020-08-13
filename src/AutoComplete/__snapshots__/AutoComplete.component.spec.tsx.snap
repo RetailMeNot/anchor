@@ -161,6 +161,8 @@ exports[`Component: AutoComplete should be defined 1`] = `
       >
         <input
           aria-label="auto-complete"
+          autoComplete="on"
+          autoFocus={false}
           className="c4"
           name="auto-complete"
           onBlur={[Function]}
@@ -340,6 +342,8 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
       >
         <input
           aria-label="auto-complete"
+          autoComplete="on"
+          autoFocus={false}
           className="c4"
           name="auto-complete"
           onBlur={[Function]}
@@ -522,6 +526,8 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
       >
         <input
           aria-label="auto-complete"
+          autoComplete="on"
+          autoFocus={false}
           className="c4"
           name="auto-complete"
           onBlur={[Function]}
@@ -704,6 +710,8 @@ exports[`Component: AutoComplete should render without a border 1`] = `
       >
         <input
           aria-label="auto-complete"
+          autoComplete="on"
+          autoFocus={false}
           className="c4"
           name="auto-complete"
           onBlur={[Function]}
