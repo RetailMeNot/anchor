@@ -59,6 +59,7 @@ exports[`Component: Form/Input should be defined 1`] = `
 .c0 input {
   height: 1rem;
   font-size: 0.875rem;
+  line-height: 1rem;
 }
 
 .c2 {

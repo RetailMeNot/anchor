@@ -130,7 +130,7 @@ export const AutoComplete = ({
     ...props
 }: AutoCompleteProps) => {
     // Flag for autocomplete focus
-    const [isFocused, setIsFocused] = useState<boolean>(false);
+    const [isFocused, setIsFocused] = useState<boolean>(autoFocus);
     // The current search term
     const [term, setTerm] = useState<string>(value ? `${value}` : '');
     const autoFocusRef = useRef<HTMLDivElement>(null);
@@ -154,9 +154,11 @@ export const AutoComplete = ({
         rootElement = autoFocusRef.current
             ? autoFocusRef.current.getRootNode()
             : null;
+
         if (rootElement) {
             rootElement.addEventListener('click', handleOutsideClick);
         }
+
         return () =>
             rootElement.removeEventListener('click', handleOutsideClick);
     }, [inputRef, isFocused]);

@@ -7,6 +7,7 @@ export const INPUT_THEME = {
             input: {
                 height: '1rem',
                 fontSize: '0.875rem',
+                lineHeight: '1rem',
             },
         },
         md: {
@@ -16,6 +17,7 @@ export const INPUT_THEME = {
             input: {
                 height: '1rem',
                 fontSize: '0.875rem',
+                lineHeight: '1rem',
             },
         },
         lg: {
@@ -23,8 +25,9 @@ export const INPUT_THEME = {
             padding: '0.25rem',
 
             input: {
-                height: '1rem',
+                height: '1.5rem',
                 fontSize: '1rem',
+                lineHeight: '1.5rem',
             },
         },
     },
