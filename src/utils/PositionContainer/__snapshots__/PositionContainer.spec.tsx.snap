@@ -56,10 +56,10 @@ exports[`Component: PositionContainer should be defined. 1`] = `
   width={100}
 >
   <div
-    className="c1"
+    className="c1 position-bg"
   />
   <div
-    className="c2"
+    className="c2 position-overlay"
   />
 </div>
 `;

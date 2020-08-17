@@ -102,7 +102,35 @@ together with `DropDown`!
 </DropDown>
 ```
 
+### Controlled State
+
+If you need greater control over when your dropdown displays, you can opt into controlling it
+manually with the `open` prop. Using it will ignore the internal `trigger` prop behavior. With
+the help of the `onClick`, `onEscapeKey` and `onOutsideClick` handlers, we can recreate the
+default `click` trigger behavior:
+
+
+```tsx live hideTitle
+<Component initialState={{ isOpen: false }}>
+    {({ state, setState }) =>
+        <DropDown
+            open={state.isOpen}
+            onClick={() => setState({ isOpen: !state.isOpen })}
+            onEscapeKey={() => setState({ isOpen: false })}
+            onOutsideClick={() => setState({ isOpen: false })}
+            overlay={<MyList />}
+        >
+            <MouseOverMe color="white">
+                I'm manually controlled!
+            </MouseOverMe>
+        </DropDown>
+    }
+</Component>
+```
+
 ---
+
+
 
 ## API
 
@@ -157,6 +185,22 @@ together with `DropDown`!
         type: 'boolean',
     },
     {
+        property: 'onEscapeKey',
+        description: `An event handler for the escape key being pressed. Only fires when dropdown is open.`,
+        type: '(event?: any) => any',
+    },
+    {
+        property: 'onOutsideClick',
+        description: `An event handler for when the user clicks outside the dropdown. Only fires when dropdown is open.`,
+        type: '(event?: any) => any',
+    },
+    {
+        property: 'onTriggered',
+        description: `An event handler that is fired whenever the dropdown opens or closes. Only applies to
+            uncontrolled triggers.`,
+        type: '(state: boolean, trigger?: string) => void',
+    },
+    {
         property: 'overlay',
         description: `The content that will be displayed when the child node is hovered
             over. This can be a single React element, or an array of React elements.`,
@@ -168,18 +212,18 @@ together with `DropDown`!
             document`,
         type: <FormatTypes
                 data={[
-                    'topStart',
                     'top',
+                    'topStart',
                     'topEnd',
-                    'rightStart',
                     'right',
+                    'rightStart',
                     'rightEnd',
-                    'bottomEnd',
                     'bottom',
                     'bottomStart',
-                    'leftEnd',
+                    'bottomEnd',
                     'left',
                     'leftStart',
+                    'leftEnd',
                 ]} />,
         default: 'bottom'
     },

@@ -13,6 +13,9 @@ import {
 import { AddLocation } from '../AddLocation';
 
 const StyledCollapseGroup = styled(CollapseGroup)`
+    button {
+        align-items: center;
+    }
     li a {
         text-decoration: none;
 

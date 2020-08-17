@@ -72,10 +72,10 @@ exports[`Component: Tooltip should be defined and match its snapshot. 1`] = `
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -155,10 +155,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -238,10 +238,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 2
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -321,10 +321,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 3
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -404,10 +404,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 4
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -487,10 +487,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 5
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -570,10 +570,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 6
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -653,10 +653,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 7
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -736,10 +736,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 8
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -819,10 +819,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 9
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -902,10 +902,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -985,10 +985,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>
@@ -1068,10 +1068,10 @@ exports[`Component: Tooltip should render all the different tooltip positions. 1
     width={0}
   >
     <div
-      className="c2"
+      className="c2 position-bg"
     />
     <div
-      className="c3"
+      className="c3 position-overlay"
     >
       This is a tooltip
     </div>

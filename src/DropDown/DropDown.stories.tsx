@@ -29,6 +29,21 @@ const listItemArray = [
     { key: 5, label: 'List Item 5' },
 ];
 
+const positions: Position[] = [
+    'topStart',
+    'top',
+    'topEnd',
+    'rightStart',
+    'right',
+    'rightEnd',
+    'bottomStart',
+    'bottom',
+    'bottomEnd',
+    'leftStart',
+    'left',
+    'leftEnd',
+];
+
 const MockList = () => (
     <List>
         {listItemArray.map(({ key, label }: any) => (
@@ -114,20 +129,7 @@ storiesOf('Components/DropDown', module)
                                 overlay={<MockList />}
                                 position={select<Position>(
                                     'position',
-                                    [
-                                        'topStart',
-                                        'top',
-                                        'topEnd',
-                                        'rightStart',
-                                        'right',
-                                        'rightEnd',
-                                        'bottomEnd',
-                                        'bottom',
-                                        'bottomStart',
-                                        'leftEnd',
-                                        'left',
-                                        'leftStart',
-                                    ],
+                                    positions,
                                     'bottom'
                                 )}
                                 trigger={select<Trigger>(
@@ -160,30 +162,48 @@ storiesOf('Components/DropDown', module)
             </StyledStory>
         </ThemeProvider>
     ))
+    .add('Controlled Demo', () =>
+        React.createElement(() => {
+            const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+            return (
+                <ThemeProvider theme={RootTheme}>
+                    <StyledStory>
+                        <div>
+                            <Typography as="h1">DropDown</Typography>
+                            <DropDown
+                                open={isOpen}
+                                onClick={() => setIsOpen(true)}
+                                onEscapeKey={() => setIsOpen(false)}
+                                onOutsideClick={() => setIsOpen(false)}
+                                overlay={<MockList />}
+                                position={select<Position>(
+                                    'position',
+                                    positions,
+                                    'bottom'
+                                )}
+                                showArrow={boolean('showArrow', true)}
+                                spacing={text('spacing', '') || undefined}
+                                debug={boolean('Debug', false)}
+                            >
+                                <Button>
+                                    {/* Not a prop, just for testing various widths */}
+                                    {text('Text', 'Dropdown')}
+                                </Button>
+                            </DropDown>
+                        </div>
+                    </StyledStory>
+                </ThemeProvider>
+            );
+        })
+    )
     .add('Resize Demo', () => (
         <ThemeProvider theme={RootTheme}>
             <StyledStory>
                 <Typography as="h1">DropDown</Typography>
                 <DropDown
                     overlay={<MockList />}
-                    position={select<Position>(
-                        'position',
-                        [
-                            'topStart',
-                            'top',
-                            'topEnd',
-                            'rightStart',
-                            'right',
-                            'rightEnd',
-                            'bottomEnd',
-                            'bottom',
-                            'bottomStart',
-                            'leftEnd',
-                            'left',
-                            'leftStart',
-                        ],
-                        'bottom'
-                    )}
+                    position={select<Position>('position', positions, 'bottom')}
                     trigger={select<Trigger>(
                         'trigger',
                         ['click', 'hover', 'both'],

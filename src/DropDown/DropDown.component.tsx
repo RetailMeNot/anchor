@@ -39,6 +39,9 @@ interface DropDownProps
     shadow?: string;
     showArrow?: boolean;
     spacing?: string;
+    open?: boolean;
+    onOutsideClick?: (event?: any) => any;
+    onEscapeKey?: (event?: any) => any;
 }
 
 interface DropDownState {
@@ -123,8 +126,21 @@ export class DropDown extends React.Component<DropDownProps> {
     > = React.createRef();
     private rootElement: any;
     // Observable Subscriptions
-    private hoveredSub$: Subscription;
-    private clickedSub$: Subscription;
+    private hoveredSub: Subscription;
+    private clickedSub: Subscription;
+    private escapeSub: Subscription;
+    private outsideClickSub: Subscription;
+
+    isOpen(): boolean {
+        const { open, trigger = 'both' } = this.props;
+        const { clicked, hovered } = this.state;
+
+        return open !== undefined
+            ? open
+            : (trigger === 'click' && clicked) ||
+                  (trigger === 'hover' && hovered) ||
+                  (trigger === 'both' && (hovered || clicked));
+    }
 
     componentDidMount(): void {
         const { current: dropDown }: { current: any } = this.dropDownReference;
@@ -141,11 +157,12 @@ export class DropDown extends React.Component<DropDownProps> {
 
         // Dropdown Instance
         this.rootElement = dropDown ? dropDown.getRootNode() : null;
+
         const outsideClick$ = merge(
             fromEvent(this.rootElement, 'click'),
             fromEvent(this.rootElement, 'touchstart')
         ).pipe(
-            filter(() => this.state.clicked),
+            filter(() => this.isOpen()),
             filter(({ target }) => !dropDown.contains(target)),
             throttleTime(500)
         );
@@ -153,14 +170,15 @@ export class DropDown extends React.Component<DropDownProps> {
             fromEvent(dropDown, 'click'),
             fromEvent(dropDown, 'touchstart')
         ).pipe(throttleTime(500));
+
         const escapeKey$ = fromEvent(this.rootElement, 'keyup').pipe(
-            filter(() => this.state.clicked || this.state.hovered),
+            filter(() => this.isOpen()),
             filter((keyEvent: KeyboardEvent) => keyEvent.key === 'Escape')
         );
         const mouseEnter$ = fromEvent(dropDown, 'mouseenter');
         const mouseLeave$ = fromEvent(dropDown, 'mouseleave');
 
-        this.clickedSub$ = merge(
+        this.clickedSub = merge(
             outsideClick$.pipe(mapTo(false)),
             escapeKey$.pipe(mapTo(false)),
             dropDownClick$.pipe(map(() => !this.state.clicked))
@@ -175,7 +193,18 @@ export class DropDown extends React.Component<DropDownProps> {
             }
         });
 
-        this.hoveredSub$ = merge(
+        this.escapeSub = escapeKey$.subscribe(event => {
+            if (this.props.onEscapeKey) {
+                this.props.onEscapeKey(event);
+            }
+        });
+        this.outsideClickSub = outsideClick$.subscribe(event => {
+            if (this.props.onOutsideClick) {
+                this.props.onOutsideClick(event);
+            }
+        });
+
+        this.hoveredSub = merge(
             mouseEnter$.pipe(mapTo(true)),
             mouseLeave$.pipe(mapTo(false)),
             escapeKey$.pipe(mapTo(false)),
@@ -203,8 +232,10 @@ export class DropDown extends React.Component<DropDownProps> {
     }
 
     componentWillUnmount(): void {
-        this.hoveredSub$.unsubscribe();
-        this.clickedSub$.unsubscribe();
+        this.hoveredSub.unsubscribe();
+        this.clickedSub.unsubscribe();
+        this.escapeSub.unsubscribe();
+        this.outsideClickSub.unsubscribe();
     }
 
     componentDidUpdate(prevProps: DropDownProps) {
@@ -255,21 +286,18 @@ export class DropDown extends React.Component<DropDownProps> {
             borderRadius = 'base',
             background = 'white',
             onTriggered = () => null,
+            onEscapeKey = () => null,
+            onOutsideClick = () => null,
             ...props
         } = this.props;
         const {
-            clicked,
-            hovered,
             height = 0,
             width = 0,
             containerHeight = 0,
             containerWidth = 0,
         } = this.state;
 
-        const showDropdown =
-            (trigger === 'click' && clicked) ||
-            (trigger === 'hover' && hovered) ||
-            (trigger === 'both' && (hovered || clicked));
+        const showDropdown = this.isOpen();
 
         // if they don't specify a spacing then we'll default
         // based on whether the arrow is there or not

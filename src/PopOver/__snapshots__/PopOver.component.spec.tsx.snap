@@ -137,10 +137,10 @@ exports[`Component: PopOver should be defined. 1`] = `
     width={null}
   >
     <div
-      className="c3"
+      className="c3 position-bg"
     />
     <div
-      className="c4"
+      className="c4 position-overlay"
     >
       Hello!
     </div>
