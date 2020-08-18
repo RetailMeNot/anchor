@@ -2,7 +2,7 @@
 import * as React from 'react';
 // STORYBOOK
 import { storiesOf } from '@storybook/react';
-import { boolean } from '@storybook/addon-knobs';
+import { boolean, select as selectKnob } from '@storybook/addon-knobs';
 // VENDOR
 import styled, { ThemeProvider } from '@xstyled/styled-components';
 // COMPONENTS
@@ -45,16 +45,19 @@ const StateBasedAutoCompleteStory = () => {
             <StyledStory>
                 <div>
                     <div>
-                        <Typography as="h1">AutoComplete 1</Typography>
+                        <Typography as="h1">AutoComplete 1 with autoFocus</Typography>
                         <br />
                         <AutoComplete
+                            autoFocus={true}
+                            browserAutoComplete={false}
+                            dataSource={tempData}
                             debug={boolean('debug', false)}
-                            placeholder="Search here..."
-                            onFilter={(newTerm: any) => {
+                            onFilter={(newTerm: any): void => {
                                 setTempData(tempDataStringSource(newTerm));
                             }}
+                            placeholder="Search here..."
                             prefix={<Search color="borders.base" />}
-                            dataSource={tempData}
+                            size={selectKnob('size', ['sm', 'md', 'lg'], 'lg')}
                         />
                     </div>
                 </div>
@@ -63,8 +66,9 @@ const StateBasedAutoCompleteStory = () => {
     );
 };
 
-const CustomResult = ({ index, currentIndex, label }: any) => {
+const CustomResult = ({ index, currentIndex, label, value }: any) => {
     const isLink = index === 2;
+
     return isLink ? (
         <Item
             key={index}
@@ -72,11 +76,12 @@ const CustomResult = ({ index, currentIndex, label }: any) => {
             onSelect={() => {
                 window.open('http://www.google.com', '_blank');
             }}
+            {...value}
         >
             Link: {label}
         </Item>
     ) : (
-        <Item active={index === currentIndex}>{label}</Item>
+        <Item active={index === currentIndex} {...value}>{label}</Item>
     );
 };
 

@@ -57,8 +57,9 @@ exports[`Component: AutoComplete should be defined 1`] = `
 }
 
 .c1 input {
-  height: 1rem;
+  height: 1.5rem;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .c3 {
@@ -237,8 +238,9 @@ exports[`Component: AutoComplete should render with a shadow 1`] = `
 }
 
 .c1 input {
-  height: 1rem;
+  height: 1.5rem;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .c3 {
@@ -417,8 +419,9 @@ exports[`Component: AutoComplete should render with a suffix and prefix 1`] = `
 }
 
 .c1 input {
-  height: 1rem;
+  height: 1.5rem;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .c3 {
@@ -606,8 +609,9 @@ exports[`Component: AutoComplete should render without a border 1`] = `
 }
 
 .c1 input {
-  height: 1rem;
+  height: 1.5rem;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .c3 {

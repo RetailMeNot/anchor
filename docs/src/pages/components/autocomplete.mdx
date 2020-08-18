@@ -22,6 +22,7 @@ property. This is an array of strings or objects with a **label** property that 
 ```tsx live hideTitle
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
+        browserAutoComplete={false}
         dataSource={[
             'Result 1',
             'Result 2',
@@ -45,6 +46,7 @@ tells the <Link to="/components/list/">`List`</Link> component what child node t
 ```jsx live
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
+        browserAutoComplete={false}
         placeholder="Search here..."
         prefix={<Search color="text.placeholder" />}
         dataSource={[
@@ -88,44 +90,60 @@ to display the possible results. This is done by passing an uninstantiated compo
 `resultTemplate` prop. `AutoComplete` will then use this template for each item rendered to the
 list of results.
 
-In the below example, our template checks to see if the `isLink` property exists as part of the
-`value` object. If it does and is truthy then it will render a `ListItem` component with different
-settings.
+<br />
 
 ###### CustomResults Component
 ```jsx hideTitle
 import * as React from 'react';
 import { ListItem, Check, Typography } from '@retailmenot/anchor';
 
-interface Values {
-    [key: string]: any;
+type Value = {
+    active: boolean;
+    id: string;
+    key: string;
+    label: string;
+    onMouseOver: (event?: React.MouseEvent) => void;
+    onSelect: (event?: React.FocusEvent) => void;
+    [key: string]: any; // Value also contains any additional custom fields passed via the dataSource prop
 }
 
 interface CustomResultsProps {
     index: number;
     currentIndex: number;
     label: string;
-    value?: Values;
+    value: Value;
 }
 
-export const CustomResults = ({ index, currentIndex, label, value }: CustomResultsProps) => {
-    const isLink = value ? value.isLink : false;
-
-    return isLink ? (
+export const CustomResults = ({
+    index,
+    currentIndex,
+    value: {
+        active,
+        id,
+        isLink, // custom field from datasource
+        key,
+        label,
+        onMouseOver,
+        onSelect,
+    },
+}: CustomResultsProps) => isLink ? (
         <ListItem
-            key={index}
-            active={index === currentIndex}
+            active={active}
+            key={key}
+            onMouseOver={onMouseOver}
             onSelect={() => {
                 window.open('http://www.google.com', '_blank');
             }}
             prefix={<Check />}
         >
-            <Typography pl="2">Link: {label}</Typography>
+            <Typography pl="2" weight={600}>{label}</Typography>
         </ListItem>
     ) : (
-        <ListItem active={index === currentIndex}>{label}</ListItem>
+        <ListItem active={active} key={key} onSelect={onSelect} onMouseOver={onMouseOver}>
+            <Typography weight={600} mr="2">{label}</Typography>
+            (active: {active.toString()}, currentIndex: {currentIndex}, id: {id}, key: {key} index: {index})
+        </ListItem>
     );
-};
 ```
 
 Now it's just a matter of passing our `CustomResults` component to the `resultTemplate` template
@@ -134,16 +152,16 @@ props.
 ```jsx live
 <div style={{ padding: '2rem 1rem' }}>
     <AutoComplete
+        browserAutoComplete={false}
         dataSource={[
             {
-                label: 'A Custom Results Template',
-                id: 1,
+                label: 'Item 1',
+                id: 'list-item-1',
                 listItemType: 'title',
             },
-            { label: 'Item 1', id: 2, someBoolean: true, isLink:true },
-            { label: 'Item 3', id: 3, someBoolean: true },
-            { label: 'Item 4', id: 4, someBoolean: true },
-            { label: 'Item 5', id: 5, someBoolean: true },
+            { label: 'Link: Item 2', id: 'list-item-2', isLink: true, },
+            { label: 'Item 3', id: 'list-item-3', },
+            { label: 'Item 4', id: 'list-item-4', },
         ]}
         placeholder="Search here..."
         prefix={<Search color="text.placeholder" />}
@@ -154,7 +172,11 @@ props.
 
 <br />
 
-## API
+## API's
+
+---
+
+### AutoComplete
 
 <ApiTable data={[
     {
@@ -278,6 +300,78 @@ props.
         property: 'value',
         description: `The initial value of the <pre>AutoComplete</pre>.`,
         type: 'any',
+    },
+]} />
+
+---
+
+### Custom Results Template
+
+These are the props that are made available to a custom results template.
+
+<ApiTable data={[
+    {
+        property: 'index',
+        description: `The numeric index of the item in the passed <pre>dataSource</pre>. Starts at <pre>0</pre>.`,
+        type: 'number',
+    },
+    {
+        property: 'currentIndex',
+        description: `The current index of whatever item is selected.`,
+        type: 'number',
+    },
+    {
+        property: 'label',
+        description: `The passed <pre>label</pre> key for the given item in the <pre>dataSource</pre>.`,
+        type: 'number',
+    },
+    {
+        property: 'value',
+        description: `An object containing many generated values and events for the given item in the
+            <pre>dataSource</pre>. This is further detailed below.`,
+        type: 'object',
+    },
+]} />
+
+These are the properties of the `value` prop noted in the table above. Note that any custom fields in
+the `dataSource` will also be made available in this object.
+
+<ApiTable data={[
+    {
+        property: 'active',
+        description: `Whether or not the given rendered item currently is being moused over.`,
+        type: 'boolean',
+    },
+    {
+        property: 'id',
+        description: `The passed <pre>id</pre> for the given item in the <pre>dataSource</pre>.`,
+        type: 'string',
+    },
+    {
+        property: 'key',
+        description: `A unique generated key for the given item in the <pre>dataSource</pre>.`,
+        type: 'string',
+        default: 'anchor-result-[index: number]'
+    },
+    {
+        property: 'label',
+        description: `The passed <pre>label</pre> for the given item in the <pre>dataSource</pre>.
+            This is the same value as the <pre>label</pre> prop in the above table.`,
+        type: 'string',
+    },
+    {
+        property: 'onMouseOver',
+        description: `A passed event from <pre>AutoComplete</pre> that updates the <pre>active</pre>
+            and <pre>currentIndex</pre> values as items are moused over.`,
+        type: 'event',
+    },
+    {
+        property: 'onSelect',
+        description: `A passed event from <pre>AutoComplete</pre> that closes the dropdown once an
+            item has been selected, populates the <pre>AutoComplete</pre> input field with the
+            <pre>label</pre>, and emits the event and item data to <pre>AutoComplete</pre>'s own
+            <pre>onSelect</pre> event.`,
+        type: 'event',
     },
 ]} />
 
