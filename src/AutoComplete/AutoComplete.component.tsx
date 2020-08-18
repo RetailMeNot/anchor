@@ -32,6 +32,7 @@ interface AutoCompleteProps extends SpaceProps {
     allowClear?: boolean;
     browserAutoComplete?: boolean;
     autoFocus?: boolean;
+    highlightFirst?: boolean;
     // Visual
     background?: string;
     border?: boolean;
@@ -106,7 +107,7 @@ const StyledAutoComplete = styled('div')<StyledAutoCompleteProps>`
 
 export const AutoComplete = ({
     allowClear,
-    browserAutoComplete = true,
+    browserAutoComplete = false,
     autoFocus = false,
     background = 'white',
     border = true,
@@ -114,6 +115,7 @@ export const AutoComplete = ({
     color = 'text.light',
     dataSource = [],
     debug = false,
+    highlightFirst = false,
     inputProps,
     inputType = 'text',
     name = '',
@@ -227,9 +229,13 @@ export const AutoComplete = ({
                 onKeyDown={(event: React.KeyboardEvent) => {
                     switch (event.keyCode) {
                         case EventKeyCodes.TAB:
-                            if (!term) {
-                                break;
+                            // This should only fire if the results container exists
+                            if (isFocused && resultsRef.current) {
+                                // Update term of the autocomplete
+                                resultsRef.current.updateTerm(term);
+                                setIsFocused(false);
                             }
+                            break;
                         case EventKeyCodes.ENTER:
                             if (term) {
                                 event.preventDefault();
@@ -278,6 +284,7 @@ export const AutoComplete = ({
                     resultTemplate={resultTemplate}
                     dataSource={dataSource}
                     term={term}
+                    highlightFirst={highlightFirst}
                 />
             )}
         </StyledAutoComplete>

@@ -154,11 +154,7 @@ props.
     <AutoComplete
         browserAutoComplete={false}
         dataSource={[
-            {
-                label: 'Item 1',
-                id: 'list-item-1',
-                listItemType: 'title',
-            },
+            { label: 'Item 1', id: 'list-item-1', },
             { label: 'Link: Item 2', id: 'list-item-2', isLink: true, },
             { label: 'Item 3', id: 'list-item-3', },
             { label: 'Item 4', id: 'list-item-4', },
@@ -183,7 +179,7 @@ props.
         property: 'browserAutoComplete',
         description: 'Enable/Disable browser auto complete for input',
         type: 'boolean',
-        default: 'true',
+        default: 'false',
     },
     {
         property: 'autoFocus',
@@ -226,6 +222,12 @@ props.
         description: `When set to true, causes the result list to remain visible even
             when <pre>AutoComplete</pre> loses focus. This can be helpful for developing custom
             styles and/or a <pre>resultTemplate</pre>`,
+        type: 'boolean',
+        default: 'false',
+    },
+    {
+        property: 'highlightFirst',
+        description: `When set to true, the first item in the result dropdown will be highlighted by default until a new item is moused over.`,
         type: 'boolean',
         default: 'false',
     },

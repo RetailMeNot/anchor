@@ -6,7 +6,7 @@ import styled, { css } from '@xstyled/styled-components';
 import { th } from '@xstyled/system';
 import { List } from '../../List';
 // UTILS
-const { useState, forwardRef, useImperativeHandle } = React;
+const { useEffect, useState, forwardRef, useImperativeHandle } = React;
 
 type DataItem = {
     [key: string]: any;
@@ -25,6 +25,7 @@ interface ResultsContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     dataSource: any[];
     emitSelectedItem: EmitSelectedItem;
     emitActiveTerm: EmitActiveTerm;
+    highlightFirst?: boolean;
     resultTemplate?: (props: ResultItemProps) => any;
 }
 interface StyledResultsContainerProps {
@@ -158,6 +159,7 @@ export const ResultsContainer = forwardRef(
             dataSource = [],
             emitSelectedItem,
             emitActiveTerm,
+            highlightFirst,
             term,
             resultTemplate,
             ...props
@@ -175,6 +177,27 @@ export const ResultsContainer = forwardRef(
             term,
             setInitialTerm
         );
+
+        useEffect(() => {
+            // Check if current term exists in results and capture the index
+            let termIndex;
+            if (term) {
+                termIndex = relativeIndex(
+                    results.findIndex((result: any) => result.label === term)
+                );
+            }
+            // If highlightFirst is true and term does not exist in results
+            // update termIndex to the first result
+            if (highlightFirst && !termIndex) {
+                // If first item is a title, skip to next item
+                termIndex = results[0].value.listItemType === 'title' ? 2 : 1;
+            }
+            // Set term index if it exists along with initial term
+            if (termIndex) {
+                setCurrentIndex(termIndex);
+                setInitialTerm(term ? term : results[termIndex - 1].label);
+            }
+        }, []);
 
         const iterativeIndexes: number[] = [0];
 
@@ -227,9 +250,25 @@ export const ResultsContainer = forwardRef(
             }
         };
 
+        const isInRange = currentIndex >= 0 && currentIndex <= results.length;
+        // If currentIndex is 0, it's referring to the input field
+        const adjustedForInputIndex = currentIndex ? currentIndex - 1 : 0;
+        // Check for a title item index and skip it
+        const checkForTitleIndex = (index: number) => {
+            const shouldBumpIndex =
+                results[index].value.listItemType === 'title' &&
+                // Check if title is last result
+                index < results.length;
+            return shouldBumpIndex ? index + 1 : index;
+        };
+
         useImperativeHandle(resultsContainerRef, () => ({
             setActiveIndex: (itemIndex: number) => {
-                setCurrentIndex(itemIndex);
+                setCurrentIndex(
+                    highlightFirst
+                        ? relativeIndex(checkForTitleIndex(itemIndex))
+                        : itemIndex
+                );
             },
             clearInitialTerm: () => {
                 setInitialTerm('');
@@ -237,14 +276,19 @@ export const ResultsContainer = forwardRef(
             handleNext: (currentTerm: string) => {
                 handleTraversal(currentTerm, true);
             },
+            updateTerm: (currentTerm: string) => {
+                if (isInRange) {
+                    emitActiveTerm(
+                        results[checkForTitleIndex(adjustedForInputIndex)].label
+                    );
+                }
+            },
             handlePrevious: (currentTerm: string) => {
                 handleTraversal(currentTerm, false);
             },
             selectActive: () => {
-                if (currentIndex >= 0 && currentIndex <= results.length) {
-                    // If currentIndex is 0, it's referring to the input field
-                    const index = currentIndex === 0 ? 0 : currentIndex - 1;
-                    emitSelectedItem(results[index]);
+                if (isInRange) {
+                    emitSelectedItem(results[adjustedForInputIndex]);
                 }
             },
         }));
