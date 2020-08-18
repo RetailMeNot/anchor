@@ -147,12 +147,18 @@ export const PositionContainer = forwardRef(
             shadow={shadow}
             width={width}
         >
-            <Background background={background} />
+            <Background
+                className="anchor-position-bg"
+                background={background}
+            />
 
-            <StyledOverlay>{children}</StyledOverlay>
+            <StyledOverlay className="anchor-position-overlay">
+                {children}
+            </StyledOverlay>
 
             {showArrow && (
                 <Arrow
+                    className="anchor-position-arrow"
                     position={position}
                     size={arrowSize}
                     indent={arrowIndent}
