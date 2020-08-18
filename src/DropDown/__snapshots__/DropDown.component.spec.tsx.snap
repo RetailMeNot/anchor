@@ -101,17 +101,17 @@ exports[`Component: DropDown should render in the DOM 1`] = `
     width={null}
   >
     <div
-      className="c2 position-bg"
+      className="c2 anchor-position-bg"
     />
     <div
-      className="c3 position-overlay"
+      className="c3 anchor-position-overlay"
     >
       <div>
         1
       </div>
     </div>
     <div
-      className="c4 position-arrow"
+      className="c4 anchor-position-arrow"
     />
   </div>
 </div>

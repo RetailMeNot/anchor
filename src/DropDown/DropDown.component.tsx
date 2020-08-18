@@ -156,7 +156,10 @@ export class DropDown extends React.Component<DropDownProps> {
         });
 
         // Dropdown Instance
-        this.rootElement = dropDown ? dropDown.getRootNode() : null;
+        this.rootElement =
+            dropDown && dropDown.getRootNode
+                ? dropDown.getRootNode()
+                : document;
 
         const outsideClick$ = merge(
             fromEvent(this.rootElement, 'click'),

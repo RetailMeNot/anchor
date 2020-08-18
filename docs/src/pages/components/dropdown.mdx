@@ -185,6 +185,12 @@ default `click` trigger behavior:
         type: 'boolean',
     },
     {
+        property: 'open',
+        description: `If defined, forces the <pre>DropDown</pre> overlay to be open or closed.
+            Overrides the default trigger behavior.`,
+        type: 'boolean',
+    },
+    {
         property: 'onEscapeKey',
         description: `An event handler for the escape key being pressed. Only fires when dropdown is open.`,
         type: '(event?: any) => any',
