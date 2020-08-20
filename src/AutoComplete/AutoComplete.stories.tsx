@@ -45,13 +45,16 @@ const StateBasedAutoCompleteStory = () => {
             <StyledStory>
                 <div>
                     <div>
-                        <Typography as="h1">AutoComplete 1 with autoFocus</Typography>
+                        <Typography as="h1">
+                            AutoComplete 1 with autoFocus
+                        </Typography>
                         <br />
                         <AutoComplete
                             autoFocus={true}
                             browserAutoComplete={false}
                             dataSource={tempData}
                             debug={boolean('debug', false)}
+                            highlightFirst={true}
                             onFilter={(newTerm: any): void => {
                                 setTempData(tempDataStringSource(newTerm));
                             }}
@@ -81,7 +84,9 @@ const CustomResult = ({ index, currentIndex, label, value }: any) => {
             Link: {label}
         </Item>
     ) : (
-        <Item active={index === currentIndex} {...value}>{label}</Item>
+        <Item active={index === currentIndex} {...value}>
+            {label}
+        </Item>
     );
 };
 
