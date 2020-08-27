@@ -11,6 +11,7 @@ import {
 } from '../Button/Button.component';
 import { ChevronLeft, ChevronRight, Ellipses } from '../Icon';
 import { Typography } from '../Typography';
+import { useUpdateEffect } from '../utils/useUpdateEffect/useUpdateEffect';
 
 // Constrain a value between a min and max.
 // Used primarily here to keep the current page
@@ -122,7 +123,7 @@ export const Pagination = ({
     ...props
 }: PaginationProps): React.ReactElement<PaginationProps> => {
     const [state, dispatch] = React.useReducer(reducer, {
-        current: 1,
+        current: controlledCurrent || 1,
     });
 
     // If the current page is controlled we want to
@@ -134,11 +135,11 @@ export const Pagination = ({
     const total =
         totalPages || (totalResults && Math.ceil(totalResults / pageSize)) || 1;
 
-    React.useEffect(() => {
+    useUpdateEffect(() => {
         dispatch({ type: 'totalChanged', total });
     }, [total]);
 
-    React.useEffect(() => {
+    useUpdateEffect(() => {
         if (onChange) {
             onChange(state.current);
         }
