@@ -9,8 +9,8 @@ import * as Icon from './';
 describe('Component: Icon', () => {
     Object.keys(Icon).forEach((key: string) => {
         it(`should render out a ${key}`, () => {
-            const subject = Icon[key]({});
-            const tree = renderer.create(subject).toJSON();
+            const Component = Icon[key];
+            const tree = renderer.create(<Component />).toJSON();
             expect(tree).toMatchSnapshot();
         });
     });
