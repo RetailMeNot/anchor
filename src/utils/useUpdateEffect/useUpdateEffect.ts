@@ -1,3 +1,4 @@
+/* eslint-disable prefer-arrow-callback */
 import * as React from 'react';
 
 // useUpdateEffect is a useEffect that doesn't fire on initial render
