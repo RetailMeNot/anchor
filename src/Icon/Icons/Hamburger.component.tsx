@@ -10,35 +10,41 @@ import {
 } from '../utils';
 
 /* eslint-disable max-len */
-export const Hamburger = ({
-    color = DefaultColor,
-    scale = DefaultScale,
-    className,
-    ...props
-}: IconSVGProps) => (
-    <StyledIcon
-        className={classNames('anchor-icon hamburger', className)}
-        scale={scale}
-        $color={color}
-        {...props}
-    >
-        <svg
-            width={Scale[scale]}
-            height={Scale[scale]}
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
+export const Hamburger = React.forwardRef(
+    (
+        {
+            color = DefaultColor,
+            scale = DefaultScale,
+            className,
+            ...props
+        }: IconSVGProps,
+        ref: React.RefObject<any>
+    ) => (
+        <StyledIcon
+            ref={ref}
+            className={classNames('anchor-icon hamburger', className)}
+            scale={scale}
+            $color={color}
+            {...props}
         >
-            <g fill="none" fillRule="evenodd">
-                <path d="M0 0h16v16H0z" />
-                <g
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.333"
-                >
-                    <path d="M2 3.667h12M2 7.667h12M2 11.667h12" />
+            <svg
+                width={Scale[scale]}
+                height={Scale[scale]}
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g fill="none" fillRule="evenodd">
+                    <path d="M0 0h16v16H0z" />
+                    <g
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.333"
+                    >
+                        <path d="M2 3.667h12M2 7.667h12M2 11.667h12" />
+                    </g>
                 </g>
-            </g>
-        </svg>
-    </StyledIcon>
+            </svg>
+        </StyledIcon>
+    )
 );

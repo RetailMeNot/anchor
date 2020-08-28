@@ -10,30 +10,36 @@ import {
 } from '../utils';
 
 /* eslint-disable max-len */
-export const BulletList = ({
-    color = DefaultColor,
-    scale = DefaultScale,
-    className,
-    ...props
-}: IconSVGProps) => (
-    <StyledIcon
-        className={classNames('anchor-icon bullet-list', className)}
-        scale={scale}
-        $color={color}
-        {...props}
-    >
-        <svg
-            width={Scale[scale]}
-            height={Scale[scale]}
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
+export const BulletList = React.forwardRef(
+    (
+        {
+            color = DefaultColor,
+            scale = DefaultScale,
+            className,
+            ...props
+        }: IconSVGProps,
+        ref: React.RefObject<any>
+    ) => (
+        <StyledIcon
+            ref={ref}
+            className={classNames('anchor-icon bullet-list', className)}
+            scale={scale}
+            $color={color}
+            {...props}
         >
-            <g fill="none" fillRule="evenodd">
-                <path d="M0-1h16v16H0z" />
-                <g fill="currentColor" fillRule="nonzero">
-                    <path d="M1 2v1h1V2H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5.5 12h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1zM5.5 7h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM5.5 2h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM1 7v1h1V7H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM1 12v1h1v-1H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
+            <svg
+                width={Scale[scale]}
+                height={Scale[scale]}
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g fill="none" fillRule="evenodd">
+                    <path d="M0-1h16v16H0z" />
+                    <g fill="currentColor" fillRule="nonzero">
+                        <path d="M1 2v1h1V2H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5.5 12h10a.5.5 0 1 1 0 1h-10a.5.5 0 1 1 0-1zM5.5 7h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM5.5 2h10a.5.5 0 1 1 0 1h-10a.5.5 0 0 1 0-1zM1 7v1h1V7H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM1 12v1h1v-1H1zm0-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
+                    </g>
                 </g>
-            </g>
-        </svg>
-    </StyledIcon>
+            </svg>
+        </StyledIcon>
+    )
 );
