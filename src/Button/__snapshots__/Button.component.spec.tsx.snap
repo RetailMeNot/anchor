@@ -74,7 +74,6 @@ exports[`Component: Button Icon Only should render a circular icon 1`] = `
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -168,7 +167,6 @@ exports[`Component: Button Icon Only should render icon-only using a prefix 1`] 
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -262,7 +260,6 @@ exports[`Component: Button Icon Only should render icon-only using a suffix 1`] 
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -3010,7 +3007,6 @@ exports[`Component: Button Variant: Primary should render with a prefix 1`] = `
       height={16}
       viewBox="0 0 16 16"
       width={16}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -3107,7 +3103,6 @@ exports[`Component: Button Variant: Primary should render with a suffix 1`] = `
       height={16}
       viewBox="0 0 16 16"
       width={16}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"

@@ -205,7 +205,6 @@ exports[`Component: Pagination should be defined. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
@@ -294,7 +293,6 @@ exports[`Component: Pagination should be defined. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"
@@ -520,7 +518,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
@@ -559,8 +556,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
         height={16}
         viewBox="0 0 16 16"
         width={16}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <defs>
           <path
@@ -662,7 +657,6 @@ exports[`Component: Pagination should render on the last page. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"
@@ -843,7 +837,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
@@ -882,8 +875,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
         height={16}
         viewBox="0 0 16 16"
         width={16}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <defs>
           <path
@@ -959,8 +950,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
         height={16}
         viewBox="0 0 16 16"
         width={16}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <defs>
           <path
@@ -1014,7 +1003,6 @@ exports[`Component: Pagination should render with current page in the middle. 1`
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"
@@ -1240,7 +1228,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M7.522 8l2.518 2.953a.77.77 0 0 1 0 1.058l-.015.015a.721.721 0 0 1-1.052-.01L5.96 8.53a.767.767 0 0 1-.009-1.048l3.03-3.507a.719.719 0 0 1 1.043 0l.016.015c.28.293.28.765.01 1.047L7.522 8z"
@@ -1327,8 +1314,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
         height={16}
         viewBox="0 0 16 16"
         width={16}
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <defs>
           <path
@@ -1382,7 +1367,6 @@ exports[`Component: Pagination should render with many pages. 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M8.478 8L5.96 5.047a.77.77 0 0 1 .001-1.058l.014-.015a.721.721 0 0 1 1.052.01L10.04 7.47c.28.293.28.765.009 1.048l-3.03 3.507a.719.719 0 0 1-1.043 0l-.015-.015a.767.767 0 0 1-.01-1.047L8.477 8z"

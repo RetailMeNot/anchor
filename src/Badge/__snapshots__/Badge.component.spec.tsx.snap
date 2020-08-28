@@ -57,7 +57,6 @@ exports[`Component: Badge should be able to render with an icon 1`] = `
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -448,7 +447,6 @@ exports[`Component: Badge should render a double-digit count in a small badge wi
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -536,7 +534,6 @@ exports[`Component: Badge should render a single-digit count in a large badge wi
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -624,7 +621,6 @@ exports[`Component: Badge should render a single-digit count in a small badge wi
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
@@ -710,7 +706,6 @@ exports[`Component: Badge should render the count with absolute positioning if \
       height={24}
       viewBox="0 0 16 16"
       width={24}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <g
         fill="none"
