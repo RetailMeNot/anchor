@@ -4,6 +4,7 @@ import * as React from 'react';
 // for detecting when values change
 // https://stackoverflow.com/a/58217148
 
+// Named functions are for stack traceability
 const useIsMounted = function useIsMounted() {
     const isMounted = React.useRef(false);
 
@@ -20,12 +21,13 @@ const useIsMounted = function useIsMounted() {
 
 export const useUpdateEffect = function useUpdateEffect(
     effect: () => void | (() => void),
-    dependencies: Array<any>
+    dependencies: any[]
 ): void {
     const isMounted = useIsMounted();
     const isInitialMount = React.useRef(true);
 
     React.useEffect(() => {
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         let effectCleanupFunc = function noop() {};
 
         if (isInitialMount.current) {
@@ -39,5 +41,5 @@ export const useUpdateEffect = function useUpdateEffect(
                 isInitialMount.current = true;
             }
         };
-    }, dependencies); // eslint-disable-line react-hooks/exhaustive-deps
+    }, dependencies);
 };
