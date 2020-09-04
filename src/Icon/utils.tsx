@@ -1,5 +1,10 @@
 // VENDOR
-import styled, { css } from '@xstyled/styled-components';
+import * as React from 'react';
+import classNames from 'classnames';
+import styled, {
+    css,
+    FlattenSimpleInterpolation,
+} from '@xstyled/styled-components';
 import { space as spaceStyles, SpaceProps } from '@xstyled/system';
 
 type ScaleFactors = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
@@ -29,16 +34,46 @@ export const Scale = {
 export const DefaultColor = 'currentColor';
 export const DefaultScale = 'md';
 
-export const StyledIcon = styled('span')<StyledIconSVGProps>`
+const StyledIcon = styled('span')<StyledIconSVGProps>`
     ${spaceStyles};
     display: inline-block;
-    height: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
-    width: ${({ scale = 'md' }) => `${Scale[scale] / 16}rem`};
+    height: ${({ scale = 'md' }): string => `${Scale[scale] / 16}rem`};
+    width: ${({ scale = 'md' }): string => `${Scale[scale] / 16}rem`};
     line-height: 0;
-    ${({ $color }) => css({ color: $color })}
+    ${({ $color }): FlattenSimpleInterpolation => css({ color: $color })}
 `;
 
 StyledIcon.displayName = 'AnchorIcon';
+
+export function iconHOC(svgPath: any, iconClassName: string) {
+    return React.forwardRef(
+        (
+            {
+                color = DefaultColor,
+                scale = DefaultScale,
+                className,
+                ...props
+            }: IconSVGProps,
+            ref: React.RefObject<any>
+        ) => (
+            <StyledIcon
+                ref={ref}
+                className={classNames('anchor-icon', iconClassName, className)}
+                scale={scale}
+                $color={color}
+                {...props}
+            >
+                <svg
+                    width={Scale[scale]}
+                    height={Scale[scale]}
+                    viewBox="0 0 16 16"
+                >
+                    {svgPath}
+                </svg>
+            </StyledIcon>
+        )
+    );
+}
 
 export type AnchorIcons =
     | 'AddEvent'

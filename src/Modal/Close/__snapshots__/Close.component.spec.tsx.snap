@@ -99,7 +99,6 @@ exports[`Component: Modal.Close should match snapshot with alignment set 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           fill="none"
@@ -225,7 +224,6 @@ exports[`Component: Modal.Close should render 1`] = `
         height={24}
         viewBox="0 0 16 16"
         width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
         <g
           fill="none"
